@@ -1,0 +1,28 @@
+[<img align="right" width="50" src="https://blog.logomyway.com/wp-content/uploads/2020/12/discord-mascot.png">](https://discord.gg/XzkGEcC3)
+
+# სავარჯიშო რეპოზიტორია
+
+ეს არის Unilab-ის პითონის NLP-ზე მომუშავე გუნდის სავარჯიშო რეპოზიტორია. რეპოზიტორიას გამოვიყენებთ GitHub გარემოსთან გასაცნობად და პროექტზე მუშაობის დაწყებამდე, გუნდური მუშაობის უნარების შესაძენად.
+
+თუ ჯერ-ჯერობით გიტის ტერმინალ გარემოს არ იცნობთ, [აქ შეგიძლიათ ნახოთ ყველაზე ხშირად გამოყენებადი ბრძანებები.](https://education.github.com/git-cheat-sheet-education.pdf)
+
+თუ გიტი ჯერ კიდევ არ დაგიყენებიათ მოწყობილობაზე, [გადმოწერეთ და დააყენეთ ამ მისამართიდან](https://help.github.com/articles/set-up-git/).
+
+## პროექტის ფარგლებში სამუშაო რესურსები:
+
+1. [კოლაბორაცია - GitHub + Postman](/Chapter1_Contribution)
+
+## კონტრიბუტორები
+
+პროექტზე მუშაობენ:
+
+- [თემურ ჩიჩუა](https://github.com/temurchichua) | [ენის ლემატიზატორი](/Chapter1_Contribution/temur_chichua/readme.md)
+- [თემური ქიტოშვილი](https://github.com/TemuriKitoshvili) | [NLP_Demo](/Chapter1_Contribution/temuri_kitoshvili)
+
+## შეხვედრის ჩანაწერები
+
+- [პირველი შეხვედრა](https://...)
+
+## წინა სემესტრის რესურსები:
+
+- [უნილაბი - პითონის სტაჟირება 2020](https://github.com/temurchichua/UnilabPythonDevelopment)
