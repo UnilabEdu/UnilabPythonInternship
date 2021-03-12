@@ -1,6 +1,6 @@
 [<img align="right" width="50" src="https://blog.logomyway.com/wp-content/uploads/2020/12/discord-mascot.png">](https://discord.gg/XzkGEcC3)
 
-[<img align="middle" width="150" src="https://edit.blog.postman.com/wp-content/uploads/2015/08/postman-logo-drawing-board.png">](https://app.getpostman.com/join-team?invite_code=228750e0833aa112b3caf527822d8574) 
+[<img align="right" width="150" src="https://edit.blog.postman.com/wp-content/uploads/2015/08/postman-logo-drawing-board.png">](https://app.getpostman.com/join-team?invite_code=228750e0833aa112b3caf527822d8574) 
 
 # სავარჯიშო რეპოზიტორია
 
