@@ -21,7 +21,7 @@
 პროექტზე მუშაობენ:
 
 - [თემურ ჩიჩუა](https://github.com/temurchichua) | [ენის ლემატიზატორი](/Chapter1_Contribution/temur_chichua/readme.md)
-- [თემური ქიტოშვილი](https://github.com/TemuriKitoshvili) | [NLP_Demo](/Chapter1_Contribution/temuri_kitoshvili)
+- [თემური ქიტოშვილი](https://github.com/TemuriKitoshvili) | [კვადრატული განტოლება](/Chapter1_Contribution/temuri_kitoshvili)
 
 ## შეხვედრის ჩანაწერები
 
