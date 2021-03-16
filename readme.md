@@ -24,10 +24,13 @@
 - [თემური ქიტოშვილი](https://github.com/TemuriKitoshvili) | [კვადრატული განტოლება]
 - [მარია ვეშაპიძე](https://github.com/Maria-555) | [პითაგორას თეორემა](https://github.com/Maria-555/calculator.git)
 - [დავით ჭინჭარაშვილი](https://github.com/davidunilab) | [მიმატება :) ](https://github.com/davidunilab/davaleba1)
+- [ალექსანდრე ეროიანი](https://github.com/sun-dro) | [კვადრატში აყვანა](https://github.com/sun-dro/intern-math-function)
 
 ## შეხვედრის ჩანაწერები
 
-- [პირველი შეხვედრა](https://...)
+- [გაცნობითი შეხვედრა](https://drive.google.com/file/d/1LW7pG4h77FelpchC8Okyi8hhdSsy88ZF/view?usp=sharing)
+- [Version Control Systemns - Git, Github](https://drive.google.com/file/d/1F1hf9_UOwahi30LBgOYqkQqD2r7kCBk9/view?usp=sharing)
+
 
 ## წინა სემესტრის რესურსები:
 
