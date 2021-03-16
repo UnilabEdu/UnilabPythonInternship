@@ -26,6 +26,7 @@
 - [ვაჟა ბერძენიშვილი](https://github.com/vazhaberdzenishvili) | [ფიბონაჩის მიმდევრობა](https://github.com/vazhaberdzenishvili/Fibonaccy_seq_calculator)
 - [დავით ჭინჭარაშვილი](https://github.com/davidunilab) | [მიმატება :) ](https://github.com/davidunilab/davaleba1)
 - [ალექსანდრე ეროიანი](https://github.com/sun-dro) | [კვადრატში აყვანა](https://github.com/sun-dro/intern-math-function)
+- [გიორგი კვარაცხელია](https://github.com/RegiusPythonidae) | [დეტერმინანტის გამოთვლა](https://github.com/RegiusPythonidae/determinant_calculator)
 
 
 ## შეხვედრის ჩანაწერები
