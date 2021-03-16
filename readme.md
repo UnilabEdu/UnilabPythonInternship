@@ -25,6 +25,7 @@
 - [მარია ვეშაპიძე](https://github.com/Maria-555) | [პითაგორას თეორემა](https://github.com/Maria-555/calculator.git)
 - [დავით ჭინჭარაშვილი](https://github.com/davidunilab) | [მიმატება :) ](https://github.com/davidunilab/davaleba1)
 - [ალექსანდრე ეროიანი](https://github.com/sun-dro) | [კვადრატში აყვანა](https://github.com/sun-dro/intern-math-function)
+- [გიორგი კვარაცხელია](https://github.com/RegiusPythonidae) | [დეტერმინანტის გამოთვლა](https://github.com/RegiusPythonidae/determinant_calculator)
 
 ## შეხვედრის ჩანაწერები
 
