@@ -26,7 +26,9 @@
 
 ## შეხვედრის ჩანაწერები
 
-- [პირველი შეხვედრა](https://...)
+- [გაცნობითი შეხვედრა](https://drive.google.com/file/d/1LW7pG4h77FelpchC8Okyi8hhdSsy88ZF/view?usp=sharing)
+- [Version Control Systemns - Git, Github](https://drive.google.com/file/d/1F1hf9_UOwahi30LBgOYqkQqD2r7kCBk9/view?usp=sharing)
+
 
 ## წინა სემესტრის რესურსები:
 
