@@ -30,6 +30,7 @@
 - [ცოტნე გამსახურდაშვილი](https://github.com/tsgams) | [კალკულატორი](https://github.com/tsgams/Calculator)
 - [დენისი სანტურიანი](https://github.com/Denissant) | [პოპულაციის სტანდარტული გადახრა](https://github.com/Denissant/std_dev_demo)
 - [თომა მარგიშვილი](https://github.com/hgresa) | [მოცემული ბიტისტვის მაქსიმალური რიცხვის პოვნა](https://github.com/hgresa/uniLab)
+- [ორხან შამილოვი](https://github.com/orkhanshamil) | [ფაქტორიალის გამომთვლელი](https://github.com/orkhanshamil/factorial_finder)
 
 
 ## შეხვედრის ჩანაწერები
