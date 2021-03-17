@@ -23,7 +23,7 @@
 - [თემურ ჩიჩუა](https://github.com/temurchichua) | [ენის ლემატიზატორი](/Chapter1_Contribution/temur_chichua/readme.md)
 - [თემური ქიტოშვილი](https://github.com/TemuriKitoshvili) | [კვადრატული განტოლება]
 - [მარია ვეშაპიძე](https://github.com/Maria-555) | [პითაგორას თეორემა](https://github.com/Maria-555/calculator.git)
-- [დავით ჭინჭარაშვილი](https://github.com/davidunilab) | [მიმატება :) ](https://github.com/davidunilab/davaleba1)
+- [დავით ჭინჭარაშვილი](https://github.com/davidunilab) | [წიგნების კითხვის სტატისტიკა](https://github.com/davidunilab/davaleba1)
 - [ალექსანდრე ეროიანი](https://github.com/sun-dro) | [კვადრატში აყვანა](https://github.com/sun-dro/intern-math-function)
 
 ## შეხვედრის ჩანაწერები
