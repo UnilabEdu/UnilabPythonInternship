@@ -24,7 +24,10 @@
 - [თემური ქიტოშვილი](https://github.com/TemuriKitoshvili) | [კვადრატული განტოლება]
 - [მარია ვეშაპიძე](https://github.com/Maria-555) | [პითაგორას თეორემა](https://github.com/Maria-555/calculator.git)
 - [დავით ჭინჭარაშვილი](https://github.com/davidunilab) | [წიგნების კითხვის სტატისტიკა](https://github.com/davidunilab/davaleba1)
+- [ვაჟა ბერძენიშვილი](https://github.com/vazhaberdzenishvili) | [ფიბონაჩის მიმდევრობა](https://github.com/vazhaberdzenishvili/Fibonaccy_seq_calculator)
 - [ალექსანდრე ეროიანი](https://github.com/sun-dro) | [კვადრატში აყვანა](https://github.com/sun-dro/intern-math-function)
+- [გიორგი კვარაცხელია](https://github.com/RegiusPythonidae) | [დეტერმინანტის გამოთვლა](https://github.com/RegiusPythonidae/determinant_calculator)
+
 
 ## შეხვედრის ჩანაწერები
 
