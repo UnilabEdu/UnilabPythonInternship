@@ -23,8 +23,8 @@
 - [თემურ ჩიჩუა](https://github.com/temurchichua) | [ენის ლემატიზატორი](/Chapter1_Contribution/temur_chichua/readme.md)
 - [თემური ქიტოშვილი](https://github.com/TemuriKitoshvili) | [კვადრატული განტოლება]
 - [მარია ვეშაპიძე](https://github.com/Maria-555) | [პითაგორას თეორემა](https://github.com/Maria-555/calculator.git)
+- [დავით ჭინჭარაშვილი](https://github.com/davidunilab) | [წიგნების კითხვის სტატისტიკა](https://github.com/davidunilab/davaleba1)
 - [ვაჟა ბერძენიშვილი](https://github.com/vazhaberdzenishvili) | [ფიბონაჩის მიმდევრობა](https://github.com/vazhaberdzenishvili/Fibonaccy_seq_calculator)
-- [დავით ჭინჭარაშვილი](https://github.com/davidunilab) | [მიმატება :) ](https://github.com/davidunilab/davaleba1)
 - [ალექსანდრე ეროიანი](https://github.com/sun-dro) | [კვადრატში აყვანა](https://github.com/sun-dro/intern-math-function)
 - [გიორგი კვარაცხელია](https://github.com/RegiusPythonidae) | [დეტერმინანტის გამოთვლა](https://github.com/RegiusPythonidae/determinant_calculator)
 - [ცოტნე გამსახურდაშვილი](https://github.com/tsgams) | [კალკულატორი](https://github.com/tsgams/Calculator)
