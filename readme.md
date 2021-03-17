@@ -28,6 +28,7 @@
 - [ალექსანდრე ეროიანი](https://github.com/sun-dro) | [კვადრატში აყვანა](https://github.com/sun-dro/intern-math-function)
 - [გიორგი კვარაცხელია](https://github.com/RegiusPythonidae) | [დეტერმინანტის გამოთვლა](https://github.com/RegiusPythonidae/determinant_calculator)
 - [ცოტნე გამსახურდაშვილი](https://github.com/tsgams) | [კალკულატორი](https://github.com/tsgams/Calculator)
+- [დენისი სანტურიანი](https://github.com/Denissant) | [პოპულაციის სტანდარტული გადახრა](https://github.com/Denissant/std_dev_demo)
 
 
 ## შეხვედრის ჩანაწერები
