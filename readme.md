@@ -31,6 +31,7 @@
 - [დენისი სანტურიანი](https://github.com/Denissant) | [პოპულაციის სტანდარტული გადახრა](https://github.com/Denissant/std_dev_demo)
 - [თომა მარგიშვილი](https://github.com/hgresa) | [მოცემული ბიტისტვის მაქსიმალური რიცხვის პოვნა](https://github.com/hgresa/uniLab)
 - [უჩა ხმალაძე](https://github.com/Kastagnus/) | [ციფრის ფაქტორიალის პოვნა](https://github.com/Kastagnus/Calculator)
+- [გიორგი წყაროველი](https://github.com/tskaro) | [მედიანა](https://github.com/tskaro/Median)
 
 
 ## შეხვედრის ჩანაწერები
