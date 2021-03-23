@@ -5,6 +5,8 @@
 ## პროექტები
 - სახელი გვარი | [პროექტი 1](/Chapter2_HTML/Projects/საჩვენებელი_მისამართი) | [პროექტი 2](/საჩვენებელი_მისამართი)
 - თემურ ჩიჩუა| [პორტფოლიო](/Chapter2_HTML/Projects/temur_chichua/portfolio) | [საკონტაქტო ფორმა](/Chapter2_HTML/Projects/temur_chichua/contact_form)
+- ალექსანდრე ეროიანი | [4 best hiking routes in Georgia](/Chapter2_HTML/Projects/Alexander_Eroyan/Georgian_Hiking_Routes) |
+  [კორონავირუსის ვაქცინაციასთან დაკავშირებული კითხვარი](/Chapter2_HTML/Projects/Alexander_Eroyan/Georgian_Hiking_Routes)
 - დავით ჭინჭარაშვილი| [Unilab-ის ჯგუფი](/Chapter2_HTML/Projects/david_chincharashvili/group) | [საკონტაქტო ფორმა](/Chapter2_HTML/Projects/david_chincharashvili/forms)
 
 ## ინსტრუქცია
