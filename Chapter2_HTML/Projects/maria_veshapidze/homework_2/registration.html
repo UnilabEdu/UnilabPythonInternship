@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration</title>
+</head>
+<body>
+<form>
+    <fieldset>
+        <legend>მომხმარებლის სარეგისტრაციო ფორმა</legend>
+
+        <label for="signIn">სახელი:</label>
+        <input type="text" id="signIn" name="login" />
+        <br />
+        <label for="pswd" >პაროლი:</label>
+        <input type="password" name="password" id="pswd" />
+        <br />
+
+        <br />
+        <label>ხართ თუ არა სკოლის მოსწავლე?</label>
+        <br />
+        <input type="radio" name="student" value="yes" />დიახ
+        <input type="radio" name="student" value="no" />არა
+        <br />
+
+        <br />
+        <label>მიუთითეთ საცხოვრებელი ადგილი:</label>
+        <select name="color">
+            <option>თბილისი</option>
+            <option>რუსთავი</option>
+            <option>ბათუმი</option>
+            <option>ქუთაისი</option>
+            <option>თელავი</option>
+            <option>გურჯაანი</option>
+            <option>სხვა</option>
+        </select>
+        <br />
+
+        <br />
+        <label>რომელი საგნის/საგნების შესწავლას გეგმავთ?</label> <br />
+        <input type="checkbox" name="" id="maths" />
+        <label for="maths">მათემატიკა</label>
+        <br />
+        <input type="checkbox" name="" id="english" />
+        <label for="english">ინგლისური</label>
+        <br />
+        <input type="checkbox" name="" id="russian" />
+        <label for="russian">რუსული</label>
+        <br />
+
+        <br />
+        <textarea
+            name=""
+            id=""
+            cols="40"
+            rows="10"
+            placeholder="მიუთითეთ თქვენი კომენტარი"
+        ></textarea>
+        <br />
+
+        <br />
+        <input type="submit" value="რეგისტრაცია" />
+
+    </fieldset>
+</form>
+
+
+</body>
+</html>
