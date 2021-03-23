@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <title>გამოკითხვა ვაქცინაციის შესახებ</title>
+</head>
+<body>
+<h1>კორონავირუსის ვაქცინაციასთან დაკავშირებული გამოკითხვა</h1>
+        <img
+                src="vaccination.jpg"
+                alt="Vaccine photo"
+                width="400"
+                height="200"
+        />
+<form>
+    <fieldset>
+        <legend><h3>პირადი ინფორმაცია</h3></legend>
+            <label>სახელი <input type="text" name="name"></label><br/>
+            <label>გვარი <input type="text" name="surname"></label><br/>
+            <label>ქალაქი <input type="text" name="city"></label><br/>
+        <legend><h3>ასაკი</h3></legend>
+            <input type="radio" name="age" value="<18" /><18<br/>
+            <input type="radio" name="age" value="18-25"/> 18 - 25<br/>
+            <input type="radio" name="age" value="26-35"/> 26 - 35<br/>
+            <input type="radio" name="age" value="36-45"/> 36 - 45<br/>
+            <input type="radio" name="age" value="46-55"/> 46 - 55<br/>
+            <input type="radio" name="age" value="56-65"/> 56 - 65<br/>
+            <input type="radio" name="age" value="65+"/> 65 + <br/>
+        <legend><h3>გაქვთ თუ არა ჯანმრთელობის პრობლემები?</h3></legend>
+            <input type="radio" name="health" value="yes" />დიახ<br/>
+            <input type="radio" name="health" value="no" />არა<br/>
+        <legend><h3>რომელ ვაქცინას/ებს ენდობით?</h3></legend>
+            <input type="checkbox" name="vaccine_type" value="moderna" />Moderna<br/>
+            <input type="checkbox" name="days" value="astrazeneca"/>AstraZeneca<br/>
+            <input type="checkbox" name="days" value="sputnik"/>Sputnik V<br/>
+            <input type="checkbox" name="days" value="pfizer"/>Comirnaty(Pfizer)<br/>
+            <input type="checkbox" name="days" value="johnson"/>Johnson & Johnson<br/>
+        <legend><h3>აპირებთ აცრის გაკეთებას?</h3></legend>
+            <input type="radio" name="desire" value="yes" />დიახ<br/>
+            <input type="radio" name="desire" value="no"/>არა<br/>
+        <legend><h3>დღეს რომ გქონდეთ აცრის საშუალება, აიცრებოდით?</h3></legend>
+            <input type="radio" name="today" value="yes" />დიახ<br/>
+            <input type="radio" name="today" value="no"/>არა<br/>
+            <br /><br />
+        <label>თანახმა ვარ, რომ ჩემი მონაცემები დამუშავდეს სტატისტიკური ანალიზისთვის:
+            <select name="permission">
+            <option>დიახ </option>
+            <option>არა </option>
+        </select></label>
+            <br /><br />
+        <input type="submit" name="submit" value="გაგზავნა">
+    </fieldset>
+</form>
+</body>
+</html>
