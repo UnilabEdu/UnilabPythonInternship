@@ -1,7 +1,7 @@
 # HTML გამოყენების საფუძვლები
 HTML არის სტანდარტული მარკაპ ენა რომელიც გამოიყენება ვებ გვერდების შესქმნელად
 
-[![HTML გამოყენების საფუძვლები]({https://drive.google.com/file/d/1P9149LnkBnQ1HRlmzsLlZ1m55QA4lued/preview})]({https://drive.google.com/file/d/1P9149LnkBnQ1HRlmzsLlZ1m55QA4lued/preview})
+[![HTML გამოყენების საფუძვლები]({https://drive.google.com/file/d/1P9149LnkBnQ1HRlmzsLlZ1m55QA4lued/preview})]({./images/Screenshot 2021-03-24 024242.png})
 
 ## შესავალი [HTML Introduction](https://www.w3schools.com/html/html_intro.asp)
 HTML არის მარკირების ენა რომელიც გამოიყენება ვებ გვერდების შესაქმნელად.
