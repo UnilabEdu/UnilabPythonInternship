@@ -33,7 +33,7 @@
 - [უჩა ხმალაძე](https://github.com/Kastagnus/) | [ციფრის ფაქტორიალის პოვნა](https://github.com/Kastagnus/Calculator)
 - [ორხან შამილოვი](https://github.com/orkhanshamil) | [კვადრატული ფესვი](https://github.com/orkhanshamil/Square_root_finder)
 - [გიორგი წყაროველი](https://github.com/tskaro) | [მედიანა](https://github.com/tskaro/Median)
-
+- [ალექსი ტაბიძე](https://github.com/Lektor1) | [პლებეური პითაგორა](https://github.com/Lektor1/CalculatorAPI)
 
 ## შეხვედრის ჩანაწერები
 
