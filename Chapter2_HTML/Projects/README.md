@@ -10,6 +10,7 @@
 - დავით ჭინჭარაშვილი| [Unilab-ის ჯგუფი](/Chapter2_HTML/Projects/david_chincharashvili/group) | [საკონტაქტო ფორმა](/Chapter2_HTML/Projects/david_chincharashvili/forms)
 - მარია ვეშაპიძე| [დავალება 1](/Chapter2_HTML/Projects/maria_veshapidze/homework_1) | [დავალება 2: სარეგისტრაციო ფორმა](/Chapter2_HTML/Projects/maria_veshapidze/homework_2)
 - გიორგი წყაროველი| [მისია მარსზე](/Chapter2_HTML/Projects/giorgi_tskaroveli/mars_crew) | [კითხვა მოქალაქეს](/Chapter2_HTML/Projects/giorgi_tskaroveli/georgian_questions)
+- ორხან შამილოვი | [Rick Sanchez](/Chapter2_HTML/Projects/საჩვენებელი_მისამართი) | [პროექტი 2](/საჩვენებელი_მისამართი)
 
 ## ინსტრუქცია
 მოამზადეთ პროექტის ინსტრქუციაში აღწერილი პირობის შესაბამისი ორი HTML პროექტი და დაამატეთ ზემოთ ნაჩვენებ სიაში მათი საჩვენებელი მისამართები. (იხ. დამატებით რესურსები)
