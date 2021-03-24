@@ -13,7 +13,7 @@
 - გიორგი წყაროველი| [მისია მარსზე](/Chapter2_HTML/Projects/giorgi_tskaroveli/mars_crew) | [კითხვა მოქალაქეს](/Chapter2_HTML/Projects/giorgi_tskaroveli/georgian_questions)
 - ორხან შამილოვი | [Rick Sanchez](/Chapter2_HTML/Projects/საჩვენებელი_მისამართი) | [პროექტი 2](/საჩვენებელი_მისამართი)
 - დენისი სანტურიანი| [ნაღდი ახალი ამბები](/Chapter2_HTML/Projects/denis_santuryan/objective_news) [[view]](https://htmlpreview.github.io/?https://github.com/Denissant/UnilabPythonInternship/blob/html/denis_santuryan/Chapter2_HTML/Projects/denis_santuryan/objective_news/objective_news.html)  | [პრიზის მოგება](/Chapter2_HTML/Projects/denis_santuryan/scam) [[view]](https://htmlpreview.github.io/?https://github.com/Denissant/UnilabPythonInternship/blob/html/denis_santuryan/Chapter2_HTML/Projects/denis_santuryan/scam/definitely_not_scam.html))
-
+- ვაჟა ბერძენიშვილი | [Metallica](/Chapter2_HTML/Projects/vazha_berdzenishvili/Registration) | [Registration](/Chapter2_HTML/Projects/vazha_berdzenishvili/Registration)
 ## ინსტრუქცია
 მოამზადეთ პროექტის ინსტრქუციაში აღწერილი პირობის შესაბამისი ორი HTML პროექტი და დაამატეთ ზემოთ ნაჩვენებ სიაში მათი საჩვენებელი მისამართები. (იხ. დამატებით რესურსები)
 
