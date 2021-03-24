@@ -1,2 +1,2 @@
 #Simple Pythagoras
-fornt page for plebeian pythagoras calculator
+Front page for plebeian pythagoras calculator
