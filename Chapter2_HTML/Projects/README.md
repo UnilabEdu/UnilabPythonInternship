@@ -8,7 +8,7 @@
 - ალექსანდრე ეროიანი | [4 best hiking routes in Georgia](/Chapter2_HTML/Projects/Alexander_Eroyan/Georgian_Hiking_Routes) |
   [კორონავირუსის ვაქცინაციასთან დაკავშირებული კითხვარი](/Chapter2_HTML/Projects/Alexander_Eroyan/Georgian_Hiking_Routes)
 - დავით ჭინჭარაშვილი| [Unilab-ის ჯგუფი](/Chapter2_HTML/Projects/david_chincharashvili/group) | [საკონტაქტო ფორმა](/Chapter2_HTML/Projects/david_chincharashvili/forms)
-
+- უჩა ხმალაძე| [Unilab-ის ჯგუფი](/Chapter2_HTML/Projects/Ucha_Khmaladze/hotel_search) | [საკონტაქტო ფორმა](/Chapter2_HTML/Projects/ucha_khmaladze/guest_feedback_form)
 ## ინსტრუქცია
 მოამზადეთ პროექტის ინსტრქუციაში აღწერილი პირობის შესაბამისი ორი HTML პროექტი და დაამატეთ ზემოთ ნაჩვენებ სიაში მათი საჩვენებელი მისამართები. (იხ. დამატებით რესურსები)
 
