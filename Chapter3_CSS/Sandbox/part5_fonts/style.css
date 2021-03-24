@@ -1,0 +1,32 @@
+h1{
+    font-family:  "Bowlby One";
+}
+
+p{
+    font-family: monospace;
+}
+
+body{
+    font-size: 20px;
+}
+
+p{
+    font-size: 10px;
+    font-weight: bold;
+}
+
+#second{
+    font-size: 1.0em;
+    font-style: italic;
+}
+
+h1{
+    text-align: center;
+}
+
+
+
+/*@font-face{
+  font-family: your_font_name;
+  src: url(path/to/woff_file.woff);
+}*/
