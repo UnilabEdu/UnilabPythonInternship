@@ -1,0 +1,29 @@
+.secondDiv{
+    color: blueviolet;
+}
+
+.thirdDiv{
+    background-color: yellow;
+}
+
+#separated{
+    color: red;
+    text-decoration: underline;
+}
+
+/**{*/
+/*    color: blue;*/
+/*}*/
+
+h3 + ul{
+    border: 4px dotted sandybrown;
+}
+
+li a {
+    color: darkgreen;
+}
+
+li a[href="http://unilab.iliauni.edu.ge/"]{
+    background-color: mediumvioletred;
+    color: white;
+}

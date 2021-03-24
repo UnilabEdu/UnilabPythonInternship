@@ -1,0 +1,21 @@
+body{
+    /*background-color: yellowgreen;*/
+    background-color: yellowgreen;
+}
+
+div {
+    background: yellow;
+    border: orange;
+    border-width: 10px;
+    border-style: dashed;
+}
+
+p {
+    color: blueviolet;
+}
+
+span {
+    border: 2px orchid solid;
+    color: white;
+    background-color: blue;
+}
