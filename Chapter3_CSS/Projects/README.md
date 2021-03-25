@@ -3,6 +3,7 @@
 დირექტორიაში განთავსებულია კონტრიბუტორთა პირველი CSS პროექტები
 
 - [სახელი გვარი | პროექტი](/მისამართი)
+- ვაჟა ბერძენიშვილი | [Registration](/Chapter3_CSS/Projects/vazha_berdzenishvili/Registration)
 
 
 ## ინსტრუქცია:
