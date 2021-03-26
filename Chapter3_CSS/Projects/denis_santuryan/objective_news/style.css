@@ -1,0 +1,58 @@
+html {
+    background-color: #42c278;
+}
+
+#top {
+    background-color: #42c278;
+    height: 23%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: white;
+    font-family: "ALK Sanet", sans-serif;
+    border-bottom: solid white 5px
+}
+
+
+#middle {
+    background-color: white;
+    height: 200%;
+    position: absolute;
+    top: 235px;
+    left: 10px;
+    margin-right: 3px;
+    width: 98.5%;
+    font-family: "ALK Sanet", sans-serif;
+    border-radius: 60px;
+}
+
+h1 {
+    font-size: 70px;
+    text-align: center;
+}
+
+#headtext {
+    font-size: 20px;
+    margin-left: 110px
+}
+
+h2 {
+    font-size: 27px;
+}
+
+.infotext {
+    color: #909090;
+    font-size: 16px
+}
+
+
+.news {
+    margin-left: 150px;
+    margin-right: 400px;
+    margin-top: 30px
+}
+
+img {
+    border-radius: 10px
+}
