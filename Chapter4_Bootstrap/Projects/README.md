@@ -11,12 +11,12 @@
 გამოიყენეთ: `https://htmlpreview.github.io/?`
 
 დავალების ფორმა:
+
 ```
-Chapter4_Bootstrap4
+Chapter4_Bootstrap
 │   some_files
 └─── projects
    └─── temur_chichua
         └─── project_name
             │   index.html
-   
 ```
