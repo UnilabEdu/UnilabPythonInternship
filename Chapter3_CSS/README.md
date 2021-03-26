@@ -1,5 +1,7 @@
 # css
 
+[![intro to CSS](https://res.cloudinary.com/marcomontalbano/image/upload/v1616768772/video_to_markdown/images/google-drive--1iJQL4D6oVdF443WuhzFwl--4H1__1bvK-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://drive.google.com/file/d/1iJQL4D6oVdF443WuhzFwl--4H1__1bvK/view?usp=sharing "intro to CSS")
+
 **cascading style sheets** ( CSS ) აღწერს თუ როგორ გამოჩნდება HTML ელემენტები ვებ გვერდზე.
 CSS შეუძლია რამოდენიმე სხვადასხვა გვერდზე განლაგებულ ელემენტებზე იქონიოს გავლენა. სტილის დაწერა შეგვიძლია თვითონ html დოკუმენტში, კონკრეტულ html ელემენტზე და დაკავშირებულ ფაილში, მაგ.: `style.css`
 
