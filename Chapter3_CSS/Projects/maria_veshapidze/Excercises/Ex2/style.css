@@ -1,0 +1,50 @@
+/*Choose a cool Font Text Scheme*/
+
+h1{
+  font-family: 'Permanent Marker';
+  text-align: center;
+}
+
+/*Choose a color palette from here:
+https://coolors.co/
+or create your own here:
+paletton.com/*/
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+ul li {
+    float: left;
+    width: 250px;
+    margin-left: 13px;
+    border-style: solid;
+    border-width: 1px;
+    padding-bottom: 550px;
+}
+
+#one {
+    background: #6f1d1b;
+    border-color: #6f1d1b;
+}
+
+#two {
+  background: #588b8b;
+  border-color: #588b8b;
+}
+
+#three {
+  background: #cdb4db;
+  border-color: #cdb4db;
+}
+
+#four {
+    background: #d8e2dc;
+    border-color: #d8e2dc;
+}
+
+#five {
+    background: #ffe5d9;
+    border-color: #ffe5d9;
+}
