@@ -10,7 +10,6 @@ html {
     left: 0;
     width: 100%;
     color: white;
-    font-family: "ALK Sanet", sans-serif;
     border-bottom: solid white 5px
 }
 
@@ -23,7 +22,6 @@ html {
     left: 10px;
     margin-right: 3px;
     width: 98.5%;
-    font-family: "ALK Sanet", sans-serif;
     border-radius: 60px;
 }
 
