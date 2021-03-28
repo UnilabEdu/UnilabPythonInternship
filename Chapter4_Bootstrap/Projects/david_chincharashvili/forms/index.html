@@ -4,29 +4,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+
 </head>
 <body>
-    <form action="" method="get">
+    <div class="container">
+        <form class="mt-5" action="" method="get">
+            <fieldset>
+                <legend>Request Form:</legend>
+                <label for="fname">First name:</label><br>
+                <input class="form-control"  type="text" id="fname" name="fname" value="John"><br>
 
-        <fieldset>
-            <legend>Request Form:</legend>
-            <label for="fname">First name:</label><br>
-            <input type="text" id="fname" name="fname" value="John"><br>
+                <label for="lname">Last name:</label><br>
+                <input class="form-control"  type="text" id="lname" name="lname" value="Doe"><br>
 
-            <label for="lname">Last name:</label><br>
-            <input type="text" id="lname" name="lname" value="Doe"><br>
+                <label for="bdate">Birth Date:</label><br>
+                <input class="form-control"  type="date" id="bdate" name="bdate" ><br>
+                
+                <label for="email">Email:</label><br>
+                <input class="form-control"  type="email" id="email" name="lname" value="example@somemail.some"><br>
 
-            <label for="bdate">Birth Date:</label><br>
-            <input type="date" id="bdate" name="bdate" ><br>
-            
-            <label for="email">Email:</label><br>
-            <input type="email" id="email" name="lname" value="example@somemail.some"><br>
+                <label for="file">CV:</label><br>
+                <input class="form-control"  type="file" id="file" name="cv"><br><br>
 
-            <label for="file">CV:</label><br>
-            <input type="file" id="file" name="cv"><br><br>
-
-            <input type="submit" value="Sand">
-        </fieldset>
-    </form>
+                <input class="btn btn-primary w-100" type="submit" value="Request">
+            </fieldset>
+        </form>
+    </div>
 </body>
 </html>
