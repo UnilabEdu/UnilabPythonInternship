@@ -1,0 +1,46 @@
+/*Choose a cool Font Text Scheme*/
+
+h1{
+  font-family: 'Permanent Marker';
+  text-align: center;
+}
+
+/*Choose a color palette from here:
+https://coolors.co/
+or create your own here:
+paletton.com/*/
+
+body{
+  background: rgba(229, 235, 194, 0.479);
+  text-align: center;
+  counter-reset: color;
+}
+
+body div{
+  display: inline-block;
+  border:1px solid rgba(0, 0, 0, 0.349);
+  width:calc(100% / 10);
+  height: 200px;
+  /* filter: grayscale(100%); */
+}
+
+div:nth-child(3){
+  background-color: #57083b;
+}
+div:nth-child(4){
+  background-color: #771c40;
+}
+div:nth-child(5){
+  background-color: #693594;
+}
+div:nth-child(6){
+  background-color: #7d5db9;
+}
+div:nth-child(7){
+  background-color: #b29ad4;
+}
+div:nth-child(8){
+  background-color: #ffc2b1;
+}
+
+
