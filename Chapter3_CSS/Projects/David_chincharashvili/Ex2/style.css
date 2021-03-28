@@ -24,22 +24,22 @@ body div{
   /* filter: grayscale(100%); */
 }
 
-div:nth-child(3){
+#color1{
   background-color: #57083b;
 }
-div:nth-child(4){
+#color2{
   background-color: #771c40;
 }
-div:nth-child(5){
+#color3{
   background-color: #693594;
 }
-div:nth-child(6){
+#color4{
   background-color: #7d5db9;
 }
-div:nth-child(7){
+#color5{
   background-color: #b29ad4;
 }
-div:nth-child(8){
+#color6{
   background-color: #ffc2b1;
 }
 
