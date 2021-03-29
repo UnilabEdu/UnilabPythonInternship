@@ -1,0 +1,126 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #D85656;
+}
+
+.geofont {
+    font-family: "ALK Sanet", sans-serif;
+    color: white;
+}
+
+.bgcolor {
+    background-color: #47CC85
+}
+
+.titleclass {
+    font-size: 60px;
+    font-family: "ALK Sanet", sans-serif;
+    font-weight: bold;
+    color: white;
+    text-shadow: 3px 3px #D85656;
+    text-align: center;
+}
+
+
+
+/*.content {*/
+/*    padding-top: 110px; !* height of header + navbar*!*/
+/*}*/
+
+.pagewide {
+    height: 100px;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+}
+
+.navbar {
+    position: absolute;
+    top: 100px;
+    width: 100%;
+    left: 0;
+    height: 100px;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
+
+.navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+    vertical-align: top;
+}
+
+.navbar .navbar-collapse {
+    text-align: center;
+}
+
+.nav-link {
+    display: inline-block;
+    flex:none;
+    justify-content: space-between;
+    color: white !important;
+    font-size: 27px;
+    font-family: "ALK Sanet", sans-serif;
+}
+
+.nav-item {
+    color:white
+}
+
+div {
+    display: inline-block;
+    flex:none;
+    justify-content: space-around;
+    align-content: space-around;
+    text-align: center;
+}
+
+.linkstyle {
+    border: #D85656 2px solid;
+    border-radius: 20px;
+}
+
+.linkstyle:hover {
+    color: #D85656 !important;
+    background-color: #FFFFFF;
+}
+
+.linkstyle:active {
+    color: white !important;
+    background-color: #D85656;
+}
+
+.titleclass, nav {
+    user-select: none;
+}
+
+.blockstyle {
+    background-color: white;
+    border-radius: 40px;
+    height: 200%;
+    width: 100%;
+    margin-top: 80px;
+    text-align: center;
+}
+
+.blocktitle {
+    margin-top: 15px;
+    font-family: "ALK Sanet", sans-serif;
+    font-size: 42px
+}
+
+.blocktext {
+    font-size: 22px;
+    margin-left: 75px;
+    margin-right: 75px;
+    text-align: justify;
+}
+
+.blocksubtitle {
+    font-family: "ALK Sanet", sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    margin-left: 75px;
+    margin-right: 75px;
+    text-align: justify;
+}
