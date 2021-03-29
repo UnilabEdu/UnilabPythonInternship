@@ -1,0 +1,32 @@
+
+h1{
+  font-family: 'Permanent Marker';
+  text-align: center;
+}
+
+div th{
+  width: 400px;
+  height: 600px;
+  border: white;
+  border-style: solid;
+  border-width: thick;
+}
+div #first {
+  background: #73FC9C;
+}
+
+div #second {
+  background: #8EF9F3;
+}
+
+div #third {
+  background: #93BEDF;
+}
+
+div #fourth {
+  background: #8377D1;
+}
+
+div #fifth {
+  background: #6D5A72;
+}

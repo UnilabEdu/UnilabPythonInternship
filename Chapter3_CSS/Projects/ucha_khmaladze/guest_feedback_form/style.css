@@ -1,0 +1,22 @@
+body {
+    background: lightgreen;
+}
+h1 {
+    text-align: center;
+}
+
+textarea{
+    font-style: italic;
+}
+
+table #first {
+    color: red;
+}
+
+table #second {
+    color: gray;
+}
+
+table #third {
+    color: darkgreen;
+}
