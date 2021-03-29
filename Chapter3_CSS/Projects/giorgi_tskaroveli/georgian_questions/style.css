@@ -1,0 +1,33 @@
+body {
+    max-width: 500px;
+    margin: auto;
+
+}
+
+form {
+    border-style: solid;
+    border-color: #3688d0;
+    border-width: 7px;
+    padding: 10px;
+}
+
+div {
+    border-style: solid;
+    border-color: #F58107;
+    border-width: 4px;
+    padding: 3px;
+    margin-top: 5px;
+    margin-bottom: 7px;
+}
+
+.button {
+    margin-left:180px;
+    background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
