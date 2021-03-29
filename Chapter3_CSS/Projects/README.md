@@ -8,8 +8,8 @@
 - ვაჟა ბერძენიშვილი | [Registration](/Chapter3_CSS/Projects/vazha_berdzenishvili/Registration)
 - ალექსანდრე ეროიანი | [4 best hiking routes in Georgia](/Chapter3_CSS/Projects/Alexander_Eroyan/Georgian_Hiking_Routes) |
   [კორონავირუსის ვაქცინაციასთან დაკავშირებული კითხვარი](/Chapter3_CSS/Projects/Alexander_Eroyan/Covid_Vaccination_Survey)
-- [უჩა ხმალაძე | სასტუმროების ძებნა და შეფასების ფორმა](/Chapter3_CSS/Projects/ucha_khmaladze/hotel_search/) 
-- გიორგი წყაროველი | [მარსის მისია](Chapter3_CSS/Projects/giorgi_tskaroveli/mars_crew/) [[view]](https://htmlpreview.github.io/?https://github.com/tskaro/UnilabPythonInternship/blob/tskaro/Chapter3_CSS/Projects/giorgi_tskaroveli/mars_crew/new.html)| [კითხვარი](/Chapter3_CSS/Projects/giorgi_tskaroveli/georgian_questions) [[view]](https://htmlpreview.github.io/?https://github.com/tskaro/UnilabPythonInternship/blob/tskaro/Chapter3_CSS/Projects/giorgi_tskaroveli/georgian_questions/Form.html)
+- [უჩა ხმალაძე | სასტუმროების ძებნა და შეფასების ფორმა](/Chapter3_CSS/Projects/ucha_khmaladze/hotel_search/)
+- გიორგი წყაროველი | [მარსის მისია](Chapter3_CSS/Projects/giorgi_tskaroveli/mars_crew/) [[view]](https://htmlpreview.github.io/?https://github.com/tskaro/UnilabPythonInternship/blob/tskaro/Chapter3_CSS/Projects/giorgi_tskaroveli/mars_crew/new.html) | [კითხვარი](/Chapter3_CSS/Projects/giorgi_tskaroveli/georgian_questions) [[view]](https://htmlpreview.github.io/?https://github.com/tskaro/UnilabPythonInternship/blob/tskaro/Chapter3_CSS/Projects/giorgi_tskaroveli/georgian_questions/Form.html)
 
 
 ## ინსტრუქცია:
