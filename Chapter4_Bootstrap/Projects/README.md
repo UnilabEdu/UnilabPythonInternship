@@ -3,6 +3,7 @@
 დირექტორიაში განთავსებულია კონტრიბუტორთა პირველი Bootstrap პროექტები
 
 - [სახელი გვარი | პროექტი](/მისამართი)
+- [ვაჟა ბერძენიშვილი|store_front](/Chapter4_Bootstrap/Projects/vazha_berdzenishvili)
 
 ## ინსტრუქცია:
 
