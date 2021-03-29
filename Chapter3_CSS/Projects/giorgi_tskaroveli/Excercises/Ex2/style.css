@@ -1,0 +1,42 @@
+/*Choose a cool Font Text Scheme*/
+
+h1{
+  font-family: 'Permanent Marker';
+  text-align: center;
+}
+
+#ob1{
+  background: #F8B195;
+}
+#ob2{
+  background: #F67280;
+}
+
+#ob3{
+  background: #C06C84;
+}
+
+#ob4{
+  background: #6C5B7B;
+}
+
+#ob5{
+  background: #355C7D;
+}
+
+body{
+  alignment: right;
+}
+
+.art {
+  border-collapse: separate;
+  border-spacing: 10px;
+  alignment-baseline: center;
+  align-items: center;
+  height: 400px;
+  width: 700px;
+}
+/*Choose a color palette from here:
+https://coolors.co/
+or create your own here:
+paletton.com/*/
