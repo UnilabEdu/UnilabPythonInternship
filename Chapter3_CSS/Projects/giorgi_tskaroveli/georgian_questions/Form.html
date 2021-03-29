@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <h1>საქართველოს მოქალაქის კითხვარი</h1>
 
 
     <form action="https://youtu.be/6uikJTnmtgw">
+        <div class="question1">
         <h4> რომელი ტრანსპორტით გადაადგილდები?</h4>
           <input type="checkbox" name="vehicle1" value="Bike">
           <label for="vehicle1"> ფეხით </label><br>
@@ -18,6 +20,8 @@
           <label for="vehicle3"> სკუტერით </label><br>
           <input type="checkbox" name="vehicle4" value="Boat">
           <label for="vehicle4"> სკროლით </label><br><br>
+        </div>
+        <div class="question2">
         <h4> რომელი პრობლემა გაწუხებს ყველაზე მეტად?</h4>
             <input type="radio" name="question" value="1" />დაძრული მთა<br/>
             <input type="radio" name="question" value="2"/>კოვიდი<br/>
@@ -25,7 +29,8 @@
             <input type="radio" name="question" value="4"/>მიჯნა, რომლის მერეც ლარი არ უნდა გამყარდეს<br/>
             <input type="radio" name="question" value="5"/>ის, რომ მეორედ მოსვლები და წასვლები ერთმანეთში გერევა<br/>
             <input type="radio" name="question" value="6"/>პრობლემა რა პრობლემაა... მთავარია ჯანმრთელად ვიყოთ<br/><br/>
-        <input type="submit" name="submit" value="დამკლიკე">
+        </div>
+        <input class="button" type="submit" name="submit" value="დამკლიკე">
     </form>
 
 </body>
