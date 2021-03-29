@@ -3,6 +3,7 @@
 დირექტორიაში განთავსებულია კონტრიბუტორთა პირველი Bootstrap პროექტები
 
 - [სახელი გვარი | პროექტი](/მისამართი)
+- დავით ჭინჭარაშვილი | [CV](https://htmlpreview.github.io/?https://github.com/davidunilab/UnilabPythonInternship/blob/css/david_chincharashvili/Chapter4_Bootstrap/Projects/david_chincharashvili/cv/index.html)
 
 ## ინსტრუქცია:
 
