@@ -2,16 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>5 საათით ადრე</title>
+    <title>5 საათში</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="stylesheet" href="fonts/alk-sanet.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="pagewide p-3 d-none d-lg-block bgcolor">
-    <div class="container titleclass"> 5 საათით ადრე – ახალი ამბები</div>
-</div>
-    <div class="container ">
+        <span class="container titleclass"> 5 საათში – ახალი ამბები</span>
+    </div>
+
+    <div class="container">
 <!--        #FFA500 - orange; #D85656 - red; #47CC85 - green;-->
         <nav class="navbar sticky-top navbar-expand-lg navbar-light bgcolor">
           <a class="navbar-brand" href="#"><img src='content/logo.png' width=120px alt="logo" style="margin-bottom: 30px"></a>
@@ -21,18 +22,18 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="nav nav-pills nav-fill">
                   <li class="nav-item">
-                    <a class="nav-link active" style="background-color: #D85656; border: #D85656 2px solid">მთავარი</a>
+                    <a class="nav-link linkstyle" href="index.html">მთავარი</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link linkstyle" href="#">ჯერ არმომხდარი ამბები</a>
+                    <a class="nav-link linkstyle" href="archive.html">არქივი</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link linkstyle" href="#">კონტაქტი</a>
+                    <a class="nav-link active" style="background-color: #D85656; border: #D85656 2px solid">ჩვენს შესახებ</a>
                   </li>
                 </ul>
             <form class="form-inline my-2 my-lg-0">
-              <input class="form-control mr-sm-2" type="search" placeholder="საძიებო სიტყვა" aria-label="ძებნა">
-              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">ძებნა</button>
+              <input class="form-control mr-sm-2" type="search" placeholder="საძიებო სიტყვა" aria-label="ძებნა" id="searchinputstyle">
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="searchstyle">ძებნა</button>
             </form>
           </div>
         </nav>

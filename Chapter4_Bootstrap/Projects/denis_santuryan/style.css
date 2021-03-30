@@ -4,9 +4,8 @@ html, body {
     background-color: #D85656;
 }
 
-.geofont {
-    font-family: "ALK Sanet", sans-serif;
-    color: white;
+::selection {
+    background-color: #47CC85;
 }
 
 .bgcolor {
@@ -22,11 +21,6 @@ html, body {
     text-align: center;
 }
 
-
-
-/*.content {*/
-/*    padding-top: 110px; !* height of header + navbar*!*/
-/*}*/
 
 .pagewide {
     height: 100px;
@@ -61,6 +55,7 @@ html, body {
     color: white !important;
     font-size: 27px;
     font-family: "ALK Sanet", sans-serif;
+    border-radius: 15px !important;
 }
 
 .nav-item {
@@ -123,4 +118,77 @@ div {
     margin-left: 75px;
     margin-right: 75px;
     text-align: justify;
+}
+
+#searchstyle {
+    color: white;
+    font-weight: bold;
+    border-radius: 25px;
+    border: 3px #D85656 solid;
+    outline-color: #D85656;
+}
+
+#searchstyle:hover {
+    background-color: white;
+    color: #D85656;
+}
+
+#searchstyle:active {
+    background-color: #D85656;
+    color: white;
+    box-shadow: none;
+}
+
+#searchinputstyle {
+    border-radius: 25px;
+}
+
+#searchinputstyle:focus {
+    box-shadow: 0 0 10px #D85656;
+    border-color: #D85656;
+}
+
+.newsblock {
+    display: inline-block;
+    flex-direction: row;
+    margin-top: 50px;
+}
+
+.newsindividual {
+    display: inline-block;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border: black 2px solid;
+    border-radius: 25px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+    box-shadow: 0 0 10px #47cc85;
+    background-color: #f9fff9;
+    width: 555px;
+}
+
+.newsindividual img {
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+}
+
+
+.geofont {
+    font-family: "ALK Sanet", sans-serif;
+    color: white;
+}
+
+.newstitle {
+    font-family: "ALK Sanet", sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+    margin-top: 10px;
+    margin-bottom: -2px;
+}
+
+a, a:hover, a:focus, a:active {
+  text-decoration: none;
+  color: inherit;
 }
