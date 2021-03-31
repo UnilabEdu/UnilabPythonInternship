@@ -3,6 +3,7 @@
 დირექტორიაში განთავსებულია კონტრიბუტორთა პირველი შაბლონებთან სამუშაო პროექტები
 
 - [სახელი გვარი | პროექტი](/მისამართი)
+- [დავით ჭინჭარაშვილი](https://github.com/davidunilab) | [Just some demo](https://github.com/davidunilab/UnilabPythonInternship/tree/master/Chapter5_Flask_Templates/Projects/David_chincharashvili)
 
 
 ## ინსტრუქცია:
