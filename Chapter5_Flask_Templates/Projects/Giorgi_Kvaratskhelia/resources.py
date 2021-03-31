@@ -412,7 +412,3 @@ item_dictionary = \
                  }
             ]
     }
-
-for key in item_dictionary['psu'][0]:
-    if key not in ("img", "quantity", "price"):
-        print(f"{key} : {item_dictionary['psu'][0][key]}")
