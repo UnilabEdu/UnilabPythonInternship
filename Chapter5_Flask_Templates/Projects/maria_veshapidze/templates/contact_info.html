@@ -1,0 +1,40 @@
+{%  extends "base.html" %}
+
+{% block navbar %}
+
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('home') }}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('about') }}">About us</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="{{ url_for('contact') }}">Contact Info <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('registration') }}">Registration</a>
+          </li>
+
+{% endblock %}
+
+{% block content %}
+<div class="container">
+<br>
+<br>
+    <div class="row align-items-center">
+        <div class="col-lg-5 text-right"><img src="../static/images/img_366060.png" alt="phone" width="30%" /> </div>
+        <div class="col-lg-7 text-left"><h1>032 2 000 000</h1></div>
+    </div>
+<br>
+    <div class="row align-items-center">
+        <div class="col-lg-5 text-right"><img src="../static/images/email.png" alt="email" width="30%" /> </div>
+        <div class="col-lg-7 text-left"><h1>tutor@online.ge</h1></div>
+    </div>
+<br>
+    <div class="row align-items-center">
+        <div class="col-lg-5 text-right"><img src="../static/images/facebook.png" alt="facebook" width="30%" /> </div>
+        <div class="col-lg-7 text-left"><h1>facebook.com/TutOr OnLine</h1></div>
+    </div>
+
+</div>
+{% endblock %}
