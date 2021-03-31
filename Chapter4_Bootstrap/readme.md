@@ -2,6 +2,8 @@
 
 ### [შესავალი](https://getbootstrap.com/docs/4.5/getting-started/introduction/) | [მაგალითები](https://getbootstrap.com/docs/4.5/examples/) | [დოკუმენტაცია](https://getbootstrap.com/docs/4.5/layout/overview/)
 
+[![Intro to Bootstrap](https://res.cloudinary.com/marcomontalbano/image/upload/v1617022103/video_to_markdown/images/google-drive--1pr8iaJ53HIkT2HAyyXNkeDqdu9ATAcz_-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://drive.google.com/file/d/1pr8iaJ53HIkT2HAyyXNkeDqdu9ATAcz_/view?usp=sharing "Intro to Bootstrap")
+
 Boostrap არის მსოფლიოში ერთ-ერთი ყველაზე პოპულარული ფრონტ-ენდ დეველოპმენტ იარაღების ნაკრები. იგი შექმნეს twitter -ის დეველოპერებმა. მას აქვს html ელემენტების და css სტილის მზა შაბლონები.
 
 ## როგორ გამოვიყენოთ Bootstrap
