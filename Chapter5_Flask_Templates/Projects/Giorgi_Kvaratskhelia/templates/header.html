@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+          integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="static/css/styles.css">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+            crossorigin="anonymous"></script>
+
+    <meta charset="UTF-8">
+    <title>Elektronyx</title>
+</head>
+<body>
+
+<!-- The navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #1A191B;">
+    <div class="container-xl">
+        <a class="navbar-brand baloo-text" href="#">Elektronyx</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Catalog
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/catalog/computers">Computers</a>
+                        <a class="dropdown-item" href="/catalog/accessories">Computer Accessories</a>
+                        <a class="dropdown-item" href="/catalog/laptops">Laptops</a>
+                        <a class="dropdown-item" href="/catalog/phones">Phones</a>
+                        <a class="dropdown-item" href="/catalog/tablets">Tablets</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="/catalog/case">Computer Case</a>
+                        <a class="dropdown-item" href="/catalog/motherboard">Motherboard</a>
+                        <a class="dropdown-item" href="/catalog/cpu">CPU</a>
+                        <a class="dropdown-item" href="/catalog/gpu">Graphics Card</a>
+                        <a class="dropdown-item" href="/catalog/ram">RAM</a>
+                        <a class="dropdown-item" href="/catalog/storage">Storage</a>
+                        <a class="dropdown-item" href="/catalog/psu">Power Supply</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="pages/contact-us.html">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="pages/sign-in.html">Sign In</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Promotions -->
+<div id="Promotions" class="carousel slide" data-ride="carousel" class="row">
+    <ol class="carousel-indicators">
+        <li data-target="#Promotions" data-slide-to="0" class="active"></li>
+        <li data-target="#Promotions" data-slide-to="1"></li>
+        <li data-target="#Promotions" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="carousel-item active slider-fullscreen-image">
+            <img class="d-block w-100" src="static/img/March-Promo.png" alt="March discounts up to 300$">
+        </div>
+        <div class="carousel-item">
+            <img class="d-block w-100" src="static/img/Nvidia-Promo.png" alt="Get computers powered by Nvidia">
+        </div>
+        <div class="carousel-item">
+            <img class="d-block w-100" src="static/img/PrebuiltPC-Promo.png" alt="Prebuilt computers ready to ship">
+        </div>
+    </div>
+
+    <!-- Carousel Controls -->
+    <a class="carousel-control-prev" href="#Promotions" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#Promotions" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+
+<!-- Catalog -->
+<div id="Catalog" class="container">
+    </br><h2 class="baloo-text text-center">Explore our products</h2>
+    <div class="row row-cols-4">
+        <div class="card border-0">
+            <img class="card-img-top" src="static/img/phone.jpg" alt="Mobile Phones">
+            <div class="card-body">
+                <h5 class="card-title text-center baloo-text">MOBILE PHONES</h5>
+                <a href="/catalog/phones" class="stretched-link"></a>
+            </div>
+        </div>
+        <div class="card border-0">
+            <img class="card-img-top" src="static/img/laptop.png" alt="Laptop computers">
+            <div class="card-body">
+                <h5 class="card-title text-center baloo-text">LAPTOPS</h5>
+                <a href="/catalog/laptops" class="stretched-link"></a>
+            </div>
+        </div>
+        <div class="card border-0">
+            <img class="card-img-top" src="static/img/desktop.png" alt="Desktop computers">
+            <div class="card-body">
+                <h5 class="card-title text-center baloo-text">DESKTOPS</h5>
+                <a href="/catalog/computers" class="stretched-link"></a>
+            </div>
+        </div>
+        <div class="card border-0">
+            <img class="card-img-top" src="static/img/tablet.png" alt="Tablets">
+            <div class="card-body">
+                <h5 class="card-title text-center baloo-text">TABLETS</h5>
+                <a href="/catalog/tablets" class="stretched-link"></a>
+            </div>
+        </div>
+    </div>
+    <hr class="featurette-divider">
+</div>
+
+<!-- On Sale -->
+<div id="Sales" class="container">
+    </br><h2 class="baloo-text text-center">Featured Products</h2>
+    <div class="row row-cols-2 row-cols-md-4">
+        <div class="col mb-4">
+            <div class="card" style="width: 110%; height:100%">
+                <img src="static/img/ripjaws.jpg" class="card-img-top" alt="Ripjaws">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">G.SKILL Ripjaws V Series 16GB</h5>
+                    <h6 class="text-right">120.00$</h6></br>
+                    <a href="" class="mt-auto btn btn-primary">Buy now</a>
+                </div>
+            </div>
+        </div>
+        <div class="col mb-4">
+            <div class="card" style="width: 110%; height:100%">
+                <img src="static/img/ryzen.jpg" class="card-img-top" alt="Ripjaws">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">G.SKILL Ripjaws V Series 16GB</h5>
+                    <h6 class="text-right">120.00$</h6></br>
+                    <a href="" class="mt-auto btn btn-primary">Buy now</a>
+                </div>
+            </div>
+        </div>
+        <div class="col mb-4">
+            <div class="card" style="width: 110%; height:100%">
+                <img src="static/img/intelcorei5.jpg" class="card-img-top" alt="Intel Core i5">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Intel Core i5-9600K Coffee Lake 6-Core 3.7 GHz</h5>
+                    <h6 class="text-right">220.00$</h6></br>
+                    <a href="" class="mt-auto btn btn-primary">Buy now</a>
+                </div>
+            </div>
+        </div>
+        <div class="col mb-4">
+            <div class="card" style="width: 110%; height:100%">
+                <img src="static/img/intelcorei7.jpg" class="card-img-top" alt="Intel Core i7">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Intel Core i7-10700K Comet Lake 8-Core 3.8 GHz</h5>
+                    <h6 class="text-right">380.00$</h6></br>
+                    <a href="" class="mt-auto btn btn-primary">Buy now</a>
+                </div>
+            </div>
+        </div>
+        <div class="col mb-4">
+            <div class="card" style="width: 110%; height:100%">
+                <img src="static/img/WDRedPlus.jpg" class="card-img-top" alt="WD Red HDD">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">WD Red Plus 10TB NAS Hard Disk Drive - 7200 RPM</h5>
+                    <h6 class="text-right">280.00$</h6></br>
+                    <a href="" class="mt-auto btn btn-primary">Buy now</a>
+                </div>
+            </div>
+        </div>
+        <div class="col mb-4">
+            <div class="card" style="width: 110%; height:100%">
+                <img src="static/img/samsungEVO.jpg" class="card-img-top" alt="Samsung EVO SSD">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">SAMSUNG 870 EVO Series 2.5" 1TB</h5>
+                    <h6 class="text-right">180.00$</h6></br>
+                    <a href="" class="mt-auto btn btn-primary">Buy now</a>
+                </div>
+            </div>
+        </div>
+        <div class="col mb-4">
+            <div class="card" style="width: 110%; height:100%">
+                <img src="static/img/LGUltrawide.jpg" class="card-img-top" alt="LG Ultrawide 35 inch monitor">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">LG UltraWide 35BN75C-B 35</h5>
+                    <h6 class="text-right">499.99$</h6></br>
+                    <a href="" class="mt-auto btn btn-primary">Buy now</a>
+                </div>
+            </div>
+        </div>
+        <div class="col mb-4">
+            <div class="card" style="width: 110%; height:100%">
+                <img src="static/img/CorsairPSU.jpg" class="card-img-top" alt="Corsair 550 Watt PSU">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">CORSAIR CX550 550W 80+ Bronze Certified</h5>
+                    <h6 class="text-right">75.00$</h6></br>
+                    <a href="" class="mt-auto btn btn-primary">Buy now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+<!-- Footer -->
+<footer style="background-color: #1A191B; bottom: 0;">
+    <p class="text-center" style="color: white"> ©2021 Elektronyx LLC All Rights Reserved</p></br>
+</footer>
+
+</html>
