@@ -3,6 +3,7 @@
 დირექტორიაში განთავსებულია კონტრიბუტორთა პირველი Bootstrap პროექტები
 
 - [სახელი გვარი | პროექტი](/მისამართი)
+- [ვაჟა ბერძენიშვილი|store_front](/Chapter4_Bootstrap/Projects/vazha_berdzenishvili)
 - [დენისი სანტურიანი](https://github.com/Denissant) | [5 საათით ადრე](https://github.com/Denissant/UnilabPythonInternship/blob/bootstrap/denis_santuryan/Chapter4_Bootstrap/Projects/denis_santuryan/main.html)
 
 ## ინსტრუქცია:
