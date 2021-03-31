@@ -6,7 +6,7 @@
 - [გიორგი კვარაცხელია | ელექტრონიკის მაღაზია](https://github.com/RegiusPythonidae/UnilabPythonInternship/tree/master/Chapter5_Flask_Templates/Projects/Giorgi_Kvaratskhelia)
 - [ალექსანდრე ეროიანი | Top 4 hiking routes in Georgia](/Chapter5_Flask_Templates/Projects/Alexander_Eroyan/)
 - [მარია ვეშაპიძე | Tutor online](/Chapter5_Flask_Templates/Projects/maria_veshapidze/app.py)
-
+- [დენისი სანტურიანი | 5 საათში](/Chapter5_Flask_Templates/Projects/denis_santuryan/)
 
 ## ინსტრუქცია:
 
