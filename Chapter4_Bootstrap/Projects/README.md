@@ -3,6 +3,7 @@
 დირექტორიაში განთავსებულია კონტრიბუტორთა პირველი Bootstrap პროექტები
 
 - [სახელი გვარი | პროექტი](/მისამართი)
+- [მარია ვეშაპიძე | Tutor Online](/Chapter4_Bootstrap/Projects/maria_veshapidze/home_page.html)
 - დავით ჭინჭარაშვილი | [CV](https://htmlpreview.github.io/?https://github.com/davidunilab/UnilabPythonInternship/blob/css/david_chincharashvili/Chapter4_Bootstrap/Projects/david_chincharashvili/cv/index.html)
 - [მარია ვეშაპიძე | Tutor Online](/Chapter4_Bootstrap/Projects/maria_veshapidze/home_page.html)
 - [ალექსი ტაბიძე | საინფორმაციო გვერდი](./Aleksi_Tabidze/Informatics)

@@ -1,0 +1,99 @@
+{%  extends "base.html" %}
+
+{% block navbar %}
+
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('home') }}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('about') }}">About us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('contact') }}">Contact Info</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="{{ url_for('registration') }}">Registration <span class="sr-only">(current)</span></a>
+          </li>
+
+{% endblock %}
+
+{% block content %}
+ <div class="container">
+
+
+<fieldset>
+    <legend>Registration form</legend>
+
+      <form>
+        <!-- Email and password -->
+      <div class="form-group">
+        <label for="InputEmail">Email</label>
+        <input type="email" class="form-control" id="InputEmail" aria-describedby="emailHelp" placeholder="enter your email">
+      </div>
+
+      <div class="form-group">
+        <label for="InputPassword">Password</label>
+        <input type="password" class="form-control" id="InputPassword" placeholder="enter a password">
+      </div>
+<br>
+
+        <!-- RADIO BUTTONS -->
+
+        <label>Are you a student?</label>
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="yes" checked>
+            Yes
+          </label>
+        </div>
+
+        <div class="form-check">
+        <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="no">
+            No
+          </label>
+        </div>
+<br>
+
+  <!-- DROPDOWN SELECT -->
+      <div class="form-group">
+        <label for="SelectPl">Where do you live?</label>
+        <select class="form-control" id="SelectPl">
+          <option>Tbilisi</option>
+          <option>Batumi</option>
+          <option>Kutaisi</option>
+          <option>Telavi</option>
+          <option>Gurjaani</option>
+          <option>Other</option>
+        </select>
+      </div>
+<br>
+
+
+  <!-- MULTIPLE SELECT OPTIONS -->
+
+      <div class="form-group">
+        <label for="SelectSbj">Select subject(s) which you want to learn (For selecting more than one subject push Ctrl button)</label>
+        <select multiple class="form-control" id="SelectSbj">
+          <option>Maths</option>
+          <option>English</option>
+          <option>Russian</option>
+        </select>
+      </div>
+
+<br>
+  <!-- TEXT AREA -->
+
+      <div class="form-group">
+        <label for="Textarea">Enter some features you want your tutor to have</label>
+        <textarea class="form-control" id="Textarea" rows="3" placeholder="Place for your comment"></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-outline-primary">Submit</button>
+
+    </form>
+
+</fieldset>
+
+</div>
+{% endblock %}
