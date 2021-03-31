@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <title>Top 4 hiking routes in Georgia</title>
-    <link rel="stylesheet" href="style.css">
+    <link type ="text/css" href = "{{ url_for('static', filename = 'css/style.css') }}" rel = "stylesheet" />
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -12,41 +12,36 @@
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-
+{% block content %}
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
+        {% for button in menu -%}
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-        <li class="nav-item active">
-        <a class="nav-link" href="#">About author <span class="sr-only">(current)</span></a>
-      </li>
-        <li class="nav-item active">
-        <a class="nav-link" href="#">Contact <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="{{button.url}}">{{button.name}}<span class="sr-only">(current)</span></a>
+          {% endfor -%}
       </li>
     </ul>
   </div>
 </nav>
+{% endblock %}
 <h1>Top 4 hiking routes in Georgia</h1>
             <img
                     class="image1"
-                src="first_pic.jpg"
+                src="{{ url_for('static', filename='first_pic.jpg') }}"
                 alt="Wonders of Georgia"/>
 
 
 
 
 <div class="introduction">
-    <p>This list is made according to my personal experience and tries to cover all aspects of hiking in Georgia.
-        <br />P.S. all pictures are made by me.<br /></p>
-    <a href="https://www.facebook.com/AlexanderEroyan/" target="_blank">Please, contact me if you have any suggestions or questions.</a>
-    <p>Soooo, let's start.</p>
+    <p>All right reserved. © sun_dro</p>
+    <p>Let's start.</p>
 </div>
 
     <h3>4. Nikoloz Romanovi Trail at Borjom-Kharagauli National park</h3>
 
             <img
-                src="Borjomi.jpg"
+                src="{{ url_for('static', filename='Borjomi.jpg') }}"
                 alt="Borjomi"/>
 <div class="description">
     <p>On the Nikoloz romanov's trail, you will come across coniferous and mixed forest, Lomi mountain, Lomi st.
@@ -83,7 +78,7 @@
 <h3>3. Juta - Roshka trail (including Abudelauri colorful lakes)</h3>
 
             <img
-                src="Juta.JPG"
+                src="{{ url_for('static', filename='Juta.JPG') }}"
                 alt="Juta"/>
 <div class="description">
     <p>Summer is the best season for traveling in the Georgian mountains.
@@ -121,7 +116,7 @@
     <h3>2. Black rock lake trail</h3>
 
             <img
-                src="black_rock.JPG"
+                src="{{ url_for('static', filename='black_rock.JPG') }}"
                 alt="Black rock lake"/>
 <div class="description">
     <p>Black Rock Lake is located in Kakheti, on the border of Georgia - Russia.
@@ -155,7 +150,7 @@
     <h3>1. Keli plateau and Kelitsadi lake</h3>
 
             <img
-                src="keli.jpg"
+                src="{{ url_for('static', filename='keli.jpg') }}"
                 alt="Kelitsadi lake"/>
 <div class="description">
     <p>Kelitsadi Lake is located in Kazbegi Municipality, at 3081 above sea level.

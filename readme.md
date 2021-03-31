@@ -34,6 +34,7 @@
 - [ორხან შამილოვი](https://github.com/orkhanshamil) | [კვადრატული ფესვი](https://github.com/orkhanshamil/Square_root_finder)
 - [გიორგი წყაროველი](https://github.com/tskaro) | [მედიანა](https://github.com/tskaro/Median)
 - [ალექსი ტაბიძე](https://github.com/Lektor1) | [პლებეური პითაგორა](https://github.com/Lektor1/CalculatorAPI)
+- [სალომე ჯავაშვილი](https://github.com/salomej899) | [რიცხვთა არითმეტიკული საშუალოს გამოთვლა](https://github.com/salomej899/Mean)
 
 ## შეხვედრის ჩანაწერები
 
