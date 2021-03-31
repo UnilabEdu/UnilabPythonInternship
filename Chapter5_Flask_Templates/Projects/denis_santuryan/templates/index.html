@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="blockstyle">
+    <h1 class="blocktitle">მომავლის ამბები</h1>
+    <div class="newsblock">
+
+        <div class="newsindividual">
+            <img src="{{ url_for('static', filename='snow.jpg') }}" alt="tbilisi snow" width="549px" height="400px">
+            <p class="newstitle"> <a href="#"> ნუ დარჩებით სახლში: თბილისში დღეს არ მოთოვს </a></p>
+        </div>
+
+        <div class="newsindividual">
+            <img src="{{ url_for('static', filename='referee.jpg') }}" alt="football referee" width="549px" height="400px">
+            <p class="newstitle"> <a href="#"> დღევანდელ ფეხბურთის მატჩს მსაჯი დაესწრება </a></p>
+        </div>
+
+        <div class="newsindividual">
+            <img src="{{ url_for('static', filename='stocks.jpeg') }}" alt="stocks" width="549px" height="400px">
+            <p class="newstitle"> <a href="#"> Google-ს აქციების ფასი ძალიან ოდნავ შეიცვლება. ან ოდნავზე მეტად </a></p>
+        </div>
+
+        <div class="newsindividual">
+            <img src="{{ url_for('static', filename='president.jpg') }}" alt="president" width="549px" height="400px">
+            <p class="newstitle"> <a href="#"> საქართველოს პრეზიდენტი დღესაც სალომე ზურაბიშვილი იქნება </a></p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
