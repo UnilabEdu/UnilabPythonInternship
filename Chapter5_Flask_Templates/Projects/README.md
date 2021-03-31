@@ -3,6 +3,7 @@
 დირექტორიაში განთავსებულია კონტრიბუტორთა პირველი შაბლონებთან სამუშაო პროექტები
 
 - [სახელი გვარი | პროექტი](/მისამართი)
+- [გიორგი კვარაცხელია | ელექტრონიკის მაღაზია](https://github.com/RegiusPythonidae/UnilabPythonInternship/tree/master/Chapter5_Flask_Templates/Projects/Giorgi_Kvaratskhelia)
 
 
 ## ინსტრუქცია:
