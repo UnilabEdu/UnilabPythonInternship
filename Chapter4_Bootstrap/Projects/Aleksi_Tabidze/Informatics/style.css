@@ -1,0 +1,64 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #06AED5;
+    display: flex;
+  flex-direction: column;
+    height: 100vh;
+}
+
+.navbar{
+    height: 80px;
+    background-color: #086788;
+}
+
+.navbar .navbar-brand{
+    color: #F0C808;
+    font-size: 30px;
+}
+.navbar .navbar-brand:hover{
+    color: #927905;
+}
+.col-sm{
+display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card{
+    width: 90%;
+    margin-top: 40px;
+}
+
+.card:hover{
+    box-shadow: 0 0 20px -6px;
+}
+
+.img-container{
+    position: relative;
+        height: 200px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.img-container img{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+footer{
+    margin-top: 50px;
+    background-color: #086788;
+}
+.gallery-container{
+    margin-top: 50px;
+    height: 70vh;
+    flex: 1 0 auto;
+}
+.thumb{
+    margin-top: 30px;
+}
+.footer{
+  flex-shrink: 0;
+}

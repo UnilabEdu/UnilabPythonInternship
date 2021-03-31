@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'ALK Sanet';
+    src: url('alk-sanet/alk-sanet-webfont.eot'); /* IE9 Compat Modes */
+    src: url('alk-sanet/alk-sanet-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('alk-sanet/alk-sanet-webfont.woff2') format('woff2'), /* Super Modern Browsers */
+         url('alk-sanet/alk-sanet-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+         url('alk-sanet/alk-sanet-webfont.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('alk-sanet/alk-sanet-webfont.svg#alk_sanetregular') format('svg'); /* Legacy iOS */
+}
