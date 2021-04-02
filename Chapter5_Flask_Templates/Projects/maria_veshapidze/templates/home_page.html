@@ -1,0 +1,52 @@
+{%  extends "base.html" %}
+{% block navbar %}
+
+          <li class="nav-item active">
+            <a class="nav-link" href="{{ url_for('home') }}">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('about') }}">About us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('contact') }}">Contact Info</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('registration') }}">Registration</a>
+          </li>
+
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+
+        {% if name %}
+            <div class="row align-items-center">
+                <div class="col-lg-12 text-center text-muted"><h1>{{ name|capitalize }}, Find your OnLine tutor  with us!</h1></div>
+            </div>
+        {% else %}
+            <div class="row align-items-center">
+                <div class="col-lg-12 text-center text-muted"><h1>Find your OnLine tutor  with us!</h1></div>
+            </div>
+        {% endif %}
+
+<br>
+<br>
+
+        <div class="row align-items-center">
+        <div class="col-lg-5 text-right"><img src="../static/images/registration-icon-png-6.png" alt="contact" width="40%" /></div>
+        <div class="col-lg-7 text-left text-success"><h1>Register easily!</h1></div>
+        </div>
+
+        <div class="row align-items-center">
+        <div class="col-lg-7 text-right text-danger"><h1>Find a tutor!</h1></div>
+        <div class="col-lg-5 text-left"><img src="../static/images/find-students-for-online-courses.jpg" class="rounded-circle" alt="contact" width="40%" /> </div>
+
+        </div>
+
+        <div class="row align-items-center">
+        <div class="col-lg-5 text-right"><img src="../static/images/TutorsWeb-1-1-82029532595055f46cafbca1e9482052.jpg" alt="contact" width="40%" /> </div>
+        <div class="col-lg-7 text-left text-warning"><h1>Lear OnLine from anywhere!</h1></div>
+        </div>
+
+    </div>
+{% endblock %}
