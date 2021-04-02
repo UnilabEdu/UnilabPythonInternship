@@ -27,6 +27,7 @@
 - [ვაჟა ბერძენიშვილი](https://github.com/vazhaberdzenishvili) | [ფიბონაჩის მიმდევრობა](https://github.com/vazhaberdzenishvili/Fibonaccy_seq_calculator)
 - [ალექსანდრე ეროიანი](https://github.com/sun-dro) | [კვადრატში აყვანა](https://github.com/sun-dro/intern-math-function)
 - [გიორგი კვარაცხელია](https://github.com/RegiusPythonidae) | [დეტერმინანტის გამოთვლა](https://github.com/RegiusPythonidae/determinant_calculator)
+- [იკო გიუნაშვილი](https://github.com/IrakliG/) | [კვადრატული ფესვის პოვნა](https://github.com/IrakliG/UnilabPythonInternship.git)
 - [ცოტნე გამსახურდაშვილი](https://github.com/tsgams) | [კალკულატორი](https://github.com/tsgams/Calculator)
 - [დენისი სანტურიანი](https://github.com/Denissant) | [პოპულაციის სტანდარტული გადახრა](https://github.com/Denissant/std_dev_demo)
 - [თომა მარგიშვილი](https://github.com/hgresa) | [მოცემული ბიტისტვის მაქსიმალური რიცხვის პოვნა](https://github.com/hgresa/uniLab)
