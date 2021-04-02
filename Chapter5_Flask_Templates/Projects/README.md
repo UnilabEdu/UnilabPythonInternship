@@ -8,7 +8,7 @@
 - [ალექსანდრე ეროიანი | Top 4 hiking routes in Georgia](/Chapter5_Flask_Templates/Projects/Alexander_Eroyan/)
 - [მარია ვეშაპიძე | Tutor online](/Chapter5_Flask_Templates/Projects/maria_veshapidze/app.py)
 - [დენისი სანტურიანი | 5 საათში](/Chapter5_Flask_Templates/Projects/denis_santuryan/)
-
+- [უჩა ხმალაძე | სასტუმროს ვებ გვერდი](/Chapter5_Flask_Templates/Projects/ucha_khmaladze)
 ## ინსტრუქცია:
 
 1. წინა თავში შესრულებულ ან სრულიად ახალ ვებ გვერდს გაუკეთეთ საბაზისო გვერდი jinja2-სა და Bootstrap-ის გამოყენებით.
