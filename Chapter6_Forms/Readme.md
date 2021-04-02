@@ -293,7 +293,7 @@ def index():
         return redirect(url_for("thankyou"))
 
 
-    return render_template('home.html', form=form)
+    return render_template('base.html', form=form)
 
 ```
 
@@ -386,7 +386,7 @@ def index():
         flash("შენ ახლახანს დააჭირე")
 
         return redirect(url_for('index'))
-    return render_template('home.html', form=form)
+    return render_template('base.html', form=form)
 
 
 if __name__ == '__main__':

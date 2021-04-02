@@ -28,7 +28,7 @@ table = {
 @app.route('/')
 @app.route('/home')
 def home():
-    return render_template("home.html", number=23.98, pages=nav_bar_pages_list)
+    return render_template("base.html", number=23.98, pages=nav_bar_pages_list)
 
 
 @app.route('/about_us')
