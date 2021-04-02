@@ -27,6 +27,7 @@
 - [ვაჟა ბერძენიშვილი](https://github.com/vazhaberdzenishvili) | [ფიბონაჩის მიმდევრობა](https://github.com/vazhaberdzenishvili/Fibonaccy_seq_calculator)
 - [ალექსანდრე ეროიანი](https://github.com/sun-dro) | [კვადრატში აყვანა](https://github.com/sun-dro/intern-math-function)
 - [გიორგი კვარაცხელია](https://github.com/RegiusPythonidae) | [დეტერმინანტის გამოთვლა](https://github.com/RegiusPythonidae/determinant_calculator)
+- [იკო გიუნაშვილი](https://github.com/IrakliG/) | [კვადრატული ფესვის პოვნა](https://github.com/IrakliG/UnilabPythonInternship.git)
 - [ცოტნე გამსახურდაშვილი](https://github.com/tsgams) | [კალკულატორი](https://github.com/tsgams/Calculator)
 - [დენისი სანტურიანი](https://github.com/Denissant) | [პოპულაციის სტანდარტული გადახრა](https://github.com/Denissant/std_dev_demo)
 - [თომა მარგიშვილი](https://github.com/hgresa) | [მოცემული ბიტისტვის მაქსიმალური რიცხვის პოვნა](https://github.com/hgresa/uniLab)
@@ -34,6 +35,8 @@
 - [ორხან შამილოვი](https://github.com/orkhanshamil) | [კვადრატული ფესვი](https://github.com/orkhanshamil/Square_root_finder)
 - [გიორგი წყაროველი](https://github.com/tskaro) | [მედიანა](https://github.com/tskaro/Median)
 - [ალექსი ტაბიძე](https://github.com/Lektor1) | [პლებეური პითაგორა](https://github.com/Lektor1/CalculatorAPI)
+- [სალომე ჯავაშვილი](https://github.com/salomej899) | [რიცხვთა არითმეტიკული საშუალოს გამოთვლა](https://github.com/salomej899/Mean)
+- [იკო გიუნაშვილი](https://github.com/IrakliG/) | [აბსოლუტური მნიშვნელობა](https://github.com/IrakliG/UnilabPythonInternship.git)
 
 ## შეხვედრის ჩანაწერები
 

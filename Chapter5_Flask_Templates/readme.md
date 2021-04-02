@@ -379,7 +379,7 @@ Jinja-ს ერთ-ერთი უძლიერესი მხარეა 
 ```python
 @app.route('/home')
 def home():
-    return render_template('home.html')
+    return render_template('base.html')
 ```
 
 #### შაბლონის მხარეს:
