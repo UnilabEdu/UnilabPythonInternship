@@ -3,27 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <title>Hotel Monte</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <style media="screen">
-        .boxy{
-            border: 1px solid black;
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <style>
+        .footer {
+          position: fixed;
+          left: 0;
+          bottom: 0;
+          width: 100%;
         }
     </style>
 
 </head>
 <body>
-        <div class="row">
-            <div class="col"><img src="gudauri.jpg" alt="photo of gudauri" width="1800" height="150"/> </div>
-        </div>
-        <div class="row">
-            <div class="col boxy"> <img src="monte_logo.png" alt="monte logo" width="100" />
 
+        <div class="row">
+            <div class="col"> <a href="hotel_website.html">
+                <img src="monte_logo.png" alt="monte logo" width="100" />
+                </a>
             </div>
-            <div class="col-8 boxy"> <a type="button" class="btn btn-primary" href="hotel_website.html">Home</a>
+            <div class="col-8"> <a type="button" class="btn btn-primary" href="hotel_website.html">Home</a>
             <a type="button" class="btn btn-primary" href="book_now.html"> Book Now</a>
             <a type="button" class="btn btn-primary" href="contact_us.html">Contact Us</a>
             </div>
-            <div class="col boxy">
+            <div class="col">
                 <form class="d-flex">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success" type="submit">Search</button>
@@ -31,45 +33,98 @@
             </div>
         </div>
 
-
-
-Here will be contact us page!
-
-
-
-
-        <!-- Footer -->
-<footer class="bg-light text-center ">
-  <div class="container p-4">
-    <section class="">
-      <form action="">
-        <div class="row d-flex justify-content-center">
-          <div class="col-auto">
-            <p class="pt-2">
-              <strong>Sign up for our newsletter</strong>
-            </p>
-          </div>
-          <div class="col-md-5 col-12">
-            <div class="form-outline mb-4">
-              <input type="email" id="form5Example2" class="form-control" placeholder="Enter your E-mail address here"/>
-              <label class="form-label" for="form5Example2"><small>You will get latest updates from us</small></label>
-            </div>
-          </div>
-          <div class="col-auto">
-            <button type="submit" class="btn btn-primary mb-4">
-              Subscribe
-            </button>
+        <div class="row">
+          <div class="col-md-6 offset-md-3">
+              <h1 class="text-center"> Contact us ! </h1>
           </div>
         </div>
-      </form>
-    </section>
 
-  </div>
-  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-    © 2021 Copyright:
-    <a class="text-dark" href="https://montegudauri.com/" target="_blank">Montegudauri.com</a>
-  </div>
+        <div class="row">
+            <div class="col-lg-3">
+                <form>
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">First Name</label>
+                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="e.g John">
+                    </div>
+                </form>
+            </div>
 
-</footer>
+            <div class="col-lg-3">
+                <form>
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">Last Name</label>
+                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="e.g Smith">
+                    </div>
+                </form>
+            </div>
+
+            <div class="col-lg-6">
+                <form>
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">Enter your email</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="example@example.com">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-2 offset-lg-3">
+                Leave your message here!
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 offset-lg-3">
+                <textarea rows="10" cols="80" class="center">
+
+                </textarea>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2 offset-md-5">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+
+
+                <!-- Footer -->
+
+        <div class="footer">
+            <footer class="bg-light text-center ">
+              <div class="container p-4">
+                <section class="">
+                  <form action="">
+                    <div class="row d-flex justify-content-center">
+                      <div class="col-auto">
+                        <p class="pt-2">
+                          <strong>Sign up for our newsletter</strong>
+                        </p>
+                      </div>
+                      <div class="col-md-5 col-12">
+                        <div class="form-outline mb-4">
+                          <input type="email" id="form5Example2" class="form-control" placeholder="Enter your E-mail address here"/>
+                          <label class="form-label" for="form5Example2"><small>You will get latest updates from us</small></label>
+                        </div>
+                      </div>
+                      <div class="col-auto">
+                        <button type="submit" class="btn btn-primary mb-4">
+                          Subscribe
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                </section>
+
+              </div>
+              <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+                © 2021 Copyright:
+                <a class="text-dark" href="https://montegudauri.com/" target="_blank">Montegudauri.com</a>
+              </div>
+            </footer>
+        </div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
 </body>
 </html>

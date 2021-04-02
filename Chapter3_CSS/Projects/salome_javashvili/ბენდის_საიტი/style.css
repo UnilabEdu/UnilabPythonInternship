@@ -1,0 +1,76 @@
+body {
+    background: black;
+    color: white;
+    text-align: center;
+}
+
+h1{
+    font-family: "ALK Life", sans-serif;
+    text-align: center;
+    font-size: 400%;
+    color: yellow;
+}
+
+h4{
+    font-family: "MG Glaho Drunk", sans-serif;
+    font-style: italic;
+    font-size: 150%;
+}
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
+
+h3 {
+    text-align: center;
+    font-size: 150%;
+}
+p{
+    font-size: 120%;
+    text-align: center;
+
+}
+
+table {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 35%;
+    background: grey;
+}
+
+table caption {
+    color: black;
+    padding-bottom: 5px;
+    border: solid 1px;
+    font-size: 150%;
+    background: yellow;
+}
+
+table tr th {
+    border: solid black 1px;
+    font-size: 120%;
+    color: black;
+}
+
+.years{
+    background: white;
+}
+
+table tr td {
+    border: solid black 1px;
+    color: black;
+    font-weight: bold;
+    font-size: 120%;
+    background: white;
+}
+
+a {
+    color: yellow;
+}
+
+a:visited{
+    color: purple;
+}
