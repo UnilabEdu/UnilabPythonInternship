@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="container p-3">
+        <div class="jumbotron">
+          <h1 class="display-4">Welcome to the site!</h1>
+          <p class="lead">This is a site for online inventory management</p>
+          <hr class="my-4">
+          <p>To use the service, please login</p>
+          <p class="lead">
+            <a class="btn btn-primary btn-lg" href="{{url_for('login')}}" role="button">Login</a>
+          </p>
+        </div>
+    </div>
+{% endblock content %}
