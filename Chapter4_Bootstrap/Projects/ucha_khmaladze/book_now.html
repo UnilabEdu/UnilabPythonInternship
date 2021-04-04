@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hotel Monte</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <style>
+        .footer {
+          position: fixed;
+          left: 0;
+          bottom: 0;
+          width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+        <div class="row">
+            <div class="col"> <a href="hotel_website.html">
+                <img src="monte_logo.png" alt="monte logo" width="100" />
+                </a>
+            </div>
+            <div class="col-8"> <a type="button" class="btn btn-primary" href="hotel_website.html">Home</a>
+            <a type="button" class="btn btn-primary" href="book_now.html"> Book Now</a>
+            <a type="button" class="btn btn-primary" href="contact_us.html">Contact Us</a>
+            </div>
+            <div class="col">
+                <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 offset-md-3">
+              <h1 class="text-center"> Book with us ! </h1>
+          </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-4">
+                <form>
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">First Name</label>
+                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="e.g John">
+                    </div>
+                </form>
+            </div>
+
+            <div class="col-lg-4">
+                <form>
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">Last Name</label>
+                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="e.g Smith">
+                    </div>
+                </form>
+            </div>
+
+            <div class="col-lg-2">
+                <form>
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">From:</label>
+                        <input type="date" class="form-control" id="exampleFormControlInput1">
+                    </div>
+                </form>
+            </div>
+
+            <div class="col-lg-2">
+                <form>
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">To:</label>
+                        <input type="date" class="form-control" id="exampleFormControlInput1">
+                    </div>
+                </form>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="form-group">
+                <label for="exampleFormControlSelect1">Number of Adults</label>
+                <select class="form-control" id="exampleFormControlSelect1">
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="col-lg-3">
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">Number of Children (under 6 years)</label>
+                    <select class="form-control" id="exampleFormControlSelect1">
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="col-lg-3">
+                <div class="custom-control custom-switch">
+                  <input type="checkbox" class="custom-control-input" id="customSwitch1"> <br/> <br/>
+                  <label class="custom-control-label text-right" for="customSwitch1">I will bring pets with me</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2 offset-md-5">
+                <button type="submit" class="btn btn-primary">Submit reservation</button>
+            </div>
+        </div>
+
+
+                <!-- Footer -->
+
+        <div class="footer">
+            <footer class="bg-light text-center ">
+              <div class="container p-4">
+                <section class="">
+                  <form action="">
+                    <div class="row d-flex justify-content-center">
+                      <div class="col-auto">
+                        <p class="pt-2">
+                          <strong>Sign up for our newsletter</strong>
+                        </p>
+                      </div>
+                      <div class="col-md-5 col-12">
+                        <div class="form-outline mb-4">
+                          <input type="email" id="form5Example2" class="form-control" placeholder="Enter your E-mail address here"/>
+                          <label class="form-label" for="form5Example2"><small>You will get latest updates from us</small></label>
+                        </div>
+                      </div>
+                      <div class="col-auto">
+                        <button type="submit" class="btn btn-primary mb-4">
+                          Subscribe
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                </section>
+
+              </div>
+              <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+                © 2021 Copyright:
+                <a class="text-dark" href="https://montegudauri.com/" target="_blank">Montegudauri.com</a>
+              </div>
+            </footer>
+        </div>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+</body>
+</html>
