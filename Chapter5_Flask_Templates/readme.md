@@ -1,3 +1,10 @@
+# Flask Templates
+### part1
+[![Jinja2](https://res.cloudinary.com/marcomontalbano/image/upload/v1617390363/video_to_markdown/images/google-drive--12BpcKRfZyyCpb0xGbqFcTR7qWyXtFgsp-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://drive.google.com/file/d/12BpcKRfZyyCpb0xGbqFcTR7qWyXtFgsp/view?usp=sharing "Jinja2")
+### part2
+[![jinja2](https://res.cloudinary.com/marcomontalbano/image/upload/v1617390486/video_to_markdown/images/google-drive--1OI4Mob4ranl_3Uci8gCKSlacFo382ODr-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://drive.google.com/file/d/1OI4Mob4ranl_3Uci8gCKSlacFo382ODr/view?usp=sharing "jinja2")
+
+
 # Flask საწყისები
 
 [ოფიციალური გვერდი](https://palletsprojects.com/p/flask/) | [დოკუმენტაცია](https://flask.palletsprojects.com/en/1.1.x/) | [GitHub](https://github.com/pallets/flask)
