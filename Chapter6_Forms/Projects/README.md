@@ -4,7 +4,7 @@
 
 - [სახელი გვარი | პროექტი](/მისამართი)
 - [მარია ვეშაპიძე | Tutor online](/Chapter6_Forms/Projects/maria_veshapidze/app.py)
-- [გიორგი კვარაცხელია | Electronics Store](Chapter6_Forms/Projects/Giorgi_Kvaratskhelia/app.py)
+- [გიორგი კვარაცხელია | Electronics Store](/Giorgi_Kvaratskhelia/app.py)
 
 ## ინსტრუქცია:
 
