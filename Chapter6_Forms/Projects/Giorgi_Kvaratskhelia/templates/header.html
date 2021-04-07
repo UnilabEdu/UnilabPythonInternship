@@ -1,0 +1,73 @@
+{% from "macros.html" import nav_class %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+          integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="static/css/styles.css">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+            crossorigin="anonymous"></script>
+
+    <meta charset="UTF-8">
+    <title>Elektronyx</title>
+</head>
+<body>
+
+<!-- The navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #1A191B;">
+    <div class="container-xl">
+        <a class="navbar-brand baloo-text" href="#">Elektronyx</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item {{nav_class('display_home_page')}}">
+                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown {{nav_class('display_catalog_page')}}">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Catalog
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/catalog/computers">Computers</a>
+                        <a class="dropdown-item" href="/catalog/accessories">Computer Accessories</a>
+                        <a class="dropdown-item" href="/catalog/laptops">Laptops</a>
+                        <a class="dropdown-item" href="/catalog/phones">Phones</a>
+                        <a class="dropdown-item" href="/catalog/tablets">Tablets</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="/catalog/case">Computer Case</a>
+                        <a class="dropdown-item" href="/catalog/motherboard">Motherboard</a>
+                        <a class="dropdown-item" href="/catalog/cpu">CPU</a>
+                        <a class="dropdown-item" href="/catalog/gpu">Graphics Card</a>
+                        <a class="dropdown-item" href="/catalog/ram">RAM</a>
+                        <a class="dropdown-item" href="/catalog/storage">Storage</a>
+                        <a class="dropdown-item" href="/catalog/psu">Power Supply</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {{nav_class('registration_page')}}" href="/register">Register</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+{% block content %}{% endblock %}
+</body>
+
+<!-- Footer -->
+<footer style="background-color: #1A191B;">
+    <p class="text-center" style="color: white"> ©2021 Elektronyx LLC All Rights Reserved</p></br>
+</footer>
+</html>
