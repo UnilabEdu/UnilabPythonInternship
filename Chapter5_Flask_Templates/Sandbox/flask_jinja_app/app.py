@@ -8,7 +8,7 @@ app = Flask(__name__)
 @app.route('/')
 @app.route('/<username>')
 def home(username=None):
-    return render_template("home.html", name=username)
+    return render_template("base.html", name=username)
 
 
 if __name__ == '__main__':

@@ -4,8 +4,13 @@
 
 - [სახელი გვარი | პროექტი](/მისამართი)
 <<<<<<< HEAD
+<<<<<<< HEAD
 - [ალექსი ტაბიძე | საინფორმაციო გვერდი](./Aleksi_Tabidze/Informatics)
 =======
+=======
+- [ვაჟა ბერძენიშვილი|store_front](/Chapter4_Bootstrap/Projects/vazha_berdzenishvili)
+- [უჩა ხმალაძე | სასტუმროს ვებ გვერ](/Chapter4_Bootstrap/Projects/ucha_khmaladze)
+>>>>>>> upstream/master
 - დავით ჭინჭარაშვილი | [CV](https://htmlpreview.github.io/?https://github.com/davidunilab/UnilabPythonInternship/blob/css/david_chincharashvili/Chapter4_Bootstrap/Projects/david_chincharashvili/cv/index.html)
 - [მარია ვეშაპიძე | Tutor Online](/Chapter4_Bootstrap/Projects/maria_veshapidze/home_page.html)
 - [ალექსი ტაბიძე | საინფორმაციო გვერდი](./Aleksi_Tabidze/Informatics)
