@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="jumbotron">
+    <h1>Here is your Item List</h1>
+
+    <ul>
+        {% for item in list_items %}
+            <li> {{ item.id }} {{ item }}</li>
+        {% endfor %}
+    </ul>
+
+</div>
+{% endblock %}
