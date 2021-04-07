@@ -1,0 +1,143 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #06AED5;
+    display: flex;
+  flex-direction: column;
+    height: 100vh;
+}
+
+.navbar{
+    height: 80px;
+    background-color: #086788;
+}
+
+.navbar .navbar-brand{
+    color: #F0C808;
+    font-size: 30px;
+}
+.navbar .navbar-brand:hover{
+    color: #927905;
+}
+.col-sm{
+display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card{
+    width: 90%;
+    margin-top: 40px;
+    border-radius: 10px;
+}
+
+.card:hover{
+    box-shadow: 0 0 20px -6px;
+}
+
+.img-container{
+    position: relative;
+    height: 200px;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.img-container img{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+footer{
+    margin-top: 50px;
+    background-color: #086788;
+}
+.gallery-container, .not-found-container, .contact-container{
+    height: 70vh;
+    flex: 1 0 auto;
+}
+.gallery-container{
+    margin-top: 50px;
+}
+.contact-container{
+    align-items: center;
+    justify-content: space-evenly;
+    display: flex;
+    flex-direction: column;
+}
+
+.thumb{
+    margin-top: 30px;
+}
+.footer{
+  flex-shrink: 0;
+}
+
+.navbar-collapse.collapse.show{
+    background-color: #086788;
+    z-index: 10;
+    padding: 20px;
+    width: 100%;
+    top: 80px;
+    position: absolute;
+    left: 0;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0px 15px 33px -12px;
+}
+
+.error-template{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.error-template h2, .error-template .error-details, .error-template .error-actions{
+    margin-top: 10px;
+}
+
+.not-found-row{
+    height: 100%;
+}
+
+.row.contact-box{
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    background-color: white;
+    width: 50%;
+    height: 70%;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px -6px;
+}
+
+.contact-form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-box{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.input{
+    outline: none;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: #ececec;
+    padding: 5px 10px;
+}
+.input:focus{
+    border-color: black;
+}
+
+.contact-btn{
+    margin-top: 20px;
+    width: 140px;
+    align-self: center;
+}
