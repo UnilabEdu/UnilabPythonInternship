@@ -42,27 +42,23 @@
                 <div class="row">
                     <div class="col-12 col-md-6">
                         <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" class="form-control" placeholder="name" required>
+
+                            {{ form.name.label }} {{ form.name(class_="form-control m-2") }}
+
                         </div>
                     </div>
                     <div class="col-12 col-md-6">
                         <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" class="form-control" placeholder="example@domain.com" required>
+                            {{ form.hidden_tag() }}
+                            {{ form.email.label }} {{ form.email(class_="form-control m-2") }}
                         </div>
                     </div>
 
                 </div>
                 <div class="form-group">
-                    <label for="textarea">Message:</label>
-                    <textarea class="form-control" placeholder="Write your message here..." name="" id="textarea" cols="30" rows="10" required></textarea>
-
-
-
+                    {{ form.textarea.label }} {{ form.textarea(class_="form-control m-2") }}
                 </div>
-                
-                <button type="submit" class="btn mt-3 btn-outline-primary">Submit</button>
+                {{ form.submit(class_="form-control btn btn-success mt-3") }}
             </form>
         </div>
         <div class="col-12 col-md-6">
