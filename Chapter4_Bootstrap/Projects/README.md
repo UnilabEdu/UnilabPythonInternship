@@ -11,6 +11,7 @@
 - დავით ჭინჭარაშვილი | [CV](https://htmlpreview.github.io/?https://github.com/davidunilab/UnilabPythonInternship/blob/css/david_chincharashvili/Chapter4_Bootstrap/Projects/david_chincharashvili/cv/index.html)
 - [ვაჟა ბერძენიშვილი|store_front](/Chapter4_Bootstrap/Projects/vazha_berdzenishvili)
 - [დენისი სანტურიანი](https://github.com/Denissant) | [5 საათით ადრე](https://github.com/Denissant/UnilabPythonInternship/blob/bootstrap/denis_santuryan/Chapter4_Bootstrap/Projects/denis_santuryan/main.html)
+- [სალომე ჯავაშვილი](https://github.com/salomej899) | [საქართველოში გავრცელებულ პათოგენთა მონაცემთა ბაზა](/Chapter4_Bootstrap/Projects/salome_javashvili)
 
 ## ინსტრუქცია:
 
