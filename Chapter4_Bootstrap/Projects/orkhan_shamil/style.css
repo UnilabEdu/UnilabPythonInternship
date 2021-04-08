@@ -1,0 +1,10 @@
+.footer{
+  flex-shrink: 0;
+}
+footer{
+    margin-top: 5px;
+    background-color: #3B3B3B;
+}
+p{
+font-size: 18px;
+}

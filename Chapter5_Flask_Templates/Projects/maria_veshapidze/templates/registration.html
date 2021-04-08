@@ -1,22 +1,5 @@
 {%  extends "base.html" %}
 
-{% block navbar %}
-
-          <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('home') }}">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('about') }}">About us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('contact') }}">Contact Info</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="{{ url_for('registration') }}">Registration <span class="sr-only">(current)</span></a>
-          </li>
-
-{% endblock %}
-
 {% block content %}
  <div class="container">
 
