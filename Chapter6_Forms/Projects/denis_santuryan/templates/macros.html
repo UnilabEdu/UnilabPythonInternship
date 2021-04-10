@@ -1,0 +1,20 @@
+{% macro generate_navbar(pages) %}
+    <nav class="nav nav-pills nav-justified container-fluid" id="navbar">
+        {% for page in pages %}
+            {% if request.endpoint.endswith(page[0]) %}
+                <a class="nav-link active nav-border" href="{{ url_for(page[0]) }}">{{ page[1] }}</a>
+            {% else %}
+                <a class="nav-link nav-border" href="{{ url_for(page[0]) }}">{{ page[1] }}</a>
+
+            {% endif %}
+        {% endfor %}
+    </nav>
+{% endmacro %}
+
+{% macro generate_title(pages) %}
+    {% for page in pages %}
+        {% if request.endpoint.endswith(page[0]) %}
+            {{ page[1] }} –
+        {% endif %}
+    {% endfor %}
+{% endmacro %}
