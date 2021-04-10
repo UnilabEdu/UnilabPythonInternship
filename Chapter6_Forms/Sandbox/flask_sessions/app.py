@@ -36,8 +36,8 @@ class EmailForm(FlaskForm):
 
 @app.route('/', methods=['GET', 'POST'])
 def home():
-    email = None
 
+    email = None
     form = EmailForm()
 
     if form.validate_on_submit():
