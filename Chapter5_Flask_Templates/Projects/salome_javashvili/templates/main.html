@@ -1,0 +1,101 @@
+{% extends "base.html" %}
+{% block Title %}
+<title>GeoPath</title>
+{% endblock %}
+
+
+{% block content %}
+<div class="container-fluid pt-3 pb-0 mb-0" style="width: 90%">
+  <div class="row">
+    <div class="col-lg-4 image-container pr-0 mr-0">
+      <img src="../static/550px-Regions_of_Georgia.svg.png" alt="" style="width: 90%; height: 90%">
+    </div>
+    <div class="col-lg-8 text-center pl-0 ml-0 pt-2 mt-5" style="font-weight: bold; font-size: 40px">
+      <p>Database for Pathogen Prevalence <br /> in Georgia </p>
+    </div>
+  </div>
+</div>
+<hr class="pt-0 mt-0"/>
+
+<div class="container pt-3 pb-4 border rounded" style="background-color: #ADD8E6 ">
+  <form>
+    <div class="row ml-1">
+        <p class="mb-2" style="font-weight: bold; font-size: 30px;">Pathogen Search</p>
+    </div>
+    <hr class="ml-0 mt-0"/>
+    <div class="form-row">
+      <div class="form-group col-md-3">
+        <label for="PathogenType">Pathogen type</label>
+        <select id="PathogenType" class="form-control">
+          <option selected>Choose</option>
+          {% for i in pathogens%}
+            <option>{{i}}</option>
+          {% endfor %}
+        </select>
+      </div>
+      <div class="form-group col-md-3">
+        <label for="Genus">Genus</label>
+        <input id="Genus" type="text" class="form-control" placeholder="e.g. Staphylococcus">
+      </div>
+      <div class="form-group col-md-3">
+        <label for="Species">Species</label>
+        <input id="Species" type="text" class="form-control" placeholder="e.g. S. aureus">
+      </div>
+      <div class="form-group col-md-3">
+        <label for="Strain">Strain</label>
+        <input id="Strain" type="text" class="form-control" placeholder="e.g. MRSA">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-4">
+        <label for="inputRegion">Region</label>
+        <select id="inputRegion" class="form-control">
+          <option selected>Georgia</option>
+          {% for i in regions %}
+            <option>{{i}}</option>
+          {% endfor %}
+        </select>
+      </div>
+      <div class="form-group col-md-4">
+        <label for="inputDate1">From:</label>
+        <select id="inputDate1" class="form-control">
+          <option selected>2000</option>
+          {% for i in range(2001,2022) %}
+            <option>{{i}}</option>
+          {% endfor %}
+        </select>
+      </div>
+      <div class="form-group col-md-4">
+        <label for="inputDate2">To:</label>
+        <select id="inputDate2" class="form-control">
+          <option selected>2021</option>
+          {% for i in range(2000,2021) %}
+            <option>{{i}}</option>
+          {% endfor %}
+        </select>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="GenotypeCheck">
+        <label class="form-check-label" for="defaultCheck1">
+          Search for a genotype
+        </label>
+      </div>
+      <div class="form-group col-12">
+        <label for="Genotype">Genotype (FASTA format):</label>
+        <textarea id="Genotype" class="form-control" rows="3" disabled></textarea>
+      </div>
+    </div>
+    <div class="col text-center pt-2">
+      <button type="submit" class="btn btn-primary btn-md btn-outline-light mx-auto" style="width: 15%">
+        Search
+      </button>
+    </div>
+  </form>
+</div>
+
+<br />
+<br />
+
+{% endblock %}
