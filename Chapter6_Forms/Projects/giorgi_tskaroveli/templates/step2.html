@@ -20,11 +20,10 @@
     <form method="POST" class="form-group" >
         <div class="form-group">
         {{ form.hidden_tag() }}
-         {{ form.address.label }} {{ form.address(class_="form-control") }}
-         {{ form.department.label}} {{ form.department(class_="form-control") }}
-         {{ form.shift.label }} {{ form.shift(class_="form-check") }}
-        <br>
-         {{ form.submit(class_="btn btn-primary mb-2") }}
+         {{ form.address.label }} {{ form.address(class_="form-control") }} <br>
+         {{ form.department.label}} {{ form.department(class_="form-control") }} <br>
+         {{ form.shift.label }} {{ form.shift() }} <br> <br>
+         {{ form.submit(class_="btn btn-primary mb-2") }} <br>
     </form>
         </div>
         </div>

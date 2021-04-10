@@ -1,6 +1,6 @@
 from flask import Flask, render_template, redirect, url_for, session
 from flask_wtf import FlaskForm
-from wtforms import StringField, SubmitField, RadioField
+from wtforms import StringField, SubmitField, SelectField
 from wtforms.validators import DataRequired, length, Email
 
 app = Flask(__name__)
@@ -18,12 +18,12 @@ class registration_form(FlaskForm):
 class registration_form2(FlaskForm):
     address = StringField("შეიყვანე მისამართი", [DataRequired()])
     department = StringField("შეიყვანე დეპარტამენტი", [DataRequired()])
-    shift = RadioField("სასურველი მორიგეობის განრიგი",
-                       choices=[
-                           (16, "16 საათიანი მორიგეობა"),
-                           (24, "24 საათიანი მორიგეობა"),
-                           (8, "დღის სამსახური")
-                       ])
+    shift = SelectField("სასურველი მორიგეობის განრიგი:",
+                        choices=[
+                            (16, "16 საათიანი მორიგეობა"),
+                            (24, "24 საათიანი მორიგეობა"),
+                            {8, "დღის სამსახური"}
+                        ])
     submit = SubmitField("Next")
 
 
@@ -57,9 +57,14 @@ def step2():
         session['department'] = form.department.data
         session['shift'] = form.shift.data
 
-        return session['shift']
+        return redirect(url_for('validation'))
 
     return render_template("step2.html", form=form, address=address, department=department, shift=shift)
+
+
+@app.route('/validation', methods=['GET', 'POST'])
+def validation():
+    return render_template('validation.html')
 
 
 if __name__ == '__main__':
