@@ -1,31 +1,9 @@
 from flask import Flask, render_template, redirect, url_for, session
-from flask_wtf import FlaskForm
-from wtforms import StringField, SubmitField, SelectField
-from wtforms.validators import DataRequired, length, Email
+from forms import registration_form, registration_form2
 
 app = Flask(__name__)
 
 app.config['SECRET_KEY'] = "mySECRETkey"
-
-
-class registration_form(FlaskForm):
-    email = StringField("შეიყვანე ელექტრონული ფოსტა", [DataRequired(), length(min=4), Email()])
-    first_name = StringField("შეიყვანე სახელი", [DataRequired()])
-    last_name = StringField("შეიყვანე გვარი", [DataRequired()])
-    submit = SubmitField("Next")
-
-
-class registration_form2(FlaskForm):
-    address = StringField("შეიყვანე მისამართი", [DataRequired()])
-    department = StringField("შეიყვანე დეპარტამენტი", [DataRequired()])
-    shift = SelectField("სასურველი მორიგეობის განრიგი:",
-                        choices=[
-                            (16, "16 საათიანი მორიგეობა"),
-                            (24, "24 საათიანი მორიგეობა"),
-                            {8, "დღის სამსახური"}
-                        ])
-    submit = SubmitField("Next")
-
 
 @app.route('/step1', methods=['GET', 'POST'])
 def step1():
