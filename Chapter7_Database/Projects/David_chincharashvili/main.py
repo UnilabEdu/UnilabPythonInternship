@@ -21,6 +21,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 Migrate(app, db)
 
+
 class UserModel(db.Model):
     __tablename__ = "users"
     id = db.Column(db.Integer, primary_key=True)
@@ -93,11 +94,41 @@ class Location(db.Model):
     def get(cls, user_id):
         return cls.query.filter_by(user_id=user_id).all()
 
-# if not os.path.exists(db_path):
-#     print('db created at: ' + db_path)
-#     db.create_all()
-# else:
-#     print('db exists at: ' + db_path)
+
+class FormModel(db.Model):
+    __tablename__ = "messages"
+
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String)
+    email = db.Column(db.String)
+    textarea = db.Column(db.String)
+
+    def __init__(self, name, email, textarea):
+        self.name = name
+        self.email = email
+        self.textarea = textarea
+
+    @classmethod
+    def save(cls, name, email, textarea):
+        message = cls.query.filter_by(email=email).first()
+        if message:
+            message.username = name
+            message.email = email
+            message.textarea = textarea
+        else:
+            message = cls(name, email, textarea)
+        db.session.add(message)
+        db.session.commit()
+
+    @classmethod
+    def rm(cls, id):
+        message = cls.query.filter_by(id=id).first()
+        db.session.delete(message)
+        db.session.commit()
+
+    @classmethod
+    def get(cls, id):
+        return cls.query.filter_by(id=id).first()
 
 
 class FormName(FlaskForm):
