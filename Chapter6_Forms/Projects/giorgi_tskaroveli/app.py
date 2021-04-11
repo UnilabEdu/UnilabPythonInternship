@@ -1,9 +1,42 @@
 from flask import Flask, render_template, redirect, url_for, session
 from forms import registration_form, registration_form2
+from flask_sqlalchemy import SQLAlchemy
+import os
+
+basedir = os.path.abspath(os.path.dirname(__file__))
 
 app = Flask(__name__)
 
 app.config['SECRET_KEY'] = "mySECRETkey"
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir, 'data.sqlite')
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
+db = SQLAlchemy(app)
+
+
+class NursesModel(db.Model):
+    __tablename__ = "nurses"
+
+    id = db.Column(db.Integer, primary_key=True)
+    email = db.Column(db.String)
+    first_name = db.Column(db.String)
+    last_name = db.Column(db.String)
+    address = db.Column(db.String)
+    department = db.Column(db.String)
+    shift = db.Column(db.Integer)
+
+    def __init__(self, email, first_name, last_name, address, department, shift):
+        self.email = email
+        self.first_name = first_name
+        self.last_name = last_name
+        self.address = address
+        self.department = department
+        self.shift = shift
+
+    def __repr__(self):
+        return f'Nurse email:{self.email}, name {self.first_name} {self.last_name}, address: {self.address},' \
+               f'department: {self.department}, shift: {self.shift}'
+
 
 @app.route('/step1', methods=['GET', 'POST'])
 def step1():
