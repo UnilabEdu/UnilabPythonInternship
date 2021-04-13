@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% from "macros.html" import create_select_menu, create_select_menus, create_input_forms %}
+
+{% block Title %}
+<title>GeoPath</title>
+{% endblock %}
+
+
+{% block content %}
+<div class="container-fluid pt-3 pb-0 mb-0" style="width: 90%">
+  <div class="row">
+    <div class="col-lg-4 image-container pr-0 mr-0">
+      <img src="../static/550px-Regions_of_Georgia.svg.png" alt="" style="width: 90%; height: 90%">
+    </div>
+    <div class="col-lg-8 text-center pl-0 ml-0 pt-2 mt-5" style="font-weight: bold; font-size: 40px">
+      <p>Database for Pathogen Prevalence <br /> in Georgia </p>
+    </div>
+  </div>
+</div>
+<hr class="pt-0 mt-0"/>
+
+<div class="container pt-3 pb-4 border rounded" style="background-color: #ADD8E6 ">
+  <form>
+    <div class="row ml-1">
+        <p class="mb-2" style="font-weight: bold; font-size: 30px;">Pathogen Search</p>
+    </div>
+    <hr class="ml-0 mt-0"/>
+    <div class="form-row">
+      <div class="form-group col-md-3">
+        {{create_select_menu(_id="PathogenType", label="Pathogen Type",
+        options_list=pathogens, option_selected='Choose')}}
+      </div>
+      {{create_input_forms(form_data)}}
+    </div>
+    <div class="form-row">
+      {{create_select_menus(menu_data)}}
+    </div>
+    <div class="form-row">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="GenotypeCheck">
+        <label class="form-check-label" for="GenotypeCheck">
+          Search for a genotype
+        </label>
+      </div>
+      <div class="form-group col-12">
+        <label for="Genotype">Genotype (FASTA format):</label>
+        <textarea id="Genotype" class="form-control" rows="3" disabled></textarea>
+      </div>
+    </div>
+    <div class="col text-center pt-2">
+      <button type="submit" class="btn btn-primary btn-md btn-outline-light mx-auto" style="width: 15%">
+        Search
+      </button>
+    </div>
+  </form>
+</div>
+
+<br />
+<br />
+
+{% endblock %}
