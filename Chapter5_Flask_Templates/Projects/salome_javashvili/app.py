@@ -21,7 +21,6 @@ def home():
 def home_ge():
     return render_template("main_GE.html", pathogens=data.pathogens_ge, menu_data=menu_data_ge, form_data=form_data_ge)
 
-
 @app.route('/login')
 def login():
     return render_template("login.html")
