@@ -108,7 +108,7 @@ def login():
 
 class LoginFormGE(FlaskForm):
     email = StringField("", [DataRequired(), Email()])
-    password = StringField("", DataRequired())
+    password = StringField("", [DataRequired()])
     submit = SubmitField("შესვლა")
 
 
@@ -165,7 +165,7 @@ def signup():
         acceptance = form.acceptance.data
         flash('You signed up successfully')
         print(name, surname, city, country, company, position, email, password, re_password, acceptance)
-        return redirect(url_for('login'))
+        return redirect(url_for('signup'))
     return render_template("signup.html", form=form, title=title, base='base.html')
 
 
@@ -209,7 +209,8 @@ def signup_ge():
         re_password = form.re_password.data
         acceptance = form.acceptance.data
         flash('თქვენ წარმატებით დარეგისტრირდით')
-        return redirect(url_for('login_ge'))
+        print(name, surname, city, country, company, position, email, password, re_password, acceptance)
+        return redirect(url_for('signup_ge'))
     return render_template("signup.html", form=form, title=title, base='base_ge.html')
 
 
