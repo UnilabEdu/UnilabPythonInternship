@@ -26,7 +26,6 @@ class UserModel(db.Model):
     phone = db.Column(db.String)
     page = db.relationship('PagesModel', backref='usermodel', uselist=False)
 
-
     def __init__(self, username, full_name, email, age, sex, phone):
         self.username = username
         self.full_name = full_name
