@@ -3,7 +3,7 @@ from resources.resources import users, pages_resource
 
 
 def create(resource, model):
-    if len(resource) > 1:
+    if type(resource[0]) == list or type(resource[0]) == tuple:
         for u in resource:
             user = model(*u)
             db.session.add(user)
