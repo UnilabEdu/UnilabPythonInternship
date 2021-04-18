@@ -2,6 +2,8 @@ from flask import Flask, render_template, session, redirect, url_for, flash
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField, BooleanField, SelectField, TextAreaField
 from wtforms.validators import DataRequired, Email, length, EqualTo, AnyOf
+from flask_wtf.file import FileField, FileAllowed
+from werkzeug.utils import secure_filename
 import data
 from flask_bootstrap import Bootstrap
 from country_list import countries_for_language
@@ -28,6 +30,7 @@ class SearchForm(FlaskForm):
                       choices=[(i, i) for i in range(2000, 2022)])
     check = BooleanField('Search for a genotype')
     fasta = TextAreaField('Genotype (FASTA format):')
+    file = FileField('Upload FASTA file:', [FileAllowed('.fasta', message='Please provide .fasta file')])
     submit = SubmitField('Search')
 
 
@@ -47,6 +50,8 @@ def home():
         start = form.start.data
         end = form.end.data
         fasta = form.fasta.data
+        filename = secure_filename(form.file.data.filename)
+        form.file.data.save('uploads/' + filename)
     return render_template("home.html", pathogens=data.pathogens, form=form,
                            titles=[title1, title2, title3], base='base.html')
 
@@ -65,6 +70,8 @@ class SearchFormGE(FlaskForm):
     end = SelectField('როდემდე:',
                       choices=[(i, i) for i in range(2000, 2022)])
     check = BooleanField('გენოტიპის მოძებნა')
+    file = FileField('ატვირთეთ FASTA ფაილი:', [FileAllowed('.fasta',
+                                                           message='გთხოვთ, ატვირთოთ ფაილი .fasta გაფართოებით')])
     fasta = TextAreaField('გენოტიპი (FASTA ფორმატით):')
     submit = SubmitField('ძებნა')
 
@@ -85,6 +92,8 @@ def home_ge():
         start = form.start.data
         end = form.end.data
         fasta = form.fasta.data
+        filename = secure_filename(form.file.data.filename)
+        form.file.data.save('uploads/' + filename)
     return render_template("home.html", pathogens=data.pathogens_ge, form=form, check=check,
                            titles=[title1, title2, title3], base='base_ge.html')
 

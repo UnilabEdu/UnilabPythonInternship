@@ -1,0 +1,677 @@
+/*  Global style, grid*/
+
+html, body {
+    margin:0;
+    padding:0;
+    height:100%;
+    background-color: #fffafa;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+.c-1 {width: 8.33%;}
+.c-2 {width: 16.66%;}
+.c-3 {width: 25%;}
+.c-4 {width: 33.33%;}
+.c-5 {width: 41.66%;}
+.c-6 {width: 50%;}
+.c-7 {width: 58.33%;}
+.c-8 {width: 66.66%;}
+.c-9 {width: 75%;}
+.c-10 {width: 83.33%;}
+.c-11 {width: 91.66%;}
+.c-12 {width: 100%;}
+
+
+#footer {
+    position: relative;
+    bottom:0;
+    width:100%;
+    height:60px;
+    background: rgba(0, 0, 0, 0.04);
+}
+
+
+::selection {
+    background-color: rgba(245, 132, 132, 0.53);
+}
+
+li {
+    list-style:none;
+}
+
+/*  End – Global style, grid */
+
+
+
+
+
+/*  NavBar and its buttons  */
+
+#navbar {
+    display: flex;
+    font-size: 26px;
+    font-family: "BPG Nino Elite Exp Caps", sans-serif;
+}
+
+.nav-button, .nav-button:hover {
+    padding: 0.5rem 1rem;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+}
+
+
+#navbar .active {
+    background-color: #ff5050;
+    box-shadow: inset 1px 2px 6px rgba(2, 12, 47, 0.27);
+    color: white
+}
+
+
+#navbar .nav-passive {
+    background-color: white;
+    border: none;
+    box-shadow: 1px 2px 6px rgba(2, 12, 47, 0.27);
+    color: #C70101;
+}
+
+
+#navbar .nav-passive:hover {
+    box-shadow: inset 1px 2px 6px rgba(2, 12, 47, 0.27);
+}
+
+
+#navbar :first-child {
+    border-bottom-left-radius: 15px;
+}
+
+
+#navbar :last-child {
+    border-bottom-right-radius: 15px;
+}
+
+/*  End - NavBar and its buttons  */
+
+
+
+
+
+/*  Login, register and edit profile */
+
+#login-tab, #register-tab {
+    background-color: white;
+    color: red;
+    border-radius: 10px;
+    margin-right: 6px;
+    box-shadow: 1px 2px 6px rgba(2, 12, 47, 0.27);
+}
+
+#login-tab:hover, #register-tab:hover {
+    box-shadow: inset 2px 1px 5px rgba(2, 12, 47, 0.27);
+}
+
+#auth-tabs {
+    padding: 7% 0 0 39%;
+    font-size: 25px;
+    font-family: "BPG Nino Elite Exp Caps", sans-serif
+}
+
+.auth-center-login {
+    text-align: center;
+    padding: 7% 15% 0 7.5%;
+}
+
+.auth-center-register {
+    text-align: center;
+    padding: 7.15% 15% 0 18%;
+}
+
+.auth-table {
+    list-style-type: none;
+    flex-direction: row;
+    margin: auto;
+}
+
+.auth-input, .auth-input-short, .auth-input-shorter {
+    box-shadow: 1px 2px 6px rgba(2, 12, 47, 0.27);
+    border: none;
+}
+
+.auth-input:focus-within, .auth-input-short:focus-within, .auth-input-shorter:focus-within {
+    box-shadow: inset 1px 2px 6px rgba(2, 12, 47, 0.27)
+}
+
+.auth-input, .auth-input:focus {
+    height: 50px;
+    width: 160%;
+    outline: 0;
+    border-radius: 10px;
+}
+
+.auth-input-short, .auth-input-short:focus {
+    width: 75%;
+}
+
+.auth-input-shorter, .auth-input-shorter:focus {
+    width: 35%;
+}
+
+
+form input[type="text"], form input[type="password"] {
+    box-sizing: border-box;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 15px;
+}
+
+.input-date {
+    width: 75%;
+    height: 45px;
+    border-radius: 10px;
+    box-shadow: 1px 2px 6px rgba(2, 12, 47, 0.27);
+    border: none;
+    outline: 0;
+    padding: 0 4.5% 0 4.5%;
+}
+
+.input-sex li {
+    display: inline-block;
+    flex-direction: row;
+    margin-right: 4px;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.input-sex {
+    margin-right: 30px;
+}
+
+.input-sex li {
+    box-shadow: 1px 2px 6px rgba(2, 12, 47, 0.27);
+}
+
+.input-sex li:active {
+    box-shadow: inset 1px 2px 6px rgba(2, 12, 47, 0.27);
+}
+
+/* may be redundant */
+.hidden-picture-form {
+    display: none;
+}
+
+.input-picture, #file {
+    background-color: #ff5050;
+    color: #FFFFFF;
+    border-radius: 10px;
+    font-family: "BPG Nino Elite Exp Caps", sans-serif;
+    box-shadow: 1px 2px 6px rgba(2, 12, 47, 0.27);
+}
+
+.input-profile-picture, #file {
+    width: 75%;
+    height: 41px;
+    margin-bottom: -2px;
+    padding: 7px;
+    font-size: 18px;
+}
+
+
+#submit_register, #submit_update, #submit_login, #submit_post {
+    background-color: #ff5050;
+    color: #FFFFFF;
+    border-radius: 10px;
+    font-family: "BPG Nino Elite Exp Caps", sans-serif;
+    border: none;
+    box-shadow: 1px 2px 6px rgba(2, 12, 47, 0.27);
+    outline: none;
+}
+
+#submit_register, #submit_update, #submit_login {
+    height: 38px;
+    font-size: 22px;
+}
+
+#submit_register:hover, #submit_update:hover, #submit_login:hover, .input-picture:hover, #submit_post:hover {
+    box-shadow: inset -3px -3px 16px rgba(52, 4, 4, 0.22);
+}
+
+#submit_register:active, #submit_update:active, #submit_login:active, .input-picture:active, #submit_post:active {
+    outline: 0;
+    box-shadow: inset 3px 3px 16px rgba(52, 4, 4, 0.22);
+}
+
+
+.submit-style-login * {
+    width: 160%;
+}
+
+
+.submit-style-register * {
+    width: 75%;
+    outline: 0;
+}
+
+
+.remember-me {
+    margin-right: 10%;
+}
+
+#help-register-age {
+    font-size: 14px;
+    color: #797979;
+    margin-right: 200px;
+}
+
+#help-register-sex {
+    font-size: 14px;
+    color: #797979;
+    margin-right: 300px;
+}
+
+#help-register-picture {
+    font-size: 14px;
+    color: #797979;
+    margin-right: 200px;
+}
+
+#uploaded-profile-picture[src="#"], #uploaded-post-picture[src="#"] {
+    display: none;
+}
+
+/*  End - Login, register and edit profile  */
+
+
+
+
+
+/*  Logoff button  */
+
+#logoff {
+    float: right;
+    padding: 10px 25px 10px 25px;
+    margin: 30px;
+    font-weight: bold;
+    color: purple;
+    font-family: "BPG Nino Elite Exp Caps", sans-serif;
+    border-radius: 40px;
+    background-color: white;
+    box-shadow: 2px 2px 13px 3px #f3a8a8;
+    font-size: 20px;
+    user-select: none;
+}
+
+
+#logoff:hover {
+    box-shadow: inset 2px 2px 13px #f3a8a8;
+    text-decoration: none;
+}
+
+
+#logoff:active {
+    background-color: #ba4b4b;
+    box-shadow: inset 2px 2px 13px #8e3434;
+    color: white;
+}
+
+/*  End - Logoff button  */
+
+
+
+
+
+/*  Profiles list  */
+
+.profile-list-all {
+    margin-left: 15%;
+    margin-right: 10%;
+    margin-top: 5%;
+    flex-direction: row;
+}
+
+
+.profile-list-one {
+    display: inline-block;
+    left: 10%;
+    margin-left: 5%;
+    margin-bottom: 5%;
+    width: 40%;
+    height: 5%;
+    background-color: white;
+    border-radius: 60px;
+    padding: 1%;
+    box-shadow: -2px 0 12px rgba(2, 12, 47, 0.35);
+}
+
+
+.profile-list-one:hover {
+    box-shadow: inset 2px 2px 10px rgba(2, 12, 47, 0.27);
+}
+
+
+.profile-list-one a {
+    text-decoration: none;
+}
+
+
+.profile-list-name {
+    font-family: "Open Sans Mixed", "BPG Nino Elite", sans-serif;
+    font-size: 26px;
+    color: #000000;
+    overflow: hidden;
+    margin-top: 2.3%;
+    margin-left: 1.6%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 250px;
+    display: inline-block;
+    position: absolute;
+}
+
+
+.profile-list-all a:hover, a:hover * {
+    text-decoration: none;
+    border-color: #ff5050;
+}
+
+.profile-list-all a:hover img {
+    background-color: #ff5050;
+    border-color: transparent;
+}
+
+.profile-list-all a:hover .profile-list-one {
+    background-color: white;
+    box-shadow: #040e2d
+}
+
+.profile-list-all a:hover .profile-list-name {
+    color: purple;
+}
+
+.profile-list-all a:active, a:active * {
+    text-decoration: none;
+    border-color: #144465;
+}
+
+.profile-list-all a:active img {
+    background-color: white;
+    border: 3px solid white;
+}
+
+.profile-list-all a:active .profile-list-one {
+    background-color: #ff5050;
+}
+
+.profile-list-all a:active .profile-list-name {
+    color: white;
+}
+
+.profile-list-image {
+    border-radius: 50px;
+    background-color: #ff5050;
+    box-shadow: 0 0 3px 2px #ff5050;
+    height: 100px;
+    width: 100px;
+    margin: 5px 10px 0 5px;
+}
+
+/*  End Profiles List  */
+
+
+
+
+/*  Individual Profiles  */
+
+.myprofile-profilepicture {
+    height: 200px;
+    width: 200px;
+    float:right;
+    margin-right: 40px;
+    border-radius: 500px;
+    border: solid 7px #ff5050;
+    background-color: #ff5050;
+}
+
+
+#uploaded-profile-picture {
+    border-radius: 100px;
+    border: 4px solid #ff5050;
+    background-color: #ff5050;
+    margin-left: 200px;
+    position: absolute;
+}
+
+/*  End – Individual Profiles  */
+
+
+
+
+
+/*  Posts List  */
+
+.posts-container {
+    display: flex;
+    margin-top: 3rem;
+}
+    
+.post-input {
+    box-shadow: 1px 2px 6px rgba(2, 12, 47, 0.27);
+    border: none;
+    outline: none;
+    padding: 0.75rem 1.25rem;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 100%;
+    resize: none;
+}
+
+.post-input:focus {
+    box-shadow: inset 1px 2px 6px rgba(2, 12, 47, 0.27);
+}
+
+.input-post-picture {
+    display: inline-block;
+    width: 50%;
+    height: 2.5rem;
+    padding: 7px;
+    font-size: 1.125rem;
+    text-align: center;
+}
+
+.submit-style-post * {
+    width: 49.35%;
+    height: 2.5rem;
+    font-size: 1.3rem;
+}
+
+#uploaded-post-picture {
+    margin: 0 0 1rem 1rem;
+    border-radius: 1.5rem;
+    border: 5px solid #FF5050;
+}
+
+.timeline {
+    margin-top: 3rem;
+}
+
+.timeline-post {
+    background-color: rgba(255, 137, 137, 0.035);
+    box-shadow: inset 1px 2px 6px rgba(2, 12, 47, 0.27);
+    border-radius: 20px;
+    width: 250%;
+    padding: 2rem;
+}
+
+.timeline-picture {
+    height: 28rem;
+    width: 38rem;
+    margin: 0 5rem;
+    horiz-align: center;
+    border-radius: 1rem;
+}
+
+
+/*  not using this anymore, maybe later */
+.background-post-picture {
+    background-color: rgba(255, 137, 137, 0.035);
+    margin: 5% 0;
+    border-radius: 20px;
+    box-shadow: 1px 1px 11px rgba(2, 12, 47, 0.46);
+    width: 48rem;
+    height: auto;
+}
+
+.author-picture {
+    height: 50px;
+    width: 50px;
+    border-radius: 60px;
+}
+
+.post-author-link {
+    font-family: "Open Sans Mixed", "BPG Nino Elite", sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    color: purple;
+    font-size: 1.125rem;
+    background-color: rgba(255, 137, 137, 0.035);
+    padding: 1.4rem;
+    margin-left: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 1px 2px 6px rgba(2, 12, 47, 0.27);
+    text-align: center;
+}
+
+.post-author-link:hover {
+    text-decoration: none;
+    box-shadow: inset 1px 2px 6px rgba(2, 12, 47, 0.27);
+}
+
+.post-text {
+    margin: 2rem 2.5rem;
+    box-shadow: inset 1px 2px 6px rgba(2, 12, 47, 0.27);
+    background-color: white;
+    font-size: 1.1rem;
+    padding: 2rem;
+    border-radius: 1.5rem;
+}
+
+.post-date {
+    font-size: 0.8rem;
+    color: rgba(123, 0, 0, 0.51);
+    float: right;
+}
+/*  End – Posts list  */
+
+
+
+
+
+/*  Secondary Navigation  */
+
+.nav-left-tabs {
+    font-family: "BPG Nino Elite Exp Caps", sans-serif;
+    box-shadow: 2px 2px 9px rgba(2, 12, 47, 0.27);
+    background-color: white!important;
+    font-size: 20px;
+    text-align: center;
+    max-width: 300px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.nav-left-tabs * {
+    color: purple!important;
+}
+
+.nav-left-tabs .tab-passive:hover {
+    box-shadow: inset 1px 2px 6px rgba(2, 12, 47, 0.27);
+    border-top-right-radius: 30px!important;
+    border-bottom-right-radius: 30px!important;
+}
+
+.nav-left-tabs .active {
+    background-color: #ff5050!important;
+    color: white!important;
+    border-radius: 0 30px 30px 0!important;
+    box-shadow: inset 4px 4px 6px rgba(2, 12, 47, 0.27)!important;
+}
+
+.nav-left-tabs *:hover {
+    box-shadow: inset 1px 2px 6px rgba(2, 12, 47, 0.27)!important;
+    border-radius: 30px;
+}
+
+.nav-tabs .active {
+    box-shadow: inset 1px 2px 6px rgba(2, 12, 47, 0.27)!important;
+    color: purple!important;
+}
+
+/*  End - Secondary Navigation  */
+
+
+
+
+
+/*  Temporary  */
+
+#placeholder {
+    text-align: center;
+    padding: 7% 15% 0 15%;
+}
+
+
+[role=alert] {
+    margin-top: 3%;
+    text-align: center;
+}
+
+/*overriding bootstrap .alert-dismissible*/
+.alert-dismissible {
+    padding-right: 0!important;
+}
+
+.alert-green, .alert-red, .alert-yellow {
+    box-sizing: border-box;
+    height: 200%;
+    font-size: 1.1rem;
+    text-align: center;
+    padding-top: 0.3rem;
+}
+
+.alert-green {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+.alert-red {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+.alert-yellow {
+    color: #856404;
+    background-color: #fff3cd;
+    border-color: #ffeeba;
+}
+
+
+/*  bootstrap fix  */
+.row {
+    margin-right: 0!important;
+}
+
+/*probably never used, delete if everything works*/
+/*#body {*/
+/*    padding:10px 0 60px 0;*/
+/*}*/
+
+/*#container {*/
+/*    min-height: 100%;*/
+/*    position: relative;*/
+/*}*/
