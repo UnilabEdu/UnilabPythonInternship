@@ -1,5 +1,6 @@
-from app import db, UserModel, PagesModel
-from resources.resources import users, pages_resource
+from app.models import UserModel, PostsModel
+from app import db
+# from resources.resources import users
 
 
 def create(resource, model):
@@ -28,7 +29,7 @@ def update(class_name, username, new_params):
         db.session.delete(row)
     except:
         try:
-            row = class_name.query.filter_by(title=username).first()
+            row = class_name.query.filter_by(username=username).first()
             db.session.delete(row)
         except:
             db.session.add(class_name(*new_params))
@@ -50,6 +51,11 @@ def add_relationship(class_name, _id, foreign_class_name, foreign_id):
     db.session.add(primary)
     db.session.commit()
 
+
+def save_to_db(user, attribute, data):
+    from app import db
+    setattr(user, attribute, data)
+    db.session.commit()
 
 # Using CRUD
 
