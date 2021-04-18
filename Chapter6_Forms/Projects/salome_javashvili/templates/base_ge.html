@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ka">
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
@@ -24,23 +24,31 @@
 
   <div class ="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav ml-2 mr-auto">
-      {{nav_link('home', 'Home')}}
+      {{nav_link('home_ge', 'მთავარი')}}
     </ul>
 
     <ul class="navbar-nav justify-content-end mr-2">
-      {{nav_link('login', 'Log In')}}
+      {% if session['email'] %}
+        <p class="nav-item mt-3"> შესულია მომხმარებელი {{session['email']}} </p>
+        <li><a class="nav-item nav-link mt-2" href=""> გასვლა </a></li>
+      {% else %}
+      <li>{{nav_link('login_ge', 'შესვლა')}}</li>
+      {% endif %}
     </ul>
 
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+      <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">ძებნა</button>
     </form>
 
     <ul class="navbar-nav ml-2" >
-      {{nav_link('home', 'EN')}}
+      <li> <a class="nav-item nav-link active" href="{{ url_for('home_ge')}}">ქარ</a>
+      </li>
       <li class="navbar-text">|
       </li>
-      {{nav_link('home_ge', 'GE')}}
+      <li> <a class="nav-item nav-link" href="{{ url_for('home')}}">ინგ</a>
+      </li>
+    </ul>
     </ul>
   </div>
 </nav>

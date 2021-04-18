@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     {% block Title %}{% endblock %}
 </head>
@@ -28,7 +29,12 @@
     </ul>
 
     <ul class="navbar-nav justify-content-end mr-2">
-      {{nav_link('login', 'Log In')}}
+      {% if session['email'] %}
+        <p class="nav-item mt-3"> Logged in as {{session['email']}} </p>
+        <li><a class="nav-item nav-link mt-2" href=""> Sign Out </a></li>
+      {% else %}
+      <li>{{nav_link('login', 'Log In')}}</li>
+      {% endif %}
     </ul>
 
     <form class="form-inline my-2 my-lg-0">
@@ -37,10 +43,12 @@
     </form>
 
     <ul class="navbar-nav ml-2" >
-      {{nav_link('home', 'EN')}}
+      <li> <a class="nav-item nav-link" href="{{ url_for('home_ge')}}">GE</a>
+      </li>
       <li class="navbar-text">|
       </li>
-      {{nav_link('home_ge', 'GE')}}
+      <li> <a class="nav-item nav-link active" href="{{ url_for('home')}}">EN</a>
+      </li>
     </ul>
   </div>
 </nav>
