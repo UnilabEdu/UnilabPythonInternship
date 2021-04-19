@@ -1,4 +1,4 @@
-from flask import Blueprint, redirect, url_for, render_template
+from flask import Blueprint, redirect, url_for, render_template, flash
 from app.models import RegisteredUsers
 from app.registration.forms import RegisterForm
 
@@ -10,7 +10,7 @@ registration_blueprint = Blueprint('register',
 @registration_blueprint.route('/register', methods=['GET', 'POST'])
 def register():
 
-    form = RegisterForm
+    form = RegisterForm()
     if form.validate_on_submit():
         name = form.name.data
         last_name = form.last_name.data
@@ -20,6 +20,8 @@ def register():
         if user.read(email):
             return "Account with this email already exists"
         else:
-            return user.add()
-        redirect(url_for())
+            user.add()
+            flash(f'Thank you {name} {last_name} you have been successfully registered')
+            return redirect(url_for('register.register'))
+
     return render_template('registration.html', form=form)

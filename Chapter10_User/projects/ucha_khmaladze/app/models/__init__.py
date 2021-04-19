@@ -1,4 +1,6 @@
-from app import db
+from app import db, login_manager
+from flask_login import UserMixin
+from werkzeug.security import generate_password_hash, check_password_hash
 
 
 class Reservation(db.Model):
@@ -58,26 +60,35 @@ class UserInfo(db.Model):
         return f'you have done great {self.name} {self.last_name} your email is {self.email}'
 
 
-class RegisteredUsers(db.Model):
+class RegisteredUsers(db.Model,UserMixin):
     __tablename__ = 'registered_users'
 
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String)
     last_name = db.Column(db.String)
-    email = db.Column(db.String)
-    password = db.Column(db.String)
+    email = db.Column(db.String, nullable=False, unique=True, index=True)
+    password_hash = db.Column(db.String)
 
     def __init__(self, name, last_name, email, password):
         self.name = name
         self.last_name = last_name
         self.email = email
-        self.password = password
+        self.password_hash = generate_password_hash(password)
+
+    def check_password(self,password):
+        return check_password_hash(self.password_hash,password)
 
     @classmethod
     def read(cls, email):
-        return cls.query.filter_by(email=email).first()
+        email =  cls.query.filter_by(email=email).first()
+        if email:
+            return email
 
     def add(self):
 
         db.session.add(self)
         db.session.commit()
+
+@login_manager.user_loader
+def load_user(user_id):
+    return RegisteredUsers.query.get(user_id)

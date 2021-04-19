@@ -1,6 +1,6 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, SubmitField
-from wtforms.validators import DataRequired, length, Email
+from wtforms import StringField, SubmitField, PasswordField
+from wtforms.validators import DataRequired, length, Email, EqualTo
 
 class RegisterForm(FlaskForm):
 
@@ -10,6 +10,6 @@ class RegisterForm(FlaskForm):
                                              length(min=5),
                                              Email(message="Wrong format!")
                                              ])
-    password = StringField("Password")
-    rep_password = StringField("Repeat password")
+    password = PasswordField("Password", validators=[DataRequired(), EqualTo("rep_password")])
+    rep_password = PasswordField("Repeat password", validators=[DataRequired()])
     submit = SubmitField("Register")

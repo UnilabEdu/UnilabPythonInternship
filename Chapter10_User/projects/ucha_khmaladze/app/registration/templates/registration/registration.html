@@ -1,5 +1,94 @@
-{% extends 'base.html' $}
+{% extends 'base.html' %}
 {% block content %}
 
+<div class="row">
+  <div class="col-md-6 offset-md-3">
+      <h1 class="text-center"> Register now ! </h1>
+  </div>
+</div>
+
+{% with messages = get_flashed_messages() %}
+
+    {% if messages %}
+
+        {% for message in messages %}
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+              {{ message }}
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+        {% endfor %}
+
+    {% endif %}
+
+{% endwith %}
+
+<div class="container">
+    <form method="POST">
+        <div class="raw">
+            <div class="col-lg-3">
+                <div class="form-group">
+
+                    {{ form.name.label }}
+                    {{ form.name(class_="form-control") }}
+
+                </div>
+            </div>
+
+            <div class="col-lg-3">
+                <div class="form-group">
+
+                    {{ form.last_name.label }}
+                    {{ form.last_name(class_="form-control") }}
+
+                </div>
+            </div>
+        </div>
+        <div class="raw">
+            <div class="col-lg-3">
+                <div class="form-group">
+
+                    {{ form.email.label }}
+                    {{ form.email(class_="form-control") }}
+
+                </div>
+            </div>
+        </div>
+
+        <div class="raw">
+            <div class="col-lg-3">
+                <div class="form-group">
+
+                    {{ form.password.label }}
+                    {{ form.password(class_="form-control") }}
+
+                </div>
+            </div>
+        </div>
+
+        <div class="raw">
+            <div class="col-lg-3">
+                <div class="form-group">
+
+                    {{ form.rep_password.label }}
+                    {{ form.rep_password(class_="form-control") }}
+
+                </div>
+            </div>
+        </div>
+        <div class="row">
+
+            <div class="col-md-2 offset-md-5">
+
+                {{ form.hidden_tag() }}
+                {{ form.submit(class_= "btn btn-primary") }}
+
+        </div>
+
+        </div>
+
+    </form>
+</div>
 
 {% endblock %}

@@ -2,16 +2,9 @@ import os
 from flask import Flask, render_template
 from flask_migrate import Migrate
 from flask_sqlalchemy import SQLAlchemy
-from flask_login import LoginManager
+from flask_login import LoginManager, logout_user, login_required
 
 basedir = os.path.abspath(os.path.dirname(__file__))
-
-app = Flask(__name__)
-app.config["SQLALCHEMY_DATABASE_URI"] = 'sqlite:///' + os.path.join(basedir, 'data.sqlite')
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-app.config['SECRET_KEY'] = 'ITISHUGESECRET'
-app.config['CSRF_ENABLED'] = True
-app.config['USER_ENABLE_EMAIL'] = False
 db = SQLAlchemy()
 migrate = Migrate()
 login_manager = LoginManager()
@@ -37,6 +30,7 @@ table = {
     "rows": table_rows
 }
 
+
 def create_app():
     app = Flask(__name__)
     app.config["SQLALCHEMY_DATABASE_URI"] = 'sqlite:///' + os.path.join(basedir, 'data.sqlite')
@@ -48,21 +42,27 @@ def create_app():
     db.init_app(app)
     migrate.init_app(app, db)
     login_manager.init_app(app)
+    with app.app_context():
+        db.create_all()
 
-    login_manager.login_view = 'Login'
+    login_manager.login_view = 'user.Login'
 
-from app.book.views import book_blueprint, thank_you_blueprint
-from app.contact.views import contact_blueprint
+    from app.book.views import book_blueprint, thank_you_blueprint
+    from app.contact.views import contact_blueprint
+    from app.registration.views import registration_blueprint
 
-app.register_blueprint(book_blueprint)
-app.register_blueprint(thank_you_blueprint)
-app.register_blueprint(contact_blueprint)
+    app.register_blueprint(book_blueprint)
+    app.register_blueprint(thank_you_blueprint)
+    app.register_blueprint(contact_blueprint)
+    app.register_blueprint(registration_blueprint)
 
-@app.route("/")
-@app.route("/home")
-def home():
-    return render_template("home.html", pages=pages)
+    @app.route("/")
+    @app.route("/home")
+    def home():
+        return render_template("home.html", pages=pages)
 
-@app.route("/rooms")
-def rooms():
-    return render_template("room_info.html", pages=pages, table=table)
+    @app.route("/rooms")
+    def rooms():
+        return render_template("room_info.html", pages=pages, table=table)
+
+    return app
