@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+{% from 'macros_general.html' import flash_alert %}
+
+
+<h2 id="placeholder"> რეგისტრაცია წარმატებით დასრულდა! დაადადასტურეთ თქვენი მეილი: <strong> {{ session['email'] }} </strong> </h2>
+
+    {{ flash_alert(show_flash) }}
+
+{% endblock %}

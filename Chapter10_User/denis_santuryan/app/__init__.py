@@ -1,0 +1,28 @@
+import os
+from flask import Flask
+from flask_sqlalchemy import SQLAlchemy
+from flask_migrate import Migrate
+from flask_login import LoginManager
+
+app = Flask(__name__)
+
+app.config['SECRET_KEY'] = b"safiiasmfmiq2o4182u9ejdqwr89214y"
+basedir = os.path.abspath(os.path.dirname(__file__))
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir, 'data.sqlite')
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
+db = SQLAlchemy(app)
+login_manager = LoginManager(app)
+login_manager.login_view = 'login'
+Migrate(app, db, render_as_batch=True)
+
+
+from app.posts.views import posts_blueprint
+from app.profiles.views import profiles_blueprint
+app.register_blueprint(posts_blueprint, url_prefix="/posts")
+app.register_blueprint(profiles_blueprint, url_prefix="/people")
+
+
+app.add_url_rule('/people/<path:filename>',
+                 endpoint='people',
+                 view_func=app.send_static_file)
