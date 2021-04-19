@@ -8,7 +8,7 @@
 </div>
 
 
-<form method="POST" enctype="multipart/form-data">
+<form method="POST">
     {{ form.hidden_tag() }}
 <div class="row">
     <div class="col-lg-4">
@@ -62,14 +62,6 @@
         <div class="form-group">
             {{ form.select_child.label }}
             {{ form.select_child(class_="form-control") }}
-        </div>
-    </div>
-
-    <div class="col-lg-3">
-        <div class="form-group">
-            {{ form.title.label }}
-            {{ form.title(class_="form-control") }}
-            <input type="file" name="file" multiple accept="image/">
         </div>
     </div>
 </div>

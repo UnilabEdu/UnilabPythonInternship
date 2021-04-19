@@ -35,8 +35,40 @@ table = {
     "rows": table_rows
 }
 
-class UserInfo(db.Model):
 
+class Reservation(db.Model):
+    __tablename__ = 'reservations'
+
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String)
+    last_name = db.Column(db.String)
+    date_from = db.Column(db.Date)
+    date_to = db.Column(db.Date)
+    select_adult = db.Column(db.String)
+    select_child = db.Column(db.String)
+
+    def __init__(self, name, last_name, date_from, date_to, select_adult, select_child):
+        self.name = name
+        self.last_name = last_name
+        self.date_from = date_from
+        self.date_to = date_to
+        self.select_adult = select_adult
+        self.select_child = select_child
+
+    # @classmethod
+    # def read(cls):
+    #     return cls.query.all()
+
+    def add(self):
+        db.session.add(self)
+        db.session.commit()
+
+    def __repr__(self):
+        return f"{self.name} {self.last_name} has reservation from {self.date_from} to {self.date_to} " \
+               f"with confirmed adults of {self.select_adult} and {self.select_child} child/ren"
+
+
+class UserInfo(db.Model):
     __tablename__ = 'user'
 
     id = db.Column(db.Integer, primary_key=True)
@@ -50,26 +82,25 @@ class UserInfo(db.Model):
         self.email = email
 
     @classmethod
-    def read(cls,email):
+    def read(cls, email):
         return cls.query.filter_by(email=email).first()
-
 
     def add(self):
         db.session.add(self)
         db.session.commit()
 
     def __repr__(self):
-
         return f'you have done great {self.name} {self.last_name} your email is {self.email}'
+
 
 @app.route("/")
 @app.route("/home")
 def home():
     return render_template("home.html", pages=pages)
 
+
 @app.route("/book", methods=['GET', 'POST'])
 def book():
-
     name = None
     lastname = None
     date_from = None
@@ -79,13 +110,14 @@ def book():
     form = FormBook()
 
     if form.validate_on_submit():
-        session['name'] = form.name.data
-        session['lastname'] = form.lastname.data
-        session['date_from'] = form.date_from.data
-        session['date_to'] = form.date_to.data
-        session['select_adult'] = form.select_adult.data
-        session['select_child'] = form.select_child.data
-
+        name = form.name.data
+        lastname = form.lastname.data
+        date_from = form.date_from.data
+        date_to = form.date_to.data
+        select_adult = form.select_adult.data
+        select_child = form.select_child.data
+        reservation = Reservation(name, lastname, date_from, date_to, select_adult, select_child)
+        reservation.add()
         return redirect(url_for("thank_you"))
 
     return render_template("book_now.html", pages=pages, form=form, name=name, lastname=lastname, date_from=date_from,
@@ -94,7 +126,8 @@ def book():
 
 @app.route("/thank_you")
 def thank_you():
-    return render_template("thankyou.html")
+    reservations = Reservation.query.all()
+    return render_template("thankyou.html", reservations=reservations)
 
 
 @app.route("/rooms")
@@ -113,10 +146,10 @@ def contact():
         name = form.name.data
         lastname = form.lastname.data
         email = form.email.data
+        item = UserInfo(name, lastname, email)
         if UserInfo.read(email):
             pass
         else:
-            item = UserInfo(name, lastname, email)
             item.add()
         flash(f"Thank you {name} {lastname} you have successfully sent us a message, we will reach you back on {email}")
 

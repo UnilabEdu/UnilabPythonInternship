@@ -1,9 +1,10 @@
 from flask import Flask, render_template, url_for, flash, redirect, session
 from flask_wtf import FlaskForm
+from flask_wtf.file import FileField, FileRequired
 from wtforms import StringField, SubmitField, DateField, SelectField
 from wtforms.validators import DataRequired, length, Email, InputRequired
 from wtforms.widgets import TextArea
-
+from werkzeug.utils import secure_filename
 app = Flask(__name__)
 
 app.config['SECRET_KEY'] = 'ITISHUGESECRET'
@@ -32,6 +33,8 @@ table = {
 }
 
 
+
+
 class FormName(FlaskForm):
     name = StringField('First Name',
                        validators=[
@@ -56,7 +59,7 @@ class FormName(FlaskForm):
                         render_kw={"pLaceholder": "example@example.com"}
                         )
     message = StringField('Leave your message here!', validators=[DataRequired()], widget=TextArea())
-    submit = SubmitField('Submit reservation')
+    submit = SubmitField('Submit')
 
 class FormBook(FlaskForm):
     name = StringField('First Name',
@@ -77,6 +80,8 @@ class FormBook(FlaskForm):
     date_to = DateField('To')
     select_adult = SelectField('Number of adults', choices=[("1"),("2"),("3"),("4"),("5")])
     select_child = SelectField('Number of children (under 6 years)', choices=[("1"), ("2"), ("3"), ("4"), ("5")])
+    title = StringField("Name of your file")
+    file = FileField(validators=[FileRequired()])
     submit = SubmitField('Submit reservation')
 
 
@@ -98,15 +103,22 @@ def book():
     form = FormBook()
 
     if form.validate_on_submit():
+        if form.title.data:
+            file_name = secure_filename(form.title.data)
+        else:
+            file_name = secure_filename(form.file.data.filename)
+        form.file.data.save(f"static/{file_name}")
         session['name'] = form.name.data
         session['lastname'] = form.lastname.data
         session['date_from'] = form.date_from.data
         session['date_to'] = form.date_to.data
         session['select_adult'] = form.select_adult.data
         session['select_child'] = form.select_child.data
+
         return redirect(url_for("thank_you"))
 
-    return render_template("book_now.html", pages=pages, form=form, name=name, lastname=lastname, date_from=date_from, date_to=date_to, select_adult=select_adult, select_child=select_child)
+    return render_template("book_now.html", pages=pages, form=form, name=name, lastname=lastname, date_from=date_from, date_to=date_to,
+                           select_adult=select_adult, select_child=select_child)
 
 
 @app.route("/thank_you")
