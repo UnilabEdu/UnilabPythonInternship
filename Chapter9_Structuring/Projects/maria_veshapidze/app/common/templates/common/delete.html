@@ -1,0 +1,38 @@
+{%  extends "base.html" %}
+
+{% block content %}
+
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+                <strong>{{message}}</strong>
+            </div>
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+
+
+<div class="jumbotron">
+
+<fieldset>
+    <legend><strong>Delete form</strong></legend>
+
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        {{ form.choice.label }} {{ form.choice() }}
+            <br>
+            <br>
+        {{ form.id.label }} {{ form.id() }}
+            <br>
+            <br>
+        {{ form.submit() }}
+    </form>
+
+</fieldset>>
+
+</div>
+{% endblock %}

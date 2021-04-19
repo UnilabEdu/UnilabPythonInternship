@@ -1,0 +1,8 @@
+{% from 'macros.html' import table_generator %}
+{% extends "base.html" %}}
+{% block content %}
+
+<h3 class="text-center">This table represents information about hotel {{ table['headers'][1:3] | join(', ') }} and Quantities </h3>
+{{ table_generator(table) }}
+
+{% endblock %}

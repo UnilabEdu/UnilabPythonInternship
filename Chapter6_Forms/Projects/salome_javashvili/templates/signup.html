@@ -1,0 +1,111 @@
+{% extends base %}
+
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block Title %}
+<title>{{title}}</title>
+{% endblock %}
+
+
+
+{% block content %}
+
+<div class="container mx-auto pt-5" style="width: 60%">
+  {% for msg in get_flashed_messages() %}
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+      <button
+        type="button"
+        class="close"
+        data-dismiss="alert"
+        aria-label="Close"
+        class="fade close"
+      >
+        <span aria-hidden="true">&times;</span>
+      </button>
+        {{msg}}
+    </div>
+  {% endfor %}
+  <form class="needs-validation mx-auto pt-5" method="POST" novalidate>
+    {{ form.hidden_tag() }}
+    <div class="bg-light pb-4 border rounded border-info">
+      <div class="row ml-1 px-3">
+        <p style="font-weight: bold; font-size: 40px; color: #424242">{{title}}</p>
+      </div>
+      <hr class="ml-3 mt-0" style="width: 48%"/>
+      <div class="form-row px-3">
+        <div class="col-md-6 mb-3">
+          {{ wtf.form_field(form.name, class="form-control", id="name") }}
+        </div>
+        <div class="col-md-6 mb-3">
+          {{ wtf.form_field(form.surname, class="form-control", id="surname") }}
+        </div>
+      </div>
+      <div class="form-row px-3">
+        <div class="col-md-6 mb-3">
+          {{ wtf.form_field(form.city, class="form-control", id="city") }}
+        </div>
+        <div class="col-md-6 mb-3">
+          {{ wtf.form_field(form.country, class="form-control", id="country") }}
+        </div>
+      </div>
+      <div class="form-row px-3">
+        <div class="col-md-6 mb-3">
+          {{ wtf.form_field(form.company, class="form-control", id="company") }}
+        </div>
+        <div class="col-md-6 mb-3">
+          {{ wtf.form_field(form.position, class="form-control", id="position") }}
+        </div>
+      </div>
+      <div class="form-row px-3">
+        <div class="col-md-6">
+          {{ wtf.form_field(form.email, type="email", class="form-control", id="email") }}
+        </div>
+      </div>
+      <div class="form-row px-3">
+        <div class="col-md-6 ml-0 mb-2">
+          {{wtf.form_field(form.password, type="password", class="form-control", id="password")}}
+        </div>
+
+        <div class="col-md-6 ml-0 mb-2">
+          {{wtf.form_field(form.re_password, type="password", class="form-control", id="re_password")}}
+        </div>
+      </div>
+      <div class="form-group px-3">
+        <div class="form-check">
+          {{wtf.form_field(form.acceptance, id="check")}}
+          <div class="invalid-feedback">
+            You must agree before submitting.
+          </div>
+        </div>
+      </div>
+      <div class="form-row px-4">
+        {{ wtf.form_field(form.submit, type="submit", class="btn btn-primary px-3", sstyle="width: 15%") }}
+      </div>
+    </div>
+  </form>
+</div>
+
+<br />
+<br />
+
+<!-- <script>
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
+</script> -->
+{% endblock %}

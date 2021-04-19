@@ -2,6 +2,7 @@ from flask import Flask, render_template, session, redirect, url_for
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField, RadioField
 from wtforms.validators import DataRequired, length, Email, EqualTo
+
 app = Flask(__name__)
 
 app.config['SECRET_KEY'] = "mySECRETkey"
@@ -36,8 +37,8 @@ class EmailForm(FlaskForm):
 
 @app.route('/', methods=['GET', 'POST'])
 def home():
-    email = None
 
+    email = None
     form = EmailForm()
 
     if form.validate_on_submit():

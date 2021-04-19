@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block Title %}
+<title>LogIn</title>
+{% endblock %}
+
+
+{% block content %}
+
+<div class="container mx-auto pt-5" style="width: 30%">
+    <div class="pt-3">
+        <form class="bg-light border border-info rounded pt-3 pb-3">
+
+          <div class="form-group mx-auto" style="width: 95%">
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                   placeholder="Email address" style="font-family: Consolas, monaco, monospace;" >
+          </div>
+
+          <div class="form-group mx-auto mb-2" style="width: 95%">
+            <input type="password" class="form-control" id="exampleInputPassword1"
+                   placeholder="Password" style="font-family: Consolas, monaco, monospace;">
+          </div>
+
+
+          <div class="col ml-1 pb-1">
+              <a href="">Forgot your password?</a>
+          </div>
+
+          <div class="col text-center pt-2">
+            <button type="submit" class="btn btn-primary btn-md mx-auto" style="width: 30%" >Sign In</button>
+          </div>
+
+          <hr class="mx-auto" style="width: 80%"/>
+
+          <div class="container mx-auto text-secondary text-center mb-2">
+              Don't have any account yet?
+          </div>
+
+          <div class="col text-center pt-2 pb-2">
+               <a href= "{{url_for('signup')}}" type="submit" class="btn btn-success btn-md mx-auto" style="width: 30%">Sign up </a>
+          </div>
+        </form>
+    </div>
+</div>
+
+{% endblock %}
