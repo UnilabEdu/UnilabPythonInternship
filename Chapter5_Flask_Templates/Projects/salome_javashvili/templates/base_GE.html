@@ -6,6 +6,8 @@
     {% block Title %}{% endblock %}
 </head>
 
+{% from "macros.html" import nav_link %}
+
 <body class="pt-5">
 
 <nav class="navbar fixed-top navbar-expand-lg navbar-light" style="background-color: #ADD8E6;" >
@@ -22,15 +24,11 @@
 
   <div class ="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav ml-2 mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="{{url_for('home_ge')}}"> მთავარი <span class="sr-only">(current)</span></a>
-      </li>
+      {{nav_link('home_ge', 'მთავარი')}}
     </ul>
 
     <ul class="navbar-nav justify-content-end mr-2">
-      <li class="nav-item">
-        <a class="nav-link" href="{{url_for('login_ge')}}">ანგარიშზე შესვლა</a>
-      </li>
+      {{nav_link('login_ge', 'ანგარიშზე შესვლა')}}
     </ul>
 
     <form class="form-inline my-2 my-lg-0">
@@ -38,16 +36,12 @@
       <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">ძებნა</button>
     </form>
 
-    <ul class="navbar-nav" >
-      <li class="nav-item ml-2">
-        <a class="nav-link" href="{{url_for('home')}}">ინგ</a>
-      </li>
+    <ul class="navbar-nav ml-2" >
+      {{nav_link('home', 'ინგ')}}
       <li class="navbar-text">|
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="{{url_for('home_ge')}}">ქარ</a>
-      </li>
-     </ul>
+      {{nav_link('home_ge', 'ქარ')}}
+    </ul>
   </div>
 </nav>
 {%block content%}{%endblock%}
