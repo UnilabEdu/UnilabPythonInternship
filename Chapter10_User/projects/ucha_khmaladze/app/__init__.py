@@ -2,6 +2,7 @@ import os
 from flask import Flask, render_template
 from flask_migrate import Migrate
 from flask_sqlalchemy import SQLAlchemy
+from flask_login import LoginManager
 
 basedir = os.path.abspath(os.path.dirname(__file__))
 
@@ -9,8 +10,11 @@ app = Flask(__name__)
 app.config["SQLALCHEMY_DATABASE_URI"] = 'sqlite:///' + os.path.join(basedir, 'data.sqlite')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SECRET_KEY'] = 'ITISHUGESECRET'
-db = SQLAlchemy(app)
-Migrate(app, db)
+app.config['CSRF_ENABLED'] = True
+app.config['USER_ENABLE_EMAIL'] = False
+db = SQLAlchemy()
+migrate = Migrate()
+login_manager = LoginManager()
 
 pages = (
     ("home", "Home"),
@@ -33,8 +37,19 @@ table = {
     "rows": table_rows
 }
 
+def create_app():
+    app = Flask(__name__)
+    app.config["SQLALCHEMY_DATABASE_URI"] = 'sqlite:///' + os.path.join(basedir, 'data.sqlite')
+    app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+    app.config['SECRET_KEY'] = 'ITISHUGESECRET'
+    app.config['CSRF_ENABLED'] = True
+    app.config['USER_ENABLE_EMAIL'] = False
 
+    db.init_app(app)
+    migrate.init_app(app, db)
+    login_manager.init_app(app)
 
+    login_manager.login_view = 'Login'
 
 from app.book.views import book_blueprint, thank_you_blueprint
 from app.contact.views import contact_blueprint
