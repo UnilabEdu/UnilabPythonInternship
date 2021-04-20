@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 {% from 'macros_images.html' import show_profile_picture %}
+
         <div class="profile-list-all">
         {% for p in people_list %}
             <a href="profile/{{p.username}}">

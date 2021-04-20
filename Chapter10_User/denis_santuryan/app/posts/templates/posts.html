@@ -11,7 +11,7 @@
   </div>
 
 <div class="c-6">
-    {% if user %}
+    {% if current_user.username %}
         {{ form.hidden_tag() }}
         <form method="POST" enctype="multipart/form-data">
             {{ form.text(

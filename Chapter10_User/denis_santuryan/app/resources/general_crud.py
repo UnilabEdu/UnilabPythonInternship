@@ -2,6 +2,8 @@ from app.models import UserModel, PostsModel
 from app import db
 # from resources.resources import users
 
+# delete the entire file later
+
 
 def create(resource, model):
     if type(resource[0]) == list or type(resource[0]) == tuple:

@@ -45,6 +45,10 @@ class UserModel(db.Model, UserMixin):
         return cls.query.filter_by(email=temp_email).first()
 
 
+# later check if I need the 'try' part. if yes, define the exact exception
 @login_manager.user_loader
 def load_user(user_id):
-    return UserModel.query.get(user_id)
+    try:
+        return UserModel.query.get(user_id)
+    except:
+        pass

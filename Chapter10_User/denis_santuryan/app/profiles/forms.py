@@ -12,10 +12,10 @@ class SignInForm(FlaskForm):
                                  length(min=4, max=100, message="არასწორადაა შეყვანილი"),
                              ])
     login_password = PasswordField('პაროლი',
-                                 validators=[
-                                     DataRequired(),
-                                     length(min=6, max=18),
-                                 ])
+                                   validators=[
+                                       DataRequired(),
+                                       length(min=6, max=18),
+                                   ])
     remember_me = BooleanField('დამიმახსოვრე')
     submit_login = SubmitField('შესვლა')
 
@@ -65,7 +65,7 @@ class RegisterForm(FlaskForm):
     submit_register = SubmitField('რეგისტრაცია')
     submit_update = SubmitField('განახლება')
 
-    #  may need to put outside RegisterForm
+    #  may need to put outside RegisterForm, should delete from routes.py auth()
     def check_already_used(self, username, email):
         temp_username = self.username.data
         temp_email = self.email.data

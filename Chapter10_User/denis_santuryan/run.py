@@ -1,6 +1,5 @@
 from app import app
-# from routes import list_pages, list_people, list_posts, auth, success_register, profile, logoff
-# from flask import session
+from app.routes import list_pages, auth, success_register, logoff
 
 
 if __name__ == '__main__':

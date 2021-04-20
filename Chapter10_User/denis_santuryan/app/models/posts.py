@@ -15,3 +15,11 @@ class PostsModel(db.Model):
         self.text = text
         self.media = media
         self.user_id = user_id
+
+    @classmethod
+    def add(cls, time, text, media, user_id):
+        post = cls(time, text, media, user_id)
+        db.session.add(post)
+        db.session.commit()
+
+    # needs an update function
