@@ -85,7 +85,7 @@ def delete_item():
         db.session.commit()
         return redirect(url_for('list_items'))
 
-    return render_template('delete.html', form = form)
+    return render_template('delete.html', form=form)
 
 
 if __name__ == '__main__':

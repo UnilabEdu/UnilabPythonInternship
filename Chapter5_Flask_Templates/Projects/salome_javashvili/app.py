@@ -1,33 +1,32 @@
 from flask import Flask, render_template
-
+import data
+from functions import create_dicts
 app = Flask(__name__)
 
 
-pathogens = ['Bacteria', 'Virus', 'Fungi', 'Parasite']
-pathogens_ge = ['ბაქტერია', 'ვირუსი', 'სოკო', 'პარაზიტი']
+menu_data = create_dicts(data.select_menu_keys, data.select_menu_values)
+print(menu_data)
+menu_data_ge = create_dicts(data.select_menu_keys, data.select_menu_values_ge)
 
-regions = ['Tbilisi', 'Kakheti', 'Inner Kartli', 'Lower Kartli', 'Mtskheta-Mtianeti', 'Imereti',
-           'Samegrelo-Upper Svaneti', 'Ratcha-Lechkhumi/ Lower Svaneti', 'Samtskhe-Javakheti', 'Guria', 'Adjara']
-regions_ge = ['თბილისი', 'კახეთი', 'შიდა ქართლი', 'ქვემო ქართლი', 'მცხეთა-მთიანეთი', 'იმერეთი',
-           'სამეგრელო-ზემო სვანეთი', 'რაჭა-ლეჩხუმი/ ქვემო სვანეთი', 'სამცხე-ჯავახეთი', 'გურია', 'აჭარა']
-
+form_data = create_dicts(data.input_form_keys, data.input_form_values)
+print(form_data)
+form_data_ge = create_dicts(data.input_form_keys, data.input_form_values_ge)
 
 @app.route('/home')
 def home():
-    return render_template("main.html", pathogens=pathogens, regions=regions)
+    return render_template("main.html", pathogens=data.pathogens, menu_data=menu_data, form_data=form_data)
 
 
-@app.route('/homeGE')
+@app.route('/home_ge')
 def home_ge():
-    return render_template("main_GE.html", pathogens=pathogens_ge, regions=regions_ge)
-
+    return render_template("main_GE.html", pathogens=data.pathogens_ge, menu_data=menu_data_ge, form_data=form_data_ge)
 
 @app.route('/login')
 def login():
     return render_template("login.html")
 
 
-@app.route('/loginGE')
+@app.route('/login_ge')
 def login_ge():
     return render_template("login_GE.html")
 
@@ -37,14 +36,9 @@ def signup():
     return render_template("signup.html")
 
 
-@app.route('/signupGE')
+@app.route('/signup_ge')
 def signup_ge():
     return render_template("signup_GE.html")
-
-
-
-
-
 
 
 if __name__ == "__main__":

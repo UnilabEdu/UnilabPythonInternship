@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="row">
+  <div class="col-md-6 offset-md-3">
+      <h1 class="text-center"> Book with us ! </h1>
+  </div>
+</div>
+
+
+<form method="POST">
+    {{ form.hidden_tag() }}
+<div class="row">
+    <div class="col-lg-4">
+
+            <div class="form-group">
+                {{ form.name.label }}
+                {{ form.name(class_="form-control") }}
+            </div>
+
+    </div>
+
+    <div class="col-lg-4">
+
+            <div class="form-group">
+                {{ form.lastname.label }}
+                {{ form.lastname(class_="form-control") }}
+            </div>
+
+    </div>
+
+    <div class="col-lg-2">
+
+            <div class="form-group">
+                {{ form.date_from.label }}
+                {{ form.date_from(class_="form-control", type="Date") }}
+            </div>
+    </div>
+
+    <div class="col-lg-2">
+
+            <div class="form-group">
+                {{ form.date_to.label }}
+                {{ form.date_to(class_="form-control", type="Date") }}
+            </div>
+
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-lg-3">
+        <div class="form-group">
+
+            {{ form.select_adult.label }}
+            {{ form.select_adult(class_="form-control") }}
+
+        </div>
+    </div>
+
+    <div class="col-lg-3">
+        <div class="form-group">
+            {{ form.select_child.label }}
+            {{ form.select_child(class_="form-control") }}
+        </div>
+    </div>
+</div>
+
+<div class="row">
+
+    <div class="col-md-2 offset-md-5">
+
+        {{ form.hidden_tag() }}
+        {{ form.submit(class_= "btn btn-primary") }}
+
+    </div>
+
+</div>
+</form>
+{% endblock %}
