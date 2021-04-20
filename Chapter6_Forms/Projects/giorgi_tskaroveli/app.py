@@ -80,7 +80,7 @@ def step2():
 def validation():
     form = final_save_to_db()
 
-    if form.validate_on_submit():
+    if request.method == 'POST':
         print(form.errors)
         new_nurse = NursesModel(session['email'], session['first_name'], session['last_name'],
                                 session['address'], session['department'], session['shift'])
