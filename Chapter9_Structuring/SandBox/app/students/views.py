@@ -1,6 +1,7 @@
 from flask import Blueprint, render_template, redirect, url_for
-from app.models import Student
-from app.students.forms import AddForm, DelForm
+from app import Student
+from app import AddForm
+
 
 students_blueprint = Blueprint('students',
                                __name__,
