@@ -1,6 +1,7 @@
 from flask import Flask, render_template, redirect, url_for, session
-from forms import registration_form, registration_form2
+from forms import registration_form, registration_form2, final_save_to_db
 from flask_sqlalchemy import SQLAlchemy
+from flask_migrate import Migrate
 import os
 
 basedir = os.path.abspath(os.path.dirname(__file__))
@@ -13,6 +14,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
 
+Migrate(app, db)
 
 class NursesModel(db.Model):
     __tablename__ = "nurses"
@@ -75,7 +77,16 @@ def step2():
 
 @app.route('/validation', methods=['GET', 'POST'])
 def validation():
-    return render_template('validation.html')
+    form = final_save_to_db()
+
+    if form.validate_on_submit():
+        new_nurse = NursesModel(session['email'], session['first_name'], session['last_name'],
+                                session['address'], session['department'], session['shift'])
+        db.session.add(new_nurse)
+        db.session.commit()
+
+        return redirect(url_for('step1'))
+    return render_template('validation.html', form=form)
 
 
 if __name__ == '__main__':

@@ -20,3 +20,7 @@ class registration_form2(FlaskForm):
                             {8, "დღის სამსახური"}
                         ])
     submit = SubmitField("Next")
+
+
+class final_save_to_db(FlaskForm):
+    submit = SubmitField("Save")
