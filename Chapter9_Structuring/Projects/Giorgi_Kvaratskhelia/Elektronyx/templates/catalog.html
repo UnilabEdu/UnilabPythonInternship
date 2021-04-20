@@ -1,0 +1,30 @@
+{% extends "header.html" %}
+
+{% block content %}
+
+<div class="container">
+    </br>
+    {% for product in catalog_data %}
+    <div class="row row-cols-1">
+        <div class="col mb-2">
+            <div class="card">
+                <div class="row no-gutters">
+                    <div class="col-md-8 align-self-end">
+                        <div class="card-body text-right">
+                            <h5 class="card-title">{{product.manufacturer}} {{product.model}}</h5>
+                            <h6 class="text-right">{{product.price}}$</h6></br>
+                            <a href="" class="btn btn-primary">Buy now</a>
+                            <a href="/catalog/{{product_type}}/{{product.model}}" class="btn btn-secondary">View Details</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <img src="../static/img/{{product.img}}" class="card-img-top" alt="Ripjaws" style="width: auto; height: 225px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}

@@ -1,0 +1,98 @@
+﻿{% from "macros.html" import create_sidebar, nav_class %}
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+          integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="{{url_for('home')}}static/css/styles.css">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+            crossorigin="anonymous"></script>
+
+    <meta charset="UTF-8">
+    <title>Elektronyx</title>
+</head>
+<body>
+    <header>
+        <div class="site-header d-none d-md-block">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-3 text-middle my-auto">
+                        <img src="{{url_for('home')}}static/img/logo.png" class="img-fluid" style="min-width: 150px; max-width: 90%; height: auto;" />
+                    </div>
+                    <div class="col">
+                        <div class="input-group">
+                            <input class="form-control border-0" type="text" placeholder="Search..." style="height: 50px">
+                            <div class="input-group-append">
+                                <button class="btn btn btn-danger" type="button">SEARCH</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-1 text-right">
+                        <button class="btn btn btn-danger" type="button" style="height: 50px">Sign In</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav class="navbar navbar-expand-md navbar-dark py-1"
+             style="background-color: #202020; box-shadow: inset 0px 7px 5px -6px #000000, 0px 5px 10px -5px #333333;">
+            <div class="container">
+                <a class="navbar-brand d-md-none" href="#">
+                    <img src="{{url_for('home')}}static/img/logo.png" width="220" height="20" alt="">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link {{nav_class('home')}}" href="{{url_for('home')}}">Home <span class="sr-only">(current)</span></a>
+                        <li class="nav-item dropdown d-lg-none {{nav_class('catalog')}}">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Catalog
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="/catalog/computers">Computers</a>
+                                <a class="dropdown-item" href="/catalog/accessories">Computer Periphery</a>
+                                <a class="dropdown-item" href="/catalog/tablets">Monitors</a>
+                                <a class="dropdown-item" href="/catalog/laptops">Laptops</a>
+                                <a class="dropdown-item" href="/catalog/phones">Phones</a>
+                                <a class="dropdown-item" href="/catalog/tablets">Tablets</a>
+                                <a class="dropdown-item" href="/catalog/tablets">Printers</a>
+                                <a class="dropdown-item" href="/catalog/tablets">Networking Devices</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="/catalog/case">Computer Case</a>
+                                <a class="dropdown-item" href="/catalog/motherboard">Motherboard</a>
+                                <a class="dropdown-item" href="/catalog/cpu">CPU</a>
+                                <a class="dropdown-item" href="/catalog/gpu">Graphics Card</a>
+                                <a class="dropdown-item" href="/catalog/ram">RAM</a>
+                                <a class="dropdown-item" href="/catalog/storage">Storage</a>
+                                <a class="dropdown-item" href="/catalog/psu">Power Supply</a>
+                            </div>
+                        </li>
+                        <a class="nav-link" href="{{url_for('home')}}#Products">Featured Products</a>
+                        <a class="nav-link" href="{{url_for('home')}}#OnSale">Sales</a>
+                        <a class="nav-link" href="#">Contact Us</a>
+                        <a class="nav-link d-md-none" href="#">Sign In</a>
+                        <div class="input-group d-md-none">
+                            <input class="form-control border-0" type="text" placeholder="Search..." style="height: 50px">
+                            <div class="input-group-append">
+                                <button class="btn btn btn-danger" type="button">SEARCH</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    {% block content %}{% endblock %}
+</body>
+</html>
