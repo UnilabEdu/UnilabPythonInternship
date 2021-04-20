@@ -16,6 +16,7 @@ db = SQLAlchemy(app)
 
 Migrate(app, db)
 
+
 class NursesModel(db.Model):
     __tablename__ = "nurses"
 
