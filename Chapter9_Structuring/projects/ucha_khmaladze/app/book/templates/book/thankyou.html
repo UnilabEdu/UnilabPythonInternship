@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2 class="text-center"> Thank you for booking with us ! </h2>
+<ul>
+    {% for reservation in reservations %}
+    <li>{{ reservation.id }} {{ reservation }}</li>
+    {% endfor %}
+</ul>
+
+<p> Confirmed child</p>
+
+{% endblock %}
