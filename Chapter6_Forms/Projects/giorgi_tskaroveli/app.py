@@ -87,6 +87,9 @@ def validation():
         db.session.commit()
 
         return redirect(url_for('step1'))
+    else:
+        return redirect(url_for('step2'))
+
     return render_template('validation.html', form=form)
 
 
