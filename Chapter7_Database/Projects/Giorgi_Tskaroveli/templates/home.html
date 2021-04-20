@@ -17,17 +17,24 @@
 <div class="well form-horizontal">
     <div class="row align-items-center justify-content-center">
     <div class="col-md-5">
+
+    {% if email %}
+        <p> თქვენ მოგივათ შეტყობინებები მისამართზე: {{ email }} </p>
+        <p> თქვენი სახელია: {{ first_name }} {{ last_name }} </p>
+    {% else %}
+        <p> გთხოვთ შეავსოთ </p>
+    {% endif %}
     <form method="POST" class="form-group" >
         <div class="form-group">
-         {{ form.hidden_tag() }}
-         {{ form.address.label }} {{ form.address(class_="form-control") }} <br>
-         {{ form.department.label}} {{ form.department(class_="form-control") }} <br>
-         {{ form.shift.label }} {{ form.shift() }} <br> <br>
-         {{ form.submit(class_="btn btn-primary mb-2") }} <br>
-         </div>
+        {{ form.hidden_tag() }}
+         {{ form.email.label }} {{ form.email(class_="form-control") }}
+         {{ form.first_name.label}} {{ form.first_name(class_="form-control") }}
+         {{ form.last_name.label }} {{ form.last_name(class_="form-control") }}
+        <br>
+        {{ form.submit(class_="btn btn-primary mb-2") }}
     </form>
-
-    </div>
+        </div>
+        </div>
 </div>
 
 </body>
