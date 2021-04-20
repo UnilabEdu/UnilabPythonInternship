@@ -16,6 +16,9 @@ class PostsModel(db.Model):
         self.media = media
         self.user_id = user_id
 
+    def __repr__(self):
+        return f'ID: {self.id}. {self.media}'
+
     @classmethod
     def add(cls, time, text, media, user_id):
         post = cls(time, text, media, user_id)

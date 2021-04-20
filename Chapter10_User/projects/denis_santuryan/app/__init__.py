@@ -3,6 +3,8 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 from flask_login import LoginManager
+from flask_admin import Admin
+from app.admin.admin_index import MyAdminIndexView
 
 app = Flask(__name__)
 
@@ -12,6 +14,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir, 'da
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
+admin = Admin(app, index_view=MyAdminIndexView())
 login_manager = LoginManager(app)
 login_manager.login_view = '/'
 Migrate(app, db, render_as_batch=True)

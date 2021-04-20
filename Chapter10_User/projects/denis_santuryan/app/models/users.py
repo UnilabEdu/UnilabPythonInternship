@@ -21,6 +21,7 @@ class UserModel(db.Model, UserMixin):
     picture = db.Column(db.String)
     post = db.relationship('PostsModel', backref='usermodel', uselist=False)
 
+
     def __init__(self, username, name_first, name_last, email, phone, dob, age, sex, password, picture=None):
         self.username = username
         self.name_first = name_first
@@ -32,6 +33,9 @@ class UserModel(db.Model, UserMixin):
         self.password = generate_password_hash(password)
         self.age = calculate_age(dob)
         self.picture = picture
+
+    def __repr__(self):
+        return f'ID: {self.id}. {self.username}'
 
     def check_password(self, password_raw):
         return check_password_hash(self.password, password_raw)
