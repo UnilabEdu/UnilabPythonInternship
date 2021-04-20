@@ -81,14 +81,13 @@ def validation():
     form = final_save_to_db()
 
     if form.validate_on_submit():
+        print(form.errors)
         new_nurse = NursesModel(session['email'], session['first_name'], session['last_name'],
                                 session['address'], session['department'], session['shift'])
         db.session.add(new_nurse)
         db.session.commit()
 
         return redirect(url_for('step1'))
-    else:
-        return redirect(url_for('step2'))
 
     return render_template('validation.html', form=form)
 
