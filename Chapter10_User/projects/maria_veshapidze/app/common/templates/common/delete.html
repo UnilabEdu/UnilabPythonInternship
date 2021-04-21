@@ -1,0 +1,25 @@
+{%  extends "base.html" %}
+
+{% block content %}
+
+
+<div class="jumbotron">
+
+<fieldset>
+    <legend><strong>Delete form</strong></legend>
+
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        {{ form.choice.label }} {{ form.choice() }}
+            <br>
+            <br>
+        {{ form.id.label }} {{ form.id() }}
+            <br>
+            <br>
+        {{ form.submit() }}
+    </form>
+
+</fieldset>>
+
+</div>
+{% endblock %}
