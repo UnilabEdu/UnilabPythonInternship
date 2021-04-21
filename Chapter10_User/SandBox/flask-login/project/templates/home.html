@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="jumbotron">
+  <h1>
+        {% if current_user.is_authenticated %}
+            გამარჯობა {{ current_user.username }}
+        {% else %}
+          გთხოვთ გაიაროთ რეგისტრაცია ან ავტორიზაცია
+        {% endif %}
+  </h1>
+</div>
+
+{% endblock %}
