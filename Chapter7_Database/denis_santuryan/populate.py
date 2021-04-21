@@ -6,6 +6,3 @@ from app import UserModel, PagesModel
 
 create(users, UserModel)
 create(pages_resource, PagesModel)
-
-
-# create a one-to-one relationship between users and pages

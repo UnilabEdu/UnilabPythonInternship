@@ -1,4 +1,7 @@
 {% extends "base.html" %}
+
+{% from "macros.html" import create_select_menu, create_select_menus, create_input_forms %}
+
 {% block Title %}
 <title>GeoPath</title>
 {% endblock %}
@@ -25,60 +28,18 @@
     <hr class="ml-0 mt-0"/>
     <div class="form-row">
       <div class="form-group col-md-3">
-        <label for="PathogenType">Pathogen type</label>
-        <select id="PathogenType" class="form-control">
-          <option selected>Choose</option>
-          {% for i in pathogens%}
-            <option>{{i}}</option>
-          {% endfor %}
-        </select>
+        {{create_select_menu(_id="PathogenType", label="Pathogen Type",
+        options_list=pathogens, option_selected='Choose')}}
       </div>
-      <div class="form-group col-md-3">
-        <label for="Genus">Genus</label>
-        <input id="Genus" type="text" class="form-control" placeholder="e.g. Staphylococcus">
-      </div>
-      <div class="form-group col-md-3">
-        <label for="Species">Species</label>
-        <input id="Species" type="text" class="form-control" placeholder="e.g. S. aureus">
-      </div>
-      <div class="form-group col-md-3">
-        <label for="Strain">Strain</label>
-        <input id="Strain" type="text" class="form-control" placeholder="e.g. MRSA">
-      </div>
+      {{create_input_forms(form_data)}}
     </div>
     <div class="form-row">
-      <div class="form-group col-md-4">
-        <label for="inputRegion">Region</label>
-        <select id="inputRegion" class="form-control">
-          <option selected>Georgia</option>
-          {% for i in regions %}
-            <option>{{i}}</option>
-          {% endfor %}
-        </select>
-      </div>
-      <div class="form-group col-md-4">
-        <label for="inputDate1">From:</label>
-        <select id="inputDate1" class="form-control">
-          <option selected>2000</option>
-          {% for i in range(2001,2022) %}
-            <option>{{i}}</option>
-          {% endfor %}
-        </select>
-      </div>
-      <div class="form-group col-md-4">
-        <label for="inputDate2">To:</label>
-        <select id="inputDate2" class="form-control">
-          <option selected>2021</option>
-          {% for i in range(2000,2021) %}
-            <option>{{i}}</option>
-          {% endfor %}
-        </select>
-      </div>
+      {{create_select_menus(menu_data)}}
     </div>
     <div class="form-row">
       <div class="form-check">
         <input class="form-check-input" type="checkbox" value="" id="GenotypeCheck">
-        <label class="form-check-label" for="defaultCheck1">
+        <label class="form-check-label" for="GenotypeCheck">
           Search for a genotype
         </label>
       </div>
