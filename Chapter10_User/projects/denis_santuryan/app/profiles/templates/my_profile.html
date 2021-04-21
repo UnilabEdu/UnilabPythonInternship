@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+{% block content %}
+{% from 'macros_images.html' import show_profile_picture %}
+{% from 'macros_general.html' import flash_alert %}
+
+<br><br>
+<a href="/logoff" id="logoff"> გამოსვლა </a>
+
+
+<br><br><br><br><br>
+<div class="row">
+  <div class="col-3">
+    <div class="nav flex-column nav-pills nav-left-tabs" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+      <a class="nav-link  active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">ჩემი პროფილი</a>
+      <a class="nav-link tab-passive" id="v-pills-change-tab" data-toggle="pill" href="#v-pills-change" role="tab" aria-controls="v-pills-profile" aria-selected="false">მონაცემების შეცვლა</a>
+   </div>
+  </div>
+  <div class="col-9">
+    <div class="tab-content" id="v-pills-tabContent">
+      <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+    <h1 class="display-4">{{ current_user.name_first }} {{ current_user.name_last}} {{ show_profile_picture(current_user, 'myprofile-profilepicture') }}</h1>
+    <p class="lead">მომხმარებლის სახელი: {{ current_user.username }} </p>
+    <p class="lead">ელფოსტა: {{ current_user.email }} </p>
+    <p class="lead">მობილურის ნომერი: {{ current_user.phone }} </p>
+    <p class="lead">დაბადების თარიღი: {{ current_user.dob }}</p>
+    <p class="lead">ასაკი: {{ current_user.age }} </p>
+    <p class="lead">სქესი: {{ current_user.sex }}</p>
+    </div>
+      <div class="tab-pane fade" id="v-pills-change" role="tabpanel" aria-labelledby="v-pills-change-tab">
+          <form class="auth-center-register" method="POST" enctype="multipart/form-data">
+        <table>
+                <td>{{ form_register.hidden_tag() }}</td>
+            <tr>
+                <td>{{ form_register.name_first(
+                    class_='auth-input auth-input-shorter',
+                    placeholder='სახელი',
+                    value='%s' % current_user.name_first) }} &nbsp;&nbsp;&nbsp;
+
+                    {{ form_register.name_last(
+                    class_='auth-input auth-input-shorter',
+                    placeholder='გვარი',
+                    value='%s' % current_user.name_last) }}
+                </td>
+            </tr>
+            <tr>
+                <td>{{ form_register.email(
+                    class_='auth-input auth-input-short',
+                    placeholder='ელექტრონული ფოსტა',
+                    value='%s' % current_user.email) }}
+                </td>
+            </tr>
+            <tr>
+                <td>{{ form_register.phone(
+                    class_='auth-input auth-input-short',
+                    placeholder='მობილურის ნომერი',
+                    value='%s' % current_user.phone) }}
+                </td>
+            </tr>
+            <tr>
+                <td> <span id="help-register-age"> {{ form_register.dob.label }} </span> <br>
+                    {{ form_register.dob(
+                    class_='input-date', type='date',
+                    min="1900-01-01", max="2008-12-31",
+                    value="%s" % current_user.dob) }}
+                </td>
+            </tr>
+            <tr>
+                <td> <span id="help-register-sex"> <br> {{ form_register.sex.label }} </span> <br>
+                    {{ form_register.sex(
+                    class_="input-sex") }}
+                    <img id="uploaded-profile-picture" src="#" alt="your image" />
+                </td>
+            </tr>
+            <tr>
+                <td> <label class="input-picture input-profile-picture"> პროფილის სურათი
+                    {{ form_register.picture(
+                    accept="image/*",
+                    class_="hidden-picture-form",
+                    onchange="displayUploaded(this, 'profile_picture')") }}
+                    </label>
+                </td>
+            </tr>
+            <tr>
+            </tr>
+            <tr>
+                <td> <br> {{ form_register.password(class_='auth-input auth-input-short',
+                    placeholder='პაროლი ცვლილებების შესანახად',
+                    value='%s' % current_user.password) }}</td>
+            </tr>
+                <td> <span class="submit-style-register"> {{ form_register.submit_update }} </span> </td>
+            </tr>
+        </table>
+    <br><br><br><br>
+    </form>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{{ flash_alert() }}
+
+{% endblock %}
