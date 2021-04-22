@@ -40,9 +40,9 @@ def profile(username=None):
                     if x.name == 'picture':
                         x.data = save_file(current_user.username, x.data, 'profile_pictures')  # saves file to directory, returns filename
 
-                if x.name != 'password':
-                    # temporary, just for testing (to avoid circular imports)
-                    save_to_db(current_user, x.name, x.data)
+                    if x.name != 'password':
+                        # save_to_db is temporary, just for testing (to avoid circular imports)
+                        save_to_db(current_user, x.name, x.data)
 
             flash('მონაცემები წარმატებით განახლდა', 'alert-green')
 
@@ -53,7 +53,7 @@ def profile(username=None):
 
     elif username:
         user = UserModel.find_by_username(username)
-        return render_template('people_profile.html', pages=generate_pages())
+        return render_template('people_profile.html', pages=generate_pages(), user=user)
 
     else:
         if check_auth():
