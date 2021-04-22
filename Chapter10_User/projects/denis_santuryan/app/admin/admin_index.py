@@ -1,6 +1,6 @@
 from flask_admin import AdminIndexView
 from flask import redirect, url_for
-from app.resources.check_auth import check_auth
+from app.tools.check_auth import check_auth
 
 
 class MyAdminIndexView(AdminIndexView):

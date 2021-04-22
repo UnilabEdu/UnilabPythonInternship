@@ -5,9 +5,8 @@ from flask_migrate import Migrate
 from flask_login import LoginManager
 from flask_admin import Admin
 from app.admin.admin_index import MyAdminIndexView
+from app.database import db
 
-
-db = SQLAlchemy()
 migrate = Migrate()
 admin = Admin()
 login_manager = LoginManager()

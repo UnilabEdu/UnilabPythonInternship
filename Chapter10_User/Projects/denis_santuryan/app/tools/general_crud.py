@@ -1,6 +1,5 @@
 from app.models import UserModel, PostsModel
 from app import db
-# from resources.resources import users
 
 # delete the entire file later
 

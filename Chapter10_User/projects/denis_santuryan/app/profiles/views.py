@@ -1,12 +1,12 @@
 from app.models import UserModel
 from flask import Blueprint, render_template, redirect, request, flash
 from app.profiles.forms import RegisterForm
-from app.resources.format_dob import dob_string_to_datetime, calculate_age
-from app.resources.general_crud import save_to_db
-from app.resources.nav_link_list import generate_pages
+from app.tools.format_dob import dob_string_to_datetime, calculate_age
+from app.tools.general_crud import save_to_db
+from app.tools.nav_link_list import generate_pages
 from flask_login import current_user
-from app.resources.save_file import save_file
-from app.resources.check_auth import check_auth
+from app.tools.save_file import save_file
+from app.tools.check_auth import check_auth
 
 profiles_blueprint = Blueprint('profiles',
                                __name__,

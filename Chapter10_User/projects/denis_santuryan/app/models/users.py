@@ -1,5 +1,5 @@
 from app import db
-from app.resources.format_dob import calculate_age
+from app.tools.format_dob import calculate_age
 from flask_login import UserMixin
 from werkzeug.security import generate_password_hash, check_password_hash
 from app import login_manager
@@ -21,8 +21,7 @@ class UserModel(db.Model, UserMixin):
     picture = db.Column(db.String)
     post = db.relationship('PostsModel', backref='usermodel', uselist=False)
 
-
-    def __init__(self, username, name_first, name_last, email, phone, dob, age, sex, password, picture=None):
+    def __init__(self, username, name_first, name_last, email, phone, dob, sex, password, age=None, picture=None):
         self.username = username
         self.name_first = name_first
         self.name_last = name_last

@@ -3,11 +3,11 @@ from flask import render_template, url_for, redirect, flash, request
 from flask_login import login_user, logout_user
 from app.profiles.forms import SignInForm, RegisterForm
 from app.models import UserModel
-from app.resources.format_dob import calculate_age, dob_string_to_datetime
-from app.resources.nav_link_list import generate_pages
-from app.resources.check_auth import check_auth
-from app.resources.save_file import save_file
-from app.resources.general_crud import create
+from app.tools.format_dob import calculate_age, dob_string_to_datetime
+from app.tools.nav_link_list import generate_pages
+from app.tools.check_auth import check_auth
+from app.tools.save_file import save_file
+from app.tools.general_crud import create
 
 
 @app.route('/pages')
@@ -97,7 +97,7 @@ def auth():
                     picture_title = save_file(username, picture, 'profile_pictures')  # saves file to directory, returns filename
 
                 # add everything to DB           # needs to be changed
-                received_data = (username, name_first, name_last, email, phone, dob, age, sex, password, picture_title)
+                received_data = (username, name_first, name_last, email, phone, dob, sex, password, age, picture_title)
                 create(received_data, UserModel)
 
                 flash('რეგისტრაცია წარმატებით დასრულდა!', 'alert-green')

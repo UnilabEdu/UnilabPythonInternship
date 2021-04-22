@@ -3,9 +3,9 @@ from flask_login import login_required, current_user
 from datetime import datetime
 from app.posts.forms import PostForm
 from app.models import PostsModel, UserModel
-from app.resources.check_auth import check_auth
-from app.resources.save_file import save_file
-from app.resources.nav_link_list import generate_pages
+from app.tools.check_auth import check_auth
+from app.tools.save_file import save_file
+from app.tools.nav_link_list import generate_pages
 
 posts_blueprint = Blueprint('posts',
                             __name__,
@@ -31,7 +31,8 @@ def list_posts():
             if media:
                 media = save_file(user.username, media, 'post_uploads')  # saves file to directory, returns filename
             PostsModel.add(time, text, media, user.id)
-            return redirect('/posts')
+
+        return redirect('/posts')
 
     else:
         return render_template('posts.html', pages=generate_pages(), form=form_post, all_posts=all_posts, authors=authors)
