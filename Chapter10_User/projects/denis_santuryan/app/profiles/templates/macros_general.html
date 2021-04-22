@@ -1,0 +1,35 @@
+{% macro show_profile_information(user) %}
+
+    {% from macros_images import show_profile_picture %}
+
+    <h1 class="display-4">{{ current_user.name_first }} {{ current_user.name_last}} {{ show_profile_picture(user, 'myprofile-profilepicture') }}</h1>
+    <p class="lead">მომხმარებლის სახელი: {{ current_user.username }} </p>
+    <p class="lead">ელფოსტა: {{ current_user.email }} </p>
+    <p class="lead">მობილურის ნომერი: {{ current_user.phone }} </p>
+    <p class="lead">დაბადების თარიღი: {{ current_user.dob }}</p>
+    <p class="lead">ასაკი: {{ current_user.age }} </p>
+    <p class="lead">სქესი: {{ current_user.sex }}</p>
+
+{% endmacro %}
+
+
+{% macro flash_alert() %}
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+
+        <ul class="alert alert-dismissible fade show" role="alert" style="position:absolute; top:10px; float:top; width: 100%; height: 45px; text-align: center">
+
+        {% for category, message in messages %}
+          <li class="{{ category }}">{{ message }}</li>
+        {% endfor %}
+
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        </ul>
+
+    {% endif %}
+    {% endwith %}
+
+{% endmacro %}

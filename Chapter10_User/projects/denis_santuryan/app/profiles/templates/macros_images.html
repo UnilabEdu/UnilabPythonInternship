@@ -1,0 +1,7 @@
+{% macro show_profile_picture(user, style) %}
+      {% if user.picture %}
+        <img src="{{ url_for('static', filename='uploads/profile_pictures/%s' % user.picture) }}" class="{{style}}" alt="my_profile_picture">
+      {% else %}
+        <img src="{{ url_for('static', filename='uploads/profile_pictures/default_profile_picture.png') }}" class="{{style}}" alt="my_profile_picture">
+      {% endif %}
+{% endmacro %}

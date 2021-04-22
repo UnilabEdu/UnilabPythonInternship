@@ -1,0 +1,32 @@
+{%  extends "base.html" %}
+
+{% block content %}
+
+<div class="jumbotron">
+
+<fieldset>
+    <legend><strong>Registration form for students</strong></legend>
+
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        {{ form.username.label }} {{ form.username() }}
+            <br>
+            <br>
+        {{ form.email.label }} {{ form.email() }}
+            <br>
+            <br>
+        {{ form.password.label }} {{ form.password() }}
+            <br>
+        {{ form.confirm_password.label }} {{ form.confirm_password() }}
+            <br>
+            <br>
+        {{ form.tutor_id.label }} {{ form.tutor_id() }}
+            <br>
+            <br>
+        {{ form.submit() }}
+    </form>
+
+</fieldset>>
+
+</div>
+{% endblock %}

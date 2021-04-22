@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+{% from 'macros_images.html' import show_profile_picture %}
+
+
+<div class="jumbotron jumbotron-fluid" style="background-color: white">
+  <div class="container">
+    <h1 class="display-4">{{ user.name_first }} {{ user.name_last}} {{ show_profile_picture(user, 'myprofile-profilepicture') }}</h1>
+    <p class="lead">მომხმარებლის სახელი: {{ user.username }} </p>
+    <p class="lead">ელფოსტა: {{ user.email }} </p>
+    <p class="lead">მობილურის ნომერი: {{ user.phone }} </p>
+    <p class="lead">დაბადების თარიღი: {{ user.dob }}</p>
+    <p class="lead">ასაკი: {{ user.age }} </p>
+    <p class="lead">სქესი: {{ user.sex }}</p>  </div>
+</div>
+
+{% endblock %}
