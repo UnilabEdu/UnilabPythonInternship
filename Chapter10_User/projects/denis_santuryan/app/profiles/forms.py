@@ -6,7 +6,11 @@ from app.models import UserModel
 
 
 class SignInForm(FlaskForm):
-    identifier = StringField('მომხმარებლის სახელი ან ელფოსტა',  # either email or username
+    """
+    form used for signing in with username or email and password
+    can check remember_me to stay logged in
+    """
+    identifier = StringField('მომხმარებლის სახელი ან ელფოსტა',
                              validators=[
                                  DataRequired(message="მეილის ან იუზერნეიმის შეყვანა აუცილებელია"),
                                  length(min=4, max=100, message="არასწორადაა შეყვანილი"),
@@ -21,6 +25,9 @@ class SignInForm(FlaskForm):
 
 
 class RegisterForm(FlaskForm):
+    """
+    form used for signing up or updating user data when signed in
+    """
     username = StringField('მომხმარებლის სახელი',
                            validators=[
                                DataRequired(message="უნიკალური იუზერნეიმი აუცილებელია"),
