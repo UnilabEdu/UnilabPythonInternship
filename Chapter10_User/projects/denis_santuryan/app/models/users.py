@@ -1,11 +1,16 @@
-from app import db
-from app.tools.format_dob import calculate_age
 from flask_login import UserMixin
 from werkzeug.security import generate_password_hash, check_password_hash
+
+from app import db
 from app import login_manager
+from app.tools.format_dob import calculate_age
 
 
 class UserModel(db.Model, UserMixin):
+    """
+    contains data about registered users
+    each user may have posts linked to their profile
+    """
     __tablename__ = 'users'
 
     id = db.Column(db.Integer, primary_key=True)
@@ -48,10 +53,10 @@ class UserModel(db.Model, UserMixin):
         return cls.query.filter_by(email=temp_email).first()
 
 
-# later check if I need the 'try' part. if yes, define the exact exception
+# catch an Exception and specify it instead of catching every exception
 @login_manager.user_loader
 def load_user(user_id):
     try:
         return UserModel.query.get(user_id)
-    except:
-        pass
+    except Exception as e:
+        print(e)

@@ -16,21 +16,23 @@ posts_blueprint = Blueprint('posts',
 # server:port/blueprint_prefix/add
 @posts_blueprint.route('/', methods=['GET', 'POST'])
 def list_posts():
-    user = None
+    """
+    shows all posts and lets signed-in users post a picture, text or both
+    """
     form_post = PostForm()
     all_posts = PostsModel.query.all()
     authors = UserModel
 
     if request.method == 'POST' and check_auth():
-        user = UserModel.query.get(current_user.id)
         if form_post.text.data or form_post.media.data:
             text = form_post.text.data
             media = form_post.media.data
             time = datetime.now()
 
             if media:
-                media = save_file(user.username, media, 'post_uploads')  # saves file to directory, returns filename
-            PostsModel.add(time, text, media, user.id)
+                media = save_file(current_user.username, media, 'post_uploads')  # saves file to directory, returns filename
+
+            PostsModel.add(time, text, media, current_user.id)
 
         return redirect('/posts')
 

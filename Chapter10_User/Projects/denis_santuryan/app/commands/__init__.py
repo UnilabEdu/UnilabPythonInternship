@@ -1,8 +1,7 @@
+from flask_migrate import MigrateCommand
 from flask_script import Manager, Server
 
 from app import create_app
-
-from flask_migrate import MigrateCommand
 from .db_init import InitDbCommand
 
 app = create_app()

@@ -1,7 +1,8 @@
 from flask_script import Command
+
+from app.data.dummy_data import users
 from app.database import db
 from app.models import UserModel
-from app.data.dummy_data import users
 
 
 class InitDbCommand(Command):

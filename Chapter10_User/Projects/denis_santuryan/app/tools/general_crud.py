@@ -35,34 +35,3 @@ def update(class_name, username, new_params):
         except:
             db.session.add(class_name(*new_params))
             db.session.commit()
-
-
-def delete(class_name, _id):
-    row = class_name.query.get(_id)
-    db.session.delete(row)
-    db.session.commit()
-
-
-def add_relationship(class_name, _id, foreign_class_name, foreign_id):
-    # adds a last argument to an already existing row
-    # doesn't work???
-    primary = class_name.query.get(_id)
-    foreign = foreign_class_name.query.get(foreign_id)
-    primary.users_id = foreign.id
-    db.session.add(primary)
-    db.session.commit()
-
-
-def save_to_db(user, attribute, data):
-    from app import db
-    setattr(user, attribute, data)
-    db.session.commit()
-
-# Using CRUD
-
-# create(users, UserModel)
-# print(read_all(UserModel))
-# update(UserModel, 'denissanturyan', ('denissanturyan', 'Denis Santuryan', 'denis.santuryan.1@iliauni.edu.ge', 21, 'Male', '598-465-865'))
-# delete(UserModel, 12)
-
-# add_relationship(PagesModel, 1, UserModel, 2)
