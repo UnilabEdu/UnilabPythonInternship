@@ -2,6 +2,9 @@ from app import db
 
 
 class PostsModel(db.Model):
+    """
+    contains posts' data submitted by users
+    """
     __tablename__ = 'posts'
 
     id = db.Column(db.Integer, primary_key=True)

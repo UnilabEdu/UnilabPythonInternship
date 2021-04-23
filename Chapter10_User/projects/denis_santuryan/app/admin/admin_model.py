@@ -1,8 +1,9 @@
-from flask_admin.contrib.sqla import ModelView
 from flask import url_for, redirect
+from flask_admin.contrib.sqla import ModelView
+
 from app import admin, db
 from app.models import UserModel, PostsModel
-from app.resources.check_auth import check_auth
+from app.tools.check_auth import check_auth
 
 
 class AdminModelView(ModelView):
