@@ -7,22 +7,14 @@
 </head>
 <body>
 <div class="container">
-    <h1>გამოიწერეთ ახალი ამბები</h1>
+    <h1>ფაილის ატვირთვა</h1>
 
-    {% if email %}
-        <p>თქვენ მოგივათ შეტყობინებები <strong>{{ email }}</strong> მისამართზე</p>
-        <p>მონაცემის განახლება შეგიძლიათ ქვემოთ ფორმიდან</p>
-    {% else %}
-        <p>გთხოვთ შეავსოთ ფორმა</p>
-    {% endif %}
-
-    <form method="POST">
+    <form method="POST" enctype="multipart/form-data">
         {{ form.hidden_tag() }}
-        {{ form.email.label }} {{ form.email() }}
+        {{ form.title.label }} {{ form.title() }}
             <br>
-        {{ form.confirm_email.label }} {{ form.confirm_email() }}
+        <input type="file" name="file"/>
             <br>
-        {{ form.option.label }} {{ form.option() }}
         {{ form.submit() }}
     </form>
 </div>

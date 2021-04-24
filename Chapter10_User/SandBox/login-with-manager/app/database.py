@@ -12,5 +12,5 @@ metadata = MetaData(
 )
 
 # Instantiate Flask extensions
-# db = SQLAlchemy(metadata=metadata)
-db = SQLAlchemy()
+db = SQLAlchemy(metadata=metadata)
+# db = SQLAlchemy()
