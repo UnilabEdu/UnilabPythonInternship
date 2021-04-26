@@ -1,8 +1,8 @@
 from flask_script import Command
 
-from app.data.dummy_data import users
+from app.data.dummy_data import users, roles
 from app.database import db
-from app.models import UserModel
+from app.models import UserModel, Role
 
 
 class InitDbCommand(Command):
@@ -17,6 +17,11 @@ def init_db():
 
 
 def populate_db():
+    for r in roles:
+        r = Role(r)
+        db.session.add(r)
+    db.session.commit()
+
     for t in users:
         t = UserModel(*t)
         db.session.add(t)
