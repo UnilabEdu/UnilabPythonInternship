@@ -1,3 +1,14 @@
+from nursera import app, db, NursesModel
+from flask import render_template, redirect, url_for, session
+from forms import registration_form, registration_form2, final_save_to_db
+
+
+
+@app.route('/', methods=['GET'])
+def repr():
+    return render_template("represent.html")
+
+
 
 @app.route('/step1', methods=['GET', 'POST'])
 def step1():

@@ -1,5 +1,4 @@
-from flask import Flask, render_template, redirect, url_for, session
-from forms import registration_form, registration_form2, final_save_to_db
+from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 import os
