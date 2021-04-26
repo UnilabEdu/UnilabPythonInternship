@@ -49,7 +49,7 @@ def profile(username=None):
                     if x.name == 'picture':
                         x.data = save_file(current_user.username, x.data, 'profile_pictures')  # saves file to directory, returns filename
 
-                    if x.name != 'password':
+                    if x.name != 'password' and x.name != 'role':
                         setattr(current_user, x.name, x.data)
                         db.session.commit()
             flash('მონაცემები წარმატებით განახლდა', 'alert-green')
