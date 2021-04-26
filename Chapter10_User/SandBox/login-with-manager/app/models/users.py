@@ -1,26 +1,29 @@
-from app.database import db
+from app.models import db
 from flask_user import UserMixin
 
 
 class User(db.Model, UserMixin):
     __tablename__ = 'users'
     id = db.Column(db.Integer, primary_key=True)
-    active = db.Column('is_active', db.Boolean(), nullable=False, server_default='1')
 
-    # User authentication information. The collation='NOCASE' is required
-    # to search case insensitively when USER_IFIND_MODE is 'nocase_collation'.
-    username = db.Column(db.String(255, collation='NOCASE'), nullable=False, unique=True)
+    # User authentication information (required for Flask-User)
+    email = db.Column(db.Unicode(255), nullable=False,
+                      server_default=u'', unique=True)
+    username = db.Column(db.String(80), nullable=False, server_default='')
+    # confirmed_at = db.Column(db.DateTime())
     password = db.Column(db.String(255), nullable=False, server_default='')
+    active = db.Column(db.Boolean(), nullable=False, server_default='0')
 
     # User information
-    first_name = db.Column(db.String(100, collation='NOCASE'), nullable=False, server_default='')
-    last_name = db.Column(db.String(100, collation='NOCASE'), nullable=False, server_default='')
+    active = db.Column('is_active', db.Boolean(),
+                       nullable=False, server_default='0')
 
-    # Define the relationship to Role via UserRoles
-    roles = db.relationship('Role', secondary='user_roles', )
+    # Relationships
+    roles = db.relationship('Role', secondary='user_roles',
+                            backref=db.backref('users', lazy='dynamic'))
 
     def __repr__(self):
-        return self.first_name
+        return self.username
 
 
 # Define the Role data-model

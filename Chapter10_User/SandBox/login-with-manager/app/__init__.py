@@ -4,9 +4,10 @@ from flask import Flask
 from flask_migrate import Migrate
 from flask_user import UserManager, SQLAlchemyAdapter
 
-from app.database import db
-from app.models import RandomModel
+from app.models import db
+from app.models.random import RandomModel
 from app.models.users import User, Role, UserRoles
+
 from app.user.admin import admin
 
 # app = Flask(__name__)
@@ -24,9 +25,8 @@ def create_app():
     app.config['SECRET_KEY'] = 'mysecretkey'
     basedir = os.path.abspath(os.path.dirname(__file__))
     app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir, 'data.db')
-    app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-    app.config['USER_ENABLE_EMAIL'] = False
-
+    app.config['DEBUG'] = True
+    app.config.from_object('app.settings')
     # Setup Flask-SQLAlchemy
     db.init_app(app)
 
@@ -39,5 +39,11 @@ def create_app():
     # Setup Flask-User
     db_adapter = SQLAlchemyAdapter(db, User)  # Setup the SQLAlchemy DB Adapter
     UserManager(db_adapter, app)  # Init Flask-User and bind to app
+
+    from app.main.views import main_blueprint
+    app.register_blueprint(main_blueprint, url_prefix='/')
+
+    from app.error_pages.handlers import error_pages
+    app.register_blueprint(error_pages)
 
     return app
