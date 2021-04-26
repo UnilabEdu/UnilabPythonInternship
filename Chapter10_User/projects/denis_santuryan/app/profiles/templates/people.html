@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+{% from 'macros_images.html' import show_profile_picture %}
+
+        <div class="profile-list-all">
+        {% for p in people_list %}
+            <a href="profile/{{p.username}}">
+                <div class="profile-list-one">
+                    <table style="flex-direction: row">
+                    <td>
+                        <tr> {{ show_profile_picture(p, 'profile-list-image') }} </tr>
+                    </td>
+                    <td>
+                        <tr><span class="profile-list-name"> {{ p.name_first }} {{ p.name_last }}
+                        </span> </tr>
+                    </td>
+                    </table>
+                </div>
+            </a>
+        {% endfor %}
+        </div>
+
+{% endblock %}

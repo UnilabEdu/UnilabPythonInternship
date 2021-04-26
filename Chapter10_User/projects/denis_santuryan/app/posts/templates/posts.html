@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+{% block content %}
+{% from 'macros_images.html' import show_post_media, show_profile_picture %}
+
+<div class="posts-container">
+  <div class="c-3">
+    <div class="nav flex-column nav-pills nav-left-tabs" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+      <a class="nav-link  active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">ყველა პოსტი</a>
+      <a class="nav-link tab-passive" id="v-pills-change-tab" data-toggle="pill" href="#v-pills-change" role="tab" aria-controls="v-pills-profile" aria-selected="false">მეგობრების პოსტები</a>
+   </div>
+  </div>
+
+
+<div class="c-6">
+
+    {% if current_user.username %}
+
+        {{ form.hidden_tag() }}
+        <form method="POST" enctype="multipart/form-data">
+                {{ form.text(
+                class_='post-input',
+                placeholder='დაწერე რაც მოგაფიქრდება') }}
+
+            <label class="input-picture input-post-picture"> სურათის ატვირთვა
+                {{ form.media(
+                accept="image/*",
+                class_="hidden-picture-form",
+                onchange="displayUploaded(this, 'post_picture')") }}
+            </label>
+
+            <span class="submit-style-post"> {{ form.submit_post }} </span>
+
+        </form>
+
+    {% endif %}
+
+
+<div class="tab-content" id="v-pills-tabContent">
+<div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab" style="flex-direction: column-reverse">
+
+  {% if all_posts %}
+
+      <div id="posts">
+      {% for post in all_posts %}
+
+          {% with author = authors.query.get(post.user_id) %}
+
+          <div class="c-6 timeline">
+              <div class="timeline-post">
+                    <p class="post-date">{{ post.time.year, post.time.month, post.time.day }} </p>
+                    <a href="{{ url_for('people', filename='profile/%s' % author.username) }}" class="post-author-link">
+                        {{ show_profile_picture(author, 'author-picture') }} {{ author.name_first }} {{ author.name_last }}
+                    </a>
+
+                    {% if post.text %}
+                    <p class="post-text"> {{ post.text }} </p>
+                        {% else %}
+                        <br><br><br>
+                    {% endif %}
+
+                    {% if post.media %}
+                    {{ show_post_media(post, 'timeline-picture') }}
+                    {% endif %}
+              </div>
+          </div>
+          {% endwith %}
+      {% endfor %}
+
+
+  {% else %}
+      <h1> ჯერ არავის არ დაუპოსტავს </h1>
+  {% endif %}
+
+      </div>
+</div>
+
+
+  <div class="tab-pane fade" id="v-pills-change" role="tabpanel" aria-labelledby="v-pills-change-tab">
+  </div>
+</div>
+
+
+</div>
+        <div class="c-3">
+            <img id="uploaded-post-picture" src="#" alt="your image" />
+        </div>
+</div>
+
+{% endblock %}
