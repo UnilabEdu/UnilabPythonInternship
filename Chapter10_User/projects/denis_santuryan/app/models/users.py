@@ -6,6 +6,17 @@ from app import login_manager
 from app.tools.format_dob import calculate_age
 
 
+class Role(db.Model):
+    __tablename__ = 'roles'
+
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(80), unique=True)
+    users = db.relationship('UserModel', backref='roles', uselist=False)
+
+    def __init__(self, name):
+        self.name = name
+
+
 class UserModel(db.Model, UserMixin):
     """
     contains data about registered users
@@ -25,8 +36,9 @@ class UserModel(db.Model, UserMixin):
     age = db.Column(db.Integer)
     picture = db.Column(db.String)
     post = db.relationship('PostsModel', backref='usermodel', uselist=False)
+    role_id = db.Column(db.Integer, db.ForeignKey('roles.id'))
 
-    def __init__(self, username, name_first, name_last, email, phone, dob, sex, password, age=None, picture=None):
+    def __init__(self, username, name_first, name_last, email, phone, dob, sex, password, role_id, age=None, picture=None):
         self.username = username
         self.name_first = name_first
         self.name_last = name_last
@@ -35,6 +47,7 @@ class UserModel(db.Model, UserMixin):
         self.dob = dob
         self.sex = sex
         self.password = generate_password_hash(password)
+        self.role_id = role_id
         self.age = calculate_age(dob)
         self.picture = picture
 

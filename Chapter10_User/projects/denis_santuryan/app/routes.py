@@ -99,7 +99,8 @@ def auth():
                     picture_title = save_file(username, picture, 'profile_pictures')  # saves file to directory, returns filename
 
                 # add everything to DB           # needs to be changed
-                received_data = (username, name_first, name_last, email, phone, dob, sex, password, age, picture_title)
+                role = 3
+                received_data = (username, name_first, name_last, email, phone, dob, sex, password, role, age, picture_title)
                 create(received_data, UserModel)
                 new_user = UserModel(*received_data)
                 db.session.add(new_user)
