@@ -1,18 +1,16 @@
-from app.database import db
+from flask_sqlalchemy import SQLAlchemy
+from sqlalchemy import MetaData
 
+metadata = MetaData(
+    naming_convention={
+        "ix": 'ix_%(column_0_label)s',
+        "uq": "uq_%(table_name)s_%(column_0_name)s",
+        "ck": "ck_%(table_name)s_%(constraint_name)s",
+        "fk": "fk_%(table_name)s_%(column_0_name)s_%(referred_table_name)s",
+        "pk": "pk_%(table_name)s"
+    }
+)
 
-class RandomModel(db.Model):
-    __tablename__ = "randoms"
-
-    id = db.Column(db.Integer, primary_key=True)
-    param1 = db.Column(db.String)
-    param2 = db.Column(db.String)
-    param3 = db.Column(db.String)
-
-    def __init__(self, param1, param2, param3):
-        self.param1 = param1
-        self.param2 = param2
-        self.param3 = param3
-
-    def __repr__(self):
-        return self.param1
+# Instantiate Flask extensions
+db = SQLAlchemy(metadata=metadata)
+# db = SQLAlchemy()

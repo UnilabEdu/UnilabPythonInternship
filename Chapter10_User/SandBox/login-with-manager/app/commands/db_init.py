@@ -1,7 +1,7 @@
 from flask_script import Command
-from app.database import db
+from app.models import db
 from app.data.dummy import dummy_data
-from app.models import RandomModel
+from app.models.random import RandomModel
 from app.models.users import User, Role, UserRoles
 
 
