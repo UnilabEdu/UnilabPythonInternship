@@ -37,3 +37,10 @@ class NursesModel(db.Model):
     def __repr__(self):
         return f'Nurse email:{self.email}, name {self.first_name} {self.last_name}, address: {self.address},' \
                f'department: {self.department}, shift: {self.shift}'
+
+
+from nurse.nurse_registration.views import nurse_blueprint
+app.register_blueprint(nurse_blueprint, url_prefix="/")
+
+from nurse.homepage.views import homepage
+app.register_blueprint(homepage, url_prefix="/")

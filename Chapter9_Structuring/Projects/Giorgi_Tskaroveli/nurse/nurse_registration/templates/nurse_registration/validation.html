@@ -17,32 +17,32 @@
         <tr>
             <th>ელექტრონული ფოსტა</th>
             <th>{{session['email']}}</th>
-            <th><a href={{url_for('step1')}}>რედაქტირება</a></th>
+            <th><a href={{url_for('nurse_registration.step1')}}>რედაქტირება</a></th>
         </tr>
         <tr>
             <th>სახელი</th>
             <th>{{session['first_name']}}</th>
-            <th><a href={{url_for('step1')}}>რედაქტირება</a></th>
+            <th><a href={{url_for('nurse_registration.step1')}}>რედაქტირება</a></th>
         </tr>
         <tr>
             <th>გვარი</th>
             <th>{{session['last_name']}}</th>
-            <th><a href={{url_for('step1')}}>რედაქტირება</a></th>
+            <th><a href={{url_for('nurse_registration.step1')}}>რედაქტირება</a></th>
         </tr>
         <tr>
             <th>დეპარტამენტი</th>
             <th>{{session['address']}}</th>
-            <th><a href={{url_for('step2')}}>რედაქტირება</a></th>
+            <th><a href={{url_for('nurse_registration.step2')}}>რედაქტირება</a></th>
         </tr>
         <tr>
             <th>მისამართი</th>
             <th>{{session['department']}}</th>
-            <th><a href={{url_for('step2')}}>რედაქტირება</a></th>
+            <th><a href={{url_for('nurse_registration.step2')}}>რედაქტირება</a></th>
         </tr>
         <tr>
             <th>მორიგეობის განრიგი</th>
             <th>{{session['shift']}}</th>
-            <th><a href={{url_for('step2')}}>რედაქტირება</a></th>
+            <th><a href={{url_for('nurse_registration.step2')}}>რედაქტირება</a></th>
         </tr>
     </table>
     </div>
