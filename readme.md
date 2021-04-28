@@ -42,6 +42,8 @@
 
 პროექტზე მუშაობენ:
 - [პროექტის ავტორი](https://github.com/temurchichua) | [პროექტის დასახელება](რეპოზიტორიის მისამართი) | [დემონსტრაცია](სერვერის მისამართი)
+- [დენისი სანტურიანი](https://github.com/Denissant) | [სოციალური ქსელი](https://github.com/Denissant/SocialMedia)
+
 ## შეხვედრის ჩანაწერები
 
 - [გაცნობითი შეხვედრა](https://drive.google.com/file/d/1LW7pG4h77FelpchC8Okyi8hhdSsy88ZF/view?usp=sharing)
