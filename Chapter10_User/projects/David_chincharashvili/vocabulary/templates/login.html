@@ -3,39 +3,43 @@
 {% block title %}Login{% endblock %}
 {% block content %}
 
-<!-- Form Mixin-->
-<!-- Input Mixin-->
-<!-- Button Mixin-->
-<!-- Pen Title-->
-<div class="pen-title">
-{#  <h1>Flat Login Form</h1><span>Pen <i class='fa fa-paint-brush'></i> + <i class='fa fa-code'></i> by <a href='http://andytran.me'>Andy Tran</a></span>#}
-</div>
+
 <!-- Form Module-->
 <div class="module form-module">
   <div class="toggle"><div>Register</div><i class="fa fa-times fa-pencil"></i></div>
   <div class="form">
     <h2>Login to your account</h2>
-    <form>
-
+    <form action="{{ url_for('login', next=next) }}" method="POST">
         {{ field(form.username) }}
         {{ field(form.password) }}
 
-      <button>Login</button>
+      <input type="submit" value="Login">
+        <a href="{{ url_for("home") }}">Home</a>
     </form>
   </div>
   <div class="form">
     <h2>Create an account </h2>
-    <form>
+    <form action="/register" method="POST">
         {{ field(form.username) }}
         {{ field(form.password) }}
         {{ field(form.email) }}
 
-      <button>Register</button>
+      <input type="submit" value="Register">
+
     </form>
   </div>
   <div class="cta"><a href="#">Forgot your password?</a></div>
-</div>
 
+</div>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+        <ul class="flashes module form-module p-3">
+        {% for message in messages %}
+            <li class="ml-5">{{ message }}</li>
+        {% endfor %}
+        </ul>
+    {% endif %}
+    {% endwith %}
 
 <style>
 
