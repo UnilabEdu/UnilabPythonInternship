@@ -497,8 +497,10 @@ from flask_wtf import FlaskForm
 from flask_wtf.file import FileField, FileRequired
 from werkzeug.utils import secure_filename
 
+
 class UploadForm(FlaskForm):
     file = FileField()
+
 
 @app.route('/upload', methods=['GET', 'POST'])
 def upload():
@@ -506,7 +508,7 @@ def upload():
 
     if form.validate_on_submit():
         filename = secure_filename(form.file.data.filename)
-        form.file.data.save('uploads/' + filename)
+        form.file.data.save()
         return redirect(url_for('upload'))
 
     return render_template('upload.html', form=form)
