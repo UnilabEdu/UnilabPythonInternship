@@ -43,6 +43,8 @@
 პროექტზე მუშაობენ:
 - [პროექტის ავტორი](https://github.com/temurchichua) | [პროექტის დასახელება](რეპოზიტორიის მისამართი) | [დემონსტრაცია](სერვერის მისამართი)
 - [დენისი სანტურიანი](https://github.com/Denissant) | [სოციალური ქსელი](https://github.com/Denissant/SocialMedia) | [დემონსტრაცია](https://unlb-social.herokuapp.com)
+- [ვაჟა ბერძენიშვილი](https://github.com/vazhaberdzenishvili) | [Inventory](https://github.com/vazhaberdzenishvili/MyInventory)
+
 
 ## შეხვედრის ჩანაწერები
 
