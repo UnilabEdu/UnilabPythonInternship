@@ -1,8 +1,0 @@
-{% extends "base.html" %}
-{% block content %}
-
-<h2 class="text-center"> Thank {{ session['name'] }} {{ session['lastname'] }} you for booking with us ! </h2>
-<p>Your intended dates of stay is from {{ session['date_from'] }} to {{ session['date_to'] }} </p>
-<p> Confirmed {{ session['select_adult'] }} adults and {{ session['select_child'] }} child</p>
-
-{% endblock %}
