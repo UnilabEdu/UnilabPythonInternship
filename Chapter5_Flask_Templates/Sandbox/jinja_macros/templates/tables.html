@@ -1,8 +1,0 @@
-{% from "macros.html" import table_generator %}
-{% extends "base.html" %}
-{% block content %}
-<div class="container">
-  <h3>This is the table for {{ table['headers'][1:] | join(', ') }}</h3>
-  {{ table_generator(table) }}
-</div>
-{% endblock %}
