@@ -1,7 +1,19 @@
-h1 {
-    color: blue;
-    text-align: center;
+body {
+	background-color: cyan;
+	font-size: 30px;
 }
-label {
 
+#registration_div{
+	background-color: yellow;
+	text-align: center;
+	margin-top: 240px;
+	margin-left: 400px;
+	margin-right: 400px;
+	padding: 20px;
+	font-family: Arial;
+
+}
+
+.div1 {
+	color: red;
 }
