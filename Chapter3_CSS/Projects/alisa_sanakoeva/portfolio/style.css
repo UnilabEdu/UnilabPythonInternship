@@ -1,0 +1,58 @@
+body {
+    background-color: #040e2d;
+}
+
+
+h1{
+    color: aquamarine;
+}
+
+h2 {
+    color: lightpink;
+}
+h3 {
+    color: lightpink;
+}
+
+p {
+    color: aquamarine;
+}
+
+img {
+    border-radius: 25px;
+    border: 3px solid #2a9d8f;
+    padding: 20px;
+}
+
+ul {
+    color: #f5c6cb;
+}
+
+.container {
+    font-size: 20px;
+    margin: 50px;
+    border-radius: 25px;
+}
+
+#general {
+    border: #2a9d8f 3px dotted;
+    background-color: #002c53;
+    text-align: center;
+    }
+
+#siblings {
+    border: #6D435A 3px dashed;
+    background-color: #cdb4db;
+    padding: 20px;
+    }
+
+table {
+    color: #6D435A;
+    background-color: lightpink;
+}
+
+#traits {
+    border: lightpink 3px solid;
+    background-color: #6D435A;
+    padding: 20px;
+}
