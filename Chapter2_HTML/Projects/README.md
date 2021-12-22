@@ -17,7 +17,7 @@
 - სალომე ჯავაშვილი| [რთული კითხვაა](/Chapter2_HTML/Projects/salome_javashvili/ბენდის_საიტი) | [გამოკითხვა](/Chapter2_HTML/Projects/salome_javashvili/გამოკითხვა)
 - ირაკლი გიუნაშვილი| [პროგრამინგ ლენგვიჯ ჩოის](https://github.com/IrakliG/UnilabPythonInternship/blob/master/first_html_for_unilab.html) | [რეგისტრაციის ფორმა](https://github.com/IrakliG/UnilabPythonInternship/blob/master/registration%20form.html)
 - ალისა სანაკოევი| [პორტფოლიო თუ რაღაც ეგეთი](https://htmlpreview.github.io/?https://github.com/alisa-sanakoeva/UnilabPythonInternship/blob/master/Chapter2_HTML/Projects/alisa_sanakoeva/portfolio/alisa.html)
-- ნიკა ქვრივიშვილი | [Gojira](https://htmlpreview.github.io/?https://github.com/UnilabEdu/UnilabPythonInternship/blob/master/Chapter2_HTML/Projects/Nika_Kvrivishvili/Gojira.html)| [Band registration](https://htmlpreview.github.io/?https://github.com/nika-kvr/UnilabPythonInternship/blob/master/Chapter2_HTML/Projects/Nika_Kvrivishvili/Band%20registration/band_registration.html)
+- ნიკა ქვრივიშვილი | [Gojira](https://htmlpreview.github.io/?https://github.com/UnilabEdu/UnilabPythonInternship/blob/master/Chapter2_HTML/Projects/Nika_Kvrivishvili/Gojira.html)
 
 ## ინსტრუქცია
 მოამზადეთ პროექტის ინსტრქუციაში აღწერილი პირობის შესაბამისი ორი HTML პროექტი და დაამატეთ ზემოთ ნაჩვენებ სიაში მათი საჩვენებელი მისამართები. (იხ. დამატებით რესურსები)
