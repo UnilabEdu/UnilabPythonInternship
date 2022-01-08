@@ -1,7 +1,7 @@
 from flask import Flask, render_template, url_for, redirect
 from flask_wtf import FlaskForm
-from wtforms import StringField, SubmitField
 from flask_wtf.file import FileField, FileRequired
+from wtforms import StringField, SubmitField
 from werkzeug.utils import secure_filename
 
 app = Flask(__name__)
