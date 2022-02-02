@@ -53,7 +53,7 @@ def index():
         redirect(url_for('index'))
 
     # shekithva form name age
-    return render_template('index.html', form=form, name=name, age=age, data=data)
+    return render_template('index.html', form=form, data=data)
 
 
 if __name__ == "__main__":

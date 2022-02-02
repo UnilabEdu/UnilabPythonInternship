@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block content %}
+<br>
+<div class="container" >
+<form method="POST">
+    {{ form.hidden_tag() }}
+    {{ form.name.label(class="form-label") }} {{ form.name(class="form-control") }}
+    <br>
+    {{ form.email.label(class="form-label") }} {{ form.email(class="form-control") }}
+    <br>
+    {{ form.program_id.label(class="form-label") }} {{ form.program_id(class="form-select") }}
+    <br>
+    <br>
+    {{ form.rules(class="form-check-input") }} {{ form.rules.label(class="form-check-label") }}
+    <br>
+    <br>
+    {{ form.submit(class="btn btn-primary mb-3") }}
+</form>
+</div>
+<br>
+<!--<div class="container">-->
+
+<!--    <ul class="list-group">-->
+<!--        <li class="list-group-item"> <h4>Python</h4> </li>-->
+<!--        {% for x in data_python %}-->
+<!--            <li class="list-group-item"> {{ x }} </li>-->
+<!--        {% endfor %}-->
+<!--    </ul>-->
+<!--    <br>-->
+<!--    <ul class="list-group">-->
+<!--        <li class="list-group-item"> <h4>Front-End</h4> </li>-->
+<!--        {% for x in data_frontend %}-->
+<!--            <li class="list-group-item"> {{ x }} </li>-->
+<!--        {% endfor %}-->
+<!--    </ul>-->
+<!--    <br>-->
+<!--    <ul class="list-group">-->
+<!--        <li class="list-group-item"> <h4>Graphic Design</h4> </li>-->
+<!--        {% for x in data_graphic_design %}-->
+<!--            <li class="list-group-item"> {{ x }} </li>-->
+<!--        {% endfor %}-->
+<!--    </ul>-->
+<!--</div>-->
+{% endblock %}
