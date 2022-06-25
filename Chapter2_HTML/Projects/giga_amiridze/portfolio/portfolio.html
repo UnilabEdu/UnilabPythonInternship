@@ -5,6 +5,7 @@
         <meta name="description" content="My Portfolio">
         <meta name="keywords" content="Portfolio, HTML, CSS">
         <meta name="author" content="Giga Amiridze">
+        <link rel="stylesheet" type="text/css" href="style.css">
         <title>Portfolio</title>
     </head>
     <body>
@@ -33,7 +34,9 @@
             <div class="container">
                 <hr>
                 <h2>ჩემს შესახებ</h2>
-                <img src="curly-boy.jpg" alt="Curly Boy">
+                <div class="img-box">
+                    <img src="curly-boy.jpg" alt="Curly Boy">
+                </div>
                 <div class="about-info">
                     <p>სახელი: გიგა</p>
                     <p>გვარი: ამირიძე</p>
@@ -60,32 +63,34 @@
             <div class="container">
                 <hr>
                 <h2>სოციალური ქსელები</h2>
-                <table border="1">
-                    <tbody>
-                        <tr>
-                            <th>პლატფორმა</th>
-                            <th>მისამართი</th>
-                        </tr>
-                        <tr>
-                            <td>GitHub</td>
-                            <td>
-                                <a href="https://github.com/gigaamiridze" target="_blank">gigaamiridze</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Instagram</td>
-                            <td>
-                                <a href="https://www.instagram.com/flameoxx/" target="_blank">flameoxx</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Facebook</td>
-                            <td>
-                                <a href="https://www.facebook.com/flameoxx/" target="_blank">Giga Amiridze</a>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="networks-table">
+                    <table border="1">
+                        <tbody>
+                            <tr>
+                                <th>პლატფორმა</th>
+                                <th>მისამართი</th>
+                            </tr>
+                            <tr>
+                                <td>GitHub</td>
+                                <td>
+                                    <a href="https://github.com/gigaamiridze" target="_blank">gigaamiridze</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Instagram</td>
+                                <td>
+                                    <a href="https://www.instagram.com/flameoxx/" target="_blank">flameoxx</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Facebook</td>
+                                <td>
+                                    <a href="https://www.facebook.com/flameoxx/" target="_blank">Giga Amiridze</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
                 <hr>
             </div>
         </section>
