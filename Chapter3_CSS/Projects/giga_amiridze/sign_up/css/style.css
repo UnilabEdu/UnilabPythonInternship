@@ -1,0 +1,156 @@
+/* Import poppins font from Goolge fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+.body-bg {
+    background-image: url("../images/body-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+}
+.signup-section {
+    padding: 120px 0;
+}
+.container {
+    max-width: 1124px;
+    height: 750px;
+    background-image: url("../images/container-bg.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    position: relative;
+}
+.signup-content {
+    width: 560px;
+    background-color: rgba(177,135,77,.75);
+    position: absolute;
+    top: 136px;
+    right: 0;
+    bottom: 113px;
+}
+.signup-form {
+    padding: 55px 80px 35px 55px;
+    display: flex;
+    flex-direction: column;
+}
+.signup-form h2 {
+    font-size: 36px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #FFFFFF;
+}
+.signup-form p {
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    line-height: 1.8;
+    color: #FFFFFF;
+    margin: 10px 0 30px 0;
+}
+.signup-form p span {
+    font-weight: 700;
+}
+.input-field {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #ebebeb;
+    outline: none;
+    padding: 3px 0;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+.input-field::placeholder {
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    color: #FFFFFF;
+}
+.input-field[type='text'] {
+    text-transform: capitalize;
+}
+.input-field[type='email'] {
+    margin: 23px 0;
+}
+.form-group {
+    display: flex;
+    align-items: center;
+    margin: 23px 0 60px 0;
+}
+input[type='checkbox'] {
+    margin: 0 15px 0 0;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background-color: transparent;
+    border: 1px solid #FFFFFF;
+    border-radius: 2px;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+input[type='checkbox']:after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 700;
+    content: "\f00c";
+    font-size: 10px;
+    color: #FFFFFF;
+    display: none;
+}
+input[type='checkbox']:checked:after {
+    display: block;
+}
+.agree-term {
+    font-size: 13px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    color: #FFFFFF;
+}
+.agree-term a {
+    color: #FFFFFF;
+    position: relative;
+}
+.agree-term a::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #FFFFFF;
+    position: absolute;
+    right: 0;
+    border-radius: 2px;
+}
+.submit-btn {
+    width: 130px;
+    height: 50px;
+    border: none;
+    border-radius: 25px;
+    font-size: 13px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.submit-btn:first-child {
+    margin-right: 25px;
+    background-color: #FFFFFF;
+    color: rgba(177,135,77,.75);
+    box-shadow: 0 15px 9.9px 0.1px rgb(0 0 0 / 15%);
+}
+.submit-btn:first-child:hover {
+    opacity: 0.8;
+}
+.submit-btn:last-child {
+    background-color: transparent;
+    border: 2px solid #FFFFFF;
+    color: #FFFFFF;
+}
+.submit-btn:last-child:hover {
+    background-color: #FFFFFF;
+    color: rgba(177,135,77,.75);
+}
