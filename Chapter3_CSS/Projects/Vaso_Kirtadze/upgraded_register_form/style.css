@@ -1,0 +1,27 @@
+body{
+    background-image: url("images (1).jpg");
+
+}
+
+.container{
+   background: #fffc7f;
+    border: black 7px dashed;
+
+}
+
+span{
+    color: red;
+    font-style: oblique;
+    font-size: x-large;
+
+}
+
+#city{
+    color: #721c24;
+    font-style: italic;
+    font-size: medium;
+}
+
+div{
+
+}
