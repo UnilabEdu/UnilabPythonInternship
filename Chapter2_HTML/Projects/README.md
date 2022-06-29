@@ -5,6 +5,7 @@
 ## პროექტები
 - სახელი გვარი | [პროექტი 1](/Chapter2_HTML/Projects/საჩვენებელი_მისამართი) | [პროექტი 2](/საჩვენებელი_მისამართი)
 - თემურ ჩიჩუა| [პორტფოლიო](https://htmlpreview.github.io/?https://github.com/UnilabEdu/UnilabPythonInternship/blob/master/Chapter2_HTML/Projects/temur_chichua/portfolio/main.html) | [საკონტაქტო ფორმა](/Chapter2_HTML/Projects/temur_chichua/contact_form)
+- ნუგო სვიანაძე | [python pl](/Chapter2_HTML/Projects/nugo_svianadze/portfolio)
 - ალექსანდრე ეროიანი | [4 best hiking routes in Georgia](/Chapter2_HTML/Projects/Alexander_Eroyan/Georgian_Hiking_Routes) |
   [კორონავირუსის ვაქცინაციასთან დაკავშირებული კითხვარი](/Chapter2_HTML/Projects/Alexander_Eroyan/Covid_Vaccination_Survey)
 - დავით ჭინჭარაშვილი| [Unilab-ის ჯგუფი](/Chapter2_HTML/Projects/david_chincharashvili/group) | [საკონტაქტო ფორმა](/Chapter2_HTML/Projects/david_chincharashvili/forms)
