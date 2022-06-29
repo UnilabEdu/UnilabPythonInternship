@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Registration</title>
+   <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <form action="#">
+        <div class="form">
+        <legend align="center">Registration</legend>
+        <label for="sign">Name:</label>
+        <input type="text" id ="signin" name="login">
+        <br>
+
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email">
+        <br>
+
+        <label for="passwor">Password:</label>
+        <input type="text" id="password" name="password">
+        <br>
+
+        <label for="phone">Phone Number:</label>
+        <input type="text" id="phone" name="phone">
+        <br>
+
+        <label for="gender">Gender:</label>
+        <input type="radio"  id="m" name="sex" value="male"/>Male 
+        <input type="radio" name="sex" value="Female"/>Female 
+        <input type="radio" name="sex" value="Other"/>Other 
+        <br>
+        
+        <label>City: </label>
+        <select name="city" id="city">
+            <option id="K">Kutaisi</option>
+            <option>Tbilisi</option>
+            <option>Batumi</option>
+            <option>Zugdidi</option>
+            <option>Gori</option>
+            <option>Other</option>
+        </select>
+        <br>
+
+        <label id="ab">About:</label>
+        <textarea name="ar" 
+        id="ar" 
+        cols="20" 
+        rows="3" 
+        placeholder="Write about yorself..."></textarea>
+        <br>
+
+        <input type="submit" value="Registration" id="reg">
+    </div>
+    </form>
+    
+</body>
+</html>
