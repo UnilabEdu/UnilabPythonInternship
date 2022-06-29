@@ -1,0 +1,23 @@
+.container {
+    max-width: 650px;
+    margin: 0 auto;
+}
+ul {
+    display: flex;
+    justify-content: space-between;
+}
+h2, h4 {
+    text-align: center;
+}
+.img-box {
+    display: flex;
+    justify-content: center;
+}
+.about-info, .fav-languages {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+table {
+    width: 100%;
+}
