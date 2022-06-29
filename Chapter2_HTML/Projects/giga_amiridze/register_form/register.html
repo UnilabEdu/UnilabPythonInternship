@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Register Form">
+        <meta name="keywords" content="Register form, HTML, CSS">
+        <meta name="author" content="Giga Amiridze">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <title>Register</title>
+    </head>
+    <body>
+        <div class="container">
+            <form>
+                <label for="fname" class="form-label">First Name</label>
+                <input type="text" class="input-field" id="fname" name="first_name" required>
+
+                <label for="lname" class="form-label">Last Name</label>
+                <input type="text" class="input-field" id="lname" name="last_name" required>
+
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="input-field" id="email" name="email" required>
+
+                <label for="pass" class="form-label">Password</label>
+                <input type="password" class="input-field" id="pass" name="password" required>
+
+                <label for="birth_date" class="form-label">Date of birth</label>
+                <input type="date" id="birth_date" name="birth_date" required>
+
+                <div class="gender-info-box">
+                    <p class="gender-title">Gender</p>
+                    <div class="inputs-box">
+                        <label for="female">Female</label>
+                        <input type="radio" id="female" name="gender" value="Female">
+
+                        <label for="male">Male</label>
+                        <input type="radio" id="male" name="gender" value="Male">
+
+                        <label for="custom">Custom</label>
+                        <input type="radio" id="custom" name="gender" value="Custom">
+                    </div>
+                </div>
+
+                <label for="region" class="form-label">Choose a region</label>
+                <select name="region" id="region" required>
+                    <option selected>Select...</option>
+                    <option value="Europe">Europe</option>
+                    <option value="Asia">Asia</option>
+                    <option value="North America">North America</option>
+                    <option value="South America">South America</option>
+                    <option value="Africa">Africa</option>
+                    <option value="Australia">Australia</option>
+                </select>
+
+                <input type="submit" value="Submit" class="btn">
+            </form>
+        </div>
+    </body>
+</html>

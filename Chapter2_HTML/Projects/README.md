@@ -19,6 +19,7 @@
 - ალისა სანაკოევი| [პორტფოლიო თუ რაღაც ეგეთი](https://htmlpreview.github.io/?https://github.com/alisa-sanakoeva/UnilabPythonInternship/blob/master/Chapter2_HTML/Projects/alisa_sanakoeva/portfolio/alisa.html)
 - ნიკა ქვრივიშვილი | [Gojira](https://htmlpreview.github.io/?https://github.com/UnilabEdu/UnilabPythonInternship/blob/master/Chapter2_HTML/Projects/Nika_Kvrivishvili/Gojira.html)
 - დანიელ გათენაძე | [Project_1](https://htmlpreview.github.io/?https://github.com/LilDiabetes/UnilabPythonInternship/blob/html/daniel_gatenadze/Chapter2_HTML/Projects/daniel_gatenadze/Project_n1/main.html)
+- გიგა ამირიძე | [პორტფოლიო](/Chapter2_HTML/Projects/giga_amiridze/portfolio) [[View]](https://htmlpreview.github.io/?https://github.com/gigaamiridze/UnilabPythonInternship/blob/master/Chapter2_HTML/Projects/giga_amiridze/portfolio/portfolio.html) | [ქვეყნების მშპ](/Chapter2_HTML/Projects/giga_amiridze/countries_GDP) [[View]](https://htmlpreview.github.io/?https://github.com/gigaamiridze/UnilabPythonInternship/blob/master/Chapter2_HTML/Projects/giga_amiridze/countries_GDP/index.html) | [სარეგისტრაციო ფორმა](/Chapter2_HTML/Projects/giga_amiridze/register_form) [[View]](https://htmlpreview.github.io/?https://github.com/gigaamiridze/UnilabPythonInternship/blob/master/Chapter2_HTML/Projects/giga_amiridze/register_form/register.html)
 
 ## ინსტრუქცია
 მოამზადეთ პროექტის ინსტრქუციაში აღწერილი პირობის შესაბამისი ორი HTML პროექტი და დაამატეთ ზემოთ ნაჩვენებ სიაში მათი საჩვენებელი მისამართები. (იხ. დამატებით რესურსები)
