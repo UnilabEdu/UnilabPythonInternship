@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+
+    <form action="#">
+
+        <fieldset class="container">
+            <h1>Create an account</h1>
+            <hr>
+            <br>
+        <label for="user">Username: </label>
+            <input type="text" name="username" id="user">
+        <br>
+        <label for="pass">Password: </label>
+            <input type="password" name="password" id="pass">
+        <br>
+            <br>
+        <label>Gender: </label>
+            <input type="radio" name="gender"  value="male"/>Male
+            <input type="radio" name="gender" value="female"/>Female
+            <br>
+            <br>
+
+        <label for="city">Place of birth</label>
+            <select name="birth_place" id="city">
+                <option>Tbilisi</option>
+                <option>Gori</option>
+                <option>Rustavi</option>
+                <option>Xoni</option>
+            </select>
+        <br><br>
+
+            <textarea
+                    id="bio"
+                    name="biography"
+                    cols="30"
+                    rows="10"
+                    placeholder="Tell us something about yourself (optional)"></textarea>
+        <br>
+            <input type="checkbox" name="approval">
+            <label>I have read and agree to the terms and conditions </label>
+
+        <br>
+            <hr>
+            <label>After filling out the form, press <span>submit</span></label>
+            <br>
+            <input type="submit" value="submit">
+
+
+        </fieldset>
+        </form>
+
+</body>
+</html>
