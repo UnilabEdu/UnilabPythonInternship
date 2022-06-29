@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
 .body-bg {
-    background-image: url("../images/body-bg.jpg");
+    background-image: url("https://colorlib.com/etc/regform/colorlib-regform-9/images/body-bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center top;
@@ -13,7 +13,7 @@
 .container {
     max-width: 1124px;
     height: 750px;
-    background-image: url("../images/container-bg.webp");
+    background-image: url("https://colorlib.com/etc/regform/colorlib-regform-9/images/container-bg.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center top;
