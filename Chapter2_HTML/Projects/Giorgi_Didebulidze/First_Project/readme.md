@@ -6,4 +6,6 @@ Chapter2_HTML
         └─── First_Project
         |   └─── index.html
         |   └─── readme.md
+        |   └─── styles.css
+        
 ```
