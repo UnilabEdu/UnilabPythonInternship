@@ -1,0 +1,15 @@
+body{
+    background-color: #7ce7ff;
+}
+.div2{
+    /*background: yellow;*/
+    border: #000000;
+    border-width: 10px;
+    border-style: double;
+}
+#table1{
+    padding-left: 100px;
+}
+
+
+
