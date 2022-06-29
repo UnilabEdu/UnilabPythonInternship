@@ -19,6 +19,13 @@
 - ალისა სანაკოევი| [პორტფოლიო თუ რაღაც ეგეთი](https://htmlpreview.github.io/?https://github.com/alisa-sanakoeva/UnilabPythonInternship/blob/master/Chapter2_HTML/Projects/alisa_sanakoeva/portfolio/alisa.html)
 - ნიკა ქვრივიშვილი | [Gojira](https://htmlpreview.github.io/?https://github.com/UnilabEdu/UnilabPythonInternship/blob/master/Chapter2_HTML/Projects/Nika_Kvrivishvili/Gojira.html)
 - ვატო ქვარაია| [about me](/Chapter2_HTML/Projects/vato_qvaraia/project_1)
+- ზურა ვაშალომიძე | [პროექტი 1](/Chapter2_HTML/Projects/zura_vashalomidze/first_project)
+- ნიკოლოზ ნასყიდაშვილი | [პორტფოლიო](/Chapter2_HTML/Projects/Nika_Naskidashvili/)
+- მარიამ ქავთარაძე | [hw_html](https://htmlpreview.github.io/?https://github.com/MxKavt/UnilabPythonInternship/blob/html/mariam_kavtaradze/Chapter2_HTML/Projects/mariam_kavtaradze/hw_html/hw_htmlonly.html)
+- ბაჩო მინდიაშვილი | [Nba](/Chapter2_HTML/Projects/bacho_mindiashvili/nba_team) | [Registration](/Chapter2_HTML/Projects/bacho_mindiashvili/registration_form)
+- დანიელ გათენაძე | [Project_1](https://htmlpreview.github.io/?https://github.com/LilDiabetes/UnilabPythonInternship/blob/html/daniel_gatenadze/Chapter2_HTML/Projects/daniel_gatenadze/Project_n1/main.html)
+- გიგა ამირიძე | [პორტფოლიო](/Chapter2_HTML/Projects/giga_amiridze/portfolio) [[View]](https://htmlpreview.github.io/?https://github.com/gigaamiridze/UnilabPythonInternship/blob/master/Chapter2_HTML/Projects/giga_amiridze/portfolio/portfolio.html) | [ქვეყნების მშპ](/Chapter2_HTML/Projects/giga_amiridze/countries_GDP) [[View]](https://htmlpreview.github.io/?https://github.com/gigaamiridze/UnilabPythonInternship/blob/master/Chapter2_HTML/Projects/giga_amiridze/countries_GDP/index.html) | [სარეგისტრაციო ფორმა](/Chapter2_HTML/Projects/giga_amiridze/register_form) [[View]](https://htmlpreview.github.io/?https://github.com/gigaamiridze/UnilabPythonInternship/blob/master/Chapter2_HTML/Projects/giga_amiridze/register_form/register.html)
+
 ## ინსტრუქცია
 მოამზადეთ პროექტის ინსტრქუციაში აღწერილი პირობის შესაბამისი ორი HTML პროექტი და დაამატეთ ზემოთ ნაჩვენებ სიაში მათი საჩვენებელი მისამართები. (იხ. დამატებით რესურსები)
 
