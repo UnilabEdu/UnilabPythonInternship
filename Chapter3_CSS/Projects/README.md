@@ -12,6 +12,7 @@
 - სალომე ჯავაშვილი | [რთული კითხვაა](/Chapter3_CSS/Projects/salome_javashvili/ბენდის_საიტი/რთული_კითხვაა)
 - [ნიკა ქვრივიშვილი | registration_css](https://htmlpreview.github.io/?https://github.com/nika-kvr/UnilabPythonInternship/blob/master/Chapter3_CSS/Projects/Nika_Kvrivishvili/Band%20registration%20CSS/Registration_css.html)
 - ბაჩო მინდიაშვილი | [Nba](/Chapter3_CSS/Projects/bacho_mindiashvili/nba_team) | [Registration_form](/Chapter3_CSS/Projects/bacho_mindiashvili/registration_form)
+- გიგა ამირიძე | [Sign up](/Chapter3_CSS/Projects/giga_amiridze/sign_up) [[View]](https://htmlpreview.github.io/?https://github.com/gigaamiridze/UnilabPythonInternship/blob/css/sign_up/Chapter3_CSS/Projects/giga_amiridze/sign_up/index.html)
 
 ## ინსტრუქცია:
 
