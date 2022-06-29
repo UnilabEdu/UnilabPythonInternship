@@ -94,10 +94,8 @@ input[type='checkbox'] {
     align-items: center;
 }
 input[type='checkbox']:after {
-    font-family: "Font Awesome 5 Free";
-    font-weight: 700;
-    content: "\f00c";
-    font-size: 10px;
+    content: "✓";
+    font-size: 12px;
     color: #FFFFFF;
     display: none;
 }
