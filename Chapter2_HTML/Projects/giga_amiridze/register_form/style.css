@@ -1,0 +1,32 @@
+body {
+    height: 100vh;
+    position: relative;
+}
+.container {
+    max-width: 300px;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+.form-label, .gender-title {
+    margin-bottom: 5px;
+}
+.input-field, .gender-info-box {
+    margin-bottom: 15px;
+}
+.inputs-box {
+    display: flex;
+}
+input#female, input#male {
+    margin-right: 60px;
+}
+.btn {
+    margin-top: 15px;
+    height: 25px;
+}
