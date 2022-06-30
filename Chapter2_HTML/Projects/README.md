@@ -27,6 +27,7 @@
 - ბაჩო მინდიაშვილი | [Nba](/Chapter2_HTML/Projects/bacho_mindiashvili/nba_team) | [Registration](/Chapter2_HTML/Projects/bacho_mindiashvili/registration_form)
 - დანიელ გათენაძე | [Project_1](https://htmlpreview.github.io/?https://github.com/LilDiabetes/UnilabPythonInternship/blob/html/daniel_gatenadze/Chapter2_HTML/Projects/daniel_gatenadze/Project_n1/main.html)
 - გიგა ამირიძე | [პორტფოლიო](/Chapter2_HTML/Projects/giga_amiridze/portfolio) [[View]](https://htmlpreview.github.io/?https://github.com/gigaamiridze/UnilabPythonInternship/blob/master/Chapter2_HTML/Projects/giga_amiridze/portfolio/portfolio.html) | [ქვეყნების მშპ](/Chapter2_HTML/Projects/giga_amiridze/countries_GDP) [[View]](https://htmlpreview.github.io/?https://github.com/gigaamiridze/UnilabPythonInternship/blob/master/Chapter2_HTML/Projects/giga_amiridze/countries_GDP/index.html) | [სარეგისტრაციო ფორმა](/Chapter2_HTML/Projects/giga_amiridze/register_form) [[View]](https://htmlpreview.github.io/?https://github.com/gigaamiridze/UnilabPythonInternship/blob/master/Chapter2_HTML/Projects/giga_amiridze/register_form/register.html)
+- ანა ხუციშვილი | [Blog](/Chapter2_HTML/Projects/ana_khutsishvili/blog) | [Survey](/Chapter2_HTML/Projects/ana_khutsishvili/survey)
 
 ## ინსტრუქცია
 მოამზადეთ პროექტის ინსტრქუციაში აღწერილი პირობის შესაბამისი ორი HTML პროექტი და დაამატეთ ზემოთ ნაჩვენებ სიაში მათი საჩვენებელი მისამართები. (იხ. დამატებით რესურსები)
