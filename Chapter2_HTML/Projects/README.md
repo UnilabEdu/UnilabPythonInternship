@@ -5,6 +5,7 @@
 ## პროექტები
 - სახელი გვარი | [პროექტი 1](/Chapter2_HTML/Projects/საჩვენებელი_მისამართი) | [პროექტი 2](/საჩვენებელი_მისამართი)
 - თემურ ჩიჩუა| [პორტფოლიო](https://htmlpreview.github.io/?https://github.com/UnilabEdu/UnilabPythonInternship/blob/master/Chapter2_HTML/Projects/temur_chichua/portfolio/main.html) | [საკონტაქტო ფორმა](/Chapter2_HTML/Projects/temur_chichua/contact_form)
+- ნუგო სვიანაძე | [python pl](/Chapter2_HTML/Projects/nugo_svianadze/portfolio)
 - ალექსანდრე ეროიანი | [4 best hiking routes in Georgia](/Chapter2_HTML/Projects/Alexander_Eroyan/Georgian_Hiking_Routes) |
   [კორონავირუსის ვაქცინაციასთან დაკავშირებული კითხვარი](/Chapter2_HTML/Projects/Alexander_Eroyan/Covid_Vaccination_Survey)
 - დავით ჭინჭარაშვილი| [Unilab-ის ჯგუფი](/Chapter2_HTML/Projects/david_chincharashvili/group) | [საკონტაქტო ფორმა](/Chapter2_HTML/Projects/david_chincharashvili/forms)
@@ -18,6 +19,7 @@
 - ირაკლი გიუნაშვილი| [პროგრამინგ ლენგვიჯ ჩოის](https://github.com/IrakliG/UnilabPythonInternship/blob/master/first_html_for_unilab.html) | [რეგისტრაციის ფორმა](https://github.com/IrakliG/UnilabPythonInternship/blob/master/registration%20form.html)
 - ალისა სანაკოევი| [პორტფოლიო თუ რაღაც ეგეთი](https://htmlpreview.github.io/?https://github.com/alisa-sanakoeva/UnilabPythonInternship/blob/master/Chapter2_HTML/Projects/alisa_sanakoeva/portfolio/alisa.html)
 - ნიკა ქვრივიშვილი | [Gojira](https://htmlpreview.github.io/?https://github.com/UnilabEdu/UnilabPythonInternship/blob/master/Chapter2_HTML/Projects/Nika_Kvrivishvili/Gojira.html)
+- მარიამ ქავთარაძე | [hw_html](https://htmlpreview.github.io/?https://github.com/MxKavt/UnilabPythonInternship/blob/html/mariam_kavtaradze/Chapter2_HTML/Projects/mariam_kavtaradze/hw_html/hw_htmlonly.html)
 - ვასო კირთაძე | [info_michael](https://htmlpreview.github.io/?https://github.com/VasoKirtadze/UnilabPythonInternship/blob/master/Chapter2_HTML/Projects/Vaso_Kirtadze/Michael/Michael.html) | [registration_form](https://htmlpreview.github.io/?https://github.com/VasoKirtadze/UnilabPythonInternship/blob/master/Chapter2_HTML/Projects/Vaso_Kirtadze/registration_form/register.html)
 - ვატო ქვარაია| [about me](/Chapter2_HTML/Projects/vato_qvaraia/project_1)
 - ზურა ვაშალომიძე | [პროექტი 1](/Chapter2_HTML/Projects/zura_vashalomidze/first_project)
