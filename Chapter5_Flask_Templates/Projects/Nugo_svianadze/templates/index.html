@@ -1,0 +1,14 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<div style="text-align: center;">
+    <h1 style="margin-top: 100px;">How many student u want to generate with subjects and grades?</h1>
+    <form action="{{ url_for('students') }}" method="post">
+
+        <div class="input-group mb-3" style="width: 30%;margin-left: 600px;margin-top: 100px;">
+          <input type="text" class="form-control" name="student_amount" placeholder="Student number" aria-describedby="basic-addon2" required>
+        </div>
+        <input class="btn btn-primary" type="submit" value="Submit">
+    </form>
+</div>
+{% endblock %}
