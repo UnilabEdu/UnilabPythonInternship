@@ -1,0 +1,39 @@
+.bg-img {
+    min-height: 800px;
+    background-image: url("https://assets.website-files.com/5f58a176cfe4744f2762e818/5f5d3da8dfc689377623f6af_kristina-petrick-OJHNzGwqTSA-unsplash.jpg");
+    background-size: auto;
+    background-position: 20% 35%;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.img-content {
+    max-width: 480px;
+    width: 100%;
+    padding-left: 100px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.content-title {
+    font-size: 72px;
+    font-weight: 700;
+    letter-spacing: -3px;
+    color: var(--white);
+    line-height: 1.14em;
+    text-transform: capitalize;
+}
+.content-text {
+    font-size: 18px;
+    color: var(--white);
+    line-height: 28px;
+    margin: 10px 0 45px 0;
+}
+.content-link {
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 2.2px;
+    color: var(--black);
+    text-transform: uppercase;
+    padding: 20px 30px;
+    background-color: var(--white);
+}

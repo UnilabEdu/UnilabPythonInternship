@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --black: #101010;
+    --white: #FFFFFF;
+}
+body {
+    font-family: 'Inter', sans-serif;
+    padding-top: 115px;
+}
+header {
+    background-color: var(--white);
+    padding: 40px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 20;
+}
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+.flex-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+ul {
+    display: flex;
+}
+li:nth-child(2) {
+    margin: 0 45px;
+}
+.nav-link {
+    font-size: 14px;
+    color: var(--black);
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 20px;
+    text-transform: uppercase;
+}
+.nav-link.active::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: var(--black);
+}
+.nav-link:hover::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: var(--black);
+}
+.nav-logo {
+    height: 32px;
+}
+.icons {
+    display: flex;
+    align-items: center;
+}
+.social-icons {
+    margin-right: 50px;
+}
+.social-icons a:nth-child(2) {
+    margin: 0 25px;
+}
+.soc-icon {
+    font-size: 25px;
+    color: var(--black);
+}
+.fa-cart-shopping {
+    font-size: 21px;
+    color: var(--black);
+    cursor: pointer;
+}
