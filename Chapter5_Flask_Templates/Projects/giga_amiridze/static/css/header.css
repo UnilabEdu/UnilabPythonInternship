@@ -3,6 +3,7 @@
 :root {
     --black: #101010;
     --white: #FFFFFF;
+    --grey: #777777;
 }
 body {
     font-family: 'Inter', sans-serif;

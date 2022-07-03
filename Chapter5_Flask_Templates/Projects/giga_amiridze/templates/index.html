@@ -1,3 +1,4 @@
+{% from "macros.html" import items_generator %}
 {% extends "base.html" %}
 {% block content %}
 <section>
@@ -9,6 +10,11 @@
                 <a class="content-link" href="{{ url_for("shop") }}">shop now</a>
             </div>
         </div>
+    </div>
+</section>
+<section>
+    <div class="container">
+        {{ items_generator(items) }}
     </div>
 </section>
 {% endblock %}
