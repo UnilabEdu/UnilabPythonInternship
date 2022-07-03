@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"
+          charset="UTF-8">
+    <title>Flip a Coin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/flipacoinstyle.css">
+</head>
+<body>
+    <p>Copied From some source online not my original code :(</p>
+
+    <nav class="navbar navbar-fixed-top navbar-expand-lg navbar-light bg-navbar" data-spy="affix">
+      <div class="container">
+        <a class="nav-logo" href="https://www.youtube.com/watch?v=gDjMZvYWUdo">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/en/a/ae/Los_Pollos_Hermanos_logo.png"
+            height="50"
+            alt="Logo"
+            loading="lazy"
+            style="margin-top: -1px;"
+          />
+        </a>
+
+        <div class="collapse navbar-collapse" id="navbarButtonsExample">
+            <div class="nav-item dropdown">
+				<a href="#" data-toggle="dropdown" class="nav-item nav-link dropdown-toggle">Services</a>
+				<div class="dropdown-menu">
+					<a href="../bootstrap_hmwrk/bootsrap_hmwrk.html" class="dropdown-item">Dashboard</a>
+					<a href="../template/products.html" class="dropdown-item">Products</a>
+					<a href="../template/flipacoin.html" class="dropdown-item">flip a coin</a>
+                </div>
+            </div>
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="#"></a>
+            </li>
+          </ul>
+          <!-- Left links -->
+          <div class="d-flex align-items-center">
+            <a type="button" class="btn btn-link px-3 me-2" href="../template/log_in.html">
+              Login
+            </a>
+            <a type="button" class="btn btn-primary me-3" href="../template/sign_up.html">
+              Sign up
+            </a>
+            <a
+              type="button" class="btn btn-dark"
+              href="https://github.com/LilDiabetes"
+              role="button"
+              ><i class="fa fa-github"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav> <!-- not working -->
+
+    <div class="container">
+        <div class="stats">
+            <p id="heads-count">Heads: 0</p>
+            <p id="tails-count">Tails: 0</p>
+        </div>
+        <div class="coin">
+            <div class="heads">
+                <img src="../static/heads.svg" alt="heads">
+            </div>
+            <div class="tails">
+                <img src="../static/tails.svg" alt="tails">
+            </div>
+        </div>
+        <div class="buttons">
+            <button id="flip-button">Flip Coin </button>
+            <button id="reset-button">Reset</button>
+        </div>
+    </div>
+
+    <script src="../static/script.js"></script>
+</body>
+</html>
