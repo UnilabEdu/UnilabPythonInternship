@@ -14,7 +14,7 @@
 - [გიორგი წყაროველი |Mars Mission](/Chapter4_Bootstrap/Projects/giorgi_tskaroveli/mars_crew)
 - [ნიკა ქვრივიშვილი | Bootstrap pull request](https://htmlpreview.github.io/?https://github.com/nika-kvr/UnilabPythonInternship/blob/master/Chapter4_Bootstrap/Projects/Nika%20Kvrivishvili/pull_request/index.html) 
 - [ალისა სანაკოევა | Something](https://htmlpreview.github.io/?https://github.com/UnilabEdu/UnilabPythonInternship/blob/master/Chapter4_Bootstrap/Projects/alisa_sanakoeva/another_randomness.html) 
-- [დანიელ_გათენაძე | Subscription Plan][view](https://htmlpreview.github.io/?https://github.com/LilDiabetes/UnilabPythonInternship/blob/bootstrap/daniel_gatenadze/Chapter4_Bootstrap/Projects/daniel_gatenadze/bootstrap_hmwrk/bootsrap_hmwrk.html) 
+- [დანიელ_გათენაძე | Subscription Plan][view](https://htmlpreview.github.io/?https://github.com/LilDiabetes/UnilabPythonInternship/blob/bootstrap/daniel_gatenadze/Chapter4_Bootstrap/Projects/daniel_gatenadze/Subscription_Plan/bootsrap_hmwrk.html) 
 
 
 ## ინსტრუქცია:
