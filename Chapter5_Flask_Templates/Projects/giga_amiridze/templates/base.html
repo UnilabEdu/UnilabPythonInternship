@@ -1,4 +1,4 @@
-{% from "macros.html" import active_page %}
+{% from "macros.html" import nav_bar_generator %}
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -19,15 +19,7 @@
                 <div class="flex-block">
                     <nav>
                         <ul>
-                            <li>
-                                {{ active_page("home", "home") }}
-                            </li>
-                            <li>
-                                {{ active_page("shop", "shop") }}
-                            </li>
-                            <li>
-                                {{ active_page("press", "press") }}
-                            </li>
+                            {{ nav_bar_generator(pages) }}
                         </ul>
                     </nav>
                     <a href="{{ url_for("home") }}">
