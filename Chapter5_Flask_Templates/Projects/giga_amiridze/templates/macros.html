@@ -14,9 +14,9 @@
     {% endfor %}
 {% endmacro %}
 
-{% macro items_generator(items) %}
+{% macro items_generator(items, title) %}
     <div class="content-block">
-        <h2 class="sales-title">new arrivals</h2>
+        <h2 class="sales-title">{{ title }}</h2>
         <div class="products-block">
             {% for item in items %}
             <div class="item-box">

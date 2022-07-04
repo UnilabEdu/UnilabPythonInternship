@@ -14,7 +14,12 @@
 </section>
 <section>
     <div class="container">
-        {{ items_generator(items) }}
+        {{ items_generator(arrival_items, arrival_title) }}
+    </div>
+</section>
+<section>
+    <div class="container">
+        {{ items_generator(seller_items, seller_title) }}
     </div>
 </section>
 {% endblock %}

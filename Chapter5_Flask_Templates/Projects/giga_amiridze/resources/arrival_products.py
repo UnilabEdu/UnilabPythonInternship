@@ -1,3 +1,5 @@
+arrival_title = "new arrivals"
+
 arrival_products = [
     {
         "product_img": "https://assets.website-files.com/5f58cd55dfdef5400ad6ef28/5f5e12e5dfcb5d158f886014_item-36.jpg",

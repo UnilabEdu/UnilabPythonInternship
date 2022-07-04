@@ -1,4 +1,4 @@
-pages = [
+nav_bar_pages = [
     {
         "endpoint": "home",
         "name": "home"
