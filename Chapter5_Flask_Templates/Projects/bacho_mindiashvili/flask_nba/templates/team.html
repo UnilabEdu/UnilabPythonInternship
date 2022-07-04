@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+     <!-- Page content-->
+        <div class="container">
+            <div class="row">
+                <!-- Blog entries-->
+                <div class="col-lg-8">
+                    <!-- Featured blog post-->
+                    <div class="card mb-4">
+
+                        <a href="#!"><img class="card-img-top" src="https://cdn.nba.com/manage/2021/10/GettyImages-1228132003.png" alt="..." /></a>
+                        <div class="card-body">
+                            <h2 class="card-title">Infomration About NBA</h2>
+                            <p class="card-text">The National Basketball Association (NBA) is a professional basketball league in North America. The league is composed of
+                                30 teams (29 in the United States and 1 in Canada) and is one of the major professional sports leagues in the United States and Canada. I
+                                t is the premier men's professional basketball league in the world. The league was founded in New York City on June 6, 1946, as the Basketball Association of America (BAA).
+                                It changed its name to the National Basketball Association on August 3, 1949, after merging with the competing National Basketball League (NBL).
+
+</p>
+                            <a class="btn btn-primary" href="https://en.wikipedia.org/wiki/National_Basketball_Association" target="_blank">Read more →</a>
+                        </div>
+                    </div>
+
+
+    <div class="row">
+        {% for team in teams %}
+            <div class="col-lg-6">
+                <div class="card">
+                    <a href="/team/{{ team['id'] }}">{{ team['name'] }}>
+                        <img class="card-img-top" src="{{ team['logoUrl'] }}" width="100px">
+                    </a>
+                    <div class="card-body">
+                        <h2 class="card-title h4">{{ team['name'] }}</h2>
+                        <p class="card-text">{{ team['description'] }}</p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+                     <!-- Pagination-->
+                    <nav aria-label="Pagination">
+                        <hr class="my-0" />
+                        <ul class="pagination justify-content-center my-4">
+                            <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1" aria-disabled="true">Newer</a></li>
+                            <li class="page-item active" aria-current="page"><a class="page-link" href="#!">1</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <!-- Side widgets-->
+                <div class="col-lg-4">
+                    <!-- Search widget-->
+                    <div class="card mb-4">
+                        <div class="card-header">Search Team</div>
+                        <div class="card-body">
+                            <div class="input-group">
+                                <input class="form-control" type="text" placeholder="Enter search team..." aria-label="Enter search Team..." aria-describedby="button-search" />
+                                <button class="btn btn-primary" id="button-search" type="button">Go!</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Side widget-->
+                    <div class="card mb-4">
+                        <div class="card-header">site</div>
+                        <div class="card-body">On this site you will find the best 4 NBA teams and their best basketball players.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+{% endblock %}

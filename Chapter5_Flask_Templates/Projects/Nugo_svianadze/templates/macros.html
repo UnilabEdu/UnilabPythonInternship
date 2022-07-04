@@ -1,0 +1,16 @@
+{% macro nav_bar_link(endpoint, name) %}
+{% if request.endpoint.endswith(endpoint) %}
+    <a class="nav-item nav-link active" href="{{ url_for(endpoint) }}">{{name}}</a>
+{% else %}
+    <a class="nav-item nav-link" href="{{ url_for(endpoint) }}">{{name}}</a>
+{% endif %}
+{% endmacro %}
+
+
+{% macro nav_bar(pages) %}
+    <div class="navbar-nav">
+        {% for page in pages %}
+            {{ nav_bar_link(page[0], page[1]) }}
+        {% endfor %}
+    </div>
+{% endmacro %}

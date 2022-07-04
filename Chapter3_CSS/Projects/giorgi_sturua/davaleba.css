@@ -1,0 +1,35 @@
+body{
+    background-color: #f15c5c;
+}
+
+.img{
+    border: 2px solid white;
+    margin-left: 30%;
+}
+
+header h1{
+    text-align: center;
+}
+
+input {
+    display:block;
+    margin-bottom: 1%;
+}
+
+th{
+    font-size: 20px;
+}
+
+.nakrebi {
+    height: 10%;
+    width: 10%;
+}
+.f-div {
+    display: flex;
+
+}
+.f-div h1{
+    margin-left: 1%;
+
+
+}
