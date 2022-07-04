@@ -1,0 +1,61 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Rubik', sans-serif;
+    background-color: #1A191B;
+    color: #fff;
+}
+
+*,
+*:before,
+*:after{
+	box-sizing: border-box;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-control, .form-control-hr {
+    width: 310px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form-control-hr {
+    flex-direction: row-reverse;
+}
+
+.form-control-hr label {
+    font-size: 13px;
+}
+
+
+.input-field {
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    padding: 8px;
+    font-family: 'Rubik', sans-serif;
+}
+
+.submit-butt {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Rubik', sans-serif;
+    color: #fff;
+    background-color: #002c53;
+    transition: all 0.2s ease;
+}
+
+.submit-butt:hover {
+    cursor: pointer;
+    transform: scale(1.02);
+}

@@ -1,0 +1,100 @@
+body {
+    background-color: #D8BFD8		;
+    font-family: 'Ubuntu';
+}
+
+.form{
+    
+    border:   #F8F8FF			 10px;
+    background-color: #F0FFFF				;
+    margin-top: 300px;
+    margin-right: 800px;
+    margin-left: 700px;
+    border-radius: 10px;
+    
+
+    
+    
+}
+
+legend{
+    font-family: 'Ubuntu';
+    font-size: 30px;
+}
+#signin{
+    background-color: #E6E6FA;
+    margin-left: 73px;
+    margin-bottom: 7px;
+    margin-top: 15px;
+    border: black solid 3px;
+    border-radius: 10px;
+
+}
+
+#email{
+    background-color: #E6E6FA;
+    margin-left: 77px;
+    margin-bottom: 7px;
+    border: black solid 3px;
+    border-radius: 10px;
+
+}
+
+#password{
+    background-color: #E6E6FA;
+    margin-left: 48px;
+    margin-bottom: 7px;
+    border: black solid 3px;
+    border-radius: 10px;
+
+}
+
+#phone{
+    background-color: #E6E6FA;
+    margin-left: 10px;
+    margin-bottom: 7px;
+    border: black solid 3px;
+    border-radius: 10px;
+    
+}
+
+#m{
+    margin-left: 70px;
+    margin-bottom: 7px;
+}
+#city{
+    margin-left: 90px;
+    margin-bottom: 7px;
+    font-size: 15px;
+    padding: 8px 16px;
+    cursor: pointer
+
+}
+
+#ab{
+    margin-bottom: 300px;
+}   
+
+#ar{
+    margin-top: 20px;
+    margin-left: 50px;
+    width: 50%;
+    resize: none;
+    border-radius: 10px;
+    border: solid black
+}
+
+#reg{
+    background-color: E6E6FA;
+    border: solid black 3px;
+    font-size: 20px;
+    margin-left: 50px;
+    padding: 7px 100px;
+    border-radius: 12px;
+    margin-top: 10px;
+    
+}
+
+#reg:hover{
+    background-color:#87CEEB		
+}
