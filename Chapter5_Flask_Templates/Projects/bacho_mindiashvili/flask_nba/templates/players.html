@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block content %}
+ <!-- Page content-->
+        <div class="container">
+            <div class="row">
+                <!-- Blog entries-->
+                <div class="col-lg-9">
+                    <!-- Featured blog post-->
+                    <div class="card mb-5">
+
+                        <a href="#!"><img class="card-img-top" src="{{ team['logoUrl'] }}" alt="..." /></a>
+                        <div class="card-body">
+
+                            <h2 class="card-title">Infomration About {{ team['name'] }}</h2>
+                            <p class="card-text">  </p>
+
+                            <a class="btn btn-primary" href="{{ team['wiki'] }}" target="_blank">Read more about team→</a>
+                        </div>
+                    </div>
+
+
+
+<div class="row">
+        {% for player  in players %}
+            <div class="col-lg-6">
+                <div class="card">
+                        <img class="card-img-top" src="{{ player['p_url'] }}">
+                    <div class="card-body">
+                        <h2 class="card-title h4">{{ player['name'] }}</h2>
+                        <p class="card-text">{{ player['date'] }}</p>
+                        <a class="btn btn-primary" href="{{ url_for('nba_player' , id = player['id']) }}">Read more →</a>
+
+
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+
+{% endblock %}
