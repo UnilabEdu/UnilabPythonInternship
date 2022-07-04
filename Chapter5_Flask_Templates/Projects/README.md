@@ -9,6 +9,8 @@
 - [მარია ვეშაპიძე | Tutor online](/Chapter5_Flask_Templates/Projects/maria_veshapidze/app.py)
 - [დენისი სანტურიანი | 5 საათში](/Chapter5_Flask_Templates/Projects/denis_santuryan/)
 - [უჩა ხმალაძე | სასტუმროს ვებ გვერდი](/Chapter5_Flask_Templates/Projects/ucha_khmaladze)
+- [ბაჩო მინდიაშვილი| Nba Teams](/Chapter5_Flask_Templates/Projects/bacho_mindiashvili/nba_flask)
+
 
 ## ინსტრუქცია:
 
