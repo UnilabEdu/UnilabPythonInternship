@@ -11,6 +11,7 @@
 - [უჩა ხმალაძე | სასტუმროს ვებ გვერდი](/Chapter5_Flask_Templates/Projects/ucha_khmaladze)
 - [ნუგო სვიანაძე | students](/Chapter5_Flask_Templates/Projects/Nugo_svianadze)
 - [ბაჩო მინდიაშვილი| Nba Teams](/Chapter5_Flask_Templates/Projects/bacho_mindiashvili/nba_flask)
+- ვასო კირთაძე | [jinja Homework](https://htmlpreview.github.io/?https://github.com/VasoKirtadze/UnilabPythonInternship/blob/master/Chapter5_Flask_Templates/Projects/Vaso_Kirtadze/index.html)
 
 ## ინსტრუქცია:
 
