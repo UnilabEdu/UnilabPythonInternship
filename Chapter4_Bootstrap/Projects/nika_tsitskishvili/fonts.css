@@ -1,0 +1,55 @@
+
+#strt {
+    text-align: center;
+
+}
+#bt {
+     position: fixed;
+}
+#strtp {
+    text-align: center;
+}
+img {
+    padding-inline: 1cm;
+    margin: 20px;
+}
+button {
+           position: fixed;
+           left: 45%;
+           margin: 20px;
+
+        }
+body {
+    background: #F5F5DC;
+}
+.titl {
+  color:#008B8B
+}
+p {
+    font-size: 20px;
+    font-family: 'Raleway', sans-serif;
+}
+ol li {
+    color: #008B8B;
+}
+
+ul li {
+    color: #2a9d8f ;
+}
+
+
+th {
+    color: black;
+    text-align: center;
+}
+
+td{
+    color: black;
+    background: #FFF8DC;
+    text-align: center;
+}
+
+table {
+    width: 60%;
+    height: 90px;
+}
