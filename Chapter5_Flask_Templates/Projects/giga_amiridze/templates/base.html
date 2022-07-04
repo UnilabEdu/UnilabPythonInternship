@@ -11,6 +11,7 @@
         <link rel="stylesheet" type="text/css" href="{{ url_for("static", filename="css/reset.css") }}">
         <link rel="stylesheet" type="text/css" href="{{ url_for("static", filename="css/header.css") }}">
         <link rel="stylesheet" type="text/css" href="{{ url_for("static", filename="css/index.css") }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for("static", filename="css/footer.css") }}">
         <title>Clarckson</title>
     </head>
     <body>
@@ -45,5 +46,18 @@
         {% block content %}
 
         {% endblock %}
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <p class="copyright-text">@2022 copyright</p>
+                    <div class="soc-titles">
+                        <a href="https://www.facebook.com/">facebook</a>
+                        <a href="https://www.instagram.com/">instagram</a>
+                        <a href="https://twitter.com/">twitter</a>
+                    </div>
+                    <p class="designer-name">Designed by <a class="obencci" href="https://www.obencci.com/">Obencci</a></p>
+                </div>
+            </div>
+        </footer>
     </body>
 </html>
