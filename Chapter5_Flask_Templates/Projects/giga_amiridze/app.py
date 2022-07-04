@@ -4,6 +4,7 @@ from resources.pages import nav_bar_pages
 from resources.arrival_products import arrival_products, arrival_title
 from resources.seller_products import seller_products, seller_title
 from resources.shop_products import shop_products
+from resources.magazine_items import magazine_items
 
 app = Flask(__name__)
 
@@ -18,7 +19,7 @@ def shop():
 
 @app.route('/press')
 def press():
-    return render_template("press.html", pages=nav_bar_pages)
+    return render_template("press.html", pages=nav_bar_pages, magazine_items=magazine_items)
 
 if __name__ == "__main__":
     app.run(port=7777, debug=True)

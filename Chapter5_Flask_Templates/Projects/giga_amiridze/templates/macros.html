@@ -58,3 +58,17 @@
         </div>
     </div>
 {% endmacro %}
+
+{# for press.html #}
+{% macro magazine_items_generator(items) %}
+    <div class="magazines-block">
+        {% for item in items %}
+        <div class="box">
+            <img class="magazine-img" src="{{ item["magazine_img"] }}" alt="Magazine's Img">
+            <div class="magazine-info">
+                <h4 class="description">{{ item["description"] }}</h4>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+{% endmacro %}
