@@ -1,3 +1,4 @@
+{# for base.html #}
 {% macro nav_link(endpoint, name) %}
     {% if request.endpoint.endswith(endpoint) %}
         <a class="nav-link active" href="{{ url_for(endpoint) }}">{{ name }}</a>
@@ -14,6 +15,7 @@
     {% endfor %}
 {% endmacro %}
 
+{# for index.html #}
 {% macro items_generator(items, title) %}
     <div class="content-block">
         <h2 class="sales-title">{{ title }}</h2>
@@ -33,5 +35,26 @@
             {% endfor %}
         </div>
         <a class="content-link other-colors" href="{{ url_for("shop") }}">shop all</a>
+    </div>
+{% endmacro %}
+
+{# for shop.html #}
+{% macro shop_items_generator(items) %}
+    <div class="content-block change-padds">
+        <div class="products-block delete-margs">
+            {% for item in items %}
+            <div class="item-box add-marg-bott">
+                <img class="product-img" src="{{ item["product_img"] }}" alt="Product's Img">
+                <div class="item-info">
+                    <p class="product-name">{{ item["product_name"] }}</p>
+                    <p class="category">{{ item["category"] }}</p>
+                    <div class="fee-box">
+                        <span class="price">{{ item["price"] }}</span>
+                        <span class="old-price">{{ item["old_price"] }}</span>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
     </div>
 {% endmacro %}

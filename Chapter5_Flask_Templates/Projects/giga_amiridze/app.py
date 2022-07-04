@@ -3,6 +3,7 @@ from flask import Flask, render_template
 from resources.pages import nav_bar_pages
 from resources.arrival_products import arrival_products, arrival_title
 from resources.seller_products import seller_products, seller_title
+from resources.shop_products import shop_products
 
 app = Flask(__name__)
 
@@ -13,7 +14,7 @@ def home():
 
 @app.route('/shop')
 def shop():
-    return render_template("shop.html", pages=nav_bar_pages)
+    return render_template("shop.html", pages=nav_bar_pages, shop_items=shop_products)
 
 @app.route('/press')
 def press():

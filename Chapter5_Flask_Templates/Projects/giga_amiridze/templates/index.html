@@ -1,25 +1,25 @@
 {% from "macros.html" import items_generator %}
 {% extends "base.html" %}
 {% block content %}
-<section>
-    <div class="container">
-        <div class="bg-img">
-            <div class="img-content">
-                <h1 class="content-title">show your briliance</h1>
-                <p class="content-text">Lorem ipsum dolor sit amet sed do eiusmod tempor incididunt ut labore.</p>
-                <a class="content-link" href="{{ url_for("shop") }}">shop now</a>
+    <section>
+        <div class="container">
+            <div class="bg-img">
+                <div class="img-content">
+                    <h1 class="content-title">show your briliance</h1>
+                    <p class="content-text">Lorem ipsum dolor sit amet sed do eiusmod tempor incididunt ut labore.</p>
+                    <a class="content-link" href="{{ url_for("shop") }}">shop now</a>
+                </div>
             </div>
         </div>
-    </div>
-</section>
-<section>
-    <div class="container">
-        {{ items_generator(arrival_items, arrival_title) }}
-    </div>
-</section>
-<section>
-    <div class="container">
-        {{ items_generator(seller_items, seller_title) }}
-    </div>
-</section>
+    </section>
+    <section>
+        <div class="container">
+            {{ items_generator(arrival_items, arrival_title) }}
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            {{ items_generator(seller_items, seller_title) }}
+        </div>
+    </section>
 {% endblock %}
