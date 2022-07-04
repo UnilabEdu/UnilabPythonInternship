@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+ <!-- Page content-->
+        <div class="container">
+            <div class="row">
+                <!-- Blog entries-->
+                <div class="col-lg-8">
+                    <!-- Featured blog post-->
+                    <div class="card mb-4">
+
+                        <a href="#!"><img class="card-img-top" src="{{ player['p_url'] }}" alt="..." /></a>
+                        <div class="card-body">
+
+                            <h2 class="card-title">Infomration About {{ player['name'] }}</h2>
+                            <p class="card-text">  </p>
+
+                            <a class="btn btn-primary" href="{{ player['site'] }}" target="_blank">Read more about player→</a>
+                        </div>
+                    </div>
+
+
+    <ul>
+        <li> {{ player["name"] }} </li>
+        <li> {{ player["date"] }} </li>
+        <li> {{ player["point"] }} point</li>
+        <li> {{ player["ring"] }} ring </li>
+
+
+    </ul>
+{% endblock %}
