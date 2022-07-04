@@ -11,6 +11,7 @@
 - გიორგი წყაროველი | [მარსის მისია](/Chapter3_CSS/Projects/giorgi_tskaroveli/mars_crew/) [[view]](https://htmlpreview.github.io/?https://github.com/tskaro/UnilabPythonInternship/blob/tskaro/Chapter3_CSS/Projects/giorgi_tskaroveli/mars_crew/new.html) | [კითხვარი](/Chapter3_CSS/Projects/giorgi_tskaroveli/georgian_questions) [[view]](https://htmlpreview.github.io/?https://github.com/tskaro/UnilabPythonInternship/blob/tskaro/Chapter3_CSS/Projects/giorgi_tskaroveli/georgian_questions/Form.html)
 - სალომე ჯავაშვილი | [რთული კითხვაა](/Chapter3_CSS/Projects/salome_javashvili/ბენდის_საიტი/რთული_კითხვაა)
 - [ნიკა ქვრივიშვილი | registration_css](https://htmlpreview.github.io/?https://github.com/nika-kvr/UnilabPythonInternship/blob/master/Chapter3_CSS/Projects/Nika_Kvrivishvili/Band%20registration%20CSS/Registration_css.html)
+- [ნიკა ციცქიშვილი | ილონ მასკი](/Chapter3_CSS/Projects/nika_tsitskishvili/index.html)
 - ვასო კირთაძე | [upgraded_registration_form](https://htmlpreview.github.io/?https://github.com/VasoKirtadze/UnilabPythonInternship/blob/master/Chapter3_CSS/Projects/Vaso_Kirtadze/upgraded_register_form/register.html)
 - [zura vashalomidze | first_project_update](/Chapter3_CSS/Projects/zura_vashalomidze/first_project_update) 
 - ნიკოლოზ ნასყიდაშვილი [Sign Up form](/Chapter3_CSS/Projects/Nikoloz_Naskidashvili/)
@@ -19,6 +20,7 @@
 - ბაჩო მინდიაშვილი | [Nba](/Chapter3_CSS/Projects/bacho_mindiashvili/nba_team) | [Registration_form](/Chapter3_CSS/Projects/bacho_mindiashvili/registration_form)
 - გიგა ამირიძე | [Sign up](/Chapter3_CSS/Projects/giga_amiridze/sign_up) [[View]](https://htmlpreview.github.io/?https://github.com/gigaamiridze/UnilabPythonInternship/blob/css/sign_up/Chapter3_CSS/Projects/giga_amiridze/sign_up/index.html)
 - დანიელ გათენაძე | [hmwrk](https://htmlpreview.github.io/?https://github.com/LilDiabetes/UnilabPythonInternship/blob/css/daniel_gatenadze/Chapter3_CSS/Projects/daniel_gatenadze/hmwrk/hmwrk.html)
+- ანა ხუციშვილი | [Blog](/Chapter3_CSS/Projects/ana_khutsishvili/blog)
 
 ## ინსტრუქცია:
 
