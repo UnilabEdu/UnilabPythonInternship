@@ -5,6 +5,7 @@ from resources.arrival_products import arrival_products, arrival_title
 from resources.seller_products import seller_products, seller_title
 from resources.shop_products import shop_products
 from resources.magazine_items import magazine_items
+from resources.table import table_headers, table_rows
 
 app = Flask(__name__)
 
@@ -20,6 +21,10 @@ def shop():
 @app.route('/press')
 def press():
     return render_template("press.html", pages=nav_bar_pages, magazine_items=magazine_items)
+
+@app.route('/table')
+def table():
+    return render_template("table.html", pages=nav_bar_pages, headers=table_headers, rows=table_rows)
 
 if __name__ == "__main__":
     app.run(port=7777, debug=True)

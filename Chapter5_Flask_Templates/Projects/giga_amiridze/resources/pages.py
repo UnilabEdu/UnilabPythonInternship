@@ -11,4 +11,8 @@ nav_bar_pages = [
         "endpoint": "press",
         "name": "press"
     },
+    {
+        "endpoint": "table",
+        "name": "table"
+    }
 ]

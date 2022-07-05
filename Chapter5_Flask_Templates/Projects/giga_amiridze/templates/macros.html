@@ -72,3 +72,33 @@
         {% endfor %}
     </div>
 {% endmacro %}
+
+{# for table.html #}
+{% macro table_headers_generator(headers) %}
+    <thead>
+        <tr>
+            {% for header in headers %}
+            <th>{{ header }}</th>
+            {% endfor %}
+        </tr>
+    </thead>
+{% endmacro %}
+
+{% macro table_rows_generator(rows) %}
+    <tbody>
+        {% for row in rows %}
+        <tr>
+            {% for item in row %}
+            <td>{{ item }}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </tbody>
+{% endmacro %}
+
+{% macro table_generator(headers, rows) %}
+    <table>
+        {{ table_headers_generator(headers) }}
+        {{ table_rows_generator(rows) }}
+    </table>
+{% endmacro %}
