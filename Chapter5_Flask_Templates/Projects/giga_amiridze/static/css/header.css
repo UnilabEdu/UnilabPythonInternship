@@ -3,6 +3,7 @@
 :root {
     --black: #101010;
     --white: #FFFFFF;
+    --grey: #777777;
 }
 body {
     font-family: 'Inter', sans-serif;
@@ -28,8 +29,15 @@ header {
 ul {
     display: flex;
 }
-li:nth-child(2) {
-    margin: 0 45px;
+li {
+    margin-right: 17px;
+    margin-left: 17px;
+}
+li:first-child {
+    margin-left: 0;
+}
+li:last-child {
+    margin-right: 0;
 }
 .nav-link {
     font-size: 14px;
@@ -55,6 +63,7 @@ li:nth-child(2) {
 }
 .nav-logo {
     height: 32px;
+    padding-right: 80px;
 }
 .icons {
     display: flex;

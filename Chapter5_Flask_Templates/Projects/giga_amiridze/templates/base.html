@@ -1,4 +1,4 @@
-{% from "macros.html" import active_page %}
+{% from "macros.html" import nav_bar_generator %}
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -11,6 +11,10 @@
         <link rel="stylesheet" type="text/css" href="{{ url_for("static", filename="css/reset.css") }}">
         <link rel="stylesheet" type="text/css" href="{{ url_for("static", filename="css/header.css") }}">
         <link rel="stylesheet" type="text/css" href="{{ url_for("static", filename="css/index.css") }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for("static", filename="css/shop.css") }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for("static", filename="css/press.css") }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for("static", filename="css/table.css") }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for("static", filename="css/footer.css") }}">
         <title>Clarckson</title>
     </head>
     <body>
@@ -19,15 +23,7 @@
                 <div class="flex-block">
                     <nav>
                         <ul>
-                            <li>
-                                {{ active_page("home", "home") }}
-                            </li>
-                            <li>
-                                {{ active_page("shop", "shop") }}
-                            </li>
-                            <li>
-                                {{ active_page("press", "press") }}
-                            </li>
+                            {{ nav_bar_generator(pages) }}
                         </ul>
                     </nav>
                     <a href="{{ url_for("home") }}">
@@ -53,5 +49,18 @@
         {% block content %}
 
         {% endblock %}
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <p class="copyright-text">@2022 copyright</p>
+                    <div class="soc-titles">
+                        <a href="https://www.facebook.com/">facebook</a>
+                        <a href="https://www.instagram.com/">instagram</a>
+                        <a href="https://twitter.com/">twitter</a>
+                    </div>
+                    <p class="designer-name">Designed by <a class="obencci" href="https://www.obencci.com/">Obencci</a></p>
+                </div>
+            </div>
+        </footer>
     </body>
 </html>

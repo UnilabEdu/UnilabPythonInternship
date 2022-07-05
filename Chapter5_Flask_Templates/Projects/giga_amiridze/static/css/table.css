@@ -1,0 +1,26 @@
+.table-parent {
+    padding: 60px 0 100px 0;
+    display: flex;
+    justify-content: center;
+}
+table {
+    border-collapse: collapse;
+    border-radius: 5px;
+    background-color: var(--white);
+    box-shadow: 0 5px 10px var(--grey);
+}
+thead {
+    box-shadow: 0 5px 10px var(--grey);
+}
+th {
+    padding: 1.5rem 2rem;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+td {
+    padding: 1rem 2rem;
+    text-align: center;
+    text-transform: capitalize;
+}

@@ -1,6 +1,9 @@
+{% from "macros.html" import shop_items_generator %}
 {% extends "base.html" %}
 {% block content %}
-<section>
-
-</section>
+    <section>
+        <div class="container">
+            {{ shop_items_generator(shop_items) }}
+        </div>
+    </section>
 {% endblock %}
