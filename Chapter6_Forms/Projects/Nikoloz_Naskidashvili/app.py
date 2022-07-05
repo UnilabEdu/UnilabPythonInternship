@@ -45,7 +45,7 @@ def sign_in():
 
 	if form.validate_on_submit():
 		print(form.username.data, form.password.data, form.remember.data)
-		flash("Successfully signed in!")
+		flash("Successfully signed in!", "success")
 
 	return redirect(url_for('index'))
 
