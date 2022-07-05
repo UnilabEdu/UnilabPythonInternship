@@ -1,0 +1,49 @@
+body {
+    background-color: papayawhip;
+    color: purple;
+    text-align: center;
+    font-family: Serif;
+}
+
+h1 {
+    color: darkblue;
+    text-align: center;
+    font-size: 50px;
+}
+
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5%;
+}
+
+ol{
+    color: royalblue;
+    display: inline-block;
+    word-wrap: break-word;
+    width: 700px;
+    text-align: center;
+    list-style-position: inside;
+    font-size: 20px;
+}
+
+p {
+    color: cornflowerblue;
+    text-align: center;
+    font-size: 20px;
+}
+
+a{
+    color: blue;
+}
+
+.submit input {
+    width: 10%;
+    background-color: darkviolet;
+    color: white;
+    cursor: pointer;
+    border-radius: 15px;
+    text-align: center;
+    border: 1px solid darkmagenta;
+}
