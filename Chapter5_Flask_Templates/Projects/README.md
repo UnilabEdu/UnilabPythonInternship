@@ -2,22 +2,13 @@
 
 დირექტორიაში განთავსებულია კონტრიბუტორთა პირველი შაბლონებთან სამუშაო პროექტები
 
-- სახელი გვარი | [პროექტი](/მისამართი)
-### 2021 სტაჟირება
+- [სახელი გვარი | პროექტი](/მისამართი)
 - [დავით ჭინჭარაშვილი](https://github.com/davidunilab) | [Just some demo](https://github.com/davidunilab/UnilabPythonInternship/tree/master/Chapter5_Flask_Templates/Projects/David_chincharashvili)
-- გიორგი კვარაცხელია | [ელექტრონიკის მაღაზია](/Chapter5_Flask_Templates/Projects/Giorgi_Kvaratskhelia)
-- ალექსანდრე ეროიანი | [Top 4 hiking routes in Georgia](/Chapter5_Flask_Templates/Projects/Alexander_Eroyan/)
-- მარია ვეშაპიძე | [Tutor online](/Chapter5_Flask_Templates/Projects/maria_veshapidze/app.py)
-- დენისი სანტურიანი | [5 საათში](/Chapter5_Flask_Templates/Projects/denis_santuryan/)
-- უჩა ხმალაძე | [სასტუმროს ვებ გვერდი](/Chapter5_Flask_Templates/Projects/ucha_khmaladze)
-- დანიელ გათენაძე | [jinja_homework](/Chapter5_Flask_Templates/Projects/daniel_gatenadze)
-### 2022 სტაჟირება
-- ნიკა ციცქიშვილი | [შემეცნებითი პლატფორმა](//Chapter5_Flask_Templates/Projects/nika_tsitskishvili)
-- ნიკოლოზ ნასყიდაშვილი | [ბლოგი](/Chapter5_Flask_Templates/Projects/Nikoloz_Naskidashvili)
-- ნუგო სვიანაძე | [students](/Chapter5_Flask_Templates/Projects/Nugo_svianadze)
-- ბაჩო მინდიაშვილი | [Nba Teams](/Chapter5_Flask_Templates/Projects/bacho_mindiashvili/nba_flask)
-- გიგა ამირიძე | [Clarkson](/Chapter5_Flask_Templates/Projects/giga_amiridze/)
-- ვასო კირთაძე | [jinja Homework](https://htmlpreview.github.io/?https://github.com/VasoKirtadze/UnilabPythonInternship/blob/master/Chapter5_Flask_Templates/Projects/Vaso_Kirtadze/templates/index.html)
+- [გიორგი კვარაცხელია | ელექტრონიკის მაღაზია](https://github.com/RegiusPythonidae/UnilabPythonInternship/tree/master/Chapter5_Flask_Templates/Projects/Giorgi_Kvaratskhelia)
+- [ალექსანდრე ეროიანი | Top 4 hiking routes in Georgia](/Chapter5_Flask_Templates/Projects/Alexander_Eroyan/)
+- [მარია ვეშაპიძე | Tutor online](/Chapter5_Flask_Templates/Projects/maria_veshapidze/app.py)
+- [დენისი სანტურიანი | 5 საათში](/Chapter5_Flask_Templates/Projects/denis_santuryan/)
+- [უჩა ხმალაძე | სასტუმროს ვებ გვერდი](/Chapter5_Flask_Templates/Projects/ucha_khmaladze)
 
 ## ინსტრუქცია:
 
