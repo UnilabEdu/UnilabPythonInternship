@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --black: #000000;
+    --black1: rgba(0, 0, 0, 0.72);
+    --grey: rgba(255, 255, 255, 0.27);
+    --grey1: #a6a6a6;
+    --pink: #B31592;
+}
+.bg-img {
+    height: 100vh;
+    background-image: url("https://images.unsplash.com/photo-1543332164-6e82f355badc?ixid=MnwxMDA0NDd8MHwxfHNlYXJjaHwyfHxoZWxsb3xlbnwwfDB8fHwxNjI0Mzk3NjQy&ixlib=rb-1.2.1&q=90&w=1920&h=1080");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.opacity-div {
+    width: 100%;
+    height: 100%;
+    background-color: var(--black);
+    opacity: 0.6;
+}
+.signup-form {
+    max-width: 700px;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+form h4 {
+    font-size: 16px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 13px;
+}
+form h4 span {
+    color: var(--pink);
+}
+.form-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.input-field {
+    width: 49.5%;
+    height: 45px;
+    background-color: var(--black1);
+    outline: none;
+    border: 1px solid var(--grey);
+    border-radius: 25px;
+    padding-left: 17px;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    transition: all 300ms ease;
+}
+.input-field::placeholder {
+    color: var(--grey1);
+}
+.input-field:focus {
+    border-color: var(--pink);
+}
+input[type="text"] {
+    text-transform: capitalize;
+}
+input[type="email"], input[type="password"], input[type="date"] {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+input[type="date"] {
+    text-transform: uppercase;
+}
+.gender-field {
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    margin-bottom: 20px;
+}
+.gender-field li {
+    width: 100%;
+    height: 45px;
+    background-color: var(--black1);
+    border: 1px solid var(--grey);
+    border-radius: 12px;
+    padding-left: 17px;
+    display: flex;
+    align-items: center;
+    transition: all 300ms ease;
+}
+.gender-field li:hover {
+    border-color: var(--pink);
+}
+.gender-field li:first-child {
+    margin-bottom: 20px;
+}
+.gender-field li input {
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+}
+.submit-btn {
+    width: 116px;
+    height: 43px;
+    background-color: var(--pink);
+    cursor: pointer;
+    border: none;
+    border-radius: 25px;
+    font-size: 13px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: white;
+}
+
+/* welcome.html styles */
+.welcome-title {
+    font-size: 50px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+    padding-top: 70px;
+}

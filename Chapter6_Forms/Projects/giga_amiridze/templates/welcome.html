@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Sign up form">
+        <meta name="keywords" content="Sign up, HTML, CSS, Jinja2">
+        <meta name="author" content="Giga Amiridze">
+        <link rel="stylesheet" type="text/css" href="{{ url_for("static", filename="css/reset.css") }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for("static", filename="css/style.css") }}">
+        <title>Welcome</title>
+    </head>
+    <body class="bg-img">
+        <h3 class="welcome-title">Welcome {{ session["first_name"] }}</h3>
+    </body>
+</html>

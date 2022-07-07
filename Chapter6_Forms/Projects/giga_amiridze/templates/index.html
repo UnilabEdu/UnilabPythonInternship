@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Sign up form">
+        <meta name="keywords" content="Sign up, HTML, CSS, Jinja2">
+        <meta name="author" content="Giga Amiridze">
+        <link rel="stylesheet" type="text/css" href="{{ url_for("static", filename="css/reset.css") }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for("static", filename="css/style.css") }}">
+        <title>Sign up</title>
+    </head>
+    <body class="bg-img">
+        <div class="opacity-div"></div>
+        <div class="signup-form">
+            <form method="POST">
+                {{ form.hidden_tag() }}
+                <h4><span>1. </span>Full Name</h4>
+                <div class="form-group">
+                    {{ form.first_name(class="input-field", placeholder="First Name") }}
+                    {{ form.last_name(class="input-field", placeholder="Last Name") }}
+                </div>
+                {{ form.email(class="input-field", placeholder="Email") }}
+                {{ form.password(class="input-field", placeholder="Password") }}
+                {{ form.confirm_pass(class="input-field", placeholder="Confirm Password") }}
+                <h4><span>2. </span>Date of Birth</h4>
+                {{ form.birth_date(class="input-field") }}
+                <h4><span>3. </span>Gender</h4>
+                {{ form.gender(class="gender-field") }}
+                {{ form.submit(class="submit-btn") }}
+            </form>
+        </div>
+    </body>
+</html>
