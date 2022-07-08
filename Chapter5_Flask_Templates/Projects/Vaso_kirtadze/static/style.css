@@ -1,0 +1,24 @@
+.pos_mid{
+    margin-left: 40%;
+}
+
+img{
+    border: 7px solid;
+    border-color: #900000;
+
+}
+
+#img_div{
+    background-size: contain;
+    background-image: url("office.jpg");
+}
+
+#bod{
+    background-size: cover;
+    background-image: url("backgr.jpg");
+}
+
+#firts_body{
+    background-size: cover;
+    background-image: url("first-bg.jpg");
+}
