@@ -20,7 +20,8 @@
 - მარიამ ქავთარაძე | [homepage](https://htmlpreview.github.io/?https://github.com/MxKavt/UnilabPythonInternship/blob/css/mariam_kavtaradze/Chapter3_CSS/Projects/mariam_kavtaradze/hw_css/pb_homepage.html) | [registration](https://htmlpreview.github.io/?https://github.com/MxKavt/UnilabPythonInternship/blob/css/mariam_kavtaradze/Chapter3_CSS/Projects/mariam_kavtaradze/hw_css/reg_form.html)
 - ნუგო სვიანაძე | [python language styled page](/Chapter3_CSS/Projects/nugo_svianadze/portfolio/portfolio.htm) | [კითხვარი](/Chapter3_CSS/Projects/nugo_svianadze/portfolio/inputs.html)
 - ბაჩო მინდიაშვილი | [Nba](/Chapter3_CSS/Projects/bacho_mindiashvili/nba_team) | [Registration_form](/Chapter3_CSS/Projects/bacho_mindiashvili/registration_form)
-- გიგა ამირიძე | [Sign up](/Chapter3_CSS/Projects/giga_amiridze/sign_up) [[View]](https://htmlpreview.github.io/?https://github.com/gigaamiridze/UnilabPythonInternship/blob/master/Chapter3_CSS/Projects/giga_amiridze/sign_up/index.html)
+- გიგა ამირიძე | [Sign up](/Chapter3_CSS/Projects/giga_amiridze/sign_up) [[View]](https://htmlpreview.github.io/?https://github.com/gigaamiridze/UnilabPythonInternship/blob/css/sign_up/Chapter3_CSS/Projects/giga_amiridze/sign_up/index.html)
+- დანიელ გათენაძე | [hmwrk](https://htmlpreview.github.io/?https://github.com/LilDiabetes/UnilabPythonInternship/blob/css/daniel_gatenadze/Chapter3_CSS/Projects/daniel_gatenadze/hmwrk/hmwrk.html)
 
 ## ინსტრუქცია:
 
