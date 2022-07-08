@@ -385,7 +385,7 @@ def index():
     form = SimpleForm()
 
     if form.validate_on_submit():
-        flash("შენ ახლახანს დააჭირე")
+        flash("შენ ახლახანს დააჭირე", "info") # alert types: primary, secondary, success, danger, warning, info, light, dark
 
         return redirect(url_for('index'))
     return render_template('base.html', form=form)
@@ -395,7 +395,7 @@ if __name__ == '__main__':
     app.run(debug=True)
 ```
 
-იმ შემთხვევაში თუ `validate_on_submit()` პირობა სრულდება შესრულდება `flash("შენ ახლახანს დააჭირე")`.
+იმ შემთხვევაში თუ `validate_on_submit()` პირობა სრულდება შესრულდება `flash("შენ ახლახანს დააჭირე", "info")`.
 
 #### შაბლონის მხარე
 
@@ -435,9 +435,11 @@ jQuery რესურსებიც.
 `home.html`
 
 ```html
-{# get_flashed_messages() ავტომატურად იღებს flash()-ის პარამეტრებს #} {% for msg
-in get_flashed_messages() %}
-<div class="alert alert-warning alert-dismissible fade show" role="alert">
+{# get_flashed_messages() ავტომატურად იღებს flash()-ის პარამეტრებს #}
+
+{% if get_flashed_messages(with_categories=True) %}
+{% for category, message in get_flashed_messages(with_categories=True) %}
+<div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
   <button
     type="button"
     class="close"
@@ -447,9 +449,10 @@ in get_flashed_messages() %}
   >
     <span aria-hidden="true">&times;</span>
   </button>
-  {{msg}}
+  {{message}}
 </div>
 {% endfor %}
+{% endif %}
 
 <form method="POST">{{ form.hidden_tag() }} {{ form.submit() }}</form>
 ```

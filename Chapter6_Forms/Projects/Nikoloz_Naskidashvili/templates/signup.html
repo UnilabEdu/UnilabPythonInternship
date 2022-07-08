@@ -1,0 +1,38 @@
+{% extends "base.html"%}
+
+{% block page_title %}
+    Sign Up
+{% endblock %}
+
+{% block content %}
+    <form action="/sign-up" method="POST">
+        <div class="mb-1">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Name">
+        </div>
+        <div class="mb-1">
+            <label for="surname" class="form-label">Surname</label>
+            <input type="text" class="form-control" id="surname" placeholder="Surname">
+        </div>
+        <div class="mb-1">
+            <label for="username" class="form-label">Username</label>
+            <input type="text" class="form-control" id="username" placeholder="Username">
+        </div>
+        <div class="mb-1">
+            <label for="password_1" class="form-label">Password</label>
+            <input type="password" class="form-control" id="password_1" placeholder="Enter Password">
+            <small>Password must include one capital letter and at least one number</small>
+        </div>
+        <div class="mb-1">
+            <label for="password_2" class="form-label">Repeat Password</label>
+            <input type="password" class="form-control" id="password_2" placeholder="Repeat Password">
+        </div>
+        <div class="form-check">
+            <input type="checkbox" id="checkbox" class="form-check-input">
+            <label for="checkbox" class="form-check-label">I agree with privacy policy and terms & conditions</label>
+        </div>
+        <div class="mt-3">
+            <button type="submit" class="btn btn-primary">Sign Up</button>
+        </div>
+    </form>
+{% endblock %}
