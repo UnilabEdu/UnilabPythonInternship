@@ -1,0 +1,41 @@
+img {
+    padding-inline: 1cm;
+    border-style: dashed;
+    border-color: #556B2F;
+}
+body {
+    background: #F5F5DC;
+}
+.titl {
+  color:#556B2F
+}
+p {
+    background-color: #BDB76B;
+    font-family: serif;
+    font-size: 20px;
+}
+ol li {
+    color: #556B2F;
+}
+
+ul li {
+    color: #2a9d8f ;
+}
+
+
+th {
+    color: white;
+    background: #556B2F;
+    text-align: center;
+}
+
+td{
+    color: black;
+    background: #BDB76B;
+    text-align: center;
+}
+
+table {
+    width: 60%;
+    height: 90px;
+}
