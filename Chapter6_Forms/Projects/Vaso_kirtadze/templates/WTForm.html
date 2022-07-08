@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{%  block content %}
+    <h1>Registration form</h1>
+<form method="POST" enctype="multipart/form-data">
+
+    {%   with messages = get_flashed_messages() %}
+        {% if messages %}
+        {%  for message in messages %}
+        {{ message[0] }}
+            <br>
+        {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+
+
+
+    {{ form.hidden_tag() }}
+    {{ form.username.label }}
+    {{ form.username }}
+    <br>
+    <br>
+    {{ form.password.label }}
+    {{ form.password }}
+    <br>
+    <br>
+
+    {{ form.confirm_pass.label }}
+    {{ form.confirm_pass }}
+
+    <hr class="text-primary">
+    <br>
+    {{ form.email.label }}
+    {{ form.email }}
+    <br>
+    <br>
+    {{ form.gender.label }}
+    {{ form.gender }}
+<label>Date of birth</label>
+    {{ form.date }}
+
+    <hr>
+    <br>
+    <br>
+    <label>Upload a photo</label>
+    {{ form.file(accept=".png") }}
+    <br>
+    <hr>
+    {{ form.approval}}<label> I Agree to the terms and conditions</label>
+    <br>
+
+    {{ form.submit }}
+
+    <hr>
+
+
+    </form>
+
+{%  endblock %}
