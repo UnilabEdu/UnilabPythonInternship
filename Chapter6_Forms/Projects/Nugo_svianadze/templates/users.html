@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student list</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" integrity="sha256-2XFplPlrFClt0bIdPgpz8H7ojnk10H69xRqd9+uTShA=" crossorigin="anonymous" />
+<table class="table" border="1" style="width: 50%;margin-left:30%;margin-top: 20%;">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First Name</th>
+      <th scope="col">email</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">University</th>
+      <th scope="col">Course</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+        <th scope="row">1</th>
+        <td>{{ data['first_name'] }}</td>
+        <td>{{ data['email'] }}</td>
+        <td>{{ data['last_name'] }}</td>
+        <td>{{ data['university'] }}</td>
+        <td>{{ data['course'] }}</td>
+    </tr>
+  </tbody>
+</table>
+<div style="text-align: center;">
+    <form method="get" action="/">
+        <button type="submit">იუზერის შეცვლა</button>
+    </form>
+</div>
+</body>
+</html>
