@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demographic Survey</title>
+</head>
+<body>
+<h1>Demographic Survey</h1>
+<form>
+    <label for="fname">First Name:</label>
+    <input type="text" id="fname" name="fname">
+    <br/>
+    <br/>
+    <label for="lname">Last Name:</label>
+    <input type="text" id="lname" name="lname">
+    <br/>
+
+    <br/>
+    <label>How old are you?</label>
+    <select name="age">
+        <option>under 18 years</option>
+        <option>18-25 years</option>
+        <option>26-49 years</option>
+        <option>50-65 years</option>
+        <option>over 65 years</option>
+    </select>
+    <br/>
+
+    <br/>
+    <label>What gender do you identify as?</label>
+    <br/>
+    <input type="radio" name="sex" value="female" />Female<br/>
+    <input type="radio" name="sex" value="male" />Male<br/>
+    <input type="radio" name="sex" value="Prefer not to say" />Prefer not to say
+    <br/>
+
+    <br/>
+    <label>Please select which winter holidays you celebrate:</label>
+    <br/>
+    <input type="checkbox" name="holiday" value="hanukkah" />Hanukkah<br/>
+    <input type="checkbox" name="holiday" value="christmas" />Christmas<br/>
+    <input type="checkbox" name="holiday" value="lunar new year" />Lunar New Year<br/>
+    <input type="checkbox" name="holiday" value="other" />Other:
+    <input type="text" id="other" name="other">
+    <br/>
+
+    <br/>
+    <label>In one sentence describe yourself:</label><br/>
+    <textarea
+        name=""
+        id=""
+        cols="35"
+        rows="5"
+        placeholder="Your answer"
+    ></textarea>
+    <br/>
+
+    <br/>
+    <input type="checkbox" name="" id="consent"/>
+    <label for="consent">I agree to share my personal data.</label>
+    <br/>
+    <br/>
+    <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>
