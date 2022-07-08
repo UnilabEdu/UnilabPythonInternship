@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1>Michael Scott</h1>
+    <hr>
+    <div id="img_div">
+    <img src="../static/MichaelScott.png" alt="Photo of Michael Scott" class="pos_mid rounded-circle" >
+        </div>
+    <br>
+    <br>
+
+    <a class="btn btn-primary pos_mid" href="http://refreshquote.blogspot.com/2015/03/michael-scott-random-quote-on-every.html" role="button" target="_blank">Random Quote</a>
+    <hr>
+    <h2>Michaels biography</h2>
+    <hr class="text-danger">
+    <p class="bg-info text-dark"> Michael Gary Scott was born on March 15, 1964[11] in Scranton, Pennsylvania. He came from a relatively difficult childhood of loneliness. In the pilot he references having a brother. Michael had some trouble with his early education, shown in "Dunder Mifflin Infinity" as Michael tells the camera crew he was held back from second grade. In "Diversity Day", Michael claims to be of English, Irish, German, and Scottish ancestry. He also claims to be "two-fifteenths" Native American. He has mentioned a stepfather, Jeff, whom he despises. In "Nepotism", it is revealed that Michael had a half-sister, from whom he was estranged for 15 years. As a consequence of their reunion, Michael hires his nephew Luke as an intern for the office, but eventually confronts the incompetent and rude Luke and ends up spanking him in front of the office, leading Luke to burst into tears and quit.
+
+In the episode "Take Your Daughter to Work Day", Michael makes the claim that he was a child star on a kids' show called Fundle Bundle; however, it becomes clear that he simply appeared on the show as one of many guest children. In the old recording being played, he speaks touchingly about what he wanted when he grew up: get married, have "100 kids" so he could then have "100 friends" and none of them could say no to being his friend. Michael did not attend college, having lost all his tuition money in a pyramid scheme.
+
+Michael started at Dunder Mifflin as a salesman in the 1990s. In "Dwight's Speech", he shows the plaque and certificate he received in 1996 and 1997 for 'Top Salesman of the Year'. Dwight also praised him in a deleted scene from "The Coup" for winning consecutive awards for best salesman. In "Two Weeks", he claims to have acquired half of the Scranton branch client base. In "The Client", he impresses his then-manager, Jan Levinson-Gould, by single-handedly acquiring an important client through somewhat unorthodox methods. Both Pam Halpert and Ryan Howard are impressed watching him make sales and negotiate their contracts when working in The Michael Scott Paper Company. Even Jim Halpert concedes that he might never become as good a salesman as Michael in "Koi Pond".
+
+During a candid conversation in "The Fire", Michael tells Ryan that he became a salesman because he loved to make friends. After being promoted to regional manager at a young age, he continued to treat work-related relationships as personal friendships. He acknowledges the difficulty because his colleagues are all lower than him in the workplace's hierarchy. He seems to have few relationships outside the office.</p>
+    <hr>
+    <h4 id="weakness">Michael's weaknesses:</h4>
+        <ul class="list-group">
+  <li class="list-group-item disabled" aria-disabled="true">Works too hard</li>
+  <li class="list-group-item">Cares too much</li>
+  <li class="list-group-item">sometimes  can be too invested in my job.
+</li>
+            <br>
+</ul>
+    <h4>Michael's strengths:</h4>
+        <ul class="list-group">
+            <li class="list-group-item">The weaknesses are actually strengths</li>
+        </ul>
+    <hr>
+    <table border="2" class="table bg-success bg-opacity-50" id="emp">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Employees</th>
+            <th scope="col">Position</th>
+        </tr>
+        {% for item in my_employees %}
+            <tr>
+                <th>{{ item['number'] }}</th>
+                <th>{{ item['name'] }}</th>
+                <th>{{ item['position'] }}</th>
+            </tr>
+        {%  endfor %}
+
+
+    </table>
+
+{% endblock %}
