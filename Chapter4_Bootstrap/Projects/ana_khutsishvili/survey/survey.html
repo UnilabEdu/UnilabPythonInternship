@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demographic Survey</title>
+    <link
+        rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+        crossorigin="anonymous"
+    />
+
+</head>
+<body>
+<div class="container">
+    <div class="container p-5 my-5 border">
+        <h1 class="text-center">Demographic Survey</h1>
+            <div class="container">
+                <div class="container pt-5">
+        <form>
+        <div class="form-check">
+          <div class="row">
+            <div class="col">
+                <label for="text" class="form-label">First name:</label>
+                <input type="text" class="form-control" id="firstName" placeholder="Enter first name" name="firstName">
+            </div>
+            <div class="col">
+                <label for="text" class="form-label">Last name:</label>
+                <input type="text" class="form-control" id="lastName" placeholder="Enter last name" name="lastName">
+            </div>
+        </div>
+    </div>
+    <br/>
+    <br/>
+    <div class="form-check">
+        <label>How old are you?</label><br/>
+
+            <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                <option selected>Please Select</option>
+                <option>under 18 years</option>
+                <option>18-25 years</option>
+                <option>26-49 years</option>
+                <option>50-65 years</option>
+                <option>over 65 years</option>
+            </select>
+        <br/>
+    </div>
+    <br/>
+    <div class="form-check">
+        <label>What gender do you identify as?</label>
+            <br/>
+
+            <input type="radio" class="form-check-input" id="female" name="optradio" value="female">Female
+            <label class="form-check-label" for="female"></label><br/>
+            <input type="radio" class="form-check-input" id="male" name="optradio" value="male">Male
+            <label class="form-check-label" for="male"></label><br/>
+            <input type="radio" class="form-check-input" id="preferNotToSay" name="optradio" value="preferNotToSay">Prefer not to say
+            <label class="form-check-label" for="preferNotToSay"></label><br/>
+    </div>
+    <div class="form-check"><br/>
+        <label>Please select which winter holidays you celebrate:</label>
+        <br/>
+            <input class="form-check-input" type="checkbox" value="" id="hanukkah">
+            <label class="form-check-label" for="hanukkah">Hanukkah</label><br/>
+            <input class="form-check-input" type="checkbox" value="" id="christmas">
+            <label class="form-check-label" for="christmas">Christmas</label><br/>
+            <input class="form-check-input" type="checkbox" value="" id="lunar new year">
+            <label class="form-check-label" for="lunar new year">Lunar New Year</label><br/>
+            <input class="form-check-input" type="checkbox" value="" id="other">
+            <label class="form-check-label" for="lunar new year">Other:</label>
+            <input type="text" id="other" name="other">
+    </div>
+    <br/>
+    <br/>
+    <div class="form-check">
+        <label>In one sentence describe yourself:</label><br/>
+        <div class="form-floating">
+            <textarea class="form-control" placeholder="Your answer" id="floatingTextarea2" style="height: 100px "></textarea>
+            <label for="floatingTextarea2"></label>
+        </div>
+        <br/>
+        <div class="col text-center">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">I agree to share my personal data.</label>
+                <br/>
+                <br/>
+                <a class="btn btn-secondary" href="/Chapter4_Bootstrap/Projects/ana_khutsishvili/survey/survey_start_page.html" role="button">Back</a>
+                <button type="button" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+    </div>
+    </form>
+    </div>
+</div>
+</div>
+</div>
+
+</body>
+</html>

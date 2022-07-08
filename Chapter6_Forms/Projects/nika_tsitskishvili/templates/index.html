@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block content %}
+<h1 style="color:darkslateblue; margin: 2%" class = "text-center">Welcome!</h1>
+    <p style="background-color:tomato;" class = "text-center">On our website you will be able to observe interesting information about successful businessmen! <br>
+    For more information go to the <b>"About Info"</b> page!
+    </p>
+    <div class="text-center">
+    <img style="margin: 5%;" class="img-thumbnail" src="https://assets.weforum.org/article/image/0jlhp6yBfxtM55gpYtkW1R2ixWfMuAo5dTq8PMFms9s.jpg"
+    alt="Welcome"
+    width=70%
+    height=30%
+    >
+    </div>
+    <h4 style="color: darkslateblue;">Register on our website now!</h4>
+    <form method="POST">
+        {{form.hidden_tag()}}
+        {{form.login.label}}
+        {{form.login}}
+        <br>
+        {{form.email.label}}
+        {{form.email}}
+        <br>
+        {{form.password.label}}
+        {{form.password}}
+        <br>
+        {{form.confirmpassword.label}}
+        {{form.confirmpassword}}
+        <br>
+        {{form.gender}}
+        {{form.submit}}
+
+{#        <input type="submit", value="Go">#}
+    </form>
+
+{% endblock %}

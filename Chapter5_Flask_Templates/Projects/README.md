@@ -9,6 +9,12 @@
 - [მარია ვეშაპიძე | Tutor online](/Chapter5_Flask_Templates/Projects/maria_veshapidze/app.py)
 - [დენისი სანტურიანი | 5 საათში](/Chapter5_Flask_Templates/Projects/denis_santuryan/)
 - [უჩა ხმალაძე | სასტუმროს ვებ გვერდი](/Chapter5_Flask_Templates/Projects/ucha_khmaladze)
+- [ნიკა ციცქიშვილი | შემეცნებითი პლატფორმა](//Chapter5_Flask_Templates/Projects/nika_tsitskishvili)
+- [ნიკოლოზ ნასყიდაშვილი | ბლოგი](/Chapter5_Flask_Templates/Projects/Nikoloz_Naskidashvili)
+- [ნუგო სვიანაძე | students](/Chapter5_Flask_Templates/Projects/Nugo_svianadze)
+- [ბაჩო მინდიაშვილი| Nba Teams](/Chapter5_Flask_Templates/Projects/bacho_mindiashvili/nba_flask)
+- [გიგა ამირიძე | Clarkson](/Chapter5_Flask_Templates/Projects/giga_amiridze/)
+- ვასო კირთაძე | [jinja Homework](https://htmlpreview.github.io/?https://github.com/VasoKirtadze/UnilabPythonInternship/blob/master/Chapter5_Flask_Templates/Projects/Vaso_Kirtadze/templates/index.html)
 
 ## ინსტრუქცია:
 

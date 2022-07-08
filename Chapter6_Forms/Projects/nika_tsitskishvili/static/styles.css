@@ -1,0 +1,36 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: #ccc;
+    font-family: Arial;
+}
+#nvbr {
+    background: black;
+    padding: 0;
+}
+.text-center {
+    text-align: center;
+    color: white;
+}
+.myDivElement{
+    text-align:center;
+}
+.myDivElement ul li{
+   display:inline;
+ }
+.imgg {
+    width: 100px;
+    height: 100px;
+    margin: 10%;
+}
+#hh {
+    color: white;
+}
+
+#mar {
+    margin: 30px;
+}
+
+
+
+
