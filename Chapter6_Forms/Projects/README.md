@@ -10,6 +10,7 @@
 - [გიორგი წყაროველი | ექთნის რეგისტრაციის ფორმა](/Chapter6_Forms/Projects/giorgi_tskaroveli) [ვიდეო](https://drive.google.com/file/d/
 - [ნიკა ციცქიშვილი | ბიზნეს პლატფორმა](/Chapter6_Forms/Projects/nika_tsitskishvili/app.py)
 - [გიორგი წყაროველი | ექთნის რეგისტრაციის ფორმა](/Chapter6_Forms/Projects/giorgi_tskaroveli) [ვიდეო](https://drive.google.com/file/d/13r3tCPpe4lXptuDzpn-fSxEil1aSQhbY/view?usp=sharing)
+- [ნიკოლოზ ნასყიდაშვილი | ბლოგი](/Chapter6_Forms/Projects/Nikoloz_Naskidashvili)
 - [ნუგო სვიანაძე | Students](/Chapter6_Forms/Projects/Nugo_svianadze)
 
 ## ინსტრუქცია:
