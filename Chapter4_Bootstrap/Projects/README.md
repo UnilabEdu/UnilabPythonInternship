@@ -14,8 +14,8 @@
 - [გიორგი წყაროველი |Mars Mission](/Chapter4_Bootstrap/Projects/giorgi_tskaroveli/mars_crew)
 - [ნიკა ქვრივიშვილი | Bootstrap pull request](https://htmlpreview.github.io/?https://github.com/nika-kvr/UnilabPythonInternship/blob/master/Chapter4_Bootstrap/Projects/Nika%20Kvrivishvili/pull_request/index.html) 
 - [ალისა სანაკოევა | Something](https://htmlpreview.github.io/?https://github.com/UnilabEdu/UnilabPythonInternship/blob/master/Chapter4_Bootstrap/Projects/alisa_sanakoeva/another_randomness.html) 
+- [ნიკა ციცქიშვილი | საკუთარი ვებ-გვერდი](/Chapter4_Bootstrap/nika_tsitskishvili/my_web.html)
 - გიგა ამირიძე | [About me & Contact](/Chapter4_Bootstrap/Projects/giga_amiridze) [[View]](https://htmlpreview.github.io/?https://raw.githubusercontent.com/gigaamiridze/UnilabPythonInternship/bootstrap/about_me/Chapter4_Bootstrap/Projects/giga_amiridze/about_me/index.html)
-
 
 ## ინსტრუქცია:
 
