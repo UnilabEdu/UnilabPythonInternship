@@ -1,0 +1,43 @@
+<div class="parallaxsign-up">
+{% extends "base.html" %}
+{% block content %}
+        <form >
+            <div class="container">
+                <h3>To Continue</h3>
+                <p>Follow the instructions</p>
+                <hr>
+
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" name="email" id="email" required>
+
+                <label for="age"><b>Age</b></label>
+                <input type="number" placeholder="Enter your age" name="age" id="age" required>
+
+                <p></p>
+                <input type="radio" name="gender" id="male" value="Male" checked>
+                <label for="male">Male</label>
+                <input type="radio" name="gender" id="female" value="Female" >
+                <label for="female">Female</label>
+                <input type="radio" name="gender" id="other" value="Other" >
+                <label for="other">Other</label>
+
+                <p></p>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+
+                <label for="psw-repeat"><b>Repeat Password</b></label>
+                <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
+                <hr>
+
+                <p>By creating an account you agree to our <a href="https://eatlospolloshermanos.com/terms-and-conditions/">Terms & Privacy</a>.</p>
+                <button type="submit" class="registerbtn">Register</button>
+            </div>
+
+            <div class="container signin">
+                <p>Already have an account? <a href="{{ url_for('log_in') }}">Sign in</a>.</p>
+            </div>
+        </form>
+
+{% endblock %}
+</div>

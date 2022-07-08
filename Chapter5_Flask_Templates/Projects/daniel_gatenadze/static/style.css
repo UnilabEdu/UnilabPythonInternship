@@ -1,0 +1,305 @@
+a:link{
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+.container a:hover{
+  color: #dc1035;
+  text-decoration: underline;
+}
+
+.container a:active {
+  color: #dc1035;
+  text-decoration: underline;
+}
+
+body,html{
+  height: 100%;
+  cursor: auto;
+}
+.parallax {
+  /* The image used */
+  background-image: url("https://wallpaperaccess.com/full/2471283.gif");
+
+  /* Full height */
+  height: 100%;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.parallaxsign-up{
+  background-image: url("https://www.omxtechnologies.com/wp-content/uploads/2014/10/Website-Background.jpg");
+  height: 100%;
+  width: 100%;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#footer{
+  position: absolute;
+  text-align: left;
+  bottom: 0;
+  font-family: "PF Tempesta Five", sans-serif;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 1);
+}
+
+.bg-text {
+  background-color: rgb(0,0,0);
+  background-color: rgba(13, 6, 222, 0.7);
+  color: #ffffff;
+  font-weight: bold;
+  border: 3px solid #1e026a;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+  font-family: "PF Tempesta Five", sans-serif;
+}
+
+.product-text {
+  background-color: #dddddd;
+  color: black;
+  font-weight: bold;
+  position: relative;
+  border: 2px solid #c8c7c7;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 10px;
+  text-align: center;
+  font-family: "PF Tempesta Five", sans-serif;
+}
+
+* {box-sizing: border-box}
+
+.container {
+  padding: 16px;
+  font-family: "PF Tempesta Five", sans-serif;
+}
+
+input[type=text], input[type=password], input[type=number] {
+  width: 100%;
+  padding: 15px;
+  margin: 1px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+.registerbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+  font-family: "PF Tempesta Five", sans-serif;
+}
+.loginbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+  font-family: "PF Tempesta Five", sans-serif;
+}
+
+.loginbtn:hover{
+  opacity:1;
+  font-family: "PF Tempesta Five", sans-serif;
+}
+.registerbtn:hover {
+  opacity:1;
+  font-family: "PF Tempesta Five", sans-serif;
+}
+
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #dddddd;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+a {
+  color: dodgerblue;
+}
+
+.signin {
+  background-color: #ddd;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+.columns {
+  display: flex;
+  margin: auto;
+  justify-content: space-around;
+  width: 80%;
+  padding: 8px;
+  font-family: "PF Tempesta Five", sans-serif;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  top: 50%;
+  left: 50%;
+}
+
+
+.first {
+  list-style-type: none;
+  border: 1px solid #eee;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.second {
+  list-style-type: none;
+  border: 1px solid #eee;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.third {
+  list-style-type: none;
+  border: 1px solid #eee;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+
+.first:hover {
+  box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
+}
+.second:hover {
+  box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
+}
+.third:hover {
+  box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
+}
+
+
+.first .header {
+  background-color: #9c5221;
+  color: silver;
+  font-size: 25px;
+}
+.second .header {
+  background-color: #96A6B2;
+  color: silver;
+  font-size: 25px;
+}
+.third .header {
+  background-color: #af0f4e;
+  color: silver;
+  font-size: 25px;
+}
+
+
+.first li {
+  border-bottom: 1px solid #eee;
+  padding: 20px;
+  text-align: center;
+}
+.second li {
+  border-bottom: 1px solid #eee;
+  padding: 20px;
+  text-align: center;
+}
+.third li {
+  border-bottom: 1px solid #eee;
+  padding: 20px;
+  text-align: center;
+}
+
+
+.first .grey {
+  background-color: silver;
+  font-size: 20px;
+}
+.second .grey {
+  background-color: silver;
+  font-size: 20px;
+}
+.third .grey {
+  background-color: silver;
+  font-size: 20px;
+}
+
+
+.button {
+  background-color: #04AA6D;
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .columns {
+    width: 100%;
+  }
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+@media only screen and (max-device-width: 1366px) {
+  .parallax {
+    background-attachment: scroll;
+  }
+}
+
+@font-face {
+  font-family: 'PF Tempesta Five', sans-serif;
+}
