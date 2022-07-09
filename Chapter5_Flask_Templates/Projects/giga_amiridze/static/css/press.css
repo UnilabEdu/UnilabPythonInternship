@@ -1,0 +1,49 @@
+/* First Section Styles */
+.black-block {
+    width: 100%;
+    height: 500px;
+    background-color: var(--black);
+    color: var(--white);
+    position: relative;
+}
+.press-content {
+    max-width: 470px;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.delete-marg-bott {
+    margin-bottom: 0;
+}
+.align-center {
+    text-align: center;
+}
+
+/* Second Section Styles */
+.magazines-block {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 70px 0;
+}
+.box {
+    max-width: 213px;
+    width: 100%;
+}
+.magazine-img {
+    width: 100%;
+    object-fit: cover;
+}
+.magazine-info {
+    margin-top: 18px;
+    padding-right: 16px;
+}
+.description {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--black);
+    line-height: 26px;
+    letter-spacing: -0.5px;
+}

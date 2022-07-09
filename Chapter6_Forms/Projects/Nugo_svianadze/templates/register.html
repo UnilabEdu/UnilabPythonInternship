@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html  lang="">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>register</title>
+
+</head>
+<body>
+<form action="/" method="POST" enctype="multipart/form-data">
+    {{ form.csrf_token }}
+    <div class="container" style="text-align: center;">
+    <div style="text-align: center;">  <h1> Student Registeration Form</h1> </div>
+        {% from "_formhelper.html" import render_field %}
+        <dl>
+            {{ render_field(form.hidden_tag) }}
+            {{ render_field(form.username) }}
+            {{ render_field(form.email) }}
+            {{ render_field(form.first_name) }}
+            {{ render_field(form.last_name) }}
+            {{ render_field(form.university) }}
+            {{ render_field(form.course) }}
+            {{ render_field(form.file) }}
+        </dl>
+        <div style="margin-top: 50px;">
+            <button type="submit" class="btn btn-success">Success</button>
+        </div>
+    </div>
+</form>
+
+</body>
+</html>

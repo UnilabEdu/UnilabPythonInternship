@@ -3,7 +3,10 @@
 დირექტორიაში განთავსებულია კონტრიბუტორთა HTML პროექტები
 
 ## პროექტები
-- სახელი გვარი | [პროექტი 1](/Chapter2_HTML/Projects/საჩვენებელი_მისამართი) | [პროექტი 2](/საჩვენებელი_მისამართი)
+
+- სახელი გვარი (შაბლონი) | [პროექტი 1](/Chapter2_HTML/Projects/საჩვენებელი_მისამართი) | [პროექტი 2](/საჩვენებელი_მისამართი)
+
+### 2021 სტაჟირება
 - თემურ ჩიჩუა| [პორტფოლიო](https://htmlpreview.github.io/?https://github.com/UnilabEdu/UnilabPythonInternship/blob/master/Chapter2_HTML/Projects/temur_chichua/portfolio/main.html) | [საკონტაქტო ფორმა](/Chapter2_HTML/Projects/temur_chichua/contact_form)
 - ნუგო სვიანაძე | [python pl](/Chapter2_HTML/Projects/nugo_svianadze/portfolio)
 - ალექსანდრე ეროიანი | [4 best hiking routes in Georgia](/Chapter2_HTML/Projects/Alexander_Eroyan/Georgian_Hiking_Routes) |
@@ -19,15 +22,18 @@
 - ირაკლი გიუნაშვილი| [პროგრამინგ ლენგვიჯ ჩოის](https://github.com/IrakliG/UnilabPythonInternship/blob/master/first_html_for_unilab.html) | [რეგისტრაციის ფორმა](https://github.com/IrakliG/UnilabPythonInternship/blob/master/registration%20form.html)
 - ალისა სანაკოევი| [პორტფოლიო თუ რაღაც ეგეთი](https://htmlpreview.github.io/?https://github.com/alisa-sanakoeva/UnilabPythonInternship/blob/master/Chapter2_HTML/Projects/alisa_sanakoeva/portfolio/alisa.html)
 - ნიკა ქვრივიშვილი | [Gojira](https://htmlpreview.github.io/?https://github.com/UnilabEdu/UnilabPythonInternship/blob/master/Chapter2_HTML/Projects/Nika_Kvrivishvili/Gojira.html)
-- [გიორგი სტურუა] (https://github.com/sturu23) \ [ნაკრები] (https://github.com/sturu23/UnilabPythonInternship/tree/master/Chapter2_HTML/Projects/giorgi_sturua)
-- ნიკა ციცქიშვილი | [ილონ მასკი](/Chapter2_HTML/Projects/nika_tsitskishvili/index.html) | [პროექტი 2](/საჩვენებელი_მისამართი)
+
+### 2022 სტაჟირება
+- მარიამ ქავთარაძე | [hw_html](https://htmlpreview.github.io/?https://github.com/MxKavt/UnilabPythonInternship/blob/html/mariam_kavtaradze/Chapter2_HTML/Projects/mariam_kavtaradze/hw_html/hw_htmlonly.html)
+- გიორგი სტურუა | [ნაკრები](/Chapter2_HTML/Projects/giorgi_sturua)
+- ნიკა ციცქიშვილი | [ილონ მასკი](/Chapter2_HTML/Projects/nika_tsitskishvili/index.html)
 - ვასო კირთაძე | [info_michael](https://htmlpreview.github.io/?https://github.com/VasoKirtadze/UnilabPythonInternship/blob/master/Chapter2_HTML/Projects/Vaso_Kirtadze/Michael/Michael.html) | [registration_form](https://htmlpreview.github.io/?https://github.com/VasoKirtadze/UnilabPythonInternship/blob/master/Chapter2_HTML/Projects/Vaso_Kirtadze/registration_form/register.html)
 - ვატო ქვარაია| [about me](/Chapter2_HTML/Projects/vato_qvaraia/project_1)
 - ზურა ვაშალომიძე | [პროექტი 1](/Chapter2_HTML/Projects/zura_vashalomidze/first_project)
 - ნიკოლოზ ნასყიდაშვილი | [პორტფოლიო](/Chapter2_HTML/Projects/Nika_Naskidashvili/)
 - მარიამ ქავთარაძე | [hw_html](https://htmlpreview.github.io/?https://github.com/MxKavt/UnilabPythonInternship/blob/html/mariam_kavtaradze/Chapter2_HTML/Projects/mariam_kavtaradze/hw_html/hw_htmlonly.html)
 - ბაჩო მინდიაშვილი | [Nba](/Chapter2_HTML/Projects/bacho_mindiashvili/nba_team) | [Registration](/Chapter2_HTML/Projects/bacho_mindiashvili/registration_form)
-- დანიელ გათენაძე | [Project_1](https://htmlpreview.github.io/?https://github.com/LilDiabetes/UnilabPythonInternship/blob/html/daniel_gatenadze/Chapter2_HTML/Projects/daniel_gatenadze/Project_n1/main.html)
+- დანიელ გათენაძე | [Project_1](/Chapter2_HTML/Projects/daniel_gatenadze/Project_n1/main.html)
 - გიგა ამირიძე | [პორტფოლიო](/Chapter2_HTML/Projects/giga_amiridze/portfolio) [[View]](https://htmlpreview.github.io/?https://github.com/gigaamiridze/UnilabPythonInternship/blob/master/Chapter2_HTML/Projects/giga_amiridze/portfolio/portfolio.html) | [ქვეყნების მშპ](/Chapter2_HTML/Projects/giga_amiridze/countries_GDP) [[View]](https://htmlpreview.github.io/?https://github.com/gigaamiridze/UnilabPythonInternship/blob/master/Chapter2_HTML/Projects/giga_amiridze/countries_GDP/index.html) | [სარეგისტრაციო ფორმა](/Chapter2_HTML/Projects/giga_amiridze/register_form) [[View]](https://htmlpreview.github.io/?https://github.com/gigaamiridze/UnilabPythonInternship/blob/master/Chapter2_HTML/Projects/giga_amiridze/register_form/register.html)
 - ანა ხუციშვილი | [Blog](/Chapter2_HTML/Projects/ana_khutsishvili/blog) | [Survey](/Chapter2_HTML/Projects/ana_khutsishvili/survey)
 

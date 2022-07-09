@@ -1,0 +1,104 @@
+{# for base.html #}
+{% macro nav_link(endpoint, name) %}
+    {% if request.endpoint.endswith(endpoint) %}
+        <a class="nav-link active" href="{{ url_for(endpoint) }}">{{ name }}</a>
+    {% else %}
+        <a class="nav-link" href="{{ url_for(endpoint) }}">{{ name }}</a>
+    {% endif %}
+{% endmacro %}
+
+{% macro nav_bar_generator(pages) %}
+    {% for page in pages %}
+        <li>
+            {{ nav_link(page["endpoint"], page["name"]) }}
+        </li>
+    {% endfor %}
+{% endmacro %}
+
+{# for index.html #}
+{% macro items_generator(items, title) %}
+    <div class="content-block">
+        <h2 class="sales-title">{{ title }}</h2>
+        <div class="products-block">
+            {% for item in items %}
+            <div class="item-box">
+                <img class="product-img" src="{{ item["product_img"] }}" alt="Product's Img">
+                <div class="item-info">
+                    <p class="product-name">{{ item["product_name"] }}</p>
+                    <p class="category">{{ item["category"] }}</p>
+                    <div class="fee-box">
+                        <span class="price">{{ item["price"] }}</span>
+                        <span class="old-price">{{ item["old_price"] }}</span>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <a class="content-link other-colors" href="{{ url_for("shop") }}">shop all</a>
+    </div>
+{% endmacro %}
+
+{# for shop.html #}
+{% macro shop_items_generator(items) %}
+    <div class="content-block change-padds">
+        <div class="products-block delete-margs">
+            {% for item in items %}
+            <div class="item-box add-marg-bott">
+                <img class="product-img" src="{{ item["product_img"] }}" alt="Product's Img">
+                <div class="item-info">
+                    <p class="product-name">{{ item["product_name"] }}</p>
+                    <p class="category">{{ item["category"] }}</p>
+                    <div class="fee-box">
+                        <span class="price">{{ item["price"] }}</span>
+                        <span class="old-price">{{ item["old_price"] }}</span>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endmacro %}
+
+{# for press.html #}
+{% macro magazine_items_generator(items) %}
+    <div class="magazines-block">
+        {% for item in items %}
+        <div class="box">
+            <img class="magazine-img" src="{{ item["magazine_img"] }}" alt="Magazine's Img">
+            <div class="magazine-info">
+                <h4 class="description">{{ item["description"] }}</h4>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+{% endmacro %}
+
+{# for table.html #}
+{% macro table_headers_generator(headers) %}
+    <thead>
+        <tr>
+            {% for header in headers %}
+            <th>{{ header }}</th>
+            {% endfor %}
+        </tr>
+    </thead>
+{% endmacro %}
+
+{% macro table_rows_generator(rows) %}
+    <tbody>
+        {% for row in rows %}
+        <tr>
+            {% for item in row %}
+            <td>{{ item }}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </tbody>
+{% endmacro %}
+
+{% macro table_generator(headers, rows) %}
+    <table>
+        {{ table_headers_generator(headers) }}
+        {{ table_rows_generator(rows) }}
+    </table>
+{% endmacro %}
