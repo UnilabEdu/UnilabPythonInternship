@@ -1,0 +1,11 @@
+{% from "macros.html" import table_generator %}
+{% extends "base.html" %}
+{% block content %}
+    <section>
+        <div class="container">
+            <div class="table-parent">
+                {{ table_generator(headers, rows) }}
+            </div>
+        </div>
+    </section>
+{% endblock %}

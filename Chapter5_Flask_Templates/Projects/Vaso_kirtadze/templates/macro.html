@@ -1,0 +1,31 @@
+{% macro drop_menu(page) %}
+{% if page == "home" %}
+    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="{{url_for("michael")}}" >Michaels biography</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item text-danger" href="{{ url_for("register") }}" target="_blank">Registration Form</a></li>
+          </ul>
+{% elif page=="michael" %}
+    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#weakness" >Weaknesses and Strengths</a></li>
+            <li><a class="dropdown-item" href="#emp">Employees</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item text-danger" href="{{ url_for("register") }}" target="_blank">Registration Form</a></li>
+          </ul>
+    {% elif page=="register" %}
+    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="{{url_for("michael")}}" >Michaels biography</a></li>
+          </ul>
+{% endif %}
+{% endmacro %}
+
+
+{% macro define_bg(page) %}
+{% if page=="home" or page=="michael" %}
+    <body class="p-1 mb-2 text-dark " id="firts_body">
+
+    {% elif page=="register" %}
+    <body class="p-3 text-light" id="bod" >
+
+{% endif %}
+{% endmacro %}
