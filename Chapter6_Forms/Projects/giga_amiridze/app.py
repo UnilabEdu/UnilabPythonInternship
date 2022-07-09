@@ -1,4 +1,4 @@
-from flask import Flask, render_template, session, redirect, url_for
+from flask import Flask, render_template, session, flash, redirect, url_for
 from forms import SignUpForms
 
 app = Flask(__name__)
@@ -18,6 +18,11 @@ def home():
         session["birth_date"] = form.birth_date.data
         session["gender"] = form.gender.data
         return redirect(url_for("welcome"))
+
+    errors = [form.first_name.errors, form.last_name.errors, form.email.errors, form.password.errors]
+    if errors:
+        for error in errors:
+            flash(error)
 
     return render_template("index.html", form=form)
 

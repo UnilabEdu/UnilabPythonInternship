@@ -12,6 +12,13 @@
     <body class="bg-img">
         <div class="opacity-div"></div>
         <div class="signup-form">
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    {{ message }}
+                {% endfor %}
+            {% endif %}
+            {% endwith %}
             <form method="POST">
                 {{ form.hidden_tag() }}
                 <h4><span>1. </span>Full Name</h4>
