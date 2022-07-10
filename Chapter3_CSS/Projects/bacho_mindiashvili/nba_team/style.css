@@ -1,0 +1,125 @@
+
+/* body */
+body {
+   
+    background-image: url("http://a4.espncdn.com/combiner/i?img=%2Fi%2Fespn%2Fmisc_logos%2F500%2Fnba.png");
+    background-color:#FFF0F5		;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: top right;
+
+}
+
+h1{
+    text-align: center;
+}
+
+h1{
+    color: #DB7093		;
+    text-shadow: 3px 3px 3px black;
+}
+
+
+/* a tag */
+a{
+    color:rebeccapurple
+}
+
+/* visited link */
+
+a:visited {
+    color:darkolivegreen
+  }
+
+
+#g{
+    color:blue;
+    text-shadow: 1px 1px 2px yellowgreen, 0 0 25px blue, 0 0 5px darkblue;
+}
+
+#b{
+    color:green;
+    text-shadow: 1px 1px 2px pink, 0 0 25px blue, 0 0 5px darkblue
+}
+
+#m{
+    color:greenyellow;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue
+    
+}
+
+#p-golden{
+    border: dashed black;
+    border-radius: 5px;
+    margin-right: 750px;
+    text-shadow: 1px 1px 2px blue, 0 0 25px palevioletred, 0 0 5px blue
+}
+
+
+#p-boston{
+    border: dashed black;
+    border-radius: 5px;
+    margin-right: 750px;
+    text-shadow: 1px 1px 2px greenyellow, 0 0 25px green, 0 0 5px black
+}
+
+#p-bucks{
+    border: dashed black;
+    border-radius: 5px;
+    margin-right: 750px;
+    text-shadow: 1px 1px 2px rgb(54, 255, 47), 0 0 25px rgb(128, 0, 53), 0 0 5px rgb(0, 0, 0)
+
+}
+
+li:hover{
+    font-size: 25px;
+}
+
+
+/* tables */
+td{
+    width: 276px;
+    height: 100px;
+    border: white;
+    border-style: solid;
+    text-align: center;
+  }
+
+#td-1{
+    background-color: #D8BFD8;
+}
+
+#td-2{
+    background-color: #FFE4E1
+
+}
+
+#td-3{
+    background-color: #4B0082;
+}
+
+#td-3{
+    background-color: #9F6B99FF;
+}
+
+#td-4{
+    background-color: #F0FFF0;
+}
+
+#td-5{
+    background-color: #85B3D1FF;
+}
+#td-6{
+    background-color: #F5C7B8FF;
+}
+#td-7{
+    background-color: #00FA9A	;
+}
+
+#td-8{
+    background-color: #7FFFD4;
+}
+
+#td-10{
+    background-color:	#B0E0E6 ;
+}
