@@ -1,0 +1,45 @@
+{% extends "base.html"%}
+
+{% block page_title %}
+    Blog
+{% endblock %}
+
+{% block content %}
+    <div class="card text-center mb-3">
+      <div class="card-body">
+        <h5 class="card-title">Create Yout Own Article</h5>
+        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#PostModal">Create Article</button>
+      </div>
+    </div>
+
+    {% for article in articles %}
+        <div class="card bg-dark text-white mb-4">
+            <img src="{{ article.image }}" class="card-img" alt="...">
+            <div class="card-img-overlay">
+                <h5 class="card-title">{{ article.title }}</h5>
+                <p class="card-text">{{ article.body|truncate(50) }}</p>
+                <p class="card-text">{{ article.date }}</p>
+                <p><a class="btn btn-secondary btn-sm" href="#">Read More</a></p>
+          </div>
+        </div>
+    {% endfor %}
+
+    <div class="modal fade" id="PostModal" tabindex="-1" aria-labelledby="PostModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+                <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="PostModalLabel">Create Article</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Create Article</button>
+                      </div>
+                </div>
+          </div>
+    </div>
+{% endblock %}
