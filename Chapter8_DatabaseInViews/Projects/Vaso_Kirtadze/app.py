@@ -1,8 +1,8 @@
 from flask import Flask, render_template, redirect, url_for, flash
 import os
+from form import AddForm, DeleteForm
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
-from form import AddForm, DeleteForm
 
 dirname = os.path.abspath(os.path.dirname(__file__))
 
@@ -14,14 +14,11 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
 
-
 class Coach(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(24))
     age = db.Column(db.Integer)
-
-
 
 
     def create(self, commit=None,  **kwargs):
@@ -123,7 +120,3 @@ def delete():
         return redirect(url_for('read'))
 
     return render_template('delete.html', form =my_form, my_coaches=coaches)
-
-
-if __name__ == '__main__':
-    app.run(debug=True)
