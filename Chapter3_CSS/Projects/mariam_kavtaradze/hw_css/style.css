@@ -6,7 +6,6 @@
 
 body {
         background-image: url('https://cdnb.artstation.com/p/assets/images/images/044/668/217/large/dominique-van-velsen-dominique-van-velsen-colony.jpg?1640786546');
-        font-family: cp_font;
     }
 
 .randBox {
@@ -25,16 +24,19 @@ body {
         font-weight: lighter;
         color: yellow;
         padding: 3px;
+        font-family: cp_font;
     }
 .headerText {
         text-align: center;
         font-weight: lighter;
         color: #00f0ff;
+        font-family: cp_font;
     }
 .mainText {
         text-align: center;
         font-weight: lighter;
         color: #00f0ff;
+        font-family: cp_font;
         font-size: 25px;
     }
 .headerBorder {
@@ -85,6 +87,7 @@ body {
         margin: 4px 2px;
         transition-duration: 0.4s;
         cursor: pointer;
+        font-family: Tomorrow, sans-serif;
         text-transform: uppercase;
         clip-path: polygon(92% 0, 100% 25%, 100% 100%, 8% 100%, 0% 75%, 0 0);
 
@@ -105,6 +108,7 @@ body {
    color: black;
    padding: 16px;
    font-size: 18px;
+   font-family: cp_font;
 }
 .drop_options {
    position: relative;
@@ -118,6 +122,7 @@ body {
    font-weight: bolder;
    min-width: 160px;
    z-index: 1;
+   font-family: cp_font;
 }
 .options {
    color: #00f0ff;
