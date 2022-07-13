@@ -1,0 +1,11 @@
+{% extends 'main.htm' %}
+{% block title %} Home {% endblock %}
+{% block content %}
+<div>
+    <h1 style="text-align: center;">
+        Hello {{ current_user.username }} {{ current_user.email }}
+    </h1>
+</div>
+
+
+{% endblock %}
