@@ -1,0 +1,17 @@
+{% from "macros.html" import magazine_items_generator %}
+{% extends "base.html" %}
+{% block content %}
+    <section>
+        <div class="black-block">
+            <div class="press-content">
+                <h2 class="content-title align-center">in the press</h2>
+                <p class="content-text delete-marg-bott align-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            {{ magazine_items_generator(magazine_items) }}
+        </div>
+    </section>
+{% endblock %}
