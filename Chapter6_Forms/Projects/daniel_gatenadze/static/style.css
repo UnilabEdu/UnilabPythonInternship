@@ -35,23 +35,24 @@ body,html{
 }
 .parallaxsign-up{
   background-image: url("https://www.omxtechnologies.com/wp-content/uploads/2014/10/Website-Background.jpg");
-  height: 100%;
-  width: 100%;
+  height: auto;
+  width: auto;
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
-  background-position: center;
   background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
-}
 
+}
 #footer{
-  position: absolute;
+  position: fixed;
   text-align: left;
   bottom: 0;
   font-family: "PF Tempesta Five", sans-serif;
   font-size: 14px;
-  color: rgba(0, 0, 0, 1);
+  color: rgb(56, 56, 56);
 }
+
 
 .bg-text {
   background-color: rgb(0,0,0);
@@ -89,11 +90,11 @@ body,html{
 * {box-sizing: border-box}
 
 .container {
-  padding: 16px;
+  padding: 18px;
   font-family: "PF Tempesta Five", sans-serif;
 }
 
-input[type=text], input[type=password], input[type=number] {
+input[type=text], input[type=password], input[type=number], input[type=email] {
   width: 100%;
   padding: 15px;
   margin: 1px 0 22px 0;
@@ -102,7 +103,7 @@ input[type=text], input[type=password], input[type=number] {
   background: #f1f1f1;
 }
 
-input[type=text]:focus, input[type=password]:focus {
+input[type=text]:focus, input[type=password]:focus,input[type=email]:focus {
   background-color: #ddd;
   outline: none;
 }
@@ -162,6 +163,7 @@ a {
 .signin {
   background-color: #ddd;
   text-align: center;
+  height: 60px;
 }
 
 * {
@@ -178,7 +180,7 @@ a {
   font-family: "PF Tempesta Five", sans-serif;
   position: absolute;
   transform: translate(-50%,-50%);
-  top: 50%;
+  top: 65%;
   left: 50%;
 }
 
@@ -281,8 +283,42 @@ a {
   font-size: 18px;
 }
 
+.card {
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px 0 rgba(0,0,0,.06);
+}
 
-@media only screen and (max-width: 600px) {
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 0 solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+}
+
+.card-body {
+    flex: 1 1 auto;
+    min-height: 1px;
+    padding: 1rem;
+}
+
+.gutters-sm {
+    margin-right: -8px;
+    margin-left: -8px;
+}
+
+.gutters-sm>.col, .gutters-sm>[class*=col-] {
+    padding-right: 8px;
+    padding-left: 8px;
+}
+
+
+
+
+@media screen and (max-width: 600px) {
   .columns {
     width: 100%;
   }
@@ -299,7 +335,6 @@ a {
     background-attachment: scroll;
   }
 }
-
 @font-face {
   font-family: 'PF Tempesta Five', sans-serif;
 }

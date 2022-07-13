@@ -1,28 +1,28 @@
-<div class="parallaxsign-up">
+<div class="parallaxsign-up" style="height: 100%">
 {% extends "base.html" %}
 {% block content %}
-        <form >
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                {{ message }}
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+        <form method="post" enctype="multipart/form-data">
             <div class="container">
                 <h3>to continue</h3>
                 <p>Follow the instructions</p>
                 <hr>
-
-                <label for="email"><b>Email</b></label>
-                <input type="text" placeholder="Enter Email" name="email" id="email" required>
-                <label for="psw"><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
-
-                <p>If you don't have an account already click <a href="{{ url_for('sign_up') }}">Register</a>.</p>
-                <hr>
-                <button type="submit" class="loginbtn">Login</button>
-                <p></p>
-                <label>
-                    <input type="checkbox" checked="checked" name="remember"> Remember me
-                </label>
-                <p></p>
-                <button type="reset" value="reset" class="cancelbtn">Cancel</button>
-                <p></p>
-                <span class="psw">Forgot <a href="#">password?</a></span>
+                    {{ form.hidden_tag() }}
+                    {{ form.email.label }}
+                    {{ form.email }}
+                    <br>
+                    {{ form.password.label }}
+                    {{ form.password }}
+                    <br>
+{#                    {{ form.fileupload(accept='.png') }}#}
+                    {{ form.submit }}
             </div>
         </form>
 {% endblock %}
