@@ -1,0 +1,22 @@
+{% extends 'main.htm' %}
+
+    {% block content %}
+        <div style="text-align: center; margin-top: 300px;">
+            {% for user in users %}
+                <div class="user">
+                    <div class="user-name">
+                        <h1>
+                           username : {{ user.username }}
+                        </h1>
+
+                    </div>
+                    <div class="user-age">
+                        <h1>
+                            Mail : {{ user.email }}
+                        </h1>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+
+    {% endblock %}
