@@ -1,3 +1,4 @@
+{% from "macros.html" import nav_bar_generator %}
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -12,21 +13,7 @@
             <div class="container">
                 <nav>
                     <ul>
-                        <li>
-                            <a class="nav-link active" href="{{ url_for('home') }}">Home</a>
-                        </li>
-                        <li>
-                            <a class="nav-link" href="#">Create</a>
-                        </li>
-                        <li>
-                            <a class="nav-link" href="#">Read</a>
-                        </li>
-                        <li>
-                            <a class="nav-link" href="#">Update</a>
-                        </li>
-                        <li>
-                            <a class="nav-link" href="#">Delete</a>
-                        </li>
+                        {{ nav_bar_generator(pages) }}
                     </ul>
                 </nav>
             </div>
