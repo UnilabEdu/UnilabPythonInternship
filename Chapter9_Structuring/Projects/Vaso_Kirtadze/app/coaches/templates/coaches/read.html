@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+    {%   with message = get_flashed_messages() %}
+        {%  if message %}
+            {{ message[0] }}
+        {% endif %}
+    {% endwith %}
+    <hr>
+    <br>
+
+
+    {% for coach in my_coaches %}
+        ID= {{ coach.id }}| name= {{ coach.name }} | age= {{ coach.age }}
+        <br>
+
+    {% endfor %}
+
+{% endblock %}

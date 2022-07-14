@@ -14,11 +14,23 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 Migrate(app, db)
 
-class Coach(db.Model):
+class BaseModel(db.Model):
+    """
+    This Class describes SQLALCHEMY DB model with Basic CRUD functionality
+
+    attributes:
+        -id : Primary Key
+
+    methods:
+     - Create
+     - Read
+     - Read_all
+     - Update
+     - Delete
+     - Save
+    """
 
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(24))
-    age = db.Column(db.Integer)
 
 
     def create(self, commit=None,  **kwargs):
@@ -29,8 +41,13 @@ class Coach(db.Model):
             self.save()
 
     @classmethod
-    def read(cls):
+    def read_all(cls):
         return cls.query.all()
+
+    @classmethod
+    def read(cls, name):
+        return cls.query.filter_by(name=name).first()
+
 
     def update(self, commit=None,  **kwargs):
         for key, value in kwargs.items():
@@ -50,6 +67,12 @@ class Coach(db.Model):
 
     def __repr__(self):
         return f"Object name {self.name} | {self.age}"
+
+
+
+class Coach(BaseModel):
+     name = db.Column(db.String(24))
+     age = db.Column(db.Integer)
 
 
 
@@ -74,14 +97,14 @@ def create():
 @app.route('/read')
 def read():
 
-    coaches = Coach.read()
+    coaches = Coach.read_all()
 
     return render_template('read.html', my_coaches=coaches)
 
 @app.route('/update', methods=['GET', 'POST'])
 def update():
     my_form = AddForm()
-    coaches = Coach.read()
+    coaches = Coach.read_all()
 
     if my_form.validate_on_submit():
 
@@ -98,13 +121,12 @@ def update():
             flash(message)
             return redirect(url_for('update'))
 
-
     return render_template('update.html', my_coaches=coaches, form=my_form)
 
 @app.route('/delete', methods=['GET', 'POST'])
 def delete():
     my_form = DeleteForm()
-    coaches = Coach.read()
+    coaches = Coach.read_all()
     if my_form.validate_on_submit():
         name = my_form.name.data
         coach = Coach.query.filter_by(name=name).first()
