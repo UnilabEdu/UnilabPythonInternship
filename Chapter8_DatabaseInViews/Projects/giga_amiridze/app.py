@@ -1,10 +1,20 @@
 from flask import Flask, render_template, redirect, url_for
+from flask_sqlalchemy import SQLAlchemy
+from flask_migrate import Migrate
+import os
 from resources.pages import nav_bar_pages
 from forms import AddForm, DeleteForm
 
 app = Flask(__name__)
+db = SQLAlchemy(app)
+Migrate(app, db)
 
 app.config['SECRET_KEY'] = 'my_secret_key'
+
+base_dir = os.path.abspath(os.path.dirname(__file__))
+db_name = 'data.sqlite'
+app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{os.path.join(base_dir, db_name)}'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 @app.route('/')
 def home():
