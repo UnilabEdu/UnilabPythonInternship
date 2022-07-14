@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+<div id="Sales" class="container">
+    </br><h2 class="baloo-text text-center">Add New Object to the Table</h2>
+
+</div>
+    <form method="POST">
+        {{mform.hidden_tag()}}
+        {{mform.table_name.label}}
+        {{mform.table_name}}
+        <br>
+        {{mform.submit}}
+        <br>
+        {{form.hidden_tag()}}
+        {{form.name.label}}
+        {{form.name}}
+        <br>
+        {% if table_name == "novels" %}
+            {{form.hidden_tag()}}
+            {{form.id.label}}
+            {{form.id}}
+        {% endif %}
+        <br>
+        {{form.submit}}
+    </form>
+
+{% endblock %}

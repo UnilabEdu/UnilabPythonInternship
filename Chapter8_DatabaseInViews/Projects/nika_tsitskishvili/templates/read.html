@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div id="Sales" class="container">
+    </br><h2 class="baloo-text text-center">See Object from the Table</h2>
+</div>
+<form method="POST">
+        {{form.hidden_tag()}}
+        {{form.table_name.label}}
+        {{form.table_name}}
+        <br>
+        {{form.hidden_tag()}}
+        {{form.name.label}}
+        {{form.name}}
+        <br>
+
+        {{form.submit}}
+<br>
+</form>
+    {% if data != None %}
+        <h6>id = {{ data.id }}</h6>
+        <h6>name = {{data.name}}</h6>
+        {% if table_name == "novels" %}
+            <h6>Author = {{author.name}}</h6>
+        {% endif %}
+    {% endif %}
+{% endblock %}
