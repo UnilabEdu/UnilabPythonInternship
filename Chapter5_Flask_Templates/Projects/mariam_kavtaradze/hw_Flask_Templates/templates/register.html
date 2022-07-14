@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block content %}
+<form class="mainText">
+    <fieldset class="mainBorder">
+        <legend style="font-size: 40px">Registration</legend>
+        <label for="signIn">Username</label><br />
+        <input type="text" id="signIn" name="login"/><br />
+        <label for="email">Email</label><br />
+        <input type="text" id="email" name="email"/><br />
+        <label for="pass">Password</label><br />
+        <input type="password" name="pass"/>
+        <br /><br />
+        <label>Experience?</label><br />
+        <input type="radio" name="Experience" value="beginner"/>Beginner
+        <input type="radio" name="Experience" value="some experience"/>Some Experience
+        <input type="radio" name="Experience" value="veteran"/>Veteran
+        <br/><br/>
+        <div class="drop_options">
+            <label style="font-size: 25px; text-align: center">Account Type</label><br />
+                <select class="options" style="font-size: 22px;" name="accountType">
+                    <option>User</option>
+                    <option>Creator</option>
+                    <option>Venue</option>
+                </select>
+        </div>
+        <br /><br />
+        <label>How did you hear about us?</label><br />
+        <input type="checkbox" name="source" value="online">Online
+        <input type="checkbox" name="source" value="From work">From Work
+        <input type="checkbox" name="source" value="from a friend">From a friend
+        <br /><br />
+        <input class="button" style="font-size: 15px; margin: auto;" type="Submit" value="Register"/>
+    </fieldset>
+</form>
+{% endblock %}
