@@ -22,16 +22,16 @@ nav {
     display: flex;
     justify-content: center;
 }
-ul {
+.nav-ul {
     display: flex;
 }
-li {
+.nav-li {
     margin: 0 25px;
 }
-li:first-child {
+.nav-li:first-child {
     margin-left: 0;
 }
-li:last-child {
+.nav-li:last-child {
     margin-right: 0;
 }
 .nav-link {
@@ -109,6 +109,17 @@ form {
     color: var(--white);
     border: 1.2px solid var(--white);
     cursor: pointer;
+}
+
+/* list.html styles */
+.students-list {
+    display: flex;
+    justify-content: center;
+    padding: 30px 0;
+}
+.list-li {
+    color: var(--white);
+    margin-bottom: 10px;
 }
 
 /* Footer styles */

@@ -2,5 +2,12 @@
 {% block content %}
     <div class="container">
         <h3 class="method-name">Here is your Students list</h3>
+        <div class="students-list">
+            <ul>
+                {% for student in students_list %}
+                    <li class="list-li">{{ number }} {{ student }}</li>
+                {% endfor %}
+            </ul>
+        </div>
     </div>
 {% endblock %}

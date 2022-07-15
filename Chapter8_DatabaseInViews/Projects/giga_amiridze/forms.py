@@ -10,5 +10,5 @@ class AddForm(FlaskForm):
     submit = SubmitField('Submit')
 
 class DeleteForm(FlaskForm):
-    id = IntegerField('ID of item')
+    student_id = IntegerField('ID of item')
     submit = SubmitField('Submit')

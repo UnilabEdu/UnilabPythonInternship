@@ -8,7 +8,7 @@
 
 {% macro nav_bar_generator(pages) %}
     {% for page in pages %}
-        <li>
+        <li class="nav-li">
             {{ nav_link(page['endpoint'], page['name']) }}
         </li>
     {% endfor %}

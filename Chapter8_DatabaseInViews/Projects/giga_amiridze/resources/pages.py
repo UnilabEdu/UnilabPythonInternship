@@ -8,7 +8,7 @@ nav_bar_pages = [
         "name": "Create"
     },
     {
-        "endpoint": "items_list",
+        "endpoint": "students_list",
         "name": "Read"
     },
     {
