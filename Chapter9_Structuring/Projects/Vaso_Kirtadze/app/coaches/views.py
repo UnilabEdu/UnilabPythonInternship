@@ -19,7 +19,7 @@ def create():
         name = my_form.name.data
         age = my_form.age.data
         coach = Coach()
-        coach.create(True, name=name, age=age)
+        coach.create(name=name, age=age)
         message = "Coach Added"
         flash(message)
         return redirect(url_for('coaches.read'))
@@ -45,7 +45,7 @@ def update():
         if coach is not None:
             message = "Coach Updated"
             flash(message)
-            coach.update(True, age=age)
+            coach.update(age=age)
             return redirect(url_for('coaches.read'))
         else:
             message = f"There is no Coach named: {name}, Try again."

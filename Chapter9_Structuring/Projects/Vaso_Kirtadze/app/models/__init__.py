@@ -1,27 +1,13 @@
 from app.extentions import db
 
-class BaseModel(db.Model):
-    """
-    This Class describes SQLALCHEMY DB model with Basic CRUD functionality
+class BaseModel():
 
-    attributes:
-        -id : Primary Key
-
-    methods:
-     - Create
-     - Read
-     - Read_all
-     - Update
-     - Delete
-     - Save
-    """
     id = db.Column(db.Integer, primary_key=True)
 
-    def create(self, commit=None,  **kwargs):
+    def create(self, **kwargs):
         for key, value in kwargs.items():
             setattr(self, key, value)
 
-        if commit is not None:
             self.save()
 
     @classmethod
@@ -33,11 +19,10 @@ class BaseModel(db.Model):
         return cls.query.filter_by(name=name).first()
 
 
-    def update(self, commit=None,  **kwargs):
+    def update(self, **kwargs):
         for key, value in kwargs.items():
             setattr(self, key, value)
 
-        if commit is not None:
             self.save()
 
     def delete(self):
@@ -49,18 +34,18 @@ class BaseModel(db.Model):
         db.session.commit()
 
 
-class Coach(BaseModel):
+class Coach(db.Model, BaseModel):
      __tablename__ = 'coaches'
 
      name = db.Column(db.String(24))
      age = db.Column(db.Integer)
 
 
-class Pupil(BaseModel):
+class Pupil(db.Model, BaseModel):
 
     __tablename__ = 'pupils'
 
     name = db.Column(db.String(32))
     is_active = db.Column(db.Boolean, default=True)
-    coach_id = db.Column(db.Integer, db.ForeignKey('coach.id'))
+    coach_id = db.Column(db.Integer, db.ForeignKey('coaches.id'))
 

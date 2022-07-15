@@ -1,9 +1,8 @@
 import os
 
+dirname = os.path.abspath(os.path.dirname(__file__))
 
-class test_config:
-    SECRET_KEY = "VErygoodKEy"
+SECRET_KEY = "VErygoodKEy"
 
-    dirname = os.path.abspath(os.path.dirname(__file__))
-    SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(dirname, 'data.sqlite')
-    SQLALCHEMY_TRACK_MODIFICATIONS = False
+SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(dirname, 'db.sqlite')
+SQLALCHEMY_TRACK_MODIFICATIONS = False

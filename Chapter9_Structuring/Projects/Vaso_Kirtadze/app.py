@@ -92,7 +92,7 @@ def create():
         message = "Coach Added"
         flash(message)
         return redirect(url_for('read'))
-    return render_template('create.html', form=my_form)
+    return render_template('create_pupil.html', form=my_form)
 
 @app.route('/read')
 def read():

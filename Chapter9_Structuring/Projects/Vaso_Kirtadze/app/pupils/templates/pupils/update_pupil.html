@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+    {%   with message = get_flashed_messages() %}
+        {%  if message %}
+            {{ message[0] }}
+        {% endif %}
+    {% endwith %}
+    <hr>
+    <br>
+
+    {% for pupil in my_pupils %}
+        ID= {{ pupil.id }}| name= {{ pupil.name }} | active= {{ pupil.is_active }} | coach_id = {{ pupil.coach_id }}
+        <br>
+
+    {% endfor %}
+    <hr>
+    <br>
+
+
+
+    <form method="POST">
+    {{ form.hidden_tag() }}
+        <label>Enter the name</label>
+    {{ form.name }}
+        <br>
+        <hr>
+    <label>Is_active</label>
+    {{ form.is_active }}
+        <br>
+        <hr>
+
+        <label>Coach_id</label>
+    {{ form.coach_id }}
+        <br>
+        <hr>
+
+    {{ form.submit }}
+
+    </form>
+{% endblock %}

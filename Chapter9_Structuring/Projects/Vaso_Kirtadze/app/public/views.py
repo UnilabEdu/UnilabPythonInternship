@@ -8,4 +8,5 @@ public_blueprint = Blueprint('public',
 @public_blueprint.route('/')
 @public_blueprint.route('/home')
 def home_page():
+
     return render_template('home.html')
