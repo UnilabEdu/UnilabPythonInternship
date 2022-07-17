@@ -1,5 +1,11 @@
 {% extends 'base.html' %}
 {% block content %}
 <h1>Home page</h1>
+    <label>Choose the database table</label>
+    <hr>
+    <a href="{{ url_for("coaches.create") }}">Coaches</a>
+    <hr>
+    <a href="{{ url_for("pupils.create_pupil") }}">Pupils</a>
+
 
 {% endblock %}

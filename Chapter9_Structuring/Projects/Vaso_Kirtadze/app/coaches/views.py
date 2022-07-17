@@ -7,9 +7,6 @@ coaches_blueprint = Blueprint('coaches',
                               template_folder='templates/coaches')
 
 
-@coaches_blueprint.route('/')
-def home():
-    return render_template('home.html')
 
 @coaches_blueprint.route('/create', methods=['GET', 'POST'])
 def create():
