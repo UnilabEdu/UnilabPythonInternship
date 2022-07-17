@@ -1,81 +1,8 @@
-import os
-from flask import Flask, render_template, redirect, url_for, request
+from flask import render_template, redirect, url_for
+from werkzeug.security import generate_password_hash, check_password_hash
 from forms import LoginForm, RegisterForm, ProfilePage
-from flask_sqlalchemy import SQLAlchemy
-from flask_migrate import Migrate
+from models import SubsPlan, User, db, app
 
-# Model File #
-
-app = Flask(__name__)
-db = SQLAlchemy(app)
-migrate = Migrate(app, db)
-
-
-app = Flask(__name__)
-projectdir = os.path.abspath(os.path.dirname(__file__))
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(projectdir, 'db.sqlite')
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-app.config['SECRET_KEY'] = "password"
-
-
-class SubsPlan(db.Model):
-    __tablename__ = 'subsplan'
-
-    id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String, unique=True)
-    price = db.Column(db.REAL)
-    users = db.relationship('User', backref='sub_id')
-
-    def __init__(self, name, price):
-        self.name = name
-        self.price = price
-
-
-class User(db.Model):
-    __tablename__ = 'user'
-
-    id = db.Column(db.Integer, primary_key=True)
-    username = db.Column(db.String(64), unique=True)
-    email = db.Column(db.String(), unique=True)
-    password = db.Column(db.String(64))
-    gender = db.Column(db.String)
-    age = db.Column(db.Integer)
-    subscription_id = db.Column(db.Integer, db.ForeignKey('subsplan.id'))
-
-    # def __init__(self, username, email, password, gender, age):
-    #     self.username = username
-    #     self.email = email
-    #     self.password = password
-    #     self.gender = gender
-    #     self.age = age
-
-    def create(self, commit=None, **kwargs):
-        for key, value in kwargs.items():
-            setattr(self, key, value)
-
-        if commit is not None:
-            self.save()
-
-    @classmethod
-    def read(cls, name):
-        return cls.query.filter_by(name=name).first()  # could use .all()#
-
-        # cls.query.filter(cls.age >= 2)
-
-    def update(self, commit=None, **kwargs):
-        for key, value in kwargs.items():
-            setattr(self, key, value)
-
-        if commit is not None:
-            self.save()
-
-    def delete(self):
-        db.session.delete(self)
-        db.session.commit()
-
-    def save(self):
-        db.session.add(self)
-        db.session.commit()
 
 
 @app.route("/")
@@ -96,13 +23,14 @@ def flipacoin():
 @app.route("/login", methods=['GET', 'POST'])
 def log_in():
     myform = LoginForm()
-    if request.method == 'POST':
-        eml = request.form['eml']
-        passw = request.form['passw']
+    if myform.validate_on_submit():
+        # email = request.form['email']
+        # password = request.form['password']
 
-        login = User.query.filter_by(email=eml, password=passw).first()
-        if login is not None:
-            return redirect(url_for('profile_page'))
+        user = User.query.filter_by(email=myform.email.data).first()
+        if user:
+            if check_password_hash(user.password, myform.password.data):
+                return redirect(url_for('profile_page'))
 
     return render_template("log_in.html", form=myform)
 
@@ -124,14 +52,16 @@ def log_in():
 @app.route("/register", methods=['GET', 'POST'])
 def sign_up():
     myform = RegisterForm()
-    if request.method == 'POST':
-        uname = request.form['uname']
-        eml = request.form['eml']
-        passw = request.form['passw']
-        gend = request.form['gend']
-        age = request.form['age']
+    if myform.validate_on_submit():
+        hashed_password = generate_password_hash(myform.password.data, method='sha256')
+        # username = User.username
+        # email = request.form['email']
+        # password = request.form['password']
+        # gender = request.form['gender']
+        # age = request.form['age']
 
-        register = User(username=uname, email=eml, password=passw, gender='gender', age='age')
+        register = User(username=myform.username.data, email=myform.email.data, password=hashed_password,
+                        gender=myform.gender.data, age=myform.age.data)
         db.session.add(register)
         db.session.commit()
 
@@ -171,5 +101,4 @@ def profile_page():
 
 
 if __name__ == "__main__":
-    db.create_all()
     app.run(debug=True)
