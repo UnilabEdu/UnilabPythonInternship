@@ -12,7 +12,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(dirname, 'da
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
-
+Migrate(app, db)
 
 class Coach(db.Model):
 
@@ -69,7 +69,7 @@ def create():
         message = "Coach Added"
         flash(message)
         return redirect(url_for('read'))
-    return render_template('create.html', form=my_form)
+    return render_template('create_pupil.html', form=my_form)
 
 @app.route('/read')
 def read():

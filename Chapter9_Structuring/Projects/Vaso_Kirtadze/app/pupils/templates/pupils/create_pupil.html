@@ -1,0 +1,32 @@
+{% extends 'base2.html' %}
+{% block content %}
+
+
+    {%   with message = get_flashed_messages() %}
+        {%  if message %}
+            {{ message[0] }}
+        {% endif %}
+    {% endwith %}
+
+    <form method="POST">
+    {{ form.hidden_tag() }}
+        <label>Enter the name</label>
+    {{ form.name }}
+        <br>
+        <hr>
+    <label>Is_active</label>
+    {{ form.is_active }}
+        <br>
+        <hr>
+
+        <label>Coach_id</label>
+    {{ form.coach_id }}
+        <br>
+        <hr>
+
+    {{ form.submit }}
+
+
+    </form>
+
+{% endblock %}
