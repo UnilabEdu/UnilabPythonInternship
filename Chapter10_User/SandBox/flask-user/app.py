@@ -1,7 +1,7 @@
 import os
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
-from flask_user import SQLAlchemyAdapter, UserManager, UserMixin, login_required
+from flask_user import UserManager, UserMixin, login_required, current_user
 from flask_migrate import Migrate
 
 basedir = os.path.abspath(os.path.dirname(__file__))
@@ -24,8 +24,7 @@ class User(db.Model, UserMixin):
     active = db.Column(db.Boolean(), nullable=False, server_default='0')
 
 
-db_adapter = SQLAlchemyAdapter(db, User)
-user_manager = UserManager(db_adapter, app)
+user_manager = UserManager(app, db, User)
 
 
 @app.route('/')
@@ -36,7 +35,7 @@ def home():
 @app.route('/profile')
 @login_required
 def profile():
-    return '<h1>მოგესალმებით მომხმარებლის გვერდზე</h>'
+    return f'<h1>მოგესალმებით მომხმარებლის გვერდზე {current_user.username}</h>'
 
 
 if __name__ == '__main__':
