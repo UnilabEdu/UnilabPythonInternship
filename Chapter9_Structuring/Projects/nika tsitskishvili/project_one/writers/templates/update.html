@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+<div id="Sales" class="container">
+    </br><h2 class="baloo-text text-center">Update Object from the Writers' Table</h2>
+</div>
+<form method="POST">
+        {{myform.hidden_tag()}}
+        {{myform.name.label}}
+        {{myform.name}}
+        <br>
+        {{myform.hidden_tag()}}
+        {{myform.new_name.label}}
+        {{myform.new_name}}
+        <br>
+        {{myform.submit}}
+</form>
+
+{% endblock %}

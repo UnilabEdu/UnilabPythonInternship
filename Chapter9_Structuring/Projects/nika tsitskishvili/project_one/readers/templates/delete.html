@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+<div id="Sales" class="container">
+    </br><h2 class="baloo-text text-center">Delete Object from the Readers' Table</h2>
+</div>
+<form method="POST">
+        {{myform.hidden_tag()}}
+        {{myform.name.label}}
+        {{myform.name}}
+        <br>
+        {{myform.submit}}
+</form>
+
+{% endblock %}
