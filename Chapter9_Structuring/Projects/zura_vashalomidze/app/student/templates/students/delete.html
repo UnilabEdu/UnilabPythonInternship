@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete</title>
+</head>
+<body>
+    {% extends 'base.html' %}
+    {% block content %}
+    <h1>Write Student Name for the Delete</h1>
+    <form method="POST", style="padding: 30px">
+        <div class="conteiner-fluid">
+            <div class="form-outline mb-4">
+                {{ form.hidden_tag() }}
+                {{form.id.label(class='form-label')}}
+                {{form.id(class='form-control')}}
+            </div>
+        </div>
+
+        <div class="conteiner-fluid">
+            <div class="form-outline mb-4">
+                {{form.name.label(class='form-label')}}
+                {{form.name(class='form-control')}}
+            </div>
+        </div>
+        {{form.submit(class="btn btn-primary btn-block mb-4")}}
+    </form>
+    {% endblock %}
+</body>
+</html>
