@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Basis</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{url_for('static', filename = "styles.css")}}">
+</head>
+<body>
+    <div id = "nvbr" >
+        <ul class="nav justify-content-end">
+          <li class="nav-item">
+            <a class="nav-link active" href="{{url_for('home')}}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">News</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{url_for('about')}}">About Info</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="">My Profile</a>
+          </li>
+    <!--      <li class="nav-item">-->
+    <!--        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>-->
+    <!--      </li>-->
+        </ul>
+    </div>
+
+    {% block content %}
+    {% endblock %}
+    <br>
+     <div id = "mar" class="card" style="width: 18rem;">
+        <img src="https://media.istockphoto.com/vectors/charity-and-donation-icon-with-long-shadow-vector-id1130938084?b=1&k=20&m=1130938084&s=170667a&w=0&h=6hPWbaz58TEyAuNBMTCPyEdLONkypUwOKFCEgVNOcuk=" class="card-img-top" alt="Picture of Signagi">
+        <div class="card-body">
+            <h5 class="card-title">Donate Now!</h5>
+            <p class="card-text" style="color: black; background: white;">Donate money our platform to continue functioning!</p>
+            <a href="" class="btn btn-primary">Pay</a>
+        </div>
+     </div>
+</body>
+</html>
