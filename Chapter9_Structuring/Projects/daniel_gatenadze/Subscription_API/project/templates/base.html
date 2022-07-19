@@ -27,9 +27,9 @@
                 <div class="nav-item dropdown">
                     <a href="#" data-toggle="dropdown" class="nav-item nav-link dropdown-toggle">Services</a>
                     <div class="dropdown-menu">
-                        {{ nav_collapse_items("dashboard","Dashboard") }}
-                        {{ nav_collapse_items("products","Products") }}
-                        {{ nav_collapse_items("flipacoin","flip a coin") }}
+                        {{ nav_collapse_items("webpages.dashboard","Dashboard") }}
+                        {{ nav_collapse_items("webpages.products","Products") }}
+                        {{ nav_collapse_items("webpages.flipacoin","flip a coin") }}
                     </div>
                 </div>
 
@@ -40,8 +40,8 @@
                 </ul>
 
                 <div class="d-flex align-items-center">
-                  {{ nav_active_secondary("log_in","Login") }}
-                  {{ nav_active("sign_up","Sign Up") }}
+                  {{ nav_active_secondary("users.log_in","Login") }}
+                  {{ nav_active("users.sign_up","Sign Up") }}
                   <a
                     type="button" class="btn btn-dark"
                     href="https://github.com/LilDiabetes"

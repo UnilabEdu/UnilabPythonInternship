@@ -1,6 +1,6 @@
 from flask_wtf import FlaskForm
-from wtforms.fields import StringField, EmailField, PasswordField, SubmitField, RadioField, TextAreaField, IntegerField, BooleanField
-from wtforms.validators import DataRequired, Length, Email, EqualTo, ValidationError
+from wtforms.fields import StringField, EmailField, PasswordField, SubmitField, RadioField, IntegerField
+from wtforms.validators import DataRequired, Length, Email, EqualTo
 from flask_wtf.file import FileField, FileAllowed
 
 
@@ -32,7 +32,3 @@ class RegisterForm(FlaskForm):
     age = IntegerField(label="Age", render_kw={"placeholder": "Age"})
     fileupload = FileField(label="Upload Avatar", validators=[FileAllowed(['png', 'jgp'])])
     submit = SubmitField()
-
-
-class ProfilePage(FlaskForm):
-    textarea = TextAreaField(render_kw={"placeholder": "about"})
