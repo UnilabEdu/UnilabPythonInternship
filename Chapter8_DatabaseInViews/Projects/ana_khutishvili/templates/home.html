@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+        <link
+        rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+        crossorigin="anonymous"/>
+
+</head>
+<body>
+    <div class="container">
+        <div class="container p-5 my-5 border">
+
+        <h1>Add book</h1>
+        <form method="POST" action="/">
+          <input type="text" name="title">
+          <input type="submit" value="Add">
+        </form>
+
+        <h1>Books</h1>
+        <table>
+          {% for book in books %}
+            <tr>
+              <td>
+                {{book.title}}
+              </td>
+              <td>
+                <form method="POST" action="./update" style="display: inline">
+                  <input type="hidden" value="{{book.title}}" name="oldtitle">
+                  <input type="text" value="{{book.title}}" name="newtitle">
+                  <input type="submit" value="Update">
+                </form>
+              </td>
+              <td>
+                <form method="POST" action="./delete" style="display: inline">
+                  <input type="hidden" value="{{book.title}}" name="title">
+                  <input type="submit" value="Delete">
+                </form>
+              </td>
+            </tr>
+          {% endfor %}
+        </table>
+
+        </div>
+    </div>
+</body>
+</html>

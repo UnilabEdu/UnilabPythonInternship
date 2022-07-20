@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="container">
+        <h3 class="method-name">Delete Method in View</h3>
+        <p class="method-description">Delete Student using the form below</p>
+        <form method="POST">
+            <div class="form-content">
+                {{ form.hidden_tag() }}
+                {{ form.student_id(class="input-field", placeholder="ID") }}
+                {{ form.submit(class="btn") }}
+            </div>
+        </form>
+    </div>
+{% endblock %}

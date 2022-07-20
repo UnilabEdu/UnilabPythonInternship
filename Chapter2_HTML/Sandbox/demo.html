@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action="#", method="POST">
+        <legend>რეგისტრაცია</legend>
+        <label for="login">Username</label>
+        <input type="text" id="login" name="login" />
+        <label for="pass">Password</label>
+        <input type="password" id="pass" name="pass" />
+        <br>
+        <label>გიტთან სამუშაო გარემო</label>
+        <br>
+        <input type="radio" name="git" value="github"> GitHub
+        <input type="radio" name="git" value="gitlab"> GitLab
+        <br>
+
+        <label>საყვარელი პოკემონი : </label>
+        <select name="pokemon">
+          <option>Charizard</option>
+          <option>Gengar</option>
+          <option>Greninja</option>
+        </select>
+        <br />
+
+        <label>ტექნოლოგიები : </label>
+        <input type="checkbox" name="langs" value="Python"> Python
+        <input type="checkbox" name="langs" value="Flask"> Flask
+        <input type="checkbox" name="langs" value="sqlite"> SQLite
+        <input type="checkbox" name="langs" value="c++"> C++
+        <br>
+
+        <textarea name="comment" id="comment" cols="50" rows="10"></textarea>
+        <br>
+        <input type="submit" value="send" />
+    </form>
+</body>
+</html>

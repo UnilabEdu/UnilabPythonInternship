@@ -13,6 +13,7 @@
 - ნიკა ციცქიშვილი | [ბიზნეს პლატფორმა](/Chapter6_Forms/Projects/nika_tsitskishvili/app.py)
 - ნიკოლოზ ნასყიდაშვილი | [ბლოგი](/Chapter6_Forms/Projects/Nikoloz_Naskidashvili)
 - ნუგო სვიანაძე | [Students](/Chapter6_Forms/Projects/Nugo_svianadze)
+- დანიელ გათენაძე | [Registration Form](/Chapter6_Forms/Projects/daniel_gatenadze/project.py)
 
 ## ინსტრუქცია:
 

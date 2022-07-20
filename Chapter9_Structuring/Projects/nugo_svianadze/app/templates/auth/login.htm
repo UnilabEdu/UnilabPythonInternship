@@ -1,0 +1,29 @@
+{% extends 'main.htm' %}
+{% block title %} Authorization {% endblock %}
+
+
+{% block content %} 
+    <h2 style="text-align: center;">Login</h2>
+    <div style="text-align: center; margin-top: 200px;" >
+        {% if error %}
+            <div class="alert alert-danger" style="text-align: center; margin-left: 40%; margin-right: 40%;">{{ error }}</div>
+        {% endif %}
+        {% from "_formhelpers.htm" import render_field %}
+        <form action="{{ url_for('users.login') }}" method="post" autocomplete="off">
+            {{ form.csrf_token }}
+            {{ form.hidden_tag() }}
+
+            <div class="form-group">
+                {{render_field(form.username) }}
+            <div class="form-group">
+                {{render_field(form.password) }}
+            </div>
+            <div class="form-group">
+                {{form.remember.label }} {{form.remember()}}
+            </div>
+            {{form.submit(class="btn btn-primary")}}
+        </form>
+        
+    </div>
+
+{% endblock %}

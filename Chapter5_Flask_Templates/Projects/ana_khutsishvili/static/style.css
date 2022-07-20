@@ -1,0 +1,24 @@
+body {
+  background: #f2f2f2;
+  color: #333333;
+  margin-top: 5rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #352D39;
+}
+
+.bg-steel {
+  background-color: #7d5db9;
+}
+
+.site-header .navbar-nav .nav-link {
+  color: #ffffff;
+}
+
+.site-header .navbar-nav .nav-link:hover {
+  color: #ffffff;
+}
+
+
+
