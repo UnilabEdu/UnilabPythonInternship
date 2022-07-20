@@ -1,0 +1,68 @@
+{% extends "base.html"%}
+
+{% block page_title %}
+    Blog
+{% endblock %}
+
+{% block content %}
+    {% if current_user.is_authenticated %}
+    <div class="card text-center mb-3">
+      <div class="card-body">
+        <h5 class="card-title">Create Your Own Article</h5>
+        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#PostModal">Create Article</button>
+      </div>
+    </div>
+    {% endif %}
+
+    <div class="row mb-4 mt-4">
+        {% for article in articles %}
+            <div class="col-md-6">
+              <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column position-static">
+                  <h3 class="mb-0">{{ article.title }}</h3>
+                  <div class="mb-1 mt-1 text-muted">{{ article.date }}</div>
+                  <p class="mb-auto">{{ article.body|truncate(140) }}</p>
+                  <a href="#" class="stretched-link">Continue reading</a>
+                </div>
+                <div class="col-auto d-none d-lg-block">
+                  <img src="{{ url_for('static', filename=article.preview_img) }}" alt="Preview Image" class="bd-placeholder-img" width="200" height="250">
+                </div>
+              </div>
+            </div>
+        {% endfor %}
+    </div>
+
+
+    <div class="modal fade" id="PostModal" tabindex="-1" aria-labelledby="PostModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+                <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="PostModalLabel">Create Article</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                          <form id="CreateArticle" method="POST" enctype="multipart/form-data">
+                            {{ form.hidden_tag() }}
+                            <div class="mb-3">
+                                <label for="floatingInput">Article Title</label>
+                                {{ form.title(class_="form-control", id="floatingInput") }}
+                            </div>
+                            <div class="mb-3">
+                                <label for="floatingInput">Article Body</label>
+                                {{ form.body(class_="form-control", id="floatingInput", rows="6") }}
+                            </div>
+                            <div class="mb-3">
+                                <label for="floatingInput">Article Preview Image</label>
+                                {{ form.preview_img(class_="form-control", id="floatingInput", accept="image/*") }}
+                            </div>
+                        </form>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                          <button type="submit" class="btn btn-primary" form="CreateArticle">Create Article</button>
+                      </div>
+                </div>
+          </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <br><br><br><br>
+<form class="mainBorder" style="height:370px; color: white">
+        <label for="email"></label>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">Email</span>
+          </div>
+          <input type="text" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="basic-addon1">
+        </div>
+        <label for="signIn"></label><br />
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">Username</span>
+              </div>
+              <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon2">
+            </div>
+        <label for="password"></label><br />
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon2">Password</span>
+              </div>
+              <input type="text" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="basic-addon3">
+            </div>
+        <div class="float-container">
+            <div class="float-child">
+                <label for="Occupation"></label>
+                <div class="input-group">
+                  <span class="input-group-text" id="basic-addon1">Employment Status</span>
+                    <div class="dropdown">
+                      <select class="custom-select">
+                          <option selected>Select</option>
+                          <option value="1">Student</option>
+                          <option value="2">Employed</option>
+                          <option value="3">Self-employed</option>
+                          <option value="3">Unemployed</option>
+                          <option value="3">Retired</option>
+                      </select>
+                    </div>
+                </div>
+            </div>
+            <div class="float-child">
+                <label for="gender"></label>
+                <div class="custom-control custom-radio" style="color: white">
+                    <div class="custom-control custom-radio custom-control-inline">
+                      <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
+                      <label class="custom-control-label" for="customRadioInline1">Female</label>
+                    </div>
+                    <div class="custom-control custom-radio custom-control-inline">
+                      <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+                      <label class="custom-control-label" for="customRadioInline2">Male</label>
+                    </div>
+                    <div class="custom-control custom-radio custom-control-inline">
+                      <input type="radio" id="customRadioInline3" name="customRadioInline1" class="custom-control-input">
+                      <label class="custom-control-label" for="customRadioInline3">Other</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <br><br><br>
+        <div style="text-align: center">
+            <button type="submit" class="btn btn-dark">Register</button><br>
+        </div>
+    </form>
+{% endblock %}
