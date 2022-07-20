@@ -1,0 +1,38 @@
+{% extends 'base_content.html' %}
+{% block content %}
+{% from 'macros.html' import current_users %}
+<body>
+    <form method="POST" class ="mainText">
+        <fieldset class="mainBorder" style="height: 500px">
+            <legend style="font-size: 40px">UPDATE USER</legend>
+            <br>
+            {{ form.hidden_tag() }}
+            {{ form.username.label }}
+            <br>
+            {{ form.username }}
+            <br>
+            {{ form.email.label }}
+            <br>
+            {{ form.email }}
+            <br>
+            {{ form.experience.label }}
+            <fieldset style='display: inline-block; font-size: 22px'>
+            {{ form.experience }}
+
+            </fieldset>
+            <br>
+            <div class="drop_options">
+            {{ form.account_type.label(style="font-size: 25px; text-align: center")}}
+                <div  style="font-size: 22px">
+                    {{ form.account_type(class="options")}}
+                </div>
+            </div>
+            <br>
+            <div style="font-size: 15px;">
+            {{ form.submit(class="button")}}
+            </div>
+        </fieldset>
+    </form>
+{{ current_users(list_users) }}
+</body>
+{% endblock %}
