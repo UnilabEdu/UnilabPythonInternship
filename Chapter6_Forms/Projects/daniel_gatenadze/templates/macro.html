@@ -1,0 +1,23 @@
+
+{% macro nav_active(endpoint, name) %}
+{% if request.endpoint.endswith(endpoint) %}
+    <a type="button" class="btn btn-outline-primary me-3 active" href="{{ url_for(endpoint) }}">{{ name }}</a>
+{% else %}
+    <a type="button" class="btn btn-outline-primary me-3 " href="{{ url_for(endpoint) }}">{{ name }}</a>
+{% endif %}
+{% endmacro %}
+
+{% macro nav_active_secondary(endpoint, name) %}
+{% if request.endpoint.endswith(endpoint) %}
+    <a type="button" class="btn btn-outline-dark me-3 active" href="{{ url_for(endpoint) }}">{{ name }}</a>
+{% else %}
+    <a type="button" class="btn btn-outline-dark me-3 " href="{{ url_for(endpoint) }}">{{ name }}</a>
+{% endif %}
+{% endmacro %}
+
+
+
+{% macro nav_collapse_items(endpoint, name) %}
+    <a class="dropdown-item" href="{{ url_for(endpoint) }}">{{ name }}</a>
+{% endmacro %}
+
