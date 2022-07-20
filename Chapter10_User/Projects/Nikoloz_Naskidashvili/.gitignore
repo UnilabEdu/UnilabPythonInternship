@@ -138,5 +138,14 @@ dmypy.json
 # Cython debug symbols
 cython_debug/
 
-/app/static/uploads/
+# PyCharm stuff
+.idea/
 
+# Database
+data.sqlite
+
+# Alembic
+migrations/
+
+# Uploads
+uploads/

@@ -1,0 +1,8 @@
+{% extends 'layout.html' %}
+{% block content %}
+    {% for book in books %}
+        <h1>{{ book.title }}</h1>
+        <p>By {{ book.author }} on {{ book.date_published }}</p>
+        <p>{{ book.description }}</p>
+    {% endfor %}
+{% endblock content %}
