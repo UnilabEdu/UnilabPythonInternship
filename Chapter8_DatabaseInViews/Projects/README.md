@@ -10,3 +10,4 @@
 ### 2022 სტაჟირება
 - გიგა ამირიძე | [CRUD](/Chapter8_DatabaseInViews/Projects/giga_amiridze) 
 - დანიელ გათენაძე | [subscription_api](/Chapter8_DatabaseInViews/Projects/daniel_gatenadze)
+- ანა ხუციშვილი | [Books database](/Chapter8_DatabaseInViews/Projects/ana_khutishvili)
