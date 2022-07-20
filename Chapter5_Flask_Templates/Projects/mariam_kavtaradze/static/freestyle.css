@@ -1,0 +1,141 @@
+@font-face {
+        font-family: "cp_font";
+        src: url(https://www.cyberpunk.net/fonts/BlenderPro-Bold.woff2) format("woff2");
+    }
+
+
+body {
+        background-image: url('https://cdnb.artstation.com/p/assets/images/images/044/668/217/large/dominique-van-velsen-dominique-van-velsen-colony.jpg?1640786546');
+        font-family: cp_font;
+    }
+
+
+.randBox {
+        border: 5px outset palevioletred;
+        font-weight: bold;
+        font-size: large;
+        color: silver;
+        background-color: steelblue;
+        text-align: center;
+        margin: auto;
+        width: 700px;
+        height: 60px;
+    }
+.titlesText {
+        text-align: left;
+        font-weight: lighter;
+        color: yellow;
+        padding: 3px;
+    }
+.headerText {
+        text-align: center;
+        font-weight: lighter;
+        color: #00f0ff;
+    }
+.mainText {
+        text-align: center;
+        font-weight: lighter;
+        color: #00f0ff;
+        font-size: 25px;
+    }
+.headerBorder {
+        border: 1px solid white;
+        background-color: rgba(0,0,0,.4);
+        width: 700px;
+        height: 75px;
+        padding: 1px;
+        margin: auto;
+        text-align: left;
+        animation: zoom-in 2s ease;
+    }
+@keyframes zoom-in {
+          0% {
+            transform: scale(0, 0);
+          }
+          100% {
+            transform: scale(1, 1);
+          }
+        }
+.mainBorder {
+        border: 1px solid white;
+        background-color: rgba(0,0,0,.4);
+        width: 700px;
+        height: 600px;
+        padding: 1px;
+        margin: auto;
+        animation: zoom-in 2s ease;
+    }
+@keyframes zoom-in {
+          0% {
+            transform: scale(0, 0);
+          }
+          100% {
+            transform: scale(1, 1);
+          }
+        }
+.button {
+        border: 1px solid black;
+        color: black;
+        background: yellow;
+        padding: 15px 32px;
+        text-align: center;
+        position: relative;
+        text-decoration: none;
+        display: flex;
+        font-size: 16px;
+        margin: 4px 2px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+        text-transform: uppercase;
+        clip-path: polygon(92% 0, 100% 25%, 100% 100%, 8% 100%, 0% 75%, 0 0);
+
+    }
+.button:hover {
+        background: black;
+        color: yellow;
+    }
+.flex-parent {
+          display: flex;
+        }
+.jc-position {
+          justify-content: right;
+        }
+.options_btn {
+   background-color: #00f0ff;
+   border: none;
+   color: black;
+   padding: 16px;
+   font-size: 18px;
+}
+.drop_options {
+   position: relative;
+   display: inline-block;
+}
+.options_content {
+   display: none;
+   position: absolute;
+   background-color: black;
+   color: #00f0ff;
+   font-weight: bolder;
+   min-width: 160px;
+   z-index: 1;
+}
+.options {
+   color: #00f0ff;
+   background-color: black;
+   padding: 12px 16px;
+   text-decoration: none;
+   display: block;
+   font-size: 16px;
+}
+.options:hover {
+   background-color: #00f0ff;
+   color: black;
+}
+.drop_options:hover .options_content {
+   display: block;
+}
+.drop_options:hover .options_btn {
+   background-color: black;
+   color: #00f0ff;
+}
