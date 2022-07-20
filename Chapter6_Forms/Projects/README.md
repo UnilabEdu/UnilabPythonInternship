@@ -14,6 +14,7 @@
 - ნიკოლოზ ნასყიდაშვილი | [ბლოგი](/Chapter6_Forms/Projects/Nikoloz_Naskidashvili)
 - ნუგო სვიანაძე | [Students](/Chapter6_Forms/Projects/Nugo_svianadze)
 - მარიამ ქავთარაძე | [Register](/Chapter6_Forms/Projects/mariam_kavtaradze)
+- დანიელ გათენაძე | [Registration Form](/Chapter6_Forms/Projects/daniel_gatenadze/project.py)
 
 ## ინსტრუქცია:
 
