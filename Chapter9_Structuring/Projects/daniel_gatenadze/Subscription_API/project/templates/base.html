@@ -1,0 +1,81 @@
+{% from "macro.html" import nav_active,nav_active_secondary,nav_activate_logout, nav_collapse_items %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename="style.css") }}"/>
+    <link href="https://fonts.cdnfonts.com/css/pf-tempesta-five" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+          integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" rel="stylesheet">
+</head>
+<body>
+        <nav class="navbar navbar-fixed-top navbar-expand-md navbar-light bg-navbar" data-spy="affix">
+          <div class="container">
+            <a class="nav-logo" href="https://www.youtube.com/watch?v=gDjMZvYWUdo">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/en/a/ae/Los_Pollos_Hermanos_logo.png"
+                height="50"
+                alt="Logo"
+                loading="lazy"
+                style="margin-top: -1px;"
+              />
+            </a>
+
+            <div class="collapse navbar-collapse" id="navbarButtonsExample">
+                <div class="nav-item dropdown">
+                    <a href="#" data-toggle="dropdown" class="nav-item nav-link dropdown-toggle">Services</a>
+                    <div class="dropdown-menu">
+                        {{ nav_collapse_items("webpages.dashboard","Dashboard") }}
+                        {{ nav_collapse_items("webpages.products","Products") }}
+                        {{ nav_collapse_items("webpages.flipacoin","flip a coin") }}
+                    </div>
+                </div>
+
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#"></a>
+                  </li>
+                </ul>
+
+                <div class="d-flex align-items-center">
+                  {{ nav_active_secondary("users.log_in","Login") }}
+                  {{ nav_active("users.sign_up","Sign Up") }}
+                  <a
+                    type="button" class="btn btn-dark"
+                    href="https://github.com/LilDiabetes"
+                    role="button"
+                    ><i class="fa fa-github"></i>
+                  </a>
+                </div>
+            </div>
+          </div>
+        </nav>
+        <footer id="footer">
+	        <p>Created by Lil Diabetes © 2022</p>
+        </footer>
+{% block content %}
+{% endblock %}
+</body>
+
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      crossorigin="anonymous"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</html>
