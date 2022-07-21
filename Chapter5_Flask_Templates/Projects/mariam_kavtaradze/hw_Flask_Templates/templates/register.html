@@ -1,14 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Registration</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<div class="flex-parent jc-position">
-    <button class="button" onclick=" window.open('https://github.com/MxKavt','_blank')"> HIT ME UP ON GITHUB_</button>
-</div>
-<body>
+{% extends 'base.html' %}
+{% block content %}
 <form class="mainText">
     <fieldset class="mainBorder">
         <legend style="font-size: 40px">Registration</legend>
@@ -41,5 +32,4 @@
         <input class="button" style="font-size: 15px; margin: auto;" type="Submit" value="Register"/>
     </fieldset>
 </form>
-</body>
-</html>
+{% endblock %}
