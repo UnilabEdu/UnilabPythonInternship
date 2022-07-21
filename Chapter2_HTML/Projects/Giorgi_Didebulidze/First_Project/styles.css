@@ -1,0 +1,24 @@
+body{
+    color: #00D4B1;
+}
+div{
+    border-bottom-width: thin;
+    border-spacing: initial;
+}
+
+p{
+    text-align: left;
+    color: #00e0af;
+}
+
+.info{
+    color: #00e0af;
+}
+
+.education {
+    color: #2a9d8f;
+}
+
+.work_experience{
+    color: #4CAF50;
+}
