@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{%block head%}
+    <title>
+        SRC-all students  
+    </title>
+{%endblock%}
+
+    {%block content%}
+        {%for stud in students %}
+        {%for fac in stud.faculty_subjects %}
+            {{fac.subject_name}}
+        {%endfor%}
+        {{stud.dean}}
+        {{stud.faculty_name}}
+        {%endfor%}
+    {%endblock%}
+
+</html>
