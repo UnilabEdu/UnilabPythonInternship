@@ -85,6 +85,7 @@ body {
         margin: 4px 2px;
         transition-duration: 0.4s;
         cursor: pointer;
+        font-family: Tomorrow, sans-serif;
         text-transform: uppercase;
         clip-path: polygon(92% 0, 100% 25%, 100% 100%, 8% 100%, 0% 75%, 0 0);
 
@@ -138,3 +139,15 @@ body {
    background-color: black;
    color: #00f0ff;
 }
+
+.float-container {
+    padding: 1px;
+}
+
+.float-child {
+    width: 50%;
+    float: left;
+    padding: 1px;
+}
+
+
