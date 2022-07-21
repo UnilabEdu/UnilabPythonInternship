@@ -1,7 +1,7 @@
-from Chapter9_Structuring.Projects.daniel_gatenadze.Subscription_API.project.users.models import User
-from Chapter9_Structuring.Projects.daniel_gatenadze.Subscription_API.project.subscription_plans.models import SubsPlan
-from Chapter9_Structuring.Projects.daniel_gatenadze.Subscription_API.project.extensions import db
-from Chapter9_Structuring.Projects.daniel_gatenadze.Subscription_API.project import create_app
+from Chapter10_User.Projects.daniel_gatenadze.Subscription_API.project.users.models import User
+from Chapter10_User.Projects.daniel_gatenadze.Subscription_API.project.subscription_plans.models import SubsPlan
+from Chapter10_User.Projects.daniel_gatenadze.Subscription_API.project.extensions import db
+from Chapter10_User.Projects.daniel_gatenadze.Subscription_API.project import create_app
 
 app = create_app()
 app.app_context().push()

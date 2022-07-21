@@ -1,8 +1,9 @@
 from flask import Blueprint, render_template
+from flask_login import login_required
 
 webpages_blueprint = Blueprint('webpages',
                                __name__,
-                               template_folder='templates/main')
+                               template_folder='templates')
 
 
 @webpages_blueprint.route('/')
@@ -11,6 +12,7 @@ def dashboard():
 
 
 @webpages_blueprint.route('/products')
+@login_required
 def products():
     return render_template("products.html")
 
@@ -21,5 +23,6 @@ def flipacoin():
 
 
 @webpages_blueprint.route('/profile_page')
+@login_required
 def profile_page():
     return render_template("profile_page.html")

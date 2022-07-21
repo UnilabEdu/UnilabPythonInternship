@@ -1,5 +1,5 @@
-from Chapter9_Structuring.Projects.daniel_gatenadze.Subscription_API.project.extensions import BaseModel
-from Chapter9_Structuring.Projects.daniel_gatenadze.Subscription_API.project import db
+from Chapter10_User.Projects.daniel_gatenadze.Subscription_API.project.extensions import BaseModel
+from Chapter10_User.Projects.daniel_gatenadze.Subscription_API.project import db
 
 
 class SubsPlan(BaseModel):

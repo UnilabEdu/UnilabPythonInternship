@@ -1,4 +1,4 @@
-{% from "macro.html" import nav_active,nav_active_secondary,nav_activate_logout, nav_collapse_items %}
+{% from "macro.html" import nav_active,nav_active_secondary,nav_activate_logout,nav_collapse_items %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,8 +40,13 @@
                 </ul>
 
                 <div class="d-flex align-items-center">
-                  {{ nav_active_secondary("users.log_in","Login") }}
-                  {{ nav_active("users.sign_up","Sign Up") }}
+                  {% if current_user.is_authenticated %}
+                  {{ nav_active_secondary("auth.log_out","Log Out") }}
+                  {% else %}
+                  {{ nav_active("auth.sign_up","Sign Up") }}
+                  {{ nav_active_secondary("auth.log_in","Login") }}
+                  {% endif %}
+
                   <a
                     type="button" class="btn btn-dark"
                     href="https://github.com/LilDiabetes"

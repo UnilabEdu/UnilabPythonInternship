@@ -1,8 +1,8 @@
-from Chapter9_Structuring.Projects.daniel_gatenadze.Subscription_API.project.extensions import BaseModel
-from Chapter9_Structuring.Projects.daniel_gatenadze.Subscription_API.project import db
+from Chapter10_User.Projects.daniel_gatenadze.Subscription_API.project.extensions import BaseModel
+from Chapter10_User.Projects.daniel_gatenadze.Subscription_API.project import db
+from flask_login import UserMixin
 
-
-class User(BaseModel):
+class User(BaseModel,UserMixin):
     __tablename__ = 'user'
 
     id = db.Column(db.Integer, primary_key=True)

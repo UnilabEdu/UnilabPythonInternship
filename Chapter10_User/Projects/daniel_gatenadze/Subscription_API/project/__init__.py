@@ -1,7 +1,6 @@
 from flask import Flask
-import runpy
-from Chapter9_Structuring.Projects.daniel_gatenadze.Subscription_API.project.extensions import db
-from Chapter9_Structuring.Projects.daniel_gatenadze.Subscription_API.project.config import ConfigMain
+from Chapter10_User.Projects.daniel_gatenadze.Subscription_API.project.extensions import db, login_manager
+from Chapter10_User.Projects.daniel_gatenadze.Subscription_API.project.config import ConfigMain
 
 
 def create_app():
@@ -14,12 +13,13 @@ def create_app():
 
 def register_extension(app):
     db.init_app(app)
-    # migrate.init_app(app,db)
+    login_manager.init_app(app)
 
 
 def register_blueprints(app):
-    from users.views import user_blueprint
-    from webpages.views import webpages_blueprint
+    from Chapter10_User.Projects.daniel_gatenadze.Subscription_API.project.users.views import auth_blueprint
+    from Chapter10_User.Projects.daniel_gatenadze.Subscription_API.project.webpages.views import \
+        webpages_blueprint
 
-    app.register_blueprint(user_blueprint, url_prefix="/")
+    app.register_blueprint(auth_blueprint)
     app.register_blueprint(webpages_blueprint)

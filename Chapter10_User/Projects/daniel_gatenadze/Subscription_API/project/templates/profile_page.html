@@ -10,7 +10,7 @@
                       <div class="d-flex flex-column align-items-center text-center">
                         <img src="{{ session['fileupload'] }}" alt="Your Avatar" class="rounded-circle" width="150">
                         <div class="mt-3">
-                          <h4>{{ session['username'] }}</h4>
+                          <h4>Username  :  {{ current_user.username }}</h4>
                         </div>
                       </div>
                     </div>
@@ -24,7 +24,7 @@
                           <h6 class="mb-0">Email</h6>
                         </div>
                         <div class="col-sm-9 text-secondary">
-                            {{ session['email'] }}
+                            {{ current_user.email }}
                         </div>
                       </div>
                       <hr>
@@ -33,7 +33,7 @@
                           <h6 class="mb-0">Gender</h6>
                         </div>
                         <div class="col-sm-9 text-secondary">
-                          {{ session['gender'] }}
+                          {{ current_user.gender }}
                         </div>
                       </div>
                       <hr>
@@ -42,7 +42,7 @@
                           <h6 class="mb-0">Age</h6>
                         </div>
                         <div class="col-sm-9 text-secondary">
-                          {{ session['age'] }}
+                          {{ current_user.age }}
                         </div>
                       </div>
                     </div>
