@@ -12,3 +12,4 @@
 - დანიელ გათენაძე | [subscription_api](/Chapter8_DatabaseInViews/Projects/daniel_gatenadze)
 - ანა ხუციშვილი | [Books database](/Chapter8_DatabaseInViews/Projects/ana_khutishvili)
 - მარიამ ქავთარაძე | [DB_in_views](/Chapter8_DatabaseInViews/Projects/mariam_kavtaradze)
+- ზურა ვაშალომიძე | [studentCRUD](/Chapter8_DatabaseInViews/Projects/zura_vashalomidze)
