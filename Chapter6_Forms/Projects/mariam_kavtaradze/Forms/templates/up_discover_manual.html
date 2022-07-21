@@ -1,0 +1,56 @@
+{% extends 'up_base.html' %}
+{% block content %}
+<form class="mainText">
+    <fieldset class="mainBorder" style="height: 800px">
+        <legend style="font-size: 40px">Discover</legend><br />
+        <label style="font-size: 35px">What's the atmosphere you're looking for?</label><br />
+        <input type="radio" name="atmosphere" value="cyberpunk"/>Cyberpunk
+        <input type="radio" name="atmosphere" value="vintage"/>Vintage
+        <input type="radio" name="atmosphere" value="contemporary"/>Contemporary
+        <input type="radio" name="atmosphere" value="bohemian"/>Bohemian <br />
+        <input type="radio" name="atmosphere" value="industrial"/>Industrial
+        <input type="radio" name="atmosphere" value="art deco"/>Art Deco
+        <input type="radio" name="atmosphere" value="dive bar"/>Dive Bar
+        <br/><br/>
+        <div class="drop_options">
+            <label style="font-size: 30px; text-align: center">Noise Level</label><br />
+                <select class="options" style="font-size: 25px;" name="accountType">
+                    <option>Barely Audible</option>
+                    <option>Mid</option>
+                    <option>Super High</option>
+                </select>
+        </div>
+        <br /><br />
+        <label style="font-size: 35px">And what do you want to do?</label><br />
+        <input type="checkbox" name="activity" value="dine">Dine
+        <input type="checkbox" name="activity" value="drink">Drink
+        <input type="checkbox" name="activity" value="dance">Dance
+        <input type="checkbox" name="activity" value="darts">Darts<br />
+        <input type="checkbox" name="activity" value="karaoke">Karaoke
+        <input type="checkbox" name="activity" value="board games">Board Games
+        <input type="checkbox" name="activity" value="beer pong">Beer Pong
+        <br /><br />
+        <label style="font-size: 35px">Vibes?</label><br />
+        <input type="checkbox" name="music" value="techno">Techno
+        <input type="checkbox" name="music" value="alt rock">Alt Rock
+        <input type="checkbox" name="music" value="jazz">Jazz
+        <input type="checkbox" name="music" value="edm">EDM
+        <input type="checkbox" name="music" value="blues">Blues<br />
+        <input type="checkbox" name="music" value="hip-hop">Hip-Hop
+        <input type="checkbox" name="music" value="darksynth">Darksynth
+        <input type="checkbox" name="music" value="industrial">Industrial
+        <input type="checkbox" name="music" value="downtempo">Downtempo
+        <br /><br />
+        <div class="drop_options">
+            <label style="font-size: 30px; text-align: center">Drinks</label><br />
+                <select class="options" style="font-size: 25px;" name="drinksType">
+                    <option>Experimental</option>
+                    <option>Classic</option>
+                    <option>Mix</option>
+                </select>
+        </div>
+        <br /><br />
+        <input class="button" style="font-size: 25px; margin: auto;" type="Submit" value="Find me a place!"/>
+    </fieldset>
+</form>
+{% endblock %}

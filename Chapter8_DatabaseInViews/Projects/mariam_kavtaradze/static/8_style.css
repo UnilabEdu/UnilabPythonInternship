@@ -7,7 +7,9 @@
 body {
         background-image: url('https://cdnb.artstation.com/p/assets/images/images/044/668/217/large/dominique-van-velsen-dominique-van-velsen-colony.jpg?1640786546');
         font-family: cp_font;
+        color: #00f0ff;
     }
+
 
 .randBox {
         border: 5px outset palevioletred;
