@@ -11,3 +11,4 @@
 - გიგა ამირიძე | [CRUD](/Chapter8_DatabaseInViews/Projects/giga_amiridze) 
 - დანიელ გათენაძე | [subscription_api](/Chapter8_DatabaseInViews/Projects/daniel_gatenadze)
 - ანა ხუციშვილი | [Books database](/Chapter8_DatabaseInViews/Projects/ana_khutishvili)
+- ზურა ვაშალომიძე | [studentCRUD](/Chapter8_DatabaseInViews/Projects/zura_vashalomidze)
