@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='freestyle.css')}}">
+    <title>dumbadumbadumbadum</title>
+</head>
+<div class="flex-parent jc-position">
+    <button class="button" onclick=" window.open('https://github.com/MxKavt','_blank')"> HIT ME UP ON GITHUB_</button>
+</div>
+<body>
+<div class="headerText">
+    <!-- Headers -->
+    <div class="headerBorder">
+    <h1>POISON BAR</h1>
+    </div>
+</div>
+<div class="mainText">
+    <div class="mainBorder">
+        <div class="titlesText">
+            <h3>YOUR SPACE FOR CREATING, SHARING AND RESEARCHING SPECIALTY BLENDS AND VENUES</h3>
+        </div>
+        <div class="drop_options">
+            <button class="options_btn" >Vibe Check</button>
+            <div class="options_content">
+            <a class="options" href={{ url_for('discover_manual') }}>Manually</a>
+            <a class="options" href="#">Automatically</a>
+            </div>
+        </div>
+        <div class="drop_options">
+            <button class="options_btn">Enter Your Space</button>
+            <div class="options_content">
+            <a class="options" href={{ url_for('login') }}>Login</a>
+            <a class="options" href={{ url_for('get_started') }}>Register</a>
+            </div>
+        </div>
+        <div class="drop_options">
+            <button class="options_btn">Catalog</button>
+            <div class="options_content">
+            <a class="options" href="#">Poisons</a>
+            <a class="options" href="#">Creators</a>
+            <a class="options" href="#">Venues</a>
+            </div>
+        </div>
+    <h3 style="text-align: left">Goals</h3>
+        <ol style="text-align: left">
+            <li>Popularising the field of mixology</li>
+            <li>Connecting creators with potential employers</li>
+            <li>Simplified search for venues depending on the user preferences</li>
+            <li>Protection of intellectual property for creators</li>
+        </ol>
+    <h3>Tools used/to be used</h3>
+        * HTML * CSS
+        * Flask-RESTful
+        * SQLite
+        * json
+    </div>
+</div>
+<br>
+<div class="randBox">
+    <p>
+        The sky above the port was the color of television, tuned to a dead channel.
+    </p>
+</div>
+<div class="flex-parent jc-position">
+    <a class="button" href={{ url_for('random_carousel_jumbotron') }}>TAKE A RIDE ON A CAROUSEL_</a>
+</div>
+</body>
+</html>

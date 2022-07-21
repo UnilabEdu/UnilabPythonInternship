@@ -1,0 +1,53 @@
+{% extends 'up_base.html' %}
+{% block content %}
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    {{ message }}
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+    <form method="POST" enctype="multipart/form-data" class ="mainText">
+        <fieldset class="mainBorder" style="height: 650px">
+            <legend style="font-size: 40px">Registration</legend>
+            <br>
+            {{ form.hidden_tag() }}
+            {{ form.login.label }}
+            <br>
+            {{ form.login }}
+            <br>
+            {{ form.email.label }}
+            <br>
+            {{ form.email }}
+            <br>
+            {{ form.password.label }}
+            <br>
+            {{ form.password }}
+            <br>
+            {{ form.confirm_password.label }}
+            <br>
+            {{ form.confirm_password }}
+            <br>
+            {{ form.experience.label }}
+            <fieldset style='display: inline-block; font-size: 22px'>
+            {{ form.experience }}
+
+            </fieldset>
+            <br>
+            <div class="drop_options">
+            {{ form.account_type.label(style="font-size: 25px; text-align: center")}}
+                <div  style="font-size: 22px">
+                    {{ form.account_type(class="options")}}
+                </div>
+            </div>
+            <br>
+            {{ form.file_upload.label }}
+            {{ form.file_upload(accept='.png') }}
+            <br>
+            <div style="font-size: 15px;">
+            {{ form.submit(class="button")}}
+            </div>
+        </fieldset>
+    </form>
+    <br><br>
+{% endblock %}
