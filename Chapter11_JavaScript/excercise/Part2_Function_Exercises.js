@@ -24,7 +24,13 @@
 // sleepIn(false, true) → true
 
 function sleepIn(weekday, vacation) {
-    //Code Goes Here
+    if (weekday===false  && vacation===false ){
+        return true;
+    } else if(weekday === true && vacation === false){
+        return false;
+    } else if (weekday === false && vacation === true) {
+        return true;
+    }
 }
 
 
@@ -42,7 +48,14 @@ function sleepIn(weekday, vacation) {
 // monkeyTrouble(true, false) → false
 
 function monkeyTrouble(aSmile, bSmile) {
-    //Code Goes Here
+    if (aSmile === true && bSmile === true){
+        return true;
+    }else if (aSmile === false && bSmile === false){
+        return true;
+    }else {
+        return false;
+    }
+
 }
 
 
@@ -59,7 +72,12 @@ function monkeyTrouble(aSmile, bSmile) {
 // stringTimes("Hi", 1) → "Hi"
 
 function stringTimes(str, n) {
-    //Code Goes Here
+    let new_string = "";
+    for (let i=0; i < n; i+=1){
+        new_string = new_string + str;
+
+    }
+    return new_string;
 }
 
 // PROBLEM 4: LUCKY SUM
@@ -78,7 +96,18 @@ function stringTimes(str, n) {
 
 function luckySum(a, b, c){
 
-  //Code Goes Here
+  if ( a!== 13 && b !== 13 && c !== 13 ){
+      return a + b + c;
+  }else {
+    if (a ===13){
+      return 0;
+    } else if(b===13){
+      return a;
+    }else {
+      return a + b;
+    }
+
+  }
 }
 
 // PROBLEM 5:
@@ -96,7 +125,24 @@ function luckySum(a, b, c){
 // caught_speeding(65, true) → 0
 
 function caught_speeding(speed, is_birthday){
-  //Code Goes Here
+  if (is_birthday){
+    if (speed < 65){
+      return 0;
+    } else if (speed >=65 && speed <= 85){
+      return 1;
+    } else {
+      return 2;
+    }
+
+  }else{
+    if (speed < 60){
+      return 0;
+    } else if (speed >=60 && speed <= 80){
+      return 1;
+    } else {
+      return 2;
+    }
+  }
 }
 
 
@@ -114,5 +160,11 @@ function caught_speeding(speed, is_birthday){
 // makeBricks(3, 2, 10) → true
 
 function makeBricks(small, big, goal){
-  //Code Goes Here
+    let numb1 = goal%5;
+  let numb2 = (goal - numb1) /5 ;
+  if (big >= numb2 && numb1 <= small ){
+    return true;
+  }else{
+    return false;
+  }
 }
