@@ -19,7 +19,7 @@ def products():
 def flipacoin():
     return render_template("flipacoin.html")
 
+
 @webpages_blueprint.route('/profile_page')
 def profile_page():
-
     return render_template("profile_page.html")

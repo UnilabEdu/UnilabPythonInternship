@@ -9,7 +9,6 @@ user_blueprint = Blueprint('users',
                            template_folder='templates/students')
 
 
-@user_blueprint.route('/register')
 @user_blueprint.route('/register', methods=['GET', 'POST'])
 def sign_up():
 
@@ -25,7 +24,6 @@ def sign_up():
     return render_template("sign_up.html", form=myform)
 
 
-@user_blueprint.route('/login')
 @user_blueprint.route('/login', methods=['GET', 'POST'])
 def log_in():
 
