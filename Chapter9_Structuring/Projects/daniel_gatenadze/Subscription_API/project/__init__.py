@@ -18,8 +18,9 @@ def register_extension(app):
 
 
 def register_blueprints(app):
-    from users.views import user_blueprint
-    from webpages.views import webpages_blueprint
+    from Chapter9_Structuring.Projects.daniel_gatenadze.Subscription_API.project.users.views import signup_blueprint, login_blueprint
+    from Chapter9_Structuring.Projects.daniel_gatenadze.Subscription_API.project.webpages.views import webpages_blueprint
 
-    app.register_blueprint(user_blueprint, url_prefix="/")
+    app.register_blueprint(signup_blueprint, url_prefix="/register")
+    app.register_blueprint(login_blueprint, url_prefix="/login")
     app.register_blueprint(webpages_blueprint)

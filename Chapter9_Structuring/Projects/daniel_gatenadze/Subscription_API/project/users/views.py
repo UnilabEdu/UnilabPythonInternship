@@ -4,14 +4,17 @@ from Chapter9_Structuring.Projects.daniel_gatenadze.Subscription_API.project.use
 from Chapter9_Structuring.Projects.daniel_gatenadze.Subscription_API.project.users.models import User
 from Chapter9_Structuring.Projects.daniel_gatenadze.Subscription_API.project.extensions import BaseModel
 
-user_blueprint = Blueprint('users',
-                           __name__,
-                           template_folder='templates/students')
+signup_blueprint = Blueprint('signup',
+                             __name__,
+                             template_folder='templates/sign_up')
+
+login_blueprint = Blueprint('login',
+                            __name__,
+                            template_folder='templates/log_in')
 
 
-@user_blueprint.route('/register', methods=['GET', 'POST'])
+@signup_blueprint.route('/register', methods=['GET', 'POST'])
 def sign_up():
-
     myform = RegisterForm()
 
     if myform.validate_on_submit():
@@ -24,9 +27,8 @@ def sign_up():
     return render_template("sign_up.html", form=myform)
 
 
-@user_blueprint.route('/login', methods=['GET', 'POST'])
+@login_blueprint.route('/login', methods=['GET', 'POST'])
 def log_in():
-
     myform = LoginForm()
 
     if myform.validate_on_submit():
