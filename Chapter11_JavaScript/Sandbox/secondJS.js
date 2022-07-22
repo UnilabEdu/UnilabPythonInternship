@@ -1,41 +1,28 @@
-var header = document.querySelector("h1")
+let hover = document.getElementById("hover")
+let click = document.getElementById("click")
+let doublclick = document.getElementById("double")
 
-function getRandomColor(){
-    let symbols = "0123456789ABCDEF"
-    let color = "#"
-
-    for (i = 0; i <6; i++){
-        color += symbols[Math.floor(Math.random()*16)];
-    }
-    return color;
-
-
-}
-
-function changeHeaderColor(){
-    header.style.color = getRandomColor();
-}
-
-setInterval("changeHeaderColor()", 1000)
-
-let hover = document.querySelector("#hover")
-let click = document.querySelector("#click")
-let double = document.querySelector("#double")
-
-hover.addEventListener("mouseover",function(){
-    hover.style.color = "Blue"
+hover.addEventListener("mouseover", function () {
+    this.style.color = "Red"
 })
 
-hover.addEventListener("mouseout",function(){
-    hover.style.color = "Black"
+hover.addEventListener("mouseout", function () {
+    this.style.color = "Black"
+})
+
+click.addEventListener("click", function () {
+    this.style.setProperty("text-decoration", "line-through")
 })
 
 
-click.addEventListener("click",function(){
-    click.style.setProperty("text-decoration", "line-through")
-    }
-)
-
-double.addEventListener("dblclick",function(){
-    double.remove()
+doublclick.addEventListener("dblclick", function () {
+    this.remove()
 })
+
+// Python
+// for in range(10)
+
+// let listItems = document.getElementsByTagName("li")
+
+// for item in listItems
+// item.addEventListener()
