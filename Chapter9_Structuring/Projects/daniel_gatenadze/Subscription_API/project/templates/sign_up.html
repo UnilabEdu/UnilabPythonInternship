@@ -1,0 +1,39 @@
+<div class="parallaxsign-up" style="height: auto">
+{% extends "base.html" %}
+{% block content %}
+        <form method="post" enctype="multipart/form-data">
+            <div class="container" >
+                <h3>To Continue</h3>
+                <p>Follow the instructions</p>
+                <hr>
+                {{ form.hidden_tag() }}
+                {{ form.username.label }}
+                {{ form.username }}
+                {{ form.email.label }}
+                {{ form.email }}
+                {{ form.password.label }}
+                {{ form.password }}
+                {{ form.confirmpassword.label }}
+                {{ form.confirmpassword }}
+                {{ form.gender }}
+                {{ form.age.label }}
+                {{ form.age }}
+                <br>
+{#                {{ form.fileupload.label }}#}
+{#                {{ form.fileupload }}#}
+                <br><br>
+                <p>By creating an account you agree to our
+                    <a href="https://eatlospolloshermanos.com/terms-and-conditions/" target="_blank" >Terms & Privacy</a>
+                </p>
+                <br>
+                <button type="submit" class="registerbtn">
+                {{ form.submit() }}
+                </button>
+            </div>
+        </form>
+    <div class="container signin">
+        <p>Already have an account? <a href="{{ url_for('users.log_in') }}">Sign in</a>.</p>
+    </div>
+    <br><br>
+{% endblock %}
+</div>

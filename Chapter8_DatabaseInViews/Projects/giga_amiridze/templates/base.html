@@ -1,0 +1,32 @@
+{% from "macros.html" import nav_bar_generator %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Giga Amiridze">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/reset.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+        <title>CRUD</title>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <nav>
+                    <ul class="nav-ul">
+                        {{ nav_bar_generator(pages) }}
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        {% block content %}
+        {% endblock %}
+        <footer>
+            <div class="container">
+                <div class="flex-block">
+                    <h3 class="copyright-text">@Copyright 2022</h3>
+                    <p class="create-title">Created by <a class="author" href="https://github.com/gigaamiridze">Giga Amiridze</a></p>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

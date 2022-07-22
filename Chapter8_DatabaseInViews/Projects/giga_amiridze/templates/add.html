@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="container">
+        <h3 class="method-name">Add Method in View</h3>
+        <p class="method-description">Add new Student using the form below</p>
+        <form method="POST">
+            <div class="form-content">
+                {{ form.hidden_tag() }}
+                {{ form.first_name(class="input-field", placeholder="First Name") }}
+                {{ form.last_name(class="input-field", placeholder="Last Name") }}
+                {{ form.age(class="input-field", placeholder="Age") }}
+                {{ form.email(class="input-field", placeholder="Email") }}
+                {{ form.submit(class="btn") }}
+            </div>
+        </form>
+    </div>
+{% endblock %}

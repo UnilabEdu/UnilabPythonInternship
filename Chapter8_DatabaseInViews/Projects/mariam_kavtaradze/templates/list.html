@@ -1,0 +1,16 @@
+{% extends 'base_content.html' %}
+{% block content %}
+    <body style="font-size: 30px">
+    HERE'S THE LIST OF OUR USERS:
+    <br>
+    <div style="font-size: 20px; color: yellow">
+        {% for user in list_users %}
+            ID: {{ user.id }}<br>
+            User: {{ user.username }}<br>
+            Email: {{ user.email }}<br>
+            Experience: {{ user.experience }}<br><br>
+        {% endfor %}
+    </div>
+    </body>
+
+{% endblock %}
