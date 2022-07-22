@@ -1,0 +1,29 @@
+<div class="parallaxsign-up" style="height: 100%">
+{% extends "base.html" %}
+{% block content %}
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                {{ message }}
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+        <form method="post" enctype="multipart/form-data">
+            <div class="container">
+                <h3>to continue</h3>
+                <p>Follow the instructions</p>
+                <hr>
+                    {{ form.hidden_tag() }}
+                    {{ form.email.label }}
+                    {{ form.email }}
+                    <br>
+                    {{ form.password.label }}
+                    {{ form.password }}
+                    <br>
+{#                    {{ form.fileupload(accept='.png') }}#}
+                    {{ form.submit }}
+            </div>
+        </form>
+{% endblock %}
+</div>

@@ -436,6 +436,6 @@ def success():
     data = request.args
     first_name = data.get('first_name')
     last_name = data.get('last_name')
-    return render_template('success.html', first_name = first_name, last_name = last_name)
+    return render_template('profile_page.html', first_name = first_name, last_name = last_name)
 ```
     -->

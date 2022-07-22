@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stu List</title>
+</head>
+<body>
+    {% extends "base.html" %}
+    {% block content %}
+    <h1>There is student list </h1>
+        <ul>
+            {% for student in students %}
+            <li> {{student.name}}
+                <br>
+                {{student.email}}
+                 <br>
+
+                 <b> id </b>: {{ student.id }}
+            </li>
+            {% endfor %}}
+        </ul>
+    {% endblock %}
+
+
+</body>
+</html>

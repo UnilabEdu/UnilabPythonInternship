@@ -1,0 +1,29 @@
+{% extends 'main.htm' %}
+
+{% block title %} Registration {% endblock %}
+
+{% block content %} 
+
+<h2 style="text-align: center;">Register</h2>
+    <div style="text-align: center; margin-top: 200px;" >
+        {% from "_formhelpers.htm" import render_field %}
+        <form action="/register" method="post" autocomplete="off">
+            {{ form.csrf_token }}
+            {{ form.hidden_tag() }}
+
+            <div class="form-group">
+                {{ render_field(form.email) }}
+            </div>
+            <div class="form-group">
+                {{render_field(form.username) }}
+            <div class="form-group">
+                {{render_field(form.password) }}
+            </div>
+            <div class="form-group">
+                {{render_field(form.confirm_password) }}
+            </div>
+            {{form.submit(class="btn btn-primary")}}
+        </form>
+    </div>
+
+{% endblock %}
