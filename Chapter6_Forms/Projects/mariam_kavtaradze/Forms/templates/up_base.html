@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='up_freestyle.css')}}">
+    <title>dumbadumbadumbadum</title>
+</head>
+<body>
+<div class="flex-parent jc-position">
+    <button class="button" onclick=" window.open('https://github.com/MxKavt','_blank')"> HIT ME UP ON GITHUB_</button>
+</div>
+{% block content %}
+    {% endblock %}
+
+<div class="flex-parent jc-position">
+    <a class="button" href={{ url_for('index') }}>BACK TO HOMEPAGE_</a>
+</div>
+
+
+    <footer>
+    dumbadumbadumbadum
+    </footer>
+</body>
+</html>

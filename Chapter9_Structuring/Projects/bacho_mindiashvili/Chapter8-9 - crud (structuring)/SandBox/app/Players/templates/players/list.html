@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+<div class="row">
+        {% for player  in team %}
+            <li> {{ player }} </li>
+        {% endfor %}
+    </div>
+    <a href="{{ url_for('players.add')}}">back</a>
+
+
+{% endblock %}

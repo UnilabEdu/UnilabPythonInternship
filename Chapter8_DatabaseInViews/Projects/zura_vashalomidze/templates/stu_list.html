@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stu List</title>
+</head>
+<body>
+    {% extends "base.html" %}
+    {% block content %}
+    <h1>There is student list </h1>
+        <ol>
+            {% for student in students %}
+            <li> {{student.name}}
+                <br>
+                {{student.email}} </li>
+            {% endfor %}}
+        </ol>
+    {% endblock %}
+
+
+</body>
+</html>
