@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+
+     {%   with message = get_flashed_messages() %}
+        {%  if message %}
+            {{ message[0] }}
+        {% endif %}
+    {% endwith %}
+
+    <h1>Login</h1>
+    <form method="POST">
+
+
+    {{ form.hidden_tag() }}
+    {{ form.email.label }} {{ form.email() }}
+        <br>
+
+
+    {{ form.password.label }} {{ form.password() }}
+        <br>
+
+    {{ form.submit}}
+    </form>
+    <h3>If you dont have an account, <a href="{{ url_for("user.registration") }}">register here</a></h3>
+
+
+
+{%  endblock %}
