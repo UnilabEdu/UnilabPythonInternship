@@ -10,10 +10,13 @@ def create_application():
     from project_one.writers.views import writers_blueprint
     from project_one.novels.views import novels_blueprint
     from project_one.readers.views import readers_blueprint
+    from project_one.register.views import register_blueprint
 
     app.register_blueprint(writers_blueprint, url_prefix="/writers")
     app.register_blueprint(novels_blueprint, url_prefix='/novels')
     app.register_blueprint(readers_blueprint, url_prefix="/readers")
-    app.register_blueprint(index_blueprint)
+    app.register_blueprint(index_blueprint, url_prefix="/register")
 
     return app
+
+
