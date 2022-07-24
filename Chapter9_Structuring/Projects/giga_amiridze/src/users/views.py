@@ -1,0 +1,21 @@
+from flask import Blueprint, render_template
+from src.users.forms import Signup
+
+users_blueprint = Blueprint('users',
+                            __name__,
+                            template_folder='templates/users'
+                            )
+
+# server:port/blueprint_prefix/route_name
+@users_blueprint.route('/signup', methods=['GET', 'POST'])
+def signup():
+    form = Signup()
+
+    if form.validate_on_submit():
+        name = form.name.data
+        email = form.email.data
+        password = form.password.data
+        conf_pass = form.conf_pass.data
+        terms_agree = form.terms_agree.data
+
+    return render_template('signup.html', form=form)
