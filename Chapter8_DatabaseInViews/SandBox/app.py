@@ -1,3 +1,4 @@
+import datetime
 import os
 from flask import Flask, render_template, url_for, redirect
 from flask_sqlalchemy import SQLAlchemy
@@ -20,13 +21,23 @@ Migrate(app, db)
 
 
 # DB Model
-class DBModel(db.Model):
-    __tablename__ = "table_1"
+class BaseModel(db.Model):
+    """
+    This Class describes SQLAlchemy DB model with Basic CRUD functionality
 
+    attribs:
+        - id : Primary Key
+
+    methods:
+        - Create
+        - Read
+        - Update
+        - Delete
+        - Save
+        - Read
+        - Read All
+    """
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String)
-    param1 = db.Column(db.Text, default="araferi")
-    param2 = db.Column(db.Boolean)
 
     def create(self, commit=None, **kwargs):
         for key, value in kwargs.items():
@@ -34,6 +45,10 @@ class DBModel(db.Model):
 
         if commit is not None:
             self.save()
+
+    @classmethod
+    def read_all(cls):
+        return cls.query.all()
 
     @classmethod
     def read(cls, name):
@@ -54,9 +69,20 @@ class DBModel(db.Model):
         db.session.add(self)
         db.session.commit()
 
+
     def __repr__(self):
         return f"object named {self.name} | {self.param1} ; {self.param2}"
 
+
+class DBModel(BaseModel):
+
+    __tablename__ = "table_1"
+    name = db.Column(db.String)
+    param1 = db.Column(db.Text, default="araferi")
+    param2 = db.Column(db.Boolean)
+
+    def mix(self):
+        return self.param1 + self.param2
 
 # App Routes
 @app.route('/')
