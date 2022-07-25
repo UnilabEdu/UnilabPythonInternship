@@ -1,32 +1,22 @@
-h1{
-    font-family:  "Bowlby One";
-}
-
-p{
-    font-family: monospace;
-}
-
-body{
-    font-size: 20px;
-}
-
-p{
-    font-size: 10px;
-    font-weight: bold;
-}
-
-#second{
-    font-size: 1.0em;
-    font-style: italic;
+body {
+    font-family: "BPG Nino Elite Exp Caps", sans-serif;
 }
 
 h1{
+    font-family: 'Oleo Script Swash Caps', cursive;
     text-align: center;
 }
 
+p {
+    font-size: 20px;
+    font-family: cursive;
+    color: #002c53;
+}
 
+#second {
+    font-style: italic;
+}
 
-/*@font-face{
-  font-family: your_font_name;
-  src: url(path/to/woff_file.woff);
-}*/
+#georgian {
+    font-family: "ALK Rex Bold", sans-serif;
+}
