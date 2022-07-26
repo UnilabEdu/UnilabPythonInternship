@@ -3,12 +3,12 @@ from app.models import User
 from app.user.forms import RegistrationForm, LoginForm
 from flask_login import login_user, current_user
 
-user_blooprint = Blueprint('user',
+users_blooprint = Blueprint('users',
                            __name__,
                            template_folder='templates')
 
 
-@user_blooprint.route('/registration', methods=['GET', 'POST'])
+@users_blooprint.route('/registration', methods=['GET', 'POST'])
 def registration():
     my_form = RegistrationForm()
 
@@ -19,11 +19,11 @@ def registration():
 
         user.save()
         flash("Registration went successfully")
-        return redirect(url_for('user.login'))
+        return redirect(url_for('users.login'))
 
     return render_template('registration.html', form=my_form)
 
-@user_blooprint.route('/login', methods=['GET', 'Post'])
+@users_blooprint.route('/login', methods=['GET', 'Post'])
 def login():
     my_form = LoginForm()
 
