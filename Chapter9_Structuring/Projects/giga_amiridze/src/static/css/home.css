@@ -1,0 +1,7 @@
+.welcome-title {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--black);
+    text-align: center;
+    padding: 100px 0;
+}

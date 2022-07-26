@@ -1,18 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-
-:root {
-    --white: #fff;
-    --black: #222;
-    --grey: #999;
-    --light-grey: #f8f8f8;
-    --blue: #4599df;
-    --light-blue: #6dabe4;
-}
-body {
-    font-family: 'Poppins', sans-serif;
-    background-color: var(--light-grey);
-}
-.container {
+.form-container {
     max-width: 920px;
     margin: 0 auto;
     padding: 100px 0;

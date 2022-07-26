@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template
+from flask import Blueprint, render_template, redirect, url_for
 from src.users.forms import Signup
 
 users_blueprint = Blueprint('users',
@@ -7,7 +7,7 @@ users_blueprint = Blueprint('users',
                             )
 
 # server:port/blueprint_prefix/route_name
-@users_blueprint.route('/signup', methods=['GET', 'POST'])
+@users_blueprint.route('/', methods=['GET', 'POST'])
 def signup():
     form = Signup()
 
@@ -17,5 +17,6 @@ def signup():
         password = form.password.data
         conf_pass = form.conf_pass.data
         terms_agree = form.terms_agree.data
+        return redirect(url_for('public.home'))
 
     return render_template('signup.html', form=form)
