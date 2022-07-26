@@ -2,7 +2,16 @@
 {% block content %}
 <section>
     <div class="container">
-        <p style="text-align: center">Add resource</p>
+        <h3 class="method-name">Add Method in View</h3>
+        <p class="method-description">Add new Post using the form below</p>
+        <div class="form-content">
+            <form method="POST">
+                {{ form.hidden_tag() }}
+                {{ form.title(class="title-field", placeholder="Input post title") }}
+                {{ form.post(class="post-field", placeholder="Input your post content...") }}
+                {{ form.submit(class="post-btn") }}
+            </form>
+        </div>
     </div>
 </section>
 {% endblock %}
