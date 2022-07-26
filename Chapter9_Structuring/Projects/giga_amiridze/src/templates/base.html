@@ -1,3 +1,4 @@
+{% from "macros.html" import nav_bar_generator %}
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -16,24 +17,7 @@
             <div class="container">
                 <nav>
                     <ul class="nav-ul">
-                        <li class="nav-li">
-                            <a class="nav-link active" href="{{ url_for('public.home') }}">Home</a>
-                        </li>
-                        <li class="nav-li">
-                            <a class="nav-link" href="{{ url_for('posts.add') }}">Create</a>
-                        </li>
-                        <li class="nav-li">
-                            <a class="nav-link" href="{{ url_for('posts.posts_list') }}">Read</a>
-                        </li>
-                        <li class="nav-li">
-                            <a class="nav-link" href="{{ url_for('posts.update') }}">Update</a>
-                        </li>
-                        <li class="nav-li">
-                            <a class="nav-link" href="{{ url_for('posts.delete') }}">Delete</a>
-                        </li>
-                        <li class="nav-li">
-                            <a class="nav-link" href="{{ url_for('public.profile') }}">Profile</a>
-                        </li>
+                        {{ nav_bar_generator(pages) }}
                     </ul>
                 </nav>
             </div>
@@ -44,7 +28,7 @@
             <div class="container">
                 <div class="footer-content">
                     <p>Copyright 2022</p>
-                    <p>Created by <span><a href="https://github.com/gigaamiridze">Giga Amiridze</a></span></p>
+                    <p>Created by<span><a href="https://github.com/gigaamiridze">Giga Amiridze</a></span></p>
                 </div>
             </div>
         </footer>
