@@ -1,6 +1,7 @@
 from flask import Blueprint, render_template, redirect, url_for
-from app import Student
-from app import AddForm
+
+from app.models import Student
+from app.students.forms import AddForm
 
 
 students_blueprint = Blueprint('students',
@@ -9,7 +10,7 @@ students_blueprint = Blueprint('students',
                                )
 
 
-# server:port/blueprint_prefix/add
+# server:port/student/add
 @students_blueprint.route('/add', methods=['GET', 'POST'])
 def add():
     form = AddForm()

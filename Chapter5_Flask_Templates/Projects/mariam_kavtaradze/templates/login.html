@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+<form class="mainText">
+    <fieldset class="mainBorder" style="height: 250px">
+        <legend style="font-size: 40px">Login</legend>
+        <label for="signIn">Username</label><br />
+        <input type="text" id="signIn" name="login"/><br />
+        <label for="pass">Password</label><br />
+        <input type="password" name="pass"/>
+        <br /><br />
+        <input class="button" style="font-size: 15px; margin: auto;" type="Submit" value="Login"/>
+    </fieldset>
+</form>
+{% endblock %}

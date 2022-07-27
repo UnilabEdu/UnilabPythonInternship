@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="jumbotron">
+    <h1>Hello User</h1>
+    <p>This is my first DB in View project</p>
+    <a href="{{ url_for('players.add')}}">add player</a>
+    <br>
+    <a href="{{ url_for('players.list_items')}}">show list</a>
+    <br>
+    <a href="{{ url_for('players.delete_item')}}">delete player</a>
+    <br>
+    <a href="{{ url_for('players.update_item')}}">Update player</a>
+
+    <br>
+
+
+
+
+</div>
+{% endblock %}
