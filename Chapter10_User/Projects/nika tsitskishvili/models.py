@@ -1,7 +1,7 @@
-# from app import db
-# from crud import crud
+from app import db
+from crud import Crud
 
-class Register(db.Model,crud):
+class Register(db.Model,Crud):
     __tablename__ = "users"
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(20), nullable=False)

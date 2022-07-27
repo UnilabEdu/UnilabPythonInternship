@@ -1,11 +1,16 @@
 from flask import Flask, render_template, request, url_for, redirect
-from flask_login import LoginManager, logout_user,login_required, UserMixin, login_user, current_user
+from flask_login import LoginManager, logout_user,login_required, UserMixin, login_user
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 from werkzeug.security import generate_password_hash, check_password_hash
+from flask_admin.contrib.sqla import ModelView
+from flask_admin.menu import MenuLink
 import os
+from flask_user import user_manager, current_user
 from forms import RegisterTable
 from wtforms import ValidationError
+from flask_admin import Admin
+
 project_dir = os.path.abspath(os.path.dirname(__file__))
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///"+os.path.join(project_dir, 'db.sqlite')
@@ -16,7 +21,9 @@ migrate = Migrate(app, db)
 login_manager = LoginManager()
 login_manager.init_app(app)
 login_manager.login_view = "login"
-
+admin = Admin()
+admin.init_app(app)
+admin.add_link(MenuLink(name="Return Home", url="/"))
 
 class Crud():
     @classmethod
@@ -46,9 +53,10 @@ class Crud():
 class User(db.Model,Crud,UserMixin):
     __tablename__ = "users"
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(20), nullable=False)
-    email = db.Column(db.String(20), nullable=False)
+    name = db.Column(db.String(20), nullable=False, index=True)
+    email = db.Column(db.String(20), unique=True, nullable=False, index=True)
     password = db.Column(db.String(20), nullable=False)
+    # role = db.Column(db.String(20), nullable=False, default="user", unique=False)
 
     def __init__(self, name, email, password):
         self.name = name
@@ -58,10 +66,32 @@ class User(db.Model,Crud,UserMixin):
         temp_email = self.email.data
         if User.query.filter_by(email=temp_email).first():
             raise ValidationError("Email already exists")
-
+    # def is_admin(self):
+    #     return self.role == "admin"
 
     def __repr__(self):
         return self.name
+# class Admin(User):
+#     role = db.Column(db.String(20), nullable=False, default="admin", unique=False)
+
+class UserView(ModelView):
+    # def is_accessible(self):
+    #     #return False
+    #     return current_user.has_role("Admin")
+    can_create = False
+    can_delete = False
+    can_edit = True
+    column_exclude_list = ["password"]
+    column_searchable_list = ["name","email"]
+    #column_filters =
+    column_editable_list = ["name","email"]
+# admin.add_view(ModelView(User,db.session))
+admin.add_view(UserView(User,db.session))
+
+
+
+
+
 @login_manager.user_loader
 def load_user(user_id):
     return User.query.get(user_id)
@@ -106,5 +136,11 @@ def login():
 def logout():
     logout_user()
     return render_template("home.html")
+
+# @app.route("/admin", methods=["GET", "POST"])
+# def admin():
+#     return render_template("only_admin.html")
 if __name__ == '__main__':
     app.run()
+
+

@@ -27,8 +27,3 @@ class Crud():
         db.session.commit()
 
 
-
-
-
-
-
