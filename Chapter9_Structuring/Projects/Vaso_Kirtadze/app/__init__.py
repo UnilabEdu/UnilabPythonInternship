@@ -1,9 +1,11 @@
 from flask import Flask
+
 from flask_admin.contrib.sqla import ModelView
 from app.models import User, Coach, Pupil
 from app.extentions import db, migrate, login_manager, admin
 from admin import Userview
 from flask_admin.menu import MenuLink
+
 
 
 def create_app(config_file = 'config.py'):
