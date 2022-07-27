@@ -1,5 +1,5 @@
 from flask import Blueprint, render_template, redirect, url_for
-from src.posts.forms import AddPost
+from src.posts.forms import AddPost, DeletePost
 from src.resources.pages import nav_bar_pages
 
 posts_blueprint = Blueprint('posts',
@@ -21,10 +21,23 @@ def add():
 def posts_list():
     return render_template('list.html', pages=nav_bar_pages)
 
-@posts_blueprint.route('/update')
+@posts_blueprint.route('/update', methods=['GET', 'POST'])
 def update():
-    return render_template('update.html', pages=nav_bar_pages)
+    form = AddPost()
 
-@posts_blueprint.route('/delete')
+    if form.validate_on_submit():
+        title = form.title.data
+        post = form.post.data
+        return redirect(url_for('posts.posts_list'))
+
+    return render_template('update.html', pages=nav_bar_pages, form=form)
+
+@posts_blueprint.route('/delete', methods=['GET', 'POST'])
 def delete():
-    return render_template('delete.html', pages=nav_bar_pages)
+    form = DeletePost()
+
+    if form.validate_on_submit():
+        ID = form.ID.data
+        return redirect(url_for('posts.posts_list'))
+
+    return render_template('delete.html', pages=nav_bar_pages, form=form)

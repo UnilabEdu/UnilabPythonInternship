@@ -7,9 +7,9 @@
         <div class="form-content">
             <form method="POST">
                 {{ form.hidden_tag() }}
-                {{ form.title(class="title-field", placeholder="Input post title") }}
+                {{ form.title(class="input-field", placeholder="Input post title") }}
                 {{ form.post(class="post-field", placeholder="Input your post content...") }}
-                {{ form.submit(class="post-btn") }}
+                {{ form.submit(class="post-btn", value="Add Post") }}
             </form>
         </div>
     </div>

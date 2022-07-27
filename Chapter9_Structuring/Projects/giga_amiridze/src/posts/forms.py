@@ -5,4 +5,8 @@ from wtforms.validators import DataRequired, Length
 class AddPost(FlaskForm):
     title = StringField(validators=[DataRequired(), Length(10, 30)])
     post = TextAreaField(validators=[DataRequired()])
-    submit = SubmitField("Add Post")
+    submit = SubmitField()
+
+class DeletePost(FlaskForm):
+    ID = StringField(validators=[DataRequired()])
+    submit = SubmitField("Delete Post")
