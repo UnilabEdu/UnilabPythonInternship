@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div style="font-size: 20px; color: yellow">
+    CURRENT LIST OF USERS
+        {% for user in all_users %}
+            ID: {{ user.id }}<br>
+            User: {{ user.username }}<br>
+            Email: {{ user.email }}<br>
+            Experience: {{ user.experience }}<br><br>
+        {% endfor %}
+    </div>
+    <body style="font-size: 30px">
+        <form method="POST" class ="mainText">
+            <fieldset class="mainBorder" style="height: 250px">
+                <legend style="font-size: 40px">DELETE USER</legend>
+                <br>
+                {{ form.hidden_tag() }}
+                {{ form.id.label }}
+                <br>
+                {{ form.id }}
+                <br>
+                <div style="font-size: 15px;">
+                {{ form.submit(class="button")}}
+                </div>
+            </fieldset>
+        </form>
+    </body>
+{% endblock %}
