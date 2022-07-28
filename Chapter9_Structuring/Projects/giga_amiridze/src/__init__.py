@@ -7,7 +7,7 @@ def create_app():
     app.config.from_object(Config)
     register_extensions(app)
     register_blueprints(app)
-
+    
     return app
 
 def register_extensions(app):
