@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+<section>
+    <div class="container">
+        <h3 class="method-name">Update Method in View</h3>
+        <p class="method-description">Update Post content using the form below</p>
+        <div class="form-content">
+            <form method="POST">
+                {{ form.hidden_tag() }}
+                {{ form.title(class="input-field", placeholder="Update your post title") }}
+                {{ form.post(class="post-field", placeholder="Update yout post content...") }}
+                {{ form.submit(class="post-btn", value="Update Post") }}
+            </form>
+        </div>
+    </div>
+</section>
+{% endblock %}

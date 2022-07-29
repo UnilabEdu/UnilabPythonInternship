@@ -1,0 +1,10 @@
+{% macro current_users(list) %}
+    CURRENT USERS:
+    <br>
+    <div style="font-size: 15px; color: yellow;">
+        {% for user in list %}
+            ID: {{ user.id }}<br>
+            User: {{ user.username }}<br><br>
+        {% endfor %}
+    </div>
+{% endmacro %}

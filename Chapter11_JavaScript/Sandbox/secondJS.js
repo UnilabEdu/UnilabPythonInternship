@@ -1,41 +1,51 @@
-var header = document.querySelector("h1")
+const SYMBOLS = "012345789ABCDEF"
+
+
+let hover = document.getElementById("hover")
+let click = document.getElementById("click")
+let doublclick = document.getElementById("double")
+let title = document.querySelector("h1")
+
+hover.addEventListener("mouseover", function () {
+    this.style.color = "Red"
+})
+
+hover.addEventListener("mouseout", function () {
+    this.style.color = "Black"
+})
+
+click.addEventListener("click", function () {
+    this.style.setProperty("text-decoration", "line-through")
+})
+
+
+doublclick.addEventListener("dblclick", function () {
+    this.remove()
+})
+
 
 function getRandomColor(){
-    let symbols = "0123456789ABCDEF"
-    let color = "#"
-
-    for (i = 0; i <6; i++){
-        color += symbols[Math.floor(Math.random()*16)];
+    var color = "#";
+    // for (init; condition; updater)
+    for (let i=0; i < 6 ; i++){
+        index = Math.floor(Math.random()*15);
+        color += SYMBOLS[index]
     }
     return color;
-
-
 }
 
-function changeHeaderColor(){
-    header.style.color = getRandomColor();
+function changeTitleColor(){
+    let newColor = getRandomColor();
+    title.style.color = newColor;
+    console.log(newColor);
 }
 
-setInterval("changeHeaderColor()", 1000)
+setInterval("changeTitleColor()", 500);
 
-let hover = document.querySelector("#hover")
-let click = document.querySelector("#click")
-let double = document.querySelector("#double")
+// Python
+// for in range(10)
 
-hover.addEventListener("mouseover",function(){
-    hover.style.color = "Blue"
-})
+// let listItems = document.getElementsByTagName("li")
 
-hover.addEventListener("mouseout",function(){
-    hover.style.color = "Black"
-})
-
-
-click.addEventListener("click",function(){
-    click.style.setProperty("text-decoration", "line-through")
-    }
-)
-
-double.addEventListener("dblclick",function(){
-    double.remove()
-})
+// for item in listItems
+// item.addEventListener()

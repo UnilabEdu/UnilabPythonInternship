@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+    <br><br>
+    <br>
+    <div class="row row-cols-sm-1 row-cols-md2 row-cols-lg-4 pt-5">
+        {% for item in my_items %}
+        <div class="col">
+            <div class="card card-shadow">
+                <div class="card-body">
+                    <h5 class="card-title">{{ item['name'] }}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">{{ item['price'] }}</h6>
+                    <p class="card-text">{{ item['description'] }}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+{% endblock %}

@@ -1,0 +1,14 @@
+body {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+
+td {
+    height: 150px;
+    width: 150px;
+    text-align: center;
+    border: 2px solid darkblue;
+    font-size: 30px;
+}
