@@ -1,12 +1,12 @@
 from flask_wtf import FlaskForm
 from wtforms.fields import StringField, TextAreaField, SubmitField
-from wtforms.validators import DataRequired, Length
+from wtforms.validators import DataRequired
 
 class AddPost(FlaskForm):
-    title = StringField(validators=[DataRequired(), Length(10, 30)])
+    title = StringField(validators=[DataRequired()])
     post = TextAreaField(validators=[DataRequired()])
     submit = SubmitField()
 
 class DeletePost(FlaskForm):
-    ID = StringField(validators=[DataRequired()])
+    post_id = StringField(validators=[DataRequired()])
     submit = SubmitField("Delete Post")

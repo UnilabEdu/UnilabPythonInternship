@@ -19,8 +19,4 @@ nav_bar_pages = [
         "endpoint": "posts.delete",
         "name": "Delete",
     },
-    {
-        "endpoint": "public.profile",
-        "name": "Profile",
-    }
 ]

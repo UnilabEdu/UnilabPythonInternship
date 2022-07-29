@@ -28,7 +28,7 @@ form {
     outline: none;
     border: 1.5px solid var(--black);
     border-radius: 15px;
-    text-indent: 10px;
+    padding-left: 10px;
     font-size: 13px;
     font-weight: 500;
     font-family: 'Poppins', sans-serif;

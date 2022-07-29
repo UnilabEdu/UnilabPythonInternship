@@ -1,21 +1,8 @@
 from src.extensions import db
 
 class BaseModel(db.Model):
-    """
-    This Class describes SQLAlchemy DB model with Basic CRUD functionality
 
-    attribs:
-        - id : Primary Key
-
-    methods:
-        - Create
-        - Read All
-        - Read
-        - Update
-        - Delete
-        - Save
-    """
-    id = db.Column(db.Integer(), primary_key=True, autoincrement=True)
+    __abstract__ = True
 
     def create(self, commit=None, **kwargs):
         for key, value in kwargs.items():
@@ -29,8 +16,8 @@ class BaseModel(db.Model):
         return cls.query.all()
 
     @classmethod
-    def read(cls, param):
-        return cls.query.filter_by(param=param).first()
+    def read(cls, title):
+        return cls.query.filter_by(title=title).first()
 
     def update(self, commit=None, **kwargs):
         for key, value in kwargs.items():
@@ -46,3 +33,6 @@ class BaseModel(db.Model):
     def save_to_db(self):
         db.session.add(self)
         db.session.commit()
+
+    def __repr__(self):
+        return f'Object Name: {self.title}'

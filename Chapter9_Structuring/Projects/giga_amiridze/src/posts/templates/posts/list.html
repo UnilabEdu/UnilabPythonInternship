@@ -3,6 +3,15 @@
 <section>
     <div class="container">
         <h3 class="method-name">Here is your Posts list</h3>
+        <div class="posts-cont">
+            <div class="posts-list">
+                <ul>
+                    {% for post in posts %}
+                        <li class="list-li">{{ post }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
     </div>
 </section>
 {% endblock %}

@@ -9,7 +9,3 @@ public_blueprint = Blueprint('public',
 @public_blueprint.route('/home')
 def home():
     return render_template('home.html', pages=nav_bar_pages)
-
-@public_blueprint.route('/profile')
-def profile():
-    return render_template('profile.html', pages=nav_bar_pages)
