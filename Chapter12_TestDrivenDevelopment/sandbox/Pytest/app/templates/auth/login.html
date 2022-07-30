@@ -1,0 +1,19 @@
+{% extends "layout/base.html" %}
+{% block content %}
+
+    <div style="position: absolute; top: 25%; left: 35%; width: 25%;">
+        <form method="POST" class="text-white">
+            {{ form.hidden_tag() }}
+            <div class="form-group">
+                {{ form.login.label }}
+                {{ form.login(class="form-control") }}
+            </div>
+            <div class="form-group">
+                {{ form.password.label }}
+                {{ form.password(class="form-control") }}
+            </div>
+            {{ form.submit(class="btn btn-primary mt-5") }}
+        </form>
+    </div>
+
+{% endblock %}
