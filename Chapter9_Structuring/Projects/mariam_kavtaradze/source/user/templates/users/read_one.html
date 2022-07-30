@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+    <body style="font-size: 30px">
+    HERE'S THE USER DETAILS:
+    <br>
+    <div style="font-size: 20px; color: yellow">
+            ID: {{ user.id }}<br>
+            User: {{ user.username }}<br>
+            Email: {{ user.email }}<br>
+            Experience: {{ user.experience }}<br><br>
+    </div>
+    </body>
+
+{% endblock %}
