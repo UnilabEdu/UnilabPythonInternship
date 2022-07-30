@@ -1,8 +1,6 @@
 from flask import Flask
-from source.extensions import db, migrate
-from flask_login import LoginManager, login_required, logout_user
-
-login_manager = LoginManager()
+from source.extensions import db, migrate, login_manager
+from flask_login import login_required, logout_user
 
 
 def create_app(config_file='config.py'):
@@ -10,8 +8,6 @@ def create_app(config_file='config.py'):
     app.config.from_pyfile(config_file)
     register_extensions(app)
     register_blueprints(app)
-    login_manager.init_app(app)
-    login_manager.login_view = 'user.login'
 
     return app
 
@@ -19,6 +15,8 @@ def create_app(config_file='config.py'):
 def register_extensions(app):
     db.init_app(app)
     migrate.init_app(app, db)
+    login_manager.init_app(app)
+    login_manager.login_view = 'user.login'
     # app.app_context().push()
     #
     # with app.app_context():

@@ -16,10 +16,10 @@ class User(BaseModel, UserMixin):
     experience = db.Column(db.String(24))
     account_type = db.Column(db.String(24))
 
-    def __init__(self, username, email, password, experience, account_type):
+    def __init__(self, username, email, password_hash, experience, account_type):
         self.username = username
         self.email = email
-        self.password_hash = generate_password_hash(password)
+        self.password = generate_password_hash(password_hash)
         self.experience = experience
         self.account_type = account_type
 

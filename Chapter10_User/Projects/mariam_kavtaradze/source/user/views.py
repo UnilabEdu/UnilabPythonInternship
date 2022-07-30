@@ -16,7 +16,7 @@ def create():
     if form.validate_on_submit():
         user = User(username=form.username.data,
                     email=form.email.data,
-                    password=form.password.data,
+                    password_hash=form.password.data,
                     experience=form.experience.data,
                     account_type=form.account_type.data)
         user.create(commit=True)
@@ -45,22 +45,26 @@ def update():
     get_form = GetForm()
     all_users = User.read_all()
     if get_form.validate_on_submit():
-
-        user = User.read_one(get_form.id.data)
-        form = BaseForm()
-        if form.validate_on_submit():
-            username = form.username.data
-            email = form.email.data
-            experience = form.experience.data
-            account_type = form.account_type.data
-            user.update(username=username,
-                        email=email,
-                        experience=experience,
-                        account_type=account_type,
-                        commit=True)
-            return redirect(url_for('user.read_all'))
-        return render_template('update.html', user=user, form=form)
+        return redirect(url_for('user.update_user', id=get_form.id.data))
     return render_template('get_user.html', all_users=all_users, form=get_form)
+
+
+@user_blueprint.route('/update/<int:id>', methods=['GET', 'POST'])
+def update_user(id):
+    user = User.read_one(id)
+    form = BaseForm()
+    if form.validate_on_submit():
+        username = form.username.data
+        email = form.email.data
+        experience = form.experience.data
+        account_type = form.account_type.data
+        user.update(username=username,
+                    email=email,
+                    experience=experience,
+                    account_type=account_type,
+                    commit=True)
+        return redirect(url_for('user.read_all'))
+    return render_template('update.html', user=user, form=form)
 
 
 @user_blueprint.route('/delete', methods=['GET', 'POST'])
