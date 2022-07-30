@@ -4,6 +4,7 @@
 
 - [სახელი გვარი | პროექტი](/მისამართი)
 - [ნიკა ქვრივიშვილი | to do js](https://htmlpreview.github.io/?https://github.com/nika-kvr/UnilabPythonInternship/blob/master/Chapter11_JavaScript/Projects/Nika%20Kvrivishvili/To%20Do%20List/index.html)
+- [ნუგო სვიანაძე | JS exercises ](/Chapter11_JavaScript/Projects/nugo_svianadze)
 
 
 ## ინსტრუქცია:
