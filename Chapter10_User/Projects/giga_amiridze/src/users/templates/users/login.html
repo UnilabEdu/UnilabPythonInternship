@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Log In</title>
+        <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+        <script src="https://kit.fontawesome.com/b1609179cd.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/reset.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/custom.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/forms.css') }}">
+    </head>
+    <body>
+        <div class="form-container">
+            <div class="form-content">
+                <div class="img-side">
+                    <img src="{{ url_for('static', filename='image/login-img.jpg') }}" alt="Image">
+                    <a href="{{ url_for('user.signup') }}" class="member-title">Create an account</a>
+                </div>
+                <div class="form-side">
+                    <h2 class="form-title">Log in</h2>
+                    <form method="POST">
+                        {{ form.hidden_tag() }}
+                        <div class="form-group">
+                            <label for="name"><i class="fa-solid fa-user icon"></i></label>
+                            {{ form.name(class="input-field", placeholder="Your Name") }}
+                        </div>
+                        <div class="form-group">
+                            <label for="password"><i class="bx bxs-lock"></i></label>
+                            {{ form.password(class="input-field", placeholder="Password") }}
+                        </div>
+                        <div class="form-group center">
+                            {{ form.remember() }}
+                            <p class="terms-agree">Remember me</p>
+                        </div>
+                        {{ form.submit(class="btn") }}
+                    </form>
+                    <div class="icons-block">
+                        <p>Or login with</p>
+                        <div class="social-icons">
+                            <div class="icons-box">
+                                <a href="https://www.facebook.com/">
+                                    <i class="fa-brands fa-facebook-f soc-icon"></i>
+                                </a>
+                            </div>
+                            <div class="icons-box">
+                                <a href="https://twitter.com/">
+                                    <i class="fa-brands fa-twitter soc-icon"></i>
+                                </a>
+                            </div>
+                            <div class="icons-box">
+                                <a href="https://www.google.com/">
+                                    <i class="fa-brands fa-google soc-icon"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
