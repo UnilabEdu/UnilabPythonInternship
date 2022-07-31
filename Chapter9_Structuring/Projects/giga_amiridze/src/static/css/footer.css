@@ -1,0 +1,17 @@
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.footer-content p {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--black);
+}
+.footer-content p span a {
+    color: var(--black);
+    transition: color 300ms ease;
+}
+.footer-content p span a:hover {
+    color: var(--blue);
+}

@@ -1,0 +1,37 @@
+{% extends "layout/base.html" %}
+{% block content %}
+
+    <div class="p-5 mb-4 rounded-3 text-bg-dark"
+         style="background: url(https://cdn.mos.cms.futurecdn.net/QFuzEB2Gxth6qQT8Tpe7LN.jpg)">
+        <div class="container-fluid py-5">
+            <h1 class="display-5 fw-bold">Avengers: Endgame</h1>
+            <p class="col-md-8 fs-4">After Thanos, an intergalactic warlord, disintegrates half of the universe, the
+                Avengers must reunite and assemble again to reinvigorate their trounced allies and restore balance.</p>
+            <button class="btn btn-danger btn-lg mt-3" type="button">Watch Now</button>
+        </div>
+    </div>
+
+    </br><h2 class="text-center text-light">MOVIES</h2></br>
+
+    <div class="container">
+        <div class="row row-cols-2 row-cols-md-5 pt-4" style="background-color: #131720">
+
+            {% for movie in movies %}
+
+                <div class="col mb-4">
+                    <div class="card mx-auto" style="height: 100%; background-color: #171d27">
+                        <img src="{{url_for('static', filename=movie.picture)}}" class="card-img-top" style="height: 15vw">
+                        <div class="card-body d-flex flex-column my-auto">
+                            <h5 class="card-title text-light">{{ movie.name }}</h5>
+                            <h6 class="text-right text-light">{{ movie.rating }} ⭐</h6>
+                            <h6 class="text-right text-light">{{ movie.genre }}</h6></br>
+                        </div>
+                    </div>
+                </div>
+
+            {% endfor %}
+
+        </div>
+    </div>
+
+{% endblock %}
