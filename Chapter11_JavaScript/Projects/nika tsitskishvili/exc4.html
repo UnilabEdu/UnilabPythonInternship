@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type = text/javascript>
+    var roster = []
+    function addnew(name) {
+        roster.push(name)
+    }
+    // REMOVE STUDENT
+    function remove(name) {
+        i = roster.indexOf(name)
+        roster.splice(i)
+    }
+
+    function display() {
+        alert(roster)
+    }
+
+    function app() {
+        var desicion = prompt("Do you want to use web app?")
+        if (desicion === "yes") {
+            while (true) {
+                var action = prompt("Choose action: add, remove, display, quit")
+                if (action === "quit") {
+                    break
+                }
+                if (action === "add") {
+                    student = prompt("Enter student name!");
+                    addnew(student)
+                }
+                if (action === "remove") {
+                    student = prompt("Enter student name!");
+                    remove(student)
+                }
+                if (action === "display") {
+                    display()
+                }
+            }
+        }
+    }
+    app()
+    </script>
+</head>
+<body>
+
+</body>
+</html>
