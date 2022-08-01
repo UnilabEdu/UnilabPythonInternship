@@ -1,4 +1,5 @@
 from flask import Flask, render_template
+from src.resources.pages import pages
 
 def create_app():
     app = Flask(__name__)
@@ -7,7 +8,7 @@ def create_app():
 
     @app.route('/')
     def home():
-        return render_template('home.html')
+        return render_template('home.html', pages=pages)
 
     return app
 

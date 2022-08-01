@@ -1,3 +1,4 @@
+{% from 'macros/navbar.html' import nav_bar_generator %}
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -19,24 +20,7 @@
                     </a>
                     <nav>
                         <ul class="nav-ul">
-                            <li class="nav-li">
-                                <a class="nav-link active" href="{{ url_for('home') }}">Home</a>
-                            </li>
-                            <li class="nav-li">
-                                <a class="nav-link" href="{{ url_for('post.add') }}">Create</a>
-                            </li>
-                            <li class="nav-li">
-                                <a class="nav-link" href="{{ url_for('post.list') }}">Read</a>
-                            </li>
-                            <li class="nav-li">
-                                <a class="nav-link" href="{{ url_for('post.update') }}">Update</a>
-                            </li>
-                            <li class="nav-li">
-                                <a class="nav-link" href="{{ url_for('post.delete') }}">Delete</a>
-                            </li>
-                            <li class="nav-li">
-                                <a class="nav-link" href="{{ url_for('profile.profile') }}">Profile</a>
-                            </li>
+                            {{ nav_bar_generator(pages) }}
                         </ul>
                     </nav>
                     <div class="auth-box">
