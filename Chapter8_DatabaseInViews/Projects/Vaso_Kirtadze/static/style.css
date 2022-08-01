@@ -1,0 +1,16 @@
+.pos_mid{
+    margin-left: 40%;
+}
+
+img{
+    border: 7px solid;
+    border-color: #900000;
+
+}
+
+
+#bod{
+    background-size: cover;
+    background-image: url("backgr.jpg");
+}
+
