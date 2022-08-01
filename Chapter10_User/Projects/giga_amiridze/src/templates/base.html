@@ -1,4 +1,5 @@
 {% from 'macros/navbar.html' import nav_bar_generator %}
+{% from 'macros/title.html' import title_generator %}
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -9,7 +10,7 @@
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/custom.css') }}">
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/header.css') }}">
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/footer.css') }}">
-        <title>Title</title>
+        {{ title_generator(pages) }}
     </head>
     <body>
         <header>

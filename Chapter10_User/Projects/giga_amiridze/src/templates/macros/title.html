@@ -1,0 +1,7 @@
+{% macro title_generator(pages) %}
+    {% for page in pages %}
+        {% if request.endpoint.endswith(page['endpoint']) %}
+            <title>{{ page['title'] }}</title>
+        {% endif %}
+    {% endfor %}
+{% endmacro %}
