@@ -1,21 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 
 :root {
     --white: #fff;
     --black: #222;
-    --grey: #999;
+    --black1: #000d20;
+    --grey: #c3c3c3;
     --light-grey: #f8f8f8;
     --blue: #4599df;
     --light-blue: #6dabe4;
+    --sky: #04dbec;
+    --light-purple: #a99fc5;
     --fb: #3b5998;
     --twitter: #1da0f2;
     --google: #e72734;
 }
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Space Grotesk', sans-serif;
     background-color: var(--light-grey);
 }
 .container {
-    max-width: 920px;
+    max-width: 1140px;
     margin: 0 auto;
 }

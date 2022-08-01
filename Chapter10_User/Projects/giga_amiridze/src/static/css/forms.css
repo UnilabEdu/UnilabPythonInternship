@@ -58,7 +58,7 @@ label {
     border: none;
     border-bottom: 1px solid var(--grey);
     outline: none;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Space Grotesk', sans-serif;
     transition: color 300ms ease;
 }
 .input-field:focus {
@@ -66,7 +66,7 @@ label {
 }
 .input-field::placeholder {
     font-size: 13px;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Space Grotesk', sans-serif;
     color: var(--grey);
 }
 .input-field:focus::placeholder {
@@ -103,7 +103,7 @@ input[type='checkbox']:checked:after {
     cursor: pointer;
     color: var(--white);
     font-size: 14px;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Space Grotesk', sans-serif;
     transition: background-color 350ms ease;
 }
 .btn:hover {

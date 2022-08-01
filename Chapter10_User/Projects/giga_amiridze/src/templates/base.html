@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+        <script src="https://kit.fontawesome.com/b1609179cd.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/reset.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/custom.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/header.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/footer.css') }}">
+        <title>Title</title>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <div class="flex-block">
+                    <a href="">
+                        <h1 class="home-title">CRUD</h1>
+                    </a>
+                    <nav>
+                        <ul class="nav-ul">
+                            <li class="nav-li">
+                                <a class="nav-link active" href="">Home</a>
+                            </li>
+                            <li class="nav-li">
+                                <a class="nav-link" href="">Create</a>
+                            </li>
+                            <li class="nav-li">
+                                <a class="nav-link" href="">Read</a>
+                            </li>
+                            <li class="nav-li">
+                                <a class="nav-link" href="">Update</a>
+                            </li>
+                            <li class="nav-li">
+                                <a class="nav-link" href="">Delete</a>
+                            </li>
+                            <li class="nav-li">
+                                <a class="nav-link" href="">Profile</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="auth-box">
+                        <div class="signup-box">
+                            <a href="{{ url_for('user.signup') }}">
+                                <p class="auth-title">Sign up</p>
+                            </a>
+                        </div>
+                        <div class="login-box">
+                            <a href="{{ url_for('user.login') }}">
+                                <p class="auth-title">Log in</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        {% block content %}
+        {% endblock %}
+        <footer>
+            <div class="container">
+                <div class="flex-block">
+                    <p class="copyright-text">© Copyright 2025 Mobirise. All Rights Reserved.</p>
+                    <div class="social-icons">
+                        <a href="https://twitter.com/">
+                            <i class="fa-brands fa-twitter soc-icon"></i>
+                        </a>
+                        <a href="https://www.facebook.com/">
+                            <i class="fa-brands fa-facebook-f soc-icon"></i>
+                        </a>
+                        <a href="https://www.instagram.com/">
+                            <i class="fa-brands fa-instagram soc-icon"></i>
+                        </a>
+                        <a href="https://www.youtube.com/">
+                            <i class="fa-brands fa-youtube soc-icon"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

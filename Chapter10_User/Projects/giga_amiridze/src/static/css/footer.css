@@ -1,0 +1,30 @@
+footer {
+    background-color: var(--black1);
+    padding: 35px 0;
+    border-top: 1px solid #283544;
+}
+.copyright-text {
+    font-size: 1rem;
+    color: var(--light-purple);
+    transition: color 200ms ease;
+}
+.copyright-text:hover {
+    color: var(--white);
+}
+.social-icons a {
+    margin: 0 15px;
+}
+.social-icons a:first-child {
+    margin-left: 0;
+}
+.social-icons a:last-child {
+    margin-right: 0;
+}
+.soc-icon {
+    font-size: 1.1rem;
+    color: var(--light-purple);
+    transition: color 200ms ease;
+}
+.soc-icon:hover {
+    color: var(--white);
+}
