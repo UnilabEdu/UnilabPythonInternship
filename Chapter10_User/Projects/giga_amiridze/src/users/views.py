@@ -1,12 +1,12 @@
 from flask import Blueprint, render_template
 from src.users.forms import Signup, Login
 
-user_blueprint = Blueprint('user',
+users_blueprint = Blueprint('user',
                            __name__,
                            template_folder='templates/users'
                            )
 
-@user_blueprint.route('/signup')
+@users_blueprint.route('/signup')
 def signup():
     form = Signup()
 
@@ -18,7 +18,7 @@ def signup():
 
     return render_template('signup.html', form=form)
 
-@user_blueprint.route('/login')
+@users_blueprint.route('/login')
 def login():
     form = Login()
 

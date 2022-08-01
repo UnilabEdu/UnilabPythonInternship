@@ -20,22 +20,22 @@
                     <nav>
                         <ul class="nav-ul">
                             <li class="nav-li">
-                                <a class="nav-link active" href="">Home</a>
+                                <a class="nav-link active" href="{{ url_for('home') }}">Home</a>
                             </li>
                             <li class="nav-li">
-                                <a class="nav-link" href="">Create</a>
+                                <a class="nav-link" href="{{ url_for('post.add') }}">Create</a>
                             </li>
                             <li class="nav-li">
-                                <a class="nav-link" href="">Read</a>
+                                <a class="nav-link" href="{{ url_for('post.list') }}">Read</a>
                             </li>
                             <li class="nav-li">
-                                <a class="nav-link" href="">Update</a>
+                                <a class="nav-link" href="{{ url_for('post.update') }}">Update</a>
                             </li>
                             <li class="nav-li">
-                                <a class="nav-link" href="">Delete</a>
+                                <a class="nav-link" href="{{ url_for('post.delete') }}">Delete</a>
                             </li>
                             <li class="nav-li">
-                                <a class="nav-link" href="">Profile</a>
+                                <a class="nav-link" href="{{ url_for('profile.profile') }}">Profile</a>
                             </li>
                         </ul>
                     </nav>
