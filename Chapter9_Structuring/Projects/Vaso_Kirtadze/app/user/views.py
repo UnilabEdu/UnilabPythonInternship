@@ -1,7 +1,7 @@
 from flask import render_template, redirect, url_for, flash, Blueprint, request
 from app.models import User
 from app.user.forms import RegistrationForm, LoginForm
-from flask_login import login_user, current_user
+from flask_login import login_user, current_user, logout_user
 
 users_blooprint = Blueprint('users',
                            __name__,
@@ -42,3 +42,11 @@ def login():
             return redirect(next)
 
     return render_template('login.html', form=my_form)
+
+@users_blooprint.route('/logout', methods=['GET', 'POST'])
+def logout():
+
+    logout_user()
+
+    return render_template('Logout.html')
+

@@ -27,6 +27,14 @@
         </li><li class="nav-item">
           <a class="nav-link active text-light"  href="{{ url_for('coaches.delete') }}">Delete</a>
         </li>
+            {% if current_user.is_authenticated %}
+            <li class="nav-item">
+          <a class="nav-link active text-light"  href="{{ url_for('users.logout') }}">Log Out</a>
+            {% else %}
+            <li class="nav-item">
+          <a class="nav-link active text-light"  href="{{ url_for('users.login') }}">Log In</a>
+        </li>
+          {% endif %}
       </ul>
     </div>
     </div>
