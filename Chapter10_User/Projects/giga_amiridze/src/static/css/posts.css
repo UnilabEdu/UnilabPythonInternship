@@ -1,0 +1,77 @@
+section {
+    background-color: var(--black1);
+    padding: 24px 0;
+}
+.method-name,
+.method-description {
+    font-size: 18px;
+    text-align: center;
+    font-weight: 600;
+    color: var(--white);
+}
+.method-description {
+    margin: 10px 0 30px 0;
+}
+.form-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+form {
+    width: 500px;
+}
+.input-field,
+.post-field {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border: 1.5px solid var(--white);
+    border-radius: 5px;
+    padding-left: 10px;
+    font-size: 13px;
+    font-weight: 500;
+    font-family: 'Space Grotesk', sans-serif;
+    color: var(--black);
+    transition: all 300ms ease;
+}
+.input-field {
+    height: 35px;
+}
+.post-field {
+    height: 200px;
+    margin-top: 20px;
+    padding-top: 10px;
+    resize: none;
+}
+.input-field::placeholder,
+.post-field::placeholder {
+    font-size: 13px;
+    font-weight: 500;
+    font-family: 'Space Grotesk', sans-serif;
+    color: var(--white);
+    transition: all 150ms ease;
+}
+.input-field:focus::placeholder,
+.post-field:focus::placeholder {
+    color: var(--sky);
+}
+.input-field:focus,
+.post-field:focus {
+    border-color: var(--sky);
+    color: var(--sky);
+}
+.post-btn {
+    width: 130px;
+    height: 35px;
+    background-color: var(--sky);
+    border: none;
+    border-radius: 3px;
+    margin-top: 20px;
+    font-size: 13px;
+    font-weight: 500;
+    font-family: 'Space Grotesk', sans-serif;
+    color: var(--white);
+    cursor: pointer;
+}

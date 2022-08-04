@@ -1,4 +1,17 @@
 {% extends 'base.html' %}
 {% block content %}
-    Add
+    <section>
+        <div class="container">
+            <h3 class="method-name">Add Method in View</h3>
+            <p class="method-description">Add new Post using the form below</p>
+            <div class="form-content">
+                <form method="POST">
+                    {{ form.hidden_tag() }}
+                    {{ form.title(class="input-field", placeholder="Input post title") }}
+                    {{ form.post(class="post-field", placeholder="Input your post content...") }}
+                    {{ form.submit(class="post-btn") }}
+                </form>
+            </div>
+        </div>
+    </section>
 {% endblock %}

@@ -1,5 +1,6 @@
 from flask import Blueprint, render_template
 from src.resources.pages import pages
+from src.posts.forms import AddPost, DeletePost
 
 posts_blueprint = Blueprint('post',
                             __name__,
@@ -8,7 +9,8 @@ posts_blueprint = Blueprint('post',
 
 @posts_blueprint.route('/add')
 def add():
-    return render_template('add.html', pages=pages)
+    form = AddPost()
+    return render_template('add.html', pages=pages, form=form)
 
 @posts_blueprint.route('/list')
 def list():
@@ -16,8 +18,10 @@ def list():
 
 @posts_blueprint.route('/update')
 def update():
-    return render_template('update.html', pages=pages)
+    form = AddPost()
+    return render_template('update.html', pages=pages, form=form)
 
 @posts_blueprint.route('/delete')
 def delete():
-    return render_template('delete.html', pages=pages)
+    form = DeletePost()
+    return render_template('delete.html', pages=pages, form=form)
