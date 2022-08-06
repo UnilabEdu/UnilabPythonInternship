@@ -33,7 +33,7 @@ form {
     font-size: 13px;
     font-weight: 500;
     font-family: 'Space Grotesk', sans-serif;
-    color: var(--black);
+    color: var(--white);
     transition: all 300ms ease;
 }
 .input-field {
@@ -74,4 +74,13 @@ form {
     font-family: 'Space Grotesk', sans-serif;
     color: var(--white);
     cursor: pointer;
+}
+.posts-cont {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.list-li {
+    color: var(--white);
+    margin-bottom: 10px;
 }

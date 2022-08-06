@@ -1,0 +1,12 @@
+.profile-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.user-name,
+.user-email {
+    color: var(--white);
+}
+.user-name {
+    margin-bottom: 10px;
+}

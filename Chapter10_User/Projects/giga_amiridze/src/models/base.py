@@ -27,8 +27,8 @@ class BaseModel(db.Model):
         return cls.query.all()
 
     @classmethod
-    def read(cls, param):
-        return cls.query.filter_by(param=param).first()
+    def read(cls, title):
+        return cls.query.filter_by(title=title).first()
 
     def update(self, commit=True, **kwargs):
         for key, value in kwargs.items():

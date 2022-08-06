@@ -10,9 +10,5 @@ class Post(BaseModel):
     post = db.Column(db.String, nullable=False)
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
 
-    def __init__(self, title, post):
-        self.title = title
-        self.post = post
-
     def __repr__(self):
         return f'Post Title: {self.title}'

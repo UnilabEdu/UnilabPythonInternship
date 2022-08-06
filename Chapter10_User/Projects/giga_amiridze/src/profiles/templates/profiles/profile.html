@@ -1,4 +1,19 @@
 {% extends 'base.html' %}
 {% block content %}
-
+    <section>
+        <div class="container">
+            <div class="profile-content">
+                <div class="user-info">
+                    <div class="user-name">
+                        <span>Name: </span>
+                        {{ current_user.name | capitalize() }}
+                    </div>
+                    <div class="user-email">
+                        <span>Email: </span>
+                        {{ current_user.email }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 {% endblock %}

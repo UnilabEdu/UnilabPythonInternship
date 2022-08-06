@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+    <section>
+        <div class="welcome-content">
+            <h3 class="welcome-title">Hello {{ current_user.name | capitalize() }}, you have successfully logged in</h3>
+            <a href="{{ url_for('home') }}">
+                <button type="button" class="address-btn">Home page</button>
+            </a>
+        </div>
+    </section>
+{% endblock %}
