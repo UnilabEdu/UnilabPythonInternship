@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --pale-blue: hsl(225, 100%, 94%);
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+  --bright-blue: hsl(245, 75%, 52%);
+  --bright-blue-hover: hsl(244, 83%, 68%);
+}
+
+body {
+    background-image: url(images/img_1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: lightskyblue;
+    margin: 50px 100px 100px 250px;
+
+}
+
+/*.container {*/
+/*  width: 450px;*/
+/*  background-color: white;*/
+/*  color: var(--desaturated-blue);*/
+/*  border-radius: 20px;*/
+/*  margin: 50px auto;*/
+/*  overflow: hidden;*/
+/*}*/
+.container{
+    padding-left: 300px;
+    padding: 200px;
+}
+
+button, input {
+  width: 30%;
+  border: none;
+  font-weight: 700;
+  font-size: 0.9rem;
+  border-radius: 12px;
+  cursor: pointer;
+    margin-top: 10px;
+}
