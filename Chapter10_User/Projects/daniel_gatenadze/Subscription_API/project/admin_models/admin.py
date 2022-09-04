@@ -22,8 +22,8 @@ class UserView(ModelView):
     def inaccessible_callback(self, name, **kwargs):
         return redirect(url_for('auth.log_in'))
 
-    can_create = False
-    can_delete = False
+    can_create = True
+    can_delete = True
     can_edit = True
     column_exclude_list = ['password', ]
     column_searchable_list = ['username', 'email']
@@ -45,6 +45,23 @@ class RoleView(ModelView):
     column_searchable_list = ['name']
     column_filters = ['name']
     column_editable_list = ['name']
+    can_export = True
+
+
+class UserRoleView(ModelView):
+
+    def is_accessible(self):
+        return current_user.has_roles('admin')
+
+    def inaccessible_callback(self, name, **kwargs):
+        return redirect(url_for('auth.log_in'))
+
+    can_create = True
+    can_delete = True
+    can_edit = True
+    column_searchable_list = ['id', 'user_id', 'role_id']
+    column_filters = ['id', 'user_id', 'role_id']
+    column_list = ('id', 'user_id', 'role_id')
     can_export = True
 
 

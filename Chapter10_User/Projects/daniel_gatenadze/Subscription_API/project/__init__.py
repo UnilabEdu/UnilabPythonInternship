@@ -3,7 +3,7 @@ from .config import ConfigMain
 from .user.models import User, Role, UserRoles
 from .extensions import db, login_manager, admin, migrate
 from flask_admin.menu import MenuLink
-from .admin_models.admin import UserView, RoleView, StaticView
+from .admin_models.admin import UserView, RoleView, StaticView, UserRoleView
 
 
 def create_app():
@@ -21,6 +21,7 @@ def register_extension(application):
     admin.init_app(application)
     admin.add_view(UserView(User, db.session, category='User Management'))
     admin.add_view(RoleView(Role, db.session, category='User Management'))
+    admin.add_view(UserRoleView(UserRoles, db.session, category='User Management'))
     admin.add_link(MenuLink(name='Dashboard', url='/'))
     admin.add_view(StaticView(ConfigMain.projectdir + '/static', '/static', name='Static Files'))
 
