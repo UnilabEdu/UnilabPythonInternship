@@ -1,0 +1,38 @@
+{% from "macros.html" import nav_bar_generator %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+        <script src="https://kit.fontawesome.com/b1609179cd.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/reset.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/custom.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/header.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/home.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/add.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/list.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/footer.css') }}">
+        <title>Title</title>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <nav>
+                    <ul class="nav-ul">
+                        {{ nav_bar_generator(pages) }}
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        {% block content %}
+        {% endblock %}
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <p>Copyright 2022</p>
+                    <p>Created by <span><a href="https://github.com/gigaamiridze">Giga Amiridze</a></span></p>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

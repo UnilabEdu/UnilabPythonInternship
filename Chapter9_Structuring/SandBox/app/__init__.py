@@ -1,20 +1,23 @@
-import os
 from flask import Flask
-from flask_sqlalchemy import SQLAlchemy
-from flask_migrate import Migrate
+from app.extensions import db, migrate
 
-# ფლასკის ობიექტი
-app = Flask(__name__)
-# კონფიგურაცია ფორმისთვის (არამხოლოდ)
-app.config['SECRET_KEY'] = "BestKeptSecret"
 
-# კონფიგურაცია მონაცემთა ბაზისთვის
-basedir = os.path.abspath(os.path.dirname(__file__))
-app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{os.path.join(basedir, "data.db")}'
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+def create_app(config_file='config.py'):
+    application = Flask(__name__)
+    application.config.from_pyfile(config_file)
+    register_extension(application)
+    register_blueprints(application)
+    return application
 
-db = SQLAlchemy(app)
-Migrate(app, db)
 
-from app import students_blueprint
-app.register_blueprint(students_blueprint, url_prefix="/students")
+def register_extension(application):
+    db.init_app(application)
+    migrate.init_app(application, db)
+
+
+def register_blueprints(application):
+    from app.students.views import students_blueprint
+    application.register_blueprint(students_blueprint, url_prefix="/students")
+
+    from app.teachers.views import teachers_blueprint
+    application.register_blueprint(teachers_blueprint, url_prefix="/teachers")

@@ -1,0 +1,22 @@
+header, footer {
+    padding: 30px 0;
+    background-color: var(--white);
+    box-shadow: 0 15px 16.83px 0.17px rgb(0 0 0 / 5%);
+}
+.nav-ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-link {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--black);
+    transition: color 300ms ease;
+}
+.nav-link:hover {
+    color: var(--blue);
+}
+.nav-link.active {
+    color: var(--blue);
+}
