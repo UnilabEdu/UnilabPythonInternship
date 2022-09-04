@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<section>
+    <div class="container">
+        <h3 class="method-name">Delete Method in View</h3>
+        <p class="method-description">Delete Post using the form below</p>
+        <div class="form-content">
+            <form method="POST">
+                {{ form.hidden_tag() }}
+                {{ form.post_id(class="input-field", placeholder="Delete your post") }}
+                {{ form.submit(class="post-btn") }}
+            </form>
+        </div>
+    </div>
+</section>
+{% endblock %}

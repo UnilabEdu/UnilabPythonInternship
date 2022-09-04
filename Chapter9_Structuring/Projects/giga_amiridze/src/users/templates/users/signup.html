@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Sign Up</title>
+        <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+        <script src="https://kit.fontawesome.com/b1609179cd.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/reset.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/custom.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/signup.css') }}">
+    </head>
+    <body>
+        <div class="form-container">
+            <div class="signup-content">
+                <div class="left-side">
+                    <h2 class="form-title">Sign up</h2>
+                    <form method="POST">
+                        {{ form.hidden_tag() }}
+                        <div class="form-group">
+                            <label for="name"><i class="fa-solid fa-user icon"></i></label>
+                            {{ form.name(class="input-field", placeholder="Your Name") }}
+                        </div>
+                        <div class="form-group">
+                            <label for="email"><i class="fa-solid fa-envelope icon"></i></label>
+                            {{ form.email(class="input-field", placeholder="Your Email") }}
+                        </div>
+                        <div class="form-group">
+                            <label for="password"><i class="bx bxs-lock"></i></label>
+                            {{ form.password(class="input-field", placeholder="Password") }}
+                        </div>
+                        <div class="form-group">
+                            <label for="conf_pass"><i class="bx bx-lock"></i></label>
+                            {{ form.conf_pass(class="input-field", placeholder="Repeat your password") }}
+                        </div>
+                        <div class="form-group">
+                            {{ form.terms_agree() }}
+                            <p class="terms-agree">I agree all statements in <span><a href="#">Terms of service</a></span></p>
+                        </div>
+                        {{ form.submit(class="btn") }}
+                    </form>
+                </div>
+                <div class="right-side">
+                    <img src="{{ url_for('static', filename='images/signup-img.jpg') }}" alt="Image">
+                    <a href="#" class="member-title">I am already member</a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
