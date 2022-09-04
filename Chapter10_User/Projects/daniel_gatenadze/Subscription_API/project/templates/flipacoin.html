@@ -1,14 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+{% extends "base.html" %}
+    {% block link %}
     <meta name="viewport" content="width=device-width, initial-scale=1.0"
           charset="UTF-8">
-    <title>Flip a Coin</title>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../static/flipacoinstyle.css">
-</head>
-<body>
-    <p>not my original code :( also navbar is not working</p>
+    {% endblock %}
+    {% block title %}
+        Flip a Coin
+    {% endblock %}
+    {% block content %}
+
     <div class="container">
         <div class="stats">
             <p id="heads-count">Heads: 0</p>
@@ -29,4 +30,4 @@
     </div>
 
     <script src="../static/script.js"></script>
-</body>
+{% endblock %}

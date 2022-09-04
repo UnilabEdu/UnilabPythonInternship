@@ -1,25 +1,35 @@
 from flask import Flask
-from Chapter10_User.Projects.daniel_gatenadze.Subscription_API.project.extensions import db, login_manager
-from Chapter10_User.Projects.daniel_gatenadze.Subscription_API.project.config import ConfigMain
+from .config import ConfigMain
+from .user.models import User, Role, UserRoles
+from .extensions import db, login_manager, admin, migrate
+from flask_admin.menu import MenuLink
+from .admin_models.admin import UserView, RoleView, StaticView
 
 
 def create_app():
-    app = Flask(__name__)
-    app.config.from_object(ConfigMain)
-    register_extension(app)
-    register_blueprints(app)
-    return app
+    application = Flask(__name__)
+    application.config.from_object(ConfigMain)
+    register_extension(application)
+    register_blueprints(application)
+    return application
 
 
-def register_extension(app):
-    db.init_app(app)
-    login_manager.init_app(app)
+def register_extension(application):
+    db.init_app(application)
+    migrate.init_app(application, db)
+    login_manager.init_app(application)
+    admin.init_app(application)
+    admin.add_view(UserView(User, db.session, category='User Management'))
+    admin.add_view(RoleView(Role, db.session, category='User Management'))
+    admin.add_link(MenuLink(name='Dashboard', url='/'))
+    admin.add_view(StaticView(ConfigMain.projectdir + '/static', '/static', name='Static Files'))
 
 
-def register_blueprints(app):
-    from Chapter10_User.Projects.daniel_gatenadze.Subscription_API.project.users.views import auth_blueprint
-    from Chapter10_User.Projects.daniel_gatenadze.Subscription_API.project.webpages.views import \
+def register_blueprints(application):
+    from project.user.views import auth_blueprint
+    from project.webpages.views import \
         webpages_blueprint
 
-    app.register_blueprint(auth_blueprint)
-    app.register_blueprint(webpages_blueprint)
+    application.register_blueprint(auth_blueprint)
+    application.register_blueprint(webpages_blueprint)
+

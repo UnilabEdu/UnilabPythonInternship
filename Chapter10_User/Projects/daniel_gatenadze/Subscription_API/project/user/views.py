@@ -1,8 +1,8 @@
 from flask import Blueprint, render_template, redirect, url_for, flash
 from werkzeug.security import generate_password_hash, check_password_hash
-from Chapter10_User.Projects.daniel_gatenadze.Subscription_API.project.users.forms import RegisterForm, LoginForm
-from Chapter10_User.Projects.daniel_gatenadze.Subscription_API.project.users.models import User
-from Chapter10_User.Projects.daniel_gatenadze.Subscription_API.project.extensions import BaseModel, login_manager
+from .forms import RegisterForm, LoginForm
+from .models import User, BaseModel
+from project.extensions import login_manager
 from flask_login import login_user, login_required, logout_user, current_user
 
 auth_blueprint = Blueprint('auth',
@@ -22,7 +22,7 @@ def sign_up():
     if myform.validate_on_submit():
         hashed_password = generate_password_hash(myform.password.data, method='sha256')
         register = User(username=myform.username.data, email=myform.email.data, password=hashed_password,
-                        gender=myform.gender.data, age=myform.age.data)
+                        gender=myform.gender.data, age=myform.age.data,)
         register.save()
 
         return redirect(url_for('webpages.profile_page'))

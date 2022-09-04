@@ -8,3 +8,4 @@ class ConfigMain(object):
     SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(projectdir, '../../db.sqlite')
     SECRET_KEY = "Secret_Password"
     login_manager.login_view = "auth.log_in"
+

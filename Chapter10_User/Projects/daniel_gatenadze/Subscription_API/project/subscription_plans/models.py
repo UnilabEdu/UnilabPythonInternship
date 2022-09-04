@@ -1,5 +1,5 @@
-from Chapter10_User.Projects.daniel_gatenadze.Subscription_API.project.extensions import BaseModel
-from Chapter10_User.Projects.daniel_gatenadze.Subscription_API.project import db
+from project.extensions import db
+from project.user.models import BaseModel
 
 
 class SubsPlan(BaseModel):
@@ -8,7 +8,7 @@ class SubsPlan(BaseModel):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String, unique=True)
     price = db.Column(db.REAL)
-    # users = db.relationship('User', backref='sub_id')
+    # user = db.relationship('User', backref='sub_id')
 
     def __init__(self, name, price):
         self.name = name

@@ -11,7 +11,6 @@ class LoginForm(FlaskForm):
     password = PasswordField(label="Enter Password",
                              validators=[DataRequired(message="Please Enter Correct Password"), Length(min=8, max=64)],
                              render_kw={"placeholder": "Password"})
-    fileupload = FileField(label="Upload Avatar", validators=[FileAllowed(['.png', '.jpeg', '.PNG', '.JPG'])])
     submit = SubmitField()
 
 
