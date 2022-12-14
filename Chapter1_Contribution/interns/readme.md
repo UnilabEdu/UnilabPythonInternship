@@ -3,3 +3,4 @@
 Kristine Dzneladze
 lasha demurashvili
 ანრი თვალაბეიშვილი
+Ruso Kvesitadze
