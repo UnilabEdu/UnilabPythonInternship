@@ -38,6 +38,8 @@
 - ანა ხუციშვილი | [Blog](/Chapter2_HTML/Projects/ana_khutsishvili/blog) | [Survey](/Chapter2_HTML/Projects/ana_khutsishvili/survey)
 
 ### 2023 სტაჟირება
+- ლაშა დემურაშვილი |  [Cheetah](/Chapter2_HTML/Projects/Lasha_demurashvili/)
+
 
 
 ## ინსტრუქცია
