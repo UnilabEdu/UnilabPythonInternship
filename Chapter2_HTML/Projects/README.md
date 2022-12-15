@@ -37,6 +37,9 @@
 - გიგა ამირიძე | [პორტფოლიო](/Chapter2_HTML/Projects/giga_amiridze/portfolio) [[View]](https://htmlpreview.github.io/?https://github.com/gigaamiridze/UnilabPythonInternship/blob/master/Chapter2_HTML/Projects/giga_amiridze/portfolio/portfolio.html) | [ქვეყნების მშპ](/Chapter2_HTML/Projects/giga_amiridze/countries_GDP) [[View]](https://htmlpreview.github.io/?https://github.com/gigaamiridze/UnilabPythonInternship/blob/master/Chapter2_HTML/Projects/giga_amiridze/countries_GDP/index.html) | [სარეგისტრაციო ფორმა](/Chapter2_HTML/Projects/giga_amiridze/register_form) [[View]](https://htmlpreview.github.io/?https://github.com/gigaamiridze/UnilabPythonInternship/blob/master/Chapter2_HTML/Projects/giga_amiridze/register_form/register.html)
 - ანა ხუციშვილი | [Blog](/Chapter2_HTML/Projects/ana_khutsishvili/blog) | [Survey](/Chapter2_HTML/Projects/ana_khutsishvili/survey)
 
+### 2023 სტაჟირება
+
+
 ## ინსტრუქცია
 მოამზადეთ პროექტის ინსტრქუციაში აღწერილი პირობის შესაბამისი ორი HTML პროექტი და დაამატეთ ზემოთ ნაჩვენებ სიაში მათი საჩვენებელი მისამართები. (იხ. დამატებით რესურსები)
 
