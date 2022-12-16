@@ -15,6 +15,7 @@
 - ნუგო სვიანაძე | [Students](/Chapter6_Forms/Projects/Nugo_svianadze)
 - დანიელ გათენაძე | [Registration Form](/Chapter6_Forms/Projects/daniel_gatenadze/project.py)
 - მარიამ ქავთარაძე | [Forms_HW](/Chapter6_Forms/Projects/mariam_kavtaradze)
+### 2023 სტაჟირება
 
 ## ინსტრუქცია:
 
