@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey 2023</title>
+</head>
+<body>
+    <form>
+    <div class="Header">
+        <h1 style="margin-left: 50%;">Survey 2023</h1>
+        <h2>About the survey:</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+            Autem dignissimos tempora accusamus asperiores deleniti 
+            corporis dolor ab facere enim harum? Rerum, consequatur 
+            sunt dolor est nihil corporis, magnam officiis neque minima
+            voluptatibus aut. Quidem dolorum, nemo numquam porro 
+            suscipit sapiente, iste laudantium voluptatibus voluptatem
+            minus facere quod debitis consequuntur sint cupiditate 
+            perspiciatis quo et repudiandae voluptatum amet inventore!
+            Voluptate in cum placeat, magni exercitationem reprehenderit 
+            itaque voluptas. Architecto facilis dolore repudiandae atque et a
+            fugit debitis reprehenderit, repellendus porro ab expedita aliquid
+            repellat sequi, quasi id ea commodi fuga autem ipsa ad eius 
+            deserunt excepturi nesciunt. Quas magnam earum accusantium!</p>
+    </div>
+
+
+    <div class="about_user">
+    <fieldset>
+        <legend><h3>მომხმარებლის პირადი მახასიათებლები</h3></legend>
+
+
+        <label>სახელი <input type="text" name="username"></label>
+        <br/>
+        <br/>
+        <br/>
+
+
+        <legend>სქესი:</legend>
+        <input type="radio" name="gender" value="Male" />Male
+        <input type="radio" name="gender" value="Female"/>Female
+        <input type="radio" name="gender" value="n_binary"/>non binary
+        <br/>
+        <br/>
+        <br/>
+
+
+        <legend>დაბადების თარიღი:</legend>
+        <input type="date" name="born_date">
+        <br/>
+        <br/>
+        <br/>
+
+
+        <legend>ქვეყანა:</legend>
+        <select name="country">
+            <option value="Georgia">Georgia</option>
+            <option value="Germany">Germany</option>
+            <option value="Gana">Gana</option>
+            <option value="Gvatemala">Gvatemala</option>
+        </select>
+        <br/>
+        <br/>
+        <br/>
+
+
+        <legend>ყოველთვიური შემოსავალი:</legend>
+        <input type="range" id="toPrice" value="450" min="0" max="10000" step="100" 
+        oninput="document.getElementById('tPrice').innerHTML = this.value" />
+        <label id="tPrice"></label>
+        <br/>
+        <br/>
+        <br/>
+
+
+
+        <legend>თუ გყავთ ფლობთ ქვემოთ ჩამოთვლილიდან რომელიმეს მონიშნეთ:</legend>
+        <input type="checkbox" name="house" value="house" /> სახლი<br/>
+        <input type="checkbox" name="car" value="car" /> მანქანა<br/>
+        <input type="checkbox" name="Country_house" value="Country_house" /> აგარაკი<br/>
+        <input type="checkbox" name="land" value="land" /> მიწის ნაკვეთი
+        <br/>
+        <br/>
+        <br/>
+
+        
+        <input type="submit" name="submit" value="დადასტურება">
+
+
+    </fieldset>
+    </div>
+
+</form>
+</body>
+</html>
