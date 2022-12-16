@@ -38,9 +38,8 @@
 - ანა ხუციშვილი | [Blog](/Chapter2_HTML/Projects/ana_khutsishvili/blog) | [Survey](/Chapter2_HTML/Projects/ana_khutsishvili/survey)
 
 ### 2023 სტაჟირება
+- ანრი თვალაბეიშვილი | [Portfolio](https://github.com/anri-Tvalabeishvili/UniLab-Python-Internship/tree/master/Chapter2_HTML/Projects/Anri_Tvalabeishvili/Portfolio) [[View]](https://htmlpreview.github.io/?https://github.com/anri-Tvalabeishvili/UniLab-Python-Internship/blob/master/Chapter2_HTML/Projects/Anri_Tvalabeishvili/Portfolio/main.html) | [Survey](https://github.com/anri-Tvalabeishvili/UniLab-Python-Internship/tree/master/Chapter2_HTML/Projects/Anri_Tvalabeishvili/Survey)[ [View]](https://htmlpreview.github.io/?https://github.com/anri-Tvalabeishvili/UniLab-Python-Internship/blob/master/Chapter2_HTML/Projects/Anri_Tvalabeishvili/Survey/Survey.html)
 - რუსო კვესიტაძე |[Registration](/Chapter2_HTML/Projects/Ruso_Kvesitadze) | [view](https://htmlpreview.github.io/?https://github.com/ruso-Kvesitadze/UnilabPythonInternship/blob/master/Chapter2_HTML/Projects/Ruso_Kvesitadze/Registration.html)
-
-
 
 ## ინსტრუქცია
 მოამზადეთ პროექტის ინსტრქუციაში აღწერილი პირობის შესაბამისი ორი HTML პროექტი და დაამატეთ ზემოთ ნაჩვენებ სიაში მათი საჩვენებელი მისამართები. (იხ. დამატებით რესურსები)
