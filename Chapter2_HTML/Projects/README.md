@@ -38,6 +38,8 @@
 - ანა ხუციშვილი | [Blog](/Chapter2_HTML/Projects/ana_khutsishvili/blog) | [Survey](/Chapter2_HTML/Projects/ana_khutsishvili/survey)
 
 ### 2023 სტაჟირება
+- რუსო კვესიტაძე |[Registration](/Chapter2_HTML/Projects/Ruso_Kvesitadze) | [view](https://htmlpreview.github.io/?https://github.com/ruso-Kvesitadze/UnilabPythonInternship/blob/master/Chapter2_HTML/Projects/Ruso_Kvesitadze/Registration.html)
+
 
 
 ## ინსტრუქცია
