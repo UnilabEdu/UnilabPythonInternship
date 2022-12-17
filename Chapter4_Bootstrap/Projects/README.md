@@ -23,6 +23,7 @@
 ### 2023 სტაჟირება
 - ანრი თვალაბეიშვილი [The Big Bang Theory](/Chapter4_Bootstrap/Projects/Anri_Tvalabeihvili/templates)  |  [[View]](https://htmlpreview.github.io/?https://raw.githubusercontent.com/anri-Tvalabeishvili/UniLab-Python-Internship/master/Chapter4_Bootstrap/Projects/Anri_Tvalabeihvili/templates/first.html)
 
+
 ## ინსტრუქცია:
 
 წინა თავში შესრულებულ ან სრულიად ახალ ვებ გვერდს გაუკეთეთ სტილი Bootstrap-ის გამოყენებით
