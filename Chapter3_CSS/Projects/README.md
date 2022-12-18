@@ -28,7 +28,7 @@
 
 ### 2023 სტაჟირება
 - ლაშა დემურაშვილი |  [Cheetah](/Chapter3_CSS/Projects/Lasha_demurashvili)
-- 
+
 
 
 ## ინსტრუქცია:
