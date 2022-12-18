@@ -27,6 +27,8 @@
 - დანიელ გათენაძე | [hmwrk](https://htmlpreview.github.io/?https://github.com/LilDiabetes/UnilabPythonInternship/blob/css/daniel_gatenadze/Chapter3_CSS/Projects/daniel_gatenadze/hmwrk/hmwrk.html)
 
 ### 2023 სტაჟირება
+- ლაშა დემურაშვილი |  [Cheetah](/Chapter3_CSS/Projects/Lasha_demurashvili)
+- 
 
 
 ## ინსტრუქცია:
