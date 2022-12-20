@@ -1,0 +1,25 @@
+{% from "macro.html" import is_active %}
+<div class="nav-bar-box">
+
+    <div class="nav-bar-inner">
+        <div class="nav-bar-links">
+            <nav>
+                <ul>
+                    <li>
+                        <a class="{{ is_active(request.endpoint, 'home') }}"  href="{{url_for('home')}}">Home</a>
+                    </li>
+                    <li>
+                        <a class="{{ is_active(request.endpoint, 'game_store') }}"  href="{{url_for('game_store')}}">Game Store</a>
+                    </li>
+                    <li>
+                        <a class="{{ is_active(request.endpoint, 'gift_Cards') }}" href="{{url_for('gift_Cards')}}" >Gift Cards</a>
+                    </li>
+                    <li>
+                        <a class="{{ is_active(request.endpoint, 'P2P') }}" href="{{url_for('P2P')}}" >P2P</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+</div>
