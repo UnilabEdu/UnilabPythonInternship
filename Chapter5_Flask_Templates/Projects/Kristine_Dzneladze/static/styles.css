@@ -8,9 +8,11 @@ body {
     background-color: black;
 }
 /*for navbar*/
-.navbar:active{
-    color: 2px 2px 5px #00ff0d;
+.navbar .active{
+    color: #eeff00;
+    background-color: rgb(255, 51, 0);
 }
+
 .navbar{
     margin: 0px;
     display: flex;
@@ -35,6 +37,8 @@ body {
 .navbar a:hover{
     background-color: rgb(199, 31, 31);
 }
+
+
 
 /*for rammstein heading*/
 .rammstein{

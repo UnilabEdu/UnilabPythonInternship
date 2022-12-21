@@ -1,4 +1,5 @@
+{% from "macro.html" import is_active%}
 <div class="navbar">
-    <a href="{{url_for('firstpage')}}"> Firstpage </a>
-    <a href="{{url_for('tickets')}}"> Tickets </a>
+    <a href="{{url_for('firstpage')}}" class="{{is_active(request.endpoint, 'firstpage')}}"> Firstpage </a>
+    <a href="{{url_for('tickets')}}" class="{{is_active(request.endpoint, 'tickets')}}"> Tickets </a>
 </div>
