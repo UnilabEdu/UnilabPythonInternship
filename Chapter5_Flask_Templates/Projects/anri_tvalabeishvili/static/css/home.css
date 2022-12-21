@@ -1,0 +1,88 @@
+:root {
+    --text: #fbfbfb;
+    --scrollbar: #9a9a9a;
+    --background: #161a1e;
+    --hover_color: #e58e27;
+    --back_cover: #23272de3;
+}
+
+
+
+.main_advertisement {
+    width: 100%;
+    top: 0;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--text);
+}
+
+
+
+.advertisement_brands {
+    width: 400px;
+    height: 450px;
+    top: 0;
+    margin-left: 0px;
+    display: block;
+    justify-content: space-between;
+    background: var(--back_cover);
+    border-radius: 20px;
+
+}
+
+
+
+
+.image_for_cover {
+    width: 800px;
+    height: 450px;
+    top: 0;
+    margin: auto;
+    display: block;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 20px;
+}
+
+
+
+
+.advertisement_brands img {
+
+    width: 50px;
+
+}
+
+.advertisement_brands a {
+
+    margin: auto;
+
+}
+
+
+
+.main_content{
+    margin-top: 60px;
+    display: flex;
+    
+  
+}
+
+.text{
+    border-radius: 20px;
+    background-color: var(--back_cover);
+    margin-left: 0px;
+    width: 350px;
+    margin-left: 62.5px;
+}
+
+.text p{
+    color: var(--scrollbar);
+    margin-left: 12px;
+}
+
+
+
+
