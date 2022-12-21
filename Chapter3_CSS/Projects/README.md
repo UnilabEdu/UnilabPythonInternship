@@ -26,6 +26,9 @@
 - გიგა ამირიძე | [Sign up](/Chapter3_CSS/Projects/giga_amiridze/sign_up) [[View]](https://htmlpreview.github.io/?https://github.com/gigaamiridze/UnilabPythonInternship/blob/css/sign_up/Chapter3_CSS/Projects/giga_amiridze/sign_up/index.html)
 - დანიელ გათენაძე | [hmwrk](https://htmlpreview.github.io/?https://github.com/LilDiabetes/UnilabPythonInternship/blob/css/daniel_gatenadze/Chapter3_CSS/Projects/daniel_gatenadze/hmwrk/hmwrk.html)
 
+### 2023 სტაჟირება
+
+
 ## ინსტრუქცია:
 
 წინა თავში შესრულებულ ან სრულიად ახალ ვებ გვერდს გაუკეთეთ სტილი css-ის გამოყენებით

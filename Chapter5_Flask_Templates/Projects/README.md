@@ -20,6 +20,7 @@
 - ვასო კირთაძე | [jinja Homework](https://htmlpreview.github.io/?https://github.com/VasoKirtadze/UnilabPythonInternship/blob/master/Chapter5_Flask_Templates/Projects/Vaso_Kirtadze/templates/index.html)
 - ანა ხუციშვილი | [Online library](/Chapter5_Flask_Templates/Projects/ana_khutsishvili)
 - მარიამ ქავთარაძე | [Flask_templates](/Chapter5_Flask_Templates/Projects/mariam_kavtaradze/hw_Flask_Templates)
+### 2023 სტაჟირება
 
 ## ინსტრუქცია:
 

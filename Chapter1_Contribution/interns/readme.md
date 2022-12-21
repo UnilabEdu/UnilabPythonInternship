@@ -1,2 +1,9 @@
 # სტაჟიორთა სია
-### 2023
+
+### 2022
+
+Kristine Dzneladze
+lasha demurashvili
+ანრი თვალაბეიშვილი
+რუსო კვესიტაძე
+Mariam Razmadze
