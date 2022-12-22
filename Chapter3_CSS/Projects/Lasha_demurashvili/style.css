@@ -1,0 +1,61 @@
+body {
+    /*background-color: rgba(7, 178, 38, 0.78);*/
+    background: url("bk.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
+    color: #e5ff13;
+    text-shadow: 0 0 3px #000000;
+}
+
+h1 {
+    text-align: center;
+}
+
+a {
+    color: rgba(255, 255, 0, 0.87);
+}
+
+a:hover {
+    color: rgb(248, 7, 7);
+}
+
+/************************************************/
+#cheetah--img {
+    width: 200px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px black;
+    transition: 1s;
+}
+#cheetah--img:hover {
+        box-shadow: 0 0 5px #14981b;
+}
+
+hr {
+    color: rgb(208, 239, 32);
+    border-style: none;
+    border-top-style: dotted;
+    width: 20%;
+    border-width: 7px;
+}
+
+#fastest--animals--table, th, td {
+    background: rgba(255, 0, 0, 0.46);
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 400px;
+}
+
+.about--me p {
+    padding: 10px;
+}
+
+.about--me {
+    width: 500px;
+    background: rgba(255, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+.skills--box ul{
+    font-size: 1.1em;
+}
