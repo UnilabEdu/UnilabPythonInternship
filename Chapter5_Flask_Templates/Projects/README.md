@@ -21,6 +21,8 @@
 - ანა ხუციშვილი | [Online library](/Chapter5_Flask_Templates/Projects/ana_khutsishvili)
 - მარიამ ქავთარაძე | [Flask_templates](/Chapter5_Flask_Templates/Projects/mariam_kavtaradze/hw_Flask_Templates)
 ### 2023 სტაჟირება
+- ლაშა დემურაშვილი | [Flask_templates](/Chapter5_Flask_Templates/Projects/Lasha_Demurashvili)
+
 
 ## ინსტრუქცია:
 
