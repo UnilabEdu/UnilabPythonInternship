@@ -21,6 +21,8 @@
 - [ნიკა ციცქიშვილი | საკუთარი ვებ-გვერდი](/Chapter4_Bootstrap/nika_tsitskishvili/my_web.html)
 - გიგა ამირიძე | [About me & Contact](/Chapter4_Bootstrap/Projects/giga_amiridze) [[View]](https://htmlpreview.github.io/?https://raw.githubusercontent.com/gigaamiridze/UnilabPythonInternship/bootstrap/about_me/Chapter4_Bootstrap/Projects/giga_amiridze/about_me/index.html)
 ### 2023 სტაჟირება
+- ქრისტინე ძნელაძე | [Rammstein](/Chapter4_Boostrap/Projects/Kristine_Dzneladze) | [view](https://htmlpreview.github.io/?https://github.com/qristinius/UnilabPythonInternship/blob/master/Chapter4_Bootstrap/Projects/Kristine_Dzneladze/firstpage.html)
+- რუსო კვესიტაძე |[Melomane](/Chapter4_Bootstrap/Projects/Ruso_Kvesitadze) | [view](https://htmlpreview.github.io/?https://github.com/ruso-Kvesitadze/UnilabPythonInternship/blob/master/Chapter4_Bootstrap/Projects/Ruso_Kvesitadze/Melomane.html)
 - ანრი თვალაბეიშვილი [The Big Bang Theory](/Chapter4_Bootstrap/Projects/Anri_Tvalabeihvili/templates)  |  [[View]](https://htmlpreview.github.io/?https://raw.githubusercontent.com/anri-Tvalabeishvili/UniLab-Python-Internship/master/Chapter4_Bootstrap/Projects/Anri_Tvalabeihvili/templates/first.html)
 - ლაშა დემურაშვილი |  [Cheetah](/Chapter4_Bootstrap/)  | [[View]](https://htmlpreview.github.io/?https://github.com/LashaDemurashvili/UnilabPythonInternship/blob/master/Chapter4_Bootstrap/Projects/Lasha_demurashvili/index.html)
 
