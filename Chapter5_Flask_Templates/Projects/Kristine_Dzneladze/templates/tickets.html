@@ -1,0 +1,85 @@
+
+{% extends "base.html" %}
+{% block content %}
+
+<div class="tickettop">
+  <h1>Register and buy tickets here</h1>
+</div>
+
+<form class="row g-3 needs-validation" style=" background-image:linear-gradient(black, red,yellow); color: rgb(238, 234, 255); font-family:  'Trocchi', serif; position: absolute; margin: 4% 10%;" novalidate>
+  <div class="col-md-4">
+    <label for="validationCustom01" class="form-label">First name</label>
+    <input type="text" class="form-control" id="validationCustom01" value="" placeholder="Enter your name" required>
+    <div class="valid-feedback">
+      Looks good!
+    </div>
+  </div>
+  <div class="col-md-4">
+    <label for="validationCustom02" class="form-label">Last name</label>
+    <input type="text" class="form-control" id="validationCustom02" value="" placeholder="Enter your surname" required>
+    <div class="valid-feedback">
+      Looks good!
+    </div>
+  </div>
+  <div class="col-md-6">
+    <label for="email" class="form-label">Email</label>
+    <input type="email" class="form-control" id="email" placeholder="Enter your Email" required>
+    <div class="invalid-feedback">
+      Please provide a valid Email.
+    </div>
+  </div>
+  <div class="input-group mb-3">
+      <button class="btn btn-outline-secondary dropdown-toggle" style="color:black;" type="button" data-bs-toggle="dropdown" aria-expanded="false">Choose Card</button>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Mastercard</a></li>
+        <li><a class="dropdown-item" href="#">Visa</a></li>
+        <li><a class="dropdown-item" href="#">American Express</a></li>
+      </ul>
+      <input type="email" class="form-control" id="card" placeholder="Enter your Card number" required>
+      <div class="invalid-feedback">
+        Please provide a valid Email.   
+      </div>
+</div>
+      <div class="form-check" style="color: rgb(0, 119, 255);">
+          <h1>Seats:</h1>
+          <input class="form-check-input" type="checkbox" value="" id="nearstage">
+          <label class="form-check-label" for="nearstage">
+            Near Stage 
+          </label><br>
+          <input class="form-check-input" type="checkbox" value="" id="middle">
+          <label class="form-check-label" for="middle">
+            Middle 
+          </label><br>
+          <input class="form-check-input" type="checkbox" value="" id="farfromstage">
+          <label class="form-check-label" for="farfromstage">
+            Far From Stage 
+          </label>
+        </div>
+      <div>
+          <label for="date" style="color: rgb(179, 255, 0); font-weight: 700;"> Live date </label><br>
+          <input style="margin-bottom: 1%;" type="date" name="" id="date"><br>
+          <label for="number of tickets" style="color: rgb(229, 255, 0); font-weight: 700;"> Number of tickets </label><br>
+          <input style="margin-bottom: 3%; " type="text"  id="number of tickets" placeholder="Enter Number">
+      </div>
+      <div class="col-12">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+            <label class="form-check-label" for="invalidCheck" style="color: rgb(255, 51, 0); font-weight: 700;">
+              Agree to terms and conditions
+            </label>
+            <div class="invalid-feedback">
+              You must agree before submitting.
+            </div>
+          </div>
+        </div>
+        <div class="col-12" style="margin-bottom: 3%;">
+          <button class="btn btn-primary" type="submit" style="color: rgb(0, 0, 0);">Buy Tickets</button>
+        </div>
+
+
+</form>
+
+
+</div>
+
+{% endblock %}
