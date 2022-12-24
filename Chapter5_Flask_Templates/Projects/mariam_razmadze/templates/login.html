@@ -1,0 +1,38 @@
+{% extends 'base.html' %} {% block head %}
+<title>TEAM-APP | LOGIN</title>
+{% endblock%}
+
+{% block body %}
+
+<div class="row l">
+    <h1>Login</h1>
+    <form method="POST" action="{{url_for('login')}}">
+      <div class="mb-3">
+        <label for="name1" class="form-label">Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="name1"
+          name="name"
+          placeholder="name"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="password1" class="form-label">Password</label>
+        <input
+          type="password"
+          class="form-control"
+          id="password1"
+          name="password"
+          placeholder="password"
+        />
+      </div>
+      <div class="col-lg-8 col-md-6 col-sm-12 col-xs-12">
+        <button type="submit" class="btn btn-dark" id='l'>Login</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+{% endblock%}
