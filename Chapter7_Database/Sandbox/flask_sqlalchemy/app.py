@@ -1,34 +1,17 @@
-import os
-
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
-from flask_migrate import Migrate
+from os import path
 
-basedir = os.path.abspath(os.path.dirname(__file__))
+base_directory = path.abspath(path.dirname(__file__))
 
 app = Flask(__name__)
-
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir, "data.sqlite")
+app.config["SECRET_KEY"] = "mysecretkey"
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + path.join(base_directory, 'db.sqlite')
 
 db = SQLAlchemy(app)
-Migrate(app, db)
 
 
-class UserModel(db.Model):
-    __tablename__ = "user"
-
-    id = db.Column(db.Integer, primary_key=True)
-    username = db.Column(db.String)
-    email = db.Column(db.String)
-    age = db.Column(db.Integer)
-    country = db.Column(db.String)
-
-    def __init__(self, username, email, age, country):
-        self.username = username
-        self.email = email
-        self.age = age
-        self.country = country
-
-    def __repr__(self):
-        return f'User {self.username} with email: {self.email}'
+if __name__ == '__main__':
+    from routes import *  # იცოდეთ ეს არ არის სწორი მიდგომა და არასოდეს არ ქნათ, დროებით მაქვს სანამ სტრუქტურიზაციას გავივლით ))
+    app.run(debug=True)
