@@ -47,7 +47,7 @@ def registration_page():
         user_username = form.username.data
         user_email = form.email.data
         user_password = form.password.data
-        users.append([user_username, user_email, user_password])
+        users.append([user_email, user_password])
 
     return render_template('register.html', form=form)
 
