@@ -1,24 +1,27 @@
 {% extends 'base.html' %} {% block head %}
 <title>TEAM-APP | UNANSWERED</title>
-{% endblock%}
-
-{% block body %}
-<div class="row">
-    <h1>Questions For You</h1>
-    <div class="list-group">
-      <a href="#" class="list-group-item cus">
-        <h4 class="list-group-item-heading">Question One</h4>
-        <p class="list-group-item-text">🧐 Asked by: Mariam</p>
+{% endblock%} {% block body %}
+<div class="unanswered">
+  <h1>Questions For You</h1>
+  <div class='scr'>
+  <div class="q-container"> 
+    {%for question in questions%}
+    <div class="q {%if question['id']==act%} active{%endif%}">
+      <a href="{{url_for('answer', question_id=question['id'])}}">
+        <h4 class="q-title">{{question['question_text']}}</h4>
+        <p class="q-text {%if question['user_senior']==1%} senior
+        {%elif question['user_junior']==1%} junior
+        {%elif question['user_intern']==1%} intern {%endif%}"> Asked by: {{question['name']}}</p>
       </a>
-      <a href="#" class="list-group-item cus">
-        <h4 class="list-group-item-heading">Question Two</h4>
-        <p class="list-group-item-text">🧐 Asked by: Mariam</p>
-      </a>
-      <a href="#" class="list-group-item cus">
-        <h4 class="list-group-item-heading">Question Three</h4>
-        <p class="list-group-item-text">🧐 Asked by: Mariam</p>
-      </a>
+      <button  class="q-toggle">
+        <i class="fas fa-chevron-down"></i>
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+      {%endfor%}
     </div>
   </div>
 </div>
+</div>
+
 {% endblock%}

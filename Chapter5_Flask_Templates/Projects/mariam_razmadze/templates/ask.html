@@ -1,29 +1,30 @@
 {% extends 'base.html' %} {% block head %}
 <title>TEAM-APP | ASK</title>
-{% endblock%} 
-{% block body %} 
-<div class="row mb-2">
-    <h1>Ask A Question</h1>
-    <label for="exampleFormControlTextarea1" class="form-label"
-      >Question</label
-    >
-    <textarea
-      class="form-control"
-      id="exampleFormControlTextarea1"
-      rows="3"
-    ></textarea>
-    <span class="help-block">Ask away!</span>
+{% endblock%} {% block body %}
+<div class='ask'>
+<div class="wrapper">
+  <form action="/ask" method="POST">
+    <fieldset>
+      <h1>What's your question?</h1>
+      <textarea
+        placeholder="Type your question here..."
+        rows="3"
+        name="question"
+        required
+      ></textarea>
 
-    <select class="form-select">
-      <option selected disabled>
-        Choose who the question is inteded for
-      </option>
-      <option value="1">Team Member 1</option>
-      <option value="2">Team Member 2</option>
-      <option value="3">Team Member 3</option>
-    </select>
-  
-  <button type="submit" class="btn btn-primary">Submit</button>
+      <select class="form-select" name="mentor" required>
+        <option selected disabled value="" >
+          Choose who the question is inteded for
+        </option>
+        {% for mentor in mentors %}
+        <option value="{{ mentor['id']}}">{{mentor['name']}}</option>
+        {%endfor%}
+      </select>
+
+      <button type="submit" class="ask-btn">Submit Your Question</button>
+    </fieldset>
+  </form>
 </div>
 </div>
-{% endblock%}
+</div>{% endblock%}

@@ -1,17 +1,27 @@
 {% extends 'base.html' %} {% block head %}
 <title>TEAM-APP | QUESTION</title>
-{% endblock%} 
-{% block body %}
-
-<div class="row">
-    <div>
-      <h1>What?</h1>
-      <p>This is the answer.</p>
+{% endblock%} {% block body %}
+<div class="unanswered not">
+  <div class='scr'>
+  <div class="q-container"> 
+    <div class="q active">
+        <h4 class="q-title">{{question['question_text']}}</h4>
+        <p class="q-text {%if question['asker_senior']==1%} senior
+        {%elif question['asker_junior']==1%} junior
+        {%elif question['asker_intern']==1%} intern {%endif%}"> Asked by: {{question['asker_name']}}</p>
+        <p class="q-text"> {{question['answer_text']}}</p>
+        <p class="q-text {%if question['mentor_senior']==1%} senior
+        {%elif question['mentor_junior']==1%} junior{%endif%}"> Answered by: {{question['mentor_name']}}</p>
+      <button  class="q-toggle">
+        <i class="fas fa-chevron-down"></i>
+        <i class="fas fa-times"></i>
+      </button>
     </div>
-    <p class="jumbo w-50"><a>Asked By: Mariam</a></p>
-    <hr />
-    <p class="jumbo w-50"><a>Answered By: Salome</a></p>
+    </div>
   </div>
+</div>
 </div>
 
 {% endblock%}
+
+

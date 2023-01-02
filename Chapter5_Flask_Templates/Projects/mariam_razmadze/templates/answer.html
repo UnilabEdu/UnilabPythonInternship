@@ -3,18 +3,21 @@
 {% endblock%}
 
 {% block body %}
-<div class="row mb-3">
-    <h1>What is the question?</h1>
-    <label for="exampleFormControlTextarea1" class="form-label"
-      >Answer</label
-    >
-    <textarea
-      class="form-control"
-      id="exampleFormControlTextarea1"
-      rows="3"
-    ></textarea>
-
-    <button type="submit" class="btn btn-primary">Submit</button>
-  </div>
+<div class='ask'>
+  <div class="wrapper">
+    <form action="{{url_for('answer', question_id=question['id'])}}" method="POST">
+      <fieldset>
+        <h1 class='ans'>{{question['question_text']}}</h1>
+        <textarea
+        placeholder="Type your answer here..."
+        rows="3"
+        name="answer"
+        required
+      ></textarea>
+      <button type="submit" class="ask-btn">Submit your answer</button>
+    </fieldset>
+  </form>
 </div>
-{% endblock%}
+</div>
+</div>{% endblock%}
+
