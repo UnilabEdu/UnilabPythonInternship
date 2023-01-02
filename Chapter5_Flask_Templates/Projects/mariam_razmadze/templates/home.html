@@ -1,18 +1,30 @@
 {% extends 'base.html' %} {% block head %}
 <title>TEAM-APP | HOME</title>
-{% endblock%}
-
-{% block body %}
-
-<div class="row">
-    <h1>Activity</h1>
-    <div class="list-group">
-      <a href="#" class="list-group-item">
-        <h4 class="list-group-item-heading">Question One</h4>
-        <p class="list-group-item-text">🧐 Asked by: Mariam</p>
-        <p class="list-group-item-text">🤓 Answered by: Salome</p>
+{% endblock%} {% block body %}
+<div class="unanswered">
+  <h1>Answered Questions</h1>
+  <div class='scr'>
+  <div class="q-container"> 
+    {%for question in questions%}
+    <div class="q {%if question['question_id']==act%} active{%endif%}">
+      <a href="{{url_for('question', question_id=question['question_id'])}}">
+        <h4 class="q-title">{{question['question_text']}}</h4>
+        <p class="q-text {%if question['asker_sernior']==1%} senior
+        {%elif question['asker_junior']==1%} junior
+        {%elif question['asker_intern']==1%} intern {%endif%}"> Asked by: {{question['asker_name']}}</p>
+        <p class="q-text {%if question['mentor_senior']==1%} senior
+        {%elif question['mentor_junior']==1%} junior{%endif%}"> Answered by: {{question['mentor_name']}}</p>
       </a>
+      <button  class="q-toggle">
+        <i class="fas fa-chevron-down"></i>
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+      {%endfor%}
     </div>
   </div>
 </div>
+</div>
+
 {% endblock%}
+

@@ -1,0 +1,44 @@
+{%macro show_links(user)%}
+<ul>
+  <li>
+    <a href="{{url_for('index')}}"><i class="fas fa-home"></i> Home</a>
+  </li>
+  {% if not user %}
+  <li>
+    <a href="{{url_for('login')}}"
+      ><i class="fa-solid fa-right-to-bracket"></i> Login</a
+    >
+  </li>
+  <li>
+    <a href="{{url_for('register')}}"
+      ><i class="fa-solid fa-user-plus"></i> Register</a
+    >
+  </li>
+  {% endif %} {% if user and user ['admin']==0 and user['senior']==0 %}
+  <li>
+    <a href="{{url_for('ask')}}"
+      ><i class="fa-solid fa-question"></i> Question</a
+    >
+  </li>
+  {% endif %} {% if user and user['senior']==1 or user['junior']==1%}
+  <li>
+    <a href="{{url_for('unanswered')}}"
+      ><i class="fa-brands fa-replyd"></i> Answer</a
+    >
+  </li>
+  {% endif %} {% if user and user['admin']==1 %}
+  <li>
+    <a href="{{url_for('users')}}"
+      ><i class="fa-solid fa-users-gear"></i> User Setup</a
+    >
+  </li>
+  {% endif %} {% if user %}
+  <li>
+    <a href="{{url_for('logout')}}"
+      ><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a
+    >
+  </li>
+  {% endif %}
+</ul>
+
+{%endmacro%}

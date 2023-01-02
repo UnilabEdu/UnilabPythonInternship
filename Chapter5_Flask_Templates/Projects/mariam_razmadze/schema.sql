@@ -12,6 +12,5 @@ create table questions(
     question_text text not null, 
     answer_text text, 
     asked_by_id integer not null, 
-    senior_id integer not null, 
-    junior_id integer not null
+    mentor_id integer not null
 );
