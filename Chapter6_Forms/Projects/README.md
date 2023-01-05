@@ -16,6 +16,7 @@
 - დანიელ გათენაძე | [Registration Form](/Chapter6_Forms/Projects/daniel_gatenadze/project.py)
 - მარიამ ქავთარაძე | [Forms_HW](/Chapter6_Forms/Projects/mariam_kavtaradze)
 ### 2023 სტაჟირება
+- ლაშა დემურაშვილი | [Forms](/Chapter6_Forms/Projects/Lasha_Demurashvili)
 
 ## ინსტრუქცია:
 
