@@ -62,7 +62,7 @@ def forms():
 
 @app.route("/youruploadedinfo")
 def yourinfo():
-    all_data  = (list(RegisterForm.query.all()))
+    all_data  = RegisterForm.query.all()
     print(all_data[0].firstname)
 
 

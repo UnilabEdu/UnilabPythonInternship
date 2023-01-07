@@ -6,13 +6,13 @@
   <div class="row">
     <p style="color: rgb(79, 212, 27);">Fill registration forms first to see your info!</p>
     <div class="col" style="color: rgb(121, 31, 206); font-weight:600;">
-      {% for item in range ((info|length)) %}
-      Firstname: {{info[item].firstname}}<br>
-      Lastname: {{info[item].lastname}}<br>
-      Email: {{info[item].email}}<br>
-      Writer experience: {{info[item].writer_experience}}<br>
-      Writer field: {{info[item].writer_field}}<br>
-      Essay description: {{info[item].essay_description}}<br><br>
+      {% for item in  info %}
+      Firstname: {{item.firstname}}<br>
+      Lastname: {{item.lastname}}<br>
+      Email: {{item.email}}<br>
+      Writer experience: {{item.writer_experience}}<br>
+      Writer field: {{item.writer_field}}<br>
+      Essay description: {{item.essay_description}}<br><br>
       {%endfor%}
     </div>
     <p style="color: red;">The info on this page is temporary and will be lost after session is over!</p>
