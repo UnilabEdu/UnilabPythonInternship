@@ -1,0 +1,20 @@
+{% extends "base.html"%}
+{% block content %}
+<h1 style="text-align: center; color:rgb(8, 180, 192)">Info Page</h1>
+
+<div class="container mt-3  bg-white h-75 rounded">
+  <div class="row">
+    <p style="color: rgb(79, 212, 27);">Fill registration forms first to see your info!</p>
+    <div class="col" style="color: rgb(121, 31, 206); font-weight:600;">
+      {%for item in info%}
+      Firstname: {{item["firstname"]}}<br>
+      Lastname: {{item["lastname"]}}<br>
+      Email: {{item["email"]}}<br>
+      Essay description: {{item["essay_description"]}}<br><br>
+      {%endfor%}
+    </div>
+    <p style="color: red;">The info on this page is temporary and will be lost after session is over!</p>
+  </div>
+</div>
+
+{% endblock %}

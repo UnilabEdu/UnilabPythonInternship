@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+    <div style="color: #1a1e21">
+{% for user in users %}
+    {{ user }}
+    <br>
+    {% endfor %}
+    </div>
+{% endblock %}
