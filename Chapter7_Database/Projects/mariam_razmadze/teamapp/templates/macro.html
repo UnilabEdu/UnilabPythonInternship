@@ -1,0 +1,46 @@
+{%macro show_links( current_user )%}
+<ul>
+  <li>
+    <a href="{{url_for('main.index')}}"><i class="fas fa-home"></i>Home</a>
+  </li>
+  {% if not current_user.is_authenticated %}
+  <li>
+    <a href="{{url_for('auth.login')}}"
+      ><i class="fa-solid fa-right-to-bracket"></i> Login</a
+    >
+  </li>
+  <li>
+    <a href="{{url_for('auth.register')}}"
+      ><i class="fa-solid fa-user-plus"></i> Register</a
+    >
+  </li>
+  {% endif %} {% if current_user.is_authenticated and current_user.admin==0 and
+  current_user.senior==0 %}
+  <li>
+    <a href="{{url_for('main.ask')}}"
+      ><i class="fa-solid fa-question"></i> Ask Questions</a
+    >
+  </li>
+  {% endif %} {% if current_user.is_authenticated and current_user.senior==1 or
+  current_user.junior==1%}
+  <li>
+    <a href="{{url_for('main.unanswered')}}"
+      ><i class="fa-brands fa-replyd"></i> Answer
+    </a>
+  </li>
+  {% endif %} {% if current_user.is_authenticated and current_user.admin==1 %}
+  <li>
+    <a href="{{url_for('main.users')}}"
+      ><i class="fa-solid fa-users-gear"></i> User Setup</a
+    >
+  </li>
+  {% endif %} {% if current_user.is_authenticated %}
+  <li>
+    <a href="{{url_for('auth.logout')}}"
+      ><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a
+    >
+  </li>
+  {% endif %}
+</ul>
+
+{%endmacro%}

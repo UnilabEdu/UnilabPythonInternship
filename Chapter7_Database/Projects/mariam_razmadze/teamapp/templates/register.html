@@ -1,0 +1,38 @@
+{% extends 'base.html' %} {% block head %}
+<title>TEAM-APP | REGISTER</title>
+{% endblock%}
+
+{% block body %}
+
+<div class="container form-cont">
+    <h1>Please Register</h1>
+    <form method="POST" action="{{url_for('auth.register')}}">
+      <div class="form-control">
+        <input
+          type="text"
+          id="name"
+          name="name"
+          required
+        />
+        <label for="name">Name</label>
+      </div>
+      {% if error_message%}
+      <div class='alert alert-danger'>{{error_message}}</div>
+      {%endif%}
+      <div class="form-control">
+        <input
+          type="password"
+          id="password"
+          name="password"
+          required
+        />
+        <label for="password">Password</label>
+      </div>
+        <button type="submit" class="form-btn">Register</button>
+      <p class="text">Already have an account?<a href="login"> Login</a></p>
+    </form>
+  </div>
+</div>
+
+
+{% endblock%}
