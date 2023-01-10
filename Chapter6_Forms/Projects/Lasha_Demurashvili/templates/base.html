@@ -37,6 +37,10 @@
                     <a class="nav-link {{ is_active(request.endpoint, 'register') }}"
                        href=" {{ url_for('register') }}">Register</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link {{ is_active(request.endpoint, 'users') }}"
+                       href=" {{ url_for('users') }}">Users</a>
+                </li>
             </ul>
         </div>
     </div>
