@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+
+
+
+    <div style="margin-left: 40%">
+
+        <p style="color: blueviolet; font-size: 30px; margin-left: 90px;">
+            Sign Up
+        </p>
+
+        <form method="POST">
+            {{ register_form.hidden_tag() }}
+            {{ register_form.username (class="input-group mb-3", placeholder="Username", style="width: 300px; margin-left: 6px; color: violet") }}
+            {{ register_form.email (class="input-group mb-3", placeholder="Email", style="width: 300px; margin-left: 6px; color: violet") }}
+            {{ register_form.password (class="input-group mb-3", placeholder="Password", style="width: 300px; margin-left: 6px; color: violet") }}
+            {{ register_form.confirm_password (class="input-group mb-3", placeholder="Re-enter Password", style="width: 300px; margin-left: 6px; color: violet") }}
+            {{ register_form.submit (style = "margin-left:100px") }}
+
+
+        </form>
+
+
+        <div/>
+        <div style="color: #04AA6D">
+
+        <div style="margin-left: 60px; margin-top: 10px">
+            {% with messages = get_flashed_messages() %}
+                {% for message in messages %}
+                    {{ message }}
+                {% endfor %}
+            {% endwith %}
+        </div>
+
+            <div style="width: 40%; margin-top: 10px">
+                {% for field, error in register_form.errors.items() %}
+                    <div class="alert alert-primary" role="alert">
+                        {{ error }}
+                    </div>
+                {% endfor %}
+            </div>
+            <div/>
+
+
+{% endblock %}

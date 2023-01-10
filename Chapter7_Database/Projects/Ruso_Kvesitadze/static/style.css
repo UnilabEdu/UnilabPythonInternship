@@ -1,0 +1,20 @@
+
+
+
+.rectangle{
+    width: 47%;
+    height: 450px;
+    margin-top: 2%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+
+}
+.rectanglec{
+    width: 100%;
+    height: 300px;
+    margin-top: 5%;
+    display: flex;
+
+}
+

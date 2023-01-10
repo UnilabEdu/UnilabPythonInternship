@@ -1,0 +1,10 @@
+.link{
+    text-align: center;
+}
+.link a{
+    color: rgb(177, 122, 164);
+    transition: 0.3s;
+}
+.link a:hover{
+    font-weight: 700;
+}
