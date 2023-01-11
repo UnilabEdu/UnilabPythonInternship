@@ -1,0 +1,27 @@
+{% from "macro.html" import is_active%}
+<nav class="navbar navbar-dark navbar-expand-lg bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link {{is_active(request.endpoint, 'home')}}" aria-current="page"
+            href="{{url_for('home')}}">Homepage</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {{is_active(request.endpoint, 'forms')}}" href="{{url_for('forms')}}">Forms</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {{is_active(request.endpoint, 'yourinfo')}}" href="{{url_for('yourinfo')}}">Your Info</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {{is_active(request.endpoint, 'books')}}" href="{{url_for('books')}}">Books</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

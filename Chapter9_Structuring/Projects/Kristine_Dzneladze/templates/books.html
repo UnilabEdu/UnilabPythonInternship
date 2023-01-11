@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+<h1 style="text-align: center; margin-bottom:10px; color:rgb(177, 122, 164);">Suggested books</h1>
+<div class="container" style="margin-top:5px; gap:10px; display: flex;  flex-wrap: wrap; justify-content:center;">
+    {% for info in book_info %}
+    <div class="card" style="width: 18rem;">
+        <img src="{{info.img_link}}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{info.bookname}}</h5>
+            <p class="card-text">{{info.author}} / {{info.genre}}</p>
+            <a href="https://www.bookshop.ge/ " target="_blank" class="btn btn-primary">Go to Bookshop</a>
+        </div>
+    </div>
+    {%endfor%}
+
+</div>
+{% endblock %}
