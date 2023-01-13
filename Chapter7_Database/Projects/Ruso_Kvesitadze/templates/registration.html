@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <div style="margin-left: 40%">
+        <div>
+            <p style="color: blueviolet; font-size: 30px; margin-left: 90px;">
+                Sign Up
+            </p>
+            <div class="input-group mb-3" style="width: 300px; margin-left: 6px">
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="floatingInputGroup1" placeholder="Username">
+                    <label for="floatingInputGroup1"><p style="color: violet">Username</p></label>
+                </div>
+            </div>
+
+            <div class="input-group mb-3" style="width: 300px; margin-left: 6px">
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="floatingInputGroup1" placeholder="Email">
+                    <label for="floatingInputGroup1"><p style="color: violet">Email</p></label>
+                </div>
+            </div>
+
+            <div class="input-group mb-3" style="width: 300px; margin-left: 6px">
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="floatingInputGroup1" placeholder="Password">
+                    <label for="floatingInputGroup1"><p style="color: violet">Password</p></label>
+                </div>
+            </div>
+
+            <p style="color: violet; margin-left: 15px">
+                Gender:
+            </p>
+
+            <div class="form-check form-check-inline" style="margin-left: 10px">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                       value="option1">
+                <label class="form-check-label" for="inlineRadio1" style="color: violet">Male</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                       value="option2">
+                <label class="form-check-label" for="inlineRadio2" style="color: violet">Female</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3"
+                       value="option3">
+                <label class="form-check-label" for="inlineRadio3" style="color: violet">Other</label>
+            </div>
+        </div>
+
+        <label style="margin-left: 10px;color: violet; margin-top: 10px">Date of birth:</label>
+        <input type="date" style="color: violet">
+        <br> <br>
+
+
+        <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
+        <label class="btn btn-primary" for="btn-check" style="margin-left: 100px">Submit</label>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+            crossorigin="anonymous"></script>
+
+
+{% endblock %}
