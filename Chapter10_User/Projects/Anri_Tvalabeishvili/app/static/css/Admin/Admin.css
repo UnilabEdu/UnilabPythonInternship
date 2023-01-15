@@ -1,0 +1,495 @@
+
+.admin-inner-box {
+    width: 1300px;
+    margin: auto;
+    margin-top: 40px;
+
+    background: var(--background_color);
+}
+
+.main-content-admin form{
+    display: flex;
+}
+
+
+.main-box-for-product{
+    width: 500px;
+    height: 420px;
+    background-color: var(--back_cover_layer_2_color);
+    border-radius: 10px;
+    margin-left: 100px;
+    
+}
+
+
+
+
+
+.main-box-for-product input{
+    width: 160px;
+    border: 3px var(--back_cover_layer_4_color);
+    background-color: var(--back_cover_layer_4_color);
+    margin-left: 20px;
+
+    border-right: none;
+    padding: 5px;
+    height: 22px;
+    border-radius: 5px;
+    color: var(--text_type_1_color);
+}
+
+.main-box-for-product select{ 
+    border: 3px var(--back_cover_layer_4_color);
+    background-color: var(--back_cover_layer_4_color);
+    margin-left: 20px;
+    border-right: none;
+    padding: 5px;
+    height: 30px;
+    border-radius: 5px;
+    
+
+    font-weight: normal;
+    font-size: 14px;
+    color: var(--text_type_1_color);
+    letter-spacing: 0.7px;
+}
+
+
+.main-box-for-product label{
+    width: 150px;
+    font-weight: bold;
+    font-size: 15px;
+    color: var(--text_type_2_color);
+    letter-spacing: 0.5px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    margin-left: 23px;
+}
+
+
+
+
+
+
+.main-box-for-product .gift_inputs, 
+.main-box-for-product .game_inputs{
+    position: relative;
+    display: grid;
+    margin-top: 10px;
+}
+
+
+.main-box-for-product .categoty, 
+.main-box-for-product .action{
+    position: relative;
+    margin-top: 20px;
+
+    
+}
+
+
+
+
+
+
+
+
+.main-box-for-product .Game-name, 
+.main-box-for-product .Game-name-label ,   
+.main-box-for-product .Gift-name, 
+.main-box-for-product .Gift-name-label{
+    width: 230px;
+}
+
+
+
+.main-box-for-product .Game-price, 
+.main-box-for-product .Game-price-label,
+.main-box-for-product .Gift-price, 
+.main-box-for-product .Gift-price-label{
+    position: relative;
+    width: 80px;
+    left: 290px;
+    bottom: 71px;
+}
+
+.main-box-for-product .Game-condition, 
+.main-box-for-product .Game-condition-label{
+    position: relative;
+    width: 90px;
+    bottom: 50px;
+}
+
+
+.main-box-for-product .Game-Plaform, 
+.main-box-for-product .Game-Plaform-label{
+    position: relative;
+    width: 120px;
+    left: 130px;
+    bottom: 118px;
+}
+
+
+.main-box-for-product .Game-Exclusive, 
+.main-box-for-product .Game-Exclusive-label{
+    position: relative;
+    width: 120px;
+    left: 290px;
+    bottom: 186.5px;
+}
+
+.main-box-for-product .Game-Quantity, 
+.main-box-for-product .Game-Quantity-label{
+    position: relative;
+    width: 80px;
+    bottom: 156.5px;
+}
+
+
+.main-box-for-product .Game-Img-Link, 
+.main-box-for-product .Game-Img-Link-label{
+    position: relative;
+    width: 300px;
+    left: 130px;
+    bottom: 227px;
+}
+
+
+
+
+.main-box-for-product .add-data-button-games{
+    position: relative;
+    left: 340px;
+    top: -190px;
+}
+
+.main-box-for-product .add-data-button-gift{   
+    position: relative;
+    left: 340px;
+    bottom: 51.7px;
+}
+
+
+.main-box-for-product .Gift-Region, 
+.main-box-for-product .Gift-Region-label{
+    position: relative;
+    width: 150px;
+    bottom: 50px;
+}
+
+.main-box-for-product .Gift-Type, 
+.main-box-for-product  .Gift-Type-label{
+    position: relative;
+    width: 90px;
+    left: 180px;
+    bottom: 118px;
+}
+
+.main-box-for-product .Gift-Code, 
+.main-box-for-product .Gift-Code-label{
+    position: relative;
+    width: 300px;
+    left: 0px;
+    bottom: 95px;
+}
+
+
+
+
+
+.main-box-for-product .add-data-button-games, 
+.main-box-for-product .add-data-button-gift{
+    width: 100px;
+    height: 30px;
+	
+
+	border-radius: 8px;
+    border: none;
+	background-color: #373e4785;
+
+	color: var(--text_type_2_color);
+	font-size: 14px;
+	font-weight: bold;
+	letter-spacing: 1px;
+	transition: transform 80ms ease-in;
+}
+
+.main-box-for-product .add-data-button-games:active,
+.main-box-for-product .add-data-button-gift:active{
+	transform: scale(0.95);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.search-bar{
+    position: relative;
+    width: fit-content;
+    left: 250px;
+    bottom: 45px;
+}
+
+.nav-categoty{
+    position: relative;
+    left: 0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.main-box-for-product-update{
+    width: 500px;
+    height: 420px;
+    background-color: var(--back_cover_layer_2_color);
+    border-radius: 10px;
+    margin-left: 100px;
+}
+
+
+
+
+.main-box-for-product-update .nav-categoty input,  .main-box-for-product-update .gift_inputs input, .main-box-for-product-update .game_inputs input{
+    
+    border: 3px var(--back_cover_layer_4_color);
+    background-color: var(--back_cover_layer_4_color);
+    margin-left: 20px;
+
+    border-right: none;
+    padding: 5px;
+    height: 22px;
+    border-radius: 5px;
+    color: var(--text_type_1_color);
+}
+
+.main-box-for-product-update  select{ 
+    border: 3px var(--back_cover_layer_4_color);
+    background-color: var(--back_cover_layer_4_color);
+    margin-left: 20px;
+    border-right: none;
+    padding: 5px;
+    height: 30px;
+    border-radius: 5px;
+    
+
+    font-weight: normal;
+    font-size: 14px;
+    color: var(--text_type_1_color);
+    letter-spacing: 0.7px;
+}
+
+
+.main-box-for-product-update .nav-categoty label , .main-box-for-product-update .gift_inputs label, .main-box-for-product-update .game_inputs label{
+    width: 150px;
+    font-weight: bold;
+    font-size: 15px;
+    color: var(--text_type_2_color);
+    letter-spacing: 0.5px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    margin-left: 23px;
+}
+
+
+
+
+
+
+.main-box-for-product-update .gift_inputs, 
+.main-box-for-product-update .game_inputs{
+    position: relative;
+    display: grid;
+    bottom: 54px;
+ 
+}
+
+
+.main-box-for-product-update .nav-categoty, 
+.main-box-for-product-update .action{
+    position: relative;
+    margin-top: 20px;
+
+    
+}
+
+
+
+
+
+
+
+
+.main-box-for-product-update .Game-name, 
+.main-box-for-product-update .Game-name-label ,   
+.main-box-for-product-update .Gift-name, 
+.main-box-for-product-update .Gift-name-label{
+    width: 230px;
+    bottom: 50px;
+}
+
+
+
+.main-box-for-product-update .Game-price, 
+.main-box-for-product-update .Game-price-label,
+.main-box-for-product-update .Gift-price, 
+.main-box-for-product-update .Gift-price-label{
+    position: relative;
+    width: 80px;
+    left: 290px;
+    bottom: 71px;
+}
+
+.main-box-for-product-update .Game-condition, 
+.main-box-for-product-update .Game-condition-label{
+    position: relative;
+    width: 90px;
+    bottom: 50px;
+}
+
+
+.main-box-for-product-update .Game-Plaform, 
+.main-box-for-product-update .Game-Plaform-label{
+    position: relative;
+    width: 120px;
+    left: 130px;
+    bottom: 118px;
+}
+
+
+.main-box-for-product-update .Game-Exclusive, 
+.main-box-for-product-update .Game-Exclusive-label{
+    position: relative;
+    width: 120px;
+    left: 290px;
+    bottom: 186.5px;
+}
+
+.main-box-for-product-update .Game-Quantity, 
+.main-box-for-product-update .Game-Quantity-label{
+    position: relative;
+    width: 80px;
+    bottom: 156.5px;
+}
+
+
+.main-box-for-product-update .Game-Img-Link, 
+.main-box-for-product-update .Game-Img-Link-label{
+    position: relative;
+    width: 300px;
+    left: 130px;
+    bottom: 227px;
+}
+
+
+
+
+.main-box-for-product-update .update-data-button-games{
+    position: relative;
+    left: 340px;
+    top: -190px;
+}
+
+.main-box-for-product-update .update-data-button-gift{   
+    position: relative;
+    left: 340px;
+    bottom: 51.7px;
+}
+
+
+.main-box-for-product-update .Gift-Region, 
+.main-box-for-product-update .Gift-Region-label{
+    position: relative;
+    width: 150px;
+    bottom: 50px;
+}
+
+.main-box-for-product-update .Gift-Type, 
+.main-box-for-product-update  .Gift-Type-label{
+    position: relative;
+    width: 90px;
+    left: 180px;
+    bottom: 118px;
+}
+
+.main-box-for-product-update .Gift-Code, 
+.main-box-for-product-update .Gift-Code-label{
+    position: relative;
+    width: 300px;
+    left: 0px;
+    bottom: 95px;
+}
+
+
+
+
+
+.main-box-for-product-update .update-data-button-games, 
+.main-box-for-product-update .update-data-button-gift{
+    width: 100px;
+    height: 30px !important;
+	
+
+	border-radius: 8px !important;
+    border: none !important;
+	background-color: #373e4785 !important;
+  
+	color: var(--text_type_2_color) !important;
+	font-size: 14px !important;
+	font-weight: bold !important;
+	letter-spacing: 1px !important;
+	transition: transform 80ms ease-in;
+}
+
+.main-box-for-product-update .update-data-button-games:active,
+.main-box-for-product-update .update-data-button-gift:active{
+	transform: scale(0.95);
+}
+

@@ -1,0 +1,34 @@
+<div class="gift-content">
+    {% for product in products%}
+    <div class="gift-tamplate">
+        <div class="gift-photo">
+
+            <img src="{{product['img'] }}">
+
+            <div class="gift-info">
+                <div class="gift-platform">
+     
+                </div>
+                <div class="gift-condition">
+  
+                </div>
+            </div>
+
+            <div class="gift-name"> {{product.name}}</div>
+
+            <div class="gift-price">
+                <div class="price-text">
+                    <span>{{ product.price}} GEL</span>
+                </div>
+            </div>
+
+
+            {% if current_user.Type == "Admin"  %}
+            <div class="product_ID">ID: {{ product.id}}</div>
+            {% endif  %}
+
+            
+        </div>
+    </div>
+    {% endfor %}
+</div>

@@ -1,0 +1,62 @@
+<form method="POST" id="myForm">
+   {{ filter.hidden_tag() }}
+   <div class="filter-bar">
+      <div class="filter-main-box-gift">
+
+
+
+         <div class="box-for-Platform-gift">
+
+
+            <div class="title-text-for-filter">
+               <span>Platforms:</span>
+            </div>
+
+
+            <ul>
+
+               <li>{{filter.platform_PS_GC}} {{filter.platform_PS_GC.label( class="text-filter")}} </li>
+
+               <li>{{filter.platform_PS_Plus}} {{filter.platform_PS_Plus.label( class="text-filter")}} </li>
+
+               <li>{{filter.platform_X_GC}} {{filter.platform_X_GC.label( class="text-filter")}} </li>
+
+               <li>{{filter.platform_X_UP}} {{filter.platform_X_UP.label( class="text-filter")}} </li>
+
+            </ul>
+
+
+         </div>
+
+
+
+         <div class="box-for-region-gift">
+
+            <div class="title-text-for-filter">
+               <span>Region:</span>
+            </div>
+
+            <ul>
+               <li>{{filter.region_1}} {{filter.region_1.label( class="text-filter")}} </li>
+
+               <li>{{filter.region_2}} {{filter.region_2.label( class="text-filter")}} </li>
+
+               <li>{{filter.region_3}} {{filter.region_3.label( class="text-filter")}} </li>
+
+               <li>{{filter.region_4}} {{filter.region_4.label( class="text-filter")}} </li>
+
+               <li>{{filter.region_5}} {{filter.region_5.label( class="text-filter")}} </li>
+
+               <li>{{filter.region_6}} {{filter.region_6.label( class="text-filter")}} </li>
+
+            </ul>
+         </div>
+
+
+         {{ filter.submit(class="data-sent-button-gift", value= "Search")}}
+
+
+
+      </div>
+   </div>
+</form>

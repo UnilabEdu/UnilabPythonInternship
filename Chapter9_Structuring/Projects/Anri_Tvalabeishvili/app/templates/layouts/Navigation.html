@@ -1,0 +1,46 @@
+{% from "macros/macro.html" import is_active %}
+<div class="navbar-box">
+
+    <div class="navbar-inner">
+        <div class="navbar-links">
+            <nav>
+                <ul>
+                    <li>
+                        <a class="{{ is_active(request.endpoint, 'main.home') }}"  href="{{url_for('main.home')}}">Home</a>
+                    </li>
+                    <li>
+                        <a class="{{ is_active(request.endpoint, 'Game_content.game_store') }}"  href="{{url_for('Game_content.game_store')}}">Game Store</a>
+                    </li>
+                    <li>
+                        <a class="{{ is_active(request.endpoint, 'Gift_content.gift_Cards') }}" href="{{url_for('Gift_content.gift_Cards')}}" >Gift Cards</a>
+                    </li>
+
+
+                    {% if current_user.Type == "Admin"  %}
+                    <li>
+                        <a class="{{ is_active(request.endpoint, 'Admin_content.admin') }}" href="{{url_for('Admin_content.admin')}}" >Admin</a>
+                    </li>
+                    {% endif  %}
+
+
+                    {% if not current_user.is_authenticated %}
+                    <li class="navbar_last_link">
+                        <a class="{{ is_active(request.endpoint, 'reg_auto.registration_authorisation') }}" href="{{url_for('reg_auto.registration_authorisation')}}" >Profile</a> 
+                    </li>
+                    {% endif  %}
+                    
+
+                    {% if current_user.is_authenticated %}
+                    <li class="navbar_last_link">
+                        <a class="{{ is_active(request.endpoint, 'reg_auto.profile') }}" href="{{url_for('reg_auto.profile')}}" >Profile</a> 
+                    </li>
+                    {% endif  %}
+                    
+                        
+                </ul>
+                    
+            </nav>
+        </div>
+    </div>
+
+</div>
