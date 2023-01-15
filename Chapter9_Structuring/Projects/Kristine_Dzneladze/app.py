@@ -1,18 +1,7 @@
-from flask import Flask
-from flask_sqlalchemy import SQLAlchemy
-from os import path
+from src import create_app
 
-base_directory = path.abspath(path.dirname(__file__))
-
-app = Flask(__name__)
-
-app.config["SECRET_KEY"] = "mysectretkey"
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + path.join(base_directory, 'db.sqlite')
-
-db = SQLAlchemy(app)
-
+flask_app = create_app()
 
 if __name__ == "__main__":
-    from routes import *
-    app.run(debug=True)
+
+    flask_app.run(debug=True)

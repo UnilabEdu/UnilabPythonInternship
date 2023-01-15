@@ -1,4 +1,4 @@
-{% extends "base.html"%}
+{% extends "layouts/base.html"%}
 {% block content %}
 <h1 style="text-align: center; color:rgb(8, 180, 192)">Registration Form</h1>
 <div class="container mt-3 bg-white h-75 rounded">
@@ -35,9 +35,6 @@
         {{ register_form.submit }}
 
     </form><br>
-    <div class="link">
-        <a style="text-decoration:none; color:blueviolet " href="{{url_for('yourinfo')}} ">Tap here to see of your info </a><br><br>
-    </div>
 </div>
 
 {% endblock %}

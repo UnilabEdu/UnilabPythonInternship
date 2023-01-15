@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "layouts/base.html" %}
 {% block content %}
 
 <div style="text-transform: uppercase;" class="container mt-5  bg-white h-75 rounded link">
@@ -6,8 +6,8 @@
   <h1 style="color: rgb(177, 122, 164);">
     Send Your Essay Here and win the best prizes
   </h1>
-  <a style= "text-decoration:none; " href="{{url_for('forms')}} ">Tap here to send your Essay</a><br>
-  <a style= "text-decoration:none; " href="{{url_for('books')}} ">Tap here to check suggested books</a>
+  <a style= "text-decoration:none; " href="{{url_for('reg.registration')}} ">Tap here to send your Essay</a><br>
+  <a style= "text-decoration:none; " href="{{url_for('book.books')}} ">Tap here to check suggested books</a>
 </div>
 <div style="text-transform: uppercase;" class="container mt-5  bg-white h-75 rounded link">
 
