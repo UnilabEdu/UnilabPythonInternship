@@ -1,0 +1,48 @@
+{% extends "layouts/base.html" %}
+{% block content %}
+
+<div style="text-transform: uppercase;" class="container mt-5  bg-white h-75 rounded link">
+
+  <h1 style="color: rgb(177, 122, 164);">
+    Send Your Essay Here and win the best prizes
+  </h1>
+  <a style= "text-decoration:none; " href="{{url_for('reg.registration')}} ">Tap here to send your Essay</a><br>
+  <a style= "text-decoration:none; " href="{{url_for('book.books')}} ">Tap here to check suggested books</a>
+</div>
+<div style="text-transform: uppercase;" class="container mt-5  bg-white h-75 rounded link">
+
+  <p style="color: rgb(148, 28, 148);">
+    This Webpage is designed to motivate young writers who just started writing and also for experienced writers who 
+    etc....etc...
+    
+  </p>
+</div>
+
+<div id="carouselExampleControls" class="carousel slide container mt-5  h-75 rounded link" data-bs-ride="carousel" style="width: 40%; height:40%">
+  <div class="carousel-inner" >
+    <div class="carousel-item active">
+      <img src="https://wallpapercave.com/uwp/uwp1543860.jpeg" class="d-block w-100" alt="books and writing">
+    </div>
+    <div class="carousel-item">
+      <img src="https://c0.wallpaperflare.com/preview/181/626/366/feather-filler-poetry-poetic.jpg" class="d-block w-100" alt="writing">
+    </div>
+    <div class="carousel-item">
+      <img src="https://c1.wallpaperflare.com/preview/330/375/636/class-diary-exam-homework.jpg" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<div class="container mt-5  bg-white h-75 rounded">
+
+
+</div>
+
+{% endblock %}
