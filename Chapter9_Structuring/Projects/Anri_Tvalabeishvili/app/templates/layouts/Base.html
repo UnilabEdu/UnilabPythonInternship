@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    {# აქედან შემოგვყავს css და JS #}
+    <link href="{{ url_for('static',filename='css/style.css') }}" rel="stylesheet " type="text/css">     {# css ყველა გვერდისსა და scrool ბარისთვის #}
+    <link href="{{ url_for('static',filename='css/layouts/navigation.css') }}" rel="stylesheet " type="text/css">   {# css ნავიგაციისთთვის #}
+    <link href="{{ url_for('static',filename='css/layouts/home.css') }}" rel="stylesheet " type="text/css">     {# css ყველა გვერდისსა და scrool ბარისთვის #}
+
+
+
+    
+</head>
+
+<body>
+    {% include "layouts/Navigation.html" %}
+
+
+    <div class="content">
+
+        {% block content%}
+
+        {% endblock%}
+
+    </div>
+
+
+
+</body>
+
+
+</html>

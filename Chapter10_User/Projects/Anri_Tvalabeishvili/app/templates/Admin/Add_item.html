@@ -1,0 +1,149 @@
+
+<div style="display: flex;">
+<form method="POST" >
+
+
+    <div class="main-box-for-product">
+        {{nav.categoty(class="categoty",onchange='if(this.value != 0) { this.form.submit(); }')}}
+
+
+
+
+
+        {% if nav.categoty.data == "Gift"%}
+
+        <div class="gift_inputs">
+            {{ add_gift.hidden_tag() }}
+
+            {{add_gift.gift_name.label(class="Gift-name-label")}} {{add_gift.gift_name(class="Gift-name")}}
+
+            {{add_gift.gift_price.label(class="Gift-price-label")}} {{add_gift.gift_price(class="Gift-price")}}
+
+            {{add_gift.gift_region.label(class="Gift-Region-label")}} {{add_gift.gift_region(class="Gift-Region")}}
+
+            {{add_gift.gift_type.label(class="Gift-Type-label")}} {{add_gift.gift_type(class="Gift-Type")}}
+
+            {{add_gift.gift_img.label(class="Gift-Code-label")}} {{add_gift.gift_img(class="Gift-Code")}}
+
+
+            {{add_gift.gift_sumbit(class="add-data-button-gift", value="send")}}
+
+        </div>
+
+        {% elif nav.categoty.data == "Game"%}
+
+        <div class="game_inputs">
+            {{ add_game.hidden_tag() }}
+
+            {{add_game.game_name.label(class="Game-name-label")}} {{add_game.game_name(class="Game-name")}}
+
+            {{add_game.game_price.label(class="Game-price-label")}} {{add_game.game_price(class="Game-price")}}
+
+            {{add_game.game_condition.label(class="Game-condition-label")}}
+            {{add_game.game_condition(class="Game-condition")}}
+
+            {{add_game.game_platform.label(class="Game-Plaform-label")}}
+            {{add_game.game_platform(class="Game-Plaform")}}
+
+            {{add_game.game_exclusive.label(class="Game-Exclusive-label")}}
+            {{add_game.game_exclusive(class="Game-Exclusive")}}
+
+            {{add_game.game_quantity.label(class="Game-Quantity-label")}}
+            {{add_game.game_quantity(class="Game-Quantity")}}
+
+            {{add_game.game_img.label(class="Game-Img-Link-label")}} {{add_game.game_img(class="Game-Img-Link")}}
+
+            {{add_game.game_sumbit(class="add-data-button-games", value="send")}}
+        </div>
+
+
+        {%endif%}
+
+
+    </div>
+
+</form>
+
+
+
+<form method="POST">
+    <div class="main-box-for-product-update">
+        {{ update_content.hidden_tag() }}
+
+        
+        <div class="nav-categoty">
+        {{nav.categoty_update(class="categoty",onchange='if(this.value != 0) { this.form.submit(); }')}}
+        </div>
+
+        
+
+        <div class="search-bar">
+            <div class="box-for-search">
+                <div class="search-inputs">
+                   
+                    {{ update_content.ID_search(class="search-Term", placeholder="ID", value="") }}
+                    
+
+                </div>
+            </div>
+        </div>
+
+        
+
+        {% if nav.categoty_update.data == "Gift"%}
+
+        <div class="gift_inputs">
+            {{ update_gift.hidden_tag() }}
+
+            {{update_gift.gift_name_update.label(class="Gift-name-label")}} {{update_gift.gift_name_update(class="Gift-name")}}
+
+            {{update_gift.gift_price_update.label(class="Gift-price-label")}} {{update_gift.gift_price_update(class="Gift-price")}}
+
+            {{update_gift.gift_region_update.label(class="Gift-Region-label")}} {{update_gift.gift_region_update(class="Gift-Region")}}
+
+            {{update_gift.gift_type_update.label(class="Gift-Type-label")}} {{update_gift.gift_type_update(class="Gift-Type")}}
+
+            {{update_gift.gift_img_update.label(class="Gift-Code-label")}} {{update_gift.gift_img_update(class="Gift-Code")}}
+
+
+            {{update_gift.gift_sumbit_update(class="update-data-button-gift", value="Update")}}
+
+        </div>
+
+        {% elif nav.categoty_update.data == "Game"%}
+
+        <div class="game_inputs">
+            {{ update_game.hidden_tag() }}
+
+            {{update_game.game_name_update.label(class="Game-name-label")}} {{update_game.game_name_update(class="Game-name")}}
+
+            {{update_game.game_price_update.label(class="Game-price-label")}} {{update_game.game_price_update(class="Game-price")}}
+
+            {{update_game.game_condition_update.label(class="Game-condition-label")}}
+            {{update_game.game_condition_update(class="Game-condition")}}
+
+            {{update_game.game_platform_update.label(class="Game-Plaform-label")}}
+            {{update_game.game_platform_update(class="Game-Plaform") }}
+
+            {{update_game.game_exclusive_update.label(class="Game-Exclusive-label")}}
+            {{update_game.game_exclusive_update(class="Game-Exclusive")}}
+
+            {{update_game.game_quantity_update.label(class="Game-Quantity-label")}}
+            {{update_game.game_quantity_update(class="Game-Quantity")}}
+
+            {{update_game.game_img_update.label(class="Game-Img-Link-label")}} {{update_game.game_img_update(class="Game-Img-Link")}}
+
+            {{update_game.game_sumbit_update(class="update-data-button-games", value="Update")}}
+        </div>
+
+
+        {%endif%}
+
+
+
+    </div>
+
+</form>
+
+
+</div>

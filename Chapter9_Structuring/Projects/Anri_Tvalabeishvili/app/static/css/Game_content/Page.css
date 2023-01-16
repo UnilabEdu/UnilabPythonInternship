@@ -1,0 +1,11 @@
+
+.games-inner-box {
+    width: 1300px;
+    margin: auto;
+    margin-top: 40px;
+    
+}
+
+.main-content-games {
+    display: flex;
+}

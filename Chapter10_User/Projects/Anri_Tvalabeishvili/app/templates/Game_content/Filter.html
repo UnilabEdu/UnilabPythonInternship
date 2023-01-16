@@ -1,0 +1,73 @@
+<form method="POST" id="myForm">
+   {{ filter.hidden_tag() }}
+   <div class="filter-bar">
+      <div class="filter-main-box">
+         
+
+         <div class="box-for-search">
+            <div class="search-inputs">
+
+               {{ filter.search(class="search-Term", placeholder="Search", value="") }}
+               {{ filter.submit(class="search-Button", value= "🔎︎")}}
+
+            </div>
+         </div>
+
+
+         <div class="box-for-Platform">
+
+
+            <div class="title-text-for-filter">
+               <span>Platforms:</span>
+            </div>
+
+
+            <ul>
+
+               <li>{{filter.platform_PS5}} {{filter.platform_PS5.label( class="text-filter")}} </li>
+
+               <li>{{filter.platform_PS4}} {{filter.platform_PS4.label( class="text-filter")}} </li>
+
+               <li>{{filter.platform_XSX}} {{filter.platform_XSX.label( class="text-filter")}} </li>
+
+               <li>{{filter.platform_X1X}} {{filter.platform_X1X.label( class="text-filter")}} </li>
+
+               <li>{{filter.platform_X1S}} {{filter.platform_X1S.label( class="text-filter")}} </li>
+
+            </ul>
+
+
+         </div>
+
+
+         <div class="box-for-price-range">
+
+            <div class="title-text-for-filter">
+               <span>Price Range:</span>
+            </div>
+
+            <div class="radio-for-price">
+               {{filter.price}}
+            </div>
+
+         </div>
+
+
+         <div class="box-for-Exclusives">
+
+            <div class="title-text-for-filter">
+               <span>Exclusives:</span>
+            </div>
+
+            <div class="radio-for-price">
+               {{filter.Exclusive}}
+            </div>
+         </div>
+
+
+         {{ filter.submit(class="data-sent-button", value= "Search")}}
+
+
+      </div>
+   </div>
+</form>

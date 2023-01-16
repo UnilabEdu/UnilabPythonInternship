@@ -1,0 +1,64 @@
+@media screen and (max-width: 1920px) {
+  html {
+    zoom: 125%;
+  }
+}
+
+
+@media screen and (max-width: 1680px) {
+  html {
+    zoom: 180.252%;
+  }
+}
+
+
+@media screen and (max-width: 1600px) {
+  html {
+    zoom: 100%;
+  }
+}
+
+
+@media screen and (max-width: 1440px) {
+  html {
+    zoom: 95%;
+  }
+}
+
+
+@media screen and (max-width: 1400px) {
+  html {
+    zoom: 90%;
+  }
+}
+
+
+@media screen and (max-width: 1366px) {
+  html {
+    zoom: 88.8%;
+  }
+}
+
+
+
+
+body,
+html {
+  height: 100%;
+  cursor: auto;
+  background-color: var(--background_color);
+  font-family: var(--font_style_1);
+}
+
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar_color);
+  border-radius: 10px;
+}

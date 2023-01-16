@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+:root {
+
+    /*--background: #161a1e; */ 
+    --background_color: #161a1e;
+
+    /*--scrollbar: #9A9A9A; */ 
+    --scrollbar_color: #9A9A9A;
+
+
+
+    /*--text: #fbfbfb; */ 
+    --text_type_1_color: #FFFFFF;
+
+    /*--lite-text-color: #9A9A9A; */ 
+    --text_type_2_color: #9A9A9A;
+
+
+
+    /*--game_hover: rgba(35, 39, 45, 0.85); */ 
+    --back_cover_layer_1_color: #23272dd8;
+
+    /*--back_cover: #23272D; */ 
+    --back_cover_layer_2_color: #23272D;
+
+    /*--back_back_cover: #282c32; */ 
+    --back_cover_layer_3_color: #282c32;
+
+    
+    --back_cover_layer_4_color: #373e4785;
+
+
+
+    /*--hover_color: #e58e27; */ 
+    --navbar_hover_color: #e58e27;
+
+    /*--button_color: #FF4B2B; */ 
+    --button_color: #FF4B2B;
+
+
+
+  
+}
+
+
+:root{
+    --font_style_1: 'Inter', sans-serif ;
+    
+    
+}
