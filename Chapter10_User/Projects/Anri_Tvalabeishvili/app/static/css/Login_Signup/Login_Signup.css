@@ -1,0 +1,308 @@
+
+.second-sttle-test {
+	width: 1300px;
+	margin: auto;
+	display: flex;
+}
+
+
+.main-content-registation-autorisation {
+	margin: auto;
+	margin-top: 60px;
+}
+
+
+
+
+.main-content-registation-autorisation h1 {
+	margin: 0;
+	font-weight: bold;
+	color: var(--text_type_1_color);
+}
+
+
+
+.main-content-registation-autorisation p {
+	margin: 20px 0 30px;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 20px;
+	letter-spacing: 0.3px;
+}
+
+
+
+.main-content-registation-autorisation a {
+	margin: 15px 0;
+	color: var(--text_type_1_color);
+	text-decoration: none;
+	font-size: 14px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.main-content-registation-autorisation .login-text {
+	margin-bottom: 20px;
+}
+
+.main-content-registation-autorisation .signup-text {
+	margin-top: 0px;
+	margin-bottom: 10px;
+}
+
+.main-content-registation-autorisation .Sign-Up-button {
+	margin-top: 8px;
+}
+
+
+
+
+
+
+.main-content-registation-autorisation button,
+.main-content-registation-autorisation .Sign-Up-button,
+.main-content-registation-autorisation .Sign-In-button {
+	width: 149px;
+	padding: 12px 45px;
+
+	border-radius: 20px;
+	border: 1px solid var(--button_color);
+	background-color: var(--button_color);
+
+	color: var(--text_type_1_color);
+	font-size: 12px;
+	font-weight: bold;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+
+}
+
+
+
+.main-content-registation-autorisation .Sign-Up-button:active,
+.main-content-registation-autorisation .Sign-In-button:active,
+.main-content-registation-autorisation button:active {
+	transform: scale(0.95);
+}
+
+
+.main-content-registation-autorisation button:focus {
+	outline: none;
+}
+
+.main-content-registation-autorisation button.ghost {
+	background-color: transparent;
+	border-color: var(--text_type_1_color);
+}
+
+
+
+
+
+
+
+
+
+
+.main-content-registation-autorisation form {
+	height: 100%;
+	padding: 0 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	text-align: center;
+	background-color: var(--back_cover_layer_2_color);
+}
+
+
+.main-content-registation-autorisation input {
+	width: 100%;
+	margin: 8px 0;
+	padding: 12px 15px;
+	border-radius: 5px;
+	border: none;
+	background-color: var(--text_type_1_color);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.main-content-registation-autorisation .container {
+	width: 768px;
+	max-width: 100%;
+	min-height: 480px;
+	position: relative;
+	overflow: hidden;
+	border-radius: 15px;
+}
+
+
+
+.main-content-registation-autorisation .form-container {
+	position: absolute;
+	top: 0;
+	height: 100%;
+	transition: all 0.6s ease-in-out;
+}
+
+
+.main-content-registation-autorisation .sign-in-container {
+	left: 0;
+	width: 50%;
+	z-index: 2;
+}
+
+
+
+
+
+
+
+
+
+
+.main-content-registation-autorisation .container.right-panel-active .sign-in-container {
+	visibility: hidden;
+	transform: translateX(100%);
+	z-index: -2;
+}
+
+
+.main-content-registation-autorisation .sign-up-container {
+	left: 0;
+	width: 50%;
+	opacity: 0;
+	z-index: -1;
+}
+
+
+.main-content-registation-autorisation .container.right-panel-active .sign-up-container {
+	transform: translateX(100%);
+	opacity: 1;
+	z-index: 1;
+	animation: show 0.6s;
+}
+
+
+
+
+
+
+
+
+
+
+@keyframes show {
+
+	0%,
+	49.99% {
+		opacity: 0;
+		z-index: 1;
+	}
+
+	50%,
+	100% {
+		opacity: 1;
+		z-index: 5;
+	}
+}
+
+
+
+.main-content-registation-autorisation .overlay-container {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 50%;
+	height: 100%;
+	overflow: hidden;
+	transition: transform 0.6s ease-in-out;
+	z-index: 100;
+}
+
+
+
+.main-content-registation-autorisation .overlay {
+	background: #d63d60;
+	background: -webkit-linear-gradient(to left, var(--navbar_hover_color), #d63d60);
+	background: linear-gradient(to left, var(--navbar_hover_color), #d63d60);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 0 0;
+	color: var(--text_type_1_color);
+	position: relative;
+	left: -100%;
+	height: 100%;
+	width: 200%;
+	transform: translateX(0);
+	transition: transform 0.6s ease-in-out;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.main-content-registation-autorisation .overlay-panel {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0 0px;
+	text-align: center;
+	top: 0;
+	height: 100%;
+	width: 50%;
+	transform: translateX(0);
+	transition: transform 0.6s ease-in-out;
+}
+
+.main-content-registation-autorisation .container.right-panel-active .overlay-container {
+	transform: translateX(-100%);
+}
+
+.main-content-registation-autorisation .container.right-panel-active .overlay {
+	transform: translateX(50%);
+}
+
+.main-content-registation-autorisation .overlay-left {
+	transform: translateX(-20%);
+}
+
+.main-content-registation-autorisation .container.right-panel-active .overlay-left {
+	transform: translateX(0%);
+}
+
+.main-content-registation-autorisation .overlay-right {
+	right: 0;
+	transform: translateX(0);
+}
+
+.main-content-registation-autorisation .container.right-panel-active .overlay-right {
+	transform: translateX(20%);
+}

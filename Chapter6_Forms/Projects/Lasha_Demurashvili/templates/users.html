@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container">
+    <div class="card" style="width: 18rem;">
+        {% for user in users_list %}
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">User: {{ user["username"] }}</li>
+        </ul>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}

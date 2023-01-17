@@ -1,0 +1,79 @@
+{% extends "layouts/Base.html" %}
+
+
+{% block content%}
+
+<link href="{{ url_for('static',filename='css/Login_Signup/Login_Signup.css') }}" rel="stylesheet " type="text/css">
+
+<div class="main-registation-conteiner">
+
+    <div class="second-sttle-test">
+        <div class="main-content-registation-autorisation">
+            <div class="container" id="container">
+
+                <div class="form-container sign-up-container">
+                    <form method = "POST" >
+                        {{ Signup_form.hidden_tag() }}
+                        <h1 class="signup-text">Create Account</h1>
+
+				        {{ Signup_form.name_and_surname(placeholder="Name",  value="")}}
+                        {{ Signup_form.mobile_number(placeholder="Number",  value="")}}
+                        {{ Signup_form.address(placeholder="Address",  value="")}}
+                        {{ Signup_form.email(placeholder="Email" , value="")}}
+                        {{ Signup_form.password(placeholder="Password",  value="")}}
+                        {{ Signup_form.confirm_password(placeholder="Confirm Password",  value="")}}
+                        {{ Signup_form.submit(class="Sign-Up-button", value= "Sign Up")}}
+
+
+                    </form>
+                </div>
+
+
+
+
+                <div class="form-container sign-in-container">
+                    <form method = "POST">
+                        {{ Login_form.hidden_tag() }}
+                        <h1 class="login-text">Sign in</h1>
+
+				        {{ Login_form.email(placeholder="Email",  value="")}}
+				        {{ Login_form.password(placeholder="Password",  value="")}}
+
+                        <a href="#">Forgot your password?</a>
+                        {{ Login_form.submit(class="Sign-In-button",value= "Sign In")}}
+
+                    </form>
+                </div>
+
+
+
+
+                <div class="overlay-container">
+                    <div class="overlay">
+                        <div class="overlay-panel overlay-left">
+                            <h1>Welcome Back!</h1>
+                            <p>To keep connected with us please login with your personal info</p>
+                            <button class="ghost" id="signIn">Sign In</button>
+                        </div>
+                        <div class="overlay-panel overlay-right">
+                            <h1>Hello, Friend!</h1>
+                            <p>Enter your personal details and start journey with us</p>
+                            <button class="ghost" id="signUp">Sign Up</button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+<script type="module" src="/static/js/Login_Signup.js"></script>
+
+{% endblock%}

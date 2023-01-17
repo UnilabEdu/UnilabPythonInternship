@@ -1,0 +1,35 @@
+<div class="games-content">
+    {% for product in products%}
+    <div class="game-tamplate">
+        <div class="game-photo">
+
+            <img src="{{product['img'] }}">
+
+            <div class="game-info">
+                <div class="game-platform">
+                    <div class="text-for-info">
+                        <span>{{product.platform}}</span>
+                    </div>
+                </div>
+                <div class="game-condition">
+                    <div class="text-for-info">
+                        <span>{{product.condition}}</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="game-name"> {{product.name}}</div>
+
+            <div class="game-price">
+                <div class="price-text">
+                    <span>{{ product.price}} GEL</span>
+                </div>
+            </div>
+
+            {% if current_user.Type == "Admin"  %}
+            <div class="product_ID">ID: {{ product.id}}</div>
+            {% endif  %}
+        </div>
+    </div>
+    {% endfor %}
+</div>
