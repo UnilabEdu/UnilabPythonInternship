@@ -3,7 +3,7 @@ from melomane.config import Config
 from melomane.views.main.routes import main_blueprint
 from melomane.views.registration.routes import registration_blueprint
 from melomane.commands import init_db
-from melomane.extensions import db
+from melomane.extensions import db, migrate
 
 
 
@@ -25,6 +25,7 @@ def register_blueprints(app):
 
 def register_extensions(app):
     db.init_app(app)
+    migrate.init_app(app, db)
 
 
 def register_commands(app):

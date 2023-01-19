@@ -4,5 +4,6 @@ class User(db.Model):
     username = db.Column(db.String)
     email = db.Column(db.String)
     password = db.Column(db.String)
+    something = db.Column(db.String)
 
 
