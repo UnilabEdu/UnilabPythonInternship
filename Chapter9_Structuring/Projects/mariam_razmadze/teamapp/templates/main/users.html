@@ -1,0 +1,54 @@
+{% extends 'layouts/base.html' %} {% block head %}
+<title>TEAM-APP | USER STATUS</title>
+{% endblock%}
+
+{% block body %}
+<h1 class='user'>User Status</h1>
+<p class='user'>Click to assign or change the status</p>
+<div class="user">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col" class='pt-5'>Name</th>
+          <th scope="col">Status</th>
+        </tr>
+      </thead>
+    {%for user in users%}
+      <tbody>
+        <tr> 
+          <th scope="row" class="{%if user.senior==1%} senior
+          {%elif user.junior==1%} junior
+          {%elif user.intern==1%} intern {%endif%}">{{user.name}}</th>
+          <td>
+            <form method="POST" action="{{url_for('main.assign')}}"> 
+              <fieldset id="{}".format({{user.name}})>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name={{user.id}} 
+                id="senior" value="0">
+                <label class="form-check-label" for="senior">Senior</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name={{user.id}}  id="junior" value="1">
+                <label class="form-check-label" for="junior">Junior</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name={{user.id}}  id="intern" value="2">
+                <label class="form-check-label" for="intern">Intern</label></a>
+              </div>
+          </fieldset>
+        </td>
+      </tr>
+  </tbody>
+      {%endfor%}
+  </table>
+</div>
+<h6 class='user'>Are you sure you want to save changes?</h6> 
+<div class='user b'>
+    <button type='submit' class='ub'>Save Changes</button>
+</div>
+</div>
+ 
+</form>
+   
+
+{% endblock%}
