@@ -1,0 +1,40 @@
+{% extends "layouts/base.html"%}
+{% block content %}
+<h1 style="text-align: center; color:rgb(8, 180, 192)">Registration Form</h1>
+<div class="container mt-3 bg-white h-75 rounded">
+
+    {% for field,error in register_form.errors.items() %}
+    <div class="alert alert-danger" role="alert">
+        {{ error }}
+    </div>
+    {% endfor %}
+
+    {% with messages = get_flashed_messages() %}
+    {% for message in messages %}
+    <div class="alert alert-info" role="alert">
+        {{ message }}
+    </div>
+    {%endfor%}
+    {% endwith %}
+
+    <form method="post" style="color: rgb(255, 0, 234);" enctype="multipart/form-data">
+        {{ register_form.hidden_tag() }}
+        {{ register_form.firstname (class="form-control", placeholder = register_form.firstname.label.text)}} <br>
+        {{ register_form.lastname (class="form-control", placeholder = register_form.lastname.label.text)}}<br>
+        {{ register_form.email (class="form-control", placeholder = register_form.email.label.text)}}<br>
+        {{ register_form.writer_experience (style="list-style: none; margin-left:-22px", placeholder =
+        register_form.writer_experience.label.text) }}<br>
+        <p>Which Type of essay are you working on:</p>
+        {{ register_form.writer_field (class="btn-group btn btn-warning dropdown-toggle" , placeholder =
+        register_form.writer_field.label.text) }}<br><br>
+        {{ register_form.essay_description (class="form-control", placeholder =
+        register_form.essay_description.label.text)}}<br>
+        <p>Please upload your essay here:</p>
+        {{register_form.essay_file(accept=".txt,.pdf")}} <br><br>
+
+        {{ register_form.submit }}
+
+    </form><br>
+</div>
+
+{% endblock %}

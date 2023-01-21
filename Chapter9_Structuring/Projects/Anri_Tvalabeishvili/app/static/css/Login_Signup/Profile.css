@@ -1,0 +1,98 @@
+
+
+
+.profile-inner-box {
+	width: 1300px;
+	display: flex;
+	margin: auto;
+}
+
+
+.main-content {
+	width: 414px;
+	height: 480px;
+	margin: auto;
+	margin-top: 60px;
+
+	border-radius: 15px;
+
+	background-color: var(--back_cover_layer_2_color);
+
+}
+
+.main-content .user-change-data {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	margin-left: 50px;
+	margin-top: 40px;
+	
+}
+
+
+/* input ელემენტების კონტოლი */
+.main-content input {
+	width: 284px;
+	margin: 10px 0;
+	padding: 12px 15px;
+
+	border-radius: 5px;
+	border: none;
+
+	background-color: var(--back_cover_layer_3_color);
+	color: var(--text);
+
+}
+
+
+/* ღილაკების ვიზუალი */
+.main-content .user-change-data .Save-button {
+	width: 143.68px;
+	padding: 12px 45px;
+	margin-left: 400px;
+
+	border-radius: 20px;
+	border: 1px solid var(--button_color);
+	background-color: var(--button_color);
+	color: #FFFFFF;
+
+	font-family: 'Inter', sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+
+}
+
+
+/* ღილაკებზე  active სტატუსის დროს ანიმაცია*/
+.main-content .user-change-data .Save-button:active {
+	transform: scale(0.95);
+}
+
+
+
+.main-content .user-change-data .Save-button {
+	position: absolute;
+	margin-top: 430px;
+	margin-left: 86.1625px;
+}
+
+
+.main-content .user-change-data .user-ID {
+	position: absolute;
+	padding: 6px 12px;
+	margin-bottom: 405px;
+	margin-left: 230.62px;
+
+	border-radius: 5px;
+
+	background-color: var(--back_cover_layer_3_color);
+	color: var(--text_type_2_color);
+
+	font-family: 'Inter', sans-serif;
+	font-weight: 600;
+	font-size: 13px;
+	text-align: center;
+}

@@ -1,0 +1,39 @@
+{% extends "layouts/Base.html" %}
+
+
+
+{% block content%}
+<link href="{{ url_for('static',filename='css/Login_Signup/Profile.css') }}" rel="stylesheet " type="text/css">
+<div class="profile-box">
+    <div class="profile-inner-box">
+        <div class="main-content">
+        
+
+
+        <form class="user-change-data" method = "POST">
+            <p class="user-ID">ID: 55874</p>
+            {{ form.hidden_tag() }}
+            <input id="user-Name" type="text" placeholder={{current_user.name}} />
+            
+            <input type="email" placeholder={{current_user.mail}} />
+            
+            <input type="tel" placeholder="{{current_user.number}}">
+            
+            <input type="text" placeholder="{{current_user.adress}}">
+            
+            <input type="password" placeholder="New Password" />
+
+            <input type="password" placeholder="Password" />
+  
+            {{ form.submit(class="Save-button", value="log out")}}
+       
+        </form>
+
+
+
+        </div>
+    </div>
+</div>
+
+
+{% endblock%}
