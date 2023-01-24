@@ -1,0 +1,21 @@
+{% extends "layouts/base.html" %}
+{% block content %}
+
+<div class="container d-flex justify-content-sm-between p-4">
+    {% for product in products %}
+    <div class="card products__class--item" style="width: 18rem;">
+        <img src="/static/img/products_img/{{ product.name }}.jpg" class="card-img-top" alt="...">
+        <div class="card-body border card-footer">
+            <h5 class="card-title">{{ product.name.title() }}</h5>
+            <h5 class="card-title">{{ product.price }} - GEL </h5>
+
+            <br>
+            <h5 class="card-title"> Max order in kg: {{ product.quantity }}</h5>
+            <a href="#" class="btn btn-primary">Order</a>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}
+
