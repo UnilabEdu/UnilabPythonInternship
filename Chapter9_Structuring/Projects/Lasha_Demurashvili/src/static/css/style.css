@@ -1,0 +1,12 @@
+body {
+    background-color: #bfe7f3;
+}
+
+.products__class--item {
+    transition: .2s;
+}
+.products__class--item:hover {
+    box-shadow: 1px 5px 42px -7px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 1px 5px 42px -7px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 1px 5px 42px -7px rgba(0, 0, 0, 0.1);
+}
