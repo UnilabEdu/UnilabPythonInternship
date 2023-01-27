@@ -1,0 +1,28 @@
+{% extends 'layouts/base.html' %} {% block head %}
+<title>TEAM-APP | QUESTION</title>
+{% endblock%} {% block body %}
+<div class="unanswered not">
+  <div class='scr'>
+  <div class="q-container"> 
+    <div class="q active">
+        <h4 class="q-title">{{question.question}}</h4>
+        <p class="q-text {%if question.asker.roles[0]|string=='senior'%} senior
+        {%elif question.asker.roles[0]|string=='junior'%} junior
+        {%elif question.asker.roles[0]|string=='intern'%} intern {%endif%}"> Asked by: {{question.asker.name}}</p>
+        <p class="q-text"> {{question.answer}}</p>
+        <p class="q-text {%if question.mentor.roles[0]|string=='senior'%} senior
+        {%elif question.mentor.roles[0]|string=='junior'%} junior
+        {%elif question.mentor.roles[0]|string=='intern'%} intern{%endif%}"> Answered by: {{question.mentor.name}}</p>
+      <button  class="q-toggle">
+        <i class="fas fa-chevron-down"></i>
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    </div>
+  </div>
+</div>
+</div>
+
+{% endblock%}
+
+
