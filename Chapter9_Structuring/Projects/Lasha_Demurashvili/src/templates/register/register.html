@@ -1,0 +1,28 @@
+{% extends "layouts/base.html" %}
+{% block content %}
+
+
+<div class="container">
+    <form method="POST" class="w-50">
+        {{ register_form.hidden_tag()}}
+
+        {{ register_form.username.label }}
+        {{ register_form.username(class="form-control", placeholder="Username") }}
+
+        {{ register_form.email.label }}
+        {{ register_form.email(class="form-control", placeholder="email") }}
+
+        {{ register_form.password.label }}
+        {{ register_form.password(class="form-control", placeholder="Password") }}
+
+
+        {{ register_form.submit }}
+
+    </form>
+</div>
+
+
+{% endblock %}
+
+
+

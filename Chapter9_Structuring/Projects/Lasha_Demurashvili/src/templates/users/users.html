@@ -1,0 +1,11 @@
+{% extends "layouts/base.html" %}
+{% block content %}
+
+<div style="color: #1a1e21">
+    {% for user in users %}
+    {{ user.username, user.email, user.password}}
+    <br>
+    {% endfor %}
+</div>
+
+{% endblock %}
