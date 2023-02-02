@@ -1,0 +1,27 @@
+{% extends 'layouts/base.html' %} {% block head %}
+<title>TEAM-APP | UNANSWERED</title>
+{% endblock%} {% block body %}
+<div class="unanswered">
+  <h1>Questions For You</h1>
+  <div class='scr'>
+  <div class="q-container"> 
+    {%for question in unanswered_questions%}
+    <div class="q {%if question.id==act%} active{%endif%}">
+      <a href="{{url_for('main.answer', question_id=question.id)}}">
+        <h4 class="q-title">{{question.question}}</h4>
+        <p class="q-text {%if question.asker.senior==1%} senior
+        {%elif question.asker.junior==1%} junior
+        {%elif question.asker.intern==1%} intern {%endif%}"> Asked by: {{question.asker.name}}</p>
+      </a>
+      <button  class="q-toggle">
+        <i class="fas fa-chevron-down"></i>
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+      {%endfor%}
+    </div>
+  </div>
+</div>
+</div>
+
+{% endblock%}
