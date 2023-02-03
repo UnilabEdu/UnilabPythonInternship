@@ -1,5 +1,8 @@
 from flask_restful import Resource, reqparse
+from flask_jwt import jwt_required
+
 from src.models.product import Product
+
 
 class ProductApi(Resource):
 
@@ -9,8 +12,9 @@ class ProductApi(Resource):
                         help="Price is a required parameter and it must be an integer")
     parser.add_argument("name", type=str)
     parser.add_argument("category_id", type=int)
-    def get(self, id):
 
+    @jwt_required()
+    def get(self):
         get_parser = reqparse.RequestParser()
         get_parser.add_argument("category_id", help="Category id is required", location="args")
         parser = get_parser.parse_args()
