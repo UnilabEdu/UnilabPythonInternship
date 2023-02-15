@@ -17,3 +17,14 @@ class SignupForm(FlaskForm):
     password = PasswordField('Password',[DataRequired()])
     confirm_password = PasswordField('Repeat password', [DataRequired(), EqualTo('password')])
     submit = SubmitField('Register')
+
+
+class PasswordRecoveryForm(FlaskForm):
+    email = EmailField('Email', [DataRequired(), Email()])
+    submit = SubmitField('Reset')
+
+
+class ResetPasswordForm(FlaskForm):
+    password = PasswordField('Password',[DataRequired()])
+    confirm_password = PasswordField('Repeat password', [DataRequired(), EqualTo('password')])
+    submit = SubmitField('Reset')

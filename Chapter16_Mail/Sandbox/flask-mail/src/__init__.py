@@ -2,7 +2,7 @@ from flask import Flask
 from src.config import Config
 from src.views.main.routes import main_blueprint
 from src.views.auth.routes import auth_blueprint
-from src.extensions import db, login_manager
+from src.extensions import db, login_manager, mail
 from src.commands import init_db, populate_db
 from src.models.user import User
 
@@ -28,6 +28,7 @@ def register_blueprints(app):
 
 def register_extensions(app):
     db.init_app(app)
+    mail.init_app(app)
     login_manager.init_app(app)
     login_manager.login_view = 'auth.login'
 

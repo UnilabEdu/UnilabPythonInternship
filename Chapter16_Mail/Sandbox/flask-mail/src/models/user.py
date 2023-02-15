@@ -13,6 +13,9 @@ class User(BaseModel, UserMixin):
     email = db.Column(db.String, unique=True, nullable=False)
     _password = db.Column("password", db.String(32))
 
+    confirmed = db.Column(db.Boolean, default=False)
+    reset_password = db.Column(db.Boolean, default=False)
+
     def _get_password(self):
         return self._password
 
