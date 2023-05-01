@@ -8,4 +8,4 @@
 რუსო კვესიტაძე
 მარიამ რაზმაძე
 
-satesto cvlileba
+kide ragac cvlileba
