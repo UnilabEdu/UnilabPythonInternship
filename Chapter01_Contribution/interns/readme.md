@@ -8,4 +8,6 @@
 რუსო კვესიტაძე
 მარიამ რაზმაძე
 
+test1
+test2
 kide ragac cvlileba
