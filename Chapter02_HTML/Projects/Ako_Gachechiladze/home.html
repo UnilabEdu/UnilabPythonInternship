@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Registration</title>
+</head>
+<body>
+    <div>
+        <h1>Registrations Form</h1>
+        <hr>
+        <form>
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label for="username">Name</label>
+                <input type="text" placeholder="Enter Your Name" name="username" id="username"><br>
+                <label for="email">Email</label>
+                <input type="text" placeholder="Enter Your Email" name="email" id="email"><br>
+                <label for="password">Password</label>
+                <input type="password" placeholder="Enter Password" name="password" id="password"><br>
+                <label for="phone_number">Phone Number</label>
+                <input type="number" placeholder="+995 " name="phone_number" id="phone_number"><br>
+
+                <input type="radio" name="gender" value="male" > Male
+                <input type="radio" name="gender" value="female" > Female <br><br>
+
+                <label for="birthdate">Birthdate</label>
+                <input type="date" name="birthdate" id="birthdate">
+
+                <p>About Yourself</p>
+                <textarea name="abouty" id="abouty" cols="30" rows="5"></textarea>
+
+                <br><br>
+                <input type="submit" value="Submit">
+            </fieldset>
+        </form>
+        <form>
+            <br>
+            <fieldset>
+                <legend>Residential information</legend>
+                <p>Select Country</p>
+                <select name="" id="">
+                    <option value="">Georgia</option>
+                    <option value="">Germany</option>
+                    <option value="">America</option>
+                </select>
+                <br>
+                <label for="city">City</label>
+                <input type="text" name="city" id="city" placeholder="Enter city"><br>
+                <label for="street">Street</label>
+                <input type="text" name="street" placeholder="Enter street" id="street">
+
+                <p>About Neighborhood</p>
+                <textarea name="aboutn" id="aboutn" cols="30" rows="5"></textarea>
+
+                <br><br>
+                <input type="submit" value="Submit">
+            </fieldset>
+        </form>
+        <form>
+            <fieldset>
+                <legend>Skills</legend>
+
+                <p>Proggraming Languages:</p>
+                <input type="checkbox" name="python" id="python">Python
+                <input type="checkbox" name="Java" id="Java">Java
+                <input type="checkbox" name="Csharp" id="csharp">C#
+
+                <p>Income:</p>
+                100<input type="range" name="income" id="income"> 30000
+
+                <p>About Your Skills</p>
+                <textarea name="abouts" id="abouts" cols="30" rows="5"></textarea>
+                <br><br>
+                <input type="submit" value="Submit">
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>
