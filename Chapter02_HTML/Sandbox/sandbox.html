@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title> Chapter1 - HTML </title>
+    <style>
+        .red-text {
+            color: red;
+        }
+
+        .size {
+            padding: 16px
+        }
+    </style>
+</head>
+
+<body>
+<h1> Flask Internship - HTML </h1>
+<a href="http://www.google.com"> Click Me </a>
+
+<ol>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+</ol>
+
+<ul>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+</ul>
+
+<table style="">
+    <tr>
+        <th> სახელი</th>
+        <th> გვარი</th>
+    </tr>
+    <tr>
+        <td> გიორგი</td>
+        <td> კვარაცხელია</td>
+    </tr>
+    <tr>
+        <td> ლაშა</td>
+        <td> ჩიპარიშვილი</td>
+    </tr>
+</table>
+
+<section>
+    <img src="img/Gary_Says_Hi.jpg"
+         width="512"
+         height="128"
+         alt="Picture of Gary saying Hi"/>
+</section>
+
+<form>
+    <fieldset>
+        <legend>მომხმარებლის მონაცემები</legend>
+        <label for="username">Username:</label><br>
+        <input type="text" placeholder="შეიყვანეთ იუზერნეიმი" name="username" id="username"><br>
+        <label for="password">Password:</label><br>
+        <input type="password" placeholder="შეიყვანეთ პაროლი" name="password" id="password"><br>
+    </fieldset>
+
+    <fieldset>
+        <legend>პირადი მონაცემები</legend>
+        <input type="radio" name="gender" value="male"> მამრობითი
+        <input type="radio" name="gender" value="female"> მდედრობითი
+
+        <br><label for="birthday">დაბადების თარიღი:</label><br>
+        <input type="date" name="birthday">
+        <br>
+        <p>რომელი პროგრამული ენეიბი იცით</p>
+        <input type="checkbox" name="programminglang" value="C++"> C++
+        <input type="checkbox" name="programminglang" value="C#"> C#
+        <input type="checkbox" name="programminglang" value="Python"> Python
+
+        <br>
+        <p> აირჩიეთ ქვეყანა </p>
+        <select name="country">
+            <option></option>
+            <option value="georgia"> საქართველო</option>
+            <option value="germany"> გერმანია</option>
+            <option> ამერიკა</option>
+        </select>
+    </fieldset>
+    <br>
+    <br>
+
+    <p> რამხელა შემოსავალი გაქვთ? </p>
+    600 <input type="range" name="income"> 3000
+    <br>
+    <textarea placeholder="მოგვიყევით თქვენს შესახებ" cols="120" rows="10"></textarea>
+
+    <br>
+    <input type="submit" value="რეგისტრაცია">
+</form>
+
+</body>
+
+
+</html>
