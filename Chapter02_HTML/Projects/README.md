@@ -43,7 +43,7 @@
 - ქრისტინე ძნელაძე | [webpage](/chapter2_HTML/Projects/Kristine_dzneladze) | [view_webpage](https://htmlpreview.github.io/?https://github.com/qristinius/UnilabPythonInternship/blob/master/Chapter2_HTML/Projects/Kristine_dzneladze/webpage.html)
 - აკო გაჩეჩილაძე | [Registrations Form](/chapter2_HTML/Projects/Ako_Gachechiladze) | [view_Registrations_from](https://htmlpreview.github.io/?https://github.com/Ako8/UnilabPythonInternship/blob/master/Chapter02_HTML/Projects/Ako_Gachechiladze/home.html)
 - ბექა ბიტარაშვილი | [Application Form](Chapter02_HTML/Projects/2023/Beka_Bitarashvili) | [Take A Look](https://htmlpreview.github.io/?https://github.com/BekaBitarashvili/UnilabPythonInternship/blob/master/Chapter02_HTML/Projects/2023/Beka_Bitarashvili/index.html)
-- სერგო გოგიშვილი |[index](/Chapter02_HTML/Projects/2023/sergo_gogishvili/index.html)  |  [web] (https://htmlpreview.github.io/?https://github.com/Sergi90G/UnilabPythonInternship/blob/master/Chapter2_HTML/Projects/sergo_gogishvili/index.html)
+- სერგო გოგიშვილი |[index](/Chapter02_HTML/Projects/2023/sergo_gogishvili/index.html)  |  [web] (http://htmlpreview.github.io/?https://github.com/Sergi90G/UnilabPythonInternship/blob/master/Chapter02_HTML/Projects/2023/sergo_gogishvili/index.html)
 
 ## ინსტრუქცია
 მოამზადეთ პროექტის ინსტრქუციაში აღწერილი პირობის შესაბამისი ორი HTML პროექტი და დაამატეთ ზემოთ ნაჩვენებ სიაში მათი საჩვენებელი მისამართები. (იხ. დამატებით რესურსები)
