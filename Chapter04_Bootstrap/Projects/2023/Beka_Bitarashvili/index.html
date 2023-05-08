@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Form</title>
+</head>
+<body>
+    <fieldset>
+        <h1>სააპლიკაციო ფორმა უნილაბისათვის</h1>
+    </fieldset>
+    <br>
+    <br>
+    <img class="banner" src="https://libg.s3.us-east-2.amazonaws.com/download/Coding-Website-Layout.jpg" alt="BANNER">
+    <br>
+    <br>
+    <fieldset>
+        <legend>
+            <b>პირადი ინფორმაცია</b>
+        </legend>
+        <form>
+            <label for="username"><i>სრული სახელი</i></label><br>
+            <input type="text" name="username" id="username" placeholder="შეიყვანეთ სახელი">
+            <br>
+            <br>
+            <label for="email"><i>ელ ფოსტა</i></label><br>
+            <input type="text" name="email" id="email" placeholder="შეიყვანეთ ელ ფოსტა">
+            <br>
+            <br>
+            <label for="gender"><i>აირჩიეთ სქესი</i></label><br>
+            <input type="radio" name="gender" value="female">ქალი
+            <input type="radio" name="gender" value="male">კაცი
+            <br>
+            <br>
+            <label for="date"><i>დაბადების თარიღი</i></label><br>
+            <input type="date">
+        </form>
+    </fieldset>
+
+    <fieldset>
+        <legend>
+            <b>პროგრამული ენები</b>
+        </legend>
+        <form>
+            <label for="programs"><i>აირჩიეთ თქვენთვის სასურველი</i></label>
+            <br>
+            <input type="checkbox" name="programs">PYTHON
+            <br>
+            <input type="checkbox" name="programs">C
+            <br>
+            <input type="checkbox" name="programs">C#
+            <br>
+            <input type="checkbox" name="programs">C++
+            <br>
+            <input type="checkbox" name="programs">JS
+            <br>
+            <input type="checkbox" name="programs">JAVA
+            <br>
+            <input type="checkbox" name="programs">PHP
+            <br>
+            <input type="checkbox" name="programs">KOTLIN
+            <br>
+            <input type="checkbox" name="programs">SWIFT
+            <br>
+            <br>
+            <label for="programs"><i>დღეში რამდენ საათს დაუთმობთ პროგრამირებას?</i></label><br>1
+            <input type="range" step="1" value="12" id="progtime">12
+        </form>
+    </fieldset>
+    <form>
+        <label for="about"><b><u>მოგვიყევით ცოტა რამ თქვენს შესახებ</u></b></label>
+        <br>
+        <textarea cols="100" rows="15"></textarea>
+        <br>
+        <button type="button">დადასტურება და გაგზავნა</button>
+        <br>
+    </form>
+    <br>
+</body>
+</html>
