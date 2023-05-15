@@ -1,0 +1,40 @@
+body {
+	width: 100%;
+	height: 100vh;
+	background: linear-gradient(-50deg, rgb(240, 213, 163), rgb(214, 178, 110), rgb(247, 195, 99), rgb(240, 177, 60));
+	background-size: 400% 400%;
+	position: relative;
+	animation: change 10s ease-in-out infinite;
+}
+@keyframes change {
+	0% {
+		background-position: 0 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0 50%;
+	}
+}
+/* body {
+    background-color: chocolate;
+} */
+footer {
+	margin-top: 100%;
+}
+.textbox {
+	font-size: 20px;
+	margin-top: 50px;
+	font-family: Roboto;
+	background-color: lightgreen;
+}
+.beka {
+	width: 250px;
+}
+.aboutbeka {
+	margin-top: 50px;
+	font-size: 18px;
+	font-family: Roboto;
+
+}

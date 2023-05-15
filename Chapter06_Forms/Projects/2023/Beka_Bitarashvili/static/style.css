@@ -1,0 +1,10 @@
+body {
+    background-color: lightgrey;
+}
+.matrix {
+    width: 100%;
+    height: 200px;
+}
+footer {
+    margin-top: 100%;
+}

@@ -6,3 +6,4 @@ package-lock.json
 package.json
 /Generators/
 *.sqlite
+/Chapter05_Flask_Templates/Projects/2023/Beka_Bitarashvili/virt/
