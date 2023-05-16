@@ -1,6 +1,6 @@
 from flask_wtf import FlaskForm
 from flask_wtf.file import FileField, FileAllowed
-from wtforms.fields import StringField, PasswordField, RadioField, DateField, SelectField, TextAreaField, SubmitField
+from wtforms.fields import StringField, PasswordField, RadioField, DateField, SelectField, TextAreaField, SubmitField, IntegerField
 from wtforms.validators import DataRequired, equal_to, length, ValidationError
 from string import ascii_uppercase, ascii_lowercase, digits, punctuation
 
@@ -51,3 +51,12 @@ class RegisterForm(FlaskForm):
             raise ValidationError("პაროლი უნდა შეიცავდეს ციფრებს")
         elif not contains_symbols:
             raise ValidationError("პაროლი უნდა შეიცავდეს სიმბოლოებს")
+
+
+class ProductForm(FlaskForm):
+
+    name = StringField("პროდუქტის სახელი")
+    description = TextAreaField("პროდუქტის აღწერა")
+    price = IntegerField("პროდუქტის ფასი")
+
+    submit = SubmitField("პროდუქტის დამატება")
