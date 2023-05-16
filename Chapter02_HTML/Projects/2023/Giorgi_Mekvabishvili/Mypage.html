@@ -14,7 +14,7 @@
 
   <nav>
     <ul>
-      <li><a href="Mypage.html">Home</a></li>
+      <li><a href="mypage.html">Home</a></li>
       <li><a href="about.html">About</a></li>
     </ul>
   </nav>
@@ -22,10 +22,37 @@
   <main>
     <section>
       <h2>About Me</h2>
-      <p><a href="about.html">Click here</a> to learn more about me.</p>
+      <p>This is a paragraph about me.</p>
+    </section>
+
+    <section>
+      <h2>Contact Form</h2>
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required>
+
+        <label for="color">Favorite Color:</label>
+        <input type="color" id="color" name="color">
+
+        <label for="subscribe">Subscribe to Newsletter:</label>
+        <input type="checkbox" id="subscribe" name="subscribe">
+
+        <button type="submit">Submit</button>
+      </form>
     </section>
 
     <!-- Add more sections or content as needed -->
+
+    <button onclick="window.location.href='about.html'">Go to About Page</button>
 
   </main>
 
