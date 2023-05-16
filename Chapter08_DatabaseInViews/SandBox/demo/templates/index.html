@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Flask Webproject - Main
+{% endblock %}
+
+{% block body %}
+
+    {% set messages = get_flashed_messages() %}
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-danger" role="alert">
+                * {{ message }}
+            </div>
+        {% endfor %}
+    {% endif %}
+
+    {% if user_type == "admin" %}
+        <p>თქვენ ხართ ადმინისტრატორი</p>
+    {% elif user_type == "mod" %}
+        <p>თქვენ ხართ მოდერატორი</p>
+    {% else %}
+        <p>თქვენ ხართ მომხმარებელი</p>
+    {% endif %}
+
+    {% if user_type == "admin" %}
+        {% set css_class = "bg-success" %}
+    {% else %}
+        {% set css_class = "bg-danger" %}
+    {% endif %}
+
+    {# This is a comment #}
+    <h1> Flask Internship - CSS <span class="badge {{ css_class }}">New</span></h1>
+    <form method="post" enctype="multipart/form-data">
+        {{ form.hidden_tag() }}
+        <div class="bg-white p-3 rounded-2 mb-3 shadow">
+            <div class="mb-3">
+                {{ form.username.label(class="form-label") }}
+                {{ form.username }}
+            </div>
+            <div class="mb-3">
+                {{ form.password.label(class="form-label") }}
+                {{ form.password(class="form-control") }}
+                {{ form.repeat_password.label(class="form-label") }}
+                {{ form.repeat_password(class="form-control") }}
+            </div>
+        </div>
+
+        <div class="bg-white p-3 rounded-2 mb-3 shadow">
+            {{ form.gender }}
+            {{ form.birthday.label(class="mt-1") }}
+            {{ form.birthday(class="form-control", type="date") }}
+
+            <p class="mt-1">რომელი პროგრამული ენეიბი იცით</p>
+            <input type="checkbox" name="programminglang" value="C++"> C++
+            <input type="checkbox" name="programminglang" value="C#"> C#
+            <input type="checkbox" name="programminglang" value="Python"> Python
+
+            {{ form.country(class="form-select") }}
+        </div>
+
+        <div class="bg-white p-3 rounded-2 mb-3 shadow">
+            {{ form.profile_picture(accept=".jpg, .png") }}
+            <p> რამხელა შემოსავალი გაქვთ? </p>
+            600 <input type="range" name="income" class="form-range mb-2"> 3000
+            {{ form.about_you(cols=120, rows=10, class="form-control", placeholder="მოგვიყევით თქვენს შესახებ") }}
+            {{ form.submit(class="btn btn-success" ) }}
+        </div>
+    </form>
+{% endblock %}
