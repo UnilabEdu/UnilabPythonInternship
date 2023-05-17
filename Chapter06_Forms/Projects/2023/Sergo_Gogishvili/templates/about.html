@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block body %}
+
+<div class="container mt-4">
+    <h1>მოგესალმები საიტზე</h1>
+       <hr>
+    <i><b><p>საიტზე შეყვანილი ინფორმაცია კონფიდენციალურია</p></b></i>
+       <hr>
+</div>
+
+<form method="post">
+{{ form.hidden_tag() }}
+
+        <div class="container mt-4 bg-light rounded-3 shadow">
+             <ol>
+        {{ form.texstarea.label }}
+        {{ form.texstarea(class="form-control",placeholder="პასუხი აქ ჩაწერეთ", cols="40", rows="5") }}
+        {{ form.texstareatwo.label }}
+        {{ form.texstareatwo(class="form-control", placeholder="პასუხი აქ ჩაწერეთ", cols="40", rows="5") }}
+            </ol>
+          <hr>
+            {{ form.send(class="btn btn-success") }}
+        </div>
+
+
+     <div class="container mt-4 bg-light rounded-3 shadow">
+     <section>
+     <img src="https://c4.wallpaperflare.com/wallpaper/56/1002/394/anime-how-heavy-are-the-dumbbells-you-lift-hd-wallpaper-preview.jpg"
+     width="400"
+     height="300"
+     alt="picture"/>
+    </section>
+    </div>
+
+    <div class="card container mt-4 bg-light rounded-3 shadow" style="width: 18rem;">
+       <img src="https://img.freepik.com/premium-vector/fitness-concept_1133-512.jpg?w=740"
+            class="card-img-top" alt="ფიტნეს აბონიმენტი">
+         <div class="card-body">
+             <h5 class="card-title">ფიტნეს აბონიმენტის ფასი</h5>
+             <p class="card-text">1 თვე 150ლარი</p>
+             <a href="#" class="btn btn-primary">შეძენა</a>
+         </div>
+
+             {% for names in list_of_names %}
+            <p>ჩვენ გთვაზობთ ჯგუფურ ვარჯიშებს {{names}} -ში</p>
+        </form>
+
+{% endfor %}
+{% endblock %}
