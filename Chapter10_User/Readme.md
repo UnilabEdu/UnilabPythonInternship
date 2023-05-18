@@ -376,7 +376,7 @@ from myproject.forms import LoginForm, RegistrationForm
 ```python
 @app.route('/')
 def home():
-    return render_template('home.html')
+    return render_template('about.html')
 ```
 
 შემდგომ ავაწყოთ ავტორიზირებული მომხმარებლის მისასალმებელი გვერდი. დანიშნულებიდან გამომდინარე ამ გვერდზე წვდომა მხოლოდ და მხოლოდ ავტორიზებულ მომხმარებელზე უნდა შეიზღუდოს. სწორედ ამ საფეხურზე დაგვჭირდება `login_required` დეკორატორი.

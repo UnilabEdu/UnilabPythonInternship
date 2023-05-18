@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block body %}
+
+    <h1>FITAPP</h1>
+    <form method="post">
+
+    {{ form.hidden_tag() }}
+
+    <div class="container-div">
+        {{ form.username.label(class="form-label")}}
+        {{ form.username (class="form-control")}}
+        {{ form.password.label(class="form-label")}}
+        {{ form.password(class="form-control")}}
+        {{ form.repeat_password.label(class="form-label") }}
+        {{ form.repeat_password (class="form-control")}}
+    </div>
+
+    <div class="container-div">
+        {{ form.gender.label }}
+        {{ form.gender }}
+    </div>
+
+    <div class="container-div">
+        {{ form.range(class="form-control-range") }}
+        {{ form.range.label }}
+        <br>
+        {{ form.birthday.label(class="mt-1") }}
+        {{ form.birthday(class="form-control", type="date") }}
+    </div>
+
+    <div class="container-div">
+        {{ form.sports.label }}
+        {{ form.sports(class="form-select") }}
+        <br>
+        <br>
+        {{ form.submit(class="btn btn-success") }}
+    </div>
+    </form>
+
+{% endblock %}

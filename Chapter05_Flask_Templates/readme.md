@@ -211,7 +211,7 @@ _[Templates](https://flask.palletsprojects.com/en/1.1.x/tutorial/templates/#temp
 სტატიკური ფაილების მისამართის დასაგენერირებლად შეგიძლია გამოიყენო [url_for](<#url_for()_დამხმარე_ფუნქციები>) ფუნქცია:
 
 ```python
-url_for('static', filename='style.css')
+url_for('static', filename='styles.css')
 ```
 
 ეს მაგალითი დააგენერეირებს მისამართს static/style.css ფაილისთვის.
