@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return render_template("pages/about.html")
+    return render_template("pages/home.html")
 
 @app.route('/game_store')
 def game_store():
@@ -14,11 +14,11 @@ def game_store():
     
 @app.route('/gift_Cards')
 def gift_Cards():
-    return render_template("pages/about.html")
+    return render_template("pages/home.html")
 
 @app.route('/P2P')
 def P2P():
-    return render_template("pages/about.html")
+    return render_template("pages/home.html")
     
 
     

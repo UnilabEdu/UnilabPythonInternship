@@ -24,7 +24,7 @@ def index():
         'act': act
     }
 
-    return render_template('main/about.html', **context)
+    return render_template('main/home.html', **context)
 
 
 

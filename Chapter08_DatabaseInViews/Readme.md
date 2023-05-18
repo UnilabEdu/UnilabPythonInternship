@@ -82,7 +82,7 @@ class Student(db.Model):
 ```python
 @app.route('/')
 def index():
-    return render_template('about.html')
+    return render_template('home.html')
 ```
 
 გავაკეთოთ ბმული მონაცემის დასამატებელ ფორმასთან. ამისთვის წინასწარ დაგვჭირდება ფორმის გამზადება [`forms.py` ფაილში](#forms.py).
