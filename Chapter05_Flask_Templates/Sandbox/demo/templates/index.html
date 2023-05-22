@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Flask Webproject - Main
+{% endblock %}
+
+{% block body %}
+    {% if user_type == "admin" %}
+        <p>თქვენ ხართ ადმინისტრატორი</p>
+    {% elif user_type == "mod" %}
+        <p>თქვენ ხართ მოდერატორი</p>
+    {% else %}
+        <p>თქვენ ხართ მომხმარებელი</p>
+    {% endif %}
+
+    {% if user_type == "admin" %}
+        {% set css_class = "bg-success" %}
+    {% else %}
+        {% set css_class = "bg-danger" %}
+    {% endif %}
+
+    {# This is a comment #}
+    <h1> Flask Internship - CSS <span class="badge {{ css_class }}">New</span></h1>
+    <form>
+        <div class="bg-white p-3 rounded-2 mb-3 shadow">
+            <div class="mb-3">
+                <label for="username" class="form-label">Username:</label>
+                <input type="text" placeholder="შეიყვანეთ იუზერნეიმი" name="username" id="username"
+                       class="form-control">
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password:</label>
+                <input type="password" placeholder="შეიყვანეთ პაროლი" name="password" id="password"
+                       class="form-control">
+            </div>
+        </div>
+
+        <div class="bg-white p-3 rounded-2 mb-3 shadow">
+            <div class="form-check">
+                <input class="form-check-input" type="radio" value="male" name="gender" id="maleOption">
+                <label class="form-check-label" for="maleOption">მამრობითი</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" value="female" name="gender" id="femaleOption">
+                <label class="form-check-label" for="femaleOption">მდედრობითი</label>
+            </div>
+
+            <label for="birthday" class="mt-1">დაბადების თარიღი:</label>
+            <input type="date" name="birthday" class="form-control">
+
+            <p class="mt-1">რომელი პროგრამული ენეიბი იცით</p>
+            <input type="checkbox" name="programminglang" value="C++"> C++
+            <input type="checkbox" name="programminglang" value="C#"> C#
+            <input type="checkbox" name="programminglang" value="Python"> Python
+
+            <select name="country" class="form-select">
+                <option selected>აირჩიეთ ქვეყანა</option>
+                <option value="georgia"> საქართველო</option>
+                <option value="germany"> გერმანია</option>
+                <option> ამერიკა</option>
+            </select>
+        </div>
+
+        <div class="bg-white p-3 rounded-2 mb-3 shadow">
+            <p> რამხელა შემოსავალი გაქვთ? </p>
+            600 <input type="range" name="income" class="form-range mb-2"> 3000
+            <textarea placeholder="მოგვიყევით თქვენს შესახებ" cols="120" rows="10" class="form-control"></textarea>
+            <input type="submit" value="რეგისტრაცია" class="btn btn-success">
+        </div>
+    </form>
+{% endblock %}

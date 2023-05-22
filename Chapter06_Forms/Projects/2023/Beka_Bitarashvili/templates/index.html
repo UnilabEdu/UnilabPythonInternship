@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+{% block content %}
+    {% set messages = get_flashed_messages() %}
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-danger" role="alert">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endif %}
+    <img class="matrix" src="https://i.pinimg.com/originals/be/87/d8/be87d8757f3378c2924ee5232c9d95b5.jpg" alt="matrix">
+    <br>
+    <br>
+    <br>
+
+    <form method="post" enctype="multipart/form-data">
+        {{ form.hidden_tag() }}
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                {{ form.username.label(class="form-label") }}
+                {{ form.username(class="form-control") }}
+                {#                <label for="inputEmail4">Email</label>#}
+                {#                <input type="email" class="form-control" id="inputEmail4" placeholder="Email">#}
+            </div>
+            <div class="form-group col-md-6">
+                {{ form.password.label(class="form-label") }}
+                {{ form.password(class="form-control") }}
+                {{ form.second_pass.label(class="form-label") }}
+                {{ form.second_pass(class="form-control") }}
+                {#                <label for="inputPassword4">Password</label>#}
+                {#                <input type="password" class="form-control" id="inputPassword4" placeholder="Password">#}
+            </div>
+
+            {#Choose Options ------->#}
+            <div class="form-check">
+                {{ form.gender(class="form-check") }}
+
+                {#                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1"#}
+                {#                       checked>#}
+                {#                <label class="form-check-label" for="exampleRadios1">#}
+                {#                    Female#}
+                {#                </label>#}
+                {#                <br>#}
+                {#            </div>#}
+                {##}
+                {#            <div class="form-check">#}
+                {#                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">#}
+                {#                <label class="form-check-label" for="exampleRadios2">#}
+                {#                    Male#}
+                {#                </label>#}
+                {#                <br>#}
+                {#            </div>#}
+                {#Choose Options ------->#}
+            </div>
+
+
+            <div class="form-group col-md-4">
+                {{ form.country(class="form-control") }}
+                <br>
+                {#                <label for="inputState">Country</label>#}
+                {#                <select id="inputState" class="form-control">#}
+                {#                    <option selected>Choose...</option>#}
+                {#                    <option>GEO</option>#}
+                {#                    <option>RUS</option>#}
+                {#                    <option>ENG</option>#}
+                {#                </select>#}
+            </div>
+
+            <div class="form-group">
+                {{ form.about_me(cols=120, rows=10, class="form-control", placeholder="Say Something...") }}
+{#                <label for="exampleFormControlTextarea1">Example textarea</label>#}
+{#                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>#}
+            </div>
+
+        </div>
+        <div class="form-group">
+            <div>
+                {{ form.profile_pic }}
+            </div>
+        </div>
+        {{ form.submit(class="btn btn-primary") }}
+{#        <button type="submit" class="btn btn-primary">Sign in</button>#}
+    </form>
+
+
+{% endblock %}
