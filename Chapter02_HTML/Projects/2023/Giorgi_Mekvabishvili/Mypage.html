@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Page</title>
+  <style>
+    /* CSS styles go here */
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to My Page</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="mypage.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section>
+      <h2>About Me</h2>
+      <p>This is a paragraph about me.</p>
+    </section>
+
+    <section>
+      <h2>Contact Form</h2>
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required>
+
+        <label for="color">Favorite Color:</label>
+        <input type="color" id="color" name="color">
+
+        <label for="subscribe">Subscribe to Newsletter:</label>
+        <input type="checkbox" id="subscribe" name="subscribe">
+
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+
+
+    <button onclick="window.location.href='about.html'">Go to About Page</button>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2023 My Page. All rights reserved.</p>
+  </footer>
+</body>
+</html>
