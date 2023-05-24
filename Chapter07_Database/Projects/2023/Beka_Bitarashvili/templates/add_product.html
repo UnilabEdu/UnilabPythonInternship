@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Flask SQLAlchemy
+{% endblock %}
+
+{% block content %}
+
+    {% set messages = get_flashed_messages() %}
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-danger" role="alert">
+                * {{ message }}
+            </div>
+        {% endfor %}
+    {% endif %}
+
+
+    <h1> Add New Product</h1>
+    <form method="post">
+        {{ form.hidden_tag() }}
+        <div class="bg-white p-3 rounded-2 mb-3 shadow">
+            <div class="mb-3">
+                {{ form.name.label(class="form-label") }}
+                {{ form.name(class="form-control") }}
+            </div>
+            <div class="mb-3">
+                {{ form.description.label(class="form-label") }}
+                {{ form.description(class="form-control") }}
+            </div>
+            <div class="mb-3">
+                {{ form.price.label(class="form-label") }}
+                {{ form.price(class="form-control") }}
+            </div>
+            {{ form.submit(class="btn btn-primary") }}
+        </div>
+    </form>
+{% endblock %}

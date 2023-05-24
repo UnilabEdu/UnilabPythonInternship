@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Flask SQLAlchemy
+{% endblock %}
+
+{% block content %}
+
+    <div class="row">
+        {% for product in prlist %}
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title"> {{ product.name }}</h5>
+                    <p class="card-text"> {{ product.description }}</p>
+                    <a href="{{ url_for('view_product', id=product.id) }}" class="btn btn-primary">Go</a>
+                    <a href="{{ url_for('edit_product', id=product.id) }}" class="btn btn-success">Edit</a>
+                    <a href="{{ url_for('delete_product', id=product.id) }}" class="btn btn-danger">Delete</a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    <br>
+    <a href="{{ url_for('add_product')}}" class="btn btn-dark">ADD SOMEONE</a>
+
+{% endblock %}
