@@ -1,0 +1,17 @@
+body {
+    background-color: darkgray;
+    text-align: center;
+    margin: 100px;
+}
+a {
+    text-decoration: none;
+    font-family: monospace;
+    font-size: 30px;
+    background-color: green;
+    border: 2px solid black;
+    padding: 10px;
+    color: #0f1015;
+}
+h2 {
+    font-family: monospace;
+}
