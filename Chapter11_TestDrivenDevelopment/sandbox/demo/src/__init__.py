@@ -6,10 +6,10 @@ from src.admin import admin, SecureModelView, UserView, ProductView
 from src.config import Config
 from src.models import User, Product, Role, Student, University
 from src.views import main_blueprint, product_blueprint, auth_blueprint
-from src.commands import init_db, populate_db
+from src.commands import init_db_command, populate_db_command
 
 BLUEPRINTS = [main_blueprint, product_blueprint, auth_blueprint]
-COMMANDS = [init_db, populate_db]
+COMMANDS = [init_db_command, populate_db_command]
 
 
 def create_app():
