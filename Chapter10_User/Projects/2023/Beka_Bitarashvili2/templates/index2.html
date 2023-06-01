@@ -15,8 +15,23 @@
         გამარჯობა, თქვენ იმყოფებით ადმინ პანელის მთავარ გვერდზე, გადასასვლელას დააჭირეთ ჭილაკს...
     </h2>
     <br>
-    <a href="{{ url_for('admin.index') }}">დააჭირე ღილაკს!</a>
+    <a class="indexbutton" href="{{ url_for('admin.index') }}">დააჭირე ღილაკს!</a>
     <br>
+    <br>
+    <br>
+    <h3>* სრულყოფილი წვდომისათვის გაიარეთ ავტორიზაცია -> [ http://127.0.0.1:5000/login ]</h3>
+    <br>
+    <br>
+    <br>
+    <a class="loginbutton" href="{{ url_for('login') }}">ან მარტივად გაიარეთ ღილაკზე დაჭერით...</a>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <a class="exitbutton" href="{{ url_for('logout') }}">გამოსვლა</a>
 
 </body>
 </html>

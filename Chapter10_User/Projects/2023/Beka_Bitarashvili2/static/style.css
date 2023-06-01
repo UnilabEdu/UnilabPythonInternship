@@ -3,11 +3,56 @@ body {
     text-align: center;
     margin: 100px;
 }
-a {
+.indexbutton {
     text-decoration: none;
     font-family: monospace;
     font-size: 30px;
     background-color: green;
+    border: 2px solid black;
+    padding: 10px;
+    color: #0f1015;
+}
+.loginbutton {
+    text-decoration: none;
+    font-family: monospace;
+    font-size: 30px;
+    background-image: linear-gradient(to right, lightgoldenrodyellow, lightsalmon);
+    border: 2px solid black;
+    padding: 10px;
+    color: #0f1015;
+}
+.logoutbutton {
+    text-decoration: none;
+    font-family: monospace;
+    font-size: 30px;
+    background-image: linear-gradient(to right, lightcoral, red);
+    border: 2px solid black;
+    padding: 10px;
+    color: #0f1015;
+}
+.mainpagebutton {
+    text-decoration: none;
+    font-family: monospace;
+    font-size: 30px;
+    background-image: linear-gradient(to right, yellowgreen, yellow);
+    border: 2px solid black;
+    padding: 10px;
+    color: #0f1015;
+}
+.adminbutton {
+    text-decoration: none;
+    font-family: monospace;
+    font-size: 30px;
+    background-image: linear-gradient(to right, deepskyblue, dodgerblue);
+    border: 2px solid black;
+    padding: 10px;
+    color: #0f1015;
+}
+.exitbutton {
+    text-decoration: none;
+    font-family: monospace;
+    font-size: 15px;
+    background-color: lightpink;
     border: 2px solid black;
     padding: 10px;
     color: #0f1015;
