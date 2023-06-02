@@ -1,0 +1,11 @@
+from flask.cli import with_appcontext
+import click
+
+from src.extensions import db
+
+@click.command("init_db")
+@with_appcontext
+def init_db():
+  db.drop_all()
+  db.create_all()
+
