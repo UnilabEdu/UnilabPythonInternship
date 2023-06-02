@@ -30,10 +30,10 @@ class User(db.Model, UserMixin):
 
 class RegisterForm(FlaskForm):
     username = StringField(validators=[
-        InputRequired(), Length(min=4, max=20)], render_kw={"placeholder": "Username"})
+        InputRequired(), Length(min=4, max=20)], render_kw={"placeholder": "მომხმარებელი"})
 
     password = PasswordField(validators=[
-        InputRequired(), Length(min=8, max=20)], render_kw={"placeholder": "Password"})
+        InputRequired(), Length(min=8, max=20)], render_kw={"placeholder": "პაროლი"})
 
     submit = SubmitField('რეგისტრაცია')
 
@@ -58,7 +58,7 @@ class LoginForm(FlaskForm):
 
 @app.route('/')
 def home():
-    return render_template('home.html')
+    return render_template('templates/home.html')
 
 
 @app.route('/login', methods=['GET', 'POST'])
@@ -69,13 +69,13 @@ def login():
         if user:
             login_user(user)
             return redirect(url_for('dashboard'))
-    return render_template('login.html', form=form)
+    return render_template('templates/login.html', form=form)
 
 
 @app.route('/dashboard', methods=['GET', 'POST'])
 @login_required
 def dashboard():
-    return render_template('dashboard.html')
+    return render_template('templates/dashboard.html')
 
 
 @app.route('/logout', methods=['GET', 'POST'])
@@ -95,7 +95,7 @@ def register():
         db.session.commit()
         return redirect(url_for('login'))
 
-    return render_template('register.html', form=form)
+    return render_template('templates/register.html', form=form)
 
 
 if __name__ == '__main__':
