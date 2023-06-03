@@ -28,7 +28,7 @@
 - სერგო გოგიშვილი | [fitapp](/Chapter4_Boostrap/Projects/Sergo_Gogishvili)| ((https://htmlpreview.github.io/?https://github.com/Sergi90G/UnilabPythonInternship/blob/master/Chapter04_Bootstrap/Projects/2023/Sergo_Gogishvili/fitness.html))
 - ბექა ბიტარაშვილი | [Info & Application](Chapter04_Bootstrap/Projects/2023/Beka_Bitarashvili) | [Take A Look](https://htmlpreview.github.io/?https://github.com/BekaBitarashvili/UnilabPythonInternship/blob/master/Chapter04_Bootstrap/Projects/2023/Beka_Bitarashvili/main.html)
 - აკო გაჩეჩილაძე | [Cibokopu](Chapter04_Bootstrap/Projects/2023/Ako_Gachechiladze) | [View Website](https://htmlpreview.github.io/?https://github.com/Ako8/UnilabPythonInternship/blob/master/Chapter04_Bootstrap/Projects/2023/Ako_Gachechiladze/home.html)
-
+- ლევან ყოლბაია | [Nutrition101](Chapter04_Bootstrap/Projects/2023/Levan_Kolbaia) | [Web Link]((https://htmlpreview.github.io/?https://github.com/Rizznado/UnilabPythonInternship/blob/master/Chapter04_Bootstrap/Projects/2023/Levab_Kolbaia/Carbset.html))
 ## ინსტრუქცია:
 
 წინა თავში შესრულებულ ან სრულიად ახალ ვებ გვერდს გაუკეთეთ სტილი Bootstrap-ის გამოყენებით
