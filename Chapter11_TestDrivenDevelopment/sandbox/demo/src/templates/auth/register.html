@@ -1,0 +1,44 @@
+{% extends "layouts/base.html" %}
+
+{% block title %}
+    Flask Webproject - Register
+{% endblock %}
+
+{% block body %}
+
+    {% set messages = get_flashed_messages() %}
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-danger" role="alert">
+                * {{ message }}
+            </div>
+        {% endfor %}
+    {% endif %}
+
+    {# This is a comment #}
+    <form method="post">
+        {{ form.hidden_tag() }}
+        <div class="bg-white p-3 rounded-2 mb-3 shadow">
+            <div class="mb-3">
+                {{ form.username.label(class="form-label") }}
+                {{ form.username(class="form-control") }}
+            </div>
+            <div class="mb-3">
+                {{ form.password.label(class="form-label") }}
+                {{ form.password(class="form-control") }}
+                {{ form.repeat_password.label(class="form-label") }}
+                {{ form.repeat_password(class="form-control") }}
+            </div>
+        </div>
+
+        <div class="bg-white p-3 rounded-2 mb-3 shadow">
+            {{ form.gender }}
+            {{ form.birthdate.label(class="mt-1") }}
+            {{ form.birthdate(class="form-control", type="date") }}
+        </div>
+
+        <div class="bg-white p-3 rounded-2 mb-3 shadow">
+            {{ form.submit(class="btn btn-success" ) }}
+        </div>
+    </form>
+{% endblock %}
