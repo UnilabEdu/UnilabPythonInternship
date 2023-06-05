@@ -1,23 +1,26 @@
 {% extends "layouts/base.html" %}
-{% block content %}
 
-    <div class="container" style="margin-top: 120px">
-        <div class="row row-cols-4">
-            {% for product in products %}
-                <div class="col">
-                    <div class="card" style="width: 18rem">
-                        <div class="card-body">
-                            <h5 class="card-title"> {{ product.name }}</h5>
-                            <h6 class="card-subtitle mb-2 text-muted"> {{ product.category.name }}</h6>
-                            <p class="card-text align-self-start"> {{ product.price }}$</p>
-                            <a href="{{ url_for('product.edit_product', product_id=product.id) }}" class="card-link btn btn-primary">Edit</a>
-                            <a href="{{ url_for('product.delete_product', product_id=product.id) }}" class="card-link btn btn-danger">Delete</a>
-                        </div>
-                    </div>
+{% block title %}
+    Flask Webproject - Products
+{% endblock %}
+
+{% block body %}
+
+    <div class="row">
+        {% for product in prlist %}
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title"> {{ product.name }}</h5>
+                    <p class="card-text"> {{ product.description }}</p>
+                    <a href="{{ url_for('products.view_product', id=product.id) }}" class="btn btn-primary">Details</a>
+                    {% if current_user.is_authenticated %}
+                        <a href="{{ url_for('products.edit_product', id=product.id) }}" class="btn btn-warning">Edit</a>
+                        <a href="{{ url_for('products.delete_product', id=product.id) }}"
+                           class="btn btn-danger">Delete</a>
+                    {% endif %}
                 </div>
-            {% endfor %}
-        </div>
-
-
+            </div>
+        {% endfor %}
     </div>
+
 {% endblock %}

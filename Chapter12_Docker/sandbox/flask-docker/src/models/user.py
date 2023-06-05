@@ -1,56 +1,43 @@
-from src.models.base import BaseModel
-from src.extensions import db
 from flask_login import UserMixin
 from werkzeug.security import generate_password_hash, check_password_hash
 
+from src.extensions import db
+from src.models.base import BaseModel
 
-class User(BaseModel, UserMixin):
+
+# ONE - TO - ONE relationship
+class User(db.Model, BaseModel, UserMixin):
 
     __tablename__ = "users"
 
     id = db.Column(db.Integer, primary_key=True)
-    username = db.Column(db.String, unique=True, nullable=False)
-    email = db.Column(db.String, unique=True, nullable=False)
-    _password = db.Column("password", db.String(32))
+    username = db.Column(db.String, nullable=False)
+    _password = db.Column(db.String, nullable=False)
+    birthdate = db.Column(db.Date)
+    gender = db.Column(db.String)
 
-    roles = db.relationship("Role", secondary="user_roles")
+    role_id = db.Column(db.ForeignKey("roles.id"))
+    role = db.relationship("Role", uselist=False)
 
-    # ობიექტის შექმნისას პაროლის ჰეშირების მეთოდი 1
-    def _get_password(self):
+    idcard_id = db.Column(db.ForeignKey("id_cards.id"))
+    idcard = db.relationship("IDCard", back_populates="user")
+
+    @property
+    def password(self):
         return self._password
 
-    def _set_password(self, password):
-        self._password = generate_password_hash(password)
+    @password.setter
+    def password(self, value):
+        self._password = generate_password_hash(value)
 
     def check_password(self, password):
         return check_password_hash(self.password, password)
 
-    password = db.synonym('_password', descriptor=property(_get_password, _set_password))
-    ###############
-
-    # ობიექტის შექმნისას პაროლის ჰეშირების მეთოდი 2
-    # @property
-    # def password(self):
-    #     return self._password
-    #
-    # @password.setter
-    # def password(self, value):
-    #     self._password = generate_password_hash(value)
-    ###########
-
-    def has_role(self, role):
-        return role in [userrole.name for userrole in self.roles]
+    def __repr__(self):
+        return f"{self.name} {self.surname}"
 
 
-class UserRole(BaseModel):
-
-    __tablename__ = "user_roles"
-    id = db.Column(db.Integer, primary_key=True)
-    user_id = db.Column(db.Integer, db.ForeignKey("users.id"))
-    role_id = db.Column(db.Integer, db.ForeignKey("roles.id"))
-
-
-class Role(BaseModel):
+class Role(db.Model, BaseModel):
 
     __tablename__ = "roles"
 
@@ -58,4 +45,18 @@ class Role(BaseModel):
     name = db.Column(db.String, unique=True)
 
     def __repr__(self):
-        return self.name
+        return f"{self.name}"
+
+
+class IDCard(db.Model):
+    __tablename__ = "id_cards"
+
+    id = db.Column(db.Integer, primary_key=True)
+    id_number = db.Column(db.String, unique=True)
+    creation_date = db.Column(db.Date)
+    expiry_date = db.Column(db.Date)
+
+    user = db.relationship("User", back_populates="idcard")
+
+    def __repr__(self):
+        return f"პირადობა, ნომრით {self.id_number}"

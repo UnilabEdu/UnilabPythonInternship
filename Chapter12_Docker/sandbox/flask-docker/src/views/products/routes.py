@@ -1,47 +1,61 @@
-from flask import Blueprint, render_template, redirect, url_for
+from flask import render_template, Blueprint, flash, redirect, url_for
 from flask_login import login_required
+
 from src.views.products.forms import ProductForm
-from src.models.product import Product, ProductCategory
+from src.models import Product
+from src.config import Config
 
-products_blueprint = Blueprint("product", __name__, template_folder="templates")
-
-
-@products_blueprint.route("/products")
-def products():
-    products = Product.query.all()
-    return render_template("products/products.html", products=products)
+from os import path
 
 
-@products_blueprint.route("/add_product", methods=['GET', 'POST'])
+TEMPLATES_FOLDER = path.join(Config.BASE_DIRECTORY, "templates", "products")
+product_blueprint = Blueprint("products", __name__, template_folder=TEMPLATES_FOLDER)
+
+
+@product_blueprint.route("/products")
+def all_products():
+    product_list = Product.query.all()
+    return render_template("products.html", prlist=product_list)
+
+
+@product_blueprint.route("/add_product", methods=["GET", "POST"])
 @login_required
 def add_product():
-    product_form = ProductForm()
-    if product_form.validate_on_submit():
-        category = ProductCategory.query.filter_by(name=product_form.product_category.data).first()
-        product = Product(name=product_form.product_name.data, price=product_form.price.data, category_id=category.id)
-        product.create()
-        return redirect(url_for('product.products'))
-    return render_template("products/add_product.html", form=product_form)
+    form = ProductForm()
+
+    if form.validate_on_submit():
+        new_product = Product(name=form.name.data, description=form.description.data, price=form.price.data)
+        new_product.create()
+        return redirect(url_for('products.all_products'))
+
+    return render_template("add_product.html", form=form)
 
 
-@products_blueprint.route("/edit_product/<int:product_id>", methods=['GET', 'POST'])
-def edit_product(product_id):
-    product = Product.query.get(product_id)
-    product_form = ProductForm()
-
-    if product_form.validate_on_submit():
-        product.name = product_form.product_name.data
-        product.price = product_form.price.data
-
-        category = ProductCategory.query.filter_by(name=product_form.product_category.data).first()
-        product.category_id = category.id
+@product_blueprint.route("/edit_product/<int:id>", methods=["GET", "POST"])
+@login_required
+def edit_product(id):
+    product = Product.query.get(id)
+    form = ProductForm(name=product.name, description=product.description, price=product.price)
+    if form.validate_on_submit():
+        product.name = form.name.data
+        product.description = form.description.data
+        product.price = form.price.data
         product.save()
-        return redirect(url_for('product.products'))
-    return render_template("products/edit_product.html", product=product, form=product_form)
+        return redirect(url_for('products.all_products'))
+
+    return render_template("add_product.html", form=form)
 
 
-@products_blueprint.route("/delete_product/<int:product_id>")
-def delete_product(product_id):
-    product = Product.query.get(product_id)
+@product_blueprint.route("/delete_product/<int:id>")
+@login_required
+def delete_product(id):
+    product = Product.query.get(id)
     product.delete()
-    return redirect(url_for('product.products'))
+    flash("პროდუქტი წაიშალა")
+    return redirect(url_for('products.all_products'))
+
+
+@product_blueprint.route("/products/<int:id>")
+def view_product(id):
+    chosen_product = Product.query.get(id)
+    return render_template("view_product.html", product=chosen_product)

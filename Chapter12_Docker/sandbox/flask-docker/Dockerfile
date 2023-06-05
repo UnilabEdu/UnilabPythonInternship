@@ -1,6 +1,6 @@
-FROM python:3.9-slim-buster
+FROM python:3.11.3-slim-buster
 
-WORKDIR /demo_project
+WORKDIR /demo
 
 COPY . .
 

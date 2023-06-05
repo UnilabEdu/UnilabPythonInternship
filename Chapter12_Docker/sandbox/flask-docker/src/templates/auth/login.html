@@ -1,17 +1,35 @@
 {% extends "layouts/base.html" %}
-{% block content %}
-    <div class="container mt-5 rounded bg-white p-4 shadow">
-        <form method="post">
-            {{ form.hidden_tag() }}
-            <div class="form-group mt-2">
-                <label for="inputEmail">{{ form.login.label }}</label>
-                {{ form.login(class="form-control", id="inputEmail", placeholder="Enter email") }}
+
+{% block title %}
+    Flask Webproject - Register
+{% endblock %}
+
+{% block body %}
+
+    {% set messages = get_flashed_messages() %}
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-danger" role="alert">
+                * {{ message }}
             </div>
-            <div class="form-group mt-2">
-                <label for="inputPassword">{{ form.password.label }}</label>
-                {{ form.password(class="form-control", id="inputPassword", placeholder="Enter password") }}
+        {% endfor %}
+    {% endif %}
+
+    {# This is a comment #}
+    <form method="post">
+        {{ form.hidden_tag() }}
+        <div class="bg-white p-3 rounded-2 mb-3 shadow">
+            <div class="mb-3">
+                {{ form.username.label(class="form-label") }}
+                {{ form.username(class="form-control") }}
             </div>
-            {{ form.submit(class="btn btn-primary mt-2") }}
-        </form>
-    </div>
+            <div class="mb-3">
+                {{ form.password.label(class="form-label") }}
+                {{ form.password(class="form-control") }}
+            </div>
+        </div>
+        <div class="bg-white p-3 rounded-2 mb-3 shadow">
+            {{ form.submit(class="btn btn-success" ) }}
+        </div>
+    </form>
 {% endblock %}

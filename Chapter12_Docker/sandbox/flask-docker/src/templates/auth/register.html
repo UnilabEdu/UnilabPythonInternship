@@ -1,30 +1,44 @@
 {% extends "layouts/base.html" %}
-{% block content %}
-    <div class="container mt-5 rounded bg-white p-4 shadow">
-        <form method="post">
 
-            {% if form.errors %}
-                {{ form.confirm_password.errors }}
-            {% endif %}
+{% block title %}
+    Flask Webproject - Register
+{% endblock %}
 
-            {{ form.hidden_tag() }}
-            <div class="form-group mt-2">
-                <label for="inputEmail">{{ form.email.label }}</label>
-                {{ form.email(class="form-control", id="inputEmail", placeholder="Enter email") }}
+{% block body %}
+
+    {% set messages = get_flashed_messages() %}
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-danger" role="alert">
+                * {{ message }}
             </div>
-            <div class="form-group mt-2">
-                <label for="inputUsername">{{ form.username.label }}</label>
-                {{ form.username(class="form-control", id="inputUsername", placeholder="Enter username") }}
+        {% endfor %}
+    {% endif %}
+
+    {# This is a comment #}
+    <form method="post">
+        {{ form.hidden_tag() }}
+        <div class="bg-white p-3 rounded-2 mb-3 shadow">
+            <div class="mb-3">
+                {{ form.username.label(class="form-label") }}
+                {{ form.username(class="form-control") }}
             </div>
-            <div class="form-group mt-2">
-                <label for="inputPassword">{{ form.password.label }}</label>
-                {{ form.password(class="form-control", id="inputPassword", placeholder="Enter password") }}
+            <div class="mb-3">
+                {{ form.password.label(class="form-label") }}
+                {{ form.password(class="form-control") }}
+                {{ form.repeat_password.label(class="form-label") }}
+                {{ form.repeat_password(class="form-control") }}
             </div>
-            <div class="form-group mt-2">
-                <label for="inputConfirmPassword">{{ form.confirm_password.label }}</label>
-                {{ form.confirm_password(class="form-control", id="inputConfirmPassword", placeholder="Repeat password") }}
-            </div>
-            {{ form.submit(class="btn btn-primary mt-2") }}
-        </form>
-    </div>
+        </div>
+
+        <div class="bg-white p-3 rounded-2 mb-3 shadow">
+            {{ form.gender }}
+            {{ form.birthdate.label(class="mt-1") }}
+            {{ form.birthdate(class="form-control", type="date") }}
+        </div>
+
+        <div class="bg-white p-3 rounded-2 mb-3 shadow">
+            {{ form.submit(class="btn btn-success" ) }}
+        </div>
+    </form>
 {% endblock %}

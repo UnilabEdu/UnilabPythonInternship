@@ -3,6 +3,7 @@ import tempfile
 import os
 from src import create_app
 from src.commands import init_db, populate_db
+from src.admin import admin
 
 @pytest.fixture
 def app():
@@ -16,6 +17,7 @@ def app():
         "WTF_CSRF_ENABLED": False,
         "DEBUG": False
     })
+    admin._views = []
 
     with app.app_context():
         init_db()

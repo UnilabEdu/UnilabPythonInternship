@@ -1,19 +1,38 @@
 {% extends "layouts/base.html" %}
-{% block content %}
 
-    <div class="container rounded shadow bg-white h-75 p-4" style="margin-top: 120px">
-        <form method="post">
-            {{ form.hidden_tag() }}
+{% block title %}
+    Flask Webproject - Main
+{% endblock %}
+
+{% block body %}
+
+    {% set messages = get_flashed_messages() %}
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-danger" role="alert">
+                * {{ message }}
+            </div>
+        {% endfor %}
+    {% endif %}
+
+
+    <h1> Add New Product</h1>
+    <form method="post">
+        {{ form.hidden_tag() }}
+        <div class="bg-white p-3 rounded-2 mb-3 shadow">
             <div class="mb-3">
-                {{ form.product_name(class="form-control", placeholder=form.product_name.label.text) }}
+                {{ form.name.label(class="form-label") }}
+                {{ form.name(class="form-control") }}
             </div>
             <div class="mb-3">
-                {{ form.product_category(class="form-control", placeholder=form.product_category.label.text) }}
+                {{ form.description.label(class="form-label") }}
+                {{ form.description(class="form-control") }}
             </div>
             <div class="mb-3">
-                {{ form.price(class="form-control", placeholder=form.price.label.text) }}
+                {{ form.price.label(class="form-label") }}
+                {{ form.price(class="form-control") }}
             </div>
             {{ form.submit(class="btn btn-primary") }}
-        </form>
-    </div>
+        </div>
+    </form>
 {% endblock %}

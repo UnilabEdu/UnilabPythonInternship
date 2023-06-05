@@ -1,23 +1,23 @@
-import os
-import tempfile
-
 import pytest
+import tempfile
+import os
 from src import create_app
 from src.commands import init_db, populate_db
-
+from src.admin import admin
 
 @pytest.fixture
 def app():
+
     db_fd, db_path = tempfile.mkstemp()
 
     app = create_app()
     app.config.update({
-        'SECRET_KEY': "mysecretkey",
-        'TESTING': True,
-        'SQLALCHEMY_DATABASE_URI': 'sqlite:///' + db_path + '.sqlite',
-        'SQLALCHEMY_TRACK_MODIFICATIONS': False,
-        'WTF_CSRF_ENABLED': False
+        "TESTING": True,
+        "SQLALCHEMY_DATABASE_URI": "sqlite:///" + db_path + ".sqlite",
+        "WTF_CSRF_ENABLED": False,
+        "DEBUG": False
     })
+    admin._views = []
 
     with app.app_context():
         init_db()

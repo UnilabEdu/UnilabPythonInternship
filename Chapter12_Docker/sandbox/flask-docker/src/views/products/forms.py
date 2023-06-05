@@ -1,11 +1,10 @@
 from flask_wtf import FlaskForm
-from wtforms.fields import StringField, IntegerField, SubmitField
-
+from wtforms.fields import StringField, IntegerField, TextAreaField, SubmitField
 
 class ProductForm(FlaskForm):
 
-    product_name = StringField("Product Name")
-    product_category = StringField("Product Category")
-    price = IntegerField("Product Price")
+    name = StringField("პროდუქტის სახელი")
+    description = TextAreaField("პროდუქტის აღწერა")
+    price = IntegerField("პროდუქტის ფასი")
 
-    submit = SubmitField()
+    submit = SubmitField("პროდუქტის დამატება")

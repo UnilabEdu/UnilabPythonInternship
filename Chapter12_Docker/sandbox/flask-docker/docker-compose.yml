@@ -1,33 +1,13 @@
-version: "3"
-
 services:
   flask:
-    container_name: flask_app
-    restart: always
     build: .
-    environment:
-      - FLASK_APP="manage.py"
+    container_name: flask_docker_demo
     expose:
       - 5000
+    restart: always
 
   nginx:
     build: ./nginx
-    restart: always
     container_name: nginx
     ports:
       - "80:80"
-
-  db:
-    image: postgre:15
-    environment:
-      - POSTGRES_USER=dbuser
-      - POSTGRES_PASSWORD=dbpass
-      - POSTGRES_DB=dbtest
-    restart: always
-    ports:
-      - 5432:5432
-    volumes:
-      - postgres_data:/var/lib/postgresql/data
-
-volumes:
-  postgres_data:
