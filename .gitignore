@@ -1,9 +1,1 @@
-.idea
-/venv
-__pycache__
-node_modules/
-package-lock.json
-package.json
-/Generators/
-*.sqlite
-/Chapter05_Flask_Templates/Projects/2023/Beka_Bitarashvili/virt/
+/venv/
