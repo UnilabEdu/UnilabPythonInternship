@@ -1,0 +1,59 @@
+{% extends "layout/base.html" %}
+{% block content %}
+
+
+<h1>Daily Carbohydrate intake</h1>
+<hr>
+<div class="accordion" id="accordionExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        About Carbohydrates
+      </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <strong>Carbohydrates</strong> make up most of your daily calorie intake.
+          <br>this is because food rich in carbs is very common, cheap and sometimes even addictive.
+          <br>subsequently carbs are the main macros to track for gaining and losing weight.
+
+      </div>
+    </div>
+  </div>
+<br>
+<h2>Common types of <strong>healthy</strong> carbohydrates</h2>
+   <table class="table table-dark table-striped-columns" >
+  <thead>
+    <tr>
+
+      <th scope="col">Whole Grains</th>
+      <th scope="col">Refined Grains</th>
+      <th scope="col">Vegetables</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+
+      <td>Buckwheat</td>
+      <td>Bread</td>
+      <td>Potatoes</td>
+
+    </tr>
+    <tr>
+
+      <td>Oats</td>
+      <td>Pasta</td>
+      <td>Eggplant</td>
+    </tr>
+    <tr>
+      <td>Rice</td>
+      <td>Cereal</td>
+      <td>Cucumber</td>
+
+
+    </tr>
+  </tbody>
+</table>
+</div>
+
+{% endblock %}

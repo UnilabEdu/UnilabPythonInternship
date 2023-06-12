@@ -1,0 +1,18 @@
+{% from "macros.html" import create_navlink %}
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" >Healthbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+          {{ create_navlink('main.nutrition', 'Home') }}
+
+                {{ create_navlink('carbs.carbset', 'Carbs') }}
+
+                {{ create_navlink('cards.macronutrients', 'Macronutrients') }}
+    </div>
+  </div>
+</nav>
+
