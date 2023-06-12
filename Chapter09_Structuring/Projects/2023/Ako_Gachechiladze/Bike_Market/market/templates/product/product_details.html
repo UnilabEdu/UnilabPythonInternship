@@ -1,0 +1,53 @@
+{% extends 'layouts/base.html' %}
+{% block content %}
+<div class="row m-1">
+    <div class="col-12">
+        <div class="border mt-2 shadow rounded-2 row" style="height: 100%; background-color: white">
+            <div class="col-3">
+                <img src="{{ product.image }}" class="img-thumbnail mt-2" style="width: 100%">
+            </div>
+            <div class="col-6 mt-3 mb-3">
+                <div>
+                    <h4>{{ product.name }}</h4>
+                    <h5>{{ product.description }}</h5>
+                    <h5>₾{{ product.price }}</h5>
+                </div>
+                <small>Other products of <a
+                        href="{{ url_for('profiles.profile', username=users[product.owner_id-1].username) }}">{{
+                    users[product.owner_id-1].username
+                    }}</a></small>
+            </div>
+            <div class="text-end col-3 mt-3 mb-3">
+                <div class="col-2 mt-1 mb-1" style="width: 10px">
+                    <div class="m-1">
+                        <a href="{{ url_for('main.home') }}">
+                            <button class="rounded-2 btn btn-primary " style="width: 100px">
+                                Go Back
+                            </button>
+                        </a>
+                    </div>
+                    {% if current_user.is_authenticated and current_user.id == product.owner_id %}
+
+
+                    <div class="m-1">
+                        <a href="{{ url_for('products.edit_products', id=product.id) }}">
+                            <button class="rounded-2 btn btn-warning " style="width: 100px">
+                                Edit
+                            </button>
+                        </a>
+                    </div>
+                    <div class="m-1">
+                        <a href="{{ url_for('products.delete_products', id=product.id) }}">
+                            <button class="rounded-2 btn btn-danger" style="width: 100px">
+                                Delete
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+</div>
+{% endblock %}
