@@ -1,0 +1,11 @@
+beautifulsoup4==4.12.2
+Flask==2.2.5
+Flask-Admin==1.6.1
+Flask-Login==0.6.2
+Flask-Migrate==4.0.4
+Flask-SQLAlchemy==3.0.3
+Flask-WTF==1.1.1
+lxml==4.9.2
+requests==2.31.0
+gunicorn
+
