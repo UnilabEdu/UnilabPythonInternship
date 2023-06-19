@@ -1,0 +1,21 @@
+{% extends "layout/base.html" %}
+{% block body %}
+<h1>მოგესალმებით საიტზე</h1>
+
+    {% set messages = get_flashed_messages() %}
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-danger" role="alert">
+            * {{ message }}
+            </div>
+
+        {% endfor %}
+{% endif %}
+
+    {% if current_user.is_authenticated %}
+    hello {{current_user.username }}
+    {% endif %}
+
+{% endblock %}
+
+
