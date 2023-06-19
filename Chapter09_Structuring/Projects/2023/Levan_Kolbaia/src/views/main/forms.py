@@ -1,9 +1,6 @@
 from flask_wtf import FlaskForm
-#from flask_wtf.file import FileField, FileAllowed
-from wtforms.fields import StringField, PasswordField, RadioField, DateField, SelectField, TextAreaField, SubmitField
-from wtforms.validators import DataRequired, equal_to, length, ValidationError
-#from string import ascii_uppercase, ascii_lowercase, digits, punctuation
-
+from wtforms.fields import StringField, RadioField, SubmitField
+from wtforms.validators import DataRequired
 
 
 class RegisterForm(FlaskForm):

@@ -1,6 +1,7 @@
-from src.extension import db
+from src.extensions import db
 
 class BaseModel():
+
     def create(self, commit=True):
         db.session.add(self)
         if commit:
@@ -9,10 +10,13 @@ class BaseModel():
             db.session.flush()
 
     @staticmethod
-    def save(self):
+    def save():
         db.session.commit()
 
     def delete(self):
         db.session.delete(self)
-        self.save()
+        self.save
+
+
+
 
