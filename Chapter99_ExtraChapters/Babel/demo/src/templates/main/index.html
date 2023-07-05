@@ -1,0 +1,21 @@
+{% extends "layouts/base.html" %}
+
+{% block title %}
+    Flask Webproject - Main
+{% endblock %}
+
+{% block body %}
+
+    {% set messages = get_flashed_messages() %}
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-danger" role="alert">
+                * {{ message }}
+            </div>
+        {% endfor %}
+    {% endif %}
+
+    {% if current_user.is_authenticated %}
+        {{ _("გამარჯობა") }}, {{ current_user.username }}
+    {% endif %}
+{% endblock %}
