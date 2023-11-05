@@ -28,7 +28,7 @@
 
 ### 2023 სტაჟირება
 - ლაშა დემურაშვილი |  [Cheetah](/Chapter3_CSS/Projects/Lasha_demurashvili) | [[View]](https://htmlpreview.github.io/?https://github.com/LashaDemurashvili/UnilabPythonInternship/blob/master/Chapter2_HTML/Projects/Lasha_demurashvili/project_1/index.html)
-- ბესიკ გოგეიშვილი |  [Kupata](/Chapter3_CSS/Projects/2023/besik_gogeishvili) | [[View]](https://htmlpreview.github.io/?https://github.com/b-gogeishvili/UnilabPythonInternship/blob/master/Chapter03_CSS/Projects/2023/besik_gogeishvili/index.html)
+- ბესიკ გოგეიშვილი |  [Kupata](Chapter03_CSS/Projects/2023/besik_gogeishvili) | [[View]](https://htmlpreview.github.io/?https://github.com/b-gogeishvili/UnilabPythonInternship/blob/master/Chapter03_CSS/Projects/2023/besik_gogeishvili/index.html)
 
 
 
