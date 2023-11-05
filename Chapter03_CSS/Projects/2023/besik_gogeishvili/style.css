@@ -1,0 +1,96 @@
+body {
+    background-color: #FCF5ED;
+}
+
+h1 {
+    text-align: center;
+    color: #1F1717;
+}
+
+h2 {
+    text-align: left;
+    padding: 30px 0px 0px 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+#cust {
+    font-size: 25px;
+    text-align: center;
+    padding: 30px 0px 0px 0px;
+}
+
+.poster {
+    margin-top: 80px;
+    text-align: center;
+    background-color: #FCF5ED;
+}
+
+.text_div {
+    margin: 50px 300px 0px 300px;
+    background-color: #F4BF96;
+    border-radius: 25px;
+}
+
+.form_div {
+    margin: 50px 500px 0px 500px;
+    background-color: #F4BF96;
+    border-radius: 25px;
+}
+
+#text {
+    padding: 50px;
+    color: #1F1717;
+    font-size: 25px;
+    font-family: Copperplate, Papyrus, fantasy;
+}
+
+
+img {
+    border-radius: 25px;
+    margin: 15px;
+    border: 2px solid #CE5A67;
+}
+
+.btn{
+    font-size: 25px;
+    padding: 20px;
+    margin-bottom: 50px;
+    color: #1F1717;
+    background-color: #CE5A67;
+    border: none;
+    border-radius: 20px;
+    transition-duration: 0.4s;
+}
+
+.btn:hover{
+    background-color: #e86d7a;
+}
+
+.btn:active{
+    background-color: #82333b;
+}
+
+legend {
+    padding: 30px;
+}
+
+input, .selection {
+    margin-bottom: 20px;
+    color: #1F1717;
+    font-size: 20px;
+    height: 40px;
+    width: 400px;
+    padding: 8px;
+    outline: none;
+    border: 2px solid #CE5A67;
+    border-radius: 8px;
+}
+
+
+.inputtexts {
+    color: #1F1717;
+    font-size: 30px;
+}
