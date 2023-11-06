@@ -1,0 +1,32 @@
+    #title{
+        text-align: center;
+    }
+    body {
+        background-color: rgb(83, 85, 10);
+    }
+
+    #sanjiphoto{
+        text-align: center;
+        width: 50;
+        height: 50;
+        overflow: hidden;
+
+    }
+
+    #sanjiphoto img{
+        width: 50%;
+        height: 50%;
+    }
+
+    #signbutton{
+        background-color: black;
+        color: white;
+        padding: 10px 20px;
+        font-size: 15px;
+        border: 2px solid;
+        
+    }
+
+    #button{
+        text-align: center;
+    }
