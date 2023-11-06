@@ -1,0 +1,84 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "Noto Sans Georgian", sans-serif;
+    font-size: 15px;
+    background-color: #fafad2;
+    color: #4B0082;
+    text-align: center;
+}
+
+.container {
+    background-color: darkviolet;
+    width: 75%;
+    margin: 2em auto;
+    padding: 2em 0;
+    color: white;
+    border-radius: 5%;
+}
+
+.typing-method {
+    margin: 1em;
+}
+
+.features {
+    text-align: left;
+    margin: 1em 10em;
+    display: flex;
+    flex-direction: column;
+}
+
+.container h1, .subtext {
+    text-align: center;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.stats {
+    margin: 1em;
+}
+
+form {
+    background-color: darkviolet;
+    width: 30%;
+    margin: 2em auto;
+    padding: 2em 10em;
+    color: white;
+    border-radius: 10%;
+    text-align: left;
+}
+
+form input, form select, form textarea {
+    margin-bottom: 2em;
+}
+
+form textarea {
+    resize: none;
+    width: 30em;
+    height: 3em;
+}
+
+form textarea, form input, form select {
+    border-bottom: 2px solid pink;
+    background-color: #f1f1f1;
+}
+
+form textarea:focus, form input:focus, form select:focus {
+    border-bottom: 4px solid black;
+    padding: 1px;
+}
+
+form input[type="submit"] {
+    text-align: center;
+    border: 2px solid black;
+    padding: 0.4em 0.7em;
+}
