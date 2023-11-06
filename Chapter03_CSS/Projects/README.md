@@ -29,7 +29,7 @@
 ### 2023 სტაჟირება
 - ლაშა დემურაშვილი |  [Cheetah](/Chapter3_CSS/Projects/Lasha_demurashvili) | [[View]](https://htmlpreview.github.io/?https://github.com/LashaDemurashvili/UnilabPythonInternship/blob/master/Chapter2_HTML/Projects/Lasha_demurashvili/project_1/index.html)
 
-
+- თორნიკე წულუკიძე | [Typing](/Chapter3_CSS/Projects/2023/Tornike_Tsulukidze) | [View Index](/https://htmlpreview.github.io/?https://github.com/TheMechanicalBeing/UnilabPythonInternship/blob/master/Chapter03_CSS/Projects/2023/Tornike_Tsulukidze/index.html/) | [View Form](/https://htmlpreview.github.io/?https://github.com/TheMechanicalBeing/UnilabPythonInternship/blob/master/Chapter03_CSS/Projects/2023/Tornike_Tsulukidze/form.html/) 
 
 ## ინსტრუქცია:
 
