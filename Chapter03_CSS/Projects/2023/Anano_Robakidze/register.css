@@ -1,0 +1,115 @@
+/* Import 'Josefin Sans' font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800;900&family=Josefin+Sans:wght@400;700&family=Kumbh+Sans:wght@400;700&family=Outfit:wght@300;400;600&family=Plus+Jakarta+Sans:wght@500;700;800&family=Red+Hat+Display:wght@700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("img1.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100vh;
+    font-family: "Josefin Sans";
+    max-width: 100%;
+    max-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.form-box {
+     width: 80%;
+     #max-height: 100vh;
+     background-color: rgba(255, 255, 255, 0.6);
+     height: 90vh;
+     padding: 30px;
+     border-radius: 10px;
+}
+fieldset {
+    border: none;
+    width: 100%;
+}
+h2 {
+    color: #600AB5;
+    margin-bottom: 5px;
+    font-size: 30px;
+}
+p {
+    font-size: 18px;
+    font-weight: 700;
+    color: #600AB5;
+}
+
+.box-1 {
+    padding: 20px 20px 20px 0px;
+}
+.box-2 {
+    padding: 20px 0px 20px 20px;
+}
+
+.form-box-2 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-style {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+.male-radio-btn, .other-btn {
+    margin: 0 5px;
+}
+
+.female-btn {
+    margin: 0 5px 0 0;
+
+}
+.gender {
+    margin-bottom: 15px;
+}
+.register-btn {
+    margin-top: 3%;
+    border: none;
+    font-size: 18px;
+    font-weight: 400;
+    color: white;
+    background-color: #D52B0A;
+    padding: 10px;
+    width: 40%;
+    border-radius: 20px;
+    cursor: pointer;
+    transition-duration: 0.3s;
+}
+.register-btn:hover {
+    background-color: #8D0013;
+}
+.footer-btn {
+     display: flex;
+     align-items: center;
+     flex-direction: column;
+}
+
+.back-btn {
+    font-size: 20px;
+    font-weight: 700;
+    color: #600AB5;
+    text-decoration: none;
+    cursor: pointer;
+    transition-duration: 0.3s;
+}
+.back-btn-box {
+    margin: 2% 0 2% 0;
+}
+.back-btn:hover {
+    color: #D52B0A;
+}
+
