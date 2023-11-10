@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>პეტიციების პორტალი</title>
+    <link rel="icon" href="./assets/icon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./style.css" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="./index.html">მთავარი</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link" style="color: #ce5a67" href="./login.html"><b>შესვლა</b></a>
+                    <a class="nav-link" style="color: #ce5a67" href="./register.html"><b>რეგისტრაცია</b></a>
+                    <!-- <a class="nav-link active" aria-current="page" href="#">Home</a> -->
+                    <a class="nav-link disabled" href="#">პეტიციის შექმნა</a>
+                    <a class="nav-link" href="#">კონტაქტი</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <hr style="margin-bottom: 40px;">
+    <div class="container text-center text_div">
+        <h2 style="margin:20px; text-align: center;">რეგისტრაცია</h2>
+        <div class="d-flex justify-content-center">
+            <form>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">მომხმარებლის სახელი</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Username"
+                        style="background-color:#ce5a67;">
+                </div>
+
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">სახელი</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="First Name"
+                        style="background-color:#ce5a67;">
+                </div>
+
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">გვარი</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Last Name"
+                        style="background-color:#ce5a67;">
+                </div>
+
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">ელ-ფოსტა</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1"
+                        placeholder="name@example.com" style="background-color:#ce5a67;">
+                </div>
+
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">პაროლი</label>
+                    <input type="password" class="form-control" id="exampleFormControlInput1" placeholder="Password"
+                        style="background-color:#ce5a67;">
+                </div>
+
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">გაიმეორე პაროლი</label>
+                    <input type="password" class="form-control" id="exampleFormControlInput1"
+                        placeholder="Repeat Password" style="background-color:#ce5a67;">
+                </div>
+                <button class="btn" type="submit" style="background-color: #ce5a67; margin: 20px;">რეგისტრაცია</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
