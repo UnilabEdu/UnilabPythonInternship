@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favorite YouTuber form</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+        :root {
+            --main-color: rgb(51, 51, 51);
+        }
+
+        body {
+            padding: 0;
+            margin: 0;
+        }
+        hr {
+            width: 100%;
+        }
+        input {
+            width: 50%;
+            height: 15px;
+            padding: 8px;
+            outline: none;
+            border: 2px solid gray;
+            border-radius: 8px;
+            font-family: 'Poppins', sans-serif;
+        }
+        textarea {
+            width: 50%;
+            padding: 8px;
+            outline: none;
+            border: 2px solid gray;
+            border-radius: 8px;
+            font-family: 'Poppins', sans-serif;
+            resize: none;
+        }
+
+        .main-div {
+            width: 80%;
+            height: 900px;
+            display: flex;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            flex-direction: column;
+        }
+        .inner-div {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            color: var(--main-color);
+            font-family: 'Poppins', sans-serif;
+        }
+        .yt-logo {
+            height: 90%;
+        }
+        .header {
+            color: red;
+        }
+        .small-div {
+            height: 100px;
+        }
+        .big-div {
+            height: calc(100% - 100px);
+            flex-direction: column;
+        }
+        .form-div {
+            display: flex;
+            width: 100%;
+            align-items: center;
+            color: var(--main-color);
+            font-family: 'Poppins', sans-serif;
+        
+        }
+        .form {
+            display: flex;
+            width: 600px;
+            height: 600px;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .fieldset {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            padding-left: 24px;
+            flex-direction: column;
+        }
+        .input-div {
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            margin-top: 16px;
+            width: 100%;
+            height: fit-content;
+            gap: 10px;
+            flex-direction: column;
+        }
+        .button-div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 170px;
+        }
+        .button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 140px;
+            height: 20px;
+            padding: 15px;
+            color: aliceblue;
+            border: none;
+            border-radius: 8px;
+            background-color: #FF0000;
+            font-family: 'Poppins', sans-serif;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #bb0101;
+        }
+        .sides-down {
+            display: flex;
+            width: 100%;
+            height: 5%;
+            justify-content: center;
+            align-items: center;
+            color: var(--main-color);
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-div">
+        <div class="inner-div small-div">
+            <img src="https://th.bing.com/th/id/R.b02b5d363a610229fe82e82ed0c369b4?rik=lECwiztO4NeaVA&pid=ImgRaw&r=0" alt="" class="yt-logo">
+        </div>
+        <hr>
+        <div class="form-div big-div">
+            <form class="form" method="post">
+                <fieldset class="fieldset">
+                    <legend>Favorite YouTuber</legend>
+                    <div class="input-div">
+                        <label for="channel-url">Channel URL</label>
+                        <input type="text" id="channel-url" class="input-m" placeholder="YouTube Channel URL">
+                    </div>
+                    <div class="input-div">
+                        <label for="channel-descritpion">Brief description</label>
+                        <textarea name="description" id="channel-descritpion"  cols="30" rows="10" placeholder="Describe why you like that channel"></textarea>
+                    </div>
+                    <div class="button-div">
+                        <button type="submit" class="button">Submit</button>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+        <div class="sides-down">
+            <p>Click <a href="index.html">here</a> to get back to home page.</p>
+        </div>
+    </div>
+</body>
+</html>

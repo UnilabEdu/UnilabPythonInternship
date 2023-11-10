@@ -1,0 +1,88 @@
+/* Import 'Josefin Sans' font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800;900&family=Josefin+Sans:wght@400;700&family=Kumbh+Sans:wght@400;700&family=Outfit:wght@300;400;600&family=Plus+Jakarta+Sans:wght@500;700;800&family=Red+Hat+Display:wght@700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("img1.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100vh;
+    font-family: "Josefin Sans";
+    padding: 40px;
+    max-width: 100%;
+}
+
+.nav-box {
+    display: flex;
+    justify-content: space-between;
+
+}
+.box-1 {
+    width: 25%;
+    display: flex;
+    justify-content: space-between;
+}
+.nav-btn {
+    font-size: 16px;
+    color: white;
+    background-color: transparent;
+    font-weight: 700;
+    border: none;
+    padding: 15px;
+    border-radius: 5px;
+    transition-duration: 0.3s;
+    cursor: pointer;
+    margin-bottom: 75px;
+}
+
+.login-btn {
+    background-color: #D52B0A;
+    padding: 15px 30px;
+}
+
+.nav-btn:hover {
+    background-color: #D52B0A;
+}
+
+.login-btn:hover {
+    background-color: #8D0013;
+}
+
+.main-box {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+h1 {
+    font-size: 90px;
+    font-weight: 900;
+    color: white;
+}
+
+h2 {
+    font-size: 35px;
+    font-weight: 400;
+    color: white;
+    padding: 15px 0px 25px;
+}
+
+.explore-btn {
+    border: none;
+    font-size: 20px;
+    font-weight: 700;
+    color: #600AB5;
+    padding: 5px 30px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition-duration: 0.3s;
+}
+
+.explore-btn:hover {
+    background-color: #2E755E;
+    color: white;
+}
