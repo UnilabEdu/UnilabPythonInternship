@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container mt-5">
+
+    <div clkass = "bg-white p-3 rounded shadow" >
+        <form method="POST">
+        {{form.product_image.label(class="form-label mt-3")}}
+        {{form.product_image(class = "form-control", placeholder=form.product_image.label.text)}}
+
+        {{form.product_name.label(class="form-label mt-3")}}
+        {{form.product_name(class="form-control", placeholder=form.product_name.label.text)}}
+
+        {{form.description.label(class="form-label mt-3")}}
+        {{form.description(class = "form-control", placeholder=form.description.label.text)}}
+
+        {{form.product_category.label(class="form-label mt-3")}}
+        {{form.product_category(class="form-select mt-3")}}
+
+        {{form.submit(class = "btn btn-dark mt-5")}}
+        
+        </form>
+    </div>
+
+</div>
+
+{% endblock %}

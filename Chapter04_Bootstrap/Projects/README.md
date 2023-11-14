@@ -30,6 +30,7 @@
 - აკო გაჩეჩილაძე | [Cibokopu](Chapter04_Bootstrap/Projects/2023/Ako_Gachechiladze) | [View Website](https://htmlpreview.github.io/?https://github.com/Ako8/UnilabPythonInternship/blob/master/Chapter04_Bootstrap/Projects/2023/Ako_Gachechiladze/home.html)
 - ლევან ყოლბაია | [Nutrition101](Chapter04_Bootstrap/Projects/2023/Levan_Kolbaia) | [Web Link](https://htmlpreview.github.io/?https://github.com/Rizznado/UnilabPythonInternship/blob/master/Chapter04_Bootstrap/Projects/2023/Levan_Kolbaia/Carbset.html)
 - ანანო რობაქიძე | [Anime](Chapter04_Bootstrap/Projects/2023/Anano_Robakidze) | [View](https://htmlpreview.github.io/?https://github.com/Anano24/UnilabPythonInternship/blob/master/Chapter04_Bootstrap/Projects/2023/Anano_Robakidze/index.html)
+- ბესიკ გოგეიშვილი | [კუპატა](Chapter04_Bootstrap/Projects/2023/besik_gogeishvili) | [View](https://htmlpreview.github.io/?https://github.com/b-gogeishvili/UnilabPythonInternship/blob/master/Chapter04_Bootstrap/Projects/2023/besik_gogeishvili/index.html)
 ## ინსტრუქცია:
 
 წინა თავში შესრულებულ ან სრულიად ახალ ვებ გვერდს გაუკეთეთ სტილი Bootstrap-ის გამოყენებით
