@@ -1,0 +1,26 @@
+{% macro createNavLink(endpoint, content) %}
+    {% if endpoint == request.endpoint %}
+        <li class="nav-item"><a class="nav-link active" href="{{ url_for(endpoint) }}">{{ content }}</a></li>
+    {% else %}
+        <li class="nav-item"><a class="nav-link" href="{{ url_for(endpoint) }}">{{ content }}</a></li>
+    {% endif %}
+{% endmacro %}
+
+{% macro createTable(tableContent) %}
+    <table class="table table-striped table-hover">
+        <thead>
+        {% for tableHead in tableContent[0].keys() %}
+            <th scope="col">{{ tableHead.title() }}</th>
+        {% endfor %}
+        </thead>
+        <tbody>
+        {% for rowDict in tableContent %}
+            <tr>
+                {% for key in rowDict.keys() %}
+                    <td>{{ rowDict.get(key) }}</td>
+                {% endfor %}
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endmacro %}
