@@ -32,6 +32,7 @@
 - ანანო რობაქიძე | [homepage](/Chapter3_CSS/Projects/Anano_Robakidze) | [[View]](https://htmlpreview.github.io/?https://github.com/Anano24/UnilabPythonInternship/blob/master/Chapter03_CSS/Projects/2023/Anano_Robakidze/index.html)
 - გიორგი მერებაშვილი | [YouTube](Chapter03_CSS/Projects/2023/giorgi_merebashvili) | [View](https://htmlpreview.github.io/?https://github.com/CCXLV/UnilabPythonInternship/blob/master/Chapter02_HTML/Projects/2023/Giorgi_Merebashvili/index.html)
 - ბესიკ გოგეიშვილი |  [Kupata](Chapter03_CSS/Projects/2023/besik_gogeishvili) | [[View]](https://htmlpreview.github.io/?https://github.com/b-gogeishvili/UnilabPythonInternship/blob/master/Chapter03_CSS/Projects/2023/besik_gogeishvili/index.html)
+
 ## ინსტრუქცია:
 
 წინა თავში შესრულებულ ან სრულიად ახალ ვებ გვერდს გაუკეთეთ სტილი css-ის გამოყენებით
