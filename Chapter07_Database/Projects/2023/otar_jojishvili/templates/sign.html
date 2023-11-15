@@ -1,0 +1,20 @@
+{%extends 'base.html'%}
+
+
+{%block content%}
+<form method="post">
+    {{form.hidden_tag()}}
+   <br>
+    {{form.loguser_email(class="form-control", placeholder=form.loguser_email.label.text)}}
+    <br>
+    {{form.loguser_password(class="form-control", placeholder=form.loguser_password.label.text)}}
+<br>
+    {{form.loguser_submit(class="btn btn-primary mt2")}}
+
+</form>
+
+<a href="{{url_for('register')}}">
+
+    <button>Register</button>
+</a>
+{%endblock%}
