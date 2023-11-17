@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  register
+{% endblock%}
+
+{% block content%}
+    <div class="position-absolute"><img src="{{ url_for('static', filename='img/register-hime.png') }}" class="register-img"></div>
+    <main class="form-signin m-auto d-flex justify-content-center">
+
+        <form >
+            <div class="d-flex justify-content-center h1-container">
+                <h1 class="h4 mb-3 fw-normal">Create Account</h1>
+            </div>
+            <div class="form-container">
+                <div class="form-floating">
+                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                    <label for="floatingInput" class="password-email">Email address</label>
+                </div>
+                <div class="form-floating mt-3">
+                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                    <label for="floatingPassword" class="password-email">Password</label>
+                </div>
+
+                <div class="form-check text-start mt-5">
+                    <input class="form-check-input" type="checkbox" value="remember-me" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                    Remember me
+                    </label>
+                </div>
+          </div>
+          <div class="d-flex justify-content-center" >
+            <button class="btn btn-danger py-2" type="submit">CREATE ACCOUNT</button>
+          </div>
+          <div class="d-flex justify-content-center">
+            <p class="text">Already have an account? </p>
+            <a href="{{ url_for('login') }}" class="sign-link">Log in</a>
+          </div>
+        </form>
+    </main>
+{% endblock %}

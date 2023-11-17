@@ -1,0 +1,24 @@
+{% extends 'layouts/base.html'%}
+
+{% block title %}
+    Add product page
+{% endblock %}
+
+{% block content%}
+    <div class="container mt-5">
+        <div class="bg-white p-3 rounded shadow">
+            <form method="POST" enctype="multipart/form-data">
+                {{ form.hidden_tag() }}
+                {{ form.img(class="form-control mt-3", placeholder=form.img.label.text)}}
+                {{ form.title(class="form-control mt-2", placeholder=form.title.label.text)}}
+                {{ form.color(class="form-control mt-2", placeholder=form.color.label.text)}}
+                {{ form.size(class="form-select mt-2", placeholder=form.size.label.text)}}
+                {{ form.price(class="form-control mt-2", placeholder=form.price.label.text)}}
+                {{ form.category(class="form-select mt-2")}}
+                {{ form.submit(class="btn btn-primary mt-2")}}
+            </form>
+        </div>
+    </div>
+
+
+{% endblock %}
