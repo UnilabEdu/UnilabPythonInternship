@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+    <link rel="stylesheet" href="/styles/styles.css">
+    <title>Admin</title>
+
+{% endblock %}
+
+{% block body %}
+
+    <div class="container">
+        <ul>
+            {% for user in users %}
+                <li>
+                    <p>{{ user.username }} - {{ user.email }} - {{ user.password }}</p>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+input {
+    outline: none;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    display: flex;
+    margin: 20px auto;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    width: 600px;
+    height: 600px;
+
+    font-family: 'Poppins', sans-serif;
+}
