@@ -1,0 +1,130 @@
+/* font: 'Lato', sans-serif */
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800;900&family=Josefin+Sans:wght@400;700&family=Kumbh+Sans:wght@400;700&family=Lato:wght@300;400;700;900&family=Outfit:wght@300;400;600&family=Plus+Jakarta+Sans:wght@500;700;800&family=Red+Hat+Display:wght@700&display=swap');
+
+body {
+    background-color: rgba(0, 0, 0, 0.932);
+    font-family: 'Lato', sans-serif;
+
+}
+
+.active {
+    text-decoration:underline; /* Change the color to a visually distinct one */
+
+}
+.join-link, .login-link {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.918);
+}
+.join-btn {
+    background-color: #f47521;
+    margin-left: 20px;
+
+}
+
+.search-icon {
+    width: 24px;
+}
+.navbar-brand {
+    color: #f47521;
+    font-weight: 900;
+    font-size: 1.8em;
+}
+h2 {
+    color: white;
+    margin: 30px 0 20px;
+}
+.myclass {
+    position: absolute;
+    top: 7%;
+    left: 10%;
+}
+
+.titan-logo {
+    width: 40%;
+    margin-bottom: 5%;
+}
+.titan-logo-2 {
+    margin-top: 10%;
+    width: 20%;
+    margin-bottom: 5%;
+
+}
+
+.text{
+    color: white;
+    font-size: 1.25em;
+    width: 40%;
+    margin-bottom: 4%;
+}
+.btn-1 {
+    background-color: #f47521;
+    color: #141519;
+    width: 23%;
+    padding: 10px 0;
+    border: none;
+    font-size: 1.125em;
+    font-weight: 600;
+}
+
+.btn-1:hover {
+    color: white;
+    transition: transform 0.3s;
+    transform: scale(1.05);
+}
+.card-title{
+    color: white;
+}
+.card-body {
+    padding-left: 0;
+}
+.card-text {
+    color: rgba(255, 255, 255, 0.568);
+}
+.my-img {
+    width: 100%;
+    margin: 50px 0 150px;
+}
+
+.nav-link, h5, .footer-txt {
+    color: rgba(255, 255, 255, 0.466) !important;
+}
+.img-hover:hover {
+    transition: transform 0.3s;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+
+@media (max-width: 1000px) {
+    .myclass {
+        top: 4%;
+        left: 10%;
+    }
+    .text{
+        color: white;
+        font-size: 1em;
+        width: 40%;
+        margin-bottom: 4%;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .myclass {
+        top: 3%;
+    }
+    .titan-logo {
+        width: 10%;
+    }
+    .titan-logo-2 {
+        width: 30%;
+    }
+    .text{
+        font-size: 0.7em;
+    }
+    .btn-1 {
+        font-size: 1em;
+        padding: 0;
+    }
+
+}

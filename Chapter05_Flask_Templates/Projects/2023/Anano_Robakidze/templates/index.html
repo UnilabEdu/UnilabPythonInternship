@@ -1,0 +1,51 @@
+{% extends 'base2.html' %}
+{% block content %}
+    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+          <div class="carousel-item active position-relative" data-bs-interval="2000">
+              <img src="{{ url_for('static', filename='img/f059202d-3d1d-4db4-aa0a-4531473091c01.png') }}" class="d-block w-100" alt="...">
+              <div class="myclass position-absolute">
+                  <img src="{{ url_for('static', filename='img/0f123b10-1e36-47ad-91ae-46dc0f0e2761.webp')}}" alt="logo img" class="titan-logo">
+                  <p class="text">Known in Japan as Shingeki no Kyojin, many years ago, the last remnants of humanity were forced to retreat behind the towering walls of a fortified city to escape the massive, man-eating Titans that roamed the land...</p>
+                  <a href="#"><button class="btn-1">Start Watching</button></a>
+              </div>
+          </div>
+          <div class="carousel-item position-relative" data-bs-interval="2000">
+              <img src="{{ url_for('static', filename='img/ab8d4019-5254-418a-b450-534a9a8d4e0c.webp') }}" class="d-block w-100" alt="...">
+              <div class="myclass position-absolute">
+                  <img src="{{ url_for('static', filename='img/3de5c3ff-547a-40ec-a9b0-40f4113569ce.webp') }}" alt="logo img" class="titan-logo">
+                  <p class="text">The ultimate battle royale for divinity has begun. High schoolers must use their unique powers to compete against each other for the coveted title “God.” But as each brawl becomes more vicious than the last,...</p>
+                  <a href="#"><button class="btn-1">Start Watching</button></a>
+              </div>
+          </div>
+          <div class="carousel-item position-relative">
+              <img src="{{ url_for('static', filename='img/20e89e1d-4420-4113-b7ec-d828255c0ef12.png') }}" class="d-block w-100" alt="...">
+              <div class="myclass position-absolute">
+                  <img src="{{ url_for('static', filename='img/1bdf4f33-6205-4ac0-9cd7-b2b01d6342cd.webp') }}" alt="logo img" class="titan-logo-2">
+                  <p class="text">After finally adopting a child, the Sonoyamas were unprepared for the mystery that would soon unravel. Hitori seems to be the perfect son for his loving parents. He's handsome, intelligent, and grateful for his...</p>
+                  <a href="#"><button class="btn-1">Start Watching</button></a>
+              </div>
+          </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    {% include 'animes.html'%}
+
+    <div>
+        <img class="my-img" src="{{ url_for('static', filename='img/4cf2741f-e4d3-45fb-8621-5b4ab5a9e23f.png') }}">
+    </div>
+{% endblock %}
+

@@ -1,0 +1,25 @@
+<div class="container">
+    <h2>Most Popular</h2>
+</div>
+
+<div class="container">
+    <div class="row row-cols-1 row-cols-md-4 g-4">
+        {% if anime_list %}
+            {% for anime in anime_list %}
+                <div class="col">
+                    <div class="card h-50">
+                        <a href="{{ url_for('view_anime', id=loop.index - 1) }}">
+                            <img src="{{ url_for('static', filename='img/' + anime['img']) }}" class="card-img-top img-hover" alt="{{ anime['name'] }}">
+                        </a>
+                        <div class="card-body">
+                            <h6 class="card-title">{{ anime['name'] }}</h6>
+                            <p class="card-text">{{ anime['text'] }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>No anime data available.</p>
+        {% endif %}
+    </div>
+</div>
