@@ -185,3 +185,7 @@ def create_petition():
 @app.route("/contact")
 def contact():
     return render_template("working.html")
+
+
+if __name__ == "__main__":
+    app.run()
