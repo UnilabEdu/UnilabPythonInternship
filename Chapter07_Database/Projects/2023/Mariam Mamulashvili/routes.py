@@ -2,6 +2,7 @@ from app import flask_app, UPLOAD_PATH
 from flask import render_template, url_for
 from db import db
 from forms import AddMediaForm, ContactForm
+
 from models import Product
 
 import os
@@ -13,7 +14,7 @@ product_dictionary = []
 
 @flask_app.route('/')
 def home():
-    print(url_for('home'))
+    product = Product.query.all()
     return render_template('home.html', is_admin=is_admin)
 
 @flask_app.route('/gimbal/')
@@ -38,16 +39,15 @@ def model_making():
 
 @flask_app.route('/about/')
 def about():
-    print(url_for('about'))
+    product = Product.query.all()
     return render_template('about.html', is_admin=is_admin)
 
 @flask_app.route('/add_media/', methods=['GET', 'POST'])
 def add_media():
-
     form = AddMediaForm()
     if form.validate_on_submit():
         new_product = Product(
-            name= form.product_name.data,
+            name = form.product_name.data,
             description= form.description.data,
             product_category= form.product_category.data,
             page_category= form.page_category.data)
@@ -62,7 +62,8 @@ def add_media():
         directory = os.path.join(UPLOAD_PATH, f"{filename}.{filetype}")
         file.save(directory)
         new_product.image = f"{filename}.{filetype}"
-        new_product.create()
+        db.session.add(new_product)
+        db.session.commit()
     else:
         print('Form not validated')
     return render_template('add_media.html', is_admin=is_admin, form=form)

@@ -13,10 +13,6 @@ flask_app.config["TRACK_DATABASE_MODIFICATIONS"] = False
 UPLOAD_PATH = os.path.join(flask_app.root_path, 'static', 'uploads')
 
 
-is_admin = True
-
-products = Product.query.all()
-
 
 
 if __name__ == '__main__':
