@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container text-center text_div">
+    <h2 style="margin:20px; text-align: center;">პეტიციაზე ხელის მოწერა</h2>
+    <div class="d-flex justify-content-center">
+        <form>
+            <div class="mb-4">
+                <label for="exampleFormControlInput1" class="form-label">სახელი</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="First Name"
+                    style="background-color:#ce5a67;">
+            </div>
+
+            <div class="mb-4">
+                <label for="exampleFormControlInput1" class="form-label">გვარი</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Last Name"
+                    style="background-color:#ce5a67;">
+            </div>
+
+            <div class="mb-4">
+                <label for="exampleFormControlInput1" class="form-label">სქესი</label>
+                <select class="form-select" aria-label="აირჩიე სქესი" style="background-color:#ce5a67;">
+                    <option value="1">მდედრობითი</option>
+                    <option value="2">მამრობითი</option>
+                    <option value="3">სხვა</option>
+                </select>
+            </div>
+
+            <div class="mb-4">
+                <label for="exampleFormControlInput1" class="form-label">ელ-ფოსტა</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Email"
+                    style="background-color:#ce5a67;">
+            </div>
+
+            <div class="mb-4">
+                <label for="exampleFormControlInput1" class="form-label">ტელეფონის ნომერი</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Phone Number"
+                    style="background-color:#ce5a67;">
+            </div>
+
+            <button class="btn" type="submit" style="background-color: #ce5a67; margin: 20px;">ხელმოწერა</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
