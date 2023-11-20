@@ -1,0 +1,9 @@
+{% macro create_navlink(endpoint, text) %}
+    {% if endpoint == request.endpoint %}
+        <a class="nav-link active" style="color: #ce5a67" href="{{url_for(endpoint, img='upload')}}">{{ text }}</a>
+    {% elif endpoint == request.endpoint %}
+        <a class="nav-link active" style="color: #ce5a67" href="{{url_for(endpoint)}}">{{ text }}</a>
+    {% else %}
+        <a class="nav-link" href="{{url_for(endpoint)}}">{{ text }}</a>
+    {% endif %}
+{% endmacro %}
