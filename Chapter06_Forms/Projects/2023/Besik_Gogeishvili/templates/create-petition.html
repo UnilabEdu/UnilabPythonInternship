@@ -1,0 +1,109 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container text-center text_div">
+    <h2 style="margin:20px; text-align: center;">შექმენი შენი პეტიცია</h2>
+    <hr>
+    <div class="d-flex justify-content-center">
+        <form method="post" enctype="multipart/form-data">
+
+            {{ form.hidden_tag() }}
+
+            <br>
+            <hr>
+
+            <div class="input-group mb-3">
+                <button class="btn dropdown-toggle w-100" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false" style="background-color:#ce5a67;">აირჩიეთ სურათის ატვირთვის მეთოდი </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="{{ url_for('create_petition', img='upload') }}">სურათის ატვირთვა</a></li>
+                    <li><a class="dropdown-item" href="{{ url_for('create_petition', img='link') }}">სურათის ლინკი</a></li>
+                </ul>
+
+            </div>
+            <hr>
+            <br>
+
+            {% if img == "upload" %}
+                <div class="input-group mb-3">
+                    <label class="form-label w-100">მთავარი სურათი</label>
+                    {{ form.main_img }}
+                </div>
+                <div class="input-group mb-3">
+                    <label class="form-label w-100">პირველი სურათი</label>
+                    {{ form.left_img1 }}
+                </div>
+                <div class="input-group mb-3">
+                    <label class="form-label w-100">მეორე სურათი</label>
+                    {{ form.left_img2 }}
+                </div>
+                <div class="input-group mb-3">
+                    <label class="form-label w-100">მესამე სურათი</label>
+                    {{ form.right_img1 }}
+                </div>
+                <div class="input-group mb-3">
+                    <label class="form-label w-100">მეოთხე სურათი</label>
+                    {{ form.right_img2 }}
+                </div>
+
+            {% else %}
+
+                <div class="mb-3">
+                    <label class="form-label">მთავარი სურათი</label>
+                    {{ form.main_img_l }}
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">პირველი სურათი</label>
+                    {{ form.left_img1_l }}
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">მეორე სურათი</label>
+                    {{ form.left_img2_l }}
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">მესამე სურათი</label>
+                    {{ form.right_img1_l }}
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">მეოთხე სურათი</label>
+                    {{ form.right_img2_l }}
+                </div>
+            {% endif %}
+            
+            <br>
+            <br>
+            <hr> 
+            <label class="form-label w-100">შეიყვანეთ ინფორმაცია</label>
+            <hr>
+            <br>
+
+            <div class="mb-3">
+                <label class="form-label">დასახელება</label>
+                {{ form.name }}
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">სათაური</label>
+                {{ form.title }}
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">ადრესატი</label>
+                {{ form.address }}
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">ტექსტი</label>
+                {{ form.description }}
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">მოკლე მიმოხილვა</label>
+                {{ form.short_description }}
+            </div>
+            <br>
+            {{ form.submit }}
+        </form>
+    </div>
+</div>
+{% endblock %}
