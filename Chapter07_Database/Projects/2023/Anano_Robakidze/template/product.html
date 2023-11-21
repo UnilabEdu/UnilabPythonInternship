@@ -1,0 +1,24 @@
+{% extends 'base.html'%}
+
+{% block title %}
+  Product page
+{% endblock %}
+
+{% block content%}
+<div class="container mt-5">
+    <div class="row row-cols-1 row-cols-md-3 g-4 mt-5">
+      <div class="col">
+        <div class="card h-100">
+          <img src="{{ url_for('static', filename='img/' + product.img) }}" class="card-img-top" alt="{{product.title}}" style="height: 60%;">
+          <div class="card-body">
+            <h5 class="card-title">Product name: {{ product.title}}</h5>
+            <p class="card-text">Color: {{ product.color}}</p>
+            <p class="card-text"> Size: {{ product.size}}</p>
+            <p class="card-text"> Price: {{ product.price}}</p>
+            <a href="#" class="btn btn-primary">Buy Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

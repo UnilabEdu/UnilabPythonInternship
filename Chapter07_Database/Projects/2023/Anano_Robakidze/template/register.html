@@ -1,0 +1,36 @@
+{% extends 'base.html'%}
+
+{% block title %}
+    Register page
+{% endblock %}
+
+{% block content%}
+
+
+
+    <div class="container mt-5">
+        {% if form.errors %}
+            {% for field, errors in form.errors.items() %}
+                {% for error in errors %}
+                <div class="alert alert-danger" role="alert">
+                    * {{ error }}
+                </div>
+                {% endfor %}
+            {% endfor %}
+        {% endif %}
+        <div class="bg-white p-3 rounded shadow">
+            <form method="POST">
+                {{ form.hidden_tag() }}
+                {{ form.username(class="form-control mt-2", placeholder=form.username.label.text)}}
+                {{ form.password(class="form-control mt-2", placeholder=form.password.label.text)}}
+                {{ form.confirm_password(class="form-control mt-2", placeholder=form.confirm_password.label.text)}}
+                {{ form.birthday(class="form-control mt-2 mb-3")}}
+                {{ form.gender (class="form-check mt-2 mb-3") }}
+                {{ form.about_you(class="form-control mt-2 mb-3", placeholder=form.about_you.label.text) }}
+                {{ form.submit(class="btn btn-primary mt-2")}}
+            </form>
+        </div>
+    </div>
+
+
+{% endblock %}

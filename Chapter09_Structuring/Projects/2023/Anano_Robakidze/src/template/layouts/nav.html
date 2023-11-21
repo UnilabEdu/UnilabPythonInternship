@@ -1,0 +1,36 @@
+{% from 'layouts/macros.html' import nav_link %}
+
+<nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+    <div class="container">
+      <a class="navbar-brand {{ nav_link('home')}}" href="{{ url_for('main.home')}}">SHOP</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link {{ nav_link('main.home')}}" aria-current="page" href="{{ url_for('main.home')}}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link {{ nav_link('main.about')}}" aria-current="page" href="{{ url_for('main.about')}}">About</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Category
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="{{ url_for('product.category', category_id='1')}}">Clothes</a></li>
+              <li><a class="dropdown-item" href="{{ url_for('product.category', category_id='2')}}">Shoes</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link {{ nav_link('product.add_product')}}" href="{{ url_for('product.add_product')}}">Add product</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link {{ nav_link('auth.register')}}" href="{{ url_for('auth.register')}}">Register</a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+</nav>

@@ -1,0 +1,68 @@
+{% from 'macros.html' import is_active %}
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top bg-dark" data-bs-theme="dark">
+    <div class="container">
+      <a class="navbar-brand" href="{{ url_for('home')}}">Anime</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarScroll">
+        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+          <li class="nav-item">
+            <a class="nav-link {{ is_active('home')}}" aria-current="page" href="{{ url_for('home')}}">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle {{ is_active('browse')}}"  role="button" data-bs-toggle="dropdown" aria-expanded="false" href="{{ url_for('browse')}}">
+                Browse
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="{{ url_for('animes')}}">Popular</a></li>
+              <li><a class="dropdown-item" href="{{ url_for('animes')}}">New</a></li>
+              <li><a class="dropdown-item" href="{{ url_for('animes')}}">Alphabetical</a></li>
+              <li><a class="dropdown-item" href="{{ url_for('animes')}}">Simulcast Season</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle {{ is_active('genre')}}" role="button" data-bs-toggle="dropdown" aria-expanded="false" href="{{ url_for('genre') }}">
+              Genre
+            </a>
+            <ul class="dropdown-menu">
+                <table class="table table-borderless table-sm">
+                    <tbody>
+                      <tr>
+                        <td><a class="dropdown-item" href="#">Action</a></td>
+                        <td><a class="dropdown-item" href="#">Fantasy</a></td>
+                        <td><a class="dropdown-item" href="#">Supernatural</a></td>
+                      </tr>
+                      <tr>
+                        <td><a class="dropdown-item" href="#">Advanture</a></td>
+                        <td><a class="dropdown-item" href="#">Music</a></td>
+                        <td><a class="dropdown-item" href="#">Sports</a></td>
+                      </tr>
+                      <tr>
+                        <td><a class="dropdown-item" href="#">Comedy</a></td>
+                        <td><a class="dropdown-item" href="#">Romance</a></td>
+                        <td><a class="dropdown-item" href="#">Thriller</a></td>
+                      </tr>
+                      <tr>
+                        <td><a class="dropdown-item" href="#">Drama</a></td>
+                        <td><a class="dropdown-item" href="#">Sci-Fi</a></td>
+                        <td><a class="dropdown-item" href="#">Shonen</a></td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> -->
+          <button class="btn search-btn" type="submit"><img class="search-icon" src="{{ url_for('static', filename='img/icons8-search-50.png') }}"></button>
+        </form>
+        <div class="btn-group">
+          <button class="btn join-btn" type="submit"><a href="{{ url_for('register') }}" class="join-link">Join Now</a></button>
+          <button type="button" class="btn btn-outline-danger"><a href="{{ url_for('login') }}" class="login-link">Log In</a></button>
+        </div>
+      </div>
+    </div>
+</nav>

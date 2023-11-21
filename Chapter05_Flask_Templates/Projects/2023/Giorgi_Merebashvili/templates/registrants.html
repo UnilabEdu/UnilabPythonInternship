@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+    <title>Home Page</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+
+{% endblock %}
+
+{% block body %}
+
+    {% include 'utils/utils.html' %}
+    <div class="registrants-div">
+        <h3>List of Registrants</h3>
+        <ul>
+            {% for registrant in registrants %}
+                <li>{{ registrant.name }} - {{ registrant.sport }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+{% endblock %}

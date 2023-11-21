@@ -1,0 +1,23 @@
+{% extends 'base.html'%}
+
+{% block title %}
+    Add product page
+{% endblock %}
+
+{% block content%}
+    <div class="container mt-5">
+        <div class="bg-white p-3 rounded shadow">
+            <form method="POST" enctype="multipart/form-data">
+                {{ form.hidden_tag() }}
+                {{ form.product_img_link(class="form-control mt-3", placeholder=form.product_img_link.label.text)}}
+                {{ form.product_title(class="form-control mt-2", placeholder=form.product_title.label.text)}}
+                {{ form.product_color(class="form-control mt-2", placeholder=form.product_color.label.text)}}
+                {{ form.product_size(class="form-select mt-2", placeholder=form.product_size.label.text)}}
+                {{ form.price(class="form-control mt-2", placeholder=form.price.label.text)}}
+                {{ form.submit(class="btn btn-primary mt-2")}}
+            </form>
+        </div>
+    </div>
+
+
+{% endblock %}

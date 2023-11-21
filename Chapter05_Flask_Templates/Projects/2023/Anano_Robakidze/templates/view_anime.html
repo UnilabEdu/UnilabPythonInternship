@@ -1,0 +1,22 @@
+{% extends 'base2.html'%}
+
+{% block content %}
+
+<div class="container">
+    <div class="row row-cols-1 row-cols-md-4 g-4 mt-5">
+
+        <div class="col">
+            <div class="card h-50 mt-5 mb-5">
+
+                <img src="{{ url_for('static', filename='img/' + anime['img']) }}" class="card-img-top img-hover" alt="{{ anime['name'] }}">
+
+                <div class="card-body">
+                    <h6 class="card-title">{{ anime['name'] }}</h6>
+                    <p class="card-text">{{ anime['text'] }}</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock %}
