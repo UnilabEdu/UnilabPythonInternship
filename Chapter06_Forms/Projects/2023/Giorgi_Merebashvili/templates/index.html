@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+    <link rel="stylesheet" href="/static/styles.css">
+    <title>Registration</title>
+
+{% endblock %}
+
+{% block body %}
+
+    <div class="container">
+        <form method="post">
+            {{ form.hidden_tag() }}
+            <div class="container-div">
+                {{ form.username.label(class='label') }}
+                {{ form.username(placeholder=form.username.label.text) }}
+            </div>
+            <div class="container-div">
+                {{ form.email.label(class='label') }}
+                {{ form.email(placeholder=form.email.label.text) }}
+            </div>
+            <div class="container-div">
+                {{ form.password.label(class='label') }}
+                {{ form.password(placeholder=form.password.label.text) }}
+            </div>
+            <div class="container-div">
+                {{ form.submit }}
+            </div>
+        </form>
+    </div>
+
+{% endblock %}

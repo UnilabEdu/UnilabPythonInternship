@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block head %}
+    <div class="container make-border mt-5 p-5">
+        <h1>Books</h1>
+        <hr/>
+        <div class="make-border" style="display: flex; flex-direction: row; width: 100%; flex-wrap: wrap">
+            {% for item in library %}
+                <div class="container make-border" style="width: 50%">
+                    <p>{{ item.title }}</p>
+                    <p>{{ item.author }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="container text-center">
+        <a class="btn btn-primary mt-5 p-4" href="{{ url_for("add_book_get") }}">Add a Book</a>
+    </div>
+{% endblock %}
