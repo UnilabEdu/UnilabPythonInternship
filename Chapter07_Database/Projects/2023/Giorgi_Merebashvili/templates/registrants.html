@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+    <link rel="stylesheet" href="/static/styles.css">
+    <title>Sport Registrants</title>
+
+{% endblock %}
+
+{% block body %}
+
+    <div class="container">
+        <ol>
+            {% for registrant in registrants %}
+                <li>
+                    <p>{{ registrant.name }} - {{ registrant.age }} - {{ registrant.sport }} </p>
+                </li>
+            {% endfor %}
+        </ol>
+    </div>
+
+{% endblock %}
