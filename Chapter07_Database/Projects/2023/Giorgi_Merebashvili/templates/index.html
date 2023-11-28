@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+    <link rel="stylesheet" href="/static/styles.css">
+    <title>Sport Registration</title>
+
+{% endblock %}
+
+{% block body %}
+
+    <div class="container">
+        <form method="post">
+            {{ form.hidden_tag() }}
+            {{ form.name.label }}
+            {{ form.name }}
+            {{ form.age.label }}
+            {{ form.age }}
+            {{ form.sport.label }}
+            {{ form.sport }}
+            {{ form.submit }}
+        </form>
+    </div>
+
+{% endblock %}
