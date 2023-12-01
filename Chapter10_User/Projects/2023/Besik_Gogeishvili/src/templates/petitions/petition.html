@@ -1,0 +1,75 @@
+{% extends "layouts/base.html" %}
+{% from "macros.html" import modify_link, calculate_percentage %}
+
+{% block title %}
+    <title>{{ petition["name"] }}</title>
+{% endblock %}
+
+{% block content %}
+<div class="container mt-4 text-center">
+    <h1>პეტიცია: {{ petition.title }}</h1>
+    <hr>
+</div>
+<div class="container mt-4">
+    <div class="row gy-4 text-center">
+        <div class="col-xxl col-xl-12 col-lg-12 col-md-12 col-sm-12">
+            <img src="{{ modify_link(petition.method).strip() }}{{ petition.img1 }}" width="200px" height="130px">
+        </div>
+        <div class="col-xxl col-xl-12 col-lg-12 col-md-12 col-sm-12">
+            <img src="{{ modify_link(petition.method).strip() }}{{ petition.img2 }}" width="250px" height="180px">
+        </div>
+        <div class="col-xxl col-xl-12 col-lg-12 col-md-12 col-sm-12">
+            <img src="{{ modify_link(petition['method']).strip() }}{{ petition.img3 }}" width="300px" height="275px">
+        </div>
+        <div class="col-xxl col-xl-12 col-lg-12 col-md-12 col-sm-12">
+            <img src="{{ modify_link(petition['method']).strip() }}{{ petition.img4 }}" width="250px" height="180px">
+        </div>
+        <div class="col-xxl col-xl-12 col-lg-12 col-md-12 col-sm-12">
+            <img src="{{ modify_link(petition['method']).strip() }}{{ petition.img5 }}" width="200px" height="130px">
+        </div>
+    </div>
+    <div class="text_div">
+        <h2>ᲐᲓᲠᲔᲡᲐᲢᲘ: <em>{{ petition.address }}</em></h2>
+        <hr>
+        <p class="text-center text-break" id="text">{{ petition.description }}</p>
+        <br>
+        <br>
+
+        {% if petition.votes != petition.goal %}
+            <div class="container text-center">
+                <h3>ხელმომწერთა რაოდენობა</h3>
+                <hr>
+                {% if petition.votes == 0 %}
+                    <div class="progress" role="progressbar" aria-label="Example with label" aria-valuemin="0" aria-valuemax="100" style="height: 35px; margin: 30px 50px;">
+                        <div class="progress-bar overflow-visible text-dark" {{ calculate_percentage(petition.votes, petition.goal, False, True) }}>
+                            {{ petition.votes }}/{{ petition.goal }}
+                        </div>
+                    </div>
+                {% else %}
+                    <div class="progress" role="progressbar" aria-label="Example with label" aria-valuemin="0" aria-valuemax="100" style="height: 35px; margin: 30px 50px;">
+                        <div class="progress-bar overflow-visible text-dark" {{ calculate_percentage(petition.votes, petition.goal) }}>
+                            {{ petition.votes }}/{{ petition.goal }}
+                        </div>
+                    </div>
+                {% endif %}
+                <br>
+            </div>
+
+            <div class="button_align">
+                <a href="{{ url_for('petitions.sign_petition', petition_id = petition.id) }}"> <button class="butn" type="button">ხელის მოწერა</button> </a>
+            </div>
+        {% else %}
+            <div class="container text-center">
+                <h3>პეტიცია დასრულებულია</h3>
+                <hr>
+                <div class="progress" role="progressbar" aria-label="Example with label" aria-valuemin="0" aria-valuemax="100" style="height: 35px; margin: 30px 50px;">
+                    <div class="progress-bar overflow-visible text-dark bg-success" {{ calculate_percentage(petition.votes, petition.goal, True) }}>
+                        {{ petition.votes }}/{{ petition.goal }}
+                    </div>
+                </div>
+                <br>
+            </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,69 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+<div class="container text-center text_div">
+    <h2 style="margin:20px; text-align: center;">პეტიციაზე ხელის მოწერა</h2>
+    <hr>
+    <div class="d-flex justify-content-center">
+        <form method="post" enctype="multipart/form-data">
+
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    {% for message in messages %}
+                        <div class="alert alert-danger d-flex align-items-center" role="alert">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+
+            {{ form.hidden_tag() }}
+
+            <br>
+
+            <div class="mb-3">
+                <label class="form-label">სახელი</label>
+                {{ form.name }}
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">გვარი</label>
+                {{ form.surname }}
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">ელ-ფოსტა</label>
+                {{ form.email }}
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">პირადი ნომერი</label>
+                {{ form.personal_id }}
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">სქესი</label>
+                {{ form.sex }}
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">ტელეფონის ნომერი</label>
+                {{ form.number }}
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">საცხოვრებელი ქალაქი</label>
+                {{ form.city }}
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">დაბადების თარიღი</label>
+                {{ form.date }}
+            </div>
+
+            <br>
+            {{ form.submit }}
+        </form>
+    </div>
+</div>
+{% endblock %}

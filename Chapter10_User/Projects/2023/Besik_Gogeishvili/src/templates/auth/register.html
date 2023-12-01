@@ -1,0 +1,74 @@
+{% extends "layouts/base.html" %}
+
+{% block title %}
+        <title>რეგისტრაცია</title>
+{% endblock %}
+
+{% block content %}
+<div class="container text-center text_div">
+    <h2 style="margin:20px; text-align: center;">რეგისტრაცია</h2>
+    <hr>
+    <div class="d-flex justify-content-center">
+        <form method="post">
+
+            <br>
+
+            {% if form.errors %}
+                {% for field, errors in form.errors.items() %}
+                    {% for error in errors %}
+                        <div class="alert alert-danger" role="alert">
+                            * {{ error }}
+                        </div>
+                    {% endfor %}
+                {% endfor %}
+                <br>
+            {% endif%}
+
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    {% for message in messages %}
+                        <div class="alert alert-danger d-flex align-items-center" role="alert">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+
+            {{ form.hidden_tag() }}
+            
+            <div class="mb-3">
+                <label class="form-label">შეიყვანეთ მომხმარებლის სახელი</label>
+                {{ form.username }}
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">სახელი</label>
+                {{ form.name }}
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">გვარი</label>
+                {{ form.surname }}
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">ელ-ფოსტა</label>
+                {{ form.email }}
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">პაროლი</label>
+                {{ form.password }}
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">გაიმეორე პაროლი</label>
+                {{ form.repeat_password }}
+            </div>
+            {{ form.description }}
+            <br>
+            {{ form.submit }}
+        </form>
+    </div>
+</div>
+{% endblock %}

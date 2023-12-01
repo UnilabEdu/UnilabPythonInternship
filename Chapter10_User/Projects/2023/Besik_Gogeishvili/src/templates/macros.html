@@ -1,0 +1,27 @@
+{% macro modify_link(method) %}
+    {% if method == "upload" %}
+        .
+    {% endif %}
+{% endmacro %}
+
+{% macro create_navlink(endpoint, text) %}
+    {% if endpoint == request.endpoint %}
+        <a class="nav-link active" style="color: #ce5a67" href="{{url_for(endpoint)}}">{{ text }}</a>
+    {% else %}
+        {% if endpoint == "petitions.create_petition" %}
+            <a class="nav-link" href="{{url_for(endpoint, img='upload')}}">{{ text }}</a>
+        {% else %}
+            <a class="nav-link" href="{{url_for(endpoint)}}">{{ text }}</a>
+        {% endif %}
+    {% endif %}
+{% endmacro %}
+
+{% macro calculate_percentage(voters, goal, custom=False, zero=False) %}
+    {% if custom %}
+        style="width: {{ (voters / goal) * 100 }}%; padding: 10px; font-size:20px;"
+    {% elif zero %}
+        style="width: {{ (voters / goal) * 100 }}%; background-color: white; padding-left: 10px; font-size:20px;"
+    {% else %}
+        style="width: {{ (voters / goal) * 100 }}%; background-color: #ce5a67; padding: 10px; font-size:20px;"
+    {% endif %}
+{% endmacro %}
