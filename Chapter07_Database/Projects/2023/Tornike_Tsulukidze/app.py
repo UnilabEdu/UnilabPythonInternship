@@ -7,7 +7,7 @@ base_directory = path.abspath(path.dirname(__file__))
 
 app = Flask(__name__)
 app.config["SECRET_KEY"] = "SECRET"
-app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///" + path.join(base_directory, "database.db")
+app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///" + path.join(base_directory, "database.sqlite")
 
 
 NAVBAR_ITEMS = [
