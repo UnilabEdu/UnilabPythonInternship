@@ -1,0 +1,61 @@
+{% extends "layouts/base.html" %}
+
+{% block title %}
+        <title>შესვლა</title>
+{% endblock %}
+
+{% block content %}
+<div class="container text-center text_div">
+    <h2 style="margin:20px; text-align: center;">ანგარიშზე შესვლა</h2>
+    <hr>
+    <div class="d-flex justify-content-center">
+        <form method="post">
+
+            <br>
+
+            {% if form.errors %}
+                {% for field, errors in form.errors.items() %}
+                    {% for error in errors %}
+                        <div class="alert alert-danger" role="alert">
+                            * {{ error }}
+                        </div>
+                    {% endfor %}
+                    <br>
+                {% endfor %}
+            {% endif%}
+            
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    {% for message in messages %}
+                        <div class="alert alert-danger d-flex align-items-center" role="alert">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+
+            {{ form.hidden_tag() }}
+
+            <div class="mb-4">
+                <label for="exampleFormControlInput1" class="form-label">მომხმარებლის სახელი ან ელ-ფოსტა</label>
+                {{ form.username }}
+            </div>
+
+            <div class="mb-4">
+                <label for="exampleFormControlInput1" class="form-label">პაროლი</label>
+                {{ form.password }}
+            </div>
+
+            <div class="form-check" style="text-align: left;">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                    დამიმახსოვრე
+                </label>
+            </div>
+
+            <br>
+            {{ form.submit }}
+        </form>
+    </div>
+</div>
+{% endblock %}
