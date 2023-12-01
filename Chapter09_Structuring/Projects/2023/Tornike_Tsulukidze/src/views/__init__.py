@@ -1,0 +1,1 @@
+from src.views.main.routes import main
