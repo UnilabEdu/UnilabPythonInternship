@@ -7,16 +7,14 @@ from src.models import User
 
 import os
 
-
 TEMPLATES_FOLDER = os.path.join(Config.BASE_DIRECTORY, "templates", "auth")
 auth = Blueprint("auth", __name__, template_folder=TEMPLATES_FOLDER)
 
 
 @auth.route("/login", methods=["GET", "POST"])
 def login():
-
     if current_user.is_authenticated:
-        return redirect(url_for("main.error"))
+        return redirect(url_for("main.error", code="403"))
 
     form = Login()
 
@@ -30,7 +28,7 @@ def login():
 
             if next_page:
                 return redirect(next_page)
-            
+
             return redirect(url_for("main.home"))
         else:
             flash("Invalid Password or Username")
@@ -40,9 +38,8 @@ def login():
 
 @auth.route("/register", methods=["GET", "POST"])
 def register():
-
     if current_user.is_authenticated:
-        return redirect(url_for("main.error"))
+        return redirect(url_for("main.error", code="403"))
 
     form = Register()
 
@@ -54,10 +51,10 @@ def register():
 
             user = User()
             form.populate_obj(user)
-            user.role_id = 2 # Normal User
+            user.role_id = 2  # Normal User
 
             if add_on == "secret_key_to_create_admin_profile":
-                user.role_id = 1 # Administrator
+                user.role_id = 1  # Administrator
 
             user.create()
 
@@ -66,7 +63,7 @@ def register():
             login_user(user)
 
             return redirect(url_for("main.home"))
-        
+
         else:
             flash("That username is taken. Try another.")
 
@@ -75,7 +72,6 @@ def register():
 
 @auth.route("/logout")
 def logout():
-
     logout_user()
 
     return redirect(url_for("main.home"))

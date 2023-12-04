@@ -2,12 +2,12 @@ from flask import render_template, redirect, url_for, request, Blueprint, flash
 from flask_login import current_user, login_required
 
 from uuid import uuid4
+from datetime import datetime
 import os
 
 from src.models import Petition, Signer, PetitionSigner, User
-from src.config import Config
+from src.config import Config, to_english
 from src.views.petitions.forms import AddPetition, SignPetition
-
 
 TEMPLATES_FOLDER = os.path.join(Config.BASE_DIRECTORY, "templates", "petitions")
 petitions = Blueprint("petitions", __name__, template_folder=TEMPLATES_FOLDER)
@@ -26,7 +26,7 @@ def sign_petition():
 
     if current_user.is_authenticated:
         form = SignPetition(
-            obj = current_user
+            obj=current_user
         )
 
     petition_id = request.args.get("petition_id")
@@ -36,21 +36,21 @@ def sign_petition():
         exists = False
 
         to_sign = Petition.query.get(petition_id)
-        
+
         for signer in to_sign.signers:
             if signer.personal_id == form.personal_id.data or signer.email == form.email.data:
                 exists = True
 
         if not exists:
             new_signer = Signer(
-                name= form.name.data,
-                surname= form.surname.data,
-                email= form.email.data,
-                personal_id= form.personal_id.data,
-                sex= form.sex.data,
-                number= form.number.data,
-                city= form.city.data,
-                date = form.date.data
+                name=form.name.data,
+                surname=form.surname.data,
+                email=form.email.data,
+                personal_id=form.personal_id.data,
+                sex=form.sex.data,
+                number=form.number.data,
+                city=form.city.data,
+                date=form.date.data
             )
 
             new_signer.create()
@@ -74,32 +74,33 @@ def create_petition():
     form = AddPetition()
     method = request.args.get("img")
 
-
     if form.validate_on_submit():
 
-        name = Config.to_english(form.name.data)
+        name = to_english(form.name.data)
+        upload_time = str(datetime.now().time())
+        img_path = f"{name}{upload_time}"
 
         new_petition = Petition(
-            user_id= current_user.id,
-            name= form.name.data,
-            title= form.title.data,
-            address= form.address.data,
-            description= form.description.data,
-            short_description= form.short_description.data,
-            url_name= name,
-            img1= form.left_img1_l.data,
-            img2= form.left_img2_l.data,
-            img3= form.main_img_l.data,
-            img4= form.right_img1_l.data,
-            img5= form.right_img2_l.data,
-            method= "link",
-            goal= form.goal.data,
-            votes= 0
+            user_id=current_user.id,
+            name=form.name.data,
+            title=form.title.data,
+            address=form.address.data,
+            description=form.description.data,
+            short_description=form.short_description.data,
+            url_name=name,
+            img1=form.main_img_l.data,
+            img2=form.left_img2_l.data,
+            img3=form.left_img1_l.data,
+            img4=form.right_img1_l.data,
+            img5=form.right_img2_l.data,
+            method="link",
+            goal=form.goal.data,
+            votes=0
         )
 
         if method == "upload":
             new_petition.method = "upload"
-            os.makedirs(os.path.join(Config.UPLOAD_PATH, name), exist_ok=True)
+            os.makedirs(os.path.join(Config.UPLOAD_PATH, img_path), exist_ok=True)
 
             counter = 1
             for key, value in form.data.items():
@@ -110,12 +111,11 @@ def create_petition():
                     filename = str(uuid4())
                     fullname = f"{filename}.{filetype}"
 
-                    upload_path = os.path.join(Config.UPLOAD_PATH, name, fullname)
+                    upload_path = os.path.join(Config.UPLOAD_PATH, img_path, fullname)
                     file.save(upload_path)
 
-                    setattr(new_petition, f"img{counter}", f"./static/assets/{name}/{fullname}")
+                    setattr(new_petition, f"img{counter}", f"./static/assets/{img_path}/{fullname}")
                     counter += 1
-            
 
         new_petition.create()
 

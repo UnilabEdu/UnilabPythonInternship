@@ -1,4 +1,4 @@
-body {
+.bg-custom {
     background-color: #fcf5ed;
 }
 
@@ -56,4 +56,14 @@ img {
 
 .button_align {
     text-align: center;
+}
+
+.name {
+    font-size: 32px;
+    font-weight: bold
+}
+
+.idd {
+    font-size: 18px;
+    font-weight: 600
 }

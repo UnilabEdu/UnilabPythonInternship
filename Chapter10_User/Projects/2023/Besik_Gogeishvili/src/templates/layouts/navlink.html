@@ -1,6 +1,6 @@
 {% from "macros.html" import create_navlink %}
 
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="bg-custom navbar navbar-expand-lg">
     <div class="container-fluid">
         <a class="navbar-brand" href="{{ url_for('main.home') }}" style="color: #ce5a67"><b>მთავარი</b></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
@@ -8,16 +8,14 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
+            <div class="navbar-nav" >
                 {{ create_navlink("petitions.create_petition", "პეტიციის შექმნა") }}
                 {{ create_navlink("main.contact", "კონტაქტი") }}
 
                 {% if current_user.is_authenticated %}
 
                     {% if current_user.is_admin() %}
-                        <li class="nav-item">
                             <a class="nav-link" href="{{url_for('admin.index')}}">Admin Panel</a>
-                        </li>
                     {% endif %}
           
                     {{ create_navlink("user.user_profile", current_user.username) }}

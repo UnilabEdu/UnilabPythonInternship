@@ -7,7 +7,6 @@ from src.views.petitions.forms import AddPetition
 
 import os
 
-
 TEMPLATES_FOLDER = os.path.join(Config.BASE_DIRECTORY, "templates", "main")
 main = Blueprint("main", __name__, template_folder=TEMPLATES_FOLDER)
 
@@ -26,9 +25,10 @@ def home():
 
 @main.route("/contact")
 def contact():
-    return render_template("layouts/working.html")
+    return render_template("errors/working.html")
 
 
-@main.route("/error")
+@main.route("/error", methods=["GET", "POST"])
 def error():
-    return render_template("layouts/error.html")
+    error_code = request.args.get("code")
+    return render_template(f"errors/{error_code}.html")

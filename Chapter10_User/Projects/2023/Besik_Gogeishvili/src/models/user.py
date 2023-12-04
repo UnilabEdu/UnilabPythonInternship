@@ -14,6 +14,7 @@ class User(BaseModel, UserMixin):
     name = db.Column(db.String)
     surname = db.Column(db.String)
     email = db.Column(db.String)
+    sex = db.Column(db.String)
     _password = db.Column(db.String)
     role_id = db.Column(db.Integer, db.ForeignKey("roles.id"))
 
