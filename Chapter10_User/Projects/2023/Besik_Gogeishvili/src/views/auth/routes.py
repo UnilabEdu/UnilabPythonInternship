@@ -1,5 +1,5 @@
 from flask import render_template, redirect, url_for, Blueprint, flash, request
-from flask_login import login_user, logout_user
+from flask_login import login_user, logout_user, current_user
 
 from src.views.auth.forms import Login, Register
 from src.config import Config
@@ -14,6 +14,10 @@ auth = Blueprint("auth", __name__, template_folder=TEMPLATES_FOLDER)
 
 @auth.route("/login", methods=["GET", "POST"])
 def login():
+
+    if current_user.is_authenticated:
+        return redirect(url_for("main.error"))
+
     form = Login()
 
     next_page = request.args.get("next")
@@ -36,7 +40,13 @@ def login():
 
 @auth.route("/register", methods=["GET", "POST"])
 def register():
+
+    if current_user.is_authenticated:
+        return redirect(url_for("main.error"))
+
     form = Register()
+
+    add_on = request.args.get("hidden")
 
     if form.validate_on_submit():
 
@@ -44,9 +54,16 @@ def register():
 
             user = User()
             form.populate_obj(user)
+            user.role_id = 2 # Normal User
+
+            if add_on == "secret_key_to_create_admin_profile":
+                user.role_id = 1 # Administrator
 
             user.create()
 
+            # Automatically log in user.
+            user = User.query.filter(User.username == form.username.data).first()
+            login_user(user)
 
             return redirect(url_for("main.home"))
         

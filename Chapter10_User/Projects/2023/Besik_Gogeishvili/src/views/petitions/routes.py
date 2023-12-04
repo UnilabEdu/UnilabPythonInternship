@@ -4,7 +4,7 @@ from flask_login import current_user, login_required
 from uuid import uuid4
 import os
 
-from src.models import Petition, Signer, PetitionSigner
+from src.models import Petition, Signer, PetitionSigner, User
 from src.config import Config
 from src.views.petitions.forms import AddPetition, SignPetition
 
@@ -38,7 +38,7 @@ def sign_petition():
         to_sign = Petition.query.get(petition_id)
         
         for signer in to_sign.signers:
-            if signer.personal_id == form.personal_id.data:
+            if signer.personal_id == form.personal_id.data or signer.email == form.email.data:
                 exists = True
 
         if not exists:
@@ -80,6 +80,7 @@ def create_petition():
         name = Config.to_english(form.name.data)
 
         new_petition = Petition(
+            user_id= current_user.id,
             name= form.name.data,
             title= form.title.data,
             address= form.address.data,

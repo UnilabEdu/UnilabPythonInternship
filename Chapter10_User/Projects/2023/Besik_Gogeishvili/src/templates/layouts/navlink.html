@@ -13,7 +13,14 @@
                 {{ create_navlink("main.contact", "კონტაქტი") }}
 
                 {% if current_user.is_authenticated %}
-                    <a class="nav-link active"> | {{ current_user.username }} |</a>
+
+                    {% if current_user.is_admin() %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{url_for('admin.index')}}">Admin Panel</a>
+                        </li>
+                    {% endif %}
+          
+                    {{ create_navlink("user.user_profile", current_user.username) }}
                     {{ create_navlink("auth.logout", "გასვლა") }}
                 {% else %}
                     {{ create_navlink("auth.login", "შესვლა") }}

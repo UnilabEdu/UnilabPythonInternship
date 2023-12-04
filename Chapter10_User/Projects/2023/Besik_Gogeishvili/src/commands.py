@@ -2,7 +2,7 @@ from flask.cli import with_appcontext
 import click
 
 from src.extensions import db
-from src.models import Petition
+from src.models import Petition, User, Role
 
 
 @click.command("init_db")
@@ -22,8 +22,25 @@ def populate_db():
 
     click.echo("Creating Initial Entries...")
 
+    admin_role = Role(id = 1, user_role = "Admin")
+    admin_role.create()
+
+    user_role = Role(id = 2, user_role = "User")
+    user_role.create()
+
+    user = User(
+        id = 1,
+        username = "b_gogeishvili",
+        name = "Beso",
+        surname = "Gogeishvili",
+        email = "gogeishvilib@gmail.com",
+        password = "qwerty",
+        role_id = 1
+    )
+
     petition1 = Petition(
         id = 1,
+        user_id = 1,
         name = "კუპატა",
         title = "დაიდგას კუპატას ძეგლი ქალაქ ბათუმში",
         address = "კულტურისა და ძეგლთა დაცვის სამინისტრო",
@@ -53,6 +70,7 @@ def populate_db():
 
     petition2 = Petition(
         id = 2,
+        user_id = 1,
         name = "ჯანსაღი კვება",
         title = "ჯანსაღი კვება ყველა მოსწავლეს",
         address = "განათლებისა და მეცნიერების სამინისტრო",
@@ -81,5 +99,6 @@ def populate_db():
 
     petition1.create()
     petition2.create()
+    user.create()
 
     click.echo("Entries Created!")
