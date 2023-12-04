@@ -13,6 +13,9 @@
                     <hr>
                     <p class="card-text" style="height: 200px; width:227px; overflow:scroll">{{ each_post.short_description }}</p>
                     <a href="{{ url_for('petitions.petition', name=each_post.url_name) }}" class="btn" style="background-color: #ce5a67">სრულად</a>
+                    <br>
+                    <br>
+                    <p style="font-size: small;">ავტორი --> <a style="color: #ce5a67; text-decoration: none; font-size: medium;" href="{{ url_for('user.user_profile', username=each_post.user.username) }}" >{{each_post.user.username}}</a> </p>
                 </div>
             </div>
         </div>

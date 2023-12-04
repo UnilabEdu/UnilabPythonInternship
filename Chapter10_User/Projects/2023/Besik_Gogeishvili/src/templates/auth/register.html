@@ -1,7 +1,7 @@
 {% extends "layouts/base.html" %}
 
 {% block title %}
-        <title>რეგისტრაცია</title>
+<title>რეგისტრაცია</title>
 {% endblock %}
 
 {% block content %}
@@ -14,28 +14,28 @@
             <br>
 
             {% if form.errors %}
-                {% for field, errors in form.errors.items() %}
-                    {% for error in errors %}
-                        <div class="alert alert-danger" role="alert">
-                            * {{ error }}
-                        </div>
-                    {% endfor %}
-                {% endfor %}
-                <br>
+            {% for field, errors in form.errors.items() %}
+            {% for error in errors %}
+            <div class="alert alert-danger" role="alert">
+                * {{ error }}
+            </div>
+            {% endfor %}
+            {% endfor %}
+            <br>
             {% endif%}
 
             {% with messages = get_flashed_messages() %}
-                {% if messages %}
-                    {% for message in messages %}
-                        <div class="alert alert-danger d-flex align-items-center" role="alert">
-                            {{ message }}
-                        </div>
-                    {% endfor %}
-                {% endif %}
+            {% if messages %}
+            {% for message in messages %}
+            <div class="alert alert-danger d-flex align-items-center" role="alert">
+                {{ message }}
+            </div>
+            {% endfor %}
+            {% endif %}
             {% endwith %}
 
             {{ form.hidden_tag() }}
-            
+
             <div class="mb-3">
                 <label class="form-label">შეიყვანეთ მომხმარებლის სახელი</label>
                 {{ form.username }}
@@ -70,7 +70,6 @@
                 <label class="form-label">გაიმეორე პაროლი</label>
                 {{ form.repeat_password }}
             </div>
-            {{ form.description }}
             <br>
             {{ form.submit }}
         </form>
