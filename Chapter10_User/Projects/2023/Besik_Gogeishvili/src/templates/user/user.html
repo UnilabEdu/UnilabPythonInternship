@@ -1,0 +1,174 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+<div class="container">
+    <h1 style="margin:20px; text-align: center;">{{ user.username }}</h1>
+    <hr>
+
+    <div class="container text-center text_div w-50">
+
+        <p class="d-inline-flex gap-1">
+            <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample"
+                aria-expanded="false" aria-controls="collapseExample"
+                style="background-color: #ce5a67; margin: 20px; padding: 15px">
+                პროფილის რედაქტირება
+            </button>
+        </p>
+        <div class="collapse" id="collapseExample">
+            <div class="container text-center text_div">
+                <h2 style="margin:20px; text-align: center;">პროფილის რედაქტირება</h2>
+                <hr>
+                <div class="d-flex justify-content-center">
+                    <form method="post">
+
+                        <br>
+
+                        {% if form.errors %}
+                        {% for field, errors in form.errors.items() %}
+                        {% for error in errors %}
+                        <div class="alert alert-danger" role="alert">
+                            * {{ error }}
+                        </div>
+                        {% endfor %}
+                        {% endfor %}
+                        <br>
+                        {% endif%}
+
+                        {% with messages = get_flashed_messages() %}
+                        {% if messages %}
+                        {% for message in messages %}
+                        <div class="alert alert-danger d-flex align-items-center" role="alert">
+                            {{ message }}
+                        </div>
+                        {% endfor %}
+                        {% endif %}
+                        {% endwith %}
+
+                        {{ form.hidden_tag() }}
+
+                        <div class="mb-3">
+                            <label class="form-label">სახელი</label>
+                            {{ form.name }}
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">გვარი</label>
+                            {{ form.surname }}
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">პაროლი</label>
+                            {{ form.password }}
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">გაიმეორე პაროლი</label>
+                            {{ form.repeat_password }}
+                        </div>
+                        <br>
+                        {{ form.submit }}
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+<br>
+<br>
+<h2 style="text-align: center;">ჩემი პეტიციები</h2>
+<hr>
+<br>
+<div class="container-fluid">
+    <div class="row gy-4 text-center">
+        {% if data == [] %}
+        <div class="container">
+            <div class="container text-center text_div w-50">
+                <br>
+                <h3>შენ ჯერ არ გაქვს პეტიცია შექმნილი. <a class="btn" href="{{url_for('petitions.create_petition', img='upload')}}"
+                    style="color: #ce5a67;"><h3>შექმენი ახლავე</h3></a> </h3>
+                <br><br>
+            </div>
+        </div>
+        {% endif %}
+        {% for each_post in data %}
+        <div class="col-xxl-2 col-xl-3 col-lg-4 col-md-5 col-sm-6">
+            <div class="card" style="width: 16rem; background-color: #f4bf96">
+                <img src="{% if each_post.method == 'upload' %}.{% endif %}{{ each_post.img3 }}" class=" card-img-top"
+                    alt="..." width="200px" height="240px">
+                <div class="card-body">
+                    <h5 class="card-title" style="height:100px;"> {{ each_post.title }}</h5>
+                    <hr>
+                    <p class="card-text" style="height: 200px; width:227px; overflow:scroll">{{
+                        each_post.short_description }}</p>
+                    <a href="{{ url_for('user.delete', id=each_post.id) }}" class="btn"
+                        style="background-color: #ce5a67">წაშლა</a>
+
+                    <a href="{{ url_for('user.edit', id=each_post.id) }}" class="btn"
+                        style="background-color: #ce5a67">რედაქტირება</a>
+
+                    <br>
+                </div>
+            </div>
+            <br>
+            <br>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+<br>
+<br>
+<br>
+{% if data == [] and signed == [] %}
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+{% endif %}
+
+<h2 style="text-align: center;">ჩემი ხელმოწერები</h2>
+<hr>
+<br>
+<div class="container-fluid">
+    <div class="row gy-4 text-center">
+        {% if signed == [] %}
+        <div class="container">
+            <div class="container text-center text_div w-50">
+                <h3 class="pt-4">შენ ჯერ არ გაქვს პეტიცია ხელმოწერილი</h3>
+                <br><br>
+            </div>
+        </div>
+        {% endif %}
+        {% for each_post in signed %}
+        <div class="col-xxl-2 col-xl-3 col-lg-4 col-md-5 col-sm-6">
+            <div class="card" style="width: 16rem; background-color: #f4bf96">
+                <img src="{% if each_post.method == 'upload' %}.{% endif%}{{ each_post.img3 }}" class=" card-img-top"
+                    alt="..." width="200px" height="240px">
+                <div class="card-body">
+                    <h5 class="card-title" style="height:100px;"> {{ each_post.title }}</h5>
+                    <hr>
+                    <p class="card-text" style="height: 200px; width:227px; overflow:scroll">{{
+                        each_post.short_description }}</p>
+                    <a href="{{ url_for('petitions.petition', name=each_post.url_name) }}" class="btn"
+                        style="background-color: #ce5a67">სრულად</a>
+                    <br>
+                    <br>
+                    <p style="font-size: small;">ავტორი --> <a
+                            style="color: #ce5a67; text-decoration: none; font-size: medium;"
+                            href="{{ url_for('user.user_profile', username=each_post.user.username) }}">{{each_post.user.username}}</a>
+                    </p>
+                </div>
+            </div>
+            <br>
+            <br>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}

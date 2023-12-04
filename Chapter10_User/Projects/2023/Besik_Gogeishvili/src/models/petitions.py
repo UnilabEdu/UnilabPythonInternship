@@ -6,6 +6,8 @@ class Petition(BaseModel):
     __tablename__ = "petitions"
 
     id = db.Column(db.Integer, primary_key=True)
+    user_id = db.Column(db.Integer, db.ForeignKey("users.id"))
+
     name = db.Column(db.String)
     title = db.Column(db.String)
     address = db.Column(db.String)
@@ -22,6 +24,7 @@ class Petition(BaseModel):
     votes = db.Column(db.Integer)
 
     signers = db.relationship("Signer", back_populates="petitions", secondary="petition_signer")
+    user = db.relationship("User", back_populates="petitions")
 
 
     def __repr__(self) -> str:
@@ -55,5 +58,5 @@ class Signer(BaseModel):
 
 
     def __repr__(self) -> str:
-        return self.personal_id
+        return str(self.personal_id)
     
