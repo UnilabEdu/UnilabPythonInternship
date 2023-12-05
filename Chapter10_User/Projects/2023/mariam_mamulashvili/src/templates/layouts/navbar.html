@@ -1,0 +1,39 @@
+{% from "macros.html" import is_active %}
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">
+        <img src="{{ url_for('static', filename = 'images/sdx.jpg.jpg')}}" alt="logo" width="100" height="100">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link {{is_active("main.home")}}" href="/">HOME</a></li>
+            <li class="nav-item"><a class="nav-link {{is_active("main.about")}}" href="/about">ABOUT</a></li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle {{is_active('main.gimbal')}} {{is_active('main.atmospherics')}} {{is_active('main.pyrotechnics')}} {{is_active('main.model_making')}} {{is_active('main.prosthetics')}}" 
+                href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  SPECIAL EFFECTS
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="{{ url_for('main.atmospherics', page_category = 'atmospherics', product_category = 'video, image')}}">ATMOSPHERICS</a></li>
+                  <li><a class="dropdown-item" href="{{ url_for('main.gimbal', page_category = 'gimbal', product_category = 'video, image')}}">GIMBAL</a></li>
+                  <li><a class="dropdown-item" href="{{ url_for('main.pyrotechnics', page_category = 'pyrotechnics', product_category = 'video, image')}}">PYROTECHNICS</a></li>
+                  <li><a class="dropdown-item" href="{{ url_for('main.model_making', page_category = 'model_making', product_category = 'video, image')}}">MODEL MAKING</a></li>
+                  <li><a class="dropdown-item" href="{{ url_for('main.prosthetics', page_category = 'prosthetics', product_category = 'video, image')}}">PROSTHETICS</a></li>
+                </ul>
+              </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="#">GALLERY</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link {{is_active("main.works")}}" href="{{ url_for('main.works')}}">WORKS</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link {{is_active("auth.contact")}}" href="/contact">CONTACT</a>
+            </li>
+        </ul>
+    </div>
+</nav>

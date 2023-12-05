@@ -1,0 +1,28 @@
+
+
+{% extends "layouts/base.html" %}
+{% block content %}
+
+<div>
+    <div>
+        <h1>{{ film.product_name }}</h1>
+    </div>
+        <!-- {# <img src="{{ url_for('static', filename = 'uploads/' + product_image.image) }}" alt="film image"> #} -->
+    <div>
+        <div>
+        </div>
+        <div>
+            <p> Genre: {{film.product_category}}</p>
+            <p> Year: {{film.release_year}}</p>
+           <p> Director: {{film.director}} <p>
+        </div>
+    </div>
+</div>
+<div>
+    <!-- {# <video  src="{{url_for('static', filename='uploads/' + product_video.image) }}"  width=100% type="video/mp4"></video>  #}-->
+</div>
+
+<!-- fine_tune video link, css, ადმინ პანელი და კარუსელია გასაწერი -->
+
+
+{% endblock %}
