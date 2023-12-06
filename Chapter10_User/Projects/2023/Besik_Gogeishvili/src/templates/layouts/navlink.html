@@ -1,0 +1,38 @@
+{% from "macros.html" import create_navlink %}
+
+<nav class="bg-custom navbar navbar-expand-lg">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="{{ url_for('main.home') }}" style="color: #ce5a67"><b>მთავარი</b></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav" >
+                {{ create_navlink("petitions.create_petition", "პეტიციის შექმნა") }}
+                {{ create_navlink("main.contact", "კონტაქტი") }}
+
+                {% if current_user.is_authenticated %}
+
+                    {% if current_user.is_admin() %}
+                            <a class="nav-link" href="{{url_for('admin.index')}}">Admin Panel</a>
+                    {% endif %}
+          
+                    {{ create_navlink("user.user_profile", current_user.username) }}
+                    {{ create_navlink("auth.logout", "გასვლა") }}
+                {% else %}
+                    {{ create_navlink("auth.login", "შესვლა") }}
+                    {{ create_navlink("auth.register", "რეგისტრაცია") }}
+                {% endif %}
+
+            </div>
+
+        </div>
+
+        <form class="d-flex" role="search" method="post" action="{{url_for('main.home')}}">
+            <input class="form-control me-2" type="search" placeholder="მოძებნე პეტიცია" aria-label="Search" name="search">
+            <button class="btn" style="background-color: #ce5a67;color: #1f1717;" type="submit">ძებნა</button>
+        </form>
+    </div>
+</nav>
+<hr style="margin-bottom: 40px;">

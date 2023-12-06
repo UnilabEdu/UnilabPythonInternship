@@ -1,0 +1,23 @@
+{% extends "layouts/base.html" %}
+
+{% block content%}
+
+<div class="container-fluid">
+    <div class="row gy-4 text-center">
+    {% for each_post in data %}
+        <div class="col-xxl-2 col-xl-3 col-lg-4 col-md-5 col-sm-6">
+            <div class="card" style="width: 16rem; background-color: #f4bf96">
+                <img src="{{ each_post.img3 }}" class=" card-img-top" alt="..." width="200px" height="240px">
+                <div class="card-body">
+                    <h5 class="card-title" style="height:100px;"> {{ each_post.title }}</h5>
+                    <hr>
+                    <p class="card-text" style="height: 200px; width:227px; overflow:scroll">{{ each_post.short_description }}</p>
+                    <a href="{{ url_for('petitions.petition', name=each_post.url_name) }}" class="btn" style="background-color: #ce5a67">სრულად</a>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+</div>
+
+{% endblock %}
