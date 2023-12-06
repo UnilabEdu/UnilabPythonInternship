@@ -1,0 +1,10 @@
+{%extends 'base.html'%}
+
+{%block content%}
+{% if logged_user_name == None %}
+<p>You need To Log in first</p>
+
+{%else%}
+<p>{{logged_user_name}}</p>
+{%endif%}
+{% endblock %}
