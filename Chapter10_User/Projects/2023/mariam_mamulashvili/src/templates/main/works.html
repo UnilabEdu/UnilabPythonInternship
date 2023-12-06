@@ -1,0 +1,27 @@
+{% extends "layouts/base.html" %}
+{% block content %}
+
+<h1>WORKS</h1>
+<div class ="container" id="imagecontainer">
+    <div class="row">
+    {% for film in films %}
+    {% if (loop.index0 + 1) % 4 == 0 %}
+        <div class="w-100 gy-5"></div>
+    {% endif %}
+    <div class = "col-lg-4">
+    <div class="card align-self-center" style="width: 20rem;">
+        <a href="{{url_for ('main.view_works', product_name = film.product_name)}}" >
+        <div class="card-body">
+        <h5 class="card-title">{{ film.product_name}}</h5>
+        <p class="card-text">{{ film.description}}</p>
+        </a>
+        </div>
+        </div>
+    </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+
+{% endblock %}

@@ -1,0 +1,59 @@
+{% from "macros.html" import is_row %}
+
+{% extends "layouts/base.html" %}
+{% block content %}
+<div class="w-100 d-flex align-items-center justify-content-center">
+<img src="{{ url_for('static', filename = 'images/atmos.jpg')}}" alt="gimbal" class="w-75 ">
+</div>
+<div class="info">
+    <header>
+        <h1>Whether you want to rock a boat or fly a plane Our 4 axis Gimbal can give that precise movement. 
+            This very rare piece of equipment can move large heavy objects up to 20 tonne to a maximum pitch of 15 degrees.</h1>
+    </header>
+    <p>The Gimbal is a hydraulic motion platform. It is the perfect choice for moving sets and operates flawlessly while being bombarded with water. The flat top platform is 30ft x 20ft and tips 15 degrees in all directions. 
+        Four cylinders provide motion control: up, down, pitch and roll axes and it’s powered by two axial piston pumps.
+
+        Controlled with a manual joystick system, it comes with a 25 hp hydraulic pump, hoses, joystick control, and outrigger I-beams for stability. The Hydraulic Power Unit is 100 HP at 460 VAC 3 Phase.
+         There is a step up transformer to use with 208 VAC 3 Phase, this will use an entire 400 AMP circuit. Correctly assembled and utilised, 
+        the tilting platform is capable of safely supporting an imposed load of 23 tonnes</p>
+</div>
+<div class ="container" id="imagecontainer">
+    <div class="row">
+    {% for product_image in products_image %}
+    {% if (loop.index0 + 1) % 4 == 0 %}
+        <div class="w-100 gy-5"></div>
+    {% endif %}
+    <div class = "col-lg-4">
+    <div class="card align-self-center" style="width: 20rem;">
+        <img class="card-img-top" src= {{url_for('static', filename='uploads/' + product_image.image) }} alt="Card image cap">
+        <div class="card-body">
+        <h5 class="card-title">{{ product_image.product_name}}</h5>
+        <p class="card-text">{{ product_image.description}}</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+        </div>
+    </div>
+        {% endfor %}
+    </div>
+</div>
+
+<div class ="container" id="videocontainer">
+    <div class="row">
+    {% for product_video in products_image %}
+    {% if (loop.index0 + 1) % 4 == 0 %}
+        <div class="w-100 gy-5"></div>
+    {% endif %}
+    <div class = "col-lg-4">
+    <div class="card align-self-center" style="width: 20rem;">
+        <video  src={{url_for('static', filename='uploads/' + product_video.image) }}  width=100% type="video/mp4"></video>
+        <div class="card-body">
+        <h5 class="card-title">{{ product_video.product_name}}</h5>
+        <p class="card-text">{{product_video.description}}</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+        </div>
+    </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
