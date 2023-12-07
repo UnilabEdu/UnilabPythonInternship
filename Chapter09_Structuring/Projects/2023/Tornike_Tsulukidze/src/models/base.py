@@ -4,7 +4,6 @@ from src.extensions import db
 class BaseModel(db.Model):
     __abstract__ = True
 
-    @staticmethod
     def save(self):
         db.session.commit()
 

@@ -9,7 +9,10 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                {{ createNavLink("main.main_get", "Home") }}
+                {{ createNavLink("main_bp.main_get", "Home") }}
+                {{ createNavLink("library_bp.library_get", "Library") }}
+                {{ createNavLink("auth_bp.register_get", "Register") }}
+                {{ createNavLink("auth_bp.login_get", "Log in") }}
             </ul>
             <form class="d-flex" role="search">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">

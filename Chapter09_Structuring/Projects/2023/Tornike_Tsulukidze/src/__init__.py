@@ -1,12 +1,12 @@
 from flask import Flask
 
 from src.config import Config
-from src.views import main
+from src.views import main_bp, auth_bp, library_bp
 from src.models import db
 from src.commands import init_db
 
 
-BLUEPRINTS = [main]
+BLUEPRINTS = [main_bp, auth_bp, library_bp]
 COMMANDS = [init_db]
 
 
