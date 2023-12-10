@@ -9,6 +9,8 @@ class Human(BaseModel):
     first_name = db.Column(db.String)
     last_name = db.Column(db.String)
     birth_year = db.Column(db.String)
+    gender = db.Column(db.String)
+
 
     def __repr__(self):
         return f"{self.first_name} {self.last_name} (Human)"

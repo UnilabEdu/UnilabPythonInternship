@@ -4,6 +4,7 @@ from src.config import Config
 from src.views import main_bp, auth_bp, library_bp
 from src.models import db
 from src.commands import init_db
+from src.extensions import migrate
 
 
 BLUEPRINTS = [main_bp, auth_bp, library_bp]
@@ -29,6 +30,9 @@ def register_extensions(app):
 
     # Flask-SQLAlchemy
     db.init_app(app)
+
+    # Flask-Migrate
+    migrate.init_app(app, db)
 
 
 def register_commands(app):
