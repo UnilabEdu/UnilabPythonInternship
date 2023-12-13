@@ -6,11 +6,26 @@ class Human(BaseModel):
     __tablename__ = "people"
 
     id = db.Column(db.Integer, primary_key=True)
-    first_name = db.Column(db.String)
-    last_name = db.Column(db.String)
+    _first_name = db.Column(db.String)
+    _last_name = db.Column(db.String)
     birth_year = db.Column(db.String)
     gender = db.Column(db.String)
 
+    @property
+    def first_name(self):
+        return self._first_name
+
+    @first_name.setter
+    def first_name(self, value):
+        self._first_name = value.title()
+
+    @property
+    def last_name(self):
+        return self._last_name
+
+    @last_name.setter
+    def last_name(self, value):
+        self._last_name = value.title()
 
     def __repr__(self):
         return f"{self.first_name} {self.last_name} (Human)"
