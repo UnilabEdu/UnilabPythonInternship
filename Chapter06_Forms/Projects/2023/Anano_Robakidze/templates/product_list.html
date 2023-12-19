@@ -1,0 +1,25 @@
+{% extends 'base.html'%}
+{% block content %}
+<div class="container mt-5">
+    <div class="row row-cols-1 row-cols-md-3 g-4 mt-5">
+      {% for product in products%}
+      <div class="col">
+        <div class="card h-100">
+          <img src="{{ url_for('static', filename='img/' + product['img']) }}" class="card-img-top" alt="{{product['name']}}" style="height: 60%;">
+          <div class="card-body">
+            <h5 class="card-title">Product name: {{ product['name']}}</h5>
+            <p class="card-text">Color: {{ product['color']}}</p>
+            <p class="card-text"> Size: {{ product['size']}}</p>
+            <p class="card-text"> Price: {{ product['price']}}</p>
+            <a href="{{ url_for('product', id=loop.index -1)}}" class="btn btn-primary">Buy Now</a>
+            <a href="{{ url_for('product', id=loop.index -1)}}" class="btn btn-primary">View</a>
+
+              <a href="{{ url_for('edit_product', id=loop.index -1)}}" class="btn btn-primary">Edit</a>
+
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endblock %}

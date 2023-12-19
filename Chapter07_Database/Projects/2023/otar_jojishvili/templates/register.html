@@ -1,0 +1,21 @@
+{%extends 'base.html'%}
+
+
+{%block content%}
+    <form method="post">
+    {{form.hidden_tag()}}
+    <br>
+    {{form.user_name(class="form-control", placeholder=form.user_name.label.text)}}
+    <br>
+    {{form.user_surname(class="form-control", placeholder=form.user_surname.label.text)}}
+<br>
+    {{form.user_email(class="form-control", placeholder=form.user_email.label.text)}}
+<br>
+    {{form.user_password(class="form-control", placeholder=form.user_password.label.text)}}
+<br>
+    {{form.user_submit(class="btn btn-primary mt2")}}
+
+        </form>
+
+
+{%endblock %}

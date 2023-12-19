@@ -1,0 +1,5 @@
+{% macro nav_link(endpoint)%}
+    {% if endpoint == request.endpoint%}
+        active
+    {% endif %}
+{% endmacro %}
