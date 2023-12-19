@@ -1,0 +1,24 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+    <div class="container text-center" id="form-text">
+        <div class="row">
+
+          <div class="col" id="forsm">
+            <h1>Log in</h1>
+            {% if error %}
+            <div class="alert alert-danger" role="alert">
+                {{ error }}
+            </div>
+            {% endif %}
+            <form method="POST">
+
+            {{form.hidden_tag()}} 
+            {{form.username(class = "form-control", placeholder=form.username.label.text)}}
+            {{form.password(class = "form-control", placeholder=form.password.label.text)}}
+            {{form.submit(class = "btn btn-dark mt-5")}}
+          </form>
+          </div>
+        </div>
+    </div>
+{% endblock %}
