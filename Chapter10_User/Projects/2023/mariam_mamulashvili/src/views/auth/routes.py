@@ -13,7 +13,10 @@ auth_blueprint = Blueprint('auth', __name__)
 @auth_blueprint.route('/contact/', methods=['GET', 'POST'])
 def contact():
     form = ContactForm()
+    error_message = None
+
     if form.validate_on_submit():
+
         new_message = Contact(name = form.name.data,
                               email = form.email.data,
                                 phone = form.phone.data,
@@ -21,7 +24,8 @@ def contact():
                                 message = form.message.data)
         new_message.create()
         return redirect(url_for('main.home'))
-    return render_template('auth/contact.html', is_admin=True, form=form)
+        
+    return render_template('auth/contact.html', form=form)
 
 
 @auth_blueprint.route('/login/', methods=['GET', 'POST'])
@@ -34,8 +38,6 @@ def login():
         else:
              return render_template('auth/login.html', form=form, error='Invalid username or password')
 
-        form.populate_obj(user)
-        user.create()
         print(form.password.data)
         return redirect(url_for('main.home'))
     return render_template('auth/login.html', form=form)

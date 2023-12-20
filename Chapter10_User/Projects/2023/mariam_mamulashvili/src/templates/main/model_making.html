@@ -17,43 +17,57 @@
          There is a step up transformer to use with 208 VAC 3 Phase, this will use an entire 400 AMP circuit. Correctly assembled and utilised, 
         the tilting platform is capable of safely supporting an imposed load of 23 tonnes</p>
 </div>
-<div class ="container" id="imagecontainer">
-    <div class="row">
-    {% for product_image in products_image %}
-    {% if (loop.index0 + 1) % 4 == 0 %}
-        <div class="w-100 gy-5"></div>
-    {% endif %}
-    <div class = "col-lg-4">
-    <div class="card align-self-center" style="width: 20rem;">
-        <img class="card-img-top" src= {{url_for('static', filename='uploads/' + product_image.image) }} alt="Card image cap">
-        <div class="card-body">
-        <h5 class="card-title">{{ product_image.product_name}}</h5>
-        <p class="card-text">{{ product_image.description}}</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+<section class = mediawrapper>
+    <div class = project>
+    <div class ="container" id="imagecontainer">
+        <div class="row custom-row-margin">
+        {% for product_image in products_image %}
+            <div class = "col-md-4 mb-5">
+                    <div class="card align-self-center productcard popup-wrapper">
+                        <img class="card-img-top " id = image src= "{{url_for('static', filename='uploads/' + product_image.product_image) }}" alt="Card image cap">
+                        <div class="card-body carddesc">
+                            <h5 class="card-title">{{ product_image.product_name}}</h5>
+                            <p class="card-text imgdescr"> {% if product_image.description|length > 40 %}
+                                                        {{ product_image.description[0:40] }}
+                                                    {% else %}
+                                                        {{ product_image.description }}
+                                                    {% endif %} </p>
+                     </div>
+                 </div>
         </div>
-        </div>
-    </div>
-        {% endfor %}
-    </div>
-</div>
-
-<div class ="container" id="videocontainer">
-    <div class="row">
-    {% for product_video in products_image %}
-    {% if (loop.index0 + 1) % 4 == 0 %}
-        <div class="w-100 gy-5"></div>
-    {% endif %}
-    <div class = "col-lg-4">
-    <div class="card align-self-center" style="width: 20rem;">
-        <video  src={{url_for('static', filename='uploads/' + product_video.image) }}  width=100% type="video/mp4"></video>
-        <div class="card-body">
-        <h5 class="card-title">{{ product_video.product_name}}</h5>
-        <p class="card-text">{{product_video.description}}</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
+            {% endfor %}
         </div>
     </div>
-        {% endfor %}
+    
+    <div class = "popup-image">
+        <span>&times;</span>
+        <img src="" alt="product_image.product_name">
     </div>
-</div>
-{% endblock %}
+    
+    <div class="container" id="imagecontainer">
+        <div class="row custom-row-margin">
+            {% for product_video in products_video %}
+                <div class="col-md-4 mb-5">
+                    <div class="card align-self-center productcard">
+                        <video class="card-img-top" controls>
+                            <source src="{{url_for('static', filename='uploads/' + product_video.product_image)}}" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="card-body carddesc_video">
+                            <h5 class="card-title">{{ product_video.product_name}}</h5>
+                            <p class="card-text">{% if product_video.description|length > 40 %}
+                                {{ product_video.description[0:40] }}
+                            {% else %}
+                                {{ product_video.description }}
+                            {% endif %}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    </div>
+    </section>
+    
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    {% endblock %}

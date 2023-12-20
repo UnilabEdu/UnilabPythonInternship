@@ -10,6 +10,11 @@
           </div>
           <div class="col" id="forsm">
             <h1>Get in touch</h1>
+            {% if error_message %}
+              <div class="alert alert-danger">
+            {{ error_message }}
+              </div>
+            {% endif %}
             <form method="POST">
 
             {{form.hidden_tag()}} 

@@ -1,18 +1,18 @@
 from flask import Flask
 
 from src.config import Config
-from src.extensions import db, login_manager
+from src.extensions import db, login_manager, migrate
 from src.admin import admin, SecureModelView, SecureIndexView, ProductView, WorkView
 from src.views import product_blueprint, main_blueprint, auth_blueprint 
-from src.commands import init_db, populate_db
+from src.commands import init_db_command, populate_db_command
 from src.models import User, Product, Contact, Works
 
 
 
 
 COMMANDS = [
-    init_db, 
-    populate_db
+    init_db_command,
+    populate_db_command
 ]
 
 
@@ -48,6 +48,11 @@ def register_extenstions(app):
     admin.add_view(WorkView(User, db.session))
     admin.add_view(SecureModelView(Contact, db.session))
     admin.add_view(SecureModelView(Works, db.session))
+    
+    
+    #Flask Migrate
+    migrate.init_app(app, db)
+
 
 def register_blueprints(app):
     for blueprint in BLUEPRINTS:
