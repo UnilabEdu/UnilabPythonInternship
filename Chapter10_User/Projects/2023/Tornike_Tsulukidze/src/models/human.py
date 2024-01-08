@@ -27,5 +27,11 @@ class Human(BaseModel):
     def last_name(self, value):
         self._last_name = value.title()
 
+    def __init__(self, first_name, last_name, birth_year=None, gender=None):
+        self._first_name = first_name
+        self._last_name = last_name
+        self.birth_year = birth_year
+        self.gender = gender
+
     def __repr__(self):
         return f"{self.first_name} {self.last_name} (Human)"

@@ -31,15 +31,15 @@ def populate_db():
 
     click.echo("Populating users...")
 
-    human_user1 = Human(first_name="tornike", last_name="tsulukidze", birth_year=2005, gender="male")
-    human_user2 = Human(first_name="khvicha", last_name="kvaratskhelia", birth_year=2000, gender="male")
+    human_user1 = Human("tornike", "tsulukidze", 2005, gender="male")
+    human_user2 = Human("khvicha", "kvaratskhelia", 2000, gender="male")
 
     human_user1.create(commit=False)
     human_user2.create(commit=False)
 
-    user1 = User(username="TheMechanicalBeing", email_address="tornike@gmail.com", phone_number="593559933", password="Pass123!", human_id=human_user1.id, role_id=role_admin.id)
+    user1 = User("TheMechanicalBeing", "tornike@gmail.com", "593559933", "Pass123!", human_user1.id, role_admin.id)
 
-    user2 = User(username="NapoliPlayer77", email_address="khvicha@live.com", phone_number="577777777", password="Ilikereal123!", human_id=human_user2.id, role_id=role_user.id)
+    user2 = User("NapoliPlayer77", "khvicha@live.com", "577777777", "Ilikereal123!", human_user2.id, role_user.id)
 
     user1.create(commit=False)
     user2.create(commit=False)
@@ -48,14 +48,14 @@ def populate_db():
 
     click.echo("Populating authors...")
 
-    human_author1 = Human(first_name="jemal", last_name="kharchkhadze", birth_year=1936, gender="male")
-    human_author2 = Human(first_name="charlotte", last_name="brontë", birth_year=1816, gender="female")
+    human_author1 = Human("jemal", "kharchkhadze", 1936, "male")
+    human_author2 = Human("charlotte", "brontë", 1816, "female")
 
     human_author1.create(commit=False)
     human_author2.create(commit=False)
 
-    author1 = Author(human_id=human_author1.id)
-    author2 = Author(human_id=human_author2.id)
+    author1 = Author(human_author1.id)
+    author2 = Author(human_author2.id)
 
     author1.create(commit=False)
     author2.create(commit=False)
@@ -64,8 +64,8 @@ def populate_db():
 
     click.echo("Populating publishers...")
 
-    publisher1 = Publisher(name="პალიტრა L")
-    publisher2 = Publisher(name="სულაკაურის გამომცემლობა")
+    publisher1 = Publisher("პალიტრა L")
+    publisher2 = Publisher("სულაკაურის გამომცემლობა")
 
     publisher1.create(commit=False)
     publisher2.create(commit=False)
@@ -74,10 +74,10 @@ def populate_db():
 
     click.echo("Populating categories...")
 
-    category1 = Category(name="Romance")
-    category2 = Category(name="Bildungsroman")
-    category3 = Category(name="Georgian")
-    category4 = Category(name="English")
+    category1 = Category("Romance")
+    category2 = Category("Bildungsroman")
+    category3 = Category("Georgian")
+    category4 = Category("English")
 
     category1.create(commit=False)
     category2.create(commit=False)
@@ -88,9 +88,9 @@ def populate_db():
 
     click.echo("Populating books...")
 
-    book1 = Book(title="ქარავანი", publication_year=1984)
-    book2 = Book(title="Jane Eyre", publication_year=1847)
-    book3 = Book(title="მდგმური", publication_year=1979)
+    book1 = Book("ქარავანი", 1984)
+    book2 = Book("Jane Eyre", 1847)
+    book3 = Book("მდგმური", 1979)
 
     book1.create(commit=False)
     book2.create(commit=False)

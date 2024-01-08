@@ -23,10 +23,10 @@ def register_post():
     form = RegisterForm()
     if form.validate_on_submit():
 
-        human_to_register = Human(first_name=form.first_name.data, last_name=form.last_name.data)
+        human_to_register = Human(form.first_name.data, form.last_name.data)
         human_to_register.create(commit=False)
 
-        user_to_register = User(username=form.username.data, email_address=form.email_address.data, phone_number=form.phone_number.data, password=form.password.data, human_id=human_to_register.id)
+        user_to_register = User(form.username.data, form.email_address.data, form.phone_number.data, form.password.data, human_to_register.id, 1)
 
         user_to_register.create()
 
@@ -61,7 +61,6 @@ def login_post():
         login_user(user, remember=form.remember_me.data)
         return redirect(url_for("main_bp.main_get"))
     else:
-        print(form.errors)
         [[flash(error, category="danger") for error in errors] for errors in form.errors.values()]
         return redirect(url_for("auth_bp.login_get"))
 

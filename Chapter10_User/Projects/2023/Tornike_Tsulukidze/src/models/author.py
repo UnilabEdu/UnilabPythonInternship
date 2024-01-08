@@ -12,6 +12,9 @@ class Author(BaseModel):
 
     books = db.relationship("Book", secondary="authors_books", back_populates="authors")
 
+    def __init__(self, human_id):
+        self.human_id = human_id
+
     def __repr__(self):
         return f"{' '.join(self.human.__repr__().split()[:-1])} (Author)"
 
@@ -22,3 +25,7 @@ class AuthorBook(BaseModel):
     id = db.Column(db.Integer, primary_key=True)
     author_id = db.Column(db.Integer, db.ForeignKey("authors.id"))
     book_id = db.Column(db.Integer, db.ForeignKey("books.id"))
+
+    def __init__(self, author_id, book_id):
+        self.author_id = author_id
+        self.book_id = book_id

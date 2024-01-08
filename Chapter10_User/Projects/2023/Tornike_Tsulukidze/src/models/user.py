@@ -30,6 +30,14 @@ class User(BaseModel, UserMixin):
     def check_password(self, password):
         return check_password_hash(self._password, password)
 
+    def __init__(self, username, email_address, phone_number, password, human_id, role_id):
+        self.username = username
+        self.email_address = email_address
+        self.phone_number = phone_number
+        self.password = password
+        self.human_id = human_id
+        self.role_id = role_id
+
     def __repr__(self):
         return f"{self.username} (User)"
 
@@ -39,6 +47,9 @@ class Role(BaseModel):
 
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String, unique=True)
+
+    def __init__(self, name):
+        self.name = name
 
     def __repr__(self):
         return f"{self.name} (Role)"
