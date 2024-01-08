@@ -11,8 +11,12 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 {{ createNavLink("main_bp.main_get", "Home") }}
                 {{ createNavLink("library_bp.library_get", "Library") }}
-                {{ createNavLink("auth_bp.register_get", "Register") }}
-                {{ createNavLink("auth_bp.login_get", "Log in") }}
+                {% if current_user.is_authenticated %}
+                    {{ createNavLink("auth_bp.logout", "Log out") }}
+                {% else %}
+                    {{ createNavLink("auth_bp.register_get", "Register") }}
+                    {{ createNavLink("auth_bp.login_get", "Log in") }}
+                {% endif %}
             </ul>
             <form class="d-flex" role="search">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">

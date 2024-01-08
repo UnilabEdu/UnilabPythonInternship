@@ -1,5 +1,7 @@
 from os import path
+
 from flask import Blueprint, render_template, flash, redirect, url_for
+from flask_login import login_user, logout_user
 
 from src.config import Config
 from src.views.auth.forms import RegisterForm, LoginForm
@@ -35,8 +37,37 @@ def register_post():
         return redirect(url_for("auth_bp.register_get", form=form))
 
 
-# TODO: I should configure login and logout
-
-@auth_bp.route("/login")
+@auth_bp.get("/login")
 def login_get():
-    return render_template("login.html")
+    form = LoginForm()
+    return render_template("login.html", form=form)
+
+
+@auth_bp.post("/login")
+def login_post():
+    form = LoginForm()
+    if form.validate_on_submit():
+
+        user = User.query.filter_by(email_address=form.email_address.data).first()
+        if not user:
+            flash("This email address is not registered!", "danger")
+            return redirect(url_for("auth_bp.login_get"))
+
+        if not user.check_password(form.password.data):
+            flash("Invalid password!", "danger")
+            return redirect(url_for("auth_bp.login_get"))
+
+        flash(f"Logged in successfully, as {user.username}", "success")
+        login_user(user, remember=form.remember_me.data)
+        return redirect(url_for("main_bp.main_get"))
+    else:
+        print(form.errors)
+        [[flash(error, category="danger") for error in errors] for errors in form.errors.values()]
+        return redirect(url_for("auth_bp.login_get"))
+
+
+@auth_bp.route("/logout")
+def logout():
+    logout_user()
+    flash("Logged out.", "success")
+    return redirect(url_for("auth_bp.login_get"))

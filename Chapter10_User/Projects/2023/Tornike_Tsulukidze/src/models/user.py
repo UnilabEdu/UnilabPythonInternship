@@ -27,6 +27,8 @@ class User(BaseModel, UserMixin):
     def password(self, value):
         self._password = generate_password_hash(value)
 
+    def check_password(self, password):
+        return check_password_hash(self._password, password)
 
     def __repr__(self):
         return f"{self.username} (User)"

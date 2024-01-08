@@ -1,14 +1,17 @@
 import re
+
 from flask_wtf import FlaskForm
 from wtforms.fields import StringField, PasswordField, SubmitField, BooleanField
-from wtforms.validators import DataRequired, ValidationError
+from wtforms.validators import DataRequired, ValidationError, Email
+
+from src.models import User
 
 
 class RegisterForm(FlaskForm):
     first_name = StringField("First Name", validators=[DataRequired()])
     last_name = StringField("Last Name", validators=[DataRequired()])
     username = StringField("Username", validators=[DataRequired()])
-    email_address = StringField("Email Address", validators=[DataRequired()])
+    email_address = StringField("Email Address", validators=[DataRequired(), Email()])
     phone_number = StringField("Phone Number", validators=[DataRequired()])
     password = PasswordField("Password", validators=[DataRequired()])
     confirm_password = PasswordField("Confirm Password", validators=[DataRequired()])
@@ -45,8 +48,12 @@ class RegisterForm(FlaskForm):
         if not field.data:
             raise ValidationError(f"You must accept terms and conditions.")
 
+    def validate_email_address(self, field):
+        if User.query.filter_by(email_address=field.data).first():
+            raise ValidationError(f"This email already exists. Please try another one.")
+
 class LoginForm(FlaskForm):
-    email_address = StringField("Email")
-    password = PasswordField("Password")
+    email_address = StringField("Email", validators=[DataRequired(), Email()])
+    password = PasswordField("Password", validators=[DataRequired()])
     remember_me = BooleanField("Remember Me")
     submit = SubmitField("Log In")
