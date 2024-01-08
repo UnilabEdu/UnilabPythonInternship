@@ -1,0 +1,45 @@
+{% extends "/layouts/base.html" %}
+{% block head %}
+{% endblock %}
+{% block body %}
+    {% if form.errors %}
+        {% for field, errors in form.error.items() %}
+            {% for error in errors %}
+                <div class="alert alert-danger">
+                    {{ error }}
+                </div>
+            {% endfor %}
+        {% endfor %}
+    {% endif %}
+    <div class="container make-border mt-5 mb-5 p-5">
+        <h2 class="text-center">Register to make a new account</h2>
+        <hr class="mb-5"/>
+        <form method="post" action="">
+            {{ form.hidden_tag() }}
+            {{ form.first_name.label(class_="form-label") }}
+            {{ form.first_name(class_='form-control mb-4', placeholder="Elliot") }}
+            {{ form.last_name.label(class_="form-label") }}
+            {{ form.last_name(class_='form-control mb-4', placeholder="Alderson") }}
+            {{ form.username.label(class_="form-label") }}
+            {{ form.username(class_="form-control mb-4", placeholder="UserName") }}
+            {{ form.email_address.label(class_="form-label") }}
+            {{ form.email_address(class_="form-control", placeholder="example@mail.com") }}
+            <div id="emailHelp" class="form-text mb-4">We'll never share your email with anyone else.</div>
+            {{ form.phone_number.label(class_="form-label") }}
+            {{ form.phone_number(class_="form-control mb-4", placeholder="555 55 55 55") }}
+            {{ form.password.label(class_="form-label") }}
+            {{ form.password(class_="form-control mb-4", placeholder="Enter Password") }}
+            {{ form.confirm_password.label(class_="form-label") }}
+            {{ form.confirm_password(class_="form-control mb-4", placeholder="Confirm Password") }}
+            {{ form.terms_and_conditions(class="form-check-input") }}
+            <span>Accept <a href="#" class="link-primary">Terms and Conditions</a></span>
+            <div class="mt-4">
+                {{ form.submit(class_="btn btn-primary") }}
+            </div>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous"></script>
+{% endblock %}

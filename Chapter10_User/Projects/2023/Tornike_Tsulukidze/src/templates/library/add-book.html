@@ -1,0 +1,25 @@
+{% extends '/layouts/base.html' %}
+{% block head %}
+{% endblock %}
+{% block body %}
+    <div class="container make-border mt-5 p-5">
+        <h2>Add the book to the library here</h2>
+        <hr/>
+        <form method="post" action="">
+            {{ form.hidden_tag() }}
+            {{ form.title.label(class_='form-label') }}
+            {{ form.title(class_='form-control') }}
+            {{ form.publication_year.label(class_="form-label") }}
+            {{ form.publication_year(class_="form-control") }}
+            {{ form.author.label(class_='form-label') }}
+            {{ form.author(class_="form-control") }}
+            {{ form.category.label(class_='form-label') }}
+            {{ form.category(class_="form-control") }}
+            {{ form.publisher.label(class_='form-label') }}
+            {{ form.publisher(class_='form-control') }}
+            <div class="mt-4">
+                {{ form.submit(class_="btn btn-primary") }}
+            </div>
+        </form>
+    </div>
+{% endblock %}

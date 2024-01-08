@@ -1,0 +1,14 @@
+.freeze {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+body {
+    padding-top: 56px;
+}
+
+.make-border {
+    border: 2px solid rgb(128, 128, 128);
+    border-radius: 10px;
+}

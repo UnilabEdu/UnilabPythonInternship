@@ -1,0 +1,30 @@
+{% extends '/layouts/base.html' %}
+{% block head %}
+{% endblock %}
+{% block body %}
+    <div class="container make-border mt-5 p-5">
+        <h1>Books</h1>
+        <hr/>
+        <div class="row">
+            {% for item in library %}
+                <div class="container make-border row col-6">
+                    <div class="col-10">
+                        <p>{{ item.title }}</p>
+                        <p>{{ item.publication_year }}</p>
+                        <p>{{ item.authors[0].human.last_name }}, {{ item.authors[0].human.first_name }}</p>
+                        <p>{{ item.categories[0].name }}</p>
+                        <p>{{ item.publishers[0].name }}</p>
+                    </div>
+                    <div class="col">
+                        <a class="submit submit-btn row" href="main.html">Details</a>
+                        <a class="submit submit-btn row" href="main.html">Update</a>
+                        <a class="submit submit-btn row" href="main.html">Delete</a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="container text-center">
+        <a class="btn btn-primary mt-5 p-4" href="{{ url_for("library_bp.add_book_get") }}">Add a Book</a>
+    </div>
+{% endblock %}
