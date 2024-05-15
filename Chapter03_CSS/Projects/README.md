@@ -41,8 +41,8 @@
 Chapter3_CSS
 │   some_files
 └─── projects
-   └─── temur_chichua
-        └─── project_name
+   └─── 2024
+        └─── saxeli_gvari
             │   home.html
             |   style.css
             │   project_files    
