@@ -1,12 +1,48 @@
-html * {
-    font-family: 'Noto Sans Georgian';
+html {
+    background-color: #32475c;
 }
 
-@font-face {
-  font-family: 'Noto Sans Georgian';
-  font-style: normal;
-  font-weight: 400;
-  font-stretch: 100%;
-  src: url(https://fonts.gstatic.com/s/notosansgeorgian/v42/PlIaFke5O6RzLfvNNVSitxkr76PRHBC4Ytyq-Gof7PUs4S7zWn-8YDB09HFNdpvnzGjmdZS60A.woff2) format('woff2');
-  unicode-range: U+0589, U+10A0-10FF, U+1C90-1CBA, U+1CBD-1CBF, U+2D00-2D2F;
+.section {
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 12px;
+    padding: 16px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+
+}
+
+.table {
+    border: 1px solid black;
+}
+
+.table tr {
+    outline: solid thin;
+}
+
+.btn {
+    margin: 12px;
+    width: 128px;
+    height: 32px;
+    background-color: white;
+    border: 2px solid lightgreen;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 1s
+}
+
+.btn:hover {
+    background-color: lightgreen;
+    border: 6px solid white;
+
+    transition: 1s
+}
+
+.color-red {
+    color: red;
+}
+
+#start {
+    color: red;
+    text-align: center;
 }
