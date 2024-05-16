@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Quick Quiz</title>
+    <link rel="stylesheet" href="./styles/styles.css"/>
+</head>
+<body>
+    <div class="container">
+        <div class="circle-image">
+            <img src="./img/Q_logo.png" alt="Image">
+        </div>
+        <div class="content">
+            <h1>Start Quiz</h1>
+        </div>
+        <form>
+            <p>First name:</p>
+            <input type="text" id="username" name="username" onfocus="this.value=''" value="Enter Username">
+
+            <p>Gender:</p>
+            <div class="radio-row">
+                <input type="radio" id="male" name="gender">
+                <label for="male">Male</label>
+    
+                <input type="radio" id="female" name="gender">
+                <label for="female">Female</label>
+            </div>
+    
+            <p>Email:</p>
+            <input type="email" id="email" name="email" onfocus="this.value=''" value="example@gmail.com">
+
+            <p>Choose Quiz:</p>
+            <select name="quizes" id="quiz">
+                <option>Choose Subject</option>
+                <option value="Math">Math</option>
+                <option value="History">History</option>
+                <option value="Geography">Geography</option>
+            </select>
+        </form>
+        <button class="btn">Start</button>
+        <a class="btn" href="./index.html">Go To Home Page</a>
+
+    </div>
+</body>
+</html>
