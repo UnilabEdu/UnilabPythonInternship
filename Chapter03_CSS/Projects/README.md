@@ -31,6 +31,8 @@
 
 ### 2024 სტაჟირება
 
+- რომა გრიგალაშვილი |  [Cheetah](/Chapter3_CSS/Projects/2024/roma_grigalashvili) | [[View]](https://htmlpreview.github.io/?https://github.com/R-Grigala/UnilabPythonInternship/blob/master/Chapter03_CSS/Projects/2024/roma_grigalashvili/index.html)
+
 
 ## ინსტრუქცია:
 
