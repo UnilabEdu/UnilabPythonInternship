@@ -30,7 +30,7 @@
 - ლაშა დემურაშვილი |  [Cheetah](/Chapter3_CSS/Projects/Lasha_demurashvili) | [[View]](https://htmlpreview.github.io/?https://github.com/LashaDemurashvili/UnilabPythonInternship/blob/master/Chapter2_HTML/Projects/Lasha_demurashvili/project_1/index.html)
 
 ### 2024 სტაჟირება
-- გვანცა მანთაშაშვილი | [Conference&Seminars_page](Chapter03_CSS/Projects/2024/gvantsa_mantashashvili/Conference&Seminars_page) | [[View]]()
+- გვანცა მანთაშაშვილი | [Conference&Seminars_page](Chapter03_CSS/Projects/2024/gvantsa_mantashashvili/Conference&Seminars_page) | [[View]](https://htmlpreview.github.io/?https://github.com/Gvantsa001/UnilabPythonInternship/blob/master/Chapter03_CSS/Projects/2024/gvantsa_mantashashvili/Conference%26Seminars_page/index.html)
 
 ## ინსტრუქცია:
 
