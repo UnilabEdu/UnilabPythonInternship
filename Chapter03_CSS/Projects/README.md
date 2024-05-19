@@ -29,7 +29,9 @@
 ### 2023 სტაჟირება
 - ლაშა დემურაშვილი |  [Cheetah](/Chapter3_CSS/Projects/Lasha_demurashvili) | [[View]](https://htmlpreview.github.io/?https://github.com/LashaDemurashvili/UnilabPythonInternship/blob/master/Chapter2_HTML/Projects/Lasha_demurashvili/project_1/index.html)
 
-
+### 2024 სტაჟირება
+- ვანო ინიაშვილი | [RateMovie](/Chapter03_CSS/Projects/2024/Vano_Iniashvili/) | [View](https://htmlpreview.github.io/?https://github.com/VanoIniashvili/UnilabPythonInternship/blob/master/Chapter03_CSS/Projects/2024/Vano_Iniashvili/index.html) 
+- რომა გრიგალაშვილი |  [Cheetah](/Chapter3_CSS/Projects/2024/roma_grigalashvili) | [[View]](https://htmlpreview.github.io/?https://github.com/R-Grigala/UnilabPythonInternship/blob/master/Chapter03_CSS/Projects/2024/roma_grigalashvili/index.html)
 
 ## ინსტრუქცია:
 
@@ -40,8 +42,8 @@
 Chapter3_CSS
 │   some_files
 └─── projects
-   └─── temur_chichua
-        └─── project_name
+   └─── 2024
+        └─── saxeli_gvari
             │   home.html
             |   style.css
             │   project_files    
