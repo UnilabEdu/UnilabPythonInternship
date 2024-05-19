@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/styles.css"/>
+    <title>registration</title>
+</head>
+<body>
+    
+    <div class="container">
+
+        <div class="content">
+            <form>
+                <p>First name:</p>
+                <input type="text" id="username" name="username" placeholder="User Name">
+                <p>Last name:</p>
+                <input type="text" id="lastname" name="lastname" placeholder="Last Name">
+                <p>Phone:</p>
+                <input type="text" id="phone" name="phone" placeholder="+995">
+                <p>Email:</p>
+                <input type="email" id="email" name="email" placeholder="example@gmail.com">
+
+                <p>Gender:</p>
+                <div class="radio-row">
+                    <input type="radio" id="male" name="gender">
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender">
+                    <label for="female">Female</label>
+                </div>        
+                <select name="counrty" id="country">
+                    <option>Country</option>
+                    <option value="Georgia">Georgia</option>
+                    <option value="Usa">Usa</option>
+                    <option value="France">France</option>
+                    <option value="Germany">Germany</option>
+                </select>
+            </form>
+            <div class="buttons">
+                <button class="btn">Registration</button>
+                <button class="btn">Sign in</button>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
