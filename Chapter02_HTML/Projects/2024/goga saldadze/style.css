@@ -1,0 +1,31 @@
+html {background-color: rgba(189, 151, 250, 0.479);}
+.section{
+    background-color: hsl(276, 41%, 45%);
+    border: 2px solid rgb(165, 30, 30);
+    border-radius: 30px;
+    padding: 15px;
+    border-style:inherit
+    
+}
+.table {
+    border: 2px solid rgb(24, 3, 117)
+    
+}
+.row {
+    border: 2px solid black
+}
+.btn {
+    margin: 10px;
+    width: 80px;
+    height:20px;
+    background-color: darkcyan;
+    border-radius: 10px;
+    border: none;
+    transition-duration: 1s;
+
+    
+}
+.btn:hover {
+    background-color: rgb(76, 91, 177);
+}
+
