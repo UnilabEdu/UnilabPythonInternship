@@ -11,16 +11,22 @@
     <div class="container">
 
         <div class="content">
-            <form>
-                <p>First name:</p>
-                <input type="text" id="username" name="username" placeholder="User Name">
-                <p>Last name:</p>
-                <input type="text" id="lastname" name="lastname" placeholder="Last Name">
-                <p>Phone:</p>
-                <input type="text" id="phone" name="phone" placeholder="+995">
-                <p>Email:</p>
-                <input type="email" id="email" name="email" placeholder="example@gmail.com">
+            
+            <div class="logo_class">
+                <img src="./logo/css-logo.png" alt="" class="logo">
+            </div>
 
+            <form >
+                <div class="input_class">
+                    <p>First name:</p>
+                    <input type="text" id="username" name="username" placeholder="User Name">
+                    <p>Last name:</p>
+                    <input type="text" id="lastname" name="lastname" placeholder="Last Name">
+                    <p>Phone:</p>
+                    <input type="number" id="phone" name="phone" placeholder="+995">
+                    <p>Password:</p>
+                    <input type="password" id="password" name="password" placeholder="password">  
+                </div>
                 <p>Gender:</p>
                 <div class="radio-row">
                     <input type="radio" id="male" name="gender">
@@ -35,12 +41,14 @@
                     <option value="France">France</option>
                     <option value="Germany">Germany</option>
                 </select>
-            </form>
-            <div class="buttons">
-                <button class="btn">Registration</button>
-                <button class="btn">Sign in</button>
-            </div>
 
+
+            </form>
+
+            <div class="buttons">
+                <button class="btn">Register</button>
+                <a class="btn" href="./login.html">Login</a>
+            </div>
         </div>
 
     </div>
