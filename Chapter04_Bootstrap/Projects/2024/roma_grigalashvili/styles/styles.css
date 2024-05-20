@@ -1,0 +1,159 @@
+:root {
+    background-color: #ecf5ff;
+    font-size: 62.5%;
+}
+*{
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+h1,
+h2,
+h3,
+h4{
+    margin-bottom: 1rem;
+}
+
+h1{
+    font-size: 5.4rem;
+    color: #56a5eb;
+    margin-bottom: 5rem;
+}
+
+p {
+    font-size: 1.5rem;
+    color: #000000;
+    margin-bottom: 1rem;
+}
+ul {
+    padding: 2rem;
+}
+li {
+    font-size: 1.5rem;
+    color: #1100ff;
+}
+
+
+/*  UTILITIES  */
+
+/* .container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 2rem;
+} */
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.quiz_legend{
+    text-align: center;
+    font-size: 3rem;
+}
+
+.circle-image {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    background-color: #00f7ff;
+}
+.circle-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/*  BUTTONS  */
+.cus_btn {
+    font-size: 1.8rem;
+    padding: 1rem 0;
+    width: 20rem;
+    text-align: center;
+    border: 0.1rem solid #56a5eb;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    color: #56a5eb;
+    background-color: white;
+}
+
+.cus_btn:hover {
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(86, 185, 235, 0.5);
+    transform: translateY(-0.1rem);
+    transition: transform 150ms;
+}
+
+.cus_btn[disabled]:hover {
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+
+/* Table */
+
+.table {
+    background-color: #96e1ee;
+    border-radius: 0px 0px 5px 5px;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+.table th{
+    color: #000000;
+    font-size: 1.5rem;
+    padding: 5px;
+}
+.table td{
+    text-align: center;
+    color: #000000;
+    font-size: 1.2rem;
+    padding: 5px;
+}
+.table-header {
+    width: 100%;
+    font-size: 1.5em;
+    text-align: center;
+    color: #000000;
+    padding: 10px;
+    background-color: #96e1ee;
+    border-radius: 5px 5px 0px 0px;
+}
+
+/* FORMS */
+
+form {
+    width: 40rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: none;
+    margin-bottom: 10rem;
+}
+input {
+    margin-bottom: 1rem;
+    padding: 1.5rem;
+    font-size: 1.2rem;
+    border: none;
+    box-shadow: 0 0.1rem 1.4rem 0 rgba(86, 185, 235, 0.5);
+}
+.radio-row {
+    display: inline-block;
+    margin-right: 0.5rem;
+}
+
+input::placeholder {
+    color: #aaa;
+}
