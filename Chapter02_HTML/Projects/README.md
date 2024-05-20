@@ -46,6 +46,8 @@
 - ბექა ბიტარაშვილი | [Application Form](Chapter02_HTML/Projects/2023/Beka_Bitarashvili) | [Take A Look](https://htmlpreview.github.io/?https://github.com/BekaBitarashvili/UnilabPythonInternship/blob/master/Chapter02_HTML/Projects/2023/Beka_Bitarashvili/index.html)
 - სერგო გოგიშვილი |[index](/Chapter02_HTML/Projects/2023/sergo_gogishvili/index.html)  |  [web] (http://htmlpreview.github.io/?https://github.com/Sergi90G/UnilabPythonInternship/blob/master/Chapter02_HTML/Projects/2023/sergo_gogishvili/index.html)
 - ლევან ყოლბაია | [Nutrition101](/Chapter02_HTML/Projects/2023/Levan_Kolbaia/Nutrition101.html)| [preview] (http://htlmpreview.github.io/?https://github.com/Rizznado/UnilabPythonInternship/blob/master/Chapter02_HTML/Projects/2023/Levan_Kolbaia/Nutrition101.html)
+### 2024 სტაჟირება
+- გოგა სალდაძე | [index](/Chapter02_HTML/Projects/2024/goga%20saldadze/index.html) | [preview] (https://htmlpreview.github.io/?https://github.com/gogasaldadze/UnilabPythonInternship/blob/master/Chapter02_HTML/Projects/2024/goga%20saldadze/index.html)
 ## ინსტრუქცია
 მოამზადეთ პროექტის ინსტრქუციაში აღწერილი პირობის შესაბამისი ორი HTML პროექტი და დაამატეთ ზემოთ ნაჩვენებ სიაში მათი საჩვენებელი მისამართები. (იხ. დამატებით რესურსები)
 
