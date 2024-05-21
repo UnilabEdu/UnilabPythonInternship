@@ -25,11 +25,17 @@
 - ანა ხუციშვილი | [Online library](/Chapter5_Flask_Templates/Projects/ana_khutsishvili)
 - მარიამ ქავთარაძე | [Flask_templates](/Chapter5_Flask_Templates/Projects/mariam_kavtaradze/hw_Flask_Templates)
 
-### 2023 სტაჟირება
+### 2024 სტაჟირება
+
+- რომა Gრიგალაშვილი | [Flask_templates](/Chapter05_Flask_Templates/Projects/2024/roma_grigalashvili)
 
 - ლაშა დემურაშვილი | [Flask_templates](/Chapter5_Flask_Templates/Projects/Lasha_Demurashvili)
 - mariam razmadze | [team-app](/Chapter5_Flask_Templates/Projects/mariam_razmadze)
 - ლევან ყოლბაია | [Nut](Chapter5_Flask_Templates/Projects/Levan_Kolbaia)
+
+### 2023 სტაჟირება
+
+
 ## ინსტრუქცია:
 
 1. წინა თავში შესრულებულ ან სრულიად ახალ ვებ გვერდს გაუკეთეთ საბაზისო გვერდი jinja2-სა და Bootstrap-ის გამოყენებით.
