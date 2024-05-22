@@ -1,0 +1,35 @@
+{% extends "home.html" %}
+
+{% block prod %}
+    {% for modelkey, modelname in products.items() %}
+        {% for id, product in modelname.items() %}
+
+            <div class="card " style="width: 20rem;">
+                <div id="{{ product['id'] }}" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        {% for image in product['images'] %}
+                        <div class="carousel-item active">
+                            <img src="{{ image }}" class="d-block w-100 alt="...">
+                        </div>
+                        {% endfor %}
+                    </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#{{ product['id'] }}" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#{{ product['id'] }}" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">{{ product['model'] }}</h5>
+                    <p class="card-text">{{ product['price'] }}</p>
+                    <a href="{{ url_for('signin', id=product['id'] ) }} " class="btn btn-primary">Buy</a>
+                </div>
+            </div> 
+
+        {% endfor %}
+    {% endfor %}
+
+{% endblock %}
