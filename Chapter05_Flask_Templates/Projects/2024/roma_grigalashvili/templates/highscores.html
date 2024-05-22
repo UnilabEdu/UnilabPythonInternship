@@ -19,34 +19,15 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark Otto</td>
-            <td>Male</td>
-            <td>mark_otto@mdo.com</td>
-            <td>Math</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Mark Otto</td>
-            <td>Male</td>
-            <td>mark_otto@mdo.com</td>
-            <td>Geography</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>Larry the Bird</td>
-            <td>Female</td>
-            <td>larry_the_bird@mdo.com</td>
-            <td>History</td>
-          </tr>
-          <tr>
-            <th scope="row">4</th>
-            <td>Larry</td>
-            <td>Female</td>
-            <td>larry_@mdo.com</td>
-            <td>Geography</td>
-          </tr>
+          {% for top_user in top_list %}
+            <tr>
+              <th scope="row">{{loop.index}}</th>
+              <td>{{top_user['username']}}</td>
+              <td>{{top_user['gender']}}</td>
+              <td>{{top_user['email']}}</td>
+              <td>{{top_user['subject']}}</td>
+            </tr>
+          {% endfor %}
         </tbody>
     </table>
     <a class="cus_btn" href="{{ url_for('index') }}">Go To Home Page</a>

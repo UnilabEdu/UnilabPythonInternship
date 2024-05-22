@@ -41,7 +41,7 @@ def index():
 
 @app.route("/highscores")
 def highscores():
-    return render_template("highscores.html", userlist=top_users_list)
+    return render_template("highscores.html", top_list=top_users_list)
 
 
 @app.route("/registration")
