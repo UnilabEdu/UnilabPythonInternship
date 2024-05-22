@@ -36,7 +36,7 @@ top_users_list = [
 
 @app.route("/")
 def index():
-    return render_template("index.html")
+    return render_template("index.html", user_type="admin")
 
 
 @app.route("/highscores")
@@ -47,6 +47,10 @@ def highscores():
 @app.route("/registration")
 def game():
     return render_template("registration.html")
+
+@app.route("/dashboard")
+def dashboard():
+    return render_template("dashboard.html")
 
 
 if __name__ == '__main__':

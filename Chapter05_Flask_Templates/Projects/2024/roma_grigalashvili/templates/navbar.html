@@ -20,6 +20,11 @@
                 <li class="nav-item">
                     {{ create_navlink('highscores', 'High Scores') }}
                 </li>
+                {% if user_type == "admin" %}
+                    <li class="nav-item">
+                        {{ create_navlink('dashboard', 'Dashboard') }}
+                    </li>
+                {% endif %}
             </ul>
         </div>
     </div>
