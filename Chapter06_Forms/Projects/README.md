@@ -19,6 +19,10 @@
 ### 2023 სტაჟირება
 - ლაშა დემურაშვილი | [Forms](/Chapter6_Forms/Projects/Lasha_Demurashvili)
 - ლევან ყოლბაია| [Site forms](/Chapter6_Forms/Projects/Levan_Kolbaia)
+
+### 2024 სტაჟირება
+- რომა გრიგალაშვილი | [Quick_Quiz](/Chapter06_Forms/Projects/2024/roma_grigalashvili/)
+
 ## ინსტრუქცია:
 
 გამართეთ Flask აპლიკაციის ფორმა რომლის გამოყენებითაც მომხმარებლისგან მიიღებთ მონაცემებს და უკან დაუბრუნებთ შემაჯამებელ შეტყობინებას.
