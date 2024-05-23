@@ -30,6 +30,11 @@
 - ლაშა დემურაშვილი | [Flask_templates](/Chapter5_Flask_Templates/Projects/Lasha_Demurashvili)
 - mariam razmadze | [team-app](/Chapter5_Flask_Templates/Projects/mariam_razmadze)
 - ლევან ყოლბაია | [Nut](Chapter5_Flask_Templates/Projects/Levan_Kolbaia)
+
+### 2024 სტაჟირება
+
+- რომა გრიგალაშვილი | [Flask_templates](/Chapter05_Flask_Templates/Projects/2024/roma_grigalashvili/)
+
 ## ინსტრუქცია:
 
 1. წინა თავში შესრულებულ ან სრულიად ახალ ვებ გვერდს გაუკეთეთ საბაზისო გვერდი jinja2-სა და Bootstrap-ის გამოყენებით.

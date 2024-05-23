@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Quick Quiz - HighScores
+{% endblock %}
+
+{% block body %}
+<div class="content flex-center flex-column">
+    <h1>High Scores</h1>
+    <div class="table-header">TOP მომხმარებლები რომელთაც ყველაზე მაღალი ქულა აქვთ:</div>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Username</th>
+            <th scope="col">Gender</th>
+            <th scope="col">Email</th>
+            <th scope="col">Quiz</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for top_user in top_list %}
+            <tr>
+              <th scope="row">{{loop.index}}</th>
+              <td>{{top_user['username']}}</td>
+              <td>{{top_user['gender']}}</td>
+              <td>{{top_user['email']}}</td>
+              <td>{{top_user['subject']}}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+    </table>
+    <a class="cus_btn" href="{{ url_for('index') }}">Go To Home Page</a>
+</div>
+{% endblock %}
