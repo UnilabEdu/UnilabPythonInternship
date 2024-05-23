@@ -33,7 +33,7 @@
 
 ### 2024 სტაჟირება
 
-- რომა Gრიგალაშვილი | [Flask_templates](/Chapter05_Flask_Templates/Projects/2024/roma_grigalashvili/)
+- რომა გრიგალაშვილი | [Flask_templates](/Chapter05_Flask_Templates/Projects/2024/roma_grigalashvili/)
 
 ## ინსტრუქცია:
 
