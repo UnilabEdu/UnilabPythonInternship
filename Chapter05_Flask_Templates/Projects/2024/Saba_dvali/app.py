@@ -23,9 +23,9 @@ products = {
             "id": "2",
             "model": "Apple iPhone 15 Pro Max 256GB - Black Titanium",
             "price": "4399 ₾",
-            "images":("https://alta.ge/images/thumbnails/900/650/detailed/300/iPhone_15_Pro_Max_Black_Titanium_PDP_Image_Position-1_alt__ww-EN.jpg.jpg",
-                      "https://alta.ge/images/thumbnails/900/650/detailed/300/iPhone_15_Pro_Max_Black_Titanium_PDP_Image_Position-2__ww-EN.jpg.jpg",
-                      "https://alta.ge/images/thumbnails/900/650/detailed/300/iPhone_15_Pro_Max_Black_Titanium_PDP_Image_Position-4__ww-EN.jpg.jpg"
+            "images":("https://alta.ge/images/thumbnails/900/650/detailed/300/iPhone_15_Pro_Max_Black_Titanium_PDP_Image_Position-2__ww-EN.jpg.jpg",
+                      "https://alta.ge/images/thumbnails/900/650/detailed/300/iPhone_15_Pro_Max_Black_Titanium_PDP_Image_Position-1_alt__ww-EN.jpg.jpg",
+                      "https://alta.ge/images/thumbnails/900/650/detailed/300/iPhone_15_Pro_Max_Black_Titanium_PDP_Image_Position-1_alt__ww-EN.jpg.jpg",
                       ),
             "info": {
                     "screen":        "6.7",
@@ -39,8 +39,8 @@ products = {
             "model": "Apple iPhone 14 128GB Blue (Model A2882)",
             "price": "2399 ₾",
             "images":("https://alta.ge/images/thumbnails/900/650/detailed/259/WWEN_iPhone14_Q422_Blue_PDP_Image_Position-1a.jpg.jpg",
-                      "https://alta.ge/images/thumbnails/900/650/detailed/259/WWEN_iPhone14_Q422_Blue_PDP_Image_Position-1b.jpg.jpg",
                       "https://alta.ge/images/thumbnails/900/650/detailed/259/WWEN_iPhone14_Q422_Blue_PDP_Image_Position-3.jpg.jpg"
+                      "https://alta.ge/images/thumbnails/900/650/detailed/259/WWEN_iPhone14_Q422_Blue_PDP_Image_Position-1b.jpg.jpg",
                       ),
             "info": {
                     "screen":        "6.1",
@@ -134,8 +134,8 @@ products = {
             "model": "Google Pixel 8 Pro 5G (12GB/256GB) - Porcelain",
             "price": "2899 ₾",
             "images":("https://alta.ge/images/thumbnails/900/650/detailed/323/151720__1_.png.jpg",
-                      "https://alta.ge/images/thumbnails/900/650/detailed/323/151720__2_.png.jpg",
                       "https://alta.ge/images/thumbnails/900/650/detailed/323/151720__4_.png.jpg"
+                      "https://alta.ge/images/thumbnails/900/650/detailed/323/151720__2_.png.jpg",
                       ),
             "info": {
                     "screen":        "6.7",
@@ -151,25 +151,25 @@ products = {
 
 @server.route("/")
 def home():
-    for modelkey, modelname in products.items():
-        for id, product in modelname.items():
-    
-            print(product["id"])
     return render_template("home.html",products=products)
+
+@server.route("/details/<id>")
+def details(id):
+    for modelkey, modelname in products.items():
+        for models, product in modelname.items():
+            if product["id"] == id:
+                prod = product
+                return render_template("details.html",prod=prod)
+    return render_template("home.html")
 
 @server.route("/login")
 def login():
     return render_template("login.html")
 
-@server.route("/signin/<id>")
-def signin(id):
+@server.route("/register")
+def register():
+    return render_template("register.html")
 
-    return render_template("signin.html",id=id)
-
-@server.route("/details/<id>")
-def details(id):
-
-    return render_template("details.html",id=id)
 
 
 if __name__ == "__main__":

@@ -1,10 +1,9 @@
-{% extends "home.html" %}
 
 {% block prod %}
     {% for modelkey, modelname in products.items() %}
         {% for id, product in modelname.items() %}
 
-            <div class="card " style="width: 20rem;">
+            <div class="card mb-4" style="width: 20rem; ">
                 <div id="{{ product['id'] }}" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                         {% for image in product['images'] %}
@@ -25,7 +24,7 @@
                 <div class="card-body">
                     <h5 class="card-title">{{ product['model'] }}</h5>
                     <p class="card-text">{{ product['price'] }}</p>
-                    <a href="{{ url_for('signin', id=product['id'] ) }} " class="btn btn-primary">Buy</a>
+                    <a href="{{ url_for('details', id=product['id'] ) }} " class="btn btn-primary">Buy</a>
                 </div>
             </div> 
 
