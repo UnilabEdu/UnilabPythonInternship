@@ -1,0 +1,112 @@
+body{
+    background-color: rgb(249, 237, 223);
+    height: 94rem;
+    position: relative;
+}
+
+nav{
+    background-image: url("download (3).jpg");
+    background-size: 100%;
+}
+
+.journal{
+    height: 40px;
+    margin-right: 7px;
+}
+
+.blogg{
+    margin: 0;
+    padding: 0;
+    margin-bottom: 3px;
+}
+
+.navbar-brand{
+    margin: 0;
+    padding: 0;
+    margin-right: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#carouselExampleControls{
+    width: 950px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.carousel-item {
+    transition: transform 1s ease, opacity .5s ease-out;
+}
+
+.carousel-item img {
+    height: 500px; 
+    object-fit: cover; 
+}
+
+.welcome{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.text{
+    font-size: 20px;
+}
+
+.post{
+    width: 47em;
+}
+
+textarea{
+    width: 47em;
+    height: 15em;
+    margin-top: 10px;
+    border: 1px solid grey;
+    border-radius: 8px;
+}
+
+.buttons{
+    margin-top: 8px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.righties{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sign-up-text{
+    margin: 0;
+    margin-right: 7px;
+}
+
+footer{
+    margin-top: 200px;
+    height: 15rem;
+    font-size: 13px;
+    background-color: rgb(32, 43, 65);
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+.formating{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+#profilepic::after {
+    content: none;
+}
+
+.profile{
+    height: 30px;
+}
