@@ -27,14 +27,13 @@
 
 ### 2024 სტაჟირება
 
-- რომა Gრიგალაშვილი | [Flask_templates](/Chapter05_Flask_Templates/Projects/2024/roma_grigalashvili)
-
 - ლაშა დემურაშვილი | [Flask_templates](/Chapter5_Flask_Templates/Projects/Lasha_Demurashvili)
 - mariam razmadze | [team-app](/Chapter5_Flask_Templates/Projects/mariam_razmadze)
 - ლევან ყოლბაია | [Nut](Chapter5_Flask_Templates/Projects/Levan_Kolbaia)
 
 ### 2023 სტაჟირება
 
+- რომა Gრიგალაშვილი | [Flask_templates](/Chapter05_Flask_Templates/Projects/roma_grigalashvili)
 
 ## ინსტრუქცია:
 
