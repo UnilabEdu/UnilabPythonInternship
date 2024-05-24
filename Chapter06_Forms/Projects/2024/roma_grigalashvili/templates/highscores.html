@@ -5,31 +5,35 @@
 {% endblock %}
 
 {% block body %}
-<div class="content flex-center flex-column">
+<div>
+  <div class="d-flex justify-content-center align-items-center">
     <h1>High Scores</h1>
-    <div class="table-header">TOP მომხმარებლები რომელთაც ყველაზე მაღალი ქულა აქვთ:</div>
-    <table class="table">
-        <thead>
+  </div>
+  <div class="table-header">TOP მომხმარებლები რომელთაც ყველაზე მაღალი ქულა აქვთ:</div>
+  <table class="table table-striped">
+      <thead class="table-dark">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Username</th>
+          <th scope="col">Gender</th>
+          <th scope="col">Email</th>
+          <th scope="col">Quiz</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for top_user in top_list %}
           <tr>
-            <th scope="col">#</th>
-            <th scope="col">Username</th>
-            <th scope="col">Gender</th>
-            <th scope="col">Email</th>
-            <th scope="col">Quiz</th>
+            <th scope="row">{{loop.index}}</th>
+            <td>{{top_user['username']}}</td>
+            <td>{{top_user['gender']}}</td>
+            <td>{{top_user['email']}}</td>
+            <td>{{top_user['subject']}}</td>
           </tr>
-        </thead>
-        <tbody>
-          {% for top_user in top_list %}
-            <tr>
-              <th scope="row">{{loop.index}}</th>
-              <td>{{top_user['username']}}</td>
-              <td>{{top_user['gender']}}</td>
-              <td>{{top_user['email']}}</td>
-              <td>{{top_user['subject']}}</td>
-            </tr>
-          {% endfor %}
-        </tbody>
-    </table>
-    <a class="cus_btn" href="{{ url_for('index') }}">Go To Home Page</a>
+        {% endfor %}
+      </tbody>
+  </table>
+  <div class="d-flex justify-content-center align-items-center">
+    <a class="btn btn-primary" href="{{ url_for('index') }}">Go To Home Page</a>
+  </div>
 </div>
 {% endblock %}
