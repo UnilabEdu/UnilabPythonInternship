@@ -9,5 +9,10 @@ class RegisterForm(FlaskForm):
                                                      length(min=8, max=64, message="Password must be at least 8 characters long")])
     repeat_password = PasswordField("Repeat Password", validators=[DataRequired(),
                                                                    equal_to("password", message="Passwords do not match")])
-    remember = BooleanField('Remember Me')
     submit = SubmitField('Register')
+
+class LoginForm(FlaskForm):
+    email = StringField('Email', validators=[DataRequired(), Email()])
+    password = PasswordField('Password', validators=[DataRequired()])
+    remember = BooleanField('Remember Me')
+    submit = SubmitField('Login')

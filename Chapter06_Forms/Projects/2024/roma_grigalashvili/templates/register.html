@@ -54,16 +54,10 @@
                                         <label class="form-label">Repeat your password</label>
                                     </div>
                                 </div>
-                                <div class="form-check d-flex justify-content-center mb-5">
-                                    {{ form.remember(class="form-check-input me-2") }}
-                                    <label class="form-check-label" for="form2Example3c">
-                                        Remember Me
-                                    </label>
-                                </div>
                                 <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                                    {{ form.submit(class="btn btn-primary btn-lg") }}
+                                    {{ form.submit(class="btn btn-primary btn-rounded") }}
                                 </div>
-                                <p class="text-center text-muted mt-5 me-2">Have already an account? <a href="{{ url_for('index') }}"
+                                <p class="text-center text-muted mt-5 me-2">Have already an account? <a href="{{ url_for('login') }}"
                                     class="fw-bold text-body"><u>Login here</u></a></p>
                             </form>
                         </div>
