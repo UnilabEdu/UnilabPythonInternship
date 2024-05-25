@@ -1,1 +1,83 @@
+{% extends "base.html" %}
 
+{% block body %}
+<div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
+    <div class="carousel-inner">
+        <div class="carousel-item active" style="height: 550px;">
+            <img src="/static/c++.png" class="d-block w-100" alt="Description of the image">
+        </div>
+        <div class="carousel-item active" style="height: 550px;">
+            <img src="/static/html.jpg" class="d-block w-100" alt="Description of the image">
+        </div>
+        <div class="carousel-item" style="height: 550px;">
+            <img src="/static/cpp.png" class="d-block w-100" alt="2">
+        </div>
+        <div class="carousel-item" style="height: 550px;">
+            <img src="/static/p.png" class="d-block w-100" alt="3">
+        </div>
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+
+</div>
+<br>
+<hr>
+<div class="container">
+    <div>
+        <br>
+        <h1 class="text-center">პროგრამები</h1>
+        <br>
+        <hr>
+    </div>
+
+
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">პროგრამირების საფუძვლების კურსი</h5>
+                    <p class="card-text">მოცემული კურსი განკუთვნილია დაწყებითი კლასების მოსწავლეებისთვის.</p>
+                    <a href="#" class="btn btn-primary">დეტალურად</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Python-ის კურსი</h5>
+                    <p class="card-text">კურსი მოიცავს პითონის სწავლას .</p>
+                    <a href="#" class="btn btn-primary">დეტალურად</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Html/css/js კურსი</h5>
+                    <p class="card-text">კურსი განკუთვნილია ყველა დაინტერესებულისათვის 12 წლიდან.</p>
+                    <a href="#" class="btn btn-primary">დეტალურად</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">C++ კურსი</h5>
+                    <p class="card-text">კურსი განკუთვნილია სკოლის მოსწავლეებისთვის, რომლებიც გატაცებულნი არიან რთული
+                        ამოცანების ამოხსნით.</p>
+                    <a href="#" class="btn btn-primary">დეტალურად</a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
