@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% extends 'base.html' %}
+{% block title %} Details {% endblock %}
+
+
+{% block body %} 
+
+    <div class="container-md ">
+        {% include 'navbar.html' %}
+        {% block navbar %}{% endblock %}
+
+            <div class=" container-md mt-5  row justify-content-center"  >
+                    <div class="card " style="width: 30%;">
+                        <div id="{{ prod['id'] }}" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                {% for image in prod['images']%}
+                                <div class="carousel-item active">
+                                    <img src="{{ image }}" class="d-block w-100 alt="...">
+                                </div>
+                                {% endfor %}
+                            </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#{{ prod['id'] }}" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#{{ prod['id'] }}" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">{{ prod['model'] }}</h5>
+                            <p class="card-text">{{ prod['price'] }}</p>
+                            <p class="card-text">Screen: {{ prod['info']['screen'] }}</p>
+                            <p class="card-text">Discernment: {{ prod['info']['discernment'] }}</p>
+                            <p class="card-text">Material used: {{ prod['info']['Material used'] }}</p>
+                            <p class="card-text">Model/PN: {{ prod['info']['Model/PN'] }}</p>
+                            <a href="#" class="btn btn-primary">Buy</a>
+                        </div>
+                    </div>       
+
+        </div>
+    </div>
+{% endblock %}
+
+</html>

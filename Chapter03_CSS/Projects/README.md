@@ -33,6 +33,12 @@
 - გიორგი მერებაშვილი | [YouTube](Chapter03_CSS/Projects/2023/giorgi_merebashvili) | [View](https://htmlpreview.github.io/?https://github.com/CCXLV/UnilabPythonInternship/blob/master/Chapter02_HTML/Projects/2023/Giorgi_Merebashvili/index.html)
 - ბესიკ გოგეიშვილი |  [Kupata](Chapter03_CSS/Projects/2023/besik_gogeishvili) | [[View]](https://htmlpreview.github.io/?https://github.com/b-gogeishvili/UnilabPythonInternship/blob/master/Chapter03_CSS/Projects/2023/besik_gogeishvili/index.html)
 
+### 2024 სტაჟირება
+- გვანცა მანთაშაშვილი | [Conference&Seminars_page](Chapter03_CSS/Projects/2024/gvantsa_mantashashvili/Conference&Seminars_page) | [[View]](https://htmlpreview.github.io/?https://github.com/Gvantsa001/UnilabPythonInternship/blob/master/Chapter03_CSS/Projects/2024/gvantsa_mantashashvili/Conference%26Seminars_page/index.html)
+- ვანო ინიაშვილი | [RateMovie](/Chapter03_CSS/Projects/2024/Vano_Iniashvili/) | [View](https://htmlpreview.github.io/?https://github.com/VanoIniashvili/UnilabPythonInternship/blob/master/Chapter03_CSS/Projects/2024/Vano_Iniashvili/index.html) 
+- რომა გრიგალაშვილი |  [Cheetah](/Chapter3_CSS/Projects/2024/roma_grigalashvili) | [[View]](https://htmlpreview.github.io/?https://github.com/R-Grigala/UnilabPythonInternship/blob/master/Chapter03_CSS/Projects/2024/roma_grigalashvili/index.html)
+- საბა დვალი  |  [Cheetah](/Chapter3_CSS/Projects/2024/Saba_Dvali) | [[View]](https://htmlpreview.github.io/?https://github.com/sabadvali4/UnilabPythonInternship/blob/master/Chapter03_CSS/Projects/2024/Saba_Dvali/index.html)
+
 ## ინსტრუქცია:
 
 წინა თავში შესრულებულ ან სრულიად ახალ ვებ გვერდს გაუკეთეთ სტილი css-ის გამოყენებით
@@ -42,8 +48,8 @@
 Chapter3_CSS
 │   some_files
 └─── projects
-   └─── temur_chichua
-        └─── project_name
+   └─── 2024
+        └─── saxeli_gvari
             │   home.html
             |   style.css
             │   project_files    

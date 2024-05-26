@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% extends 'base.html' %}
+{% block title %} Home {% endblock %}
+
+
+{% block body %} 
+
+    <div class="container-md ">
+        {% include 'navbar.html' %}
+        {% block navbar %}{% endblock %}
+
+        <div class=" container-md mt-5  row justify-content-around" >
+            {% include 'product.html' %}
+            {% block prod %}{% endblock %}
+
+        </div>
+
+
+    </div>
+{% include 'footer.html' %}
+{% block footer %}{% endblock %}
+
+{% endblock %}
+
+
+</html>
+
+
