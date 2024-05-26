@@ -1,0 +1,87 @@
+
+:root {
+    background-color:rgb(18, 23, 14);
+    width: 100vw;
+    height: 100%;
+}
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.content {    
+    color: white;
+    border: 1px solid aqua;
+    border-radius: 20px;
+    width: 30%;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 23px;
+
+}
+
+.input_class{
+    width: 100%;
+    font-size: 20px;
+}
+
+.input_class input {
+    background-color:rgb(18, 23, 14);
+    color: white;
+    width: 300px;
+    font-size: 20px;
+    border-radius: 7px;
+    border: 1px solid aqua;
+
+}
+
+#country {
+    border: 1px solid aqua;
+    background-color:rgb(18, 23, 14);
+    color: white;
+    font-size: 17px;
+    width: 130px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 7px;
+}
+
+.btn {
+    background-color:rgb(18, 23, 14);
+    color: white;
+    margin-top: 25px;
+    border: 1px solid aqua;
+    margin-bottom: 25px;
+    font-size: 17px;
+    width: 120px;
+    border-radius: 7px;
+    padding: 5px;
+    text-align: center;
+    display: inline-block;
+
+}
+
+.btn:hover {
+    color: black;
+    background-color: aqua;
+}
+  
+.btn:active {
+    color: white;
+    background-color: red;
+}
+
+.logo_class{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100px;
+}
+.logo{
+    width: 100px;
+    height: 100px;
+}
