@@ -1,16 +1,17 @@
 {%extends "base.html"%}
 {%block body%}
 <div class="row">
-    {%for item in prod %}
+    {% for product in prod %}
     <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src="{{item['img']}}" alt="Card image cap">
+        <img class="card-img-top" src="{{ product.img }}" alt="Card image cap">
         <div class="card-body">
-            <h5 class="card-title">{{item["name"]}}</h5>
-            <p class="card-text">{{item["description"]}}</p>
-            <a href="/products/{{loop.index}}" class="btn btn-primary">Go here</a>
+            <h5 class="card-title">{{ product.name }}</h5>
+            <p class="card-text">{{ product.price }}</p>
+            <a href="/products/{{ product.id }}" class="btn btn-primary">Go here</a>
         </div>
     </div>
-    {%endfor%}
+{% endfor %}
+
 </div>
 
 {%endblock%}

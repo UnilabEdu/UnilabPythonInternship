@@ -1,7 +1,8 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, PasswordField, DateField, RadioField, SelectField, SubmitField
+from wtforms import StringField, PasswordField, DateField, RadioField, SelectField, SubmitField, IntegerField
 from wtforms.validators import DataRequired,length,equal_to,ValidationError
 from string import punctuation
+from flask_wtf.file import FileField
 
 class RegisterForm(FlaskForm):
 
@@ -34,3 +35,12 @@ class RegisterForm(FlaskForm):
 
         if not contains_symbol:
             raise ValidationError("password must contain symbol")
+        
+
+
+class ProductForm(FlaskForm):
+    name = StringField("პროდუქტის სახელი")
+    price = IntegerField("შეიყვანეთ ფასი")
+    img = FileField()
+
+    submit = SubmitField()

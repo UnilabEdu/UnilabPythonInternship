@@ -1,8 +1,9 @@
 from flask import Flask, render_template, request, flash
-from forms import RegisterForm
+from forms import RegisterForm,ProductForm
 
 from flask_sqlalchemy import SQLAlchemy
 from os import path 
+from uuid import uuid4
 
 
 app =Flask(__name__)
@@ -11,13 +12,61 @@ app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///" + path.join(app.root_path, 
 
 db=SQLAlchemy(app)
 
+
 class Products(db.Model):
     __tablename__ = "products"
     id = db.Column(db.Integer, primary_key = True)
     name = db.Column(db.String)
     price = db.Column(db.Integer)
+    img = db.Column(db.String)
 
 
+with app.app_context():
+    db.create_all()
+
+@app.route("/add_product",methods = ["GET","POST"])
+def add_products():
+    form = ProductForm()
+    if form.validate_on_submit():
+        product = Products(name=form.name.data, price=form.price.data, img =None)
+        if form.img.data != None:
+         img = form.img.data
+         filename, extension = path.splitext(img.filename)
+         filename = str(uuid4())
+         directory = path.join(app.root_path, "static", "uploads", f"{filename}{extension}")
+         img.save(directory)
+         product.img = f"{filename}{extension}"
+        db.session.add(product)
+        db.session.commit()
+        flash("წარმატებით დარეგისტრირდით")
+    return render_template("add_product.html", form=form)
+
+@app.route("/edit_product/<int:product_id>",methods =["GET","POST"])
+def edit_product(product_id):
+    product = Products.query.get(product_id)
+
+
+    if not product:
+        flash("პროდუქტი არ მოიძებნა")
+
+    form = ProductForm(obj = product)
+    if form.validate_on_submit():
+        product.name = form.name.data
+        product.price = form.price.data
+
+        if not type (form.img.data)==str:
+             
+             img = form.img.data
+             filename, extension = path.splitext(img.filename)
+             filename = str(uuid4())
+             directory = path.join(app.root_path, "static", "uploads", f"{filename}{extension}")
+             img.save(directory)
+             product.img = f"{filename}{extension}"
+            
+    db.session.commit()
+    flash("წარმატებით დარეგისტრირდით")     
+
+    return render_template("add_product.html",form=form)
 
 @app.route("/")
 def index():
@@ -38,8 +87,9 @@ def products():
 
 @app.route("/products/<int:id>")
 def view_product(id):
-   # picked_product= prod_list[id]
-    return render_template("viewproduct.html",specprod=prod_list[id])
+    product = Products.query.get_or_404(id)  
+    return render_template("viewproduct.html", product=product)  
+
 
 @app.route("/register",methods=["POST","get"])
 def register():
@@ -60,4 +110,5 @@ def register():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True) 
+    db.create_all()
