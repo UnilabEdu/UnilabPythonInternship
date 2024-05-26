@@ -1,0 +1,96 @@
+:root {
+    --menu-color: #000000;
+    --manu_text-color: #ffffff;
+    --h1-color: red;
+
+}
+
+body {
+    background-color: #808080;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+
+.navbar-nav .nav-link {
+    color: white;
+}
+
+
+
+.navbar-nav .nav-link:hover {
+    color: red;
+}
+
+.navbar-brand img {
+    margin-left: 2vw;
+}
+
+
+
+.navbar-nav li {
+    margin-right: 20px;
+}
+
+#menu img {
+    display: inline-block;
+}
+
+#form {
+    padding: 20px;
+    margin: 20px;
+    width: 300px;
+    display: inline-block;
+}
+
+#form input {
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.container {
+    margin: 50px, 0px, 0px, 10px;
+}
+
+#banner {
+    width:100vw;
+}
+
+#banner img {
+    width: 100vw;
+}
+
+
+.row {
+    margin-top: 19vh;
+}
+
+.info {
+    margin-top: 50px;
+    padding: 20px;
+    width: 100vw;
+}
+
+.info header {
+    text-align: center;
+    width: 60vw;
+    margin: 0 auto;
+
+}
+
+.info p {
+    width: 60vw;
+    margin: 0 auto;
+}
+
+footer {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    width: 100vw;
+    margin-top: 50px;
+}

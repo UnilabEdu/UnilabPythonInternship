@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+    <title>Home Page</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+
+{% endblock %}
+
+{% block body %}
+
+    {% include 'utils/utils.html' %}
+    <div>
+        <form method="post" class="main">
+            <div class="choosable">
+                <input type="text" placeholder="Enter your name" name="name" class="input-text" required>
+                <select name="sport" class="select">
+                    <option selected disabled>Sport</option>
+                    {% for sport in sports %}
+                        <option value="{{ sport }}">{{ sport }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="buttons-div">
+                <button class="button" type="submit">Submit</button>
+                <a href="/registrants" class="button">Registrants</a>
+            </div>
+        </form>
+    </div>
+
+{% endblock %}

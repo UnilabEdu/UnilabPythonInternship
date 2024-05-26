@@ -1,0 +1,40 @@
+{% from "macros.html" import create_navlink %}
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">
+        <img src="{{ url_for('static', filename = 'images/sdx.jpg.jpg')}}" alt="logo" width="100" height="100">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+            {{ create_navlink("home", "HOME") }}
+            {{ create_navlink("about", "ABOUT") }}
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  SPECIAL EFFECTS
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">ATMOSPHERICS</a></li>
+                  <li><a class="dropdown-item" href="#">GIMBAL</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">PYROTECHNICS</a></li>
+                  <li><a class="dropdown-item" href="#">MODEL MAKING</a></li>
+                  <li><a class="dropdown-item" href="#">PROSTHETICS</a></li>
+                </ul>
+              </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="#">GALLERY</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">AWARDS</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">RECRUITMENT</a>
+            </li>
+            {{ create_navlink("contact", "CONTACT") }}
+        </ul>
+    </div>
+</nav>
