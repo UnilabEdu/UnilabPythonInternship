@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% extends 'base.html' %}
+{% block title %} {{ validation }} {% endblock %}
+
+
+{% block body %} 
+
+    <div class="container-md ">
+        {% include 'navbar.html' %}
+        {% block navbar %}{% endblock %}
+
+        
+        {% include 'product.html' %}
+        {% block prod %}{% endblock %}
+
+
+    </div>
+{% include 'footer.html' %}
+{% block footer %}{% endblock %}
+
+{% endblock %}
+
+
+</html>
+
+
