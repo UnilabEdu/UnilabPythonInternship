@@ -1,0 +1,16 @@
+{%extends "base.html"%}
+{%block body%}
+<div class="row">
+    {%for item in prod %}
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="{{item['img']}}" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">{{item["name"]}}</h5>
+            <p class="card-text">{{item["description"]}}</p>
+            <a href="/products/{{loop.index}}" class="btn btn-primary">Go here</a>
+        </div>
+    </div>
+    {%endfor%}
+</div>
+
+{%endblock%}

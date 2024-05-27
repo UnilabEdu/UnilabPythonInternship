@@ -1,0 +1,73 @@
+{% from "macros.html" import is_row %}
+
+{% extends "layouts/base.html" %}
+{% block content %}
+<div class="w-100 d-flex align-items-center justify-content-center">
+<img src="{{ url_for('static', filename = 'images/atmos.jpg')}}" alt="gimbal" class="w-75 ">
+</div>
+<div class="info">
+    <header>
+        <h1>Whether you want to rock a boat or fly a plane Our 4 axis Gimbal can give that precise movement. 
+            This very rare piece of equipment can move large heavy objects up to 20 tonne to a maximum pitch of 15 degrees.</h1>
+    </header>
+    <p>The Gimbal is a hydraulic motion platform. It is the perfect choice for moving sets and operates flawlessly while being bombarded with water. The flat top platform is 30ft x 20ft and tips 15 degrees in all directions. 
+        Four cylinders provide motion control: up, down, pitch and roll axes and it’s powered by two axial piston pumps.
+
+        Controlled with a manual joystick system, it comes with a 25 hp hydraulic pump, hoses, joystick control, and outrigger I-beams for stability. The Hydraulic Power Unit is 100 HP at 460 VAC 3 Phase.
+         There is a step up transformer to use with 208 VAC 3 Phase, this will use an entire 400 AMP circuit. Correctly assembled and utilised, 
+        the tilting platform is capable of safely supporting an imposed load of 23 tonnes</p>
+</div>
+<section class = mediawrapper>
+    <div class = project>
+    <div class ="container" id="imagecontainer">
+        <div class="row custom-row-margin">
+        {% for product_image in products_image %}
+            <div class = "col-md-4 mb-5">
+                    <div class="card align-self-center productcard popup-wrapper">
+                        <img class="card-img-top " id = image src= "{{url_for('static', filename='uploads/' + product_image.product_image) }}" alt="Card image cap">
+                        <div class="card-body carddesc">
+                            <h5 class="card-title">{{ product_image.product_name}}</h5>
+                            <p class="card-text imgdescr"> {% if product_image.description|length > 40 %}
+                                                        {{ product_image.description[0:40] }}
+                                                    {% else %}
+                                                        {{ product_image.description }}
+                                                    {% endif %} </p>
+                     </div>
+                 </div>
+        </div>
+            {% endfor %}
+        </div>
+    </div>
+    
+    <div class = "popup-image">
+        <span>&times;</span>
+        <img src="" alt="product_image.product_name">
+    </div>
+    
+    <div class="container" id="imagecontainer">
+        <div class="row custom-row-margin">
+            {% for product_video in products_video %}
+                <div class="col-md-4 mb-5">
+                    <div class="card align-self-center productcard">
+                        <video class="card-img-top" controls>
+                            <source src="{{url_for('static', filename='uploads/' + product_video.product_image)}}" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="card-body carddesc_video">
+                            <h5 class="card-title">{{ product_video.product_name}}</h5>
+                            <p class="card-text">{% if product_video.description|length > 40 %}
+                                {{ product_video.description[0:40] }}
+                            {% else %}
+                                {{ product_video.description }}
+                            {% endif %}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    </div>
+    </section>
+    
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    {% endblock %}

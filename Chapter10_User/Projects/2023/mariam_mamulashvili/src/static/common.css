@@ -1,0 +1,565 @@
+:root {
+    --menu-color: white;
+    --manu_text-color: black;
+    --h1-color: red;
+
+}
+
+body {
+    background-color: #FAFAFA;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+    width: 100vw;
+
+}
+
+/* navbar css */ 
+
+.navbar-nav .nav-link {
+    color: black;
+    font-family: Anton;
+    font-size: 25px;
+}
+
+
+.navbar .active {
+    background-color: #bf0000;
+    color: white;
+    
+}
+.navbar-nav .nav-link:hover {
+    color: red;
+}
+
+.navbar-brand img {
+    margin-left: 2vw;
+    width: 70px;
+    height:auto;
+}
+
+
+
+.navbar-nav li {
+    margin-right: 20px;
+}
+
+#menu img {
+    display: inline-block;
+}
+/* contact page */
+#form {
+    padding: 20px;
+    margin: 20px;
+    width: 300px;
+    display: inline-block;
+}
+#form-text {
+    margin-bottom: 17vh;
+    width: 100%;
+    margin-top: -10vh;
+}
+#form input {
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+#contact_text {
+    margin-top: 8vh;
+}
+
+.container {
+    margin: 50px, 0px, 0px, 10px;
+}
+
+/* home page */
+
+#banner {
+    width:100vw;
+}
+
+#banner img {
+    width: 100vw;
+}
+
+
+.row {
+    margin-top: 19vh;
+}
+
+.info {
+    margin-top: 50px;
+    padding: 20px;
+    width: 100vw;
+    margin-bottom: 17vh;
+}
+
+.info header {
+    text-align: center;
+    width: 60vw;
+    margin: 0 auto;
+
+}
+
+.info p {
+    width: 60vw;
+    margin: 0 auto;;
+}
+
+/* home - works slider */
+
+.works-header {
+    margin-top: 30px;
+    font-weight: 700;
+    font-family: DM Sans;
+}
+
+
+.product-container {
+    display: flex;
+    justify-content: space-between;
+    overflow-x: auto;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+    transition: scroll-left 1.5s ease-in-out;
+}
+
+.product-container::-webkit-scrollbar {
+    display: none;
+}
+
+
+.product-container .card-text {
+    overflow: hidden;
+    text-overflow: ellipsis; /* This will add an ellipsis (...) at the end of the text */
+    white-space: normal;
+}
+
+
+.works-slider {
+    position: relative;
+    height: auto;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.product-container .card {
+    margin: 0 5% 0 5%;
+   
+}
+
+
+.works-slider .pre-btn, 
+.works-slider .next-btn {
+    border: none;
+    width: 10vw;
+    height: 90%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 9;
+}
+.works-slider .next-btn {
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
+}
+
+.works-slider .pre-btn {
+    background: linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+ .pre-btn {
+    left: 0;
+ }
+
+ .next-btn {
+    right: 0;
+ }
+
+ .pre-btn img, 
+ .next-btn img {
+    opacity: 0.2;
+ }
+
+ .pre-btn:hover img, 
+ .next-btn:hover img {
+    opacity: 1;
+ }
+
+/*home menu */
+
+#services img {
+    width: 400px;
+    height: 250px;
+    opacity: 0.8;
+}
+#services .col .cat{
+    background-color: grey;
+}
+
+#services .col .head {
+    text-align: center;
+    position: relative;
+    top: -40%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    color: 	#bf0000; 
+    padding: 10px 20px; 
+    font-size: 20px; 
+    font-family: Anton;
+}
+#services {
+    margin-top: 30px;
+    background-color: #D3D3D3;
+    padding-top: 50px;
+}
+
+#services .row {
+    margin-top: 0px;
+}
+#services .row .n1{
+    margin-top: 40px;
+}
+
+#services .col {
+    transition: all 0.3s;
+}
+#services .col:hover{
+    transform: scale(1.15);
+}
+
+#services .col:hover{
+    cursor: pointer;
+}
+
+#services a {
+    text-decoration: none;
+}
+
+/* footer */ 
+
+
+footer {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    width: 100vw;
+    margin-top: auto;
+
+}
+
+.contact p {
+    display: inline-block;
+}
+
+.contact img {
+    width: 30px;
+    height: auto;
+    margin: 0 10px;
+    display: inline-block;
+
+}
+
+
+
+/* about gimbal */
+
+.container #videocontainer{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 100vw;
+}
+
+/* works */
+
+.intro {
+    height: 200px;
+    width: 100%;
+    box-sizing: border-box;
+    position: absolute;
+    background: rgb(27, 27, 27, .5);
+    bottom: -50px;
+    visibility: hidden;
+    opacity: 0;
+    transition: .5s;
+
+}
+.work p {
+    font-size: 16px;
+}
+
+.work h3 {
+    font-size: 20px;
+}
+.work a {
+    text-decoration: none;
+    color: white;
+}
+
+.card:hover .intro{
+    height: 200px;
+    visibility: visible;
+    bottom: 0;
+    opacity: 1;
+}
+
+.work{
+    overflow: hidden;
+}
+
+.work img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.header h1{
+    margin-top: 30px;
+    font-weight: 700;
+    font-family: DM Sans;
+}
+
+
+.custom-row-margin {
+    margin-top: 60px;
+}
+
+
+/* products image and video */
+
+#image {
+    height: 16.2vw;
+}
+
+
+.productcard {
+    height: 16.2vw;
+    overflow: hidden;
+    background-color: #000000;
+    border: none;
+    border-radius: 0%;
+}
+
+.productcard:hover {
+    cursor: pointer;
+}
+
+.productcard h5,
+.productcard p {
+    color: #D3D3D3;
+}
+
+.carddesc {
+    box-sizing: border-box;
+    position: absolute;
+    background: rgb(27, 27, 27, .8);
+    bottom: -40px;
+    width: 100%;
+    height: 80px;
+    opacity: 0;
+    transition: .5s;
+
+}
+
+
+.card:hover .carddesc{
+    height:80px;
+    visibility: visible;
+    bottom: 0;
+    opacity: 1;
+}
+
+/* products- video section*/
+
+.carddesc_video {
+    box-sizing: border-box;
+    position: absolute;
+    background: rgb(27, 27, 27);
+    bottom: 0;
+    width: 100%;
+    height: 65px;
+
+}
+
+.carddesc_video h5 {
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.carddesc_video p {
+    font-size: 14px;
+}
+
+
+.mediawrapper {
+    width: 100%;
+    display:flex; 
+    justify-content: center;
+}
+
+.project {
+    width: 75%;
+}
+
+
+
+/* view  works */
+
+#view_work {
+    width: 90vw;
+    margin: 0 auto;
+}
+
+#view_work h1 {
+    margin: 60px 0 60px 0;
+}
+
+#view_work p{
+    font-size: 26px;
+    font-weight: 500;
+    font-family: DM Sans;
+}
+#view_work .film_disciption {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#view_work .img-desc {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 5vw;
+}
+
+#view_work .description_wrapper {
+    width: 45%; /* Adjust as needed */
+}
+
+#view_work .description_wrapper .description {
+    margin-top:60px;
+    width: 100%;
+}
+
+#view_work .description_wrapper .description p {
+    font-weight: 400;
+    font-size: 24px;
+}
+
+
+.video_wrapper {
+    background-color:#D3D3D3;
+    margin-top: 100px;
+}
+
+
+/* gallery */
+
+.gallery-container {
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    margin-bottom: 60px;
+   
+}
+
+.gallery-image img{
+    height: 16vw;
+    width: 100%;
+    transition: .2s linear;
+}
+
+.gallery-image:hover img{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.popup-image {
+    position: fixed;
+    top: 0; 
+    left: 0;
+    background: rgba(0,0, 0, .9);
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+}
+
+
+.popup-image span{
+    position: absolute;
+    top: 0; 
+    right: 10px;
+    font-size: 60px;
+    font-weight: bolder;
+    color: #fff;
+    cursor: pointer;
+    z-index: 100;
+
+}
+
+.popup-image img {
+    position: absolute;
+    top: 50%; 
+    left:50%;
+    transform: translate(-50%, -50%);
+    border: 5px solid #fff;
+    border-radius: 5px;
+    width: 750px;
+    object-fit: cover;
+
+
+}
+
+
+
+
+
+
+/* slider responsive */
+
+@media screen and (max-width: 768px) {
+    .gallery-image img{
+        height: 30vw;
+    }
+
+    .col-md-3 {
+        flex: 0 0 48%; /* Two cards per row */
+        max-width: 48%;
+
+    }
+
+    .popup-image img {
+        width: 95%;
+    }
+
+    #image {
+        height: 250px;
+    }
+
+    .productcard {
+        height: 250px;
+    }
+    #view_work .description_wrapper {
+        width: 100%;
+        margin-top: 6px;
+    }
+    #view_work .description_wrapper .description {
+        width: 100%; 
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .col-md-3 {
+        flex: 0 0 100%; /* One card per row */
+        max-width: 100%;
+    }
+
+    .gallery-image img{
+        height: 50vw;
+    }
+}

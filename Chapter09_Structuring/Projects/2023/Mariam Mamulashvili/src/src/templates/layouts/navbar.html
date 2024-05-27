@@ -1,0 +1,43 @@
+{% from "macros.html" import is_active %}
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">
+        <img src="{{ url_for('static', filename = 'images/sdx.jpg.jpg')}}" alt="logo" width="100" height="100">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link {{is_active("home")}}" href="/">HOME</a></li>
+            <li class="nav-item"><a class="nav-link {{is_active("about")}}" href="/about">ABOUT</a></li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle {{is_active("gimbal")}}" href="/gimbal" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  SPECIAL EFFECTS
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="/atmospherics">ATMOSPHERICS</a></li>
+                  <li><a class="dropdown-item" href="/gimbal">GIMBAL</a></li>
+                  <li><a class="dropdown-item" href="/pyrothetics">PYROTECHNICS</a></li>
+                  <li><a class="dropdown-item" href="/model_making">MODEL MAKING</a></li>
+                  <li><a class="dropdown-item" href="/prosthetics">PROSTHETICS</a></li>
+                </ul>
+              </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="#">GALLERY</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link {{is_active("contact")}}" href="/works">WORKS</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link {{is_active("contact")}}" href="/contact">CONTACT</a>
+            </li>
+            <li class="nav-item">
+                {% if is_admin %}
+                <a class="nav-link {{is_active("add_media")}}" href="/add_media">ADD CONTENT</a>
+                {% endif %}
+            </li>
+        </ul>
+    </div>
+</nav>

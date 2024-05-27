@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block body %}
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">კურსი</th>
+      <th scope="col">აღწერა</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{ view_program['name'] }}</td>
+      <td>{{ view_program['description' ]}}</td>
+    </tr>
+
+  </tbody>
+</table>
+{% endblock %}

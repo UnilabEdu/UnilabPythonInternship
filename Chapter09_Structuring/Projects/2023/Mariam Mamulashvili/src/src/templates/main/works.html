@@ -1,0 +1,27 @@
++{% extends "base.html" %}
+{% block content %}
+
+<h1>WORKS</h1>
+<div class = "class-container">
+    <div class="row">
+        {% for video in product_dictionary["video"] %}
+        {% if (loop.index0 + 1) % 4 == 0 %}
+            <div class="w-100 gy-5"></div>
+        {% endif %}
+        <div class = "col-lg-4">
+        <div class="card align-self-center" style="width: 20rem;">
+            <a href="/atmospherics"><img src="{{ url_for('static', filename = 'images/atmos.jpg')}}" alt="atmospherics" >
+            <div class="card-body">
+            <h5 class="card-title">NAME</h5>
+            <p class="card-text">JSFERIKSHNERFJ</p>
+            </a>
+            </div>
+            </div>
+        </div>
+            {% endfor %}
+        </div>
+</div>
+
+
+
+{% endblock %}

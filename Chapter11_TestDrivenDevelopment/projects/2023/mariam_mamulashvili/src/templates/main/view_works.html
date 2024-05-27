@@ -1,0 +1,40 @@
+
+
+{% extends "layouts/base.html" %}
+{% block content %}
+<section>
+    <div id = "view_work">
+        <div class = "film_disciption">
+            <div>
+                <h1>{{ film.product_name }}</h1>
+            </div>
+            <div class = "img-desc">
+                <div class = "img_wrapper">
+                    <img src="{{ film.product_image }}" alt="Image Description">
+                </div>
+                <div class = description_wrapper>
+                    <div>
+                    <p> Genre: {{film.product_category}}</p>
+                    <p> Year: {{film.release_year}}</p>
+                    <p> Director: {{film.director}}</p>
+                    </div>
+                    <div class = "description">
+                        <p> {{film.description}} </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class = "video_wrapper">
+        <video class="card-img-top" controls>
+            <source src="{{url_for('static', filename='uploads/' + film.product_video)}}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    
+</section>
+
+<!-- fine_tune video link, css, ადმინ პანელი და კარუსელია გასაწერი -->
+
+
+{% endblock %}
