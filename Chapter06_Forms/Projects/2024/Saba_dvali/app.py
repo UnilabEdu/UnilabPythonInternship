@@ -36,7 +36,14 @@ def details(id):
     return redirect(url_for('/'))
 
 
+@server.route("/profile")
+def profile():
+    global validation
 
+    if validation:  
+        return render_template("profile.html", validation=validation)
+    else:
+        return "hello"
 
 
 if __name__ == "__main__":
