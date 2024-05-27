@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Quick Quiz - HighScores
+{% endblock %}
+
+{% block body %}
+<h1>Quiz</h1>
+<form  method="POST">
+    {% for question in quiz %}
+        <div>
+            <p>{{ question.question_text }}</p>
+            <input type="radio" name="{{ question.id }}" value="1"> {{ question.choice1 }}<br>
+            <input type="radio" name="{{ question.id }}" value="2"> {{ question.choice2 }}<br>
+            <input type="radio" name="{{ question.id }}" value="3"> {{ question.choice3 }}<br>
+            <input type="radio" name="{{ question.id }}" value="4"> {{ question.choice4 }}<br>
+        </div>
+    {% endfor %}
+    <button type="submit">Submit</button>
+</form>
+{% endblock %}

@@ -1,0 +1,37 @@
+{% from "macros.html" import create_navlink %}
+
+<nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary" >
+    <div class="container">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <a class="circle-image" href="{{ url_for('index') }}">
+                <img src="{{ url_for('static', filename='img/Q_logo.png') }}" alt="Image">
+            </a>
+            <!-- Collapsible wrapper -->
+            <div class="collapse navbar-collapse" id="navbarButtonsExample">
+                <!-- Left links -->
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        {{ create_navlink('index', 'Home') }}
+                    </li>
+                    <li class="nav-item">
+                        {{ create_navlink('highscores', 'HighScores') }}
+                    </li>
+                </ul>
+                <!-- Left links -->
+                <div class="d-flex align-items-center">
+                    <a href="{{ url_for('login') }}" class="btn btn-primary me-3">
+                        Login
+                    </a>
+                    <a href="{{ url_for('register') }}" class="btn btn-primary me-3">
+                        Sign up for free
+                    </a>
+                    {% if user_type == "admin" %}
+                        <a href="{{ url_for('users') }}" class="btn btn-primary me-3">
+                            Users
+                        </a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
