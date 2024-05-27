@@ -1,0 +1,77 @@
+{% extends "layouts/base.html" %}
+{% block content %}
+    <div id="banner">
+        <video autoplay muted loop src="{{ url_for('static', filename = 'images/some_video.mp4')}}" width="100%" type="video/mp4"></video>
+    </div>
+    <div class="info">
+        <header>
+            <h1>Special effects company providing a full range of high quality special effects for TV, film, and the events industry.</h1>
+        </header>
+        <p>SFX Georgia offers competitive and cost-effective special effects for all types of productions. Operating under strict codes of practice and safety, we are totally committed to delivering a personal, professional service from our uniquely qualified technicians. Our experience ensures that your effects are delivered safely, on budget, and as realistic as possible. Using state-of-the-art techniques and equipment, we specialize in atmospheric, fire, explosives, mechanical rigs, snow/winter effects, model making, soft props, and prosthetics.</p>
+    </div>
+
+    <section class = "works-slider">
+      <div>
+      <h2 class = "works-header"> WORKS</h2>
+      <button class = "pre-btn"><img src = "{{ url_for('static', filename = 'images/pre_arrow.png')}}" alt = "" ></button>
+      <button class = "next-btn"><img src = "{{ url_for('static', filename = 'images/next_arrow.png')}}" alt = "" ></button>
+      </div>
+
+      <div class="product-container">
+          {% for film in films %}
+              <div class="col-md-3 mb-5">
+                  <div class="card align-self-center work">
+                      <a href="{{url_for('main.view_works', product_name=film.product_name)}}">
+                          <img src="{{film.product_image}}" alt="Image Description">
+                          <div class="card-body intro">
+                              <h3 class="card-title">{{film.product_name}}</h3>
+                              <p class="card-text">
+                                  {% if film.description|length > 100 %}
+                                      {{film.description[0:120]}}...
+                                  {% else %}
+                                      {{film.description}}
+                                  {% endif %}
+                              </p>
+                          </div>
+                      </a>
+                  </div>
+              </div>
+          {% endfor %}
+      </div>
+    </section>
+
+
+    <div id="services">
+        <div class="container text-center">
+            <div class="row n1">
+              <div class="col">
+                <a href="{{ url_for('main.atmospherics', page_category = 'atmospherics', product_category = 'video, image')}}"><img src="{{ url_for('static', filename = 'images/atmos.jpg')}}" alt="atmospherics" >
+                <div class="head"><h2>ATMOSPHERICS</h2></div></a>
+              </div>
+              <div class="col">
+                <a href="{{ url_for('main.gimbal', page_category = 'gimbal', product_category = 'video, image')}}"><img src="{{ url_for('static', filename = 'images/gimbal.jpg')}}" alt="gimbal">
+                <div class="head"><h2>GIMBAL</h2></div></a>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <a href="{{ url_for('main.pyrotechnics', page_category = 'pyrotechnics', product_category = 'video, image')}}"><img src="{{ url_for('static', filename = 'images/pyrotec.png')}}" alt="pyrotechnics">
+                <div class="head"><h2>PYROTECHNICS</h2></div></a>
+              </div>
+              <div class="col">
+                <a href="{{ url_for('main.model_making', page_category = 'model_making', product_category = 'video, image')}}">
+                <img src="{{ url_for('static', filename = 'images/model.jpg')}}" alt="model making">
+                <div class="head"><h2>MODEL MAKING</h2></div></a>
+              </div>
+              <div class="col">
+                <a href="{{ url_for('main.prosthetics', page_category = 'prosthetics', product_category = 'video, image')}}">
+                <img src="{{ url_for('static', filename = 'images/prosthetics.PNG')}}" alt="prosthetics">
+                <div class="head"><h2>PROSTHETICS</h2></div></a>
+              </div>
+            </div>
+          </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+{% endblock %}

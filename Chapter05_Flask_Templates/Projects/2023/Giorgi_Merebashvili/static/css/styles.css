@@ -1,0 +1,100 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: azure;
+}
+
+.nav-bar {
+    display: flex;
+    width: 100%;
+    height: 60px;
+    background-color: rgb(184, 184, 184);
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px;
+    color: azure;
+}
+.main {
+    width: 500px;
+    height: 400px;
+    display: flex;
+    left: 0;
+    right: 0;
+    margin: 40px auto;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+.input-text {
+    border-radius: 6px;
+    border: 1px solid #6486af;
+    outline: none;
+
+    text-align: left;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    width: 280px;
+    padding: 10px 12px 10px;
+}
+.choosable {
+    display: flex;
+    width: 100%;
+    height: 100px;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.select {
+    outline: none;
+    border-radius: 6px;
+    border: 1px solid #6486af;
+    padding: 10px 12px 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+.buttons-div {
+    display: flex;
+    width: 100%;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-direction: row;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 40px;
+    background-color: #6486af;
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    color: azure;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 0 5px 0 5px;
+}
+.button:hover {
+    background-color: #8aaeda;
+}
+
+.registrants-div {
+    display: flex;
+    height: 700px;
+    width: 400px;
+    align-items: center;
+    left: 0;
+    right: 0;
+    margin: 40px auto;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+}

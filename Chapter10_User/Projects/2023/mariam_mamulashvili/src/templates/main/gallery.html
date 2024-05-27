@@ -1,0 +1,21 @@
+{% extends "layouts/base.html" %}
+{% block content %}
+
+<section>
+    <div class="gallery-container row popup-wrapper ">
+    {% for product_image in products_image %}
+        <div class = "gallery-image col-md-3 custom-row-margin">
+        <img src = "{{url_for('static', filename='uploads/' + product_image.product_image) }}" alt="product_image.product_name">
+        </div>
+    {% endfor %}
+    </div>
+</section>
+
+<div class = "popup-image">
+    <span>&times;</span>
+    <img src="" alt="product_image.product_name">
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+{% endblock %}

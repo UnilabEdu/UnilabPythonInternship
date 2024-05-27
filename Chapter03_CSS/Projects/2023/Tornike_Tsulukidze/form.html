@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian&family=Rubik:wght@300&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"/>
+    <title>კვლევა</title>
+</head>
+<body>
+<h1>კვლევა</h1><br/>
+<p>მოცემული ფორმა მოიცავს კითხვებს, რათა ჩატარდეს ანალიზი იმისა თუ, მაგალითად, რომელ მეთოდს იყენებენ კრეფვისას ან რამდენად სწრაფად კრეფენ.</p>
+<form>
+    <label for="full-name">სახელი და გვარი</label><br/>
+    <input name="full-name" class="full-name" type="text" required placeholder="გიორგი გიორგაძე"><br/>
+    <label for="email">საკონტაქტო Email</label><br/>
+    <input name="email" class="email" type="email" required placeholder="example@mail.com"><br/>
+    <label for="phone-number">საკონტაქტო ტელეფონის ნომერი</label><br/>
+    <input name="phone-number" class="phone-number" type="tel" required placeholder="555 55 55 55"><br/>
+    <label for="typing-method">რომელ მეთოდს იყენებ ყველაზე ხშირად?</label><br/>
+    <select name="typing-method">
+        <option>Hunt and Peck</option>
+        <option>Touch Typing</option>
+        <option>Hybrid Typing</option>
+        <option>Thumb Typing</option>
+        <option>DVORAK Simplified Keyboard</option>
+    </select><br/>
+    <label for="average-speed">რა არის შენი საშუალო კრეფვის სიჩქარე?</label><br/>
+    <input type="number" min="0" max="400" required/><br/>
+    <label for="maximum-speed">რა არის შენი მაქსიმალური კრეფვის სიჩქარე, რაც დაგიფიქსირებია.?</label><br/>
+    <input type="number" min="0" max="400" required/><br/>
+    <label for="additional">რამეს ხომ არ დაამატებდით?</label><br/>
+    <textarea name="additional"></textarea><br/>
+
+    <input type="submit" value="გაგზავნა">
+</form>
+<p><a href="index.html">მთავარ გვერდზე</a> დაბრუნება</p>
+</body>
+</html>
