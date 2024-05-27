@@ -1,22 +1,17 @@
-from flask import Flask, render_template, url_for, flash, redirect
+from flask import Flask, render_template, request, url_for, flash, redirect
 from forms import RegisterForm, LoginForm
-from flask_sqlalchemy import SQLAlchemy
-from os import path 
+from os import path
+from models import db, Question
 
 app = Flask(__name__)
 app.config["SECRET_KEY"] = "kljadskl10248120318znx"
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///" + path.join(app.root_path, "db.sqlite")
+db.init_app(app)
 
-db=SQLAlchemy(app)
-
-class Top_user(db.Model):
-    __tablename__ = "top_user"
-    id = db.Column(db.Integer, primary_key=True)
-    username = db.Column(db.String(80), nullable=False)
-    gender = db.Column(db.String(10), nullable=False)
-    email = db.Column(db.String(120), unique=True, nullable=False)
-    subject = db.Column(db.String(50), nullable=False)
+# Create the database tables
+with app.app_context():
+    db.create_all()
 
 top_users_list = [
     {
@@ -64,29 +59,13 @@ quiz_list = [
 
 users_list = []
 
-@app.before_request
-def create_tables():
-    db.create_all()
-    for user_data in top_users_list:
-        if not Top_user.query.filter_by(email=user_data['email']).first():
-            user = Top_user(
-                username=user_data['username'],
-                gender=user_data['gender'],
-                email=user_data['email'],
-                subject=user_data['subject']
-            )
-            db.session.add(user)
-    db.session.commit()
-
 @app.route("/")
 def index():
     return render_template("index.html", user_type="admin")
 
 @app.route("/highscores")
 def highscores():
-    users = Top_user.query.all()
-    top_list = [{'username': user.username, 'gender': user.gender, 'email': user.email, 'subject': user.subject} for user in users]
-    return render_template("highscores.html", top_list=top_list)
+    return render_template("highscores.html", top_list=top_users_list)
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
@@ -100,14 +79,64 @@ def register():
         users_list.append(new_user)
         
         flash("Registration successful!", "success")
-        print(users)
+        print(users_list)
         return redirect(url_for("login"))
     return render_template("register.html", form=form)
 
-@app.route("/users")
-def users():
-    print(users_list)
-    return render_template("users.html", users=users_list)
+@app.route("/questions")
+def questions():
+    questions = Question.query.all()
+    return render_template("questions.html", questions=questions)
+
+@app.route('/add_question', methods=['GET', 'POST'])
+def add_question():
+    if request.method == 'POST':
+        question_text = request.form['question_text']
+        choice1 = request.form['choice1']
+        choice2 = request.form['choice2']
+        choice3 = request.form['choice3']
+        choice4 = request.form['choice4']
+        correct_answer = int(request.form['correct_answer'])
+        
+        new_question = Question(
+            question_text=question_text,
+            choice1=choice1,
+            choice2=choice2,
+            choice3=choice3,
+            choice4=choice4,
+            correct_answer=correct_answer
+        )
+        
+        db.session.add(new_question)
+        db.session.commit()
+        flash("Question added successfully!", "success")
+        return redirect(url_for('questions'))
+    return render_template('add_question.html')
+
+@app.route('/edit_question/<int:id>', methods=['GET', 'POST'])
+def edit_question(id):
+    question = Question.query.get_or_404(id)
+    if request.method == 'POST':
+        question.question_text = request.form['question_text']
+        question.choice1 = request.form['choice1']
+        question.choice2 = request.form['choice2']
+        question.choice3 = request.form['choice3']
+        question.choice4 = request.form['choice4']
+        question.correct_answer = int(request.form['correct_answer'])
+        
+        db.session.commit()
+        flash('Question updated successfully!', 'success')
+        return redirect(url_for('questions'))
+    
+    return render_template('edit_question.html', question=question)
+
+@app.route('/delete_question/<int:id>', methods=['POST'])
+def delete_question(id):
+    question = Question.query.get_or_404(id)
+    db.session.delete(question)
+    db.session.commit()
+    flash('Question deleted successfully!', 'success')
+    return redirect(url_for('questions'))
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
@@ -120,10 +149,6 @@ def login():
         else:
             flash("Login unsuccessful. Please check email and password", "danger")
     return render_template("login.html", form=form)
-
-@app.route("/game", methods=["GET", "POST"])
-def game():
-    return render_template("game.html", quiz=quiz_list)
 
 if __name__ == '__main__':
     app.run(debug=True)

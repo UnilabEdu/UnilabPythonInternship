@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Quick Quiz - Add Question
+{% endblock %}
+
+{% block body %}
+<div class="d-flex justify-content-center align-items-center pt-5">
+    <h2>Add a New Question</h2>
+</div>
+
+<form action="{{ url_for('add_question') }}" method="POST">
+    <div class="form-outline mb-4">
+        <label class="form-label" for="question_text">New Question:</label>
+        <input type="text" id="question_text" name="question_text" class="form-control" required>
+    </div>
+
+    <div class="form-outline mb-4">
+        <label class="form-label" for="choice1">Choice A:</label>
+        <input type="text" id="choice1" name="choice1" class="form-control" required>
+        <input type="radio" id="correct_answer1" name="correct_answer" value="1" required>
+        <label for="correct_answer1">Correct Answer</label>
+    </div>
+
+    <div class="form-outline mb-4">
+        <label class="form-label" for="choice2">Choice B:</label>
+        <input type="text" id="choice2" name="choice2" class="form-control" required>
+        <input type="radio" id="correct_answer2" name="correct_answer" value="2" required>
+        <label for="correct_answer2">Correct Answer</label>
+    </div>
+
+    <div class="form-outline mb-4">
+        <label class="form-label" for="choice3">Choice C:</label>
+        <input type="text" id="choice3" name="choice3" class="form-control" required>
+        <input type="radio" id="correct_answer3" name="correct_answer" value="3" required>
+        <label for="correct_answer3">Correct Answer</label>
+    </div>
+
+    <div class="form-outline mb-4">
+        <label class="form-label" for="choice4">Choice D:</label>
+        <input type="text" id="choice4" name="choice4" class="form-control" required>
+        <input type="radio" id="correct_answer4" name="correct_answer" value="4" required>
+        <label for="correct_answer4">Correct Answer</label>
+    </div>
+
+    <div class="d-flex justify-content-center align-items-center">
+        <button type="submit" class="btn btn-success btn-block me-3">Add Question</button>
+        <a class="btn btn-info" href="{{ url_for('questions') }}">Questions List</a>
+    </div>
+</form>
+
+{% endblock %}

@@ -6,9 +6,7 @@
             <a class="circle-image" href="{{ url_for('index') }}">
                 <img src="{{ url_for('static', filename='img/Q_logo.png') }}" alt="Image">
             </a>
-            <!-- Collapsible wrapper -->
             <div class="collapse navbar-collapse" id="navbarButtonsExample">
-                <!-- Left links -->
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         {{ create_navlink('index', 'Home') }}
@@ -17,19 +15,18 @@
                         {{ create_navlink('highscores', 'HighScores') }}
                     </li>
                 </ul>
-                <!-- Left links -->
                 <div class="d-flex align-items-center">
+                    {% if user_type == "admin" %}
+                        <a href="{{ url_for('questions') }}" class="btn btn-primary me-3">
+                            Questions
+                        </a>
+                    {% endif %}
                     <a href="{{ url_for('login') }}" class="btn btn-primary me-3">
                         Login
                     </a>
                     <a href="{{ url_for('register') }}" class="btn btn-primary me-3">
                         Sign up for free
                     </a>
-                    {% if user_type == "admin" %}
-                        <a href="{{ url_for('users') }}" class="btn btn-primary me-3">
-                            Users
-                        </a>
-                    {% endif %}
                 </div>
             </div>
         </div>
