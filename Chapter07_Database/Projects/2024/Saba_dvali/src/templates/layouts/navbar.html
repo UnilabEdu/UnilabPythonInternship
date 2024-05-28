@@ -1,0 +1,78 @@
+
+{% block navbar %}
+
+<div  style=" width: 100%;" >
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" style="border-bottom: 1px solid black;">
+        <div class="container-fluid">
+        <a class="navbar-brand" href="/">Main Board</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Pricing</a>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Products
+                </a>
+                <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">All</a></li>
+                <li><a class="dropdown-item" href="#">Iphone</a></li>
+                <li><a class="dropdown-item" href="#">Samsung</a></li>
+                <li><a class="dropdown-item" href="#">Google pixel</a></li>
+                <li><a class="dropdown-item" href="#">Redmi</a></li>
+                </ul>
+            </li>
+            </ul>
+        </div>
+
+        {% if  validation == False %}
+            <button type="button" class="btn btn-light btn-lg" data-bs-toggle="modal" data-bs-target="#registrationModal">
+                Sign in
+            </button>
+            <button type="button" class="btn btn-light btn-lg" data-bs-toggle="modal" data-bs-target="#loginModal">
+                Log in
+            </button>
+            {% include 'layouts/register.html' %}
+            {% block register %}{% endblock %}
+
+            {% include 'layouts/login.html' %}
+            {% block login %}{% endblock %}
+        {% elif validation == True %}
+
+            <div class="dropdown ">
+                <button type="button" class="btn btn-light">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16" data-darkreader-inline-fill="" style="--darkreader-inline-fill: currentColor;">
+                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"></path>
+                    </svg>
+                </button>
+                <a class=" dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" class="rounded-circle" height="48" alt="Black and White Portrait of a Man" loading="lazy" />
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end" style="box-shadow:3px 3px 10px rgba(0, 0, 0, 0.1);  border-radius: 10px;border: 1px solid #adabab; background-color:#ffffff">
+                <li><a class="dropdown-item" href="{{ url_for('main.profile') }} ">Profile</a></li>
+                <li><a class="dropdown-item" href="#">Settings</a></li>
+                <li><a class="dropdown-item" href="#">About</a></li>
+                <li><a class="dropdown-item" href="#">Support</a></li>
+                <li><a class="dropdown-item" href="#">Logout</a></li>
+                </ul>
+            </div>
+        {% endif %}
+
+    </nav>
+
+
+
+</div>
+
+{% endblock %}
+
