@@ -9,33 +9,34 @@ main_blueprint = Blueprint("main", __name__, template_folder=TEMPLATES_FOLDER)
 top_users_list = [
     {
         "username": "Roma Grigalashvili",
-        "gender": "Male",
         "email": "roma.grigalashvili@iliauni.edu.ge",
-        "subject": "Math"
+        "subject": "Math",
+        "score": 40
+
     },
     {
         "username": "Saba Dvali",
-        "gender": "Male",
         "email": "saba.dvali@iliauni.edu.ge",
-        "subject": "History"
+        "subject": "History",
+        "score": 38
     },
     {
         "username": "Tea Godoladze",
-        "gender": "Female",
         "email": "tea_godoladze@iliauni.edu.ge",
-        "subject": "Math"
+        "subject": "Math",
+        "score": 37
     },
     {
         "username": "Roma Grigala",
-        "gender": "Male",
         "email": "r.grigalashvili777@gmail.com",
-        "subject": "History"
+        "subject": "History",
+        "score": 39
     },
     {
         "username": "Albert Buzaladze",
-        "gender": "Male",
         "email": "albert.buzaladze.1@iliauni.edu.ge",
-        "subject": "Geography"
+        "subject": "Geography",
+        "score": 37
     },
 ]
 

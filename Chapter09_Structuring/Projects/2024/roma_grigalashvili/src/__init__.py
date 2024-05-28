@@ -2,9 +2,9 @@ from flask import Flask
 from src.extensions import db
 from src.config import Config
 from src.commands import init_db
-from src.views import main_blueprint, question_blueprint
+from src.views import main_blueprint, question_blueprint, auth_blueprint
 
-BLUEPRINTS = [main_blueprint, question_blueprint]
+BLUEPRINTS = [main_blueprint, question_blueprint, auth_blueprint]
 COMMANDS = [init_db]
 
 def create_app():

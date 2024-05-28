@@ -15,9 +15,9 @@
         <tr>
           <th scope="col">#</th>
           <th scope="col">Username</th>
-          <th scope="col">Gender</th>
           <th scope="col">Email</th>
           <th scope="col">Quiz</th>
+          <th scope="col">Score</th>
         </tr>
       </thead>
       <tbody>
@@ -25,9 +25,9 @@
           <tr>
             <th scope="row">{{loop.index}}</th>
             <td>{{top_user['username']}}</td>
-            <td>{{top_user['gender']}}</td>
             <td>{{top_user['email']}}</td>
             <td>{{top_user['subject']}}</td>
+            <td>{{top_user['score']}}</td>
           </tr>
         {% endfor %}
       </tbody>
