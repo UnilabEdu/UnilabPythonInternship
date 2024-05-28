@@ -1,5 +1,5 @@
 from flask import Flask
-from src.extensions import db
+from src.extensions import db, migrate
 from src.config import Config
 from src.commands import init_db
 from src.views import main_blueprint, question_blueprint, auth_blueprint
@@ -24,6 +24,8 @@ def register_extensions(app):
 
     # Flask-SQLAlchemy
     db.init_app(app)
+
+    migrate.init_app(app, db)
 
 def register_blueprints(app):
     for blueprint in BLUEPRINTS:
