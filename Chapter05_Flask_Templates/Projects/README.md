@@ -30,6 +30,7 @@
 - ლაშა დემურაშვილი | [Flask_templates](/Chapter5_Flask_Templates/Projects/Lasha_Demurashvili)
 - mariam razmadze | [team-app](/Chapter5_Flask_Templates/Projects/mariam_razmadze)
 - ლევან ყოლბაია | [Nut](Chapter5_Flask_Templates/Projects/Levan_Kolbaia)
+- ბესიკ გოგეიშვილი | [Petition Website](Chapter05_Flask_Templates/Projects/2023/Besik_Gogeishvili)
 
 ### 2024 სტაჟირება
 

@@ -28,6 +28,10 @@
 
 ### 2023 სტაჟირება
 - ლაშა დემურაშვილი |  [Cheetah](/Chapter3_CSS/Projects/Lasha_demurashvili) | [[View]](https://htmlpreview.github.io/?https://github.com/LashaDemurashvili/UnilabPythonInternship/blob/master/Chapter2_HTML/Projects/Lasha_demurashvili/project_1/index.html)
+- თორნიკე წულუკიძე | [Typing](/Chapter3_CSS/Projects/2023/Tornike_Tsulukidze) | [View Index](/https://htmlpreview.github.io/?https://github.com/TheMechanicalBeing/UnilabPythonInternship/blob/master/Chapter03_CSS/Projects/2023/Tornike_Tsulukidze/index.html/) | [View Form](/https://htmlpreview.github.io/?https://github.com/TheMechanicalBeing/UnilabPythonInternship/blob/master/Chapter03_CSS/Projects/2023/Tornike_Tsulukidze/form.html/) 
+- ანანო რობაქიძე | [homepage](/Chapter3_CSS/Projects/Anano_Robakidze) | [[View]](https://htmlpreview.github.io/?https://github.com/Anano24/UnilabPythonInternship/blob/master/Chapter03_CSS/Projects/2023/Anano_Robakidze/index.html)
+- გიორგი მერებაშვილი | [YouTube](Chapter03_CSS/Projects/2023/giorgi_merebashvili) | [View](https://htmlpreview.github.io/?https://github.com/CCXLV/UnilabPythonInternship/blob/master/Chapter02_HTML/Projects/2023/Giorgi_Merebashvili/index.html)
+- ბესიკ გოგეიშვილი |  [Kupata](Chapter03_CSS/Projects/2023/besik_gogeishvili) | [[View]](https://htmlpreview.github.io/?https://github.com/b-gogeishvili/UnilabPythonInternship/blob/master/Chapter03_CSS/Projects/2023/besik_gogeishvili/index.html)
 
 ### 2024 სტაჟირება
 - გვანცა მანთაშაშვილი | [Conference&Seminars_page](Chapter03_CSS/Projects/2024/gvantsa_mantashashvili/Conference&Seminars_page) | [[View]](https://htmlpreview.github.io/?https://github.com/Gvantsa001/UnilabPythonInternship/blob/master/Chapter03_CSS/Projects/2024/gvantsa_mantashashvili/Conference%26Seminars_page/index.html)
