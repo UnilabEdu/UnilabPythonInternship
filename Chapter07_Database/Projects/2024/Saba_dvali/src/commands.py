@@ -1,5 +1,6 @@
 from flask.cli import with_appcontext
 import click
+
 from src.ext import db
 
 

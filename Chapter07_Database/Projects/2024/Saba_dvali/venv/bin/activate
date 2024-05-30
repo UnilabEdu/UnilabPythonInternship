@@ -38,7 +38,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="/home/saba/work_folder/UnilabPythonInternship/Chapter07_Database/Projects/2024/Saba_dvali/venv"
+VIRTUAL_ENV="/home/saba/Work/UnilabPythonInternship/Chapter07_Database/Projects/2024/Saba_dvali/venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

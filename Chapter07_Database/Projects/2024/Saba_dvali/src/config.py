@@ -12,3 +12,4 @@ class Config(object):
     SQLALCHEMY_DATABASE_URI = "sqlite:///" + path.join(PROJECT_ROOT, "database.db")
 
 
+

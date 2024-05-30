@@ -12,5 +12,7 @@ class Users(db.Model):
     password = db.Column(db.String)
 
     role = db.Column(db.Integer, db.ForeignKey('role.id'))
+    # role = db.relationship('Role', backref=db.backref('users', lazy=True))
+
 
     

@@ -26,30 +26,29 @@ class RegistrationForm(FlaskForm):
 
     submit_reg = SubmitField("Sign In")
 
+    def validate_password(self, field):
+        contains_uppercase = False
+        contains_lowercase = False
+        contains_digits = False
+        contains_symbols = False
+        for character in field.data:
+            if character in ascii_uppercase:
+                contains_uppercase = True
 
-    # def validate_password(self, field):
-    #     contains_uppercase = False
-    #     contains_lowercase = False
-    #     contains_digits = False
-    #     contains_symbols = False
-    #     for character in field.data:
-    #         if character in ascii_uppercase:
-    #             contains_uppercase = True
+            if character in ascii_lowercase:
+                contains_lowercase = True
 
-    #         if character in ascii_lowercase:
-    #             contains_lowercase = True
+            if character in digits:
+                contains_digits = True
 
-    #         if character in digits:
-    #             contains_digits = True
+            if character in punctuation:
+                contains_symbols = True
 
-    #         if character in punctuation:
-    #             contains_symbols = True
-
-    #     if not contains_uppercase:
-    #         raise ValidationError("პაროლი უნდა შეიცავდეს დიდ ასოებს")
-    #     elif not contains_lowercase:
-    #         raise ValidationError("პაროლი უნდა შეიცავდეს პატარა ასოებს")
-    #     elif not contains_digits:
-    #         raise ValidationError("პაროლი უნდა შეიცავდეს ციფრებს")
-    #     elif not contains_symbols:
-    #         raise ValidationError("პაროლი უნდა შეიცავდეს სიმბოლოებს")
+        if not contains_uppercase:
+            raise ValidationError("პაროლი უნდა შეიცავდეს დიდ ასოებს")
+        elif not contains_lowercase:
+            raise ValidationError("პაროლი უნდა შეიცავდეს პატარა ასოებს")
+        elif not contains_digits:
+            raise ValidationError("პაროლი უნდა შეიცავდეს ციფრებს")
+        elif not contains_symbols:
+            raise ValidationError("პაროლი უნდა შეიცავდეს სიმბოლოებს")
