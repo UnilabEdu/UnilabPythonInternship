@@ -24,7 +24,6 @@ def register():
         user.role_id = 3
         user.create()
 
-        
         flash("Registration successful!", "success")
         return redirect(url_for("auth.login"))
     

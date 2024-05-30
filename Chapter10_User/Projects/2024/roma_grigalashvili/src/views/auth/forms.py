@@ -14,10 +14,10 @@ class RegisterForm(FlaskForm):
                                                                    equal_to("password", message="Passwords do not match")])
     submit = SubmitField('Register')
 
-    def validate_username(self, field):
-        existing_user = User.query.filter_by(username=field.data).first()
+    def validate_email(self, field):
+        existing_user = User.query.filter_by(email=field.data).first()
         if existing_user:
-            raise ValidationError("This Username already used")
+            raise ValidationError("This email is already in use")
 
     def validate_password(self, field):
         contains_uppercase = False
