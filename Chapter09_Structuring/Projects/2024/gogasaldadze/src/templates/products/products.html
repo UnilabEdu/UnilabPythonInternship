@@ -1,0 +1,17 @@
+{%extends "layouts/base.html"%}
+{%block body%}
+<div class="row">
+    {% for product in prod %}
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="{{ product.img }}" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">{{ product.name }}</h5>
+            <p class="card-text">{{ product.price }}</p>
+            <a href="/products/{{ product.id }}" class="btn btn-primary">Go here</a>
+        </div>
+    </div>
+{% endfor %}
+
+</div>
+
+{%endblock%}

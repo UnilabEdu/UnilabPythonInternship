@@ -1,0 +1,32 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+    <div class="container text-center" id="form-text">
+        <div class="row">
+          <div class="col" id="contact_text" >
+            <h1>Let’s talk about your idea!</h1>
+            <P>Ready to start a project or really curious about our effects?
+            We like to come prepared for our first conversation, so for starters, reach out to us.</P>
+          </div>
+          <div class="col" id="forsm">
+            <h1>Get in touch</h1>
+            {% if error_message %}
+              <div class="alert alert-danger">
+            {{ error_message }}
+              </div>
+            {% endif %}
+            <form method="POST">
+
+            {{form.hidden_tag()}} 
+            {{form.name(class = "form-control", placeholder=form.name.label.text)}}
+            {{form.email(class="form-control", placeholder=form.email.label.text)}}
+            {{form.phone(class = "form-control", placeholder=form.phone.label.text)}}
+            {{form.company(class = "form-control", placeholder=form.company.label.text)}}
+            {{form.message(class = "form-control", placeholder=form.message.label.text)}}
+
+            {{form.submit(class = "btn btn-dark mt-5")}}
+          </form>
+          </div>
+        </div>
+    </div>
+{% endblock %}
