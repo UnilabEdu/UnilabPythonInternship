@@ -1,5 +1,5 @@
 from flask import render_template, Blueprint, flash, redirect, url_for, request
-from flask_login import login_user, logout_user, login_required, current_user
+from flask_login import login_user, logout_user, login_required
 
 from src.views.auth.forms import RegisterForm, LoginForm
 from src.config import Config
@@ -44,10 +44,11 @@ def login():
         if user and user.check_password(form.password.data):
             login_user(user)
             flash("Login successful!", "success")
-            next = request.args.get("next")
-            if next:
-                return redirect(next)
+            next_url = request.args.get("next") # არ მუშაობს რატომღაც
+            if next_url:
+                return redirect(next_url)
             else:
+                print("next:", next_url)
                 return redirect(url_for("main.index"))
         else:
             flash("Login unsuccessful. Please check email and password", "danger")

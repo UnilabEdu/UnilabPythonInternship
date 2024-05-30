@@ -43,7 +43,7 @@ top_users_list = [
 
 @main_blueprint.route("/")
 def index():
-    return render_template("index.html", user_type="admin")
+    return render_template("index.html")
 
 @main_blueprint.route("/highscores")
 def highscores():

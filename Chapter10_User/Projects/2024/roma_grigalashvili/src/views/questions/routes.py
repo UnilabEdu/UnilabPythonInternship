@@ -1,5 +1,6 @@
 from flask import render_template, Blueprint, redirect, flash, url_for
 from os import path
+from flask_login import login_required
 
 from src.views.questions.forms import QuestionForm
 from src.models import Question
@@ -9,12 +10,14 @@ TEMPLATES_FOLDER = path.join(Config.BASE_DIRECTORY, "templates", "questions")
 question_blueprint = Blueprint("questions", __name__, template_folder=TEMPLATES_FOLDER)
 
 @question_blueprint.route("/questions")
+@login_required
 def questions():
     questions = Question.query.all()
     return render_template("questions.html", questions=questions)
 
 
 @question_blueprint.route('/add_question', methods=['GET', 'POST'])
+@login_required
 def add_question():
     form = QuestionForm()
     if form.validate_on_submit():
@@ -32,6 +35,7 @@ def add_question():
     return render_template('add_question.html', form=form)
 
 @question_blueprint.route('/edit_question/<int:id>', methods=['GET', 'POST'])
+@login_required
 def edit_question(id):
     question = Question.query.get_or_404(id)
     form = QuestionForm(obj=question)
@@ -49,6 +53,7 @@ def edit_question(id):
 
 
 @question_blueprint.route('/delete_question/<int:id>', methods=['POST'])
+@login_required
 def delete_question(id):
     question = Question.query.get_or_404(id)
     question.delete()

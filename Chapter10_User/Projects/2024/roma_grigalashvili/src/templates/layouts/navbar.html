@@ -16,17 +16,22 @@
                     </li>
                 </ul>
                 <div class="d-flex align-items-center">
-                    {% if user_type == "admin" %}
+                    {% if current_user.is_authenticated and current_user.role.name == "admin" %}
                         <a href="{{ url_for('questions.questions') }}" class="btn btn-primary me-3">
                             Questions
                         </a>
                     {% endif %}
-                    <a href="{{ url_for('auth.login') }}" class="btn btn-primary me-3">
-                        Login
-                    </a>
-                    <a href="{{ url_for('auth.register') }}" class="btn btn-primary me-3">
-                        Sign up for free
-                    </a>
+
+                    {% if current_user.is_authenticated %}
+                        <a href="{{ url_for('auth.logout') }}" class="btn btn-primary me-3">Logout</a>
+                    {% else %}
+                        <a href="{{ url_for('auth.login') }}" class="btn btn-primary me-3">
+                            Login
+                        </a>
+                        <a href="{{ url_for('auth.register') }}" class="btn btn-primary me-3">
+                            Register
+                        </a>
+                    {% endif %}
                 </div>
             </div>
         </div>

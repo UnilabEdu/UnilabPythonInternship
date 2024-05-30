@@ -13,4 +13,4 @@ profile_blueprint = Blueprint("profile", __name__, template_folder=TEMPLATES_FOL
 @profile_blueprint.route("/profile")
 @login_required
 def profile():
-    return render_template("profile.html", user=current_user)
+    return render_template("profile.html")
