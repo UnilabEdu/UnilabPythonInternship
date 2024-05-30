@@ -1,7 +1,9 @@
-from flask import render_template, Blueprint, flash, redirect, url_for
+from flask import render_template, Blueprint, flash, redirect, url_for, request
+from flask_login import login_user, logout_user, login_required, current_user
 
 from src.views.auth.forms import RegisterForm, LoginForm
 from src.config import Config
+from src.models.user import User
 
 from os import path
 
@@ -9,22 +11,28 @@ from os import path
 TEMPLATES_FOLDER = path.join(Config.BASE_DIRECTORY, "templates", "auth")
 auth_blueprint = Blueprint("auth", __name__, template_folder=TEMPLATES_FOLDER)
 
-users_list = []
 
 @auth_blueprint.route("/register", methods=["GET", "POST"])
 def register():
     form = RegisterForm()
     if form.validate_on_submit():
-        new_user = {
-            "username": form.username.data,
-            "email": form.email.data,
-            "password": form.repeat_password.data
-        }
-        users_list.append(new_user)
+        user = User(
+            username=form.username.data,
+            email=form.email.data,
+            password=form.repeat_password.data 
+        )
+        user.role_id = 3
+        user.create()
+
         
         flash("Registration successful!", "success")
-        print(users_list)
         return redirect(url_for("auth.login"))
+    
+    if form.errors:
+        for errors in form.errors.values():
+            for error in errors:
+                flash(error)
+
     return render_template("register.html", form=form)
 
 
@@ -32,10 +40,23 @@ def register():
 def login():
     form = LoginForm()
     if form.validate_on_submit():
-        user = next((u for u in users_list if u["email"] == form.email.data), None)
-        if user and user["password"] == form.password.data:
+        user = User.query.filter_by(email=form.email.data).first()
+        
+        if user and user.check_password(form.password.data):
+            login_user(user)
             flash("Login successful!", "success")
-            return redirect(url_for("auth.index"))
+            next = request.args.get("next")
+            if next:
+                return redirect(next)
+            else:
+                return redirect(url_for("main.index"))
         else:
             flash("Login unsuccessful. Please check email and password", "danger")
     return render_template("login.html", form=form)
+
+@auth_blueprint.route("/logout")
+@login_required
+def logout():
+    logout_user()
+    flash("You have been logged out.", "success")
+    return redirect(url_for("auth.login"))

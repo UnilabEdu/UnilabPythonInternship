@@ -3,6 +3,8 @@ from wtforms import StringField, SubmitField, PasswordField, BooleanField
 from wtforms.validators import DataRequired, Email, length, equal_to, ValidationError
 from string import ascii_uppercase, ascii_lowercase, digits
 
+from src.models import User
+
 class RegisterForm(FlaskForm):
     username = StringField('Username', validators=[DataRequired()])
     email = StringField('Email', validators=[DataRequired(), Email()])
@@ -11,6 +13,11 @@ class RegisterForm(FlaskForm):
     repeat_password = PasswordField("Repeat Password", validators=[DataRequired(),
                                                                    equal_to("password", message="Passwords do not match")])
     submit = SubmitField('Register')
+
+    def validate_username(self, field):
+        existing_user = User.query.filter_by(username=field.data).first()
+        if existing_user:
+            raise ValidationError("This Username already used")
 
     def validate_password(self, field):
         contains_uppercase = False

@@ -4,6 +4,7 @@ click==8.1.7
 dnspython==2.6.1
 email_validator==2.1.1
 Flask==3.0.3
+Flask-Login==0.6.3
 Flask-Migrate==4.0.7
 Flask-SQLAlchemy==3.1.1
 Flask-WTF==1.2.1
