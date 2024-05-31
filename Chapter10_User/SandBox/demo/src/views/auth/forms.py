@@ -1,10 +1,9 @@
 from flask_wtf import FlaskForm
-from wtforms.fields import StringField, PasswordField, RadioField, DateField, SelectField, TextAreaField, SubmitField, IntegerField
+from wtforms.fields import StringField, PasswordField, RadioField, DateField, SubmitField
 from wtforms.validators import DataRequired, equal_to, length, ValidationError
 from string import ascii_uppercase, ascii_lowercase, digits, punctuation
 
 from src.models import User
-
 
 class LoginForm(FlaskForm):
     username = StringField("Username", validators=[DataRequired()])
@@ -14,19 +13,24 @@ class LoginForm(FlaskForm):
 
 class RegisterForm(FlaskForm):
 
-    username = StringField("Username", validators=[DataRequired()], render_kw={"class": "form-control"})
-    password = PasswordField("Password", validators=[DataRequired(),
-                                                     length(min=8, max=64, message="პაროლი უნდა იყოს მინიმუმ 8 სიმბოლო")])
-    repeat_password = PasswordField("Repeat Password", validators=[DataRequired(),equal_to("password", message="პაროლები არ ემთხვევა")])
-    gender = RadioField("Gender", choices=["მამრობითი", "მდედრობითი"], validators=[DataRequired("სქესის ველი სავალდებულოა")])
+    username = StringField("Username", validators=[DataRequired()])
+    password = PasswordField("Password",
+                             validators=[DataRequired(),
+                                         length(min=8, max=64, message="პაროლი უნდა იყოს მინიმუმ 8 სიმბოლო")])
+    repeat_password = PasswordField("Repeat Password",
+                                    validators=[DataRequired(),
+                                                equal_to("password", message="პაროლები არ ემთხვევა")])
+    gender = RadioField("Gender",
+                        choices=["მამრობითი", "მდედრობითი"],
+                        validators=[DataRequired("სქესის ველი სავალდებულოა")])
     birthdate = DateField("დაბადების თარიღი", validators=[DataRequired()])
 
     submit = SubmitField("რეგისტრაცია")
 
     def validate_username(self, field):
-        existing_user = User.query.filter_by(username=field.data).first()
+        existing_user = User.query.filter(User.username == field.data).first()
         if existing_user:
-            raise ValidationError("ეს იუზერნეიმი უკვე გამოყენებულია")
+            raise ValidationError("მომხმარებელი ამ სახელით უკვე არსებობს")
 
     def validate_password(self, field):
         contains_uppercase = False

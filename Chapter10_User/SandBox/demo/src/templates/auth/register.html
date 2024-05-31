@@ -6,16 +6,14 @@
 
 {% block body %}
 
-    {% set messages = get_flashed_messages() %}
-    {% if messages %}
-        {% for message in messages %}
+    {% for errors in form.errors.values() %}
+        {% for error in errors %}
             <div class="alert alert-danger" role="alert">
-                * {{ message }}
+                * {{ error }}
             </div>
         {% endfor %}
-    {% endif %}
+    {% endfor %}
 
-    {# This is a comment #}
     <form method="post">
         {{ form.hidden_tag() }}
         <div class="bg-white p-3 rounded-2 mb-3 shadow">
