@@ -35,7 +35,7 @@
             </ul>
         </div>
 
-        {% if  validation == False %}
+        {% if  current_user %}
             <button type="button" class="btn btn-light btn-lg" data-bs-toggle="modal" data-bs-target="#registrationModal">
                 Sign in
             </button>
@@ -47,7 +47,8 @@
 
             {% include 'layouts/login.html' %}
             {% block login %}{% endblock %}
-        {% elif validation == True %}
+
+        {% else %}
 
             <div class="dropdown ">
                 <button type="button" class="btn btn-light">
@@ -66,6 +67,7 @@
                 <li><a class="dropdown-item" href="#">Logout</a></li>
                 </ul>
             </div>
+
         {% endif %}
 
     </nav>

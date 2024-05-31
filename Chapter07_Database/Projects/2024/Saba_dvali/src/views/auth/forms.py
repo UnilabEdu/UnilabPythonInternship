@@ -3,7 +3,7 @@ from flask_wtf.file import FileField, FileAllowed
 from wtforms.fields import StringField, PasswordField, RadioField, DateField, SelectField, TextAreaField, SubmitField, EmailField
 from wtforms.validators import DataRequired, equal_to, length, ValidationError
 from string import ascii_uppercase, ascii_lowercase, digits, punctuation
-
+from src.models import Users
     
 class LoginForm(FlaskForm):
     username_log = StringField("Username", validators=[DataRequired()])
@@ -25,6 +25,11 @@ class RegistrationForm(FlaskForm):
                                                      length(min=8, max=64, message="პაროლი უნდა იყოს მინიმუმ 8 სიმბოლო")])
 
     submit_reg = SubmitField("Sign In")
+
+    def validate_username(self, field):
+        existing_user = Users.query.filter_by(username=field.data).first()
+        if existing_user:
+            raise ValidationError("ეს იუზერნეიმი უკვე გამოყენებულია")
 
     def validate_password(self, field):
         contains_uppercase = False
