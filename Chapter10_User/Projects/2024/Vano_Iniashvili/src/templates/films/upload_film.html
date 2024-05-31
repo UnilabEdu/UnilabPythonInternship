@@ -1,0 +1,36 @@
+{% extends "layouts/base.html" %}
+
+{% block title %}Add Film{% endblock %}
+
+{% block body %}
+<div class="outer">
+    <div class="middle">
+        <div class="inner-upload-films">
+            <form method="post" enctype="multipart/form-data">
+                {{ form.hidden_tag() }}
+                <div class="mb-3">
+                    {{ form.title.label(class="form-label") }}
+                    {{ form.title(class="form-control") }}
+                </div>
+                <div class="mb-3">
+                    {{ form.director.label(class="form-label") }}
+                    {{ form.director(class="form-control") }}
+                </div>
+                <div class="mb-3">
+                    {{ form.genre.label(class="form-label") }}
+                    {{ form.genre(class="form-control") }}
+                </div>
+                <div class="mb-3">
+                    {{ form.release_date.label(class="form-label") }}
+                    {{ form.release_date(class="form-control") }}
+                </div>
+                <div class="mb-3">
+                    {{ form.cover.label(class="form-label") }}
+                    {{ form.cover(class="form-control") }}
+                </div>
+                {{ form.submit(class="btn btn-primary") }}
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends "layouts/base.html" %}
+
+{% block title %}Sign in{% endblock %}
+
+{% block body %}
+<div class="outer">
+    <div class="middle">
+        <div class="inner-auth">
+            <form class="auth-form" method="post" enctype="multipart/form-data">
+                {{ form.hidden_tag() }}
+                {{ form.name.label(class="col-sm-2 col-form-label") }}
+                <div class="row mb-5">
+                    <div class="col-sm-10">
+                        {{ form.name(class="form-control auth-input") }}
+                    </div>
+                </div>
+                {{ form.password.label(class="col-sm-2 col-form-label") }}
+                   <div class="row mb-4">
+                    <div class="col-sm-10">
+                        {{ form.password(class="form-control auth-input") }}
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <div>
+                        <div class="form-check">
+                            {{ form.remember_me(class="form-check-input") }}
+                            {{ form.remember_me.label(class="form-check-laber") }}
+                        </div>
+                    </div>
+                </div>
+                {{ form.submit(class="btn btn-primary") }}
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
