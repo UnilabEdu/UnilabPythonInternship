@@ -82,6 +82,11 @@ def profile():
     for image in images:
         images_by_product[image.product_id].append(image)
 
-    
+    product = []
+
+    for i in images_by_product:
+        print(i)
+
+
 
     return render_template("profile.html")
