@@ -1,0 +1,78 @@
+
+{% block prod %}
+    <div class=" row " >
+
+        <div class="col-2 mt-5 justify-content-center" style="width: 21%;">
+            <div class="list-group">
+                
+
+                <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between">
+                    Iphone
+                    <span >3</span>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between">
+                    Samsung
+                    <span >7</span>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between">
+                    Google Pixel
+                    <span >20</span>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between">
+                    Redmi
+                    <span >2</span>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between">
+                    Xiaomi
+                    <span >7</span>
+                </a>
+
+              </div>
+
+        </div>
+
+        <div class=" mt-5 col row justify-content-end">
+            {% for modelkey, modelname in products.items() %}
+            {% for id, product in modelname.items() %}
+                <div class="card mb-4 ms-3" style="width: 15rem; border-radius: 15px;" >
+                    <div id="{{ product['id'] }}" class="carousel slide">
+                                
+                        <div class="carousel-inner mt-3 ">
+                            {% for image in product['images'] %}
+                            <div class="carousel-item active ">
+                                <img src="{{ image }}" class="d-block w-100 alt="...">
+                            </div>
+                            {% endfor %}
+                        </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#{{ product['id'] }}" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#{{ product['id'] }}" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                    </div>
+
+                    <div class="container mt-3" style="width: 100%;">
+                    <div style="height: 80px;">
+                        <h6 class="card-title">{{ product['model'] }}</h6>
+                    </div>
+                    <div class="mb-3">
+                        <p class="card-text">{{ product['price'] }}</p>
+                        <a href="{{ url_for('details', id=product['id'] ) }} " class="btn btn-outline-info w-50">Buy</a>
+                    </div>
+    
+                    </div>
+
+                </div> 
+    
+            {% endfor %}
+        {% endfor %}
+        </div>
+    
+    </div>
+
+    
+
+{% endblock %}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% extends 'base.html' %}
+{% block title %} Login {% endblock %}
+    
+{% block body %} 
+
+  <div class="container-md ">
+      {% include 'navbar.html' %}
+      {% block navbar %}{% endblock %}
+
+        <div class=" container-md mt-5  row justify-content-around" >
+          <div class="container mt-5">
+            <div class="row justify-content-center">
+              <div class="col-md-6">
+                <div class="card">
+                  <div class="card-header bg-info text-white">Login</div>
+                  <div class="card-body">
+                    <form>
+                      <div class="mb-3">
+                        <label for="name" class="form-label">Name or Email</label>
+                        <input type="text" class="form-control" id="name" required>
+                      </div>
+
+                      <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="password" required>
+                      </div>
+
+                      <button type="submit" class="btn btn-info" >Login</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+      </div>
+
+
+  </div>
+  {% include 'footer.html' %}
+  {% block footer %}{% endblock %}
+
+{% endblock %}
+
+
+
+</html>

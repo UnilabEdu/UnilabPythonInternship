@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+
+
+{% block title %}
+პროგრამები
+{% endblock %}
+
+{% block body %}
+
+<br>
+<div class="row">
+    {% for program in programs %}
+
+    <div class="col-sm-6">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">{{ program['name']}}</h5>
+                <p class="card-text">{{ program['description']}}</p>
+                <a href="/programs/{{ loop.index-1 }}" class="btn btn-primary">დეტალურად</a>
+            </div>
+        </div>
+        <br>
+    </div>
+
+    {% endfor %}
+
+
+    {% endblock %}
