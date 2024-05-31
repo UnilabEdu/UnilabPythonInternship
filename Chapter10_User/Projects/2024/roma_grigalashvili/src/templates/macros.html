@@ -1,0 +1,7 @@
+{% macro create_navlink(endpoint, text) %}
+    {% if endpoint == request.endpoint %}
+        <a class="btn btn-info m-1" href="{{ url_for(endpoint) }}"> {{ text }}</a>
+    {% else %}
+        <a class="btn btn-primary m-1" href="{{ url_for(endpoint) }}"> {{ text }}</a>
+    {% endif %}
+{% endmacro %}

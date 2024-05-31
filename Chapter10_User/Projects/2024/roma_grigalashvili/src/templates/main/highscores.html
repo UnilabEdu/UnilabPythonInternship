@@ -1,0 +1,39 @@
+{% extends "layouts/base.html" %}
+
+{% block title %}
+    Quick Quiz - HighScores
+{% endblock %}
+
+{% block body %}
+<div>
+  <div class="d-flex justify-content-center align-items-center">
+    <h1>High Scores</h1>
+  </div>
+  <div class="text-center mb-3">TOP 5 მომხმარებლები რომელთაც ყველაზე მაღალი ქულა აქვთ:</div>
+  <table class="table table-striped">
+      <thead class="table-dark">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Username</th>
+          <th scope="col">Email</th>
+          <th scope="col">Quiz</th>
+          <th scope="col">Score</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for top_user in top_list %}
+          <tr>
+            <th scope="row">{{loop.index}}</th>
+            <td>{{top_user['username']}}</td>
+            <td>{{top_user['email']}}</td>
+            <td>{{top_user['subject']}}</td>
+            <td>{{top_user['score']}}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+  </table>
+  <div class="d-flex justify-content-center align-items-center">
+    <a class="btn btn-primary" href="{{ url_for('main.index') }}">Go To Home Page</a>
+  </div>
+</div>
+{% endblock %}

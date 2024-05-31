@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Quick Quiz - Edit Question
+{% endblock %}
+
+{% block body %}
+<div class="d-flex justify-content-center align-items-center pt-5">
+    <h2>Edit Question</h2>
+</div>
+
+
+<form action="{{ url_for('edit_question', id=question.id) }}" method="POST">
+    <div class="form-outline mb-4">
+        <label class="form-label" for="question_text">Question:</label>
+        <input type="text" id="question_text" name="question_text" class="form-control" value="{{ question.question_text }}" required>
+    </div>
+
+    <div class="form-outline mb-4">
+        <label class="form-label" for="choice1">Choice A:</label>
+        <input type="text" id="choice1" name="choice1" class="form-control" value="{{ question.choice1 }}" required>
+        <input type="radio" id="correct_answer1" name="correct_answer" value="1" {% if question.correct_answer == 1 %}checked{% endif %} required>
+        <label for="correct_answer1">Correct Answer</label>
+    </div>
+
+    <div class="form-outline mb-4">
+        <label class="form-label" for="choice2">Choice B:</label>
+        <input type="text" id="choice2" name="choice2" class="form-control" value="{{ question.choice2 }}" required>
+        <input type="radio" id="correct_answer2" name="correct_answer" value="2" {% if question.correct_answer == 2 %}checked{% endif %} required>
+        <label for="correct_answer2">Correct Answer</label>
+    </div>
+
+    <div class="form-outline mb-4">
+        <label class="form-label" for="choice3">Choice C:</label>
+        <input type="text" id="choice3" name="choice3" class="form-control" value="{{ question.choice3 }}" required>
+        <input type="radio" id="correct_answer3" name="correct_answer" value="3" {% if question.correct_answer == 3 %}checked{% endif %} required>
+        <label for="correct_answer3">Correct Answer</label>
+    </div>
+
+    <div class="form-outline mb-4">
+        <label class="form-label" for="choice4">Choice D:</label>
+        <input type="text" id="choice4" name="choice4" class="form-control" value="{{ question.choice4 }}" required>
+        <input type="radio" id="correct_answer4" name="correct_answer" value="4" {% if question.correct_answer == 4 %}checked{% endif %} required>
+        <label for="correct_answer4">Correct Answer</label>
+    </div>
+
+    <div class="d-flex justify-content-center align-items-center">
+        <button type="submit" class="btn btn-success me-2">Update Question</button>
+        <a class="btn btn-info" href="{{ url_for('questions') }}">Back to Questions</a>
+    </div>
+</form>
+
+{% endblock %}
