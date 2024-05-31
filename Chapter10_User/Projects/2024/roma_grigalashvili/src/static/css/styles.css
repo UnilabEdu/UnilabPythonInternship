@@ -1,19 +1,8 @@
-
-.content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.quiz_legend{
-    text-align: center;
-    font-size: 3rem;
-}
+/*  Img Logo  */
 
 .circle-image {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     overflow: hidden;
     position: relative;
@@ -50,33 +39,4 @@
     cursor: not-allowed;
     box-shadow: none;
     transform: none;
-}
-
-/* Table */
-
-
-.table-header {
-    width: 100%;
-    font-size: 1.3em;
-    text-align: center;
-    color: #000000;
-    padding: 10px;
-    background-color: #96e1ee;
-    border-radius: 5px 5px 0px 0px;
-}
-
-.divider:after,
-.divider:before {
-content: "";
-flex: 1;
-height: 1px;
-background: #eee;
-}
-.h-custom {
-height: calc(100% - 73px);
-}
-@media (max-width: 450px) {
-.h-custom {
-height: 100%;
-}
 }

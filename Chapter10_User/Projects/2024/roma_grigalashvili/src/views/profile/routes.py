@@ -1,4 +1,4 @@
-from flask import render_template, Blueprint, flash, redirect, url_for
+from flask import render_template, Blueprint
 from flask_login import login_required, current_user
 
 from src.config import Config
@@ -13,4 +13,4 @@ profile_blueprint = Blueprint("profile", __name__, template_folder=TEMPLATES_FOL
 @profile_blueprint.route("/profile")
 @login_required
 def profile():
-    return render_template("profile.html")
+    return render_template("profile.html", user=current_user)
