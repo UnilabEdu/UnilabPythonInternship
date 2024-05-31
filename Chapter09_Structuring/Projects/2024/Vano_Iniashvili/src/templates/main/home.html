@@ -1,0 +1,20 @@
+{% extends "layouts/base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block body %}
+<div class="films">
+    <div class="row">
+        {% for film in films %}
+        <div class="col-md-3">
+            <div class="mb-4">
+                <img src="{{ film['cover'] }}" class="cover">
+                <div class="title-div">
+                    <p class="title">{{ film['name'] }}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
