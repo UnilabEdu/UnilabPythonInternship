@@ -1,0 +1,44 @@
+
+{% block login %}
+
+<form method="post" enctype="multipart/form-data">
+  {{ logform.hidden_tag() }}
+
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true"  style="border-radius: 3rem;">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+          <div class="modal-body">
+
+            <div class="card-body p-5 text-center">
+
+              <h3 class="mb-5">Login in</h3>
+
+              <div data-mdb-input-init class="form-outline mb-4">
+                {{ logform.username_log(class="form-control form-control-lg", placeholder="Email or Username") }}
+              </div>
+
+              <div data-mdb-input-init class="form-outline mb-4">
+                {{  logform.password_log(class="form-control form-control-lg", placeholder="Password") }}
+              </div>
+
+              <div class="form-check d-flex justify-content-start mb-4">
+                <input class="form-check-input" type="checkbox" value="" id="form1Example3" />
+                <label class="form-check-label" for="form1Example3"> Remember password </label>
+              </div>
+
+              {{ logform.submit_log(class="btn btn-outline-info btn-lg btn-block w-100", type="submit") }}
+
+            </div>
+
+          </div>
+      </div>
+    </div>
+  </div>
+</form>
+
+
+{% endblock %}
+  

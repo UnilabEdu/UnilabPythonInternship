@@ -14,15 +14,8 @@ auth_blueprint = Blueprint("auth", __name__, template_folder=TEMPLATES_FOLDER)
 def register():
     form = RegisterForm()
     if form.validate_on_submit():
-        user = User()
-        form.populate_obj(user)
-        user.role_id = 3
+        user = User(username=form.username.data, password=form.password.data)
         user.create()
-
-    if form.errors:
-        for errors in form.errors.values():
-            for error in errors:
-                flash(error)
 
     return render_template("register.html", form=form)
 
@@ -31,24 +24,24 @@ def register():
 def login():
     form = LoginForm()
     if form.validate_on_submit():
-        user = User.query.filter_by(username=form.username.data).first()
+        user = User.query.filter(User.username == form.username.data).first()
         if not user:
-            flash("ეს მომხმარებელი ვერ მოიძებნა")
-            return redirect(url_for("auth.login"))
+            flash("მომმარებელი ამ სახელით ვერ მოიძებნა")
+            return redirect("/login")
 
         if user.check_password(form.password.data):
             login_user(user)
-            next = request.args.get("next")
-            if next:
-                return redirect(next)
-            else:
-                return redirect(url_for("main.index"))
-        else:
-            flash("პაროლი არასწორია")
-    return render_template("login.html", form=form)
 
+        next = request.args.get("next")
+        if next:
+            return redirect(next)
+        else:
+            return redirect("/")
+
+    return render_template("login.html", form=form)
 
 @auth_blueprint.route("/logout")
 def logout():
     logout_user()
-    return redirect(url_for("main.index"))
+    flash("თქვენ დალოგაოუთდით")
+    return redirect("/")

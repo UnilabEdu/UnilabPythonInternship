@@ -1,0 +1,51 @@
+
+
+
+{% extends 'base.html' %}
+{% block title %} {{ profile }} {% endblock %}
+{% block body %} 
+
+
+    <div class="container-md " style="height: 100vh;">
+        {% include 'navbar.html' %}
+        {% block navbar %}{% endblock %}
+
+
+        <div class="row" style="height: 100%;">
+            <div  class="col-5 mt-5 justify-content-center" >
+                <div class="row">
+                <div class="col-md-4">
+                    <!-- Profile Picture -->
+                    <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" class="img-fluid rounded-circle mb-3" alt="User Picture">
+                </div>
+                <div class="col-md-8">
+                    <!-- Profile Data -->
+                    <h2>Profile</h2>
+                    <p><strong>Name:</strong> dato dato</p>
+                    <p><strong>Email:</strong> dato@gmail.com</p>
+                    <p><strong>Rate:</strong> 7/10</p>
+                    <p><strong>Location:</strong> Tbilisi</p>
+                    <p><strong>Products:</strong> 0</p>
+                    <p><strong>Sold Product:</strong> 0</p>
+                </div>
+                </div>
+            </div>
+            <div class="col mt-5 justify-content-center">
+                <div class="container">
+                    <h3>no product</h3>
+                </div>
+            </div>
+
+        </div>
+        
+    
+    </div>
+        
+
+
+
+{% include 'footer.html' %}
+{% block footer %}{% endblock %}
+
+{% endblock %}
+

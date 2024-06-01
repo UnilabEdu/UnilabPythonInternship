@@ -1,10 +1,10 @@
 from flask import Flask
 from flask_admin.menu import MenuLink
 
-from src.extensions import db, migrate, login_manager
-from src.admin import admin, SecureModelView, UserView, ProductView
+from src.admin_views import SecureModelView, UserView, ProductView
+from src.models import User, Product
+from src.ext import db, migrate, login_manager, admin
 from src.config import Config
-from src.models import User, Product, Role, Student, University
 from src.views import main_blueprint, product_blueprint, auth_blueprint
 from src.commands import init_db, populate_db
 
@@ -35,20 +35,18 @@ def register_extensions(app):
     # Flask-Login
     login_manager.init_app(app)
     login_manager.login_view = "auth.login"
-
-    # Flask-Admin
-    admin.init_app(app)
-    admin.add_view(UserView(User, db.session, name="მომხმარებლები", category="მომხმარებლის მართვა"))
-    admin.add_view(SecureModelView(Role, db.session, name="როლები", category="მომხმარებლის მართვა"))
-    admin.add_view(ProductView(Product, db.session))
-    admin.add_view(SecureModelView(University, db.session, category="University Management"))
-    admin.add_view(SecureModelView(Student, db.session, category="University Management"))
-
-    admin.add_link(MenuLink("Return", url="/", icon_type="fa", icon_value="fa-sign-out"))
+    login_manager.login_message = "გთხოვთ გაიარეთ ავტორიზაცია"
 
     @login_manager.user_loader
     def load_user(user_id):
         return User.query.get(user_id)
+
+    # Flask-Admin
+    admin.init_app(app)
+    admin.add_view(UserView(User, db.session, category="Some Category"))
+    admin.add_view(ProductView(Product, db.session, category="Some Category"))
+
+    admin.add_link(MenuLink("", url="/", icon_type="fa", icon_value="fa-sign-out"))
 
 
 def register_blueprints(app):

@@ -1,6 +1,8 @@
 from flask import render_template, Blueprint
+from flask_login import current_user
 from os import path
 
+from src.models.product import UserProduct
 from src.config import Config
 
 TEMPLATES_FOLDER = path.join(Config.BASE_DIRECTORY, "templates", "main")

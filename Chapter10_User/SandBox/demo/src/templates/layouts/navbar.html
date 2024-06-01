@@ -12,18 +12,18 @@
                 {{ create_navlink('main.index', 'Home') }}
                 {{ create_navlink('main.about', 'About') }}
                 {{ create_navlink('products.all_products', 'Products') }}
-
-                {% if current_user.is_authenticated and current_user.role.name == "admin" %}
-                    <a href="{{ url_for("admin.index") }}" class="nav-link">Admin Panel</a>
-                {% endif %}
             </div>
         </div>
         <form class="d-flex">
             {% if current_user.is_authenticated %}
-                <a href="{{ url_for('auth.logout') }}" class="btn btn-success mx-2">Logout</a>
+                {% if current_user.is_admin() %}
+                    <a href="#" class="btn btn-danger">Admin Panel</a>
+                {% endif %}
+                <a href="/logout" class="btn btn-success">Logout</a>
+
             {% else %}
-                <a href="{{ url_for('auth.login') }}" class="btn btn-success mx-2">Login</a>
-                <a href="{{ url_for('auth.register') }}" class="btn btn-success">Register</a>
+                <a href="/login" class="btn btn-success mx-2">Login</a>
+                <a href="/register" class="btn btn-success">Register</a>
             {% endif %}
         </form>
     </div>
