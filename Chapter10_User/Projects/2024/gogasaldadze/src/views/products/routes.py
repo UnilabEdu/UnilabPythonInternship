@@ -2,12 +2,12 @@ from flask import render_template,Blueprint,redirect, flash
 from src.ext import db
 from src.config import Config
 from src.views.products.forms import ProductForm
-products_bp = Blueprint("products",__name__)
 from uuid import uuid4
 from os import path
 from src.models.products import Products
 from flask_login import login_required
 
+products_bp = Blueprint("product",__name__)
 @products_bp.route("/add_product",methods = ["GET","POST"])
 @login_required
 def add_products():

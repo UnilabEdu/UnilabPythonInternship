@@ -25,15 +25,17 @@ def register():
 
 @auth_bp.route("/login",methods = ["GET","POST"])
 def login():
+  
     form = LoginForm()
     if form.validate_on_submit():
-        user = Users.query.filter(Users.username ==form.username.data).first()
+        user = Users.query.filter(Users.username == form.username.data).first()
         if not user:
-            flash('მომხმარებელი ვერ მოიძებნა')
+            flash("მომმარებელი ამ სახელით ვერ მოიძებნა")
             return redirect("/login")
-        if user.password == form.password.data:
 
+        if user.check_password(form.password.data):
             login_user(user)
+            
         next = request.args.get("next")
         if next:
             return redirect(next)

@@ -22,6 +22,7 @@
     </head>
     <body>
         {%include "layouts/navbar.html"%}
+        {{current_user}}
 
         <div class="container">
             {%set messages=get_flashed_messages()%}
