@@ -1,4 +1,4 @@
-from src.extensions import db
+from src.ext import db
 
 
 class BaseModel():

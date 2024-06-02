@@ -16,6 +16,9 @@
     {% endif %}
 
     {% if current_user.is_authenticated %}
-        გამარჯობა, {{ current_user.username }}
+        {% for product in current_user.products %}
+            {{ product }}
+        {% endfor %}
     {% endif %}
+
 {% endblock %}
