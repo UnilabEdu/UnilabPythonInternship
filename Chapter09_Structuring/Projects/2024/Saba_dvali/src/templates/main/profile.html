@@ -1,0 +1,82 @@
+
+
+
+{% extends 'layouts/base.html' %}
+{% block title %} {{ current_user.name }} {% endblock %}
+{% block body %} 
+
+
+    <div class="container-md " style="height: 100vh">
+        {% include 'layouts/navbar.html' %}
+        {% block navbar %}{% endblock %}
+
+
+        <div class="row">
+            <div  class=" mt-5 justify-content-center" style="width: 40%;">
+                <div class="row">
+                <div class="col-md-3">
+                    <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" class="img-fluid rounded-circle mb-3" alt="User Picture">
+                </div>
+                    <div class="col" style="width: 40%;">
+                        <h2>Profile</h2><br>
+                            <p><strong>Name:</strong> {{ current_user.name }} </p>
+                            <p><strong>Email:</strong> {{ current_user.email }}</p>
+                            <p><strong>Rate:</strong> 7/10</p>
+                            <p><strong>Location:</strong> Tbilisi</p>
+                            <p><strong>Products:</strong> 0 </p>
+                            <p><strong>Sold Product:</strong> 0</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-5  row justify-content-around" style="width: 60%;">
+                    {% for product in current_user.products %}
+                    <div class="card mb-4 ms-3" style="width: 15rem; border-radius: 15px;" >
+                        <div id="{{ product.id }}" class="carousel slide">
+                        
+                        <div class="carousel-inner mt-3 ">
+
+                            {% for image in product.images %}
+                            <div class="carousel-item active ">
+                                <img src="static/images/{{ image.product_id }}/{{ image.image_name }}" class="d-block w-100 alt="...">
+                            </div>
+                            {% endfor %}
+                        </div>
+
+              
+                        <button class="carousel-control-prev" type="button" data-bs-target="#{{ product.id }}" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#{{ product.id }}" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                        </div>
+    
+                        <div class="container mt-3" style="width: 100%;">
+                        <div style="height: 80px;">
+                            <h6 class="card-title">{{ product.product_model }}</h6>
+                        </div>
+                        <div class="mb-3">
+                            <p class="card-text">{{ product.price }}</p>
+                            <a href="{{ url_for('main.details', id=product['id'] ) }} " class="btn btn-outline-info w-50">Buy</a>
+                        </div>
+        
+                        </div>
+    
+                    </div> 
+
+                    {% endfor %}
+                
+            </div>
+
+        </div>
+    
+    </div>
+        
+
+{% include 'layouts/footer.html' %}
+{% block footer %}{% endblock %}
+
+{% endblock %}
+
