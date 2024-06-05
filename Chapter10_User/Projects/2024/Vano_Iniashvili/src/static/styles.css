@@ -1,0 +1,107 @@
+body {
+    background-color: #352F44;
+    color: #DBD8E3;
+}
+
+.cover {
+    width: 190px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    width: 190px;
+    height: 50px;
+    background-color: #5C5470;
+    color: #DBD8E3;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.title-div {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.films {
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.accordion {
+    margin-top: 50px;
+}
+
+.box {
+    display: table-cell;
+    vertical-align: center;
+    background-color: red;
+    margin: auto;
+    width: 500px;
+    height: 500px;
+}
+
+.outer {
+    display: table;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.middle {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.inner-auth {
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 430px;
+    height: 430px;
+    background-color: #2A2438;
+    border-radius: 5px;
+}
+
+.auth-input {
+    width: 370px;
+}
+
+.auth-form {
+    margin-top: 50px;
+}
+
+.desc {
+    width: 450px; /* Adjust the width as needed */
+    height: 200px;
+}
+
+.inner-upload-films {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+    height: 500px;
+    background-color: #2A2438;
+    border-radius: 5px;
+}
+
+.heart {
+    cursor: pointer;
+    fill: #000; /* initial color */
+    transition: fill 0.3s;
+}
+
+.heart.red {
+    fill: red;
+}

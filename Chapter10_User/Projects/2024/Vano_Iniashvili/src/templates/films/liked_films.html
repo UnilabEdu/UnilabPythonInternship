@@ -1,0 +1,24 @@
+{% extends "layouts/base.html" %}
+
+{% block title %}Liked Films{% endblock %}
+
+{% block body %}
+<div class="films">
+    <div class="row">
+        {% for film in liked %}
+        <div class="col-md-3">
+            <div class="mb-4">
+                <img src="static/uploads/{{ film.cover }}.jpeg" class="cover">
+                <div class="title-div">
+                    <p class="title">{{ film.title }}</p>
+                </div>
+                <form action="{{ url_for('films.liked_films', user=current_user.name) }}" method="post">
+                    {{ form.hidden_tag() }}
+                    {{ form.button(class="btn btn-primary") }}
+                </form>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
