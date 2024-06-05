@@ -1,0 +1,17 @@
+{%extends "layouts/base.html"%}
+{%block body%}
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Description</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{product["name"]}}</td>
+            <td>{{product["description"]}}</td>
+
+        </tr>
+        {%endblock%}

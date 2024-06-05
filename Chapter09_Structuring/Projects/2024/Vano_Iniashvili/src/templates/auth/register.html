@@ -1,0 +1,28 @@
+{% extends "layouts/base.html" %}
+
+{% block title %}Register{% endblock %}
+
+{% block body %}
+<div class="outer">
+    <div class="middle">
+        <div class="inner-auth">
+            <form class="auth-form" method="post" enctype="multipart/form-data">
+                {{ form.hidden_tag() }}
+                {{ form.email.label(class="col-sm-2 col-form-label") }}
+                <div class="row mb-5">
+                    <div class="col-sm-10">
+                        {{ form.email(class="form-control auth-input") }}
+                    </div>
+                </div>
+                {{ form.password.label(class="col-sm-2 col-form-label") }}
+                <div class="row mb-4">
+                    <div class="col-sm-10">
+                        {{ form.password(class="form-control auth-input") }}
+                    </div>
+                </div>
+                {{ form.submit(class="btn btn-primary") }}
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
