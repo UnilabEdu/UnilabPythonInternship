@@ -38,18 +38,20 @@ def register():
 @auth_blueprint.route("/login", methods=["GET", "POST"])
 def login():
     form = LoginForm()
+    next = request.args.get("next")
+    print(next)
     if form.validate_on_submit():
         user = User.query.filter_by(email=form.email.data).first()
+        next = request.args.get("next")
+        print("next:", next)
         
         if user and user.check_password(form.password.data):
             login_user(user)
             flash("Login successful!", "success")
-            next_url = request.args.get("next") # არ მუშაობს რატომღაც
-            if next_url:
-                return redirect(next_url)
-            else:
-                print("next:", next_url)
-                return redirect(url_for("main.index"))
+            next = request.args.get("next") # არ მუშაობს რატომღაც
+            print(next)
+            return redirect(next or url_for("main.index"))
+        
         else:
             flash("Login unsuccessful. Please check email and password", "danger")
     return render_template("login.html", form=form)
