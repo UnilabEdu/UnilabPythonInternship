@@ -1,0 +1,89 @@
+
+{% block navbar %}
+
+<div  style=" width: 100%;" >
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" style="border-bottom: 1px solid black;">
+        <a class="navbar-brand" style="font-size: 28px" href="/">Main Board</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        {% if current_user.is_authenticated %}
+
+            {% include 'layouts/addproduct.html' %}
+            {% block addnewproduct %}{% endblock %}
+            
+        {% endif %}
+
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Pricing</a>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Products
+                </a>
+                <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">All</a></li>
+                <li><a class="dropdown-item" href="#">Iphone</a></li>
+                <li><a class="dropdown-item" href="#">Samsung</a></li>
+                <li><a class="dropdown-item" href="#">Google pixel</a></li>
+                <li><a class="dropdown-item" href="#">Redmi</a></li>
+                </ul>
+            </li>
+            </ul>
+        </div>
+        {% if current_user.is_authenticated %}
+            <div class="dropdown ">
+                <button type="button" class="btn btn-light">
+                 
+                    <img src="static/icons/shopping-cart.png" width="22" height="22" alt="">
+                </button>
+                
+                <button type="button" class="btn btn-light"data-bs-toggle="modal" data-bs-target="#addproductModal">
+                    <img src="static/icons/more.png" width="22" height="22" alt="">
+                </button>
+
+                <a class=" dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" class="rounded-circle" height="39" alt="Black and White Portrait of a Man" loading="lazy" />
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end" style="box-shadow:3px 3px 10px rgba(0, 0, 0, 0.1);  border-radius: 10px;border: 1px solid #adabab; background-color:#ffffff">
+                <li><a class="dropdown-item" href="{{ url_for('main.profile') }} ">Profile</a></li>
+                <li><a class="dropdown-item" href="#">Add Product</a></li>
+                <li><a class="dropdown-item" href="#">Settings</a></li>
+                <li><a class="dropdown-item" href="#">About</a></li>
+                <li><a class="dropdown-item" href="#">Support</a></li>
+                <li><a class="dropdown-item" href="/logout">Logout</a></li>
+                </ul>
+            </div>
+        {% else %}
+
+            <button type="button" class="btn btn-light btn-lg" data-bs-toggle="modal" data-bs-target="#registrationModal">
+                Sign in
+            </button>
+            <button type="button" class="btn btn-light btn-lg" data-bs-toggle="modal" data-bs-target="#loginModal">
+                Log in
+            </button>
+            {% include 'layouts/register.html' %}
+            {% block register %}{% endblock %}
+
+            {% include 'layouts/login.html' %}
+            {% block login %}{% endblock %}
+
+        {% endif %}
+
+    </nav>
+
+
+
+</div>
+
+{% endblock %}
+
