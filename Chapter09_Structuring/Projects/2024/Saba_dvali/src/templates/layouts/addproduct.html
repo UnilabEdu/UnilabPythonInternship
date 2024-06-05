@@ -1,0 +1,52 @@
+
+{% block addpnewproduct %}
+
+<form method="post" enctype="multipart/form-data">
+  {{ addpoductform.hidden_tag() }}
+
+  <div class="modal fade" id="addproductModal" tabindex="-1" aria-labelledby="addproductModalLabel" aria-hidden="true"  style="border-radius: 3rem;">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+          <div class="modal-body">
+            <div class="card-body p-5 text-center">
+              <h4 class="mb-5">Add Product</h4>
+              <div data-mdb-input-init class="form-outline mb-4">
+                {{ addpoductform.product_name(class="form-control form-control-md", placeholder="Product Name" ) }}
+
+              </div>
+
+              <div data-mdb-input-init class="form-outline mb-4">
+                {{ addpoductform.product_model(class="form-control form-control-md", placeholder="Product Model") }}
+
+              </div>
+
+              <div data-mdb-input-init class="form-outline mb-4">              
+                {{ addpoductform.price(class="form-control form-control-md", placeholder="Price") }}
+              </div>
+              <div data-mdb-input-init class="form-outline mb-4">
+                {{ addpoductform.info(class="form-control form-control-md", placeholder="Info") }}
+            </div>
+            <div data-mdb-input-init class="form-outline mb-4">
+                {{ addpoductform.product_images(class="form-control form-control-md", placeholder="Price") }}
+            </div>
+              <div class="form-check d-flex justify-content-start mb-4">
+                <input class="form-check-input" type="checkbox" value="" id="form1Example3" />
+                <label class="form-check-label" for="form1Example3"> Terms And Privacy </label>
+              </div>
+
+              {{ addpoductform.submit(class="btn btn-outline-info btn-md btn-block w-100") }}
+
+             </div>
+
+          </div>
+      </div>
+    </div>
+  </div>
+</form>
+{% endblock %}
+
+
+
