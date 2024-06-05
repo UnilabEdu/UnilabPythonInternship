@@ -7,8 +7,8 @@
 {% block body %}
     <div class="d-flex justify-content-center align-items-center pt-5">
         <h2>Profile</h2>
-        <p>Username: {{ user.username }}</p>
-        <p>Email: {{ user.email }}</p>
+        <p>Username: {{ current_user.username }}</p>
+        <p>Email: {{ current_user.email }}</p>
     </div>
 
 {% endblock %}

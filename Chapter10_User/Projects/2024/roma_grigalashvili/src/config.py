@@ -3,6 +3,7 @@ from os import path, environ
 
 class Config(object):
     BASE_DIRECTORY = path.abspath(path.dirname(__file__))
+    FLASK_ADMIN_SWATCH = "cosmo"
 
     SECRET_KEY = "kljadskl10248120318znx"
 
