@@ -1,0 +1,123 @@
+{% extends "layouts/base.html" %}
+
+{% block body %}
+<div class="row">
+    <div class="col">
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                        aria-expanded="true" aria-controls="collapseOne">
+                        First steps
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show"
+                    aria-labelledby="headingOne"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong>Step 1.</strong> Ease of Learning:
+                        Python's simple syntax makes it easy for beginners to
+                        grasp programming concepts,
+                        allowing for a smooth transition into machine learning.
+
+                        Powerful Libraries: Python offers robust libraries like
+                        TensorFlow and scikit-learn,
+                        providing ready-to-use tools and algorithms for building
+                        machine learning models without
+                        the need for extensive coding.
+
+                        Applicability: Machine learning is revolutionizing
+                        industries from healthcare
+                        to finance. Learning Python for machine learning equips
+                        you with skills in high
+                        demand across sectors, enabling tasks such as customer
+                        data analysis, recommendation
+                        system development, and fraud detection.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                        aria-expanded="false" aria-controls="collapseTwo">
+                        Numpy/Pandas/Matplotlib
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse"
+                    aria-labelledby="headingTwo"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong>Step 2.</strong> Learning NumPy, pandas, and
+                        Matplotlib enhances your data manipulation, analysis,
+                        and visualization skills, which are essential for
+                        effectively working with data in machine learning
+                        projects. These libraries provide the foundation for
+                        handling data efficiently, exploring its properties, and
+                        building predictive models, thereby empowering you to
+                        tackle real-world machine learning challenges
+                        effectively.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree" aria-expanded="false"
+                        aria-controls="collapseThree">
+                        Math and ML algorithms
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse"
+                    aria-labelledby="headingThree"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong>Final step.</strong> Learning mathematics
+                        provides the theoretical foundation and analytical tools
+                        necessary for understanding, implementing, and
+                        interpreting machine learning algorithms effectively. It
+                        equips you with the skills to tackle real-world
+                        problems, innovate in the field of machine learning, and
+                        contribute to advancements in artificial intelligence.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col">
+        <div class="card">
+            <div class="card-body">
+                <a
+                    href="https://codefinity.com/get-started/spa/v16/spv16/quarter/pre-landing?utm_source=google&utm_medium=cpc&utm_campaign=20955067105&utm_content=158406843512&utm_term=best%20python%20bootcamp&gad_source=1&gclid=Cj0KCQjwxqayBhDFARIsAANWRnTG4oLRURDQawLL3N4XZY5Y9outQ27dqYEQTL0i0qQz3wzB8xqoWe8aAhTCEALw_wcB"
+                    class="card-link">First Step</a>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card">
+            <div class="card-body">
+                <a
+                    href="https://www.classcentral.com/course/udemy-2021-numpy-pandas-matplotlib-for-machine-le-55742"
+                    class="card-link">Numpy/Pandas/Matplotlib</a>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card">
+            <div class="card-body">
+                <a
+                    href="https://medium.com/enjoy-algorithm/detailed-maths-topics-in-machine-learning-ca55cd537709#:~:text=Linear%20Algebra%20is%20the%20most,Forest%2C%20or%20any%20other%20algorithm."
+                    class="card-link">ML and Math</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="image-container">
+    <img src="https://blog.cloudxlab.com/wp-content/uploads/2021/01/Cover-1.png"
+        alt="Centered image" class="img-fluid d-block mx-auto" width="700">
+</div>
+{% endblock %}
