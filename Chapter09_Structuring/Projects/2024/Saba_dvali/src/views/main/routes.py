@@ -1,9 +1,10 @@
 from flask import Flask, render_template, redirect, request, Blueprint, url_for
 from os import path
-from flask_login import login_user, current_user, logout_user
+from flask_login import login_user, current_user, logout_user,login_required
 from collections import defaultdict
 from uuid import uuid4
 import os
+import shutil
 from werkzeug.utils import secure_filename
 
 from src.config import Config
@@ -63,6 +64,14 @@ main_bp = Blueprint("main",__name__, template_folder=TEMPLATE_FOLDER)
 #     return "yes"
 
 
+# @main_bp.route('/usr', methods=['POST',"GET"])
+# def role():
+#     usr = Users(name="saba",
+#                  email="saba@gmail.com",
+#                  password="Saba123@",
+#                  role=1)
+#     db.session.add(usr)
+#     db.session.commit()
 
 # @main_bp.route('/img', methods=['POST',"GET"])
 # def upload_images():
@@ -97,13 +106,19 @@ def add_product():
                                                     Products.info == info,
                                                     Products.user_id == current_user.id
                                                     ).first()
+        print(product.id)
         if product:
+            print("movida aq..")
             product_images = request.files.getlist('product_images')
             product_dir = os.path.join(f"{Config.PROJECT_ROOT}/static/images", str(product.id))
+            print(product.id)
             if not os.path.exists(product_dir):
+                print("movida aq12..")
                 os.makedirs(product_dir)
                 for file in product_images:
                     if file.filename != '':
+                        print("movida aq123123..")
+
                         filename = secure_filename(file.filename)
                         file.save(os.path.join(product_dir, filename))
                         img = Images(image_name=filename,product_id=product.id)
@@ -118,6 +133,7 @@ def home():
 
     if addpoductform.validate_on_submit():
         add_product()
+
 
     if regform.validate_on_submit():
         print("movida reg")
@@ -143,6 +159,7 @@ def home():
             return redirect("/")
         
         if user.password == logform.password_log.data:
+            print("aqaa")
             login_user(user)
             
     products = Products.query.filter().all()
@@ -159,6 +176,7 @@ def details(id):
 
 
 @main_bp.route("/profile",methods=["GET", "POST"])
+@login_required
 def profile():
     form = AddProductForm()
     if form.validate_on_submit():
@@ -166,9 +184,28 @@ def profile():
     return render_template("profile.html", addpoductform=form)
 
 
+@main_bp.route("/delete/<id>")
+@login_required
+def delete(id):
+    product = db.session.query(Products).filter(Products.id == id).first()
+    print(type(id))
+    if product:
+        for image in product.images:
+            if image:
+                try:
+                    if os.path.exists(f"{Config.PROJECT_ROOT}/static/images/{image.product_id}"):
+                        shutil.rmtree(f"{Config.PROJECT_ROOT}/static/images/{image.product_id}")
+                    db.session.delete(image)
+                    db.session.commit()
+                except OSError as e:
+                    print("Error",e)
+        db.session.delete(product)
+        db.session.commit()
+    return redirect(url_for('main.home'))
 
 
 @main_bp.route("/logout")
+@login_required
 def logout():
     logout_user()
-    return redirect("/")
+    return redirect(url_for('main.home'))

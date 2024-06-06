@@ -60,7 +60,15 @@
                     </div>
                     <div class="mb-3">
                         <p class="card-text">{{ product.price }}</p>
-                        <a href="{{ url_for('main.details', id=product.id ) }} " class="btn btn-outline-info w-50">Buy</a>
+                        <a href="{{ url_for('main.details', id=product.id ) }} " class="btn btn-light btn-md">Buy</a>
+                        {% if current_user.role == 1 %}
+                            <a href="{{ url_for('main.details', id=product.id ) }} " class="btn btn-light btn-md">Delete</a>
+                        {% endif %}
+                        
+                        {% if current_user.id == product.user_id %}
+                            <a href="{{ url_for('main.delete', id=product.id ) }} " class="btn btn-light btn-md ">Delete</a>
+                            <a href="{{ url_for('main.delete', id=product.id) }} " class="btn btn-light btn-md ">Edit</a>
+                        {% endif %}
                     </div>
     
                     </div>
