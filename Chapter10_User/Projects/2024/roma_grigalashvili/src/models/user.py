@@ -4,10 +4,6 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from src.extensions import db
 from src.models.base import BaseModel
 
-
-
-
-
 # ONE - TO - ONE relationship
 class User(db.Model, BaseModel, UserMixin):
 
@@ -18,7 +14,7 @@ class User(db.Model, BaseModel, UserMixin):
     email = db.Column(db.String, nullable=False)
     _password = db.Column(db.String, nullable=False)
 
-    role_id = db.Column(db.ForeignKey("roles.id"))
+    role_id = db.Column(db.Integer, db.ForeignKey("roles.id"), default=3)
     role = db.relationship("Role", uselist=False)
 
     @property
@@ -34,7 +30,6 @@ class User(db.Model, BaseModel, UserMixin):
 
     def __repr__(self):
         return f"{self.username} {self.email}"
-
 
 
 class Role(db.Model, BaseModel):
