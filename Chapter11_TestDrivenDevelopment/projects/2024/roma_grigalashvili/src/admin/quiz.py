@@ -10,6 +10,8 @@ class QuizView(SecureModelView):
     can_export = True
     inline_models = (QuestionInlineModel(Question),)
 
+    column_editable_list = ["status"]
+
     column_searchable_list = ["category.category"]
     column_list = ["quiz_name", "category.category", "status"]
     column_labels = {

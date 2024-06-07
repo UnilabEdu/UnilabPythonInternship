@@ -6,16 +6,12 @@ from src.models import Quiz, Question, Category, User, Role
 
 
 
-@click.command("init_db")
-@with_appcontext
 def init_db():
     click.echo("Creating Database")
     db.drop_all()
     db.create_all()
     click.echo("Database Created")
 
-@click.command("populate_db")
-@with_appcontext
 def populate_db():
     click.echo("Creating Category")
     categories = ["Geography", "Math", "History"]
@@ -49,7 +45,7 @@ def populate_db():
     admin_user = User(
         username="Grigala",
         email="roma.grigalashvili@iliauni.edu.ge",
-        password="Grigala27",
+        password="Grigalash1",
         role_id=1
         )
     admin_user.create()
@@ -63,3 +59,19 @@ def populate_db():
 
 
     click.echo("Frist Tables Created")
+
+
+@click.command("init_db")
+@with_appcontext
+def init_db_command():
+    click.echo("Creating Database")
+    init_db()
+    click.echo("Database Created")
+
+
+@click.command("populate_db")
+@with_appcontext
+def populate_db_command():
+    click.echo("Creating Test Populate")
+    populate_db()
+    click.echo("Test Populate created")
