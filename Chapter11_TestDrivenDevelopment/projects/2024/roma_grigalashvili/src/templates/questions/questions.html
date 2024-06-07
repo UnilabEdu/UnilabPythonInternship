@@ -1,0 +1,46 @@
+{% extends "layouts/base.html" %}
+
+{% block title %}
+    Quick Quiz - Registration
+{% endblock %}
+
+{% block body %}
+<div class="d-flex justify-content-center align-items-center pt-5">
+    <h2>Quiz Questions</h2>
+</div>
+
+<a class="btn btn-primary mb-2" href="{{ url_for('questions.add_question') }}">Add New Question</a>
+<table class="table align-middle mb-0 bg-white">
+    <thead class="table-dark">
+        <tr>
+            <th>ID</th>
+            <th>Question Text</th>
+            <th>Choice 1</th>
+            <th>Choice 2</th>
+            <th>Choice 3</th>
+            <th>Choice 4</th>
+            <th>Correct Answer</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for question in questions %}
+        <tr>
+            <td>{{ question.id }}</td>
+            <td>{{ question.question_text }}</td>
+            <td>{{ question.choice1 }}</td>
+            <td>{{ question.choice2 }}</td>
+            <td>{{ question.choice3 }}</td>
+            <td>{{ question.choice4 }}</td>
+            <td>{{ question.correct_answer }}</td>
+            <td>
+                <a class="btn btn-info" href="{{ url_for('questions.edit_question', id=question.id) }}">Edit</a>
+                <form action="{{ url_for('questions.delete_question', id=question.id) }}" method="POST" style="display:inline;">
+                    <button type="submit" class="btn btn-danger btn-block" onclick="return confirm('Are you sure you want to delete this question?');">Delete</button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
