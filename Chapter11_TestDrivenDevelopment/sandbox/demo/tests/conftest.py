@@ -19,7 +19,7 @@ def app():
     })
     admin._views = []
 
-    with app.app_context
+    with app.app_context():
         init_db()
         populate_db()
 
