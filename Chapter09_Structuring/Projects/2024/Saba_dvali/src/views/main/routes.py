@@ -9,7 +9,7 @@ from werkzeug.utils import secure_filename
 
 from src.config import Config
 # from src.views.main.forms import main
-from src.views.auth.forms import RegistrationForm, LoginForm, AddProductForm
+from src.views.auth.forms import RegistrationForm, LoginForm, AddProductForm, EditroductForm
 from src.models import Users
 from src.models import Role
 from src.models import Products
@@ -65,10 +65,19 @@ main_bp = Blueprint("main",__name__, template_folder=TEMPLATE_FOLDER)
 #     return "yes"
 
 
+# @main_bp.route('/role', methods=['POST',"GET"])
+# def role():
+#     role = Role(role="guest")
+#     db.session.add(role)
+#     db.session.commit()
+
+
 # @main_bp.route('/usr', methods=['POST',"GET"])
 # def role():
 #     usr = Users(name="saba",
 #                  email="saba@gmail.com",
+#                  age=23,
+#                  phone="551939595",
 #                  password="Saba123@",
 #                  role=1)
 #     db.session.add(usr)
@@ -126,12 +135,14 @@ def add_product():
                 db.session.add(img)
                 db.session.commit()
 
+
 @main_bp.route("/",methods=["GET", "POST"])
 def home():
     logform = LoginForm()
     addpoductform = AddProductForm()
-    regform = RegistrationForm()
+    regform = RegistrationForm()    
 
+    
     if addpoductform.validate_on_submit():
         add_product()
 
@@ -146,6 +157,8 @@ def home():
         else:
             add_user=Users(name=regform.username_reg.data,
                            email=regform.email_reg.data,
+                           age=int(regform.age.data),
+                           phone=int(regform.phone.data),
                            password=regform.password_reg.data,
                            role=2) # static 
             db.session.add(add_user)
@@ -159,12 +172,12 @@ def home():
             print("მითითებული მომხმარებელი ვერ მოიძებნა")
             return redirect("/")
         
-        if user.password == logform.password_log.data:
+        if user.check_password(logform.password_log.data):
             print("aqaa")
             login_user(user)
             
     products = Products.query.filter().all()
-    return render_template("home.html",products=products, regform=regform, logform=logform, addpoductform=addpoductform)
+    return render_template("home.html",products=products, regform=regform, logform=logform, addpoductform=addpoductform,editpoductform=EditroductForm())
 
 
 @main_bp.route("/details/<id>")
@@ -173,7 +186,7 @@ def details(id):
     for prod in product:
         for img in prod.images:
             print(f"static/images/{img.product_id}/{img.image_name}")
-    return render_template("details.html",product=product, regform=RegistrationForm(),logform=LoginForm(),addpoductform=AddProductForm())
+    return render_template("details.html",product=product, regform=RegistrationForm(),logform=LoginForm(),addpoductform=AddProductForm(),editpoductform=EditroductForm())
 
 
 @main_bp.route("/profile",methods=["GET", "POST"])
@@ -182,27 +195,43 @@ def profile():
     form = AddProductForm()
     if form.validate_on_submit():
         add_product()
-    return render_template("profile.html", addpoductform=form)
+    return render_template("profile.html", addpoductform=form, editpoductform=EditroductForm())
 
 
 @main_bp.route("/delete/<id>")
 @login_required
 def delete(id):
     product = db.session.query(Products).filter(Products.id == id).first()
-    print(type(id))
     if product:
-        for image in product.images:
-            if image:
-                try:
-                    if os.path.exists(f"{Config.PROJECT_ROOT}/static/images/{image.product_id}"):
-                        shutil.rmtree(f"{Config.PROJECT_ROOT}/static/images/{image.product_id}")
-                    db.session.delete(image)
-                    db.session.commit()
-                except OSError as e:
-                    print("Error",e)
-        db.session.delete(product)
-        db.session.commit()
+        if current_user.id == product.user_id:
+            for image in product.images:
+                if image:
+                    try:
+                        if os.path.exists(f"{Config.PROJECT_ROOT}/static/images/{image.product_id}"):
+                            shutil.rmtree(f"{Config.PROJECT_ROOT}/static/images/{image.product_id}")
+                        db.session.delete(image)
+                        db.session.commit()
+                    except OSError as e:
+                        print("Error",e)
+            db.session.delete(product)
+            db.session.commit()
     return redirect(url_for('main.home'))
+
+
+@main_bp.route("/edit/<id>",methods=["GET","POST"])
+@login_required
+def edit(id):
+    editform = EditroductForm()
+    if editform.validate_on_submit():
+        product = Products.query.get(id)        
+        if product:
+            product.product_name = editform.product_name.data
+            product.product_model = editform.product_model.data
+            product.price = int(editform.price.data)
+            product.info = editform.info.data
+            db.session.commit()
+    return redirect(url_for('main.home'))
+    
 
 
 @main_bp.route("/logout")

@@ -2,7 +2,7 @@
 {% block prod %}
     <div class=" row " >
 
-        <div class="col-2 mt-5 justify-content-center" style="width: 21%;">
+        <div class="col-2 mt-5 justify-content-center" style="width: 20%;">
             <div class="list-group">
                 
 
@@ -31,10 +31,19 @@
 
         </div>
 
+
+
         <div class=" mt-5 col row justify-content-start">
             
             {% for product in products %}
-                <div class="card mb-4 ms-3" style="width: 320px; border-radius: 15px;" >
+            
+                <div class="card mb-4 ms-3" style="width: 330px; border-radius: 15px;" >
+                    
+                    {% if current_user.id == product.user_id %}
+                        {% include 'layouts/editproduct.html' %}
+                        {% block editproduct %}{% endblock %}
+                    {% endif %}
+
                     <div id="{{ product.id }}" class="carousel slide">
                                 
                         <div class="carousel-inner mt-3 ">
@@ -54,29 +63,43 @@
                     </button>
                     </div>
 
+
                     <div class="container mt-3" style="width: 100%;">
+                    <div>
+                        <h5 class="card-title">{{ product.product_name }}</h5>
+                    </div>
                     <div style="height: 80px;">
                         <h6 class="card-title">{{ product.product_model }}</h6>
                     </div>
                     <div class="mb-3">
-                        <p class="card-text">{{ product.price }}</p>
+              
+                        <p class="card-text">{{ product.price }}  GEL</p>
+                        <p class="card-text">Published: {{ product.create_time.strftime('%Y-%m-%d') }}</p>
+                    
                         <a href="{{ url_for('main.details', id=product.id ) }} " class="btn btn-light btn-md">Buy</a>
                         {% if current_user.role == 1 %}
                             <a href="{{ url_for('main.details', id=product.id ) }} " class="btn btn-light btn-md">Delete</a>
                         {% endif %}
                         
+
                         {% if current_user.id == product.user_id %}
+                
+                            <button type="button" class="btn btn-light"data-bs-toggle="modal" data-bs-target="#{{ product.id }}">
+                                <a>Edit</a>
+                            </button>
+
                             <a href="{{ url_for('main.delete', id=product.id ) }} " class="btn btn-light btn-md ">Delete</a>
-                            <a href="{{ url_for('main.delete', id=product.id) }} " class="btn btn-light btn-md ">Edit</a>
+
+    
                         {% endif %}
                     </div>
-    
+                    
                     </div>
 
+               
                 </div> 
-    
             {% endfor %}
-    
+
         </div>
     
     </div>

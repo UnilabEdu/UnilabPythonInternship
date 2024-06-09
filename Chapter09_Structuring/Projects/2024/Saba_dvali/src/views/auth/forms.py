@@ -1,6 +1,6 @@
 from flask_wtf import FlaskForm
 from flask_wtf.file import FileField, FileAllowed,FileRequired
-from wtforms.fields import StringField, PasswordField, RadioField, DateField, SelectField, TextAreaField, SubmitField, EmailField,MultipleFileField,DecimalField
+from wtforms.fields import StringField, PasswordField, RadioField, DateField, SelectField, TextAreaField, SubmitField, EmailField,MultipleFileField,DecimalField,IntegerField
 from wtforms.validators import DataRequired, equal_to, length, ValidationError,NumberRange
 
 from string import ascii_uppercase, ascii_lowercase, digits, punctuation
@@ -17,6 +17,8 @@ class LoginForm(FlaskForm):
 class RegistrationForm(FlaskForm):
     username_reg = StringField("Username", validators=[DataRequired()])
     email_reg = EmailField("Email", validators=[DataRequired()])
+    age = IntegerField("Age",validators=[DataRequired(), NumberRange(min=12, max=100)])
+    phone = StringField("Phone",validators=[DataRequired(),length(min=9, max=9)])
 
     password_reg = PasswordField("Password", validators=[DataRequired(),
                                                      length(min=8, max=64, message="პაროლი უნდა იყოს მინიმუმ 8 სიმბოლო")])
@@ -69,6 +71,11 @@ class AddProductForm(FlaskForm):
         FileAllowed(['jpg', 'jpeg', 'png', 'gif'], 'Images only!')
     ])
     submit = SubmitField('Add Product')
- 
+         
+class EditroductForm(FlaskForm):
+    product_name = StringField('Product Name', validators=[DataRequired()])
+    product_model = StringField('Product Model', validators=[DataRequired()])
+    price = DecimalField('Price', validators=[DataRequired(), NumberRange(min=0)])
+    info = StringField('Product Info', validators=[DataRequired()])
 
-        
+    submit = SubmitField('Edit Product')
