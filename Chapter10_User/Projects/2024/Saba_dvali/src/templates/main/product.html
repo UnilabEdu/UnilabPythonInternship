@@ -1,0 +1,109 @@
+
+{% block prod %}
+    <div class=" row " >
+
+        <div class="col-2 mt-5 justify-content-center" style="width: 20%;">
+            <div class="list-group">
+                
+
+                <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between">
+                    Iphone
+                    <span >3</span>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between">
+                    Samsung
+                    <span >7</span>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between">
+                    Google Pixel
+                    <span >20</span>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between">
+                    Redmi
+                    <span >2</span>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between">
+                    Xiaomi
+                    <span >7</span>
+                </a>
+
+              </div>
+
+        </div>
+
+
+
+        <div class=" mt-5 col row justify-content-start">
+            
+            {% for product in products %}
+            
+                <div class="card mb-4 ms-3" style="width: 330px; border-radius: 15px;" >
+                    
+                    {% if current_user.id == product.user_id %}
+                        {% include 'layouts/editproduct.html' %}
+                        {% block editproduct %}{% endblock %}
+                    {% endif %}
+
+                    <div id="{{ product.id }}" class="carousel slide">
+                                
+                        <div class="carousel-inner mt-3 ">
+                            {% for image in product.images %}
+                            <div class="carousel-item active ">
+                                <img src="static/images/{{ image.product_id }}/{{ image.image_name }}" class="d-block w-100 alt="...">
+                            </div>
+                            {% endfor %}
+                        </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#{{ product.id }}" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#{{ product.id }}" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                    </div>
+
+
+                    <div class="container mt-3" style="width: 100%;">
+                    <div>
+                        <h5 class="card-title">{{ product.product_name }}</h5>
+                    </div>
+                    <div style="height: 80px;">
+                        <h6 class="card-title">{{ product.product_model }}</h6>
+                    </div>
+                    <div class="mb-3">
+              
+                        <p class="card-text">{{ product.price }}  GEL</p>
+                        <p class="card-text">Published: {{ product.create_time.strftime('%Y-%m-%d') }}</p>
+                    
+                        <a href="{{ url_for('main.details', id=product.id ) }} " class="btn btn-light btn-md">Buy</a>
+                        {% if current_user.role == 1 %}
+                            <a href="{{ url_for('main.details', id=product.id ) }} " class="btn btn-light btn-md">Delete</a>
+                        {% endif %}
+                        
+
+                        {% if current_user.id == product.user_id %}
+                
+                            <button type="button" class="btn btn-light"data-bs-toggle="modal" data-bs-target="#{{ product.id }}">
+                                <a>Edit</a>
+                            </button>
+
+                            <a href="{{ url_for('main.delete', id=product.id ) }} " class="btn btn-light btn-md ">Delete</a>
+
+    
+                        {% endif %}
+                    </div>
+                    
+                    </div>
+
+               
+                </div> 
+            {% endfor %}
+
+        </div>
+    
+    </div>
+
+    
+
+{% endblock %}

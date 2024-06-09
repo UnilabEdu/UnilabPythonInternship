@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% extends 'layouts/base.html' %}
+{% block title %} home {% endblock %}
+
+
+{% block body %} 
+
+    <div class="container-md ">
+        {% include 'layouts/navbar.html' %}
+        {% block navbar %}{% endblock %}
+
+        
+        {% include 'product.html' %}
+        {% block prod %}{% endblock %}
+
+
+    </div>
+{% include 'layouts/footer.html' %}
+{% block footer %}{% endblock %}
+
+{% endblock %}
+
+
+</html>
+
+

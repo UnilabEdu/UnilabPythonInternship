@@ -1,0 +1,51 @@
+
+{% block addnewproduct %}
+
+<form method="post" enctype="multipart/form-data">
+  {{ addpoductform.hidden_tag() }}
+
+  <div class="modal fade" id="addproductModal" tabindex="-1" aria-labelledby="addproductModalLabel" aria-hidden="true"  style="border-radius: 4rem;">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+          <div class="modal-body">
+            <div class="card-body p-1 text-center">
+              <h4 class="mb-4">Add Product</h4>
+              <div data-mdb-input-init class="form-outline mb-3">
+                {{ addpoductform.product_name(class="form-control form-control-md", placeholder="Product Name" ) }}
+
+              </div>
+
+              <div data-mdb-input-init class="form-outline mb-3">
+                {{ addpoductform.product_model(class="form-control form-control-md", placeholder="Product Model") }}
+
+              </div>
+
+              <div data-mdb-input-init class="form-outline mb-3">              
+                {{ addpoductform.price(class="form-control form-control-md", placeholder="Price") }}
+              </div>
+              <div data-mdb-input-init class="form-outline mb-3">
+                {{ addpoductform.info(class="form-control form-control-md", placeholder="Info") }}
+            </div>
+            <div data-mdb-input-init class="form-outline mb-3">
+                {{ addpoductform.product_images(class="form-control form-control-md", placeholder="Price") }}
+            </div>
+              <div class="form-check d-flex justify-content-start mb-3">
+                <input class="form-check-input" type="checkbox" value="" id="form1Example3" />
+              </div>
+
+              {{ addpoductform.submit(class="btn btn-outline-info btn-md btn-block w-100") }}
+
+             </div>
+
+          </div>
+      </div>
+    </div>
+  </div>
+</form>
+{% endblock %}
+
+
+
