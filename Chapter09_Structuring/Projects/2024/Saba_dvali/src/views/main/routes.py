@@ -222,7 +222,9 @@ def delete(id):
 @login_required
 def edit(id):
     editform = EditroductForm()
+
     if editform.validate_on_submit():
+        print("movida")
         product = Products.query.get(id)        
         if product:
             product.product_name = editform.product_name.data
