@@ -107,28 +107,25 @@ def add_product():
                             product_model=product_model,
                             price=price,
                             info=info,
-                            user_id=current_user.id)
+                            user_id=current_user.id,
+                            user_name=current_user.name)
         db.session.add(addproduct)
         db.session.commit()
         product = db.session.query(Products).filter(Products.product_name == product_name,
                                                     Products.product_model == product_model,
                                                     Products.price == price,
                                                     Products.info == info,
-                                                    Products.user_id == current_user.id
+                                                    Products.user_id == current_user.id,
+                                                    Products.user_name == current_user.name
                                                     ).first()
-        print(product.id)
         if product:
-            print("movida aq..")
             product_images = request.files.getlist('product_images')
             product_dir = os.path.join(f"{Config.PROJECT_ROOT}/static/images", str(product.id))
             print(product.id)
             if not os.path.exists(product_dir):
-                print("movida aq12..")
                 os.makedirs(product_dir)
                 for file in product_images:
                     if file.filename != '':
-                        print("movida aq123123..")
-
                         filename = secure_filename(file.filename)
                         file.save(os.path.join(product_dir, filename))
                         img = Images(image_name=filename,product_id=product.id)
@@ -178,6 +175,17 @@ def home():
             
     products = Products.query.filter().all()
     return render_template("home.html",products=products, regform=regform, logform=logform, addpoductform=addpoductform,editpoductform=EditroductForm())
+
+
+
+@main_bp.route("/user_profile/<id>",methods=["GET", "POST"])
+def user_profile(id):
+    print("movida")
+    print(id)
+    user = Users.query.filter(Users.id == id).all()
+
+    return render_template("user_profile.html",user=user, regform=RegistrationForm(), logform=LoginForm(),addpoductform=AddProductForm())
+
 
 
 @main_bp.route("/details/<id>")

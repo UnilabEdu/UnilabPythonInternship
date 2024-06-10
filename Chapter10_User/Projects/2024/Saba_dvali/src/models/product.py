@@ -12,6 +12,7 @@ class Products(db.Model):
     price = db.Column(db.String)
     info = db.Column(db.String)
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
+    user_name = db.Column(db.String)
     create_time = db.Column(DateTime, default=datetime.utcnow)
     
     owner = db.relationship('Users', back_populates='products')

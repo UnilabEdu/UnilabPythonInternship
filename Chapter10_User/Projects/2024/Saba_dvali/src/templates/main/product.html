@@ -72,26 +72,38 @@
                         <h6 class="card-title">{{ product.product_model }}</h6>
                     </div>
                     <div class="mb-3">
-              
-                        <p class="card-text">{{ product.price }}  GEL</p>
+                        <div class="justify-content-between" style="display: flex;">
+                            <div class="price-item>
+                                <p class="card-text">{{ product.price }} GEL</p>
+                            </div>
+                            <div class="price-item">
+                               <p>Owner:  <a href="{{ url_for('main.user_profile', id=product.user_id ) }}"> {{ product.user_name }}</a></p>
+                            </div>
+                        </div>
+
                         <p class="card-text">Published: {{ product.create_time.strftime('%Y-%m-%d') }}</p>
                     
                         <a href="{{ url_for('main.details', id=product.id ) }} " class="btn btn-light btn-md">Buy</a>
-                        {% if current_user.role == 1 %}
-                            <a href="{{ url_for('main.details', id=product.id ) }} " class="btn btn-light btn-md">Delete</a>
-                        {% endif %}
-                        
-
-                        {% if current_user.id == product.user_id %}
+  
+                        {% if current_user.id == product.user_id and  current_user.role != 1 %}
                 
                             <button type="button" class="btn btn-light"data-bs-toggle="modal" data-bs-target="#{{ product.id }}">
                                 <a>Edit</a>
                             </button>
 
-                            <a href="{{ url_for('main.delete', id=product.id ) }} " class="btn btn-light btn-md ">Delete</a>
-
-    
+                            <a href="{{ url_for('main.delete', id=product.id ) }} " class="btn btn-light btn-md ">Delete</a>    
                         {% endif %}
+
+                        {% if current_user.role == 1 %}
+                        <a href="{{ url_for('main.delete', id=product.id ) }} " class="btn btn-light btn-md">Delete</a>
+                        {% if current_user.id == product.user_id %}
+                            <button type="button" class="btn btn-light"data-bs-toggle="modal" data-bs-target="#{{ product.id }}">
+                                <a>Edit</a>
+                            </button>
+                        {% endif %}
+
+                    {% endif %}
+
                     </div>
                     
                     </div>
