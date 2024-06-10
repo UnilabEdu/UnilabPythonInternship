@@ -18,12 +18,11 @@
                 </div>
                     <div class="col" style="width: 40%;">
                         <h2>Profile</h2><br>
-                            <p><strong>Name:</strong> {{ user.name }} </p>
-                            <p><strong>Email:</strong> {{ user.email }}</p>
-                            <p><strong>Rate:</strong> 7/10</p>
-                            <p><strong>Location:</strong> Tbilisi</p>
-                            <p><strong>Products:</strong> 0 </p>
-                            <p><strong>Sold Product:</strong> 0</p>
+                            <p><strong>Name: </strong> {{ user.name }} </p>
+                            <p><strong>Email: </strong> {{ user.email }}</p>
+                            <p><strong>Age: </strong> {{ user.age }}</p>
+                            <p><strong>Phone: </strong> {{ user.phone }}</p>
+                            <p><strong>Date Joined: </strong> {{ user.date_joined.strftime('%Y-%m-%d') }} </p>
                     </div>
                 </div>
             </div>
@@ -41,7 +40,8 @@
                             <img src="static/images/1/iphone_11_2.jpg" class="img-fluid rounded-circle mb-3" alt="User Picture">
 
                             <div class="carousel-item active ">
-                                <img src="static/images/{{image.product_id}}/{{image.image_name}}" class="d-block w-100 alt="...">
+                                <img src="/static/images/{{ image.product_id }}/{{ image.image_name }}" class="d-block w-100 alt="...">
+
                             </div>
                             {% endfor %}
                         </div>

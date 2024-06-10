@@ -174,7 +174,11 @@ def home():
             login_user(user)
             
     products = Products.query.filter().all()
-    return render_template("home.html",products=products, regform=regform, logform=logform, addpoductform=addpoductform,editpoductform=EditroductForm())
+    return render_template("home.html",products=products,
+                           regform=regform, 
+                           logform=logform,
+                           addpoductform=addpoductform,
+                           editpoductform=EditroductForm())
 
 
 
@@ -184,17 +188,21 @@ def user_profile(id):
     print(id)
     user = Users.query.filter(Users.id == id).all()
 
-    return render_template("user_profile.html",user=user, regform=RegistrationForm(), logform=LoginForm(),addpoductform=AddProductForm())
+    return render_template("user_profile.html",user=user,
+                           regform=RegistrationForm(),
+                           logform=LoginForm(),
+                           addpoductform=AddProductForm())
 
 
 
 @main_bp.route("/details/<id>")
 def details(id):
     product = Products.query.filter(Products.id == id).all()
-    for prod in product:
-        for img in prod.images:
-            print(f"static/images/{img.product_id}/{img.image_name}")
-    return render_template("details.html",product=product, regform=RegistrationForm(),logform=LoginForm(),addpoductform=AddProductForm(),editpoductform=EditroductForm())
+    return render_template("details.html",product=product,
+                           regform=RegistrationForm(),
+                           logform=LoginForm(),
+                           addpoductform=AddProductForm(),
+                           editpoductform=EditroductForm())
 
 
 @main_bp.route("/profile",methods=["GET", "POST"])
@@ -203,7 +211,8 @@ def profile():
     form = AddProductForm()
     if form.validate_on_submit():
         add_product()
-    return render_template("profile.html", addpoductform=form, editpoductform=EditroductForm())
+    return render_template("profile.html", addpoductform=form,
+                           editpoductform=EditroductForm())
 
 
 @main_bp.route("/delete/<id>")

@@ -37,7 +37,7 @@
             
             {% for product in products %}
             
-                <div class="card mb-4 ms-3" style="width: 330px; border-radius: 15px;" >
+                <div class="card mb-4 ms-3" style="width: 300px; border-radius: 15px;" >
                     
                     {% if current_user.id == product.user_id %}
                         {% include 'layouts/editproduct.html' %}

@@ -8,13 +8,14 @@
 {% block body %} 
 
     <div class="container-md "style="height: 100vh">
+
+
         {% include 'layouts/navbar.html' %}
         {% block navbar %}{% endblock %}
-
+    
         
         {% include 'product.html' %}
         {% block prod %}{% endblock %}
-
 
     </div>
 {% include 'layouts/footer.html' %}
