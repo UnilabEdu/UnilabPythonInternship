@@ -1,6 +1,6 @@
 {% from "macros.html" import create_navlink %}
 
-<nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary">
+<nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary" style="height: 7vh;">
     <div class="container">
         <a class="circle-image" href="{{ url_for('main.index') }}">
             <img src="{{ url_for('static', filename='img/Q_logo.png') }}" alt="Image">
@@ -23,7 +23,7 @@
                     </li>
                     {% if current_user.is_authenticated and current_user.role.name == "admin" %}
                         <li class="nav-item">
-                            {{ create_navlink('questions.questions', 'Questions') }}
+                            {{ create_navlink('questions.view_questions', 'Questions') }}
                         </li>
                     {% endif %}
                     {% if current_user.is_authenticated %}

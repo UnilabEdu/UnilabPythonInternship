@@ -1,8 +1,11 @@
 from flask.cli import with_appcontext
 import click
+import csv
+from os import path
 
 from src.extensions import db
 from src.models import Quiz, Question, Category, User, Role
+from src import Config
 
 
 
@@ -13,6 +16,7 @@ def init_db():
     click.echo("Database Created")
 
 def populate_db():
+    csv_file_path = path.join(Config.BASE_DIRECTORY, "quiz.csv")
     click.echo("Creating Category")
     categories = ["Geography", "Math", "History"]
     for category in categories:
@@ -25,16 +29,19 @@ def populate_db():
         category_id=int(1))
     new_quiz.create()
 
-    click.echo("Creating First Question")
-    new_question = Question(
-        question_text="What is the capital of Germany?",
-        choice1="Berlin",
-        choice2="Madrid",
-        choice3="Paris",
-        choice4="Rome",
-        correct_answer=int(1),
-        quiz_id=int(1))
-    new_question.create()
+    with open(csv_file_path, mode='r') as file:
+        csv_reader = csv.DictReader(file)
+        for row in csv_reader:
+            new_question = Question(
+                question_text=row["question_text"],
+                choice1=row["choice1"],
+                choice2=row["choice2"],
+                choice3=row["choice3"],
+                choice4=row["choice4"],
+                correct_answer=int(row["correct_answer"]),
+                quiz_id=int(row["quiz_id"])
+            )
+            new_question.create()
 
     click.echo("Creating Roles")
     roles = ["admin", "moderator", "member"]

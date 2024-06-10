@@ -1,4 +1,4 @@
-from flask import render_template, Blueprint, redirect, flash, url_for
+from flask import render_template, Blueprint, redirect, flash, url_for, request
 from os import path
 from flask_login import login_required
 
@@ -11,8 +11,10 @@ question_blueprint = Blueprint("questions", __name__, template_folder=TEMPLATES_
 
 @question_blueprint.route("/questions")
 @login_required
-def questions():
-    questions = Question.query.all()
+def view_questions():
+    page = request.args.get('page', 1, type=int)
+    per_page = 10  # Number of questions per page
+    questions = Question.query.paginate(page=page, per_page=per_page, error_out=False)
     return render_template("questions.html", questions=questions)
 
 

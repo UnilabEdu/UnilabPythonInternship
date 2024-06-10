@@ -3,6 +3,6 @@ echo "Create Database"
 flask init_db
 echo "==================================="
 
-echo "Create Initialization"
+echo "Create Test Tavles"
 flask populate_db
 echo "==================================="

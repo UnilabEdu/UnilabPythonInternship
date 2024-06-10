@@ -14,7 +14,7 @@
 
 <body>
     {% include "layouts/navbar.html" %}
-    <section class="vh-100" style="background-color: #eee;">
+    <section style="background-color: #eee; height: 93vh; overflow-y: auto;">
         {% with messages = get_flashed_messages(with_categories=true) %}
             {% if messages %}
                 {% for category, message in messages %}
@@ -25,7 +25,7 @@
                 {% endfor %}
             {% endif %}
         {% endwith %}
-        <div class="container h-100 container-fluid h-custom">
+        <div class="container h-100">
             {% block body %}
             {% endblock %}
         </div>
