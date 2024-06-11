@@ -13,7 +13,7 @@ question_blueprint = Blueprint("questions", __name__, template_folder=TEMPLATES_
 @login_required
 def view_questions():
     page = request.args.get('page', 1, type=int)
-    per_page = 10  # Number of questions per page
+    per_page = 10  # შეკითხვების რაოდენობა ერთ გვერდზე
     questions = Question.query.paginate(page=page, per_page=per_page, error_out=False)
     return render_template("questions.html", questions=questions)
 

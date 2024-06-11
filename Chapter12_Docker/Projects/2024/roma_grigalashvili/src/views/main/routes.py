@@ -48,7 +48,3 @@ def index():
 @main_blueprint.route("/highscores")
 def highscores():
     return render_template("highscores.html", top_list=top_users_list)
-
-@main_blueprint.route("/game")
-def game():
-    return render_template("game.html", top_list=top_users_list)

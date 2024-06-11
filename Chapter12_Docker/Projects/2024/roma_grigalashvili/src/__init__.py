@@ -5,11 +5,11 @@ from src.admin import QuestionView, UserView, QuizView
 from src.extensions import db, migrate, login_manager, admin
 from src.config import Config
 from src.commands import init_db_command, populate_db_command
-from src.views import main_blueprint, question_blueprint, auth_blueprint, profile_blueprint
+from src.views import main_blueprint, question_blueprint, auth_blueprint, profile_blueprint, game_blueprint
 from src.models import User, Question, Quiz
 
 
-BLUEPRINTS = [main_blueprint, question_blueprint, auth_blueprint, profile_blueprint]
+BLUEPRINTS = [main_blueprint, question_blueprint, auth_blueprint, profile_blueprint, game_blueprint]
 COMMANDS = [init_db_command, populate_db_command]
 
 def create_app(config=Config):
