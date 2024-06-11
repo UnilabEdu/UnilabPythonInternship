@@ -70,7 +70,7 @@ main_bp = Blueprint("main",__name__, template_folder=TEMPLATE_FOLDER)
 #     role = Role(role="guest")
 #     db.session.add(role)
 #     db.session.commit()
-
+#     return "yes"
 
 # @main_bp.route('/usr', methods=['POST',"GET"])
 # def role():
@@ -82,6 +82,7 @@ main_bp = Blueprint("main",__name__, template_folder=TEMPLATE_FOLDER)
 #                  role=1)
 #     db.session.add(usr)
 #     db.session.commit()
+#     return "yes"
 
 # @main_bp.route('/img', methods=['POST',"GET"])
 # def upload_images():

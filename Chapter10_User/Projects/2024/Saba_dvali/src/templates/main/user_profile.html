@@ -37,11 +37,11 @@
 
                         <div class="carousel-inner mt-3 ">
                             {% for image in product.images %}
-                            <img src="static/images/1/iphone_11_2.jpg" class="img-fluid rounded-circle mb-3" alt="User Picture">
+                            <!-- <img src="static/images/1/iphone_11_2.jpg" class="img-fluid rounded-circle mb-3" alt="User Picture"> -->
+                            <!-- არ მუშაობს სურათის გახსნა.. -->
 
                             <div class="carousel-item active ">
-                                <img src="/static/images/{{ image.product_id }}/{{ image.image_name }}" class="d-block w-100 alt="...">
-
+                                <img src="/static/images/{{image.product_id}}/{{image.image_name}}" class="d-block w-100 alt="...">
                             </div>
                             {% endfor %}
                         </div>
