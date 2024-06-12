@@ -1,7 +1,9 @@
 from flask import Flask
+from flask_admin.menu import MenuLink
 
-from src.models import Users
-from src.ext import db, login_manager
+from src.admin_views import SecureModelView, UserView, ProductView,ImageView
+from src.models import Users, Products, Images
+from src.ext import db, login_manager, admin
 from src.config import Config
 # from src.views.auth.routes import auth_bp
 # from src.views.products.routes import products_bp
@@ -39,7 +41,11 @@ def register_extensions(app):
     def load_user(user_id):
         return Users.query.get(user_id)
 
-
+    admin.init_app(app)
+    admin.add_view(UserView(Users, db.session))
+    admin.add_view(ProductView(Products, db.session))
+    admin.add_view(ImageView(Images, db.session))
+    admin.add_link(MenuLink("Back", url="/"))
 
 def register_commands(app):
     for command in COMMANDS:

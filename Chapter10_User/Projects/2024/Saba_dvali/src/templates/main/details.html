@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% extends 'layouts/base.html' %}
+{% block title %} Details {% endblock %}
+
+
+{% block body %} 
+
+        <div class="container-md ">
+        {% include 'layouts/navbar.html' %}
+        {% block navbar %}{% endblock %}
+
+            <div class=" container-md mt-5  row justify-content-center"  >
+                {% for prod in product %}
+
+                    <div class="card " style="width: 30%;">
+                        <div id="{{ prod.id }}" class="carousel slide">
+                                
+                            <div class="carousel-inner mt-3 ">
+                                {% for image in prod.images %}
+                                <div class="carousel-item active ">
+                                    <img src="static/images/{{ image.product_id }}/{{ image.image_name }}" class="d-block w-100 alt="...">
+                                </div>
+                                {% endfor %}
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#{{ prod.id }}" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#{{ prod.id }}" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">{{ prod.product_model }}</h5>
+                            <p class="card-text">{{ prod.price }}</p>
+                            <p class="card-text">{{ prod.info }}</p>
+           
+                            <a href="#" class="btn btn-primary">Buy</a>
+                        </div>
+                    </div>       
+                {% endfor %}
+
+            </div>
+
+        </div>
+{% endblock %}
+
+</html>
