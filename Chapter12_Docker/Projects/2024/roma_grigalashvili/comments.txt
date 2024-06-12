@@ -1,11 +1,19 @@
 #1 First Start on the Docker
 
-sudo docker-compose up
+docker-compose up
 
 #2 For Build flask_app on the Docker
 
-sudo docker-compose build flask_app
+docker-compose build flask_app
 
 #2 Second Start flask_app on the Docker
 
-sudo docker-compose up -d flask_app
+docker-compose up -d flask_app
+
+
+
+# for gitub
+#-1     git remote add upstream https://github.com/UnilabEdu/UnilabPythonInternship.git
+#-2     git fetch upstream
+#-3     git pull upstream master
+#-4     git merge upstream/master

@@ -27,15 +27,17 @@
     </div>
     <div class="d-flex mt-5 flex-column align-items-center">
         <h2>{{ question["question"]}}</h2>
-        <form method="POST" class="w-100">
-            {% for idx, choice in enumerate(question['choices']) %}
-            <div class="form-check bg-info mb-4">
-                <input class="form-check-input" type="radio" name="choice" id="choice{{ idx }}" value="{{ idx + 1 }}" required>
-                <label class="form-check-label" for="choice{{ idx }}">
-                    {{ choice }}
-                </label>
+        <form method="POST" class="text-center w-100">
+            <div class=" d-grid gap-4">
+                {% for idx, choice in enumerate(question['choices']) %}
+                <div class="form-check btn btn-outline-primary btn-rounded">
+                    <input class="form-check-input" type="radio" name="choice" id="choice{{ idx }}" value="{{ idx + 1 }}" required>
+                    <label class="form-check-label" for="choice{{ idx }}">
+                        {{ choice }}
+                    </label>
+                </div>
+                {% endfor %}
             </div>
-            {% endfor %}
             <button type="submit" class="btn btn-primary mt-3">Submit</button>
         </form>
     </div>
