@@ -2,7 +2,7 @@ from flask.cli import with_appcontext
 import click
 
 from src.extensions import db
-from src.models import Question, Category, User, Role
+from src.models import Quiz, Question, Category, User, Role
 
 
 
@@ -23,6 +23,12 @@ def populate_db():
         new_category = Category(category=category)
         new_category.create()
 
+    click.echo("Creating First Quiz")
+    new_quiz = Quiz(
+        quiz_name="Quiz in Geography",
+        category_id=int(1))
+    new_quiz.create()
+
     click.echo("Creating First Question")
     new_question = Question(
         question_text="What is the capital of Germany?",
@@ -31,7 +37,7 @@ def populate_db():
         choice3="Paris",
         choice4="Rome",
         correct_answer=int(1),
-        category_id=int(1))
+        quiz_id=int(1))
     new_question.create()
 
     click.echo("Creating Roles")
@@ -51,8 +57,7 @@ def populate_db():
     member_user = User(
         username="Dvali",
         email="saba.dvali.1@iliauni.edu.ge",
-        password="Saba.dvali.1",
-        role_id=3
+        password="Saba.dvali.1"
         )
     member_user.create()
 

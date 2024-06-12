@@ -1,0 +1,21 @@
+question_text,choice1,choice2,choice3,choice4,correct_answer,quiz_id
+"What is the capital of Germany?","Berlin","Madrid","Paris","Rome",1,1
+"What is the largest continent?","Asia","Africa","Europe","North America",1,1
+"Which river is the longest in the world?","Nile","Amazon","Yangtze","Mississippi",1,1
+"Which is the smallest country by area?","Vatican City","Monaco","Nauru","San Marino",1,1
+"What is the capital of Canada?","Ottawa","Toronto","Vancouver","Montreal",1,1
+"Which country has the most natural lakes?","Canada","Brazil","Russia","India",1,1
+"What is the highest mountain in the world?","K2","Kangchenjunga","Mount Everest","Lhotse",3,1
+"Which desert is the largest in the world?","Sahara","Arabian","Gobi","Kalahari",1,1
+"Which country is known as the Land of the Rising Sun?","Japan","China","South Korea","Thailand",1,1
+"What is the longest river in Europe?","Volga","Danube","Ural","Dniester",1,1
+"What is the capital of Australia?","Sydney","Melbourne","Canberra","Brisbane",3,1
+"Which ocean is the largest?","Atlantic","Indian","Arctic","Pacific",4,1
+"Which continent is known as the 'Dark Continent'?","Asia","Africa","South America","Europe",2,1
+"What is the longest mountain range in the world?","Rocky Mountains","Andes","Himalayas","Alps",2,1
+"Which country is known as the Land of the Midnight Sun?","Norway","Sweden","Finland","Denmark",1,1
+"What is the capital of Brazil?","Rio de Janeiro","São Paulo","Brasília","Salvador",3,1
+"Which is the smallest continent by land area?","Europe","Australia","Antarctica","South America",2,1
+"What river runs through Paris?","Seine","Thames","Danube","Rhine",1,1
+"Which country has the highest population?","India","United States","Indonesia","China",4,1
+"What is the largest island in the world?","Borneo","Greenland","New Guinea","Madagascar",2,1

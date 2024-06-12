@@ -14,24 +14,12 @@ class Question(db.Model, BaseModel):
     choice4 = db.Column(db.String(100), nullable=False)
     correct_answer = db.Column(db.Integer, nullable=False)
 
-    category_id = db.Column(db.ForeignKey("category.id"))
-    category = db.relationship("Category", back_populates="question")
+    quiz_id = db.Column(db.ForeignKey("quiz.id"), nullable=False)
+    quiz = db.relationship("Quiz", back_populates="questions")
 
     def __repr__(self):
-        return f'<Question {self.id}: {self.question_text}>'
+        return f' {self.question_text}'
 
-
-class Category(db.Model, BaseModel):
-
-    __tablename__ = "category"
-
-    id = db.Column(db.Integer, primary_key=True)
-    category = db.Column(db.String, unique=True)
-
-    question = db.relationship("Question", back_populates="category")
-
-    def __repr__(self):
-        return f"{self.category}"
 
 
     

@@ -1,0 +1,45 @@
+{% from "macros.html" import create_navlink %}
+
+<nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary" style="height: 7vh;">
+    <div class="container">
+        <a class="circle-image" href="{{ url_for('main.index') }}">
+            <img src="{{ url_for('static', filename='img/Q_logo.png') }}" alt="Image">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Quick Quiz</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                        {{ create_navlink('main.index', 'Home') }}
+                    </li>
+                    <li class="nav-item">
+                        {{ create_navlink('main.highscores', 'HighScores') }}
+                    </li>
+                    {% if current_user.is_authenticated and current_user.role.name == "admin" %}
+                        <li class="nav-item">
+                            {{ create_navlink('questions.view_questions', 'Questions') }}
+                        </li>
+                    {% endif %}
+                    {% if current_user.is_authenticated %}
+                        <li class="nav-item">
+                            {{ create_navlink('auth.logout', 'Logout') }}
+                        </li>
+                    {% else %}
+                        <li class="nav-item">
+                            {{ create_navlink('auth.login', 'Login') }}
+                        </li>
+                        <li class="nav-item">
+                            {{ create_navlink('auth.register', 'Register') }}
+                        </li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    </div>
+  </nav>

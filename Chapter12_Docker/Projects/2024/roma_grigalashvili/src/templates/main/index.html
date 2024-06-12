@@ -1,0 +1,25 @@
+{% extends "layouts/base.html" %}
+
+{% block title %}
+    Quick Quiz - Main
+{% endblock %}
+
+{% block body %}
+
+    <div class="d-flex flex-column align-items-center justify-content-center">
+        <h1>Quick Quiz</h1>
+        
+        <p>მომხმარებლებს შეუძლიათ დაწერონ ქვიზები სხვადასხვა საგნებში და მიიღონ ქულები,
+            <br>ქულების დაგროვების შემდეგ კი მოხვდებიან საიტის მთავარ ცხრილში.
+            <br>ქვიზის დაწერა შესაძლებელია სხვადასხვა საგნებში:
+        </p>
+            <ul>
+                <li>მათემატიკა</li>
+                <li>ისტორია</li>
+                <li>გეოგრაფია</li>
+            </ul>
+        <a class="cus_btn" href="{{ url_for('main.highscores') }}">High Scores</a>
+        <a class="cus_btn" href="{{ url_for('game.select_game') }}">Play Game</a>
+    </div>
+
+{% endblock %}

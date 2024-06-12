@@ -1,0 +1,10 @@
+email_validator==2.1.1
+Flask==3.0.3
+Flask-Admin==1.6.1
+Flask-Login==0.6.3
+Flask-Migrate==4.0.7
+Flask-SQLAlchemy==3.1.1
+Flask-WTF==1.2.1
+pytest==8.2.2
+SQLAlchemy==2.0.30
+uWSGI==2.0.26

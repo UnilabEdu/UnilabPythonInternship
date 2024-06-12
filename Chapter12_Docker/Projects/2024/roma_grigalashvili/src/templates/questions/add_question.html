@@ -1,0 +1,50 @@
+{% extends "layouts/base.html" %}
+
+{% block title %}
+    Quick Quiz - Add Question
+{% endblock %}
+
+{% block body %}
+<div class="d-flex justify-content-center align-items-center pt-5">
+    <h2>Add a New Question</h2>
+</div>
+
+<form action="{{ url_for('questions.add_question') }}" method="POST">
+    {{ form.hidden_tag() }}  
+    <div class="form-outline mb-4">
+        <label class="form-label" for="question_text">New Question:</label>
+        {{ form.question_text(class="form-control") }}  
+    </div>
+
+    <div class="form-outline mb-4">
+        <label class="form-label" for="choice1">Choice A:</label>
+        {{ form.choice1(class="form-control") }}
+        <input type="radio" id="correct_answer1" name="correct_answer" value="1" checked={{ form.correct_answer.data == '1' }}> 
+        {{ form.correct_answer.label(for="correct_answer1") }} 
+    </div>
+    <div class="form-outline mb-4">
+        <label class="form-label" for="choice2">Choice B:</label>
+        {{ form.choice2(class="form-control") }}
+        <input type="radio" id="correct_answer2" name="correct_answer" value="2" checked={{ form.correct_answer.data == '2' }}>
+        {{ form.correct_answer.label(for="correct_answer2") }}
+    </div>
+    <div class="form-outline mb-4">
+        <label class="form-label" for="choice3">Choice C:</label>
+        {{ form.choice3(class="form-control") }}
+        <input type="radio" id="correct_answer3" name="correct_answer" value="3" checked={{ form.correct_answer.data == '3' }}>
+        {{ form.correct_answer.label(for="correct_answer3") }}
+    </div>
+    <div class="form-outline mb-4">
+        <label class="form-label" for="choice4">Choice D:</label>
+        {{ form.choice4(class="form-control") }} 
+        <input type="radio" id="correct_answer4" name="correct_answer" value="4" checked={{ form.correct_answer.data == '4' }}>
+        {{ form.correct_answer.label(for="correct_answer4") }}
+    </div>
+
+    <div class="d-flex justify-content-center align-items-center">
+        {{ form.submit(class="btn btn-success btn-block me-3") }}  
+        <a class="btn btn-info" href="{{ url_for('questions.view_questions') }}">Questions List</a>
+    </div>
+</form>
+
+{% endblock %}
