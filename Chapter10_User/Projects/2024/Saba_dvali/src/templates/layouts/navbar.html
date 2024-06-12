@@ -43,7 +43,7 @@
         {% if current_user.is_authenticated %}
             <div class="dropdown ">
                 {% if current_user.role == 1 %}
-                    <a href="" class="btn btn-light btn-md">Admin Panel</a>
+                    <a href="/admin" class="btn btn-light btn-md">Admin Panel</a>
                 {% endif %}
                 <button type="button" class="btn btn-light">
                     <img src="static/icons/shopping-cart.png" width="22" height="22" alt="">
