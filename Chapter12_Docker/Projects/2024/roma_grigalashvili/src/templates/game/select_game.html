@@ -1,0 +1,22 @@
+{% extends "layouts/base.html" %}
+
+{% block title %}
+    Select Quiz
+{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+    <h1>Select a Quiz</h1>
+    <form method="POST" action="{{ url_for('game.select_game') }}">
+        {% for quiz in quizzes %}
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="quiz_id" id="quiz{{ quiz.id }}" value="{{ quiz.id }}" required>
+            <label class="form-check-label" for="quiz{{ quiz.id }}">
+                {{ quiz.quiz_name }} ({{ quiz.category.category }})
+            </label>
+        </div>
+        {% endfor %}
+        <button type="submit" class="btn btn-primary mt-3">Start Quiz</button>
+    </form>
+</div>
+{% endblock %}

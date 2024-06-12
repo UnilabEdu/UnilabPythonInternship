@@ -1,5 +1,6 @@
 from src.extensions import db
 from src.models.base import BaseModel
+from src.models.user import User
 
 class Quiz(db.Model, BaseModel):
      
@@ -14,6 +15,7 @@ class Quiz(db.Model, BaseModel):
     status = db.Column(db.Boolean, nullable=False, default=False)
 
     questions = db.relationship("Question", back_populates="quiz")
+    scores = db.relationship("Score", back_populates="quiz")
 
     def __repr__(self):
         return f'{self.quiz_name}'
@@ -30,3 +32,14 @@ class Category(db.Model, BaseModel):
     def __repr__(self):
         return f"{self.category}"
 
+class Score(db.Model, BaseModel):
+    __tablename__ = "scores"
+
+    id = db.Column(db.Integer, primary_key=True)
+    user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
+    quiz_id = db.Column(db.Integer, db.ForeignKey('quiz.id'), nullable=False)
+    score = db.Column(db.Integer, nullable=False)
+    date = db.Column(db.DateTime, nullable=False, default=db.func.current_timestamp())
+
+    user = db.relationship('User', back_populates='scores')
+    quiz = db.relationship('Quiz', back_populates='scores')

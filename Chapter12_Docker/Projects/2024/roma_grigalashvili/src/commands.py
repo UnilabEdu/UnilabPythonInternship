@@ -16,9 +16,10 @@ def init_db():
     click.echo("Database Created")
 
 def populate_db():
-    csv_file_path = path.join(Config.BASE_DIRECTORY, "quiz.csv")
+    geo_csv_file_path = path.join(Config.BASE_DIRECTORY, "quiz_geography.csv")
+    pro_csv_file_path = path.join(Config.BASE_DIRECTORY, "quiz_programming.csv")
     click.echo("Creating Category")
-    categories = ["Geography", "Math", "History"]
+    categories = ["Geography", "Math", "History", "Programming"]
     for category in categories:
         new_category = Category(category=category)
         new_category.create()
@@ -29,7 +30,27 @@ def populate_db():
         category_id=int(1))
     new_quiz.create()
 
-    with open(csv_file_path, mode='r') as file:
+    click.echo("Creating Second Quiz")
+    new_quiz = Quiz(
+        quiz_name="Quiz in Programmig",
+        category_id=int(4))
+    new_quiz.create()
+
+    with open(geo_csv_file_path, mode='r') as file:
+        csv_reader = csv.DictReader(file)
+        for row in csv_reader:
+            new_question = Question(
+                question_text=row["question_text"],
+                choice1=row["choice1"],
+                choice2=row["choice2"],
+                choice3=row["choice3"],
+                choice4=row["choice4"],
+                correct_answer=int(row["correct_answer"]),
+                quiz_id=int(row["quiz_id"])
+            )
+            new_question.create()
+
+    with open(pro_csv_file_path, mode='r') as file:
         csv_reader = csv.DictReader(file)
         for row in csv_reader:
             new_question = Question(
