@@ -8,6 +8,8 @@ class Quiz(db.Model, BaseModel):
 
     id = db.Column(db.Integer, primary_key=True)
     quiz_name = db.Column(db.String(50), nullable=False)
+    quiz_text = db.Column(db.String(200), nullable=False)  # Text of the quiz
+    # ქვიზები უნდა გადაებას იუზერების ცსრილს, იუზერს რომ შეეძლოს საკუთარი ქვიზის შექმნა
 
     category_id = db.Column(db.ForeignKey("category.id"), nullable=False)
     category = db.relationship("Category", back_populates="quiz")

@@ -21,9 +21,9 @@
                     <li class="nav-item">
                         {{ create_navlink('main.highscores', 'HighScores') }}
                     </li>
-                    {% if current_user.is_authenticated and current_user.role.name == "admin" %}
+                    {% if current_user.is_authenticated and current_user.role.name == "moderator" %}
                         <li class="nav-item">
-                            {{ create_navlink('questions.view_questions', 'Questions') }}
+                            {{ create_navlink('questions.view_questions', 'Dashboard') }}
                         </li>
                     {% endif %}
                     {% if current_user.is_authenticated %}

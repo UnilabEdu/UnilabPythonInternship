@@ -1,7 +1,7 @@
-quiz_name,category_id
-Quiz in Geography,1
-Quiz in Programming,4
-Quiz in Math,2
-Hard Quiz in Math,2
-Hard Quiz in Geography,1
-Hard Quiz in Programming,4
+quiz_name,quiz_text,category_id
+Quiz in Geography,"Some quick example text to Quiz in Geography",1
+Quiz in Programming,"Some quick example text to Quiz in Programming",4
+Quiz in Math,"Some quick example text to Quiz in Math",2
+Hard Quiz in Math,"Some quick example text to Hard Quiz in Math",2
+Hard Quiz in Geography,"Some quick example text to Hard Quiz in Geography",1
+Hard Quiz in Programming,"Some quick example text to Hard Quiz in Programming",4

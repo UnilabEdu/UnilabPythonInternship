@@ -29,9 +29,10 @@ def populate_db():
         reader = csv.DictReader(file)
         for row in reader:
             quiz_name = row['quiz_name']
+            quiz_text = row['quiz_text']
             category_id = int(row['category_id'])
 
-            new_quiz = Quiz(quiz_name=quiz_name, category_id=category_id)
+            new_quiz = Quiz(quiz_name=quiz_name, quiz_text=quiz_text, category_id=category_id)
             new_quiz.create()
 
     click.echo("Creating Questions")
@@ -66,7 +67,8 @@ def populate_db():
     member_user = User(
         username="Dvali",
         email="saba.dvali.1@iliauni.edu.ge",
-        password="Saba.dvali.1"
+        password="Saba.dvali.1",
+        role_id=2
         )
     member_user.create()
 

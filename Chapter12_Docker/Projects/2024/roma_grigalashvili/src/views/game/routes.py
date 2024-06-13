@@ -54,7 +54,7 @@ def game():
     # იგივე ადგილიდან სადაც წინა იუზერი გაჩერდა.
     
     if 'quiz_id' not in session:
-        return redirect(url_for('game.select_quiz'))
+        return redirect(url_for('game.select_game'))
     
     quiz_id = session['quiz_id']
     if 'selected_questions' not in session:
