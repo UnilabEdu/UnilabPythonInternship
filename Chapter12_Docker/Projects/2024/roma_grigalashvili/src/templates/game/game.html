@@ -1,3 +1,4 @@
+{% from "macros.html" import create_radio_button %}
 {% extends "layouts/base.html" %}
 
 {% block title %}
@@ -29,17 +30,38 @@
         <h2>{{ question["question"]}}</h2>
         <form method="POST" class="text-center w-100">
             <div class=" d-grid gap-4">
+                <!-- macros- ის გამოყენება მინდოდა მაგრამ ვერ ავამუშავე -->
+                <!-- {% for idx, choice in enumerate(question['choices']) %}
+                    {{ create_radio_button(idx, choice, request.form.get('choice')|int == idx + 1) }}
+                {% endfor %} -->
                 {% for idx, choice in enumerate(question['choices']) %}
-                <div class="form-check btn btn-outline-primary btn-rounded">
-                    <input class="form-check-input" type="radio" name="choice" id="choice{{ idx }}" value="{{ idx + 1 }}" required>
-                    <label class="form-check-label" for="choice{{ idx }}">
+                <div class="form-check">
+                    <input class="form-check-input d-none" type="radio" name="choice" id="choice{{ idx }}" value="{{ idx + 1 }}" required onchange="updateButtonStyles()">
+                    <label class="form-check-label btn btn-outline-primary btn-rounded w-100" for="choice{{ idx }}" id="button{{ idx }}">
                         {{ choice }}
                     </label>
                 </div>
                 {% endfor %}
+
             </div>
             <button type="submit" class="btn btn-primary mt-3">Submit</button>
         </form>
     </div>
 </div>
+
+<script>
+    function updateButtonStyles() {
+        const radioButtons = document.querySelectorAll('input[type="radio"][name="choice"]');
+        radioButtons.forEach((radio, index) => {
+            const button = document.getElementById(`button${index}`);
+            if (radio.checked) {
+                button.classList.remove('btn-outline-primary');
+                button.classList.add('btn-primary');
+            } else {
+                button.classList.remove('btn-primary');
+                button.classList.add('btn-outline-primary');
+            }
+        });
+    }
+</script>
 {% endblock %}

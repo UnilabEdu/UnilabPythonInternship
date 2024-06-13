@@ -1,7 +1,18 @@
+{# macros.html #}
 {% macro create_navlink(endpoint, text) %}
     {% if endpoint == request.endpoint %}
         <a class="btn btn-info m-1" href="{{ url_for(endpoint) }}"> {{ text }}</a>
     {% else %}
         <a class="btn btn-primary m-1" href="{{ url_for(endpoint) }}"> {{ text }}</a>
     {% endif %}
+{% endmacro %}
+
+{% macro create_radio_button(idx, choice, checked) %}
+    <div class="form-check">
+        {{checked}}
+        <input class="form-check-input d-none" type="radio" name="choice" id="choice{{ idx }}" value="{{ idx + 1 }}" {{ 'checked' if checked else '' }} required>
+        <label class="form-check-label btn {{ 'btn-primary' if checked else 'btn-outline-primary' }} btn-rounded w-100" for="choice{{ idx }}" id="button{{ idx }}">
+            {{ choice }}
+        </label>
+    </div>
 {% endmacro %}

@@ -50,6 +50,9 @@ def select_game():
 @game_blueprint.route('/game', methods=['GET', 'POST'])
 @login_required
 def game():
+    # როცა ქვიზს ვწერ. დაწერის პროცესში თუ logout გავაკეთე და სხვა იუზერით დავლოგინდი ქვიზს გამაგრძელებინებს 
+    # იგივე ადგილიდან სადაც წინა იუზერი გაჩერდა.
+    
     if 'quiz_id' not in session:
         return redirect(url_for('game.select_quiz'))
     

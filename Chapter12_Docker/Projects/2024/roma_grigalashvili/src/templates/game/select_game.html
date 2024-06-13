@@ -19,4 +19,52 @@
         <button type="submit" class="btn btn-primary mt-3">Start Quiz</button>
     </form>
 </div>
+
+
+<div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+  <!-- Inner -->
+  <div class="carousel-inner py-4">
+    {% for chunk in quizzes|batch(3, fill_with=None) %}
+    <div class="carousel-item {% if loop.first %}active{% endif %}">
+      <div class="container">
+        <div class="row">
+          {% for quiz in chunk %}
+          {% if quiz %}
+          <div class="col-lg-4">
+            <div class="card">
+              <img
+                src="https://mdbcdn.b-cdn.net/img/new/standard/nature/181.webp"
+                class="card-img-top"
+                alt="Image for {{ quiz.quiz_name }}"
+              />
+              <div class="card-body">
+                <h5 class="card-title">{{ quiz.quiz_name }}</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up the bulk
+                  of the card's content.
+                </p>
+                <form method="POST" action="{{ url_for('game.select_game') }}">
+                  <input type="hidden" name="quiz_id" value="{{ quiz.id }}">
+                  <button type="submit" data-mdb-ripple-init class="btn btn-primary">{{ quiz.id }}</button>
+                </form>
+              </div>
+            </div>
+          </div>
+          {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  <!-- Inner -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
 {% endblock %}
