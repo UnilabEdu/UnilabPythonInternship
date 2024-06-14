@@ -17,6 +17,8 @@ class User(db.Model, BaseModel, UserMixin):
     role_id = db.Column(db.Integer, db.ForeignKey("roles.id"), default=3)
     role = db.relationship("Role", uselist=False)
     scores = db.relationship('Score', back_populates='user')
+    quiz = db.relationship("Quiz", back_populates="user")  # Relationship to Quiz model
+
 
     @property
     def password(self):

@@ -24,6 +24,28 @@ def populate_db():
         new_category = Category(category=category)
         new_category.create()
 
+    click.echo("Creating Roles")
+    roles = ["admin", "moderator", "member"]
+    for role in roles:
+        new_role = Role(name=role)
+        new_role.create()
+
+    admin_user = User(
+        username="Grigala",
+        email="roma.grigalashvili@iliauni.edu.ge",
+        password="Grigalash1",
+        role_id=1
+        )
+    admin_user.create()
+
+    member_user = User(
+        username="Dvali",
+        email="saba.dvali.1@iliauni.edu.ge",
+        password="Saba.dvali.1",
+        role_id=2
+        )
+    member_user.create()
+
     click.echo("Creating Quiz")
     with open(quizes_csv_file_path, mode='r', newline='') as file:
         reader = csv.DictReader(file)
@@ -49,28 +71,6 @@ def populate_db():
                 quiz_id=int(row["quiz_id"])
             )
             new_question.create()
-
-    click.echo("Creating Roles")
-    roles = ["admin", "moderator", "member"]
-    for role in roles:
-        new_role = Role(name=role)
-        new_role.create()
-
-    admin_user = User(
-        username="Grigala",
-        email="roma.grigalashvili@iliauni.edu.ge",
-        password="Grigalash1",
-        role_id=1
-        )
-    admin_user.create()
-
-    member_user = User(
-        username="Dvali",
-        email="saba.dvali.1@iliauni.edu.ge",
-        password="Saba.dvali.1",
-        role_id=2
-        )
-    member_user.create()
 
 
     click.echo("Frist Tables Created")

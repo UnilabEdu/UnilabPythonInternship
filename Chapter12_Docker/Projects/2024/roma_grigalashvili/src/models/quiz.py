@@ -9,7 +9,10 @@ class Quiz(db.Model, BaseModel):
     id = db.Column(db.Integer, primary_key=True)
     quiz_name = db.Column(db.String(50), nullable=False)
     quiz_text = db.Column(db.String(200), nullable=False)  # Text of the quiz
-    # ქვიზები უნდა გადაებას იუზერების ცსრილს, იუზერს რომ შეეძლოს საკუთარი ქვიზის შექმნა
+    # ქვიზი უნდა გადაებას იუზერების ცსრილს, იუზერს რომ შეეძლოს საკუთარი ქვიზის შექმნა
+
+    user_id = db.Column(db.Integer, db.ForeignKey("users.id"), nullable=False, default=1)  # Reference to User model
+    user = db.relationship("User", back_populates="quiz")  # Relationship to User model
 
     category_id = db.Column(db.ForeignKey("category.id"), nullable=False)
     category = db.relationship("Category", back_populates="quiz")

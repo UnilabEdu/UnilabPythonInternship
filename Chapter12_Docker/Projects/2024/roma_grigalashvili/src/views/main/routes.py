@@ -7,35 +7,6 @@ from src.config import Config
 TEMPLATES_FOLDER = path.join(Config.BASE_DIRECTORY, "templates", "main")
 main_blueprint = Blueprint("main", __name__, template_folder=TEMPLATES_FOLDER)
 
-# top_users_list = [
-#     {
-#         "username": "Roma Grigalashvili",
-#         "email": "roma.grigalashvili@iliauni.edu.ge",
-#         "quiz": "Quiz in Geography",
-#         "score": 8
-
-#     },
-#     {
-#         "username": "Saba Dvali",
-#         "email": "saba.dvali@iliauni.edu.ge",
-#         "quiz": "Quiz in Geography",
-#         "score": 8
-#     },
-#     {
-#         "username": "Tea Godoladze",
-#         "email": "tea_godoladze@iliauni.edu.ge",
-#         "quiz": "Quiz in Programmig",
-#         "score": 8
-#     },
-#     {
-#         "username": "Roma Grigala",
-#         "email": "r.grigalashvili777@gmail.com",
-#         "quiz": "Quiz in Programmig",
-#         "score": 9
-#     },
-# ]
-
-
 @main_blueprint.route("/")
 def index():
     return render_template("index.html")
