@@ -44,6 +44,7 @@ def select_game():
         return redirect(url_for('game.game'))
     
     quizzes = Quiz.query.all()
+    # quizzes = Quiz.query.filter_by(status=True).all()
     return render_template('select_game.html', quizzes=quizzes)
 
 
