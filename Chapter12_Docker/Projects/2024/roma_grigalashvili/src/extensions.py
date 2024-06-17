@@ -8,4 +8,4 @@ from src.admin.base import SecureAdminIndexView
 db = SQLAlchemy()
 migrate = Migrate()
 login_manager = LoginManager()
-admin = Admin(name="Unilab Admin Page", template_mode="bootstrap4", index_view=SecureAdminIndexView(), base_template="admin/admin_base.html")
+admin = Admin(name="Home", template_mode="bootstrap4", index_view=SecureAdminIndexView(), base_template="admin/admin_base.html")

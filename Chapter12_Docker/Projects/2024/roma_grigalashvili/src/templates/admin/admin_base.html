@@ -1,8 +1,9 @@
 {% extends "admin/base.html" %}
 
 {% block page_body %}
-    <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-2" role="navigation">
+    
+        <nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary" style="height: 7vh;" role="navigation">
+            <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#admin-navbar-collapse"
                     aria-controls="admin-navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,15 +28,19 @@
             {% block access_control %}
             {% endblock %}
             </div>
+        </div>
         </nav>
+        <section style="background-color: #eee; height: 93vh; overflow-y: auto;">
+            {% block messages %}
+                {{ layout.messages() }}
+            {% endblock %}
 
-        {% block messages %}
-            {{ layout.messages() }}
-        {% endblock %}
+            {# store the jinja2 context for form_rules rendering logic #}
+            {% set render_ctx = h.resolve_ctx() %}
+            <div class="container h-100">
+                {% block body %}{% endblock %}
+            </div>
+            
+        </section>
 
-        {# store the jinja2 context for form_rules rendering logic #}
-        {% set render_ctx = h.resolve_ctx() %}
-
-        {% block body %}{% endblock %}
-    </div>
 {% endblock %}

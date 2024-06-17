@@ -23,7 +23,7 @@
                     </li>
                     {% if current_user.is_authenticated and current_user.role.name != "member" %}
                         <li class="nav-item">
-                            {{ create_navlink('questions.view_questions', 'Dashboard') }}
+                            <a class="btn btn-primary m-1" href="/admin/quiz/">Dashboard</a>
                         </li>
                     {% endif %}
                     {% if current_user.is_authenticated %}
@@ -42,4 +42,4 @@
             </div>
         </div>
     </div>
-  </nav>
+</nav>

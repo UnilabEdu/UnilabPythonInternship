@@ -18,9 +18,14 @@ class QuizView(SecureModelView):
         "category.category": "Category",
         "status": "Status"
     }
-    form_columns = ["quiz_name", "category"]
+    form_columns = ["quiz_name", "quiz_text", "category", "user_id"]
 
     def is_accessible(self):
-        return current_user.is_authenticated and current_user.role.name == "admin"
+        return current_user.is_authenticated and current_user.role.name != "member"
 
-
+    def get_query(self):
+        """Modify the query to show only the quizzes of the current user."""
+        if current_user.role.name == "admin":
+            return super(QuizView, self).get_query()
+        else:
+            return self.session.query(self.model).filter(self.model.user_id == current_user.id)
