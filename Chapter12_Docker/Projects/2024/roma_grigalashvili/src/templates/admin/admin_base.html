@@ -22,7 +22,8 @@
 
                 {% block menu_links %}
                 <ul class="nav navbar-nav navbar-right">
-                    {{ layout.menu_links() }}
+                    <!-- {{ layout.menu_links() }} -->
+                    <a class="btn btn-primary rounded-lg" href="/logout">Logout</a>
                 </ul>
                 {% endblock %}
             {% block access_control %}

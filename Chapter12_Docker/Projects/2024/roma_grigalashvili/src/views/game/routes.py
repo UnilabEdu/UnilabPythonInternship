@@ -1,10 +1,10 @@
 from flask import render_template, flash, Blueprint, redirect, request, url_for, session
 from os import path
-from datetime import datetime
+from datetime import datetime, timedelta
 from flask_login import login_required, current_user
 from sqlalchemy.sql.expression import func
 
-from src.models import Question, Quiz, Score, User
+from src.models import Question, Quiz, Score
 from src.config import Config
 
 TEMPLATES_FOLDER = path.join(Config.BASE_DIRECTORY, "templates", "game")
@@ -40,11 +40,13 @@ def select_game():
         session.pop('selected_questions', None)
         session.pop('current_question', None)
         session.pop('score', None)
+        session['start_time'] = datetime.now().isoformat() 
 
         return redirect(url_for('game.game'))
     
-    quizzes = Quiz.query.all()
-    # quizzes = Quiz.query.filter_by(status=True).all()
+    # quizzes = Quiz.query.all()
+    # Fetch all active quizzes
+    quizzes = Quiz.query.filter_by(status=True).all()
     return render_template('select_game.html', quizzes=quizzes)
 
 
@@ -53,12 +55,14 @@ def select_game():
 def game():
     # როცა ქვიზს ვწერ. დაწერის პროცესში თუ logout გავაკეთე და სხვა იუზერით დავლოგინდი ქვიზს გამაგრძელებინებს 
     # იგივე ადგილიდან სადაც წინა იუზერი გაჩერდა.
+    # logout -ის დროს ვასუფთავებ session-ს.
     
     if 'quiz_id' not in session:
         return redirect(url_for('game.select_game'))
     
     quiz_id = session['quiz_id']
     if 'selected_questions' not in session:
+        # Select random questions for the quiz
         selected_questions = Question.query.filter_by(quiz_id=quiz_id).order_by(func.random()).limit(10).all()
         session['selected_questions'] = [question_to_dict(q) for q in selected_questions]
         session['current_question'] = 0
@@ -68,12 +72,14 @@ def game():
     selected_questions = session['selected_questions']
     score = session.get('score', 0)
 
+    # Check if all questions have been answered
     if current_question_index >= len(selected_questions):
         return redirect(url_for('game.game_end'))
 
     current_question = selected_questions[current_question_index]
 
     if request.method == 'POST':
+        # Handle the user's answer submission
         selected_choice = int(request.form['choice'])
         if selected_choice == current_question['answer']:
             session['score'] += 1
@@ -92,14 +98,33 @@ def game():
 def game_end():
     score = session.get('score', 0)
     total_questions = len(session.get('selected_questions', []))
+    start_time = session.get('start_time')
 
-    if current_user:
-        new_score = Score(user_id=current_user.id, quiz_id=session['quiz_id'], score=score, date=datetime.now())
+    if start_time:
+        start_time = datetime.fromisoformat(start_time)
+        end_time = datetime.now()
+        elapsed_time = end_time - start_time
+    else:
+        elapsed_time = None
+
+    if 'quiz_id' in session:
+        # Save the user's score and time taken
+        new_score = Score(
+            user_id=current_user.id,
+            quiz_id=session['quiz_id'],
+            score=score,
+            date=datetime.now(),
+            time_taken=elapsed_time.total_seconds() if elapsed_time else None  # Store the elapsed time in seconds
+        )
         new_score.create()
-
+    else:
+        return redirect(url_for('game.select_game'))
+        
+    # Clear the session variables
     session.pop('quiz_id', None)
     session.pop('selected_questions', None)
     session.pop('current_question', None)
     session.pop('score', None)
+    session.pop('start_time', None)
 
-    return render_template('game_end.html', score=score, total_questions=total_questions)
+    return render_template('game_end.html', score=score, total_questions=total_questions, elapsed_time=elapsed_time)

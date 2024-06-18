@@ -9,9 +9,8 @@ class Quiz(db.Model, BaseModel):
     id = db.Column(db.Integer, primary_key=True)
     quiz_name = db.Column(db.String(50), nullable=False)
     quiz_text = db.Column(db.String(200), nullable=False)  # Text of the quiz
-    # ქვიზი უნდა გადაებას იუზერების ცსრილს, იუზერს რომ შეეძლოს საკუთარი ქვიზის შექმნა
 
-    user_id = db.Column(db.Integer, db.ForeignKey("users.id"), nullable=False, default=1)  # Reference to User model
+    user_id = db.Column(db.Integer, db.ForeignKey("users.id"), nullable=False)  # Reference to User model
     user = db.relationship("User", back_populates="quiz")  # Relationship to User model
 
     category_id = db.Column(db.ForeignKey("category.id"), nullable=False)
@@ -45,6 +44,7 @@ class Score(db.Model, BaseModel):
     quiz_id = db.Column(db.Integer, db.ForeignKey('quiz.id'), nullable=False)
     score = db.Column(db.Integer, nullable=False)
     date = db.Column(db.DateTime, nullable=False, default=db.func.current_timestamp())
+    time_taken = db.Column(db.Float, nullable=True)
 
     user = db.relationship('User', back_populates='scores')
     quiz = db.relationship('Quiz', back_populates='scores')

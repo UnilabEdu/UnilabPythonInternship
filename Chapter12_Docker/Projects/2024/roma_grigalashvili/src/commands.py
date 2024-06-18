@@ -52,9 +52,10 @@ def populate_db():
         for row in reader:
             quiz_name = row['quiz_name']
             quiz_text = row['quiz_text']
+            user_id = row['user_id']
             category_id = int(row['category_id'])
 
-            new_quiz = Quiz(quiz_name=quiz_name, quiz_text=quiz_text, category_id=category_id)
+            new_quiz = Quiz(quiz_name=quiz_name, quiz_text=quiz_text, user_id=user_id, category_id=category_id)
             new_quiz.create()
 
     click.echo("Creating Questions")

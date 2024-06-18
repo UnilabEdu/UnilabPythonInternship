@@ -54,11 +54,8 @@ def login():
 @auth_blueprint.route("/logout")
 @login_required
 def logout():
-    session.pop('quiz_id', None)
-    session.pop('selected_questions', None)
-    session.pop('current_question', None)
-    session.pop('score', None)
 
     logout_user()
+    session.clear() 
     flash("You have been logged out.", "success")
     return redirect(url_for("auth.login"))

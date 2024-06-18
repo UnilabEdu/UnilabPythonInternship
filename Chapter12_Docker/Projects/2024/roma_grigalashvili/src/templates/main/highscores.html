@@ -17,6 +17,7 @@
         <th scope="col">Username</th>
         <th scope="col">Email</th>
         <th scope="col">Quiz</th>
+        <th scope="col">Time</th>
         <th scope="col">Score</th>
       </tr>
     </thead>
@@ -27,6 +28,7 @@
           <td>{{ score.user.username }}</td>
           <td>{{ score.user.email }}</td>
           <td>{{ score.quiz.quiz_name }}</td>
+          <td>{{ score.formatted_time }}</td>
           <td>{{ score.score }}</td>
         </tr>
       {% endfor %}
@@ -36,4 +38,5 @@
     <a class="btn btn-primary" href="{{ url_for('main.index') }}">Go To Home Page</a>
   </div>
 </div>
+
 {% endblock %}
