@@ -19,11 +19,12 @@
               {% for quiz in chunk %}
               {% if quiz %}
               <div class="col-lg-4">
-                <div class="card">
+                <div class="card" style="width: 50wh; height: 50vh;">
                   <img
-                    src="https://mdbcdn.b-cdn.net/img/new/standard/nature/181.webp"
-                    class="card-img-top"
-                    alt="Image for {{ quiz.quiz_name }}"
+                    src="static/img/category_{{ quiz.category_id }}.webp"
+                    class="img-thumbnail"
+                    alt="Image for {{ quiz.category_id }}"
+                    style="width: 30wh; height: 30vh;"
                   />
                   <div class="card-body">
                     <h5 class="card-title">{{ quiz.quiz_name }}</h5>

@@ -4,11 +4,11 @@ docker-compose up
 
 #2 For Build flask_app on the Docker
 
-docker-compose build flask_app
+docker-compose build
 
 #2 Second Start flask_app on the Docker
 
-docker-compose up -d flask_app
+docker-compose up -d
 
 
 

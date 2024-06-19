@@ -9,6 +9,7 @@ from src.models import Question
 class QuizView(SecureModelView):
     can_export = True
     inline_models = (QuestionInlineModel(Question),)
+    create_template = "admin/create_quiz.html"
 
     column_editable_list = ["status"]
 

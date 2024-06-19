@@ -55,7 +55,7 @@ def populate_db():
             user_id = row['user_id']
             category_id = int(row['category_id'])
 
-            new_quiz = Quiz(quiz_name=quiz_name, quiz_text=quiz_text, user_id=user_id, category_id=category_id)
+            new_quiz = Quiz(quiz_name=quiz_name, quiz_text=quiz_text, user_id=user_id, category_id=category_id, status=1)
             new_quiz.create()
 
     click.echo("Creating Questions")
