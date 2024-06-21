@@ -7,7 +7,6 @@ from flask_admin.model.form import InlineFormAdmin
 class QuestionView(SecureModelView):
     # can_view_details = True
     export_types = ["csv"]
-    create_template = "admin/create_question.html"
 
     # column_searchable_list = ["category.category"]
     column_list = ["quiz.quiz_name", "question_text", "choice1", "choice2", "choice3", "choice4", "correct_answer_display"]

@@ -8,6 +8,9 @@
 <div class="container mt-5">
     <h1>Quiz Completed</h1>
     <p>Your score is {{ score }} out of {{ total_questions }}</p>
+    {% if elapsed_time %}
+        <p>Time taken: {{ elapsed_time.seconds // 60 }} minutes and {{ elapsed_time.seconds % 60 }} seconds</p>
+    {% endif %}
     <a href="{{ url_for('game.select_game') }}" class="btn btn-primary">Try Again</a>
 </div>
 {% endblock %}

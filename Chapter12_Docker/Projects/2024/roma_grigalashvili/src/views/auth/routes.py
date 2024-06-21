@@ -1,4 +1,4 @@
-from flask import render_template, Blueprint, flash, redirect, url_for, request
+from flask import render_template, Blueprint, flash, redirect, url_for, request, session
 from flask_login import login_user, logout_user, login_required
 
 from src.views.auth.forms import RegisterForm, LoginForm
@@ -54,6 +54,8 @@ def login():
 @auth_blueprint.route("/logout")
 @login_required
 def logout():
+
     logout_user()
+    session.clear() 
     flash("You have been logged out.", "success")
     return redirect(url_for("auth.login"))

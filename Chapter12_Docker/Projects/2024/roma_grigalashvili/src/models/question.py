@@ -22,13 +22,5 @@ class Question(db.Model, BaseModel):
     
     #აბრუნებს ტექსტს სწორი პასუხის შესაბამისად ბაზიდან.
     def get_correct_answer(self):
-        if self.correct_answer == 1:
-            return self.choice1
-        elif self.correct_answer == 2:
-            return self.choice2
-        elif self.correct_answer == 3:
-            return self.choice3
-        elif self.correct_answer == 4:
-            return self.choice4
-        return None
+        return getattr(self, f'choice{self.correct_answer}')
     

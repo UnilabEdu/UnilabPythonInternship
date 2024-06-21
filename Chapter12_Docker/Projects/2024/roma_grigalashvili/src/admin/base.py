@@ -14,8 +14,12 @@ class SecureModelView(ModelView):
         
 class SecureAdminIndexView(AdminIndexView):
     def is_accessible(self):
-        return current_user.is_authenticated and current_user.role.name == "admin"
+        return False
     
     def inaccessible_callback(self, name, **kwargs):
         if not self.is_accessible():
             return redirect(url_for("main.index"))
+        
+    # ასევე არ მინდა home გვერდი admin პანელის ნავბარში.
+    def is_visible(self):
+        return False
