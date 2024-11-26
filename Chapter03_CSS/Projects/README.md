@@ -39,6 +39,7 @@
 - რომა გრიგალაშვილი |  [Cheetah](/Chapter3_CSS/Projects/2024/roma_grigalashvili) | [[View]](https://htmlpreview.github.io/?https://github.com/R-Grigala/UnilabPythonInternship/blob/master/Chapter03_CSS/Projects/2024/roma_grigalashvili/index.html)
 - საბა დვალი  |  [Cheetah](/Chapter3_CSS/Projects/2024/Saba_Dvali) | [[View]](https://htmlpreview.github.io/?https://github.com/sabadvali4/UnilabPythonInternship/blob/master/Chapter03_CSS/Projects/2024/Saba_Dvali/index.html)
 - ჯეკო კობახიძე | [Cheetah](/Chapter3_CSS/Projects/2024/jekokobakhidze) | [[View]](https://htmlpreview.github.io/?https://htmlpreview.github.io/?https://github.com/Jekmen1/UnilabPythonInternship/blob/upstream/Chapter03_CSS/Projects/2024/jekokobakhidze/index.html)
+- ჯეკო კობახიძე | [Cheetah](/Chapter3_CSS/Projects/2024/jekokobakhidze) | [[View]](https://htmlpreview.github.io/?https://github.com/Jekmen1/UnilabPythonInternship/blob/upstream/Chapter03_CSS/Projects/2024/jekokobakhidze/index.html)
 
 ## ინსტრუქცია:
 
