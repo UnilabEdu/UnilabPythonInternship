@@ -1,0 +1,51 @@
+html {
+    background-color: #f4dfdd;
+}
+
+.text-red {
+    color: #840000;
+}
+
+.text-purple {
+    color: #500850;
+}
+
+.font-size {
+    font-size: 20px
+}
+
+.site-container {
+    background-color: #e8c1f4;
+    padding: 64px;
+    margin: 16px;
+    border: 2px #350135 solid;
+    border-radius: 32px;
+}
+
+.custom-form {
+    width: 256px;
+    height: 24px;
+    margin-top: 4px;
+    border-radius: 8px;
+    outline: none;
+    border: 0px mediumpurple solid;
+    transition: all 0.1ms;
+}
+
+.custom-form:focus {
+    border: 2px mediumpurple solid;
+}
+
+.btn {
+    background-color: #802eba;
+    width: 84px;
+    height: 24px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.btn:hover {
+    background-color: #aa60ea;
+}
