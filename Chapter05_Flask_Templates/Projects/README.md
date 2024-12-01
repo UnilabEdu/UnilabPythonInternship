@@ -21,7 +21,8 @@
 - ნუგო სვიანაძე | [students](/Chapter5_Flask_Templates/Projects/Nugo_svianadze)
 - ბაჩო მინდიაშვილი | [Nba Teams](/Chapter5_Flask_Templates/Projects/bacho_mindiashvili/nba_flask)
 - გიგა ამირიძე | [Clarkson](/Chapter5_Flask_Templates/Projects/giga_amiridze/)
-- ვასო კირთაძე | [jinja Homework](https://htmlpreview.github.io/?https://github.com/VasoKirtadze/UnilabPythonInternship/blob/master/Chapter5_Flask_Templates/Projects/Vaso_Kirtadze/templates/index.html)
+- ვასო
+  კირთაძე | [jinja Homework](https://htmlpreview.github.io/?https://github.com/VasoKirtadze/UnilabPythonInternship/blob/master/Chapter5_Flask_Templates/Projects/Vaso_Kirtadze/templates/index.html)
 - ანა ხუციშვილი | [Online library](/Chapter5_Flask_Templates/Projects/ana_khutsishvili)
 - მარიამ ქავთარაძე | [Flask_templates](/Chapter5_Flask_Templates/Projects/mariam_kavtaradze/hw_Flask_Templates)
 
@@ -35,6 +36,7 @@
 ### 2024 სტაჟირება
 
 - რომა გრიგალაშვილი | [Flask_templates](/Chapter05_Flask_Templates/Projects/2024/roma_grigalashvili/)
+- ირაკლი წურწუმია | [Flask_template](/Chapter05_Flask_Templates/Projects/2024/irakli_tsurtsumia/)
 
 ## ინსტრუქცია:
 
