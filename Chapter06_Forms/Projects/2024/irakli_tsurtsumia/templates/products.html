@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{%block title%}
+Products Page
+{%endblock%}
+
+{%block body%}
+<div class="d-flex justify-content-center p-5 justify-content-between flex-wrap bg-primary m-auto w-75">
+    {% for product in products_list%}
+    <article class="d-flex bg-white p-2  flex-column border border-success">
+        <img src={{product.img}} width="350px">
+        <h2>{{product.name}}</h2>
+        <p>{{product.price}}</p>
+        <a href=/product/{{product.id-1}}>See More</a>
+        {% if product.sale%}
+        <p>
+            SALE!
+        </p>
+        {%endif%}
+    </article>
+    {% endfor %}
+</div>
+{%endblock%}
+
