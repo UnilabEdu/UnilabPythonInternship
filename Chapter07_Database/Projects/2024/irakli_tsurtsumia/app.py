@@ -1,17 +1,6 @@
-# დავალება
-#  დააყენეთ Flask-SQLALchemy
-#  თქვენს პროექტში და შექმენით თქვენი
-# საიტის მონაცემების შესანახად ბაზა.
-# მონაცემი უნდა იქმნებოდეს ფორმაში
-# შევსებული ინფორმაციის მეშვეობით,
-# უბრალოდ აქამდე თუ ცვლადში ვინახავდით
-# ინფორმაციას, ამჯერად ობიექტში შევინახავთ.
-# პროექტი შექმენით Chapter07 ფოლდერში
-
 from os import path
 
 from flask import Flask, render_template, request, redirect
-from sqlalchemy.testing.suite.test_reflection import users
 
 from forms import UserForm
 from flask_sqlalchemy import SQLAlchemy
